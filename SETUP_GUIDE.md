@@ -21,12 +21,13 @@ Dovresti vedere `(venv)` all'inizio del terminale.
 
 ### **Step 4: Installa le dipendenze**
 ```bash
-pip install -r backend/requirements.txt
+pip install -U -r backend/requirements.txt  # Installa e aggiorna le dipendenze
 ```
 
-### **Step 5: Configura Playwright (per Crawl4AI)**
+### **Step 5: Configura Playwright e Crawl4AI**
 ```bash
-playwright install
+pip install -U "crawl4ai[setup]"  # Assicura il supporto per il setup
+crawl4ai-setup                     # Configura i browser headless
 ```
 
 **Fatto!** Setup completato! 🎉
@@ -66,7 +67,7 @@ deactivate
 Quando fai `git pull` e vedi che `requirements.txt` è cambiato:
 ```bash
 git pull origin main
-pip install -r backend/requirements.txt  # Installa le nuove dipendenze
+pip install -U -r backend/requirements.txt  # Installa e aggiorna le nuove dipendenze
 ```
 
 ---
@@ -94,7 +95,7 @@ source venv/bin/activate
 
 ### "ModuleNotFoundError: No module named 'fastapi'"
 ```bash
-pip install -r backend/requirements.txt
+pip install -U -r backend/requirements.txt
 ```
 
 ### "playwright: command not found"
