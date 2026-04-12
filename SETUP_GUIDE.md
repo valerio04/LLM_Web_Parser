@@ -109,6 +109,11 @@ sudo chmod 755 venv/bin/activate
 source venv/bin/activate
 ```
 
+### "RequestsDependencyWarning: urllib3 o charset_normalizer non supportati"
+```bash
+pip install -U requests urllib3 charset_normalizer
+```
+
 ---
 
 ## 📚 Struttura del progetto
