@@ -1,0 +1,139 @@
+# 🚀 Guida Setup Progetto - Laboratorio Ingegneria Informatica
+
+## 📥 PRIMO SETUP (Una sola volta dopo aver scaricato il progetto)
+
+### **Step 1: Clona il repository**
+```bash
+git clone https://github.com/valerio04/progetto_lab_info.git
+cd progetto_lab_info/progetto
+```
+
+### **Step 2: Crea l'ambiente virtuale**
+```bash
+python3 -m venv venv
+```
+
+### **Step 3: Attiva l'ambiente virtuale**
+```bash
+source venv/bin/activate  # Su Windows: venv\Scripts\activate
+```
+Dovresti vedere `(venv)` all'inizio del terminale.
+
+### **Step 4: Installa le dipendenze**
+```bash
+pip install -r backend/requirements.txt
+```
+
+### **Step 5: Configura Playwright (per Crawl4AI)**
+```bash
+playwright install
+```
+
+**Fatto!** Setup completato! 🎉
+
+---
+
+## 💻 LAVORO QUOTIDIANO (Ogni volta che lavori al progetto)
+
+### **Ogni giorno: Attiva l'ambiente**
+```bash
+cd /path/to/progetto_lab_info/progetto
+source venv/bin/activate  # Su Windows: venv\Scripts\activate
+```
+
+Vedrai `(venv)` nel terminale = sei pronto a lavorare ✅
+
+### **Modifica il codice**
+- Edita i file `.py`, `.json`, ecc.
+- Testa localmente
+
+### **Finito? Fai commit e push**
+```bash
+git add .
+git commit -m "Descrizione delle modifiche"
+git push origin main
+```
+
+### **Quando finisci di lavorare: Disattiva l'ambiente**
+```bash
+deactivate
+```
+
+---
+
+## 🆕 SE UN COMPAGNO HA AGGIUNTO NUOVE DIPENDENZE
+
+Quando fai `git pull` e vedi che `requirements.txt` è cambiato:
+```bash
+git pull origin main
+pip install -r backend/requirements.txt  # Installa le nuove dipendenze
+```
+
+---
+
+## 📋 Note importanti
+
+- ❌ **NON** fare `git add venv/` - Il `.gitignore` lo esclude automaticamente
+- ❌ **NON** fare `git add __pycache__/` - Escluso dal `.gitignore`
+- ✅ **Fai sempre commit** dei file: `.py`, `.json`, `Dockerfile`, `requirements.txt`, `*.md`
+- � **Se aggiungi una libreria nuova:**
+  ```bash
+  pip install nome_libreria
+  pip freeze > backend/requirements.txt  # Aggiorna il file
+  git add backend/requirements.txt && git commit -m "Aggiunta nuova dipendenza"
+  ```
+
+---
+
+## 🐛 Troubleshooting
+
+### "venv not found" o "(venv) non appare"
+```bash
+source venv/bin/activate
+```
+
+### "ModuleNotFoundError: No module named 'fastapi'"
+```bash
+pip install -r backend/requirements.txt
+```
+
+### "playwright: command not found"
+```bash
+playwright install
+```
+
+### "Permission denied" (su Linux/Mac)
+```bash
+sudo chmod 755 venv/bin/activate
+source venv/bin/activate
+```
+
+---
+
+## 📚 Struttura del progetto
+
+```
+progetto/
+├── backend/                    # API REST (FastAPI)
+│   ├── src/
+│   │   └── server.py          # Server principale
+│   ├── Dockerfile
+│   └── requirements.txt
+├── frontend/                   # Web UI (per dopo)
+│   ├── src/
+│   ├── templates/
+│   ├── Dockerfile
+│   └── requirements.txt
+├── gs_data/                    # Gold Standard (dati di test)
+│   ├── en_wikipedia_gs.json
+│   └── ...
+├── docker-compose.yaml
+├── domains.json
+└── .gitignore
+```
+
+---
+
+**Per domande o problemi: Contattare il team!** 💬
+
+
