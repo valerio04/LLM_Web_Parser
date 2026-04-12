@@ -1,0 +1,6 @@
+fastapi==0.109.0      # Framework API REST
+uvicorn==0.24.0       # Server web per FastAPI
+pydantic==2.9.2       # Validazione dati I/O (compatibile con Crawl4AI)
+crawl4ai==0.3.0       # Web scraping e parsing HTML -> Markdown
+
+
