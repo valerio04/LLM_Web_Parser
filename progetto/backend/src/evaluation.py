@@ -3,7 +3,7 @@ Modulo di valutazione per il parsing.
 Implementa metriche di valutazione a livello token (token_level_eval).
 """
 
-from typing import Dict, List, Tuple
+from typing import Dict, List
 from pathlib import Path
 from parsers.parser_wikipedia import WikipediaParser
 from parsers.parser1 import IlPostParser
@@ -28,29 +28,35 @@ class Evaluator:
         return tokens
  
 
-    def calculate_precision(self, exctracted_tokens: List[str], gold_tokens: List[str]) -> float:
+    def calculate_precision(self, extracted_tokens: List[str], gold_tokens: List[str]) -> float:
         """
         Calcola la precisione a livello token.
-        Parametri: exctracted_tokens, gold_tokens
+        Parametri: extracted_tokens, gold_tokens
         Ritorna: float - valore di precisione [0, 1]
         """
-        common_tokens= set(exctracted_tokens) & set(gold_tokens)
-        if(len(set(exctracted_tokens)) == 0):
-            return 0    
-        precision= len(common_tokens) / len(set(exctracted_tokens))
+        from collections import Counter
+        if len(extracted_tokens) == 0:
+            return 0
+        extracted_count = Counter(extracted_tokens)
+        gold_count = Counter(gold_tokens)
+        common = sum((extracted_count & gold_count).values())
+        precision = common / len(extracted_tokens)
         return precision
         
 
-    def calculate_recall(self, exctracted_tokens: List[str], gold_tokens: List[str]) -> float:
+    def calculate_recall(self, extracted_tokens: List[str], gold_tokens: List[str]) -> float:
         """
         Calcola il recall a livello token.
-        Parametri: exctracted_tokens, gold_tokens
+        Parametri: extracted_tokens, gold_tokens
         Ritorna: float - valore di recall [0, 1]
         """
-        common_tokens= set(exctracted_tokens) & set(gold_tokens)
-        if(len(set(gold_tokens)) == 0):
+        from collections import Counter
+        if len(gold_tokens) == 0:
             return 0
-        recall= len(common_tokens) / len(set(gold_tokens))
+        extracted_count = Counter(extracted_tokens)
+        gold_count = Counter(gold_tokens)
+        common = sum((extracted_count & gold_count).values())
+        recall = common / len(gold_tokens)
         return recall
 
     def calculate_f1(self, precision: float, recall: float) -> float:
@@ -59,32 +65,31 @@ class Evaluator:
         Parametri: precision, recall
         Ritorna: float - F1 score [0, 1]
         """
-        if precision +recall == 0:
+        if precision + recall == 0:
             return 0
         f1 = (2 * precision * recall) / (precision + recall)
-
         return f1
 
-    def token_level_eval(self, exctracted_text: str, gold_text: str) -> Dict[str, float]:
+    def token_level_eval(self, extracted_text: str, gold_text: str) -> Dict[str, float]:
         """
         Esegue la valutazione completa a livello token.
         Calcola precision, recall, F1.
         
         Parametri:
-            exctracted_text (str) - testo estratto dal parser
+            extracted_text (str) - testo estratto dal parser
             gold_text (str) - testo di riferimento (gold standard)
         
         Ritorna: Dict con chiavi 'precision', 'recall', 'f1'
         """
-        exctracted_tokens = self.tokenize(exctracted_text)
+        extracted_tokens = self.tokenize(extracted_text)
         gold_tokens = self.tokenize(gold_text)
-        precision = self.calculate_precision(exctracted_tokens,gold_tokens)
-        recall = self.calculate_recall(exctracted_tokens,gold_tokens)
-        f1 = self.calculate_f1(precision,recall)
+        precision = self.calculate_precision(extracted_tokens, gold_tokens)
+        recall = self.calculate_recall(extracted_tokens, gold_tokens)
+        f1 = self.calculate_f1(precision, recall)
 
-        result = {"precision" : precision,
-                  "recall" : recall,
-                  "f1" : f1}
+        result = {"precision": precision,
+                  "recall": recall,
+                  "f1": f1}
         
         return result
 
@@ -120,12 +125,10 @@ def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
     
     for entry in gold_data:
         try:
-
-            #TODO: risolvere problema indirizzo file gold standard (attualmente è relativo alla cartella src, ma dovrebbe essere relativo alla cartella progetto)
+            # TODO: risolvere problema indirizzo file gold standard (attualmente è relativo alla cartella src, ma dovrebbe essere relativo alla cartella progetto)
             # Estrai il testo usando il parser
             extracted_result = asyncio.run(parser.run(entry['url']))
-            extracted_text = extracted_result.get('parsed_text', '')
-            
+            extracted_text = extracted_result.get('parsed_text', '')    
             # Leggi il contenuto del file gold standard
             script_dir = Path(__file__).parent.resolve()
 
