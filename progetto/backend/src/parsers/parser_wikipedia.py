@@ -11,7 +11,7 @@ class WikipediaParser(BaseParser):
 
     def create_crawler_config(self):
         return CrawlerRunConfig(
-            excluded_tags=['nav', 'footer', 'header', 'aside'],
+            excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style'],
             word_count_threshold=10,
             cache_mode=CacheMode.BYPASS,
             exclude_external_images=True
@@ -22,8 +22,8 @@ class WikipediaParser(BaseParser):
             "url": url,
             "domain": self.domain,
             "title": self.extract_title(result),
-            "html_text": self.parse_html(result)[:100],
-            "gold_text": self.parse_markdown(result)[:100]
+            "html_text": self.parse_html(result)[:1000],
+            "parsed_text": self.parse_markdown(result)[:1000]
         } 
 
 #per testare se il parsing restituisce i campi corretti:

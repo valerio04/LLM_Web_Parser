@@ -3,35 +3,35 @@
     "url": "https://statmuse.com/",
     "domain": "statmuse.com",
     "title": "",
-    "html_file": "texts/gs_1_html.txt",
-    "gold_file": "texts/gs_1_gold.txt"
+    "html_file": "statmuse_com/texts/gs_1_html.txt",
+    "gold_file": "statmuse_com/texts/gs_1_gold.txt"
   },
   {
     "url": "https://statmuse.com/",
     "domain": "statmuse.com",
     "title": "",
-    "html_file": "texts/gs_2_html.txt",
-    "gold_file": "texts/gs_2_gold.txt"
+    "html_file": "statmuse_com/texts/gs_2_html.txt",
+    "gold_file": "statmuse_com/texts/gs_2_gold.txt"
   },
   {
     "url": "https://statmuse.com/",
     "domain": "statmuse.com",
     "title": "",
-    "html_file": "texts/gs_3_html.txt",
-    "gold_file": "texts/gs_3_gold.txt"
+    "html_file": "statmuse_com/texts/gs_3_html.txt",
+    "gold_file": "statmuse_com/texts/gs_3_gold.txt"
   },
   {
     "url": "https://statmuse.com/",
     "domain": "statmuse.com",
     "title": "",
-    "html_file": "texts/gs_4_html.txt",
-    "gold_file": "texts/gs_4_gold.txt"
+    "html_file": "statmuse_com/texts/gs_4_html.txt",
+    "gold_file": "statmuse_com/texts/gs_4_gold.txt"
   },
   {
     "url": "https://statmuse.com/",
     "domain": "statmuse.com",
     "title": "",
-    "html_file": "texts/gs_5_html.txt",
-    "gold_file": "texts/gs_5_gold.txt"
+    "html_file": "statmuse_com/texts/gs_5_html.txt",
+    "gold_file": "statmuse_com/texts/gs_5_gold.txt"
   }
 ]
