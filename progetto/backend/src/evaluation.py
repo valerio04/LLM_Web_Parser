@@ -114,7 +114,7 @@ def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
         parser = EurLexParser()
     else:
         raise ValueError(f"Dominio non riconosciuto: {domain}")
-"statmuse_com/texts/gs_3_gold.txt"
+
     result = dict()
     evaluator = Evaluator()
     
