@@ -4,6 +4,7 @@ from typing import Dict, Optional, List, Any
 from pathlib import Path
 import json
 
+from evaluation import *
 from parsers.parser1 import IlPostParser
 from parsers.parser2 import StatMuseParser
 from parsers.parser3 import EurLexParser
@@ -37,21 +38,17 @@ class GoldStandardResponse(BaseModel):
 
 class FullGoldStandardResponse(BaseModel):
     domain: str
-    gold_standards: List[Dict[str, Any]]
+    gold_standards: List[GoldStandardResponse]
 
 class EvaluateRequest(BaseModel):
-    parsing_result: Dict[str, Any]
+    parsed_text: str
     gold_standard: str
 
 class EvaluateResponse(BaseModel):
-    metrics: Dict[str, float]
-
-class FullGsEvalRequest(BaseModel):
-    domain: str
+    metrics: Dict[str, Dict[str, float]]
 
 class FullGsEvalResponse(BaseModel):
-    domain: str
-    aggregated_metrics: Dict[str, float]
+    aggregated_metrics: Dict[str, Dict[str, float]]
 
 
 # Endpoint
@@ -143,21 +140,109 @@ async def get_full_gold_standard(domain: str) -> FullGoldStandardResponse:
     """
     Restituisce tutto il GS del dominio.
     """
-    pass
+    # Seleziona il parser in base al dominio
+    script_dir = Path(__file__).parent.resolve()
+    base_dir = script_dir.parent.parent 
+    if domain == "wikipedia.org":
+        json_path = base_dir / "gs_data" / "wikipedia_org"/ "gs.json"
+    elif domain == "ilpost.it":
+        json_path = base_dir / "gs_data" / "ilpost_it" / "gs.json"
+    elif domain == "statmuse.com":
+        json_path = base_dir / "gs_data" / "statmuse_com" / "gs.json"
+    elif domain == "eur-lex.europa.eu":
+        json_path = base_dir / "gs_data" / "eurlex_europa_eu" / "gs.json"
+    else:
+        print(f"[WARNING] Dominio non riconosciuto: {domain}")
+        raise HTTPException(status_code=400, detail="Dominio non supportato")
+
+    # Carica i dati dal file JSON
+    with open(json_path, 'r', encoding='utf-8') as f:
+        gold_data = json.load(f)
+
+    print("Oggetto JSON caricato:", gold_data)
+
+    result = FullGoldStandardResponse(domain=domain, gold_standards=[])
+
+    # cerco l'entry corrispondente all'url e restituisco il gold standard
+    for entry in gold_data:
+            gold_file_path = base_dir / "gs_data" / entry['gold_file']
+            html_file_path = base_dir / "gs_data" / entry['html_file']
+
+            # Leggi il contenuto del file gold standard
+            with open(gold_file_path, 'r', encoding='utf-8') as f:
+                gold_text = f.read()
+
+            # Leggi il contenuto del file html standard
+            with open(html_file_path, 'r', encoding='utf-8') as f:
+                html_text = f.read()
+
+            result.gold_standards.append(GoldStandardResponse(url=entry['url'], domain=entry['domain'], title=entry['title'], html_text=html_text, gold_text=gold_text))
+    return result
+
+
 
 @app.post("/evaluate")
 async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
     """
     Dato risultato parsing e gs restituisce le metriche di evaluation.
     """
-    pass
+    result = EvaluateResponse(metrics={})
+    evaluator = Evaluator()
+    token_level_eval = evaluator.token_level_eval(request.parsed_text, request.gold_standard)
+    result.metrics["token_level_eval"] = token_level_eval
+    return result
 
+
+
+#TODO: da fixare
 @app.get("/full_gs_eval")
 async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
     """
     Restituisce l'evaluation aggregata su tutto il GS.
     """
-    pass
+    script_dir = Path(__file__).parent.resolve()
+    base_dir = script_dir.parent.parent 
+    if domain == "wikipedia.org":
+        json_path = base_dir / "gs_data" / "wikipedia_org"/ "gs.json"
+    elif domain == "ilpost.it":
+        json_path = base_dir / "gs_data" / "ilpost_it" / "gs.json"
+    elif domain == "statmuse.com":
+        json_path = base_dir / "gs_data" / "statmuse_com" / "gs.json"
+    elif domain == "eur-lex.europa.eu":
+        json_path = base_dir / "gs_data" / "eurlex_europa_eu" / "gs.json"
+    else:
+        print(f"[WARNING] Dominio non riconosciuto: {domain}")
+        raise HTTPException(status_code=400, detail="Dominio non supportato")
+
+    # Carica i dati dal file JSON
+    with open(json_path, 'r', encoding='utf-8') as f:
+        gold_data = json.load(f)
+    
+    evaluator = Evaluator()
+    eval_response = evaluate_gold_standard(gold_data)
+
+    result = FullGsEvalResponse(aggregated_metrics= {})
+    precisions = []
+    recalls = []
+    f1_scores = []
+
+    for entry_name, metrics in eval_response.items():
+        precision = metrics.get("precision", 0)
+        recall = metrics.get("recall", 0)
+        f1 = metrics.get("f1", 0)
+        
+        precisions.append(precision)
+        recalls.append(recall)
+        f1_scores.append(f1)
+    
+    if precisions:
+        avg_precision = sum(precisions) / len(precisions)
+        avg_recall = sum(recalls) / len(recalls)
+        avg_f1 = sum(f1_scores) / len(f1_scores)
+    
+    result.aggregated_metrics["token_level_eval"] = {"precision": avg_precision, "recall":avg_recall,"f1": avg_f1}
+    return result
+
 
 if __name__ == "__main__":
     import uvicorn
