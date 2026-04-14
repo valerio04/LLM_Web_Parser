@@ -7,9 +7,9 @@
     "gold_file": "wikipedia_org/texts/gs_1_gold.txt"
   },
   {
-    "url": "https://en.wikipedia.org/wiki/",
+    "url": "https://en.wikipedia.org/wiki/BabelNet",
     "domain": "wikipedia.org", 
-    "title": "",
+    "title": "BabelNet",
     "html_file": "wikipedia_org/texts/gs_2_html.txt",
     "gold_file": "wikipedia_org/texts/gs_2_gold.txt"
   },

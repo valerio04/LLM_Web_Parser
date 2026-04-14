@@ -1,5 +1,6 @@
 import asyncio
 from urllib.parse import urlparse
+from bs4 import BeautifulSoup
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, CacheMode
 from .base_parser import BaseParser
 
@@ -17,10 +18,22 @@ class WikipediaParser(BaseParser):
             exclude_external_images=True,
             remove_forms=True,
             remove_consent_popups=True,
-            exclude_all_images=True,
-          
-            
+            exclude_all_images=True
         )
+    
+    def parse_html(self, result):
+        """Parsa e pulisce l'HTML rimuovendo i tag indesiderati."""
+        html = result.html
+        soup = BeautifulSoup(html, 'html.parser')
+        
+        # Rimuovi tag aggiuntivi che potrebbero non essere stati rimossi da crawl4ai
+        tags_to_remove = ['script', 'style', 'nav', 'footer', 'header', 'aside']
+        for tag_name in tags_to_remove:
+            for tag in soup.find_all(tag_name):
+                tag.decompose()
+        
+        return str(soup)
+    
     def format_result(self, url, result):
         """Formats the final result. Can be overridden by subclasses."""
         return {
@@ -31,15 +44,15 @@ class WikipediaParser(BaseParser):
             "parsed_text": self.parse_markdown(result)
         } 
 
-'''
+
 #per testare se il parsing restituisce i campi corretti:
 if __name__ == "__main__":
     url = input("Inserisci l'URL della pagina di wikipedia.org: ")
     parser = WikipediaParser()
     result = asyncio.run(parser.run(url))
     print("--- JSON OUTPUT ---")
-    print(result['html_text'])  
-'''
+    print(result['cleaned_html'][0:1000])  # Stampa i primi 1000 caratteri del testo HTML
+
 
 #1 html deve essere grezzo? questo restituisce gia il grezzo?
 #2 oltre a quelle configuraziioni nel CrawlerRunConfig, quali altre personalizzazioni sono possibili? devo lavorare solo su parse_markdown?
