@@ -1,7 +1,7 @@
 import asyncio
 from urllib.parse import urlparse
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, CacheMode
-from base_parser import BaseParser
+from .base_parser import BaseParser
 
 # Questo parser si riferisce al dominio: https://en.wikipedia.org
 
@@ -11,10 +11,15 @@ class WikipediaParser(BaseParser):
 
     def create_crawler_config(self):
         return CrawlerRunConfig(
-            excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style'],
-            word_count_threshold=10,
+            excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'table', 'infobox', 'toc', 'span'],
+            word_count_threshold=0,
             cache_mode=CacheMode.BYPASS,
-            exclude_external_images=True
+            exclude_external_images=True,
+            remove_forms=True,
+            remove_consent_popups=True,
+            exclude_all_images=True,
+          
+            
         )
     def format_result(self, url, result):
         """Formats the final result. Can be overridden by subclasses."""
@@ -22,20 +27,23 @@ class WikipediaParser(BaseParser):
             "url": url,
             "domain": self.domain,
             "title": self.extract_title(result),
-            "html_text": self.parse_html(result)[:1000],
-            "parsed_text": self.parse_markdown(result)[:1000]
+            "html_text": self.parse_html(result),
+            "parsed_text": self.parse_markdown(result)
         } 
 
+'''
 #per testare se il parsing restituisce i campi corretti:
 if __name__ == "__main__":
     url = input("Inserisci l'URL della pagina di wikipedia.org: ")
     parser = WikipediaParser()
     result = asyncio.run(parser.run(url))
     print("--- JSON OUTPUT ---")
-    print(result)
+    print(result['html_text'])  
+'''
 
-
-
+#1 html deve essere grezzo? questo restituisce gia il grezzo?
+#2 oltre a quelle configuraziioni nel CrawlerRunConfig, quali altre personalizzazioni sono possibili? devo lavorare solo su parse_markdown?
+# devo pulire il testo da markdown a testo normale primadi metterlo neel test evaluation?
 
 """
 OPZIONI E STRUMENTI PER PARSING PERSONALIZZATO (da adattare a seconda del sito):

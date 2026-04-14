@@ -1,14 +1,14 @@
 [
   {
-    "url": "https://en.wikipedia.org/wiki/",
+    "url": "https://en.wikipedia.org/wiki/Minerva",
     "domain": "wikipedia.org",
-    "title": "",
+    "title": "Minerva",
     "html_file": "wikipedia_org/texts/gs_1_html.txt",
     "gold_file": "wikipedia_org/texts/gs_1_gold.txt"
   },
   {
     "url": "https://en.wikipedia.org/wiki/",
-    "domain": "wikipedia.org",
+    "domain": "wikipedia.org", 
     "title": "",
     "html_file": "wikipedia_org/texts/gs_2_html.txt",
     "gold_file": "wikipedia_org/texts/gs_2_gold.txt"

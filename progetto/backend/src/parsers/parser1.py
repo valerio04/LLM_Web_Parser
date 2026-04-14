@@ -1,7 +1,7 @@
 import asyncio
 from urllib.parse import urlparse
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, CacheMode
-from base_parser import BaseParser
+from .base_parser import BaseParser
 
 # Questo parser si riferisce al dominio: https://www.ilpost.it
 
@@ -17,11 +17,3 @@ class IlPostParser(BaseParser):
             exclude_external_images=True
         )
 
-
-#per testare se il parsing restituisce i campi corretti:
-if __name__ == "__main__":
-    url = input("Inserisci l'URL della pagina di ilpost.it: ")
-    parser = IlPostParser()
-    result = asyncio.run(parser.run(url))
-    print("--- JSON OUTPUT ---")
-    print(result)

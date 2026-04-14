@@ -2,5 +2,6 @@ fastapi      # Framework API REST
 uvicorn      # Server web per FastAPI
 pydantic     # Validazione dati I/O (compatibile con Crawl4AI)
 crawl4ai     # Web scraping e parsing HTML -> Markdown
+markdown2
 
 

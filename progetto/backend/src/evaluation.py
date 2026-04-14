@@ -10,6 +10,8 @@ from parsers.parser1 import IlPostParser
 from parsers.parser2 import StatMuseParser
 from parsers.parser3 import EurLexParser
 import asyncio
+import markdown2
+import re
 
 class Evaluator:
     """Classe per valutare la qualità del parsing."""
@@ -34,6 +36,14 @@ class Evaluator:
         Parametri: extracted_tokens, gold_tokens
         Ritorna: float - valore di precisione [0, 1]
         """
+        # Versione con SET (senza contare le ripetizioni):
+        # if len(extracted_tokens) == 0:
+        #     return 0
+        # common_tokens = set(extracted_tokens) & set(gold_tokens)
+        # precision = len(common_tokens) / len(set(extracted_tokens))
+        # return precision
+        
+        # Versione con Counter (conta le ripetizioni):
         from collections import Counter
         if len(extracted_tokens) == 0:
             return 0
@@ -50,6 +60,14 @@ class Evaluator:
         Parametri: extracted_tokens, gold_tokens
         Ritorna: float - valore di recall [0, 1]
         """
+        # Versione con SET (senza contare le ripetizioni):
+        # if len(gold_tokens) == 0:
+        #     return 0
+        # common_tokens = set(extracted_tokens) & set(gold_tokens)
+        # recall = len(common_tokens) / len(set(gold_tokens))
+        # return recall
+        
+        # Versione con Counter (conta le ripetizioni):
         from collections import Counter
         if len(gold_tokens) == 0:
             return 0
@@ -107,48 +125,92 @@ def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
     """
     if not gold_data:
         return {}
-    
-    domain = gold_data[0]['domain']
-    if domain == "wikipedia.org":
-        parser = WikipediaParser()
-    elif domain == "ilpost.it":
-        parser = IlPostParser()
-    elif domain == "statmuse.com":
-        parser = StatMuseParser()
-    elif domain == "eur-lex.europa.eu":
-        parser = EurLexParser()
-    else:
-        raise ValueError(f"Dominio non riconosciuto: {domain}")
 
     result = dict()
     evaluator = Evaluator()
-    
+
     for entry in gold_data:
+        # Controllo sui campi obbligatori
+        if not entry.get('title'):
+            print(f"[WARNING] Entry senza titolo: {entry}")
+            continue
+        if not entry.get('gold_file'):
+            print(f"[WARNING] Entry senza gold_file: {entry}")
+            continue
+        if not entry.get('url'):
+            print(f"[WARNING] Entry senza URL: {entry}")
+            continue
+
+        # Seleziona il parser in base al dominio
+        domain = entry.get('domain')
+        if domain == "wikipedia.org":
+            parser = WikipediaParser()
+        elif domain == "ilpost.it":
+            parser = IlPostParser()
+        elif domain == "statmuse.com":
+            parser = StatMuseParser()
+        elif domain == "eur-lex.europa.eu":
+            parser = EurLexParser()
+        else:
+            print(f"[WARNING] Dominio non riconosciuto: {domain}")
+            continue
+
         try:
-            # TODO: risolvere problema indirizzo file gold standard (attualmente è relativo alla cartella src, ma dovrebbe essere relativo alla cartella progetto)
             # Estrai il testo usando il parser
             extracted_result = asyncio.run(parser.run(entry['url']))
-            extracted_text = extracted_result.get('parsed_text', '')    
-            # Leggi il contenuto del file gold standard
+            extracted_text = extracted_result.get('parsed_text', '')
+
+            # Controllo sul testo parsato
+            if not extracted_text:
+                print(f"[WARNING] Testo parsato vuoto per l'URL: {entry['url']}")
+                continue
+
+            # Controllo sull'esistenza del file gold standard
             script_dir = Path(__file__).parent.resolve()
-
-            # Salì 2 livelli: src -> backend -> progetto
             base_dir = script_dir.parent.parent
+            gold_file_path = base_dir / "gs_data" / entry['gold_file']
+            if not gold_file_path.exists():
+                print(f"[WARNING] File gold standard mancante: {gold_file_path}")
+                continue
 
-            # Costruisci il path corretto
-            gold_file_path = base_dir / entry['gold_file']
-
+            # Leggi il contenuto del file gold standard
             with open(gold_file_path, 'r', encoding='utf-8') as f:
                 gold_text = f.read()
+            
+            print("=============testo prima della pulizia markdown:===============\n", extracted_text[:2000])
+           
+            # Pulizia del testo Markdown
+            extracted_text = clean_markdown(extracted_text)
+            
+            print("=============testo dopo la pulizia markdown:===============\n", extracted_text[:2000])
+            
+            print("=============gold text:===============\n", gold_text[:2000])
             
             # Calcola le metriche
             token_eval_result = evaluator.token_level_eval(extracted_text, gold_text)
             result[entry['title']] = token_eval_result
         except Exception as e:
-            print(f"Errore nella valutazione di {entry['title']}: {e}")
+            print(f"[ERROR] Errore nella valutazione di {entry['title']}: {e}")
             result[entry['title']] = {"precision": 0, "recall": 0, "f1": 0}
-    
+
     return result
+
+
+def clean_markdown(text: str) -> str:
+    """
+    Pulisce il testo Markdown convertendolo in testo semplice.
+    Parametri:
+        text (str): Testo in formato Markdown.
+    Ritorna:
+        str: Testo convertito in testo semplice.
+    """
+    #TODO: non sono sicuro che sia la migliro libreria per fare cio
+    # Converte Markdown in HTML
+    html_text = markdown2.markdown(text)
+    # Rimuove i tag HTML
+    print("=============testo dopo la conversione markdown->html:===============\n", html_text[:2000])  
+    plain_text = re.sub(r'<[^>]+>', '', html_text)
+    return plain_text.strip()
 
 
 def generate_evaluation_report(results: Dict[str, Dict]) -> str:
