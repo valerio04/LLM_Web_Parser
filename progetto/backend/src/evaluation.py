@@ -182,7 +182,7 @@ def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
             # Pulizia del testo Markdown
             extracted_text = clean_markdown(extracted_text)
             
-            print("=============testo dopo la pulizia markdown:===============\n", extracted_text[:2000])
+            print("=============testo dopo la pulizia markdown:===============\n", extracted_text[:])
             
             print("=============gold text:===============\n", gold_text[:2000])
             

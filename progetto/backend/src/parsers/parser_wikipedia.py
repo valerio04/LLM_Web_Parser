@@ -12,13 +12,15 @@ class WikipediaParser(BaseParser):
     def create_crawler_config(self):
         return CrawlerRunConfig(
             excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'table', 'infobox', 'toc', 'span'],
+            css_selector='.mw-content-ltr.mw-parser-output , .IPA.nopopups.noexcerpt',
+            excluded_selector='.hatnote.navigation-not-searchable, .noprint, .mw-references-wrap.mw-references-columns, .citation, .external.text',
             word_count_threshold=0,
             cache_mode=CacheMode.BYPASS,
             exclude_external_images=True,
             remove_forms=True,
             remove_consent_popups=True,
             exclude_all_images=True,
-          
+            exclude_external_links=True
             
         )
     def format_result(self, url, result):
@@ -31,15 +33,15 @@ class WikipediaParser(BaseParser):
             "parsed_text": self.parse_markdown(result)
         } 
 
-'''
+
 #per testare se il parsing restituisce i campi corretti:
 if __name__ == "__main__":
     url = input("Inserisci l'URL della pagina di wikipedia.org: ")
     parser = WikipediaParser()
     result = asyncio.run(parser.run(url))
     print("--- JSON OUTPUT ---")
-    print(result['html_text'])  
-'''
+    print(result['parsed_text'][:200])  
+
 
 #1 html deve essere grezzo? questo restituisce gia il grezzo?
 #2 oltre a quelle configuraziioni nel CrawlerRunConfig, quali altre personalizzazioni sono possibili? devo lavorare solo su parse_markdown?
