@@ -59,7 +59,7 @@ async def parse_document(url: str) -> ParseResponse:
     Esegue il parser per un documento di un dominio.
     """
     # Seleziona il parser in base al dominio
-    if "wikipedia.org" in url:
+    """if "wikipedia.org" in url:
         parser = WikipediaParser()
     elif "ilpost.it" in url:
         parser = IlPostParser()
@@ -69,7 +69,9 @@ async def parse_document(url: str) -> ParseResponse:
         parser = EurLexParser()
     else:
         print(f"[WARNING] Dominio non riconosciuto: {url}")
-        raise HTTPException(status_code=400, detail="Dominio non supportato")
+        raise HTTPException(status_code=400, detail="Dominio non supportato")"""
+    
+    parser = find_path_parser(url,Path(__file__).parent.resolve())[0]
     try:
         result = await parser.run(url)
         return ParseResponse(url = result['url'], 
@@ -99,7 +101,7 @@ async def get_gold_standard(url: str) -> GoldStandardResponse:
     # Determina il file JSON da cui caricare il gold standard in base al dominio dell'URL
     script_dir = Path(__file__).parent.resolve()
     base_dir = script_dir.parent.parent
-    if "wikipedia.org" in url:
+    """if "wikipedia.org" in url:
         json_path = base_dir / "gs_data" / "wikipedia_org"/ "gs.json"
     elif "ilpost.it" in url:
         json_path = base_dir / "gs_data" / "ilpost_it" / "gs.json"
@@ -109,8 +111,12 @@ async def get_gold_standard(url: str) -> GoldStandardResponse:
         json_path = base_dir / "gs_data" / "eurlex_europa_eu" / "gs.json" 
     else:
         print(f"[WARNING] Dominio non riconosciuto: {url}")
-        raise HTTPException(status_code=400, detail="Dominio non supportato")
+        raise HTTPException(status_code=400, detail="Dominio non supportato")"""
 
+    json_path = find_path_parser(url, base_dir)[1]
+    if not json_path:
+        raise HTTPException(status_code=400, detail="Dominio non supportato")
+    
     # Carica i dati dal file JSON
     with open(json_path, 'r', encoding='utf-8') as f:
         gold_data = json.load(f)
@@ -142,8 +148,8 @@ async def get_full_gold_standard(domain: str) -> FullGoldStandardResponse:
     """
     # Seleziona il parser in base al dominio
     script_dir = Path(__file__).parent.resolve()
-    base_dir = script_dir.parent.parent 
-    if domain == "wikipedia.org":
+    base_dir = script_dir.parent.parent
+    """if domain == "wikipedia.org":
         json_path = base_dir / "gs_data" / "wikipedia_org"/ "gs.json"
     elif domain == "ilpost.it":
         json_path = base_dir / "gs_data" / "ilpost_it" / "gs.json"
@@ -153,8 +159,11 @@ async def get_full_gold_standard(domain: str) -> FullGoldStandardResponse:
         json_path = base_dir / "gs_data" / "eurlex_europa_eu" / "gs.json"
     else:
         print(f"[WARNING] Dominio non riconosciuto: {domain}")
-        raise HTTPException(status_code=400, detail="Dominio non supportato")
+        raise HTTPException(status_code=400, detail="Dominio non supportato")"""
 
+    json_path = find_path_parser(domain, base_dir)[1]
+    if not json_path:
+        raise HTTPException(status_code=400, detail="Dominio non supportato")
     # Carica i dati dal file JSON
     with open(json_path, 'r', encoding='utf-8') as f:
         gold_data = json.load(f)
@@ -194,7 +203,7 @@ async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
 
 
 
-#TODO: da fixare
+#TODO: fixato. x Valerio rivedi se è corretto 
 @app.get("/full_gs_eval")
 async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
     """
@@ -202,7 +211,7 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
     """
     script_dir = Path(__file__).parent.resolve()
     base_dir = script_dir.parent.parent 
-    if domain == "wikipedia.org":
+    """if domain == "wikipedia.org":
         json_path = base_dir / "gs_data" / "wikipedia_org"/ "gs.json"
     elif domain == "ilpost.it":
         json_path = base_dir / "gs_data" / "ilpost_it" / "gs.json"
@@ -212,14 +221,17 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
         json_path = base_dir / "gs_data" / "eurlex_europa_eu" / "gs.json"
     else:
         print(f"[WARNING] Dominio non riconosciuto: {domain}")
-        raise HTTPException(status_code=400, detail="Dominio non supportato")
+        raise HTTPException(status_code=400, detail="Dominio non supportato")"""
 
+    json_path = find_path_parser(domain, base_dir)[1]
+    if not json_path:
+        raise HTTPException(status_code=400, detail="Dominio non supportato")
+    
     # Carica i dati dal file JSON
     with open(json_path, 'r', encoding='utf-8') as f:
         gold_data = json.load(f)
     
-    evaluator = Evaluator()
-    eval_response = evaluate_gold_standard(gold_data)
+    eval_response = await evaluate_gold_standard(gold_data)
 
     result = FullGsEvalResponse(aggregated_metrics= {})
     precisions = []
@@ -243,6 +255,21 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
     result.aggregated_metrics["token_level_eval"] = {"precision": avg_precision, "recall":avg_recall,"f1": avg_f1}
     return result
 
+def find_path_parser(url: str,base_dir: Path) -> Optional[Any]:
+    """
+    Restituisce il parser e il percorso del file JSON corrispondente al dominio dell'URL.
+    """
+    if "wikipedia.org" in url:
+        return WikipediaParser(), base_dir / "gs_data" / "wikipedia_org"/ "gs.json"
+    elif "ilpost.it" in url:
+        return IlPostParser(), base_dir / "gs_data" / "ilpost_it" / "gs.json"
+    elif "statmuse.com" in url:
+        return StatMuseParser(), base_dir / "gs_data" / "statmuse_com" / "gs.json"
+    elif "eur-lex.europa.eu" in url:
+        return EurLexParser(), base_dir / "gs_data" / "eurlex_europa_eu" / "gs.json"
+    else:
+        print(f"[WARNING] Dominio non riconosciuto: {url}")
+        return None
 
 if __name__ == "__main__":
     import uvicorn
