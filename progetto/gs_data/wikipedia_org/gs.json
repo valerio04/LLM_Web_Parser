@@ -11,9 +11,9 @@
     "domain": "wikipedia.org", 
     "title": "BabelNet",
     "html_file": "wikipedia_org/texts/gs_2_html.txt",
-    "gold_file": "wikipedia_org/texts/gs_2_gold.txt"
+    "gold_file": "wikipedia_org/texts/gs_2_gold.txt"  
   },
-  {
+    {
     "url": "https://en.wikipedia.org/wiki/",
     "domain": "wikipedia.org",
     "title": "", 

@@ -64,7 +64,6 @@ class BaseParser:
             "domain": self.domain,
             "title": self.extract_title(result),
             "html_text": self.parse_html(result),
-            "cleaned_html": self.parse_html(result),  # Può essere diverso se parse_html è personalizzato
             "parsed_text": self.parse_markdown(result)
         }
 

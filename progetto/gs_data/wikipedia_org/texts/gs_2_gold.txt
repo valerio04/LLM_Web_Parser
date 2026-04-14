@@ -14,3 +14,4 @@ Prizes and acknowledgments
 BabelNet received the META prize 2015 for "groundbreaking work in overcoming language barriers through a multilingual lexicalised semantic network and ontology making use of heterogeneous data sources".
 The Artificial Intelligence Journal paper that describes BabelNet won the Prominent Paper Award in 2017.
 BabelNet featured prominently in a Time magazine article about the new age of innovative and up-to-date lexical knowledge resources available on the Web.
+Visualizzazione di en.wikipedia.org_wiki_BabelNet.txt.
