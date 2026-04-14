@@ -13,27 +13,17 @@ class WikipediaParser(BaseParser):
     def create_crawler_config(self):
         return CrawlerRunConfig(
             excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'table', 'infobox', 'toc', 'span'],
+            css_selector='.mw-content-ltr.mw-parser-output , .IPA.nopopups.noexcerpt',
+            excluded_selector='.hatnote.navigation-not-searchable, .noprint, .mw-references-wrap.mw-references-columns, .citation, .external.text',
             word_count_threshold=0,
             cache_mode=CacheMode.BYPASS,
             exclude_external_images=True,
             remove_forms=True,
             remove_consent_popups=True,
-            exclude_all_images=True
+            exclude_all_images=True,
+            exclude_external_links=True
+            
         )
-    
-    def parse_html(self, result):
-        """Parsa e pulisce l'HTML rimuovendo i tag indesiderati."""
-        html = result.html
-        soup = BeautifulSoup(html, 'html.parser')
-        
-        # Rimuovi tag aggiuntivi che potrebbero non essere stati rimossi da crawl4ai
-        tags_to_remove = ['script', 'style', 'nav', 'footer', 'header', 'aside']
-        for tag_name in tags_to_remove:
-            for tag in soup.find_all(tag_name):
-                tag.decompose()
-        
-        return str(soup)
-    
     def format_result(self, url, result):
         """Formats the final result. Can be overridden by subclasses."""
         return {
@@ -51,7 +41,7 @@ if __name__ == "__main__":
     parser = WikipediaParser()
     result = asyncio.run(parser.run(url))
     print("--- JSON OUTPUT ---")
-    print(result['cleaned_html'][0:1000])  # Stampa i primi 1000 caratteri del testo HTML
+    print(result['parsed_text'][:200])  
 
 
 #1 html deve essere grezzo? questo restituisce gia il grezzo?
