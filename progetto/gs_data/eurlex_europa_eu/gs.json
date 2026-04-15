@@ -2,35 +2,35 @@
   {
     "url": "https://eur-lex.europa.eu/IT/legal-content/glossary/nato-north-atlantic-treaty-organisation.html",
     "domain": "eur-lex.europa.eu",
-    "title": "",
+    "title": "NATO (Organizzazione del trattato dell’Atlantico del Nord)",
     "html_file": "eurlex_europa_eu/texts/gs_1_html.txt",
     "gold_file": "eurlex_europa_eu/texts/gs_1_gold.txt"
   },
   {
     "url": "https://eur-lex.europa.eu/content/news/index.html",
     "domain": "eur-lex.europa.eu",
-    "title": "",
+    "title": "Il quadro di Windsor",
     "html_file": "eurlex_europa_eu/texts/gs_2_html.txt",
     "gold_file": "eurlex_europa_eu/texts/gs_2_gold.txt"
   },
   {
     "url": "https://eur-lex.europa.eu/IT/legal-content/glossary/enforcement-of-eu-law.html",
     "domain": "eur-lex.europa.eu",
-    "title": "",
+    "title": "Applicazione del diritto dell’Unione europea",
     "html_file": "eurlex_europa_eu/texts/gs_3_html.txt",
     "gold_file": "eurlex_europa_eu/texts/gs_3_gold.txt"
   },
   {
     "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A52026PC0130&qid=1776272909687",
     "domain": "eur-lex.europa.eu",
-    "title": "",
+    "title": "Proposta di DECISIONE DEL CONSIGLIO relativa alla posizione da adottare a nome dell'Unione europea in sede di comitato misto CETA istituito a norma dell'accordo economico e commerciale globale (CETA) tra il Canada, da una parte, e l'Unione europea e i suoi Stati membri, dall'altra, per quanto riguarda l'adozione di una decisione relativa all'inclusione degli ingredienti farmaceutici attivi tra i medicinali o farmaci elencati all'allegato 1, paragrafo 2, del protocollo sul riconoscimento reciproco del programma per il rispetto e l'esecuzione delle buone prassi di fabbricazione dei prodotti farmaceutici",
     "html_file": "eurlex_europa_eu/texts/gs_4_html.txt",
     "gold_file": "eurlex_europa_eu/texts/gs_4_gold.txt"
   },
   {
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016M/TXT",
     "domain": "eur-lex.europa.eu",
-    "title": "",
+    "title": "Consolidated version of the Treaty on European Union",
     "html_file": "eurlex_europa_eu/texts/gs_5_html.txt",
     "gold_file": "eurlex_europa_eu/texts/gs_5_gold.txt"
   }
