@@ -1,5 +1,6 @@
 import asyncio
 from urllib.parse import urlparse
+from bs4 import BeautifulSoup
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, CacheMode
 from .base_parser import BaseParser
 
@@ -7,13 +8,13 @@ from .base_parser import BaseParser
 
 class WikipediaParser(BaseParser):
     def __init__(self):
-        super().__init__("wikipedia.org")
+        super().__init__("wikipedia.org") 
 
     def create_crawler_config(self):
         return CrawlerRunConfig(
-            excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'table', 'infobox', 'toc', 'span'],
             css_selector='.mw-content-ltr.mw-parser-output , .IPA.nopopups.noexcerpt',
-            excluded_selector='.hatnote.navigation-not-searchable, .noprint, .mw-references-wrap.mw-references-columns, .citation, .external.text',
+            excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'table', 'infobox', 'toc', 'span', 'abbr', 'sub'],
+            excluded_selector='.hatnote.navigation-not-searchable, .noprint, .mw-references-wrap, .citation, .external.text, .side-box-flex, #References, #Bibliography, #External_links',
             word_count_threshold=0,
             cache_mode=CacheMode.BYPASS,
             exclude_external_images=True,
@@ -63,7 +64,7 @@ OPZIONI E STRUMENTI PER PARSING PERSONALIZZATO (da adattare a seconda del sito):
    - exclude_external_images: True per escludere immagini esterne
      Es: exclude_external_images=True
 
-2. BrowserConfig - Configurazione del browser
+j2. BrowserConfig - Configurazione del browser
    - headless: True per modalità invisibile (più veloce)
      Es: headless=True
    

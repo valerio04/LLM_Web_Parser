@@ -114,7 +114,7 @@ class Evaluator:
 
 
   
-def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
+async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
     """
     Valuta tutto il Gold Standard.
     
@@ -157,7 +157,7 @@ def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
 
         try:
             # Estrai il testo usando il parser
-            extracted_result = asyncio.run(parser.run(entry['url']))
+            extracted_result = await parser.run(entry['url']) # usare async invece di asyncio.run(parser.run(entry['url'])) per evitare problemi di event loop
             extracted_text = extracted_result.get('parsed_text', '')
 
             # Controllo sul testo parsato
