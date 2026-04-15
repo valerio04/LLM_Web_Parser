@@ -1,34 +1,34 @@
 [
   {
-    "url": "https://eur-lex.europa.eu/",
+    "url": "https://eur-lex.europa.eu/IT/legal-content/glossary/nato-north-atlantic-treaty-organisation.html",
     "domain": "eur-lex.europa.eu",
     "title": "",
     "html_file": "eurlex_europa_eu/texts/gs_1_html.txt",
     "gold_file": "eurlex_europa_eu/texts/gs_1_gold.txt"
   },
   {
-    "url": "https://eur-lex.europa.eu/",
+    "url": "https://eur-lex.europa.eu/content/news/index.html",
     "domain": "eur-lex.europa.eu",
     "title": "",
     "html_file": "eurlex_europa_eu/texts/gs_2_html.txt",
     "gold_file": "eurlex_europa_eu/texts/gs_2_gold.txt"
   },
   {
-    "url": "https://eur-lex.europa.eu/",
+    "url": "https://eur-lex.europa.eu/IT/legal-content/glossary/enforcement-of-eu-law.html",
     "domain": "eur-lex.europa.eu",
     "title": "",
     "html_file": "eurlex_europa_eu/texts/gs_3_html.txt",
     "gold_file": "eurlex_europa_eu/texts/gs_3_gold.txt"
   },
   {
-    "url": "https://eur-lex.europa.eu/",
+    "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A52026PC0130&qid=1776272909687",
     "domain": "eur-lex.europa.eu",
     "title": "",
     "html_file": "eurlex_europa_eu/texts/gs_4_html.txt",
     "gold_file": "eurlex_europa_eu/texts/gs_4_gold.txt"
   },
   {
-    "url": "https://eur-lex.europa.eu/",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:12016M/TXT",
     "domain": "eur-lex.europa.eu",
     "title": "",
     "html_file": "eurlex_europa_eu/texts/gs_5_html.txt",
