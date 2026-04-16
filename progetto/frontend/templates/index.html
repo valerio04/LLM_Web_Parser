@@ -1,1 +1,214 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Parser UI</title>
+		<style>
+			:root {
+				color-scheme: light;
+				--bg: #f7f8fb;
+				--card: #ffffff;
+				--accent: #4fed2f;
+				--text: #1d2230;
+				--muted: #5f6b84;
+				--border: #e3e8f1;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+				font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+				background: var(--bg);
+				color: var(--text);
+			}
+
+			header {
+				padding: 32px 24px 12px;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			header h1 {
+				margin: 0 0 8px;
+			}
+
+			header p {
+				margin: 0;
+				color: var(--muted);
+			}
+
+			main {
+				max-width: 1200px;
+				margin: 0 auto 40px;
+				padding: 0 24px;
+				display: grid;
+				gap: 20px;
+			}
+
+			.card {
+				background: var(--card);
+				border: 1px solid var(--border);
+				border-radius: 14px;
+				padding: 20px;
+				box-shadow: 0 12px 30px rgba(15, 20, 34, 0.04);
+			}
+
+			form {
+				display: grid;
+				gap: 16px;
+			}
+
+			label {
+				font-weight: 600;
+			}
+
+			input[type="text"],
+			select {
+				width: 100%;
+				padding: 10px 12px;
+				border-radius: 10px;
+				border: 1px solid var(--border);
+				font-size: 14px;
+			}
+
+			button {
+				background: var(--accent);
+				color: #fff;
+				border: none;
+				padding: 10px 16px;
+				border-radius: 10px;
+				font-weight: 600;
+				cursor: pointer;
+			}
+
+			.grid-2 {
+				display: grid;
+				gap: 16px;
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+			}
+
+			.grid-3 {
+				display: grid;
+				gap: 16px;
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+			}
+
+			.muted {
+				color: var(--muted);
+			}
+
+			pre {
+				white-space: pre-wrap;
+				word-break: break-word;
+				background: #f3f5fb;
+				padding: 12px;
+				border-radius: 10px;
+				border: 1px solid var(--border);
+				font-size: 13px;
+			}
+
+			.badge {
+				display: inline-block;
+				padding: 4px 8px;
+				border-radius: 999px;
+				background: #edf1ff;
+				color: var(--accent);
+				font-size: 12px;
+				font-weight: 600;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Parser UI</h1>
+			<p>Confronta HTML grezzo, testo pulito e Gold Standard con le metriche di valutazione.</p>
+		</header>
+
+		<main>
+			<section class="card">
+				<form method="post" action="/">
+					<div class="grid-2">
+						<div>
+							<label for="url">URL da parsare</label>
+							<input
+								type="text"
+								id="url"
+								name="url"
+								placeholder="https://..."
+								value="{{ selected_url or '' }}"
+								required
+							/>
+						</div>
+						<div>
+							<label for="gs_url">Seleziona URL dal GS</label>
+							<select id="gs_url" name="gs_url">
+								<option value="">-- Seleziona --</option>
+								{% for url in gs_urls %}
+									<option value="{{ url }}" {% if url == selected_url %}selected{% endif %}>
+										{{ url }}
+									</option>
+								{% endfor %}
+							</select>
+						</div>
+					</div>
+					<button type="submit">Esegui parsing</button>
+				</form>
+			</section>
+
+			<section class="card">
+				<div class="grid-3">
+					<div>
+						<span class="badge">Dominio</span>
+						<p class="muted">{{ result.domain or '-' }}</p>
+					</div>
+					<div>
+						<span class="badge">Titolo</span>
+						<p class="muted">{{ result.title or '-' }}</p>
+					</div>
+					<div>
+						<span class="badge">URL</span>
+						<p class="muted">{{ result.url or '-' }}</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="card">
+				<h2>HTML grezzo</h2>
+				<pre>{{ result.html_text or 'Nessun dato disponibile' }}</pre>
+			</section>
+
+			<section class="card">
+				<h2>Testo pulito (parsed)</h2>
+				<pre>{{ result.parsed_text or 'Nessun dato disponibile' }}</pre>
+			</section>
+
+			<section class="card">
+				<h2>Gold Standard</h2>
+				<pre>{{ result.gold_text or 'Nessun gold standard disponibile' }}</pre>
+			</section>
+
+			<section class="card">
+				<h2>Metriche di valutazione</h2>
+				<div class="grid-3">
+					<div>
+						<strong>Precision</strong>
+						<p class="muted">{{ metrics.precision or '-' }}</p>
+					</div>
+					<div>
+						<strong>Recall</strong>
+						<p class="muted">{{ metrics.recall or '-' }}</p>
+					</div>
+					<div>
+						<strong>F1</strong>
+						<p class="muted">{{ metrics.f1 or '-' }}</p>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
 
