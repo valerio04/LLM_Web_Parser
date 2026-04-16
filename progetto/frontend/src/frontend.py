@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import json
 from typing import Dict, List, Optional
+from pathlib import Path
 
 from fastapi import FastAPI, Form, Request
 from fastapi.responses import HTMLResponse
@@ -13,7 +15,22 @@ templates = Jinja2Templates(directory="../templates")
 
 API_BASE_URL = "http://localhost:8000"
 
-
+def find_path_parser(url: str,base_dir: Path) -> Optional[Any]:
+    """
+    Restituisce il parser e il percorso del file JSON corrispondente al dominio dell'URL.
+    """
+    if "wikipedia.org" in url:
+        return base_dir / "gs_data" / "wikipedia_org"/ "gs.json"
+    elif "ilpost.it" in url:
+        return base_dir / "gs_data" / "ilpost_it" / "gs.json"
+    elif "statmuse.com" in url:
+        return base_dir / "gs_data" / "statmuse_com" / "gs.json"
+    elif "eur-lex.europa.eu" in url:
+        return base_dir / "gs_data" / "eurlex_europa_eu" / "gs.json"
+    else:
+        print(f"[WARNING] Dominio non riconosciuto: {url}")
+        return None
+	
 @dataclass
 class UiResult:
 	url: str = ""
@@ -89,6 +106,24 @@ def fetch_gs_urls() -> List[str]:
 	TODO: collegare la funzione all'endpoint /domains o /full_gold_standard.
 	"""
 	# TODO: sostituire con chiamata reale al backend.
+	urls = []
+	try:
+		response = requests.get(f"{API_BASE_URL}/domains")
+		response.raise_for_status()
+		domini = response.json()['domains']
+		script_dir = Path(__file__).parent.resolve()
+		base_dir = script_dir.parent.parent
+		for dominio in domini:
+			json_path = find_path_parser(dominio,base_dir)
+			with open(json_path, 'r', encoding='utf-8') as f:
+				domains_data = json.load(f)
+			
+			for entry in domains_data:
+				urls.append(entry['url'])
+	except requests.RequestException as e:
+		domini = []
+		print(f"[ERROR] Impossibile recuperare i domini: {e}")
+
 	return []
 
 
@@ -107,8 +142,9 @@ app = create_app()
 
 
 if __name__ == "__main__":
-	import uvicorn
+	print(fetch_gs_urls())
+	"""import uvicorn
 
 	# Avvia il frontend su porta 8004 (allineato alle specifiche del corso)
-	uvicorn.run("frontend:app", host="0.0.0.0", port=8004, reload=True)
+	uvicorn.run("frontend:app", host="0.0.0.0", port=8004, reload=True)"""
 

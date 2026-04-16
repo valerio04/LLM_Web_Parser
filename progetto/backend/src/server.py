@@ -24,9 +24,9 @@ class ParseResponse(BaseModel):
 # chiedere al professore se bisogna fare in questo modo o basta restituire un dizionario nella funzione
 # chiedere se è corretta l'organizazione dei file txt
 # TODO: controllare i domini in server direttamente da qui
-
+# TODO: troppi dizionari, correggere
 class DomainsResponse(BaseModel):
-    domains: Dict[str, List[str]]  # domain -> list of URLs
+    domains: List[str]
 
 class GoldStandardResponse(BaseModel):
     url: str
@@ -44,10 +44,10 @@ class EvaluateRequest(BaseModel):
     gold_standard: str
 
 class EvaluateResponse(BaseModel):
-    metrics: Dict[str, Dict[str, float]]
+    metrics: Dict[str, float]
 
 class FullGsEvalResponse(BaseModel):
-    aggregated_metrics: Dict[str, Dict[str, float]]
+    aggregated_metrics: Dict[str, float]
 
 
 # Endpoint
