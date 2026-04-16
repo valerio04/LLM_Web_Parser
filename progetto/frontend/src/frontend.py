@@ -8,8 +8,10 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import requests
 
+app = FastAPI()
+templates = Jinja2Templates(directory="../templates")
 
-BACKEND_BASE_URL = "http://localhost:8003"
+API_BASE_URL = "http://localhost:8000"
 
 
 @dataclass
@@ -23,8 +25,6 @@ class UiResult:
 
 
 def create_app() -> FastAPI:
-	app = FastAPI()
-	templates = Jinja2Templates(directory="../templates")
 
 	@app.get("/", response_class=HTMLResponse)
 	async def index(request: Request) -> HTMLResponse:
@@ -97,7 +97,7 @@ def call_backend(endpoint: str, params: Optional[Dict[str, str]] = None, json_pa
 	Helper per invocare il backend FastAPI.
 	TODO: gestire timeout, errori e status code.
 	"""
-	url = f"{BACKEND_BASE_URL}{endpoint}"
+	url = f"{API_BASE_URL}{endpoint}"
 	response = requests.get(url, params=params, timeout=20) if json_payload is None else requests.post(url, json=json_payload, timeout=20)
 	response.raise_for_status()
 	return response.json()

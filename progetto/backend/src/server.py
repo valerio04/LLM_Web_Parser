@@ -89,7 +89,23 @@ async def get_domains() -> DomainsResponse:
     """
     Restituisce la lista dei domini assegnati con i link associati.
     """
-    pass
+    script_dir = Path(__file__).parent.resolve()
+    base_dir = script_dir.parent.parent
+    json_path = base_dir / "domains.json"
+
+    if not json_path.exists():
+        print(f"[WARNING] File domains.json non trovato: {json_path}")
+        raise HTTPException(status_code=500, detail="File domains.json non trovato")
+    
+    with open(json_path, 'r', encoding='utf-8') as f:
+        domains_data = json.load(f)
+
+    list_result = list(domains_data.values())
+
+    diz_result = dict()
+    diz_result['domini'] = list_result
+
+    return DomainsResponse(domains=diz_result)
 
 @app.get("/gold_standard")
 async def get_gold_standard(url: str) -> GoldStandardResponse:
@@ -140,7 +156,7 @@ async def get_gold_standard(url: str) -> GoldStandardResponse:
     raise HTTPException(status_code=404, detail="l'url non è nel GS")
 
 
-@app.get("/full_gold_standard")
+@app.get("/full_gold_standard/{domain}")
 async def get_full_gold_standard(domain: str) -> FullGoldStandardResponse:
     """
     Restituisce tutto il GS del dominio.
@@ -173,18 +189,18 @@ async def get_full_gold_standard(domain: str) -> FullGoldStandardResponse:
 
     # cerco l'entry corrispondente all'url e restituisco il gold standard
     for entry in gold_data:
-            gold_file_path = base_dir / "gs_data" / entry['gold_file']
-            html_file_path = base_dir / "gs_data" / entry['html_file']
+        gold_file_path = base_dir / "gs_data" / entry['gold_file']
+        html_file_path = base_dir / "gs_data" / entry['html_file']
 
-            # Leggi il contenuto del file gold standard
-            with open(gold_file_path, 'r', encoding='utf-8') as f:
-                gold_text = f.read()
+        # Leggi il contenuto del file gold standard
+        with open(gold_file_path, 'r', encoding='utf-8') as f:
+            gold_text = f.read()
 
-            # Leggi il contenuto del file html standard
-            with open(html_file_path, 'r', encoding='utf-8') as f:
-                html_text = f.read()
+        # Leggi il contenuto del file html standard
+        with open(html_file_path, 'r', encoding='utf-8') as f:
+            html_text = f.read()
 
-            result.gold_standards.append(GoldStandardResponse(url=entry['url'], domain=entry['domain'], title=entry['title'], html_text=html_text, gold_text=gold_text))
+        result.gold_standards.append(GoldStandardResponse(url=entry['url'], domain=entry['domain'], title=entry['title'], html_text=html_text, gold_text=gold_text))
     return result
 
 
