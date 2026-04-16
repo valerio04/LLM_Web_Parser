@@ -100,7 +100,7 @@ async def get_domains() -> DomainsResponse:
     with open(json_path, 'r', encoding='utf-8') as f:
         domains_data = json.load(f)
 
-    list_result = list(domains_data.values())
+    list_result = list(domains_data['domains'].value())
 
     diz_result = dict()
     diz_result['domini'] = list_result
