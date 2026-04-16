@@ -26,7 +26,7 @@ class ParseResponse(BaseModel):
 # TODO: controllare i domini in server direttamente da qui
 
 class DomainsResponse(BaseModel):
-    domains: Dict[str, List[str]]  # domain -> list of URLs
+    domains: List[str]
 
 class GoldStandardResponse(BaseModel):
     url: str
@@ -100,12 +100,7 @@ async def get_domains() -> DomainsResponse:
     with open(json_path, 'r', encoding='utf-8') as f:
         domains_data = json.load(f)
 
-    list_result = list(domains_data.values())
-
-    diz_result = dict()
-    diz_result['domini'] = list_result
-
-    return DomainsResponse(domains=diz_result)
+    return DomainsResponse(domains=domains_data.get("domains", []))
 
 @app.get("/gold_standard")
 async def get_gold_standard(url: str) -> GoldStandardResponse:
