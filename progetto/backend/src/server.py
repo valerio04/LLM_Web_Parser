@@ -22,9 +22,8 @@ class ParseResponse(BaseModel):
     parsed_text: str
 
 # chiedere al professore se bisogna fare in questo modo o basta restituire un dizionario nella funzione
-# chiedere se usare liste o set per evaluation
-# chiedere se queste funzioni devono essere eseguite solo su file testati da noi o da un qualsiasi file nel dominio
 # chiedere se è corretta l'organizazione dei file txt
+# TODO: controllare i domini in server direttamente da qui
 
 class DomainsResponse(BaseModel):
     domains: Dict[str, List[str]]  # domain -> list of URLs
