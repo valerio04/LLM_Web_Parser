@@ -110,7 +110,7 @@ async def get_gold_standard(url: str) -> GoldStandardResponse:
 
     # Determina il file JSON da cui caricare il gold standard in base al dominio dell'URL
     script_dir = Path(__file__).parent.resolve()
-    base_dir = script_dir.parent.parent
+    base_dir = script_dir.parent.parent  
     """if "wikipedia.org" in url:
         json_path = base_dir / "gs_data" / "wikipedia_org"/ "gs.json"
     elif "ilpost.it" in url:
