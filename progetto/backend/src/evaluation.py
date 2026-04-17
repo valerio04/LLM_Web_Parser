@@ -5,6 +5,8 @@ Implementa metriche di valutazione a livello token (token_level_eval).
 
 from typing import Dict, List
 from pathlib import Path
+
+from aiohttp import request
 from parsers.parser_wikipedia import WikipediaParser
 from parsers.parser1 import IlPostParser
 from parsers.parser2 import StatMuseParser
@@ -99,7 +101,12 @@ class Evaluator:
         
         Ritorna: Dict con chiavi 'precision', 'recall', 'f1'
         """
-        extracted_tokens = self.tokenize(extracted_text)
+        #TODO: capire se va messa qui o in server
+
+        # Pulisci il testo Markdown prima della valutazione
+        cleaned_extracted_text = clean_markdown(extracted_text)
+
+        extracted_tokens = self.tokenize(cleaned_extracted_text)
         gold_tokens = self.tokenize(gold_text)
         precision = self.calculate_precision(extracted_tokens, gold_tokens)
         recall = self.calculate_recall(extracted_tokens, gold_tokens)

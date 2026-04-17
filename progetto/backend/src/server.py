@@ -211,9 +211,9 @@ async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
     evaluator = Evaluator()
     
     # Pulisci il testo Markdown prima della valutazione
-    cleaned_parsed_text = clean_markdown(request.parsed_text)
+    #cleaned_parsed_text = clean_markdown(request.parsed_text)
     
-    token_level_eval = evaluator.token_level_eval(cleaned_parsed_text, request.gold_standard)
+    token_level_eval = evaluator.token_level_eval(request.parsed_text, request.gold_standard)
     result.token_level_eval= token_level_eval
     return result
 

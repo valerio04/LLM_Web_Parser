@@ -8,6 +8,8 @@ from bs4 import BeautifulSoup
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, CacheMode
 
 from .base_parser import BaseParser
+#from base_parser import BaseParser
+
 import markdown2
 
 # Parser per Wikipedia: https://en.wikipedia.org
@@ -70,6 +72,31 @@ class WikipediaParser(BaseParser):
             return result.html
         return ""
 
+    def extract_unwanted_content(self, html: str, tags: list) -> list:
+        """Estrae il contenuto testuale dai tag indesiderati.
+        
+        Args:
+            html: HTML da cui estrarre
+            tags: Lista di tag da cercare (es: ['figcaption', 'figure', 'caption'])
+        
+        Returns:
+            Lista di stringhe trovate nei tag specificati (senza i tag HTML)
+        """
+        unwanted_content = []
+        
+        for tag in tags:
+            # Pattern regex per trovare <tag>...</tag>
+            pattern = rf'<{tag}[^>]*>(.*?)</{tag}>'
+            matches = re.findall(pattern, html, re.IGNORECASE | re.DOTALL)
+            
+            for match in matches:
+                # Rimuove tag HTML dal contenuto
+                clean_text = re.sub(r'<[^>]+>', '', match).strip()
+                if clean_text:
+                    unwanted_content.append(clean_text)
+        
+        return unwanted_content
+
     def parse_markdown(self, result) -> str:
         """Converte il markdown estratto in testo pulito.
         
@@ -91,6 +118,18 @@ class WikipediaParser(BaseParser):
 
         if not text:
             return ""
+
+        # 0. RIMUOVE CONTENUTO DA TAG INDESIDERATI (figcaption, caption, ecc.)
+        # Estrai dal cleaned_html il contenuto di tag che non vuoi nel markdown
+        html = self.parse_html(result)
+        if html:
+            # Cerca contenuto da <figcaption>, <caption>, <aside> nel HTML
+            unwanted = self.extract_unwanted_content(html, ['figcaption']) #, 'caption', 'aside', 'figure'
+            # Rimuovi il testo trovato dal markdown
+            for content in unwanted:
+                # Escapa i caratteri speciali per regex
+                escaped_content = re.escape(content)
+                text = re.sub(escaped_content, '', text, flags=re.IGNORECASE)
 
         # 1. Rimuove "Jump to content" e intestazioni standard
         text = re.sub(r'\[Jump to content\]\([^)]*\)', '', text)
@@ -136,13 +175,16 @@ class WikipediaParser(BaseParser):
             "domain": self.domain,
             "title": self.extract_title(result),
             "html_text": self.parse_html(result),
-            "parsed_text": self.parse_markdown(result)
+            #"html_cleaned": result.cleaned_html,## canc
+            "parsed_text": self.parse_markdown(result),
+            #"parsed_text_markdown_grezzo": result.markdown, ##canc
         }
-
+ 
 
 if __name__ == "__main__":
     """Test script per verificare il parser Wikipedia."""
-    url = input("Inserisci l'URL della pagina Wikipedia: ")
+    #url = input("Inserisci l'URL della pagina Wikipedia: ")
+    url="https://en.wikipedia.org/wiki/BabelNet"
     parser = WikipediaParser()
     result = asyncio.run(parser.run(url))
 
@@ -158,6 +200,10 @@ if __name__ == "__main__":
     print("\n--- RESULT ---")
     print(f"Title: {result.get('title')}")
     print(f"Domain: {result.get('domain')}")
-    print(f"\n--- PARSED TEXT ---")
-    print(result.get('parsed_text'))
+    #print(f"\n--- HTML TEXT (pulito)-------------------------")
+    #print(result.get('html_cleaned'))
+    #print(f"\n--- PARSED TEXT grezzo--------------------------------")
+    #print(result.get('parsed_text_markdown_grezzo'))
+   
+    print(f"\n--- PLAIN TEXT---")
     print(plain_text)

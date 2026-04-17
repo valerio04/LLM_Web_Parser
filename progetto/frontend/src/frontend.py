@@ -60,6 +60,7 @@ def index(request: Request) -> HTMLResponse:
         },
     )
 
+# TODO: oltre all if selected url, aggiungi and seected_url in gs_urls, vedi se ha senso 
 @app.post("/", response_class=HTMLResponse)
 def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(default="")) -> HTMLResponse:
     selected_url = url or gs_url or "" 
@@ -85,9 +86,9 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
                 json_payload={"parsed_text": parsed_text, "gold_standard": gold_text}
             )
 			# TODo: levarlo e rimettere il testo in md
-            html_text = markdown2.markdown(parse_data.get("parsed_text", ""))
+            #html_text = markdown2.markdown(parse_data.get("parsed_text", ""))
             # Rimuove i tag HTML
-            plain_text = re.sub(r'<[^>]+>', '', html_text)
+            #plain_text = re.sub(r'<[^>]+>', '', html_text)
 
             result = UiResult(
                 url=parse_data.get("url", selected_url),

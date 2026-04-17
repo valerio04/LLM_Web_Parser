@@ -26,7 +26,7 @@ class EurLexParser(BaseParser):
             "url": url,
             "domain": self.domain,
             "title": self.extract_title(result),
-            #"html_text": self.parse_html(result),
+            "html_text": self.parse_html(result),
             "parsed_text": self.parse_markdown(result)[:500]
         }
 
