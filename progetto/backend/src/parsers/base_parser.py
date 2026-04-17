@@ -1,7 +1,7 @@
 import asyncio
 from urllib.parse import urlparse
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
-
+import re
 # Cose da modificare in ogni parser specifico:
 
 # 1. create_crawler_config()
@@ -56,6 +56,30 @@ class BaseParser:
             headless=True,
             verbose=True
         )
+    def extract_unwanted_content(self, html: str, tags: list) -> list:
+        """Estrae il contenuto testuale dai tag indesiderati.
+        
+        Args:
+            html: HTML da cui estrarre
+            tags: Lista di tag da cercare (es: ['figcaption', 'figure', 'caption'])
+        
+        Returns:
+            Lista di stringhe trovate nei tag specificati (senza i tag HTML)
+        """
+        unwanted_content = []
+        
+        for tag in tags:
+            # Pattern regex per trovare <tag>...</tag>
+            pattern = rf'<{tag}[^>]*>(.*?)</{tag}>'
+            matches = re.findall(pattern, html, re.IGNORECASE | re.DOTALL)
+            
+            for match in matches:
+                # Rimuove tag HTML dal contenuto
+                clean_text = re.sub(r'<[^>]+>', '', match).strip()
+                if clean_text:
+                    unwanted_content.append(clean_text)
+        
+        return unwanted_content
 
     def format_result(self, url, result):
         """Formats the final result. Can be overridden by subclasses."""

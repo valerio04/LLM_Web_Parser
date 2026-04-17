@@ -72,30 +72,7 @@ class WikipediaParser(BaseParser):
             return result.html
         return ""
 
-    def extract_unwanted_content(self, html: str, tags: list) -> list:
-        """Estrae il contenuto testuale dai tag indesiderati.
-        
-        Args:
-            html: HTML da cui estrarre
-            tags: Lista di tag da cercare (es: ['figcaption', 'figure', 'caption'])
-        
-        Returns:
-            Lista di stringhe trovate nei tag specificati (senza i tag HTML)
-        """
-        unwanted_content = []
-        
-        for tag in tags:
-            # Pattern regex per trovare <tag>...</tag>
-            pattern = rf'<{tag}[^>]*>(.*?)</{tag}>'
-            matches = re.findall(pattern, html, re.IGNORECASE | re.DOTALL)
-            
-            for match in matches:
-                # Rimuove tag HTML dal contenuto
-                clean_text = re.sub(r'<[^>]+>', '', match).strip()
-                if clean_text:
-                    unwanted_content.append(clean_text)
-        
-        return unwanted_content
+    
 
     def parse_markdown(self, result) -> str:
         """Converte il markdown estratto in testo pulito.
@@ -188,7 +165,7 @@ if __name__ == "__main__":
     parser = WikipediaParser()
     result = asyncio.run(parser.run(url))
 
-
+  #PULISCE FACENDOLO DIVETARE UN SEMPLICE TESTO PULITO SENZA MARKDOWN O HTML
     html_text = markdown2.markdown(result.get('parsed_text'))
     # Rimuove i tag HTML
     print("=============testo dopo la conversione markdown->html:===============\n", html_text[:2000])  
