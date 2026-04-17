@@ -58,32 +58,28 @@ def create_app() -> FastAPI:
 		)
 
 	@app.post("/", response_class=HTMLResponse)
-	async def run_parse(
-		request: Request,
-		url: str = Form(default=""),
-		gs_url: str = Form(default=""),
-	) -> HTMLResponse:
-		selected_url = url or gs_url or ""
+	async def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(default=""),) -> HTMLResponse:
+		selected_url = url or gs_url or "" # da rivedere 
 
 		# TODO: completare con gestione errori e validazione input
 		result = UiResult(url=selected_url)
 		metrics: Dict[str, str] = {}
 
 		if selected_url:
-			# TODO: chiamare il backend /parse e /gold_standard
-			# parse_data = call_backend("/parse", {"url": selected_url})
-			# gold_data = call_backend("/gold_standard", {"url": selected_url})
-			# metrics_data = call_backend("/evaluate", json_payload={"parsed_text": ..., "gold_standard": ...})
-			# result = UiResult(
-			# 	url=parse_data["url"],
-			# 	domain=parse_data["domain"],
-			# 	title=parse_data["title"],
-			# 	html_text=parse_data["html_text"],
-			# 	parsed_text=parse_data["parsed_text"],
-			# 	gold_text=gold_data["gold_text"],
-			# )
-			# metrics = metrics_data["metrics"]["token_level_eval"]
-			pass
+			parse_data = call_backend("/parse", {"url": selected_url})
+			gold_data = call_backend("/gold_standard", {"url": selected_url})
+			metrics_data = call_backend("/evaluate", json_payload={"parsed_text": parse_data["parsed_text"], "gold_standard": gold_data["gold_text"]})
+			
+			# crea oggetto risultato da passare al template
+			result = UiResult(
+			url=parse_data["url"],
+			domain=parse_data["domain"],
+			title=parse_data["title"],
+			html_text=parse_data["html_text"],
+			parsed_text=parse_data["parsed_text"],
+			gold_text=gold_data["gold_text"],
+			)
+			metrics = metrics_data["token_level_eval"]
 
 		gs_urls = fetch_gs_urls()
 		return templates.TemplateResponse(
@@ -124,7 +120,7 @@ def fetch_gs_urls() -> List[str]:
 		domini = []
 		print(f"[ERROR] Impossibile recuperare i domini: {e}")
 
-	return []
+	return urls
 
 
 def call_backend(endpoint: str, params: Optional[Dict[str, str]] = None, json_payload: Optional[Dict] = None) -> Dict:
@@ -138,13 +134,10 @@ def call_backend(endpoint: str, params: Optional[Dict[str, str]] = None, json_pa
 	return response.json()
 
 
-app = create_app()
-
-
 if __name__ == "__main__":
-	print(fetch_gs_urls())
-	"""import uvicorn
+	# print(fetch_gs_urls())
+	import uvicorn
 
 	# Avvia il frontend su porta 8004 (allineato alle specifiche del corso)
-	uvicorn.run("frontend:app", host="0.0.0.0", port=8004, reload=True)"""
+	uvicorn.run("frontend:app", host="0.0.0.0", port=8004, reload=True)
 

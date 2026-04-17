@@ -25,6 +25,8 @@ class ParseResponse(BaseModel):
 # chiedere se è corretta l'organizazione dei file txt
 # TODO: controllare i domini in server direttamente da qui
 # TODO: troppi dizionari, correggere
+
+
 class DomainsResponse(BaseModel):
     domains: List[str]
 
@@ -44,7 +46,7 @@ class EvaluateRequest(BaseModel):
     gold_standard: str
 
 class EvaluateResponse(BaseModel):
-    metrics: Dict[str, float]
+    token_level_eval: Dict[str, float]
 
 class FullGsEvalResponse(BaseModel):
     aggregated_metrics: Dict[str, float]
@@ -205,10 +207,10 @@ async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
     """
     Dato risultato parsing e gs restituisce le metriche di evaluation.
     """
-    result = EvaluateResponse(metrics={})
+    result = EvaluateResponse(token_level_eval={})
     evaluator = Evaluator()
     token_level_eval = evaluator.token_level_eval(request.parsed_text, request.gold_standard)
-    result.metrics["token_level_eval"] = token_level_eval
+    result.token_level_eval= token_level_eval
     return result
 
 
@@ -262,7 +264,7 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
         avg_recall = sum(recalls) / len(recalls)
         avg_f1 = sum(f1_scores) / len(f1_scores)
     
-    result.aggregated_metrics["token_level_eval"] = {"precision": avg_precision, "recall":avg_recall,"f1": avg_f1}
+    result.aggregated_metrics = {"precision": avg_precision, "recall": avg_recall,"f1": avg_f1}
     return result
 
 def find_path_parser(url: str,base_dir: Path) -> Optional[Any]:
