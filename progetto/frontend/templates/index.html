@@ -75,6 +75,11 @@
 				font-size: 14px;
 			}
 
+			input[readonly] {
+				background-color: #f3f5fb;
+				cursor: text;
+			}
+
 			button {
 				background: var(--accent);
 				color: #fff;
@@ -143,17 +148,17 @@
 								required
 							/>
 						</div>
-						<div>
-							<label for="gs_url">Seleziona URL dal GS</label>
-							<select id="gs_url" name="gs_url">
-								<option value="">-- Seleziona --</option>
-								{% for url in gs_urls %}
-									<option value="{{ url }}" {% if url == selected_url %}selected{% endif %}>
-										{{ url }}
-									</option>
-								{% endfor %}
-							</select>
-						</div>
+					<div>
+						<label for="gs_url">Seleziona URL dal GS</label>
+						<select id="gs_url" name="gs_url" onchange="updateSelectedUrl()">
+							<option value="">-- Seleziona --</option>
+							{% for url in gs_urls %}
+								<option value="{{ url }}" {% if url == selected_url %}selected{% endif %}>
+									{{ url }}
+								</option>
+							{% endfor %}
+						</select>
+					</div>
 					</div>
 					<button type="submit">Esegui parsing</button>
 				</form>
@@ -210,5 +215,19 @@
 			</section>
 		</main>
 	</body>
+	<script>
+		function updateSelectedUrl() {
+			const gsSelect = document.getElementById('gs_url');
+			const urlInput = document.getElementById('url');
+			const selectedDisplay = document.getElementById('selected_display');
+			
+			if (gsSelect.value) {
+				urlInput.value = gsSelect.value;
+				selectedDisplay.value = gsSelect.value;
+			} else {
+				selectedDisplay.value = '';
+			}
+		}
+	</script>
 </html>
 

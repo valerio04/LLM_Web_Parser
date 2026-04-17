@@ -9,10 +9,13 @@ from fastapi import FastAPI, Form, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import requests
+import markdown2
+import re
 
 app = FastAPI()
-# Assicurati che il percorso sia corretto rispetto a dove esegui lo script
-templates = Jinja2Templates(directory="../templates")
+# Usa un percorso assoluto basato sulla locazione del file
+_templates_dir = Path(__file__).parent.parent / "templates"
+templates = Jinja2Templates(directory=str(_templates_dir)) 
 
 API_BASE_URL = "http://localhost:8000"
 
@@ -47,9 +50,9 @@ class UiResult:
 def index(request: Request) -> HTMLResponse:
     gs_urls = fetch_gs_urls()
     return templates.TemplateResponse(
+        request,
         "index.html",
         {
-            "request": request,
             "gs_urls": gs_urls,
             "selected_url": "",
             "result": UiResult(),
@@ -69,16 +72,29 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
         try:
             parse_data = call_backend("/parse", {"url": selected_url})
             gold_data = call_backend("/gold_standard", {"url": selected_url})
+            
+            # Debug: Log dei dati per verificare cosa viene comparato
+            parsed_text = parse_data.get("parsed_text", "")
+            gold_text = gold_data.get("gold_text", "")
+            print(f"[DEBUG] URL: {selected_url}")
+            print(f"[DEBUG] Parsed text length: {len(parsed_text)}, first 100 chars: {parsed_text[:100]}")
+            print(f"[DEBUG] Gold text length: {len(gold_text)}, first 100 chars: {gold_text[:100]}")
+            
             metrics_data = call_backend(
                 "/evaluate", 
-                json_payload={"parsed_text": parse_data.get("parsed_text", ""), "gold_standard": gold_data.get("gold_text", "")}
+                json_payload={"parsed_text": parsed_text, "gold_standard": gold_text}
             )
-            
+			# TODo: levarlo e rimettere il testo in md
+            html_text = markdown2.markdown(parse_data.get("parsed_text", ""))
+            # Rimuove i tag HTML
+            plain_text = re.sub(r'<[^>]+>', '', html_text)
+
             result = UiResult(
                 url=parse_data.get("url", selected_url),
                 domain=parse_data.get("domain", ""),
                 title=parse_data.get("title", ""),
                 html_text=parse_data.get("html_text", ""),
+                #parsed_text=plain_text.strip(),
                 parsed_text=parse_data.get("parsed_text", ""),
                 gold_text=gold_data.get("gold_text", ""),
             )
@@ -90,9 +106,9 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
             # Qui potresti impostare un result con un messaggio di errore visibile nell'HTML
 
     return templates.TemplateResponse(
+        request,
         "index.html",
         {
-            "request": request,
             "gs_urls": gs_urls,
             "selected_url": selected_url,
             "result": result,
