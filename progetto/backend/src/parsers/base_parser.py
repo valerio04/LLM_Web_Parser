@@ -43,8 +43,12 @@ class BaseParser:
         return result.metadata.get("title", "N/A") if result.metadata else "N/A"
 
     def parse_markdown(self, result):
-        """Extracts the markdown from the result."""
-        return result.markdown
+        """Extracts the markdown from the result (safe fallback)."""
+        if hasattr(result, 'markdown_v2') and result.markdown_v2:
+            return result.markdown_v2.raw_markdown
+        elif hasattr(result, 'markdown') and result.markdown:
+            return str(result.markdown)
+        return ""
 
     def parse_html(self, result):
         """Extracts the HTML from the result."""
@@ -56,7 +60,7 @@ class BaseParser:
             headless=True,
             verbose=True
         )
-    def extract_unwanted_content(self, html: str, tags: list) -> list:
+    def extract_unwanted_content(self, html: str, tags: list, text: str) -> str:
         """Estrae il contenuto testuale dai tag indesiderati.
         
         Args:
@@ -79,7 +83,18 @@ class BaseParser:
                 if clean_text:
                     unwanted_content.append(clean_text)
         
-        return unwanted_content
+        #rimuovi gli oggetti non volut dal testo markdown
+        
+        
+        
+        # Rimuovi il testo trovato dal markdown
+        for content in unwanted_content:
+            # Escapa i caratteri speciali per regex
+            escaped_content = re.escape(content)
+            text = re.sub(escaped_content, '', text, flags=re.IGNORECASE)
+        return text
+
+        
 
     def format_result(self, url, result):
         """Formats the final result. Can be overridden by subclasses."""

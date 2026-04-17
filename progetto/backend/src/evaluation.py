@@ -84,7 +84,7 @@ class Evaluator:
         Calcola l'F1 score combinando precisione e recall.
         Parametri: precision, recall
         Ritorna: float - F1 score [0, 1]
-        """
+        """  
         if precision + recall == 0:
             return 0
         f1 = (2 * precision * recall) / (precision + recall)
@@ -184,10 +184,10 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
             with open(gold_file_path, 'r', encoding='utf-8') as f:
                 gold_text = f.read()
             
-            print("=============testo prima della pulizia markdown:===============\n", extracted_text[:2000])
+            #print("=============testo prima della pulizia markdown:===============\n", extracted_text[:2000])
            
             # Pulizia del testo Markdown
-            extracted_text = clean_markdown(extracted_text)
+           # extracted_text = clean_markdown(extracted_text)
             
             print("=============testo dopo la pulizia markdown:===============\n", extracted_text[:])
             

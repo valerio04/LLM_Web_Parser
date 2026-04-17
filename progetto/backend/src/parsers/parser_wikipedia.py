@@ -11,6 +11,7 @@ from .base_parser import BaseParser
 #from base_parser import BaseParser
 
 import markdown2
+#TODO: sbaglia i titoli, non riesce a estrarre quelli corretti, forse perche sono in un tag particolare da capire meglio
 
 # Parser per Wikipedia: https://en.wikipedia.org
 class WikipediaParser(BaseParser):
@@ -85,11 +86,11 @@ class WikipediaParser(BaseParser):
         """
         text = ""
         
-        # Estrai il markdown dall'oggetto CrawlResult
+        # Estrai il markdown dall'oggetto CrawlResult (approccio intermedio e sicuro)
         if hasattr(result, 'markdown_v2') and result.markdown_v2:
-            text = result.markdown_v2.raw_markdown if hasattr(result.markdown_v2, 'raw_markdown') else str(result.markdown_v2)
+            text = result.markdown_v2.raw_markdown
         elif hasattr(result, 'markdown') and result.markdown:
-            text = result.markdown if isinstance(result.markdown, str) else str(result.markdown)
+            text = str(result.markdown)
         else:
             return ""
 
@@ -101,13 +102,8 @@ class WikipediaParser(BaseParser):
         html = self.parse_html(result)
         if html:
             # Cerca contenuto da <figcaption>, <caption>, <aside> nel HTML
-            unwanted = self.extract_unwanted_content(html, ['figcaption']) #, 'caption', 'aside', 'figure'
-            # Rimuovi il testo trovato dal markdown
-            for content in unwanted:
-                # Escapa i caratteri speciali per regex
-                escaped_content = re.escape(content)
-                text = re.sub(escaped_content, '', text, flags=re.IGNORECASE)
-
+            text = self.extract_unwanted_content(html, ['figcaption'], text) #, 'caption', 'aside', 'figure'
+            
         # 1. Rimuove "Jump to content" e intestazioni standard
         text = re.sub(r'\[Jump to content\]\([^)]*\)', '', text)
         text = re.sub(r'From Wikipedia, the free encyclopedia', '', text)

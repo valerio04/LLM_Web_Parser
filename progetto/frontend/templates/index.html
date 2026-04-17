@@ -28,7 +28,7 @@
 
 			header {
 				padding: 32px 24px 12px;
-				max-width: 1200px;
+				max-width: 98%;
 				margin: 0 auto;
 			}
 
@@ -42,7 +42,7 @@
 			}
 
 			main {
-				max-width: 1200px;
+				max-width: 98%;
 				margin: 0 auto 40px;
 				padding: 0 24px;
 				display: grid;
@@ -114,6 +114,20 @@
 				border-radius: 10px;
 				border: 1px solid var(--border);
 				font-size: 13px;
+				max-height: 600px;
+				overflow-y: auto;
+			}
+
+			.texts-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 20px;
+			}
+
+			@media (max-width: 900px) {
+				.texts-grid {
+					grid-template-columns: 1fr;
+				}
 			}
 
 			.badge {
@@ -182,21 +196,6 @@
 			</section>
 
 			<section class="card">
-				<h2>HTML grezzo</h2>
-				<pre>{{ result.html_text or 'Nessun dato disponibile' }}</pre>
-			</section>
-
-			<section class="card">
-				<h2>Testo pulito (parsed)</h2>
-				<pre>{{ result.parsed_text or 'Nessun dato disponibile' }}</pre>
-			</section>
-
-			<section class="card">
-				<h2>Gold Standard</h2>
-				<pre>{{ result.gold_text or 'Nessun gold standard disponibile' }}</pre>
-			</section>
-
-			<section class="card">
 				<h2>Metriche di valutazione</h2>
 				<div class="grid-3">
 					<div>
@@ -213,9 +212,32 @@
 					</div>
 				</div>
 			</section>
+
+			<div class="texts-grid">
+				<section class="card">
+					<h2>HTML grezzo</h2>
+					<pre>{{ result.html_text or 'Nessun dato disponibile' }}</pre>
+				</section>
+
+				<section class="card">
+					<h2>Testo pulito (parsed)</h2>
+					<pre>{{ result.parsed_text or 'Nessun dato disponibile' }}</pre>
+				</section>
+
+				<section class="card">
+					<h2>Gold Standard</h2>
+					<pre>{{ result.gold_text or 'Nessun gold standard disponibile' }}</pre>
+				</section>
+			</div>
+
 		</main>
 	</body>
 	<script>
+		
+		if (window.history.replaceState) {
+			window.history.replaceState(null, null, window.location.href);
+		}
+
 		function updateSelectedUrl() {
 			const gsSelect = document.getElementById('gs_url');
 			const urlInput = document.getElementById('url');

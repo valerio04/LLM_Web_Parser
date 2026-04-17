@@ -7,7 +7,6 @@ from .base_parser import BaseParser
 
 
 #TODO: aggiungere golden text piu variegati per testare meglio il parser
-#TODO: sbaglia i titoli, non riesce a estrarre quelli corretti, forse perche sono in un tag particolare da capire meglio
 class EurLexParser(BaseParser):
     def __init__(self):
         super().__init__("eur-lex.europa.eu")
