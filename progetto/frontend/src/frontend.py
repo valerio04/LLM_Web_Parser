@@ -139,5 +139,5 @@ if __name__ == "__main__":
 	import uvicorn
 
 	# Avvia il frontend su porta 8004 (allineato alle specifiche del corso)
-	uvicorn.run("frontend:app", host="0.0.0.0", port=8004, reload=True)
+	uvicorn.run("frontend:app", host="127.0.0.1", port=8004, reload=True)
 
