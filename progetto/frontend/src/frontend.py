@@ -70,6 +70,7 @@ def create_app() -> FastAPI:
 			gold_data = call_backend("/gold_standard", {"url": selected_url})
 			metrics_data = call_backend("/evaluate", json_payload={"parsed_text": parse_data["parsed_text"], "gold_standard": gold_data["gold_text"]})
 			
+			
 			# crea oggetto risultato da passare al template
 			result = UiResult(
 			url=parse_data["url"],
