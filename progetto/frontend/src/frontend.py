@@ -43,6 +43,7 @@ class UiResult:
     html_text: str = ""
     parsed_text: str = ""
     gold_text: str = ""
+    error_message: str = ""
 
 # --- ROTTE SPOSTATE FUORI DA create_app() e rimosso 'async' ---
 
@@ -72,39 +73,58 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
     if selected_url:
         try:
             parse_data = call_backend("/parse", {"url": selected_url})
-            gold_data = call_backend("/gold_standard", {"url": selected_url})
             
-            # Debug: Log dei dati per verificare cosa viene comparato
+            gold_data = {}
+            metrics_data = {}
+            
+            try:
+                gold_data = call_backend("/gold_standard", {"url": selected_url})
+            except requests.RequestException as e:
+                print(f"[INFO] Nessun Gold Standard trovato per questo URL: {e}")
+            
+            
             parsed_text = parse_data.get("parsed_text", "")
             gold_text = gold_data.get("gold_text", "")
-            print(f"[DEBUG] URL: {selected_url}")
-            print(f"[DEBUG] Parsed text length: {len(parsed_text)}, first 100 chars: {parsed_text[:100]}")
-            print(f"[DEBUG] Gold text length: {len(gold_text)}, first 100 chars: {gold_text[:100]}")
+          
             
-            metrics_data = call_backend(
-                "/evaluate", 
-                json_payload={"parsed_text": parsed_text, "gold_standard": gold_text}
-            )
-			# TODo: levarlo e rimettere il testo in md
-            #html_text = markdown2.markdown(parse_data.get("parsed_text", ""))
-            # Rimuove i tag HTML
-            #plain_text = re.sub(r'<[^>]+>', '', html_text)
+			
+            if gold_text:
+                try:
+                    metrics_data = call_backend(
+                        "/evaluate", 
+                        json_payload={"parsed_text": parsed_text, "gold_standard": gold_text}
+                    )
+                except requests.RequestException as e:
+                    print(f"[ERROR] Errore durante l'evaluation: {e}")
 
+			# TODO: non so se il prof vuole il md o il testo pulito nell intefaccia
+			
+			#html_text = markdown2.markdown(parse_data.get("parsed_text", ""))
+            #plain_text = (re.sub(r'<[^>]+>', '', html_text)).strip()
             result = UiResult(
                 url=parse_data.get("url", selected_url),
                 domain=parse_data.get("domain", ""),
                 title=parse_data.get("title", ""),
                 html_text=parse_data.get("html_text", ""),
-                #parsed_text=plain_text.strip(),
+                #parsed_text=plain_text,
                 parsed_text=parse_data.get("parsed_text", ""),
                 gold_text=gold_data.get("gold_text", ""),
             )
             metrics = metrics_data.get("token_level_eval", {})
             
         except requests.RequestException as e:
-            # Gestione base dell'errore (potresti passare un messaggio di errore al template HTML)
-            print(f"[ERROR] Errore di comunicazione con il backend: {e}")
-            # Qui potresti impostare un result con un messaggio di errore visibile nell'HTML
+            # Gestione base dell'errore per il parsing
+            print(f"[ERROR] Errore durante il parsing dal backend: {e}")
+            
+            error_details = "Errore di connessione."
+            if hasattr(e, 'response') and e.response is not None:
+                try:
+                    # Legge proprio il campo "detail" che hai impostato nel backend!
+                    error_details = e.response.json().get("detail", str(e))
+                except Exception:
+                    pass
+                    
+            result.error_message = error_details
 
     return templates.TemplateResponse(
         request,
@@ -123,7 +143,7 @@ def fetch_gs_urls() -> List[str]:
     urls = []
     try:
         response = requests.get(f"{API_BASE_URL}/domains")
-        response.raise_for_status()
+        response.raise_for_status() 
         domini = response.json().get('domains', [])
         
         script_dir = Path(__file__).parent.resolve()

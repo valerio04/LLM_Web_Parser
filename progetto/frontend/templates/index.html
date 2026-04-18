@@ -230,6 +230,12 @@
 				</section>
 			</div>
 
+			{% if result.error_message %}
+			<div style="color: red; padding: 10px; border: 1px solid red; background: #fee;">
+				<strong>Errore:</strong> {{ result.error_message }}
+			</div>
+			{% endif %}
+
 		</main>
 	</body>
 	<script>

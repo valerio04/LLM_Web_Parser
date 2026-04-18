@@ -25,7 +25,7 @@ class ParseResponse(BaseModel):
 # chiedere se è corretta l'organizazione dei file txt
 # TODO: controllare i domini in server direttamente da qui
 # TODO: troppi dizionari, correggere
-
+# TODO: gestione errori mancante
 
 class DomainsResponse(BaseModel):
     domains: List[str]
@@ -72,7 +72,17 @@ async def parse_document(url: str) -> ParseResponse:
         print(f"[WARNING] Dominio non riconosciuto: {url}")
         raise HTTPException(status_code=400, detail="Dominio non supportato")"""
     
-    parser = find_path_parser(url,Path(__file__).parent.resolve())[0]
+    # 1. Ricava le informazioni di parser e path
+    parser_info = find_path_parser(url, Path(__file__).parent.resolve())
+    
+    # 2. Se parser_info è None (dominio non riconosciuto), da subito l'eccezione 400
+    if not parser_info:
+        print(f"[WARNING] Dominio non riconosciuto: {url}")
+        raise HTTPException(status_code=400, detail="Dominio non supportato")
+        
+    # 3. Altrimenti prendi il parser e procedi
+    parser = parser_info[0]
+    
     try:
         result = await parser.run(url)
         return ParseResponse(url = result['url'], 

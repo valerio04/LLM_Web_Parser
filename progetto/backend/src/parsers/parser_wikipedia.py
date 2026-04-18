@@ -32,7 +32,7 @@ class WikipediaParser(BaseParser):
         return CrawlerRunConfig(
             css_selector='.mw-content-ltr.mw-parser-output , .IPA.nopopups.noexcerpt',
             excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'table', 'infobox', 'toc', 'span', 'abbr', 'sub'],
-            excluded_selector='.hatnote.navigation-not-searchable, .noprint, .mw-references-wrap, .citation, .external.text, .side-box-flex, #References, #Bibliography, #External_links, .mw-file-description, .mw:File/Thumb',
+            excluded_selector='.hatnote.navigation-not-searchable, .noprint, .mw-references-wrap, .citation, .external.text, .side-box-flex, #References, #Bibliography, #External_links, .mw-file-description',
             word_count_threshold=0,
             cache_mode=CacheMode.BYPASS,
             exclude_external_images=True,
