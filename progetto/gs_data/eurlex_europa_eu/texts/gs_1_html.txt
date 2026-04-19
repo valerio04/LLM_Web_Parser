@@ -1,25 +1,7 @@
-
-  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-        <!DOCTYPE html>
-        <html lang="it" class="no-js"
-        xml:lang="it"  >
-        <head>
+<!DOCTYPE html><html lang="en" class="js " xml:lang="en"><head>
         <meta charset="utf-8">
         
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         
  
  
@@ -29,7 +11,7 @@
             
  
  
-        <script type="text/javascript" src="/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js" data-dtconfig="app=47d4c64c3b67ec69|agentId=9c3a2aaf4036cc3f|owasp=1|featureHash=ICANVfgqrux|rdnt=1|uxrgce=1|cuc=m097nmfl|mel=100000|mb=null|dpvc=1|iub=null|lastModification=1775994558700|tp=500,50,0|srbbv=2|agentUri=/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js|reportUrl=/eurlex-frontoffice/rb_39a3e95b-5423-482c-879b-99ef235dffeb|rid=RID_-1595631804|rpid=-868554778|domain=europa.eu"></script><script type="text/javascript" src="./../../../revamp/components/vendor/modernizr/modernizr.js?v=2.18.4"></script>
+        <script async="" src="https://analytics.webanalytics.op.europa.eu/containers/46acaa7c-2394-428f-b054-103dec22b689.js"></script><script type="text/javascript" src="/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js" data-dtconfig="app=47d4c64c3b67ec69|agentId=3d19168e186b2fd4|owasp=1|featureHash=ICANVfgqrux|rdnt=1|uxrgce=1|cuc=m097nmfl|mel=100000|mb=null|dpvc=1|iub=null|lastModification=1775748196616|tp=500,50,0|srbbv=2|agentUri=/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js|reportUrl=/eurlex-frontoffice/rb_39a3e95b-5423-482c-879b-99ef235dffeb|rid=RID_-1595631804|rpid=1413735442|domain=europa.eu"></script><script type="text/javascript" src="./../../../revamp/components/vendor/modernizr/modernizr.js?v=2.18.4"></script>
         
  
 
@@ -57,26 +39,24 @@
 
 
 
- <meta name="DCSext.w_legissum_ID" content="nato"/><meta name="WT.z_docTitle" content="NATO (North Atlantic Treaty Organisation)"/><meta name="WT.z_docID" content="nato"/><meta name="WT.z_docSector" content="other"/><meta name="WT.z_docType" content="other"/><meta name="WT.cg_n" content="Legal content view"/><meta name="WT.cg_s" content="Notices"/><meta name="WT.pi" content="Legal content pages"/><meta name="WT.z_usr_lan" content="it"/><meta name="WT.seg_1" content="Unregistered"/>
+ <meta name="DCSext.w_legissum_ID" content="nato"><meta name="WT.z_docTitle" content="NATO (North Atlantic Treaty Organisation)"><meta name="WT.z_docID" content="nato"><meta name="WT.z_docSector" content="other"><meta name="WT.z_docType" content="other"><meta name="WT.cg_n" content="Legal content view"><meta name="WT.cg_s" content="Notices"><meta name="WT.pi" content="Legal content pages"><meta name="WT.z_usr_lan" content="en"><meta name="WT.seg_1" content="Unregistered">
 
  
  
-        <meta name="google-site-verification" content="hl-zFNRVYTzOJ4xGdc2Wl9h6Ezs9rbbdMgFYLFvx6cA"/>
-        <meta name="msvalidate.01" content="6F74BA769F6140EC354DF6BE33F86005"/>
+        <meta name="google-site-verification" content="hl-zFNRVYTzOJ4xGdc2Wl9h6Ezs9rbbdMgFYLFvx6cA">
+        <meta name="msvalidate.01" content="6F74BA769F6140EC354DF6BE33F86005">
         
-        <meta name="format-detection" content="telephone=no"/>
+        <meta name="format-detection" content="telephone=no">
         
-        <meta name="war-version" content="2.18.4"/>
-        <meta name="fo-db-version" content="2.18.1"/>
-        <meta name="sl-api-version" content="3.9.8/CORPORATE_SEARCH/2.146"/>
+        <meta name="war-version" content="2.18.4">
+        <meta name="fo-db-version" content="2.18.1">
+        <meta name="sl-api-version" content="3.9.8/CORPORATE_SEARCH/2.146">
 
-        <meta name="app-relative-path" content="./../../../"/>
+        <meta name="app-relative-path" content="./../../../">
 
-        <link rel="stylesheet" media="all"
-        href="./../../../revamp/components/vendor/bootstrap/dist/css/bootstrap.css?v=2.18.4">
+        <link rel="stylesheet" media="all" href="./../../../revamp/components/vendor/bootstrap/dist/css/bootstrap.css?v=2.18.4">
         
-        <link rel="stylesheet" media="all"
-        href="./../../../revamp/components/vendor/font-awesome/css/font-awesome.min.css?v=2.18.4">
+        <link rel="stylesheet" media="all" href="./../../../revamp/components/vendor/font-awesome/css/font-awesome.min.css?v=2.18.4">
         <link rel="stylesheet" media="all" href="./../../../revamp/components/vendor/roboto/roboto.css?v=2.18.4">
         <link rel="stylesheet" media="all" href="./../../../revamp/css/eurlex.css?v=2.18.4">
         <link rel="stylesheet" media="all" href="./../../../revamp/css/eurlex-dev.css?v=2.18.4">
@@ -116,9 +96,9 @@
 
         
 
-        <script type="text/javascript" src="./../../../dynamic-js/labels_it.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../dynamic-js/labels_en.js?v=2.18.4"></script>
         
-        <script type="text/javascript" src="./../../../dynamic-js/WT_labels_it.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../dynamic-js/WT_labels_en.js?v=2.18.4"></script>
         <script type="text/javascript" src="./../../../dynamic-js/config.js?v=2.18.4"></script>
         <script type="text/javascript" src="./../../../dynamic-js/const.js?v=2.18.4"></script>
         
@@ -126,9 +106,9 @@
         
 
 			<script type="text/javascript">
-        var legislativeUrl = 'http://old.eur-lex.europa.eu/it/techleg/index.htm';
-        var eurovocUrl = 'http://eurovoc.europa.eu/drupal/?q=it/node';
-        var interStyleGuideUrl = 'http://publications.europa.eu/code/it/it-000100.htm';
+        var legislativeUrl = 'http://old.eur-lex.europa.eu/en/techleg/index.htm';
+        var eurovocUrl = 'http://eurovoc.europa.eu/drupal/';
+        var interStyleGuideUrl = 'http://publications.europa.eu/code/en/en-000100.htm';
         var sessionExpired = false;
         var pageUrl = '';
         var queryString = 'uri=LEGISSUM:nato&amp;SummariesPrintUrl=/legal-content/IT/TXT/?uri=LEGISSUM:nato';
@@ -142,8 +122,8 @@
         
  
 
-        <link rel="shortcut icon" href="./../../../images/eurlex.ico"/>
-        <link rel="canonical" href="https://eur-lex.europa.eu/IT/legal-content/glossary/nato-north-atlantic-treaty-organisation.html"/>
+        <link rel="shortcut icon" href="./../../../images/eurlex.ico">
+        <link rel="canonical" href="https://eur-lex.europa.eu/IT/legal-content/glossary/nato-north-atlantic-treaty-organisation.html">
         
  
  
@@ -167,14 +147,42 @@
         
 		<script type="text/javascript" src="./../../../js/survey/survey.js?v=2.18.4"></script>
          
-        </head>
+        <link type="text/css" rel="stylesheet" media="all" href="https://webtools.europa.eu/css/webtools.theme-eu.css?t=cdb5c65d"><link type="text/css" rel="stylesheet" media="all" href="https://webtools.europa.eu/css/webtools.sbkm.css?t=cdb5c65d"><link rel="stylesheet" href="https://webtools.europa.eu/css/webtools.icons.flags.css?t=cdb5c65d" as="style"></head>
         
  
  
- <body > 
-        <script  type="application/json">{
+ <body><div data-nosnippet="true" class="wt-cck--banner" id="cookie-consent-banner" role="region" aria-label="Cookies policy"><div class="wt-cck--container">
+      <div class="wt-cck--wrapper">
+        <div class="wt-cck--content">
+          <div class="wt-cck--content-icon">
+              <span class="wt-icon--information wt-icon--l wt-icon--primary"></span>
+          </div>
+          <div class="wt-cck--content-content"><p class="wt-cck--content-notice">This site uses cookies. Visit our <a href="https://eur-lex.europa.eu/content/legal-notice/legal-notice.html?locale=en#5.%20Cookies%20notice" target="_self" class="wt-ecl-link">cookies policy page</a> or click the link in any footer for more information and to change your preferences.</p></div>
+        </div>
+        <div class="wt-cck--actions">
+          <a href="#accept" class="wt-ecl-button wt-ecl-button--primary wt-cck--actions-button">Accept all cookies</a>
+          <a href="#refuse" class="wt-ecl-button wt-ecl-button--primary wt-cck--actions-button">Accept only essential cookies</a>
+        </div>
+      </div>
+    </div><style class="wt-noconflict">@media print{.wt-cck--container{display:none}}@media all{.wt-cck--container{font-family:Inter,Arial,sans-serif;background-color:#ebebeb;line-height:30px;font-size:16px;padding:24px;position:fixed;z-index:100;bottom:0;right:0;left:0;color:#444}.wt-cck--container .wt-cck--content a{color:#004494;text-decoration:underline}.wt-cck--container .wt-cck--wrapper{display:flex;margin:0 auto;max-width:1170px;flex-direction:column}.wt-cck--container .wt-cck--wrapper .wt-cck--content{display:flex;margin-right:1.5rem;flex-grow:2;gap:1.5rem}.wt-cck--container .wt-cck--wrapper .wt-cck--content p{margin:0 0 1rem}.wt-cck--container .wt-cck--wrapper .wt-cck--actions{display:flex;align-items:flex-start;justify-content:flex-start;flex-wrap:wrap;gap:.5rem;margin-left:3rem}.wt-cck--container .wt-cck--wrapper .wt-cck--actions a{white-space:nowrap}body canvas.wt-cck--image-sizer{visibility:hidden;box-sizing:border-box;height:attr(height)!important}}@media screen and (min-width:920px){.wt-cck--container .wt-cck--wrapper{flex-direction:row}.wt-cck--container .wt-cck--wrapper .wt-cck--actions{flex-wrap:nowrap}.wt-cck--container .wt-cck--wrapper .wt-cck--actions a.wt-cck--actions-button{margin-top:0}}</style></div><div class="globan-background"><div class="wt-globan--container dark" id="globan" data-nosnippet="true" style="z-index: 10000;"><style class="wt-noconflict">@media print{#globan{display:none}}@media all{#globan,#globan *,#globan *:after,#globan *:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#globan .wt-globan--center *{font-size:14px;line-height:22px}#globan *{font-family:Inter,Arial,sans-serif}.wt-globan--container{position:relative}#globan.fixed{position:fixed;left:0;top:0;right:0}}@media all{#globan .wt-globan--invalid-domain{background:#ffd617;color:#444;padding:5px 16px;text-align:center}}@media all{#globan .wt-globan--center{background:#eee;display:flex;align-items:center;position:relative;z-index:2}#globan.dark .wt-globan--center{background:#444;color:#fff}#globan .wt-globan--content{display:flex;align-items:center;position:relative}#globan .wt-globan--flag{margin:0 8px 0 16px;max-height:16px;border:0}#globan.noflag .wt-globan--flag{display:none}#globan.noflag .wt-globan--content{padding-left:16px}#globan.dark .wt-globan--flag{border:1px solid rgb(255 255 255 / .25)}#globan .wt-globan--text-short{display:none}}@media all{#globan .wt-globan--button{text-decoration:none;color:#444;background-color:#fff0;font-weight:400;margin:0 0 0 8px;padding:0 7px;position:relative;display:flex;align-items:center;cursor:pointer;outline:none;border:3px solid #eee;white-space:nowrap}#globan.dark .wt-globan--button{color:#fff;border-color:#444}#globan.reverse .wt-globan--button{margin:0 8px 0 0}#globan .wt-globan--arrow{width:12px;height:12px;margin:0 0 0 8px}#globan.reverse .wt-globan--arrow{margin:0 8px 0 0}#globan .wt-globan--arrow path{stroke:currentColor;stroke-width:5px}#globan .wt-globan--button[aria-expanded="true"] svg.wt-globan--arrow{transform:scale(1)}}@media all{#globan .wt-globan--button:hover{background:#fff;border-color:#fff;color:#004494}#globan .wt-globan--button[aria-expanded="true"],#globan .wt-globan--button:focus-visible{background:#fff;border-color:#ffd617;color:#004494}}@media all{#globan .wt-globan--dropdown{background-color:#fff;position:absolute;right:0;top:100%;padding:12px 16px;margin:0;max-width:500px;border:1px solid #ccc;box-shadow:0 4px 5px 0 rgb(0 0 0 / .4);-webkit-box-shadow:0 4px 5px 0 rgb(0 0 0 / .4);-moz-box-shadow:0 4px 5px 0 rgb(0 0 0 / .4);color:#444}#globan.reverse .wt-globan--dropdown{right:auto;left:0}#globan .wt-globan--dropdown .wt-globan--p{padding:0;margin:0;line-height:1.4}#globan .wt-globan--dropdown .wt-globan--p-link{margin-top:10px}#globan.nolink .wt-globan--p-link{display:none}#globan .wt-globan--dropdown a{color:#004494;text-decoration:none}#globan .wt-globan--dropdown a:hover{text-decoration:underline}}@media all{#globan .wt-globan--promo-container{background:#002A99;color:#fff;position:relative;z-index:1}#globan .wt-globan--promo-container.dark{background:#eee}#globan .wt-globan--promo-container.dark{color:#00002E;border-color:#00002E}#globan .wt-globan--promo-content{display:flex;align-items:center;padding:16px 32px;margin:0 auto;max-width:1368px}#globan .wt-globan--promo-text{max-width:calc(100% - 120px)}#globan .wt-globan--promo-date{font-size:22px;font-weight:400;line-height:32px;font-weight:200}#globan .wt-globan--promo-title{font-size:36px;margin-top:2px;line-height:40px;font-weight:400}#globan .wt-globan--promo-link{margin:0 0 0 auto;color:#fff;text-decoration:none;border:2px solid #fff;display:flex;align-items:center;outline:none;font-size:18px;font-weight:400;padding:0 20px;height:44px;line-height:28px;white-space:nowrap;border-radius:2px}#globan .wt-globan--promo-container.noclose .wt-globan--promo-link{margin:0 0 0 auto}#globan .wt-globan--promo-arrow{display:none}#globan .wt-globan--promo-link:hover,#globan .wt-globan--promo-link:focus-visible{background:#fff;color:#00002e}#globan .wt-globan--promo-link:focus-visible{outline:2px solid #0046FF}#globan .wt-globan--promo-container.dark .wt-globan--promo-link{color:#00002E;border-color:#00002E}#globan .wt-globan--promo-container.dark .wt-globan--promo-link:hover,#globan .wt-globan--promo-container.dark .wt-globan--promo-link:focus-visible{color:#fff!important;background:#00002E;outline:2px solid #0046FF;outline-offset:2px}}@media all{#globan .wt-globan--promo-container{overflow:hidden}#globan .wt-globan--promo-container img,#globan .wt-globan--promo-container canvas{position:absolute;left:0;right:0;top:0;bottom:0;z-index:1;width:100%;height:100%}#globan .wt-globan--promo-content{position:relative;z-index:2}#globan .wt-globan--promo-container img{left:50%;top:50%;height:auto;min-height:100%;transform:translate(-50%,-50%);width:auto;max-width:100%}}@media all{#globan.reverse{direction:rtl}}@media (max-width:1139px){#globan .wt-globan--promo-date{font-size:16px;line-height:24px}#globan .wt-globan--promo-title{font-size:30px;margin-top:0;line-height:40px}#globan .wt-globan--promo-content{padding:16px 24px}}@media (max-width:767px){#globan .wt-globan--promo-text{max-width:calc(100% - 70px)}#globan .wt-globan--promo-title{font-size:22px;margin-top:0;line-height:32px}#globan .wt-globan--content{width:100%}#globan .wt-globan--button{margin:0 0 0 auto}#globan.reverse .wt-globan--button{margin:0 auto 0 0}#globan .wt-globan--flag{margin:0 8px}#globan .wt-globan--text-long{display:none}#globan .wt-globan--text-short{display:block}#globan .wt-globan--promo-link{margin:0 0 0 auto;color:#00002e;text-decoration:none;border:0;display:flex;align-items:center;outline:none;font-size:18px;font-weight:400;padding:0 12px;line-height:auto;white-space:nowrap;background:rgb(255 255 255 / .5);position:absolute;right:20px;top:0;bottom:0;height:100%;border-radius:0}#globan .wt-globan--promo-link:hover,#globan .wt-globan--promo-link:focus-visible{color:#fff;background:rgb(0 0 0 / .5)}#globan .wt-globan--promo-link-text{display:none}#globan .wt-globan--promo-arrow{display:block}#globan .wt-globan--promo-content{padding:12px 16px}}@media (max-width:480px){#globan .wt-globan--text-short{display:none}#globan .wt-globan--flag{display:inline-block!important}#globan .wt-globan--button{margin-left:auto}#globan .wt-globan--content{padding:0!important;display:flex;align-items:center;width:100%}#globan .wt-globan--promo-link{right:0}}</style>
+      <div class="wt-unselected wt-globan--center">
+        <div class="wt-globan--content">
+          <img src="https://webtools.europa.eu/images/flags/eu.svg" class="wt-img--flags  wt-icon--m wt-globan--flag" loading="lazy" decoding="async" alt="">
+          <span class="wt-globan--text-long">An official website of the European Union</span>
+          <span class="wt-globan--text-short">An official EU website</span>
+          <button class="wt-globan--button" aria-controls="_Gpr1huzv06x" aria-expanded="false">
+            How do you know?
+            <i class="wt-icon--corner-arrow wt-icon--rotate-180 wt-icon--xs wt-globan--arrow"></i>
+          </button>
+          <div id="_Gpr1huzv06x" class="wt-globan--dropdown" hidden="">
+            <p class="wt-globan--p">All official European Union website addresses are in the <b class="wt-noconflict">europa.eu</b> domain.</p>
+            <p class="wt-globan--p-link"><a class="wt-link" href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en">See all EU institutions and bodies</a></p>
+          </div>
+        </div>
+      </div></div></div> 
+        <script type="application/json" data-process="true">{
             "utility": "cck",
-            "url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html?locale=it#5.%20Cookies%20notice"
+            "url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html?locale=en#5.%20Cookies%20notice"
         }</script>
 
         
@@ -223,7 +231,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                 <div class="modal-title" role="heading" aria-level="1" id="DemoModal02Title"></div>
             </div><!-- modal-header -->
             <div class="modal-body">
@@ -245,7 +253,7 @@
         <div class="Wrapper clearfix">
 
         
-        <a class="sr-only sr-only-focusable SkipLink" href="#MainContent">Passa ai contenuti principali</a> <div> 
+        <a class="sr-only sr-only-focusable SkipLink" href="#MainContent">Skip to main content</a> <div> 
 
 
 
@@ -272,16 +280,16 @@
 
 
 	
-	<header id="op-header" class="ecl-site-header header-refinement box-shadow-removal" data-ecl-auto-init="SiteHeader">
+	<header id="op-header" class="ecl-site-header header-refinement box-shadow-removal" data-ecl-auto-init="SiteHeader" data-ecl-auto-initialized="true">
         <div class="ecl-site-header__background">
             <div class="ecl-site-header__header">
                 <div class="ecl-site-header__container ecl-container upper-header-border header-width-override">
                     
-                    <div class="ecl-site-header__top" data-ecl-site-header-top>
-                        <a id="homepageLogo" href="https://european-union.europa.eu/index_en" class="ecl-link ecl-link--standalone ecl-site-header__logo-link" ariaLabel="aria-label=European Union">
+                    <div class="ecl-site-header__top" data-ecl-site-header-top="">
+                        <a id="homepageLogo" href="https://european-union.europa.eu/index_en" class="ecl-link ecl-link--standalone ecl-site-header__logo-link" arialabel="aria-label=European Union">
                             <picture class="ecl-picture ecl-site-header__picture" title="European Union">
-                              <source srcset="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/logo/standard-version/positive/logo-eu--it.svg" media="(min-width: 996px)">
-                                <img class="ecl-site-header__logo-image eu-logo-size" src="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/logo/condensed-version/positive/logo-eu--it.svg" alt="European Union flag" />
+                              <source srcset="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/logo/standard-version/positive/logo-eu--en.svg" media="(min-width: 996px)">
+                                <img class="ecl-site-header__logo-image eu-logo-size" src="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/logo/condensed-version/positive/logo-eu--en.svg" alt="European Union flag" width="172" height="48">
                             </picture>
                         </a>
                             <div class="ecl-site-header__action">
@@ -291,12 +299,12 @@
                                         
  
  
-                                                <a id="MyEurlex" class="ecl-button ecl-button--tertiary ecl-site-header__login-toggle dropdown-toggle login-lang-text-size" href="#" data-toggle="dropdown" aria-haspopup="true" >
-                                                    <svg class="ecl-icon ecl-icon--s ecl-site-header__icon login-lang-image-size" focusable="false" aria-hidden="false" role="img" ">
-                                                        <use alt="Log in" xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/log-in.svg#log-in"/>
+                                                <a id="MyEurlex" class="ecl-button ecl-button--tertiary ecl-site-header__login-toggle dropdown-toggle login-lang-text-size" href="#" data-toggle="dropdown" aria-haspopup="true">
+                                                    <svg class="ecl-icon ecl-icon--s ecl-site-header__icon login-lang-image-size" focusable="false" aria-hidden="false" role="img" "="" viewBox="0 0 24 24">
+                                                        
                                                         <title>Log in</title>
-                                                    </svg>
-                                                    Il mio EUR-Lex
+                                                    <path d="M7 7c0 2.8 2.2 5 5 5s5-2.2 5-5-2.2-5-5-5-5 2.2-5 5M2 18.2V22h20v-3.8c0-3.3-6.7-5-10-5s-10 1.7-10 5"></path></svg>
+                                                    My EUR-Lex
  </a> 
  
  
@@ -310,7 +318,7 @@
  
  
 
-                                                    <li class="dropdown-header visible-xs-block">Il mio EUR-Lex</li> <li>
+                                                    <li class="dropdown-header visible-xs-block">My EUR-Lex</li> <li>
 
 
 
@@ -344,9 +352,9 @@
 
 
 
-<a href="./../../../protected/homepage.html?url=%2FIT%2Flegal-content%2Fglossary%2Fnato-north-atlantic-treaty-organisation.html"                aria-label=""><i class="fa fa-sign-in" aria-hidden="true"></i>Connettersi</a>
+<a href="./../../../protected/homepage.html?url=%2FIT%2Flegal-content%2Fglossary%2Fnato-north-atlantic-treaty-organisation.html" aria-label=""><i class="fa fa-sign-in" aria-hidden="true"></i>Sign in</a>
 </li>
-                                                    <li><a href="https://ecas.ec.europa.eu/cas/eim/external/register.cgi/"><i class="fa fa-user-plus" aria-hidden="true"></i>Registrarsi</a></li>
+                                                    <li><a href="https://ecas.ec.europa.eu/cas/eim/external/register.cgi/"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
                                                     <li role="separator" class="divider"></li>
                                                 
  
@@ -388,46 +396,44 @@
 
 
 
-<a href="./../../../my-eurlex/my-queries.html#recentQueries"       title="Le mie ricerche recenti (0)" id="myRecentQueriesLink"        aria-label=""><i class="fa fa-history" aria-hidden="true"></i>Le mie ricerche recenti (0)</a>
+<a href="./../../../my-eurlex/my-queries.html#recentQueries" title="My recent searches (0)" id="myRecentQueriesLink" aria-label=""><i class="fa fa-history" aria-hidden="true"></i>My recent searches (0)</a>
 </li> 
  
  
  </div> </div> 
  
                                 <div id="op-header-language" class="ecl-site-header__language">
-                                    <a class="ecl-button ecl-button--tertiary ecl-site-header__language-selector login-lang-text-size" href="#" data-ecl-language-selector role="button" aria-label="Change language, current language is English" aria-controls="language-list-overlay">
+                                    <a class="ecl-button ecl-button--tertiary ecl-site-header__language-selector login-lang-text-size" href="#" data-ecl-language-selector="" role="button" aria-label="Change language, current language is English" aria-controls="language-list-overlay">
                                         <span class="ecl-site-header__language-icon">
-                                            <svg class="ecl-icon ecl-icon--s ecl-site-header__icon login-lang-image-size" focusable="false" aria-hidden="false" role="img" ">
-                                                <use xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/global.svg#global"/use>
-                                                <title>English</title>
-                                            </svg>
+                                            <svg class="ecl-icon ecl-icon--s ecl-site-header__icon login-lang-image-size" focusable="false" aria-hidden="false" role="img" "="" viewBox="0 0 24 24">
+                                                <path d="M2 12c0 5.5 4.5 10 10 10s10-4.5 10-10S17.5 2 12 2 2 6.5 2 12m10-8c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.4 1.1-2.8 1.9-4m2.6.4c1.8.7 3.4 1.9 4.3 3.6h-3c-.2-1.2-.7-2.5-1.3-3.6m-5.2 0C8.8 5.5 8.4 6.8 8 8H5.1C6 6.3 7.6 5.1 9.4 4.4m7.1 7.6c0-.7-.1-1.3-.1-2h3.4c.2.6.3 1.3.3 2s-.1 1.4-.3 2h-3.4c0-.7.1-1.3.1-2m-7 0c0-.7.1-1.3.2-2h4.7c.1.7.2 1.3.2 2s-.1 1.3-.2 2H9.7c-.1-.7-.2-1.3-.2-2M4 12c0-.7.1-1.4.3-2h3.4c-.1.7-.1 1.3-.1 2s.1 1.3.1 2H4.3c-.2-.6-.3-1.3-.3-2m12 4h3c-1 1.7-2.5 2.9-4.3 3.6.5-1.1 1-2.4 1.3-3.6m-5.9 0h3.8c-.4 1.4-1.1 2.8-1.9 4-.8-1.2-1.5-2.6-1.9-4m-5 0H8c.3 1.2.8 2.5 1.4 3.6-1.8-.7-3.4-1.9-4.3-3.6"></path></svg>
                                         </span>
-                                        Italiano
+                                        English
  </a> 
-                                    <div class="ecl-site-header__language-container" id="language-list-overlay" hidden data-ecl-language-list-overlay aria-labelledby="ecl-site-header__language-title" role="dialog">
+                                    <div class="ecl-site-header__language-container" id="language-list-overlay" hidden="" data-ecl-language-list-overlay="" aria-labelledby="ecl-site-header__language-title" role="dialog">
                                         <div class="ecl-site-header__language-header">
                                             <div class="ecl-site-header__language-title" id="ecl-site-header__language-title">
                                                 Select your language
                                             </div>
-                                            <button id="languageButtonClose" class="ecl-button ecl-button--tertiary" type="submit" data-ecl-language-list-close>
+                                            <button id="languageButtonClose" class="ecl-button ecl-button--tertiary" type="submit" data-ecl-language-list-close="">
                                                 <span class="ecl-button__container">
                                                     <span class="ecl-button__label" data-ecl-label="true"></span>
-                                                    <svg class="ecl-icon ecl-icon--l ecl-button__icon lang-panel-close" focusable="false" aria-hidden="true" data-ecl-icon>
-                                                        <use alt="Close button" xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/close-filled.svg#close-filled"/>
-                                                    </svg>
+                                                    <svg class="ecl-icon ecl-icon--l ecl-button__icon lang-panel-close" focusable="false" aria-hidden="true" data-ecl-icon="" viewBox="0 0 24 24">
+                                                        
+                                                    <path d="M17 15.5c.4.4.4 1 0 1.4s-1 .4-1.4 0L12 13.4l-3.5 3.5c-.4.4-1 .4-1.4 0s-.4-1 0-1.4l3.5-3.5-3.5-3.5c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l3.5 3.5 3.5-3.5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L13.4 12zM12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2"></path></svg>
                                                 </span>
                                             </button>
                                         </div>
-                                        <hr class="lang-box-divisor"/>
+                                        <hr class="lang-box-divisor">
                                         <div class="ecl-site-header__language-content">
-                                            <div class="ecl-site-header__language-category" data-ecl-language-list-eu>
+                                            <div class="ecl-site-header__language-category" data-ecl-language-list-eu="">
                                                 <div class="ecl-site-header__language-category-title">
                                                     Official EU languages:
                                                 </div>
                                                 <form id="languageForm" method="get" name="languageForm">
 	                                                
 	
-	<input type="hidden" name="uri" value="LEGISSUM:nato"></input><input type="hidden" name="SummariesPrintUrl" value="/legal-content/IT/TXT/?uri=LEGISSUM:nato"></input>
+	<input type="hidden" name="uri" value="LEGISSUM:nato"><input type="hidden" name="SummariesPrintUrl" value="/legal-content/IT/TXT/?uri=LEGISSUM:nato">
                                                     <ul class="ecl-site-header__language-list">
                                                         <li class="ecl-site-header__language-item">
 
@@ -463,7 +469,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;bg&#039;); $(this).closest(&#039;form&#039;).submit();"  id="bg"      lang=bg hreflang=bg aria-label=""><span class="ecl-site-header__language-link-code">bg</span><span class="ecl-site-header__language-link-label">български</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('bg'); $(this).closest('form').submit();" id="bg" lang="bg" hreflang="bg" aria-label=""><span class="ecl-site-header__language-link-code">bg</span><span class="ecl-site-header__language-link-label">български</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -499,7 +505,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;es&#039;); $(this).closest(&#039;form&#039;).submit();"  id="es"      lang=es hreflang=es aria-label=""><span class="ecl-site-header__language-link-code">es</span><span class="ecl-site-header__language-link-label">Español</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('es'); $(this).closest('form').submit();" id="es" lang="es" hreflang="es" aria-label=""><span class="ecl-site-header__language-link-code">es</span><span class="ecl-site-header__language-link-label">Español</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -535,7 +541,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;cs&#039;); $(this).closest(&#039;form&#039;).submit();"  id="cs"      lang=cs hreflang=cs aria-label=""><span class="ecl-site-header__language-link-code">cs</span><span class="ecl-site-header__language-link-label">Čeština</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('cs'); $(this).closest('form').submit();" id="cs" lang="cs" hreflang="cs" aria-label=""><span class="ecl-site-header__language-link-code">cs</span><span class="ecl-site-header__language-link-label">Čeština</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -571,7 +577,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;da&#039;); $(this).closest(&#039;form&#039;).submit();"  id="da"      lang=da hreflang=da aria-label=""><span class="ecl-site-header__language-link-code">da</span><span class="ecl-site-header__language-link-label">Dansk</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('da'); $(this).closest('form').submit();" id="da" lang="da" hreflang="da" aria-label=""><span class="ecl-site-header__language-link-code">da</span><span class="ecl-site-header__language-link-label">Dansk</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -607,7 +613,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;de&#039;); $(this).closest(&#039;form&#039;).submit();"  id="de"      lang=de hreflang=de aria-label=""><span class="ecl-site-header__language-link-code">de</span><span class="ecl-site-header__language-link-label">Deutsch</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('de'); $(this).closest('form').submit();" id="de" lang="de" hreflang="de" aria-label=""><span class="ecl-site-header__language-link-code">de</span><span class="ecl-site-header__language-link-label">Deutsch</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -643,7 +649,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;et&#039;); $(this).closest(&#039;form&#039;).submit();"  id="et"      lang=et hreflang=et aria-label=""><span class="ecl-site-header__language-link-code">et</span><span class="ecl-site-header__language-link-label">Eesti keel</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('et'); $(this).closest('form').submit();" id="et" lang="et" hreflang="et" aria-label=""><span class="ecl-site-header__language-link-code">et</span><span class="ecl-site-header__language-link-label">Eesti keel</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -679,7 +685,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;el&#039;); $(this).closest(&#039;form&#039;).submit();"  id="el"      lang=el hreflang=el aria-label=""><span class="ecl-site-header__language-link-code">el</span><span class="ecl-site-header__language-link-label">Ελληνικά</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('el'); $(this).closest('form').submit();" id="el" lang="el" hreflang="el" aria-label=""><span class="ecl-site-header__language-link-code">el</span><span class="ecl-site-header__language-link-label">Ελληνικά</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -715,7 +721,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;en&#039;); $(this).closest(&#039;form&#039;).submit();"  id="en"      lang=en hreflang=en aria-label=""><span class="ecl-site-header__language-link-code">en</span><span class="ecl-site-header__language-link-label">English</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link ecl-site-header__language-link--active" onclick="$('#langToSubmit').val('en'); $(this).closest('form').submit();" id="en" lang="en" hreflang="en" aria-label=""><span class="ecl-site-header__language-link-code">en</span><span class="ecl-site-header__language-link-label">English</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -751,7 +757,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;fr&#039;); $(this).closest(&#039;form&#039;).submit();"  id="fr"      lang=fr hreflang=fr aria-label=""><span class="ecl-site-header__language-link-code">fr</span><span class="ecl-site-header__language-link-label">Français</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('fr'); $(this).closest('form').submit();" id="fr" lang="fr" hreflang="fr" aria-label=""><span class="ecl-site-header__language-link-code">fr</span><span class="ecl-site-header__language-link-label">Français</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -787,7 +793,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;ga&#039;); $(this).closest(&#039;form&#039;).submit();"  id="ga"      lang=ga hreflang=ga aria-label=""><span class="ecl-site-header__language-link-code">ga</span><span class="ecl-site-header__language-link-label">Gaeilge</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('ga'); $(this).closest('form').submit();" id="ga" lang="ga" hreflang="ga" aria-label=""><span class="ecl-site-header__language-link-code">ga</span><span class="ecl-site-header__language-link-label">Gaeilge</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -823,7 +829,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;hr&#039;); $(this).closest(&#039;form&#039;).submit();"  id="hr"      lang=hr hreflang=hr aria-label=""><span class="ecl-site-header__language-link-code">hr</span><span class="ecl-site-header__language-link-label">Hrvatski</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('hr'); $(this).closest('form').submit();" id="hr" lang="hr" hreflang="hr" aria-label=""><span class="ecl-site-header__language-link-code">hr</span><span class="ecl-site-header__language-link-label">Hrvatski</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -859,7 +865,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;it&#039;); $(this).closest(&#039;form&#039;).submit();"  id="it"      lang=it hreflang=it aria-label=""><span class="ecl-site-header__language-link-code">it</span><span class="ecl-site-header__language-link-label">Italiano</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('it'); $(this).closest('form').submit();" id="it" lang="it" hreflang="it" aria-label=""><span class="ecl-site-header__language-link-code">it</span><span class="ecl-site-header__language-link-label">Italiano</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -895,7 +901,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;lv&#039;); $(this).closest(&#039;form&#039;).submit();"  id="lv"      lang=lv hreflang=lv aria-label=""><span class="ecl-site-header__language-link-code">lv</span><span class="ecl-site-header__language-link-label">Latviešu valoda</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('lv'); $(this).closest('form').submit();" id="lv" lang="lv" hreflang="lv" aria-label=""><span class="ecl-site-header__language-link-code">lv</span><span class="ecl-site-header__language-link-label">Latviešu valoda</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -931,7 +937,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;lt&#039;); $(this).closest(&#039;form&#039;).submit();"  id="lt"      lang=lt hreflang=lt aria-label=""><span class="ecl-site-header__language-link-code">lt</span><span class="ecl-site-header__language-link-label">Lietuvių kalba</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('lt'); $(this).closest('form').submit();" id="lt" lang="lt" hreflang="lt" aria-label=""><span class="ecl-site-header__language-link-code">lt</span><span class="ecl-site-header__language-link-label">Lietuvių kalba</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -967,7 +973,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;hu&#039;); $(this).closest(&#039;form&#039;).submit();"  id="hu"      lang=hu hreflang=hu aria-label=""><span class="ecl-site-header__language-link-code">hu</span><span class="ecl-site-header__language-link-label">Magyar</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('hu'); $(this).closest('form').submit();" id="hu" lang="hu" hreflang="hu" aria-label=""><span class="ecl-site-header__language-link-code">hu</span><span class="ecl-site-header__language-link-label">Magyar</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -1003,7 +1009,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;mt&#039;); $(this).closest(&#039;form&#039;).submit();"  id="mt"      lang=mt hreflang=mt aria-label=""><span class="ecl-site-header__language-link-code">mt</span><span class="ecl-site-header__language-link-label">Malti</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('mt'); $(this).closest('form').submit();" id="mt" lang="mt" hreflang="mt" aria-label=""><span class="ecl-site-header__language-link-code">mt</span><span class="ecl-site-header__language-link-label">Malti</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -1039,7 +1045,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;nl&#039;); $(this).closest(&#039;form&#039;).submit();"  id="nl"      lang=nl hreflang=nl aria-label=""><span class="ecl-site-header__language-link-code">nl</span><span class="ecl-site-header__language-link-label">Nederlands</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('nl'); $(this).closest('form').submit();" id="nl" lang="nl" hreflang="nl" aria-label=""><span class="ecl-site-header__language-link-code">nl</span><span class="ecl-site-header__language-link-label">Nederlands</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -1075,7 +1081,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;pl&#039;); $(this).closest(&#039;form&#039;).submit();"  id="pl"      lang=pl hreflang=pl aria-label=""><span class="ecl-site-header__language-link-code">pl</span><span class="ecl-site-header__language-link-label">Polski</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('pl'); $(this).closest('form').submit();" id="pl" lang="pl" hreflang="pl" aria-label=""><span class="ecl-site-header__language-link-code">pl</span><span class="ecl-site-header__language-link-label">Polski</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -1111,7 +1117,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;pt&#039;); $(this).closest(&#039;form&#039;).submit();"  id="pt"      lang=pt hreflang=pt aria-label=""><span class="ecl-site-header__language-link-code">pt</span><span class="ecl-site-header__language-link-label">Português</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('pt'); $(this).closest('form').submit();" id="pt" lang="pt" hreflang="pt" aria-label=""><span class="ecl-site-header__language-link-code">pt</span><span class="ecl-site-header__language-link-label">Português</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -1147,7 +1153,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;ro&#039;); $(this).closest(&#039;form&#039;).submit();"  id="ro"      lang=ro hreflang=ro aria-label=""><span class="ecl-site-header__language-link-code">ro</span><span class="ecl-site-header__language-link-label">Română</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('ro'); $(this).closest('form').submit();" id="ro" lang="ro" hreflang="ro" aria-label=""><span class="ecl-site-header__language-link-code">ro</span><span class="ecl-site-header__language-link-label">Română</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -1183,7 +1189,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;sk&#039;); $(this).closest(&#039;form&#039;).submit();"  id="sk"      lang=sk hreflang=sk aria-label=""><span class="ecl-site-header__language-link-code">sk</span><span class="ecl-site-header__language-link-label">Slovenčina</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('sk'); $(this).closest('form').submit();" id="sk" lang="sk" hreflang="sk" aria-label=""><span class="ecl-site-header__language-link-code">sk</span><span class="ecl-site-header__language-link-label">Slovenčina</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -1219,7 +1225,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;sl&#039;); $(this).closest(&#039;form&#039;).submit();"  id="sl"      lang=sl hreflang=sl aria-label=""><span class="ecl-site-header__language-link-code">sl</span><span class="ecl-site-header__language-link-label">Slovenščina</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('sl'); $(this).closest('form').submit();" id="sl" lang="sl" hreflang="sl" aria-label=""><span class="ecl-site-header__language-link-code">sl</span><span class="ecl-site-header__language-link-label">Slovenščina</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -1255,7 +1261,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;fi&#039;); $(this).closest(&#039;form&#039;).submit();"  id="fi"      lang=fi hreflang=fi aria-label=""><span class="ecl-site-header__language-link-code">fi</span><span class="ecl-site-header__language-link-label">Suomi</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('fi'); $(this).closest('form').submit();" id="fi" lang="fi" hreflang="fi" aria-label=""><span class="ecl-site-header__language-link-code">fi</span><span class="ecl-site-header__language-link-label">Suomi</span></a>
 </li>
                                                         <li class="ecl-site-header__language-item">
 
@@ -1291,7 +1297,7 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;sv&#039;); $(this).closest(&#039;form&#039;).submit();"  id="sv"      lang=sv hreflang=sv aria-label=""><span class="ecl-site-header__language-link-code">sv</span><span class="ecl-site-header__language-link-label">Svenska</span></a>
+<a href="#" class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link" onclick="$('#langToSubmit').val('sv'); $(this).closest('form').submit();" id="sv" lang="sv" hreflang="sv" aria-label=""><span class="ecl-site-header__language-link-code">sv</span><span class="ecl-site-header__language-link-label">Svenska</span></a>
 </li>
                                                     </ul>
                                                 	<input type="hidden" name="locale" id="langToSubmit" value="">
@@ -1343,13 +1349,13 @@
 
 
 
-<a href="./../../../homepage.html?lang=it"    class="header-link"    id="eurlex-logo-text-size"        aria-label="">
+<a href="./../../../homepage.html?lang=en" class="header-link" id="eurlex-logo-text-size" aria-label="">
  EUR-Lex
  </a>
 
                                     </div>
                                     <div class="site-name-tagline">
-                                        L&#39;accesso al diritto dell&#39;Unione europea
+                                        Access to European Union law
  </div> </div> </div> 
  
  
@@ -1370,46 +1376,87 @@
 	
 	
 	<form id="disableExperimentalFeatures" name="disableExperimentalFeatures" action="./../../../experimental-features.html?action=disableExperimentalFeatures" method="post">
-			<input type="hidden" value="IT/legal-content/glossary/nato-north-atlantic-treaty-organisation.html" name="relativeRequestUrl" />
-			<input type="hidden" value="" name="queryString" />
+			<input type="hidden" value="IT/legal-content/glossary/nato-north-atlantic-treaty-organisation.html" name="relativeRequestUrl">
+			<input type="hidden" value="" name="queryString">
 
 			<div class="input-group input-group-sm experimental-feature-div-position radius5p">
 					
-				<span class="input-group-addon FormHelpAddon" id ="helpTooltipEF">
-						<a href="#" data-toggle="tooltip" data-placement="bottom" aria-description="&lt;a href=&quot;https://eur-lex.europa.eu/content/help/eurlex-content/experimental-features.html&quot; target=&quot;_blank&quot;&gt;Per saperne di più sull&#39;angolo delle funzioni sperimentali&lt;/a&gt;"  id="expFeatHelp" data-original-title="&lt;a href=&quot;https://eur-lex.europa.eu/content/help/eurlex-content/experimental-features.html&quot; target=&quot;_blank&quot;&gt;Per saperne di più sull&#39;angolo delle funzioni sperimentali&lt;/a&gt;">
+				<span class="input-group-addon FormHelpAddon" id="helpTooltipEF">
+						<a href="#" data-toggle="tooltip" data-placement="bottom" aria-description="More about the experimental features corner" id="expFeatHelp" data-original-title="&lt;a href=&quot;https://eur-lex.europa.eu/content/help/eurlex-content/experimental-features.html&quot; target=&quot;_blank&quot;&gt;More about the experimental features corner&lt;/a&gt;">
    		 					<i>
-   		 					    <svg class="ef-questionmark-icon" focusable="false" aria-hidden="false" role="img" ">
-                                    <use xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/questionmark.svg#questionmark"/>
-                                </svg>
+   		 					    <svg class="ef-questionmark-icon" focusable="false" aria-hidden="false" role="img" "="" viewBox="0 0 29.536 29.536">
+                                    
+                                
+<g>
+	<path d="M14.768,0C6.611,0,0,6.609,0,14.768c0,8.155,6.611,14.767,14.768,14.767s14.768-6.612,14.768-14.767
+		C29.535,6.609,22.924,0,14.768,0z M14.768,27.126c-6.828,0-12.361-5.532-12.361-12.359c0-6.828,5.533-12.362,12.361-12.362
+		c6.826,0,12.359,5.535,12.359,12.362C27.127,21.594,21.594,27.126,14.768,27.126z"></path>
+	<path d="M14.385,19.337c-1.338,0-2.289,0.951-2.289,2.34c0,1.336,0.926,2.339,2.289,2.339c1.414,0,2.314-1.003,2.314-2.339
+		C16.672,20.288,15.771,19.337,14.385,19.337z"></path>
+	<path d="M14.742,6.092c-1.824,0-3.34,0.513-4.293,1.053l0.875,2.804c0.668-0.462,1.697-0.772,2.545-0.772
+		c1.285,0.027,1.879,0.644,1.879,1.543c0,0.85-0.67,1.697-1.494,2.701c-1.156,1.364-1.594,2.701-1.516,4.012l0.025,0.669h3.42
+		v-0.463c-0.025-1.158,0.387-2.162,1.311-3.215c0.979-1.08,2.211-2.366,2.211-4.321C19.705,7.968,18.139,6.092,14.742,6.092z"></path>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+</g>
+</svg>
                             </i>
-							<span class="sr-only togglable-screenReader">&lt;a href=&quot;https://eur-lex.europa.eu/content/help/eurlex-content/experimental-features.html&quot; target=&quot;_blank&quot;&gt;Per saperne di più sull&#39;angolo delle funzioni sperimentali&lt;/a&gt;</span>	</a>	</span>	
+							<span class="sr-only togglable-screenReader">&lt;a href="https://eur-lex.europa.eu/content/help/eurlex-content/experimental-features.html" target="_blank"&gt;More about the experimental features corner&lt;/a&gt;</span>	</a>	</span>	
 
-				<span   title="Funzioni sperimentali" aria-label="Funzioni sperimentali" class="btn btn-sm btn-primary popper experimental-feature-btn radius5p">
-					<span class="hidden-xs">Funzioni sperimentali</span>
+				<span title="Experimental features" aria-label="Experimental features" class="btn btn-sm btn-primary popper experimental-feature-btn radius5p">
+					<span class="hidden-xs">Experimental features</span>
 					<span class="visible-xs"><i class="fa fa-flask" aria-hidden="true"></i></span>
 					<label class="experimental-feature-switch">
-                        <input type="checkbox" id="ef-checkbox" data-toggle="popover" data-placement="bottom" aria-label="Funzioni sperimentali" >
+                        <input type="checkbox" id="ef-checkbox" data-toggle="popover" data-placement="bottom" aria-label="Experimental features">
                         <span class="slider round"></span>
                     </label>
 				</span>
 			</div>
 		<div>
-<input type="hidden" name="_csrf" value="9d05c718-6adb-4289-9463-ac3744fc6f02" />
+<input type="hidden" name="_csrf" value="f448d836-41c2-4aa6-989c-715d4522725b">
 </div></form>
 	<form id="applyExperimentalFeatures" name="applyExperimentalFeatures" action="./../../../experimental-features.html?action=applyExperimentalFeatures" method="post">
-			<input type="hidden" value="IT/legal-content/glossary/nato-north-atlantic-treaty-organisation.html" name="relativeRequestUrl" />
-			<input type="hidden" value="" name="queryString" />
+			<input type="hidden" value="IT/legal-content/glossary/nato-north-atlantic-treaty-organisation.html" name="relativeRequestUrl">
+			<input type="hidden" value="" name="queryString">
 			<div class="exp-feature-float-box popover fade in">
 				<button type="button" class="close" id="experimental-feature-close" aria-label="Close"><span aria-hidden="true">×</span></button>
 				<div>
-					<h5 class="text-center">Scegli le funzioni sperimentali da provare</h5>
+					<h5 class="text-center">Choose the experimental features you want to try</h5>
 					<hr>
 					<div class="homepageMessage experimental-feature-disclaimer hidden-xs">
-						<p>Vuoi aiutarci a migliorare EUR-Lex? Questo è un elenco di funzioni sperimentali che si possono attivare. Queste funzioni sono ancora in fase di sviluppo: non sono testate completamente e potrebbero ridurre la stabilità di EUR-Lex. Vorremmo sapere cosa ne pensi.</p>
+						<p>Do you want to help improving EUR-Lex ? This is a list of experimental features that you can enable. These features are still under development; they are not fully tested, and might reduce EUR-Lex stability. Don't forget to give your feedback!</p>
 					</div>
 					<div id="exp-feautre-js-warning-box" class="alert-danger exp-feature-alert-danger hidden" role="alert">
 						<span class="fa fa-exclamation-triangle" aria-hidden="true">&nbsp;</span>
-						Attenzione! Il sistema ha individuato un conflitto: scegliere un&#39;altra combinazione di funzioni.
+						Warning! Experimental feature conflicts detected.
 					</div>
 					<div class="experimental-feature-list">
 						<fieldset>
@@ -1420,11 +1467,11 @@
                                             
                                                 <li>
                                                     <label class="">
-                                                        <input id="experimentalFeatureCheckbox_EF02" name="selectedExperimentExperimentalFeaturesValues" autocomplete="off" class="exp-feature-child-checkbox" type="checkbox" value="EF02"/><input type="hidden" name="_selectedExperimentExperimentalFeaturesValues" value="on"/> Sostituzione degli identificativi CELEX con titoli brevi - funzione sperimentale. Sostituisce gli identificativi CELEX cliccabili dei trattati e della giurisprudenza con titoli brevi.
+                                                        <input id="experimentalFeatureCheckbox_EF02" name="selectedExperimentExperimentalFeaturesValues" autocomplete="off" class="exp-feature-child-checkbox" type="checkbox" value="EF02"><input type="hidden" name="_selectedExperimentExperimentalFeaturesValues" value="on"> Replacement of CELEX identifiers by short titles - experimental feature. It replaces clickable CELEX identifiers of treaties and case-law by short titles.
  </label> </li> 
                                                 <li>
                                                     <label class="">
-                                                        <input id="experimentalFeatureCheckbox_EF03" name="selectedExperimentExperimentalFeaturesValues" autocomplete="off" class="exp-feature-child-checkbox" type="checkbox" value="EF03"/><input type="hidden" name="_selectedExperimentExperimentalFeaturesValues" value="on"/> Visualizzazione delle relazioni tra documenti. Mostra un grafico dinamico con le relazioni tra l&#39;atto e i documenti correlati. Attualmente è disponibile solo per gli atti giuridici.
+                                                        <input id="experimentalFeatureCheckbox_EF03" name="selectedExperimentExperimentalFeaturesValues" autocomplete="off" class="exp-feature-child-checkbox" type="checkbox" value="EF03"><input type="hidden" name="_selectedExperimentExperimentalFeaturesValues" value="on"> Visualisation of document relationships. It displays a dynamic graph with relations between the act and related documents. It is currently only available for legal acts.
  </label> </li> 
  </ul>	</li>	
 									<li>
@@ -1432,16 +1479,16 @@
                                             
                                                 <li>
                                                     <label class="">
-                                                        <input id="experimentalFeatureCheckbox_EF01" name="selectedExperimentExperimentalFeaturesValues" autocomplete="off" class="exp-feature-child-checkbox" type="checkbox" value="EF01"/><input type="hidden" name="_selectedExperimentExperimentalFeaturesValues" value="on"/> Mostra deep linking nel testo del documento (meno di 900 KB). Consente di creare link ad altri atti legali cui si fa riferimento all’interno dei documenti.
+                                                        <input id="experimentalFeatureCheckbox_EF01" name="selectedExperimentExperimentalFeaturesValues" autocomplete="off" class="exp-feature-child-checkbox" type="checkbox" value="EF01"><input type="hidden" name="_selectedExperimentExperimentalFeaturesValues" value="on"> Deep linking. It enables links to other legal acts referred to within the documents. It is currently only available for documents smaller than 900 KB.
  </label> </li> 
  </ul>	</li>	
 							</ul>
 						</fieldset>
 					</div>
 					<div>
-						<button  id="exp-feature-btn-apply" type="submit" class="btn btn-sm btn-primary radius5p"> Applicare
+						<button id="exp-feature-btn-apply" type="submit" class="btn btn-sm btn-primary radius5p"> Apply
 	</button>	</div>	</div>	</div>	<div>
-<input type="hidden" name="_csrf" value="9d05c718-6adb-4289-9463-ac3744fc6f02" />
+<input type="hidden" name="_csrf" value="f448d836-41c2-4aa6-989c-715d4522725b">
 </div></form>
 	
 
@@ -1477,7 +1524,7 @@
 
 
 
-<a href="./../../../experimental-features.html?action=confirmFeedback"    class="eurlexModal btn btn-primary btn-sm hidden"    id="link-give-feedback"        aria-label=""></a>
+<a href="./../../../experimental-features.html?action=confirmFeedback" class="eurlexModal btn btn-primary btn-sm hidden" id="link-give-feedback" aria-label=""></a>
 
 	</div>
 </div>
@@ -1514,8 +1561,8 @@
     <div class="ecl-site-header__background">
         <div class="ecl-site-header__header">
             <div class="ecl-site-header__container ecl-container upper-header-border header-width-override pdf-logo-img-container">
-                <div class="ecl-site-header__top" data-ecl-site-header-top>
-                    <img class="ecl-site-footer__logo-image pdf-logo-img" src="./../../../images/eu-logo/logo-eu-it-01.jpg" >
+                <div class="ecl-site-header__top" data-ecl-site-header-top="">
+                    <img class="ecl-site-footer__logo-image pdf-logo-img" src="./../../../images/eu-logo/logo-eu-en-01.jpg">
                 </div>
             </div>
             <div class="ecl-site-header__container ecl-container header-width-override">
@@ -1527,7 +1574,7 @@
                                     EUR-Lex
                                 </div>
                                 <div class="elx-label-text-pdf site-name-tagline">
-                                    L&#39;accesso al diritto dell&#39;Unione europea
+                                    Access to European Union law
                                 </div>
                             </div>
                         </div>
@@ -1541,7 +1588,7 @@
     </div>
     <div class="op-site-subtitle-pdf">
         <p class="subtitle-extraction-info-pdf">
-            Questo documento è un estratto del sito web EUR-Lex.
+            This document is an excerpt from the EUR-Lex website
         </p>
         <div class="subtitle-url-info-pdf">
         
@@ -1552,7 +1599,7 @@
 </div>
 
 <script type="text/javascript">
-    var home_lang = it;
+    var home_lang = en;
     $(document).ready(function(){
         svg4everybody({ polyfill: true });
         ECL.autoInit();
@@ -1582,9 +1629,9 @@
 
 
 <div class="SiteBreadcrumb">
-	<span class="sr-only">Siete qui</span>
+	<span class="sr-only">You are here</span>
 	<ol class="fa-ul notBootstrapBreadcrumb hidden-xs hidden-sm">
-		<li><a target="_blank" href="https://europa.eu/european-union/index_it">EUROPA</a></li>
+		<li><a target="_blank" href="https://europa.eu/european-union/index_en">EUROPA</a></li>
 		
 		
 		<li class="breadcrumbPathItemWithArrow">
@@ -1621,7 +1668,7 @@
 
 
 
-<a href="./../../../homepage.html"       title="EUR-Lex home"         aria-label=""><i class="fa-li fa fa-angle-right"></i>EUR-Lex home</a>
+<a href="./../../../homepage.html" title="EUR-Lex home" aria-label=""><i class="fa-li fa fa-angle-right"></i>EUR-Lex home</a>
 </li>	
 	
 	
@@ -1661,7 +1708,7 @@
 
 
 
-<a href="./../../../browse/summaries.html"       title="Sintesi della legislazione dell&#039;UE"         aria-label=""><i class="fa-li fa fa-angle-right"></i>Sintesi della legislazione dell&#039;UE</a>
+<a href="./../../../browse/summaries.html" title="Summaries of EU legislation" aria-label=""><i class="fa-li fa fa-angle-right"></i>Summaries of EU legislation</a>
 </li>	
 	
 	
@@ -1705,7 +1752,7 @@
  
  
  
- <a href="./../../../content/help.html" class="PSHelp EurlexTooltip" aria-description = "Help" data-toggle="tooltip" title="Guida" data-original-title="Help" ><svg class="ecl-icon ecl-icon--s faq-image-size" focusable="false" aria-hidden="false" role="img"><use xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/faq.svg#faq" /></svg>Guida</a>
+ <a href="./../../../content/help.html" class="PSHelp EurlexTooltip" aria-description="Help" data-toggle="tooltip" title="" data-original-title="Help"><svg class="ecl-icon ecl-icon--s faq-image-size" focusable="false" aria-hidden="false" role="img" viewBox="0 0 24 24"><path d="M15.4 10.2c-.9 1.3-1.7 1.7-2.2 2.6-.3.5-.4.8-.4 1.2v.4c0 .6-.5 1-1 1-.6 0-1-.4-1-1v-1c0-.4.1-.9.4-1.2.6-1 1.7-1.6 2.3-2.5.7-1 .3-2.7-1.6-2.7-.9 0-1.4.5-1.8 1-.3.1-.9.3-1.3.1-.6-.3-.8-1-.5-1.5.7-1 1.9-1.8 3.5-1.8 1.7 0 2.9.8 3.5 1.8.6.8.9 2.4.1 3.6m-3.6 9c-.7 0-1.2-.6-1.2-1.2s.6-1.2 1.2-1.2c.7 0 1.2.6 1.2 1.2s-.6 1.2-1.2 1.2M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2"></path></svg>Help</a>
  
  
  
@@ -1730,16 +1777,16 @@
  
  
         <li class="hidden-xs hidden-sm">
-            <button data-target="./../../../legal-content/IT/TXT/?uri=LEGISSUM:nato&amp;print=true" onclick="window.open('./../../../legal-content/IT/TXT/?uri=LEGISSUM:nato&amp;print=true','','scrollbars=yes,menubar=no, status=no, directories=no, location=no, resizable=no, width=1024, height=600');return false;" target="_blank" class="PSPrint EurlexTooltip" data-toggle="tooltip" title="Stampare" aria-description="Stampare"  data-original-title="Print this page">
+            <button data-target="./../../../legal-content/IT/TXT/?uri=LEGISSUM:nato&amp;print=true" onclick="window.open('./../../../legal-content/IT/TXT/?uri=LEGISSUM:nato&amp;print=true','','scrollbars=yes,menubar=no, status=no, directories=no, location=no, resizable=no, width=1024, height=600');return false;" target="_blank" class="PSPrint EurlexTooltip" data-toggle="tooltip" title="" aria-description="Print" data-original-title="Print">
                 <i class="fa fa-print" aria-hidden="true"></i>
-                Stampare
+                Print
  </button> </li> 
  
  
  
 
             <li class="shareApi">
-                <script type="application/json">{
+                <div class="sbkm wt wt-sbkm " data-nosnippet="true"><a class="myButton unselected wt-noconflict" href="#share" id="sbkm_2577532890876496"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a></div><script type="application/json" data-process="true">{
                     "service": "share",
                     "counter": false,
                     "css": {
@@ -1845,94 +1892,94 @@
 
 
 	
-	<button type="button" class="btn btn-primary btn-block" id="EurlexNavBtn" title="Menu EUR-Lex" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Open Navigation Menu"><i class="fa fa-bars" aria-hidden="true"></i><span class="hidden-xs">Menu</span></button><div class="dropdown-menu MegaMenu" aria-labelledby="EurlexNavBtn">
+	<button type="button" class="btn btn-primary btn-block" id="EurlexNavBtn" title="EUR-Lex menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Open Navigation Menu"><i class="fa fa-bars" aria-hidden="true"></i><span class="hidden-xs">Menu</span></button><div class="dropdown-menu MegaMenu" aria-labelledby="EurlexNavBtn" style="width: 1055px;">
    <div class="row">
       <div class="col-sm-6 col-md-4">
          <nav class="MenuBlock ">
-            <p class="BlockTitle" role="heading">Diritto dell'UE</p>
+            <p class="BlockTitle" role="heading">EU law</p>
             <ul class="MenuList TreeMenu">
-               <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="treaties" title="Trattati"><i class="fa fa-angle-right" aria-hidden="true"></i>Trattati</a><ul class="collapse">
-                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-force.html" id="treaties-force" title="Trattati attualmente in vigore">Trattati attualmente in vigore</a></li>
-                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-founding.html" id="treaties-founding" title="Trattati costitutivi">Trattati costitutivi</a></li>
-                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-accession.html" id="treaties-accession" title="Trattati di adesione">Trattati di adesione</a></li>
-                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-other.html" id="treaties-other" title="Altri trattati e protocolli">Altri trattati e protocolli</a></li>
-                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-overview.html" id="treaties-overview" title="Cronologia">Cronologia</a></li>
+               <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="treaties" title="Treaties"><i class="fa fa-angle-right" aria-hidden="true"></i>Treaties</a><ul class="collapse" aria-expanded="false">
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-force.html" id="treaties-force" title="Treaties currently in force">Treaties currently in force</a></li>
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-founding.html" id="treaties-founding" title="Founding Treaties">Founding Treaties</a></li>
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-accession.html" id="treaties-accession" title="Accession Treaties">Accession Treaties</a></li>
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-other.html" id="treaties-other" title="Other treaties and protocols">Other treaties and protocols</a></li>
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-overview.html" id="treaties-overview" title="Chronological overview">Chronological overview</a></li>
                   </ul>
                </li>
-               <li class=""><a href="./../../../collection/eu-law/legal-acts/recent.html" class="no-arrow" id="recent" title="Atti giuridici">Atti giuridici</a></li>
-               <li class=""><a href="./../../../collection/eu-law/consleg.html" class="no-arrow" id="consolidated-texts" title="Testi consolidati">Testi consolidati</a></li>
-               <li class=""><a href="./../../../collection/eu-law/inter-agree.html" class="no-arrow" id="inter-agree" title="Accordi internazionali">Accordi internazionali</a></li>
-               <li class=""><a href="./../../../collection/eu-law/pre-acts.html" class="no-arrow" id="working-documents" title="Documenti preparatori">Documenti preparatori</a></li>
-               <li class=""><a href="./../../../collection/eu-law/efta.html" class="no-arrow" id="efta" title="Documenti EFTA (Associazione europea di libero scambio)">Documenti EFTA</a></li>
-               <li class=""><a href="./../../../collection/legislative-procedures.html" class="no-arrow" id="procedures" title="Procedure normative e EU Law Tracker">Procedure normative</a></li>
-               <li class=""><a href="./../../../browse/summaries.html" class="no-arrow" id="summary" title="Sintesi della legislazione dell'UE">Sintesi della legislazione dell'UE</a></li>
-               <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="institutions-intro" title="Istituzioni dell’UE"><i class="fa fa-angle-right" aria-hidden="true"></i>Istituzioni dell’UE</a><ul class="collapse">
-                     <li class=""><a href="./../../../browse/institutions/eu-parliament.html" id="eu-parliament" title="Parlamento europeo">Parlamento europeo</a></li>
-                     <li class=""><a href="./../../../browse/institutions/eu-council.html" id="European-Council" title="Consiglio europeo">Consiglio europeo</a></li>
-                     <li class=""><a href="./../../../browse/institutions/council.html" id="Council" title="Consiglio dell’Unione europea">Consiglio dell’Unione europea</a></li>
-                     <li class=""><a href="./../../../browse/institutions/eu-commission.html" id="European-Commission" title="Commissione europea">Commissione europea</a></li>
-                     <li class=""><a href="./../../../browse/institutions/justice.html" id="Court-of-Justice-of-the-European-Union" title="Corte di giustizia dell’Unione europea">Corte di giustizia dell’Unione europea</a></li>
-                     <li class=""><a href="./../../../browse/institutions/bank.html" id="European-Central-Bank" title="Banca centrale europea">Banca centrale europea<i class="fa fa-bar-chart" aria-hidden="true" style="margin-left:5px;"></i></a></li>
-                     <li class=""><a href="./../../../browse/institutions/auditors.html" id="Court-of-Auditors" title="Corte dei conti europea">Corte dei conti europea</a></li>
-                     <li class=""><a href="./../../../browse/institutions/eco-social.html" id="EESC" title="Comitato economico e sociale europeo">Comitato economico e sociale europeo</a></li>
-                     <li class=""><a href="./../../../browse/institutions/regions.html" id="Committee-of-Regions" title="Comitato europeo delle regioni">Comitato europeo delle regioni</a></li>
+               <li class=""><a href="./../../../collection/eu-law/legal-acts/recent.html" class="no-arrow" id="recent" title="Legal acts">Legal acts</a></li>
+               <li class=""><a href="./../../../collection/eu-law/consleg.html" class="no-arrow" id="consolidated-texts" title="Consolidated texts">Consolidated texts</a></li>
+               <li class=""><a href="./../../../collection/eu-law/inter-agree.html" class="no-arrow" id="inter-agree" title="International agreements">International agreements</a></li>
+               <li class=""><a href="./../../../collection/eu-law/pre-acts.html" class="no-arrow" id="working-documents" title="Preparatory documents">Preparatory documents</a></li>
+               <li class=""><a href="./../../../collection/eu-law/efta.html" class="no-arrow" id="efta" title="EFTA (European Free Trade Association) documents">EFTA documents</a></li>
+               <li class=""><a href="./../../../collection/legislative-procedures.html" class="no-arrow" id="procedures" title="Lawmaking procedures and EU Law Tracker">Lawmaking procedures</a></li>
+               <li class=""><a href="./../../../browse/summaries.html" class="no-arrow" id="summary" title="Summaries of EU legislation">Summaries of EU legislation</a></li>
+               <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="institutions-intro" title="Browse by EU institutions"><i class="fa fa-angle-right" aria-hidden="true"></i>Browse by EU institutions</a><ul class="collapse" aria-expanded="false">
+                     <li class=""><a href="./../../../browse/institutions/eu-parliament.html" id="eu-parliament" title="European Parliament">European Parliament</a></li>
+                     <li class=""><a href="./../../../browse/institutions/eu-council.html" id="European-Council" title="European Council">European Council</a></li>
+                     <li class=""><a href="./../../../browse/institutions/council.html" id="Council" title="Council of the European Union">Council of the European Union</a></li>
+                     <li class=""><a href="./../../../browse/institutions/eu-commission.html" id="European-Commission" title="European Commission">European Commission</a></li>
+                     <li class=""><a href="./../../../browse/institutions/justice.html" id="Court-of-Justice-of-the-European-Union" title="Court of Justice of the European Union">Court of Justice of the European Union</a></li>
+                     <li class=""><a href="./../../../browse/institutions/bank.html" id="European-Central-Bank" title="European Central Bank">European Central Bank<i class="fa fa-bar-chart" aria-hidden="true" style="margin-left:5px;"></i></a></li>
+                     <li class=""><a href="./../../../browse/institutions/auditors.html" id="Court-of-Auditors" title="European Court of Auditors">European Court of Auditors</a></li>
+                     <li class=""><a href="./../../../browse/institutions/eco-social.html" id="EESC" title="European Economic and Social Committee">European Economic and Social Committee</a></li>
+                     <li class=""><a href="./../../../browse/institutions/regions.html" id="Committee-of-Regions" title="European Committee of the Regions">European Committee of the Regions</a></li>
                   </ul>
                </li>
-               <li class=""><a href="./../../../browse/eurovoc.html" class="no-arrow" id="eurovoc" title="Cerca con EuroVoc (il thesaurus multilingue e multidisciplinare dell'UE)">EuroVoc</a></li>
+               <li class=""><a href="./../../../browse/eurovoc.html" class="no-arrow" id="eurovoc" title="Browse by EuroVoc (EU's multilingual and multidisciplinary thesaurus)">Browse by EuroVoc</a></li>
             </ul>
          </nav>
       </div>
       <div class="col-sm-6 col-md-4">
          <nav class="MenuBlock ">
-            <p class="BlockTitle" role="heading">Giurisprudenza dell'UE</p>
+            <p class="BlockTitle" role="heading">EU case-law</p>
             <ul class="MenuList">
-               <li class=""><a href="./../../../collection/eu-law/eu-case-law.html" class="no-arrow" id="case-law" title="Giurisprudenza">Giurisprudenza</a></li>
-               <li class=""><a href="./../../../collection/eu-law/eu-case-law/reports.html" class="no-arrow" id="electronic-report" title="Raccolta della giurisprudenza">Raccolta della giurisprudenza</a></li>
-               <li class=""><a href="./../../../browse/directories/new-case-law.html" class="no-arrow" id="directory-eu-case-law" title="Repertorio della giurisprudenza">Repertorio della giurisprudenza</a></li>
+               <li class=""><a href="./../../../collection/eu-law/eu-case-law.html" class="no-arrow" id="case-law" title="Case-law">Case-law</a></li>
+               <li class=""><a href="./../../../collection/eu-law/eu-case-law/reports.html" class="no-arrow" id="electronic-report" title="Reports of cases">Reports of cases</a></li>
+               <li class=""><a href="./../../../browse/directories/new-case-law.html" class="no-arrow" id="directory-eu-case-law" title="Directory of case-law">Directory of case-law</a></li>
             </ul>
          </nav>
       </div>
       <div class="col-sm-6 col-md-4">
          <nav class="MenuBlock ">
-            <p class="BlockTitle" role="heading">Gazzetta ufficiale</p>
+            <p class="BlockTitle" role="heading">Official Journal</p>
             <ul class="MenuList">
-               <li class=""><a href="./../../../oj/direct-access.html" class="no-arrow" id="direct-access" title="Accesso alla Gazzetta ufficiale">Accesso alla Gazzetta ufficiale</a></li>
-               <li class=""><a href="./../../../oj/daily-view/L-series/default.html" class="no-arrow" id="L-series" title="Serie L della Gazzetta ufficiale, visualizzazione per giorno">Serie L della Gazzetta ufficiale, visualizzazione per giorno</a></li>
-               <li class=""><a href="./../../../oj/daily-view/C-series/default.html" class="no-arrow" id="C-series" title="Serie C della Gazzetta ufficiale, visualizzazione per giorno">Serie C della Gazzetta ufficiale, visualizzazione per giorno</a></li>
-               <li class=""><a href="./../../../oj/browse-oj.html" class="no-arrow" id="boj" title="Consulta la Gazzetta ufficiale">Consulta la Gazzetta ufficiale</a></li>
-               <li class=""><a href="./../../../oj/all/auth-direct-access.html" class="no-arrow" id="auth-direct-access" title="Edizioni su carta giuridicamente vincolanti">Edizioni su carta giuridicamente vincolanti</a></li>
-               <li class=""><a href="./../../../eu-enlargement/special.html" class="no-arrow" id="se" title="Edizione speciale">Edizione speciale</a></li>
+               <li class=""><a href="./../../../oj/direct-access.html" class="no-arrow" id="direct-access" title="Access to the Official Journal">Access to the Official Journal</a></li>
+               <li class=""><a href="./../../../oj/daily-view/L-series/default.html" class="no-arrow" id="L-series" title="Official Journal L series daily view">Official Journal L series daily view</a></li>
+               <li class=""><a href="./../../../oj/daily-view/C-series/default.html" class="no-arrow" id="C-series" title="Official Journal C series daily view">Official Journal C series daily view</a></li>
+               <li class=""><a href="./../../../oj/browse-oj.html" class="no-arrow" id="boj" title="Browse the Official Journal">Browse the Official Journal</a></li>
+               <li class=""><a href="./../../../oj/all/auth-direct-access.html" class="no-arrow" id="auth-direct-access" title="Legally binding printed editions">Legally binding printed editions</a></li>
+               <li class=""><a href="./../../../eu-enlargement/special.html" class="no-arrow" id="se" title="Special edition">Special edition</a></li>
             </ul>
          </nav>
       </div>
       <div class="col-sm-6 col-md-4 col-break-sm">
          <nav class="MenuBlock ">
-            <p class="BlockTitle" role="heading">Legislazione nazionale e giurisprudenza</p>
+            <p class="BlockTitle" role="heading">National law and case-law</p>
             <ul class="MenuList">
-               <li class=""><a href="./../../../collection/n-law/mne.html" class="no-arrow" id="mne" title="Recepimento nazionale">Recepimento nazionale</a></li>
-               <li class=""><a href="./../../../collection/n-law/n-case-law.html" class="no-arrow" id="n-case-law" title="Giurisprudenza nazionale">Giurisprudenza nazionale</a></li>
-               <li class=""><a href="./../../../collection/n-law/jure.html" class="no-arrow" id="JURE" title="JURE (Competenza, riconoscimento ed esecuzione delle decisioni in materia civile e commerciale) ">Giurisprudenza JURE</a></li>
+               <li class=""><a href="./../../../collection/n-law/mne.html" class="no-arrow" id="mne" title="National transposition">National transposition</a></li>
+               <li class=""><a href="./../../../collection/n-law/n-case-law.html" class="no-arrow" id="n-case-law" title="National case-law">National case-law</a></li>
+               <li class=""><a href="./../../../collection/n-law/jure.html" class="no-arrow" id="JURE" title="JURE (Jurisdiction, recognition and enforcement of judgments in civil and commercial matters) case-law">JURE case-law</a></li>
             </ul>
          </nav>
       </div>
       <div class="col-sm-6 col-md-4">
          <nav class="MenuBlock ">
-            <p class="BlockTitle" role="heading">Informazioni</p>
+            <p class="BlockTitle" role="heading">Information</p>
             <ul class="MenuList TreeMenu">
-               <li class=""><a href="./../../../content/news/index.html" class="no-arrow" id="Themes_in_focus" title="Temi di attualità">Temi di attualità</a></li>
-               <li class=""><a href="./../../../content/development/index.html" class="no-arrow" id="developmentsEUR-Lex" title="Ultime novità su EUR-Lex">Ultime novità su EUR-Lex</a></li>
-               <li class=""><a href="./../../../statistics/statistics.html" class="no-arrow" id="statistic" title="Statistiche">Statistiche</a></li>
-               <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="eli-register-nav" title="Registro dell'ELI (identificatore della legislazione europea)"><i class="fa fa-angle-right" aria-hidden="true"></i>Registro ELI</a><ul class="collapse">
-                     <li class=""><a href="./../../../eli-register/what_is_eli.html" id="what_is_eli" title="Cos'è l'ELI?">Cos'è l'ELI?</a></li>
-                     <li class=""><a href="./../../../eli-register/background.html" id="eli_background" title="L'ELI - informazioni generali">L'ELI - informazioni generali</a></li>
-                     <li class=""><a href="./../../../eli-register/benefits.html" id="advantages" title="Perché attuare l'ELI">Perché attuare l'ELI</a></li>
-                     <li class=""><a href="./../../../eli-register/implementing_countries.html" id="implementing_countries" title="I paesi che attuano l'ELI">I paesi che attuano l'ELI</a></li>
-                     <li class=""><a href="./../../../eli-register/testimonials.html" id="testimonials" title="Testimonianze">Testimonianze</a></li>
-                     <li class=""><a href="./../../../eli-register/implementing_eli.html" id="implementing_eli" title="Attuazione dell'ELI">Attuazione dell'ELI</a></li>
-                     <li class=""><a href="./../../../eli-register/glossary.html" id="eli_glossary" title="Glossario">Glossario</a></li>
+               <li class=""><a href="./../../../content/news/index.html" class="no-arrow" id="Themes_in_focus" title="Themes in focus">Themes in focus</a></li>
+               <li class=""><a href="./../../../content/development/index.html" class="no-arrow" id="developmentsEUR-Lex" title="EUR-Lex developments">EUR-Lex developments</a></li>
+               <li class=""><a href="./../../../statistics/statistics.html" class="no-arrow" id="statistic" title="Statistics">Statistics</a></li>
+               <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="eli-register-nav" title="ELI (European Legislation Identifier) register"><i class="fa fa-angle-right" aria-hidden="true"></i>ELI register</a><ul class="collapse" aria-expanded="false">
+                     <li class=""><a href="./../../../eli-register/what_is_eli.html" id="what_is_eli" title="What is ELI?">What is ELI?</a></li>
+                     <li class=""><a href="./../../../eli-register/background.html" id="eli_background" title="ELI background">ELI background</a></li>
+                     <li class=""><a href="./../../../eli-register/benefits.html" id="advantages" title="Why implement ELI?">Why implement ELI?</a></li>
+                     <li class=""><a href="./../../../eli-register/implementing_countries.html" id="implementing_countries" title="Countries implementing ELI">Countries implementing ELI</a></li>
+                     <li class=""><a href="./../../../eli-register/testimonials.html" id="testimonials" title="Testimonials">Testimonials</a></li>
+                     <li class=""><a href="./../../../eli-register/implementing_eli.html" id="implementing_eli" title="How to implement ELI">How to implement ELI</a></li>
+                     <li class=""><a href="./../../../eli-register/glossary.html" id="eli_glossary" title="Glossary">Glossary</a></li>
                   </ul>
                </li>
-               <li class=""><a href="./../../../budget/www/index-en.htm" class="no-arrow" id="EU_budget" title="Bilancio on line">Bilancio on line</a></li>
+               <li class=""><a href="./../../../budget/www/index-en.htm" class="no-arrow" id="EU_budget" title="EU budget online">EU budget online</a></li>
             </ul>
          </nav>
       </div>
@@ -1959,7 +2006,7 @@
 		<div class="EurlexSearch">
 			
 	<form id="quick-search" name="quick-search" class="DistinctiveForm QSF" action="./../../../quick-search-form.html" method="post" onsubmit="showHourglass();" autocomplete="off">
-				<input id="editscope" type="hidden" name="scope" value="EURLEX"/>
+				<input id="editscope" type="hidden" name="scope" value="EURLEX">
 				<div class="QuickSearch">
 					
 	
@@ -1969,14 +2016,14 @@
 	
 	
 
-					<label for="QuickSearchField"><i class="fa fa-search hidden-xs" aria-hidden="true"></i><span class="sr-only">Ricerca rapida</span></label>	
+					<label for="QuickSearchField"><i class="fa fa-search hidden-xs" aria-hidden="true"></i><span class="sr-only">Quick search</span></label>	
 	
 	
 	
 	
 					
-					<textarea id="QuickSearchField" name="text" class="form-control NoBorders AutoGrow typeahead autocompleteField" data-provide="typeahead" placeholder="RICERCA RAPIDA" aria-describedby="QuickSearchHelp" rows="1" autocomplete="off"></textarea>	
-					<button class="btn btn-primary QuickSearchBtn" type="submit" title="Cercare" aria-label="Cercare">
+					<textarea id="QuickSearchField" name="text" class="form-control NoBorders AutoGrow typeahead autocompleteField" data-provide="typeahead" placeholder="QUICK SEARCH" aria-describedby="QuickSearchHelp" rows="1" autocomplete="off" style="overflow-y: hidden; height: auto; resize: none;"></textarea>	
+					<button class="btn btn-primary QuickSearchBtn" type="submit" title="Search" aria-label="Search">
 						
 	
 	
@@ -1985,12 +2032,12 @@
 	
 	</button>	</div>
 	
-				<div class="DistinctiveFormMessage EurlexTooltip" tabindex="0" data-toggle="tooltip" title="Rimuovere le altre opzioni di ricerca rapida prima di usare questa opzione"></div>	
+				<div class="DistinctiveFormMessage EurlexTooltip" tabindex="0" data-toggle="tooltip" title="" data-original-title="Please clear the other quick search options before using this one"></div>	
 			<div>
-<input type="hidden" name="_csrf" value="9d05c718-6adb-4289-9463-ac3744fc6f02" />
+<input type="hidden" name="_csrf" value="f448d836-41c2-4aa6-989c-715d4522725b">
 </div></form>
 	
-			<div class="QuickSearchOptions fade sr-only">
+			<div class="QuickSearchOptions fade sr-only" style="margin-top: -65px;">
 				<div id="QuickSearchHelp">
 				    <i class="fa fa-info" aria-hidden="true"></i>
 					
@@ -2007,7 +2054,7 @@
 	
 	
 	
-	Utilizzare le virgolette per cercare una &quot;frase esatta&quot;. Aggiungere un asterisco (<abbr title='Asterisco'>*</abbr>) a un termine di ricerca per trovarne le varianti (recep<abbr title='Asterisco'>*</abbr>, 32019R<abbr title='Asterisco'>*</abbr>). Utilizzare un punto interrogativo (<abbr title='Punto interrogativo'>?</abbr>) al posto di un determinato carattere nella ricerca per trovare le possibili varianti (cercando &quot;ca<abbr title='Punto interrogativo'>?</abbr>o&quot; si trovano i seguenti risultati: caso, capo, calo).		</div>
+	Use quotation marks to search for an "exact phrase". Append an asterisk (<abbr title="Asterisk">*</abbr>) to a search term to find variations of it (transp<abbr title="Asterisk">*</abbr>, 32019R<abbr title="Asterisk">*</abbr>). Use a question mark (<abbr title="Question mark">?</abbr>) instead of a single character in your search term to find variations of it (ca<abbr title="Question mark">?</abbr>e finds case, cane, care).		</div>
 				<button id="QuickSearchClose" type="button" class="close" aria-label="Close" onclick="closeQSHelp()">
 					<i class="fa fa-times" aria-hidden="true">&nbsp;</i>
 				</button>
@@ -2050,14 +2097,14 @@
 
 
 
-<a href="#"      onclick="showQSHelpAlt()" title="Consigli per la ricerca"         aria-label="">
+<a href="#" onclick="showQSHelpAlt()" title="Search tips" aria-label="">
 						<i class="fa fa-info-circle" aria-hidden="true">&nbsp;</i>
-						Consigli per la ricerca
+						Search tips
 	</a>
 
 				</div>
 				<div class="col-xs-8 text-right">
-					<span class=" ">Servono più opzioni di ricerca? Utilizzare la</span>	
+					<span class=" ">Need more search options? Use the</span>	
 	
  
 
@@ -2093,7 +2140,7 @@
 
 
 
-<a href="./../../../advanced-search-form.html"       title="Ricerca avanzata"         aria-label="">Ricerca avanzata</a>
+<a href="./../../../advanced-search-form.html" title="Advanced search" aria-label="">Advanced search</a>
  	
 	
 	</div>	</div>
@@ -2103,8 +2150,8 @@
 			var quickSearchFld = $('#QuickSearchField.autocompleteField');
 			typeaheadFld(quickSearchFld, "./../../../autocomplete.html", true, 'QuickSearch');
 		});
-		var quickSearchHelpAlt="Utilizzare le virgolette per cercare una &quot;frase esatta&quot;. Aggiungere un asterisco (<abbr title='Asterisco'>*</abbr>) a un termine di ricerca per trovarne le varianti (recep<abbr title='Asterisco'>*</abbr>, 32019R<abbr title='Asterisco'>*</abbr>). Utilizzare un punto interrogativo (<abbr title='Punto interrogativo'>?</abbr>) al posto di un determinato carattere nella ricerca per trovare le possibili varianti (cercando &quot;ca<abbr title='Punto interrogativo'>?</abbr>o&quot; si trovano i seguenti risultati: caso, capo, calo).";
-		var quickSearchHelp="Utilizzare le virgolette per cercare una &quot;frase esatta&quot;. Aggiungere un asterisco (<abbr title='Asterisco'>*</abbr>) a un termine di ricerca per trovarne le varianti (recep<abbr title='Asterisco'>*</abbr>, 32019R<abbr title='Asterisco'>*</abbr>). Utilizzare un punto interrogativo (<abbr title='Punto interrogativo'>?</abbr>) al posto di un determinato carattere nella ricerca per trovare le possibili varianti (cercando &quot;ca<abbr title='Punto interrogativo'>?</abbr>o&quot; si trovano i seguenti risultati: caso, capo, calo).";
+		var quickSearchHelpAlt="Use quotation marks to search for an &quot;exact phrase&quot;. Append an asterisk (<abbr title='Asterisk'>*</abbr>) to a search term to find variations of it (transp<abbr title='Asterisk'>*</abbr>, 32019R<abbr title='Asterisk'>*</abbr>). Use a question mark (<abbr title='Question mark'>?</abbr>) instead of a single character in your search term to find variations of it (ca<abbr title='Question mark'>?</abbr>e finds case, cane, care).";
+		var quickSearchHelp="Use quotation marks to search for an &quot;exact phrase&quot;. Append an asterisk (<abbr title='Asterisk'>*</abbr>) to a search term to find variations of it (transp<abbr title='Asterisk'>*</abbr>, 32019R<abbr title='Asterisk'>*</abbr>). Use a question mark (<abbr title='Question mark'>?</abbr>) instead of a single character in your search term to find variations of it (ca<abbr title='Question mark'>?</abbr>e finds case, cane, care).";
 	</script>
 
 	</div>	</div>	
@@ -2351,8 +2398,7 @@
 				
 				<div class="col-xs-2 col-sm-1 visible-xs-block visible-sm-block">
 					
-						<button type="button" class="btn btn-default btn-sm btn-block visible-xs-inline visible-sm-inline"
-								data-toggle="offcanvas">
+						<button type="button" class="btn btn-default btn-sm btn-block visible-xs-inline visible-sm-inline" data-toggle="offcanvas">
 							<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 						</button>
 					
@@ -2364,7 +2410,7 @@
 					
 	</div>	
 				<div class="col-xs-5 col-sm-4 col-md-3 col-sm-push-4 col-md-push-3 col-xs-pull-2">
-					<p class="DocumentTitle pull-left"><a href="https://eur-lex.europa.eu/summary/glossary.html">Glossario delle sintesi</a></p>
+					<p class="DocumentTitle pull-left"><a href="https://eur-lex.europa.eu/summary/glossary.html">Glossary of summaries</a></p>
 				</div><!-- col -->
 				<div class="col-sm-5 col-md-3 col-md-pull-3 hidden-xs col-sm-pull-5">
 					
@@ -2381,7 +2427,7 @@
 
 	
 	</div>	
-						<div class="col-xs-2 col-sm-1 col-md-6 " >
+						<div class="col-xs-2 col-sm-1 col-md-6 ">
 							<div class="PageShare pageShareMobile">
 								
 
@@ -2406,7 +2452,7 @@
  
  
  
- <a href="./../../../content/help.html" class="PSHelp EurlexTooltip" aria-description = "Help" data-toggle="tooltip" title="Guida" data-original-title="Help" ><svg class="ecl-icon ecl-icon--s faq-image-size" focusable="false" aria-hidden="false" role="img"><use xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/faq.svg#faq" /></svg>Guida</a>
+ <a href="./../../../content/help.html" class="PSHelp EurlexTooltip" aria-description="Help" data-toggle="tooltip" title="" data-original-title="Help"><svg class="ecl-icon ecl-icon--s faq-image-size" focusable="false" aria-hidden="false" role="img" viewBox="0 0 24 24"><path d="M15.4 10.2c-.9 1.3-1.7 1.7-2.2 2.6-.3.5-.4.8-.4 1.2v.4c0 .6-.5 1-1 1-.6 0-1-.4-1-1v-1c0-.4.1-.9.4-1.2.6-1 1.7-1.6 2.3-2.5.7-1 .3-2.7-1.6-2.7-.9 0-1.4.5-1.8 1-.3.1-.9.3-1.3.1-.6-.3-.8-1-.5-1.5.7-1 1.9-1.8 3.5-1.8 1.7 0 2.9.8 3.5 1.8.6.8.9 2.4.1 3.6m-3.6 9c-.7 0-1.2-.6-1.2-1.2s.6-1.2 1.2-1.2c.7 0 1.2.6 1.2 1.2s-.6 1.2-1.2 1.2M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2"></path></svg>Help</a>
  
  
  
@@ -2431,16 +2477,16 @@
  
  
         <li class="hidden-xs hidden-sm">
-            <button data-target="./../../../legal-content/IT/TXT/?uri=LEGISSUM:nato&amp;print=true" onclick="window.open('./../../../legal-content/IT/TXT/?uri=LEGISSUM:nato&amp;print=true','','scrollbars=yes,menubar=no, status=no, directories=no, location=no, resizable=no, width=1024, height=600');return false;" target="_blank" class="PSPrint EurlexTooltip" data-toggle="tooltip" title="Stampare" aria-description="Stampare"  data-original-title="Print this page">
+            <button data-target="./../../../legal-content/IT/TXT/?uri=LEGISSUM:nato&amp;print=true" onclick="window.open('./../../../legal-content/IT/TXT/?uri=LEGISSUM:nato&amp;print=true','','scrollbars=yes,menubar=no, status=no, directories=no, location=no, resizable=no, width=1024, height=600');return false;" target="_blank" class="PSPrint EurlexTooltip" data-toggle="tooltip" title="" aria-description="Print" data-original-title="Print">
                 <i class="fa fa-print" aria-hidden="true"></i>
-                Stampare
+                Print
  </button> </li> 
  
  
  
 
             <li class="shareApi">
-                <script type="application/json">{
+                <div class="sbkm wt wt-sbkm " data-nosnippet="true"><a class="myButton unselected wt-noconflict" href="#share" id="sbkm_3044324054524059"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a></div><script type="application/json" data-process="true">{
                     "service": "share",
                     "counter": false,
                     "css": {
@@ -2514,7 +2560,7 @@
  
  
             <div class="AffixSidebarWrapper">
-                <nav class="Sidebar" id="AffixSidebar">
+                <nav class="Sidebar affix-top" id="AffixSidebar" style="width: 243.25px;">
                     
 	
 	
@@ -2559,19 +2605,18 @@
 
 
 
-<a href="./../../../legal-content/IT/TXT/?uri=LEGISSUM:nato"                aria-label="">
-	Testo
+<a href="./../../../legal-content/IT/TXT/?uri=LEGISSUM:nato" aria-label="">
+	Text
 	</a>
 
 	
-							<input type="hidden" id="selectedTabEnglishTranslationID_text"
-								   value="Text">
+							<input type="hidden" id="selectedTabEnglishTranslationID_text" value="Text">
 						</li>
 					
 	
 	
 	
-	<li >	
+	<li>	
 
 
 
@@ -2605,13 +2650,12 @@
 
 
 
-<a href="./../../../legal-content/IT/ALL/?uri=LEGISSUM:nato"                aria-label="">
-	Informazioni sul documento
+<a href="./../../../legal-content/IT/ALL/?uri=LEGISSUM:nato" aria-label="">
+	Document information
 	</a>
 
 	
-							<input type="hidden" id="selectedTabEnglishTranslationID_all"
-								   value="Document information">
+							<input type="hidden" id="selectedTabEnglishTranslationID_all" value="Document information">
 						</li>
 					
 	
@@ -2655,12 +2699,7 @@
 
 
 
-<a
-        id="link-permanent-link" class="hidden-print hideInPdf" style="display:none"
-        href="javascript:;"
-        onclick="createCookie('bookmark','trigger',1); window.open('./../../../IT/legal-content/glossary/nato-north-atlantic-treaty-organisation.html'+window.location.hash); return true;"
-        title="Link a questa versione del documento"><i
-        class="fa fa-bookmark" aria-hidden="true"></i>Link permanente</a>
+<a id="link-permanent-link" class="hidden-print hideInPdf onlyJsInlineBlock" style="" href="javascript:;" onclick="createCookie('bookmark','trigger',1); window.open('./../../../IT/legal-content/glossary/nato-north-atlantic-treaty-organisation.html'+window.location.hash); return true;" title="Link to this version of the document"><i class="fa fa-bookmark" aria-hidden="true"></i>Permanent link</a>
 
 
 <script type="text/javascript">
@@ -2719,9 +2758,9 @@
 
 
 
-<a href="./../../../download-notice.html?legalContentId=cellar:55442169-d6c1-11e7-a506-01aa75ed71a1&amp;noticeType=branch&amp;callingUrl=%2FIT%2Flegal-content%2Fglossary%2Fnato-north-atlantic-treaty-organisation.html&amp;lng=IT"       title="Scaricare la notifica XML del documento" id="link-download-notice"        aria-label="">
+<a href="./../../../download-notice.html?legalContentId=cellar:55442169-d6c1-11e7-a506-01aa75ed71a1&amp;noticeType=branch&amp;callingUrl=%2FIT%2Flegal-content%2Fglossary%2Fnato-north-atlantic-treaty-organisation.html&amp;lng=IT" title="Download the document XML notice" id="link-download-notice" aria-label="">
                     			<i class="fa fa-download" aria-hidden="true"></i>
-                    			Scaricare la nota
+                    			Download notice
 	</a>
 
 	</li> 
@@ -2794,12 +2833,14 @@
 
 
 
-<a href="./../../../error/authentication-required.html?callingUrl=%2FIT%2Flegal-content%2Fglossary%2Fnato-north-atlantic-treaty-organisation.html&amp;towardUrl=%2Fprotected%2Fsave-document.html%3FlegalContentId%3Dcellar%3A55442169-d6c1-11e7-a506-01aa75ed71a1%26callingUrl%3D%252FIT%252Flegal-content%252Fglossary%252Fnato-north-atlantic-treaty-organisation.html"    class="eurlexModal grayLink"   title="Salvare l&#039;elemento" id="link-save-document"        aria-label="">
+<a href="./../../../error/authentication-required.html?callingUrl=%2FIT%2Flegal-content%2Fglossary%2Fnato-north-atlantic-treaty-organisation.html&amp;towardUrl=%2Fprotected%2Fsave-document.html%3FlegalContentId%3Dcellar%3A55442169-d6c1-11e7-a506-01aa75ed71a1%26callingUrl%3D%252FIT%252Flegal-content%252Fglossary%252Fnato-north-atlantic-treaty-organisation.html" class="eurlexModal grayLink" title="Save documents on EUR-Lex for quick access.
+&lt;LIBELLE CODE=&quot;saveProcedure.label&quot;&gt;&lt;![CDATA[Save procedures on EUR-Lex for quick access.
+&lt;LIBELLE CODE=&quot;see.other.ACP-EU.sessions&quot;&gt;&lt;![CDATA[See other ACP-EU Joint Parliamentary Assembly sessions" id="link-save-document" aria-label="">
 	
 	
 	 
 	
-                    			<i class="fa fa-sticky-note-o" aria-hidden="true"></i> Salvare ne &quot;I miei elementi&quot;
+                    			<i class="fa fa-sticky-note-o" aria-hidden="true"></i> Save to My items
 	
 	
 	
@@ -2837,7 +2878,7 @@
 </div>
 
 	
-			<div class="col-md-9"  id="documentView">
+			<div class="col-md-9" id="documentView">
 				<div class="EurlexContent">
 						
 	
@@ -2926,116 +2967,105 @@
 		<!--Hide Title and reference panel for EULEGISSUM--><div class="panel panel-default PagePanel ">
    <div class="panel-heading" role="tab" id="PP3">
       <p class="panel-title">
-         <button data-toggle="collapse" data-target="#PP3Contents" aria-expanded="false"
-                 aria-controls="PP3Contents"
-                 class="collapsed blockedByUserPreference"
-                 onclick="createDocPartCookie(this);">
-            <i class="fa fa-angle-right" aria-hidden="true">&nbsp;</i>Visualizzazione multilingue</button>
+         <button data-toggle="collapse" data-target="#PP3Contents" aria-expanded="false" aria-controls="PP3Contents" class="collapsed blockedByUserPreference" onclick="createDocPartCookie(this);">
+            <i class="fa fa-angle-right" aria-hidden="true">&nbsp;</i>Multilingual display</button>
       </p>
    </div>
-   <div id="PP3Contents" class="panel-collapse collapse " role="tabpanel"
-        aria-labelledby="PP3">
+   <div id="PP3Contents" class="panel-collapse collapse " role="tabpanel" aria-labelledby="PP3">
       <div class="panel-body PanelBodyB">
-         <form action="./../../../legal-content/IT/TXT/?uri=&#xA;&#x9;&#x9;&#x9;&#x9;LEGISSUM:nato"
-               class="form-inline"
-               id="form"
-               name="multilingualForm"
-               method="post"><input type="hidden" name="_csrf" value="9d05c718-6adb-4289-9463-ac3744fc6f02" /><input type="hidden" name="from" value="IT"/>
+         <form action="./../../../legal-content/IT/TXT/?uri=
+				LEGISSUM:nato" class="form-inline" id="form" name="multilingualForm" method="post"><input type="hidden" name="_csrf" value="f448d836-41c2-4aa6-989c-715d4522725b"><input type="hidden" name="from" value="IT">
             <div class="form-group">
-               <label for="MDLang1" class="sr-only">Lingua 1 </label>
-               <select id="MDLang1" name="lang1" class="input-sm form-control NoBorders"
-                       aria-label="Scegli una lingua">
-                  <option value="IT">Italiano (it)</option>
-                  <option value="BG">Bulgaro (bg)</option>
-                  <option value="ES">Spagnolo (es)</option>
-                  <option value="CS">Ceco (cs)</option>
-                  <option value="DA">Danese (da)</option>
-                  <option value="DE">Tedesco (de)</option>
-                  <option value="ET">Estone (et)</option>
-                  <option value="EL">Greco (el)</option>
-                  <option value="EN">Inglese (en)</option>
-                  <option value="FR">Francese (fr)</option>
-                  <option value="GA">Irlandese (ga)</option>
-                  <option value="HR">Croato (hr)</option>
-                  <option value="IT" selected="selected">Italiano (it)</option>
-                  <option value="LV">Lettone (lv)</option>
-                  <option value="LT">Lituano (lt)</option>
-                  <option value="HU">Ungherese (hu)</option>
+               <label for="MDLang1" class="sr-only">Language 1 </label>
+               <select id="MDLang1" name="lang1" class="input-sm form-control NoBorders" aria-label="Choose language">
+                  <option value="EN">English (en)</option>
+                  <option value="BG">Bulgarian (bg)</option>
+                  <option value="ES">Spanish (es)</option>
+                  <option value="CS">Czech (cs)</option>
+                  <option value="DA">Danish (da)</option>
+                  <option value="DE">German (de)</option>
+                  <option value="ET">Estonian (et)</option>
+                  <option value="EL">Greek (el)</option>
+                  <option value="EN" selected="selected">English (en)</option>
+                  <option value="FR">French (fr)</option>
+                  <option value="GA">Irish (ga)</option>
+                  <option value="HR">Croatian (hr)</option>
+                  <option value="IT">Italian (it)</option>
+                  <option value="LV">Latvian (lv)</option>
+                  <option value="LT">Lithuanian (lt)</option>
+                  <option value="HU">Hungarian (hu)</option>
                   <option value="MT">Maltese (mt)</option>
-                  <option value="NL">Neerlandese (nl)</option>
-                  <option value="PL">Polacco (pl)</option>
-                  <option value="PT">Portoghese (pt)</option>
-                  <option value="RO">Rumeno (ro)</option>
-                  <option value="SK">Slovacco (sk)</option>
-                  <option value="SL">Sloveno (sl)</option>
-                  <option value="FI">Finlandese (fi)</option>
-                  <option value="SV">Svedese (sv)</option>
+                  <option value="NL">Dutch (nl)</option>
+                  <option value="PL">Polish (pl)</option>
+                  <option value="PT">Portuguese (pt)</option>
+                  <option value="RO">Romanian (ro)</option>
+                  <option value="SK">Slovak (sk)</option>
+                  <option value="SL">Slovenian (sl)</option>
+                  <option value="FI">Finnish (fi)</option>
+                  <option value="SV">Swedish (sv)</option>
                </select>
             </div>
             <div class="form-group">
-               <label for="MDLang2" class="sr-only">Lingua 2 </label>
-               <select id="MDLang2" name="lang2" class="input-sm form-control NoBorders"
-                       aria-label="Scegli una lingua">
-                  <option value="choose" selected="selected">Scegliere</option>
-                  <option value="BG">Bulgaro (bg)</option>
-                  <option value="ES">Spagnolo (es)</option>
-                  <option value="CS">Ceco (cs)</option>
-                  <option value="DA">Danese (da)</option>
-                  <option value="DE">Tedesco (de)</option>
-                  <option value="ET">Estone (et)</option>
-                  <option value="EL">Greco (el)</option>
-                  <option value="EN">Inglese (en)</option>
-                  <option value="FR">Francese (fr)</option>
-                  <option value="GA">Irlandese (ga)</option>
-                  <option value="HR">Croato (hr)</option>
-                  <option value="IT">Italiano (it)</option>
-                  <option value="LV">Lettone (lv)</option>
-                  <option value="LT">Lituano (lt)</option>
-                  <option value="HU">Ungherese (hu)</option>
+               <label for="MDLang2" class="sr-only">Language 2 </label>
+               <select id="MDLang2" name="lang2" class="input-sm form-control NoBorders" aria-label="Choose language">
+                  <option value="choose" selected="selected">Please choose</option>
+                  <option value="BG">Bulgarian (bg)</option>
+                  <option value="ES">Spanish (es)</option>
+                  <option value="CS">Czech (cs)</option>
+                  <option value="DA">Danish (da)</option>
+                  <option value="DE">German (de)</option>
+                  <option value="ET">Estonian (et)</option>
+                  <option value="EL">Greek (el)</option>
+                  <option value="EN">English (en)</option>
+                  <option value="FR">French (fr)</option>
+                  <option value="GA">Irish (ga)</option>
+                  <option value="HR">Croatian (hr)</option>
+                  <option value="IT">Italian (it)</option>
+                  <option value="LV">Latvian (lv)</option>
+                  <option value="LT">Lithuanian (lt)</option>
+                  <option value="HU">Hungarian (hu)</option>
                   <option value="MT">Maltese (mt)</option>
-                  <option value="NL">Neerlandese (nl)</option>
-                  <option value="PL">Polacco (pl)</option>
-                  <option value="PT">Portoghese (pt)</option>
-                  <option value="RO">Rumeno (ro)</option>
-                  <option value="SK">Slovacco (sk)</option>
-                  <option value="SL">Sloveno (sl)</option>
-                  <option value="FI">Finlandese (fi)</option>
-                  <option value="SV">Svedese (sv)</option>
+                  <option value="NL">Dutch (nl)</option>
+                  <option value="PL">Polish (pl)</option>
+                  <option value="PT">Portuguese (pt)</option>
+                  <option value="RO">Romanian (ro)</option>
+                  <option value="SK">Slovak (sk)</option>
+                  <option value="SL">Slovenian (sl)</option>
+                  <option value="FI">Finnish (fi)</option>
+                  <option value="SV">Swedish (sv)</option>
                </select>
             </div>
             <div class="form-group">
-               <label for="MDLang3" class="sr-only">Lingua 3 </label>
-               <select id="MDLang3" name="lang3" class="input-sm form-control NoBorders"
-                       aria-label="Scegli una lingua">
-                  <option value="choose" selected="selected">Scegliere</option>
-                  <option value="BG">Bulgaro (bg)</option>
-                  <option value="ES">Spagnolo (es)</option>
-                  <option value="CS">Ceco (cs)</option>
-                  <option value="DA">Danese (da)</option>
-                  <option value="DE">Tedesco (de)</option>
-                  <option value="ET">Estone (et)</option>
-                  <option value="EL">Greco (el)</option>
-                  <option value="EN">Inglese (en)</option>
-                  <option value="FR">Francese (fr)</option>
-                  <option value="GA">Irlandese (ga)</option>
-                  <option value="HR">Croato (hr)</option>
-                  <option value="IT">Italiano (it)</option>
-                  <option value="LV">Lettone (lv)</option>
-                  <option value="LT">Lituano (lt)</option>
-                  <option value="HU">Ungherese (hu)</option>
+               <label for="MDLang3" class="sr-only">Language 3 </label>
+               <select id="MDLang3" name="lang3" class="input-sm form-control NoBorders" aria-label="Choose language">
+                  <option value="choose" selected="selected">Please choose</option>
+                  <option value="BG">Bulgarian (bg)</option>
+                  <option value="ES">Spanish (es)</option>
+                  <option value="CS">Czech (cs)</option>
+                  <option value="DA">Danish (da)</option>
+                  <option value="DE">German (de)</option>
+                  <option value="ET">Estonian (et)</option>
+                  <option value="EL">Greek (el)</option>
+                  <option value="EN">English (en)</option>
+                  <option value="FR">French (fr)</option>
+                  <option value="GA">Irish (ga)</option>
+                  <option value="HR">Croatian (hr)</option>
+                  <option value="IT">Italian (it)</option>
+                  <option value="LV">Latvian (lv)</option>
+                  <option value="LT">Lithuanian (lt)</option>
+                  <option value="HU">Hungarian (hu)</option>
                   <option value="MT">Maltese (mt)</option>
-                  <option value="NL">Neerlandese (nl)</option>
-                  <option value="PL">Polacco (pl)</option>
-                  <option value="PT">Portoghese (pt)</option>
-                  <option value="RO">Rumeno (ro)</option>
-                  <option value="SK">Slovacco (sk)</option>
-                  <option value="SL">Sloveno (sl)</option>
-                  <option value="FI">Finlandese (fi)</option>
-                  <option value="SV">Svedese (sv)</option>
+                  <option value="NL">Dutch (nl)</option>
+                  <option value="PL">Polish (pl)</option>
+                  <option value="PT">Portuguese (pt)</option>
+                  <option value="RO">Romanian (ro)</option>
+                  <option value="SK">Slovak (sk)</option>
+                  <option value="SL">Slovenian (sl)</option>
+                  <option value="FI">Finnish (fi)</option>
+                  <option value="SV">Swedish (sv)</option>
                </select>
             </div>
-            <button type="submit" class="btn btn-sm btn-primary" aria-label="Visualizzare"
-                    onclick="javascript:($('.AffixSidebarWrapper .Selected').length &gt; 0) ?           multilingualFormPiwikTracking($('.AffixSidebarWrapper .Selected a').siblings('input[id^=selectedTabEnglishTranslationID]').val()) :           multilingualFormPiwikTracking('') ;submit(); showHourglass();">Visualizzare</button>
+            <button type="submit" class="btn btn-sm btn-primary" aria-label="Display" onclick="javascript:($('.AffixSidebarWrapper .Selected').length &gt; 0) ?           multilingualFormPiwikTracking($('.AffixSidebarWrapper .Selected a').siblings('input[id^=selectedTabEnglishTranslationID]').val()) :           multilingualFormPiwikTracking('') ;submit(); showHourglass();">Display</button>
          </form>
       </div>
    </div>
@@ -3092,7 +3122,7 @@
 													<div lang="">
 														<header><h1>NATO (Organizzazione del trattato dell’Atlantico del Nord)</h1></header><section class="lseu-section-glossary-definition" id="lseu-section-glossary-definition"> <p>L’Organizzazione del trattato dell’Atlantico del Nord (NATO oppure «Patto atlantico») consiste in un’alleanza militare intergovernativa istituita dal trattato dell’Atlantico del Nord, noto anche con il nome di trattato di Washington, firmato in data <time datetime="1949-04-04">4 aprile 1949</time>. Lo scopo dichiarato della NATO è la garanzia della libertà e della sicurezza dei propri membri tramite mezzi politici e militari.</p><p>Nel complesso, la struttura della NATO comprende due branche:</p><ul><li>una civile e amministrativa, che annovera:<ul><li>il Consiglio del Nord Atlantico, costituito dalle delegazioni permanenti dei paesi membri della NATO;</li><li>un gruppo di pianificazione nucleare;</li><li>il personale internazionale presso la sede NATO a Bruxelles; e</li></ul></li><li>una branca militare, che annovera:<ul><li>il comitato militare della NATO, che fornisce consulenza al Consiglio del Nord Atlantico in merito alle strategie militari;</li><li>il Comando alleato per le operazioni, responsabile delle attività militari della NATO;</li><li>il Comando alleato per la trasformazione, che si occupa della pianificazione della difesa e dello sviluppo delle capacità.</li></ul></li></ul><p>Con sede a Bruxelles, la NATO conta 31 membri in seguito ad allargamenti successivi:</p><ul><li>aprile 1949: Belgio, Canada, Danimarca, Francia, Islanda, Italia, Lussemburgo, Paesi Bassi, Norvegia, Portogallo, Regno Unito e Stati Uniti (i 12 membri fondanti);</li><li>febbraio 1952: Grecia e Turchia;</li><li>maggio 1955: Germania ovest, dopo la riunificazione della Germania nel 1990, il paese intero è diventato membro;</li><li>maggio 1982: Spagna;</li><li>marzo 1999: Cechia, Ungheria e Polonia;</li><li>marzo 2004: Bulgaria, Estonia, Lettonia, Lituania, Romania, Slovacchia e Slovenia;</li><li><time datetime="2009-04-01">1<sup>o</sup> aprile 2009</time>: Albania e Croazia;</li><li><time datetime="2017-06-05">5 giugno 2017</time>: Montenegro;</li><li><time datetime="2020-03-27">27 marzo 2020</time>: Macedonia del Nord;</li><li><time datetime="2023-04-04">4 aprile 2023</time>: Finlandia.</li></ul><p>Avendo 22 paesi membri in comune, l’Unione europea e la NATO hanno lavorato particolarmente da vicino dal 2003 con la conclusione degli accordi «Berlin plus», che hanno conferito all’Unione europea, in presenza di determinate condizioni, l’accesso alle risorse e alle capacità della NATO, basandosi sulla cooperazione in materia di difesa in precedenza sviluppata tra la NATO e l’ormai sciolta Unione dell’Europa occidentale.</p><p>Tra gli esempi recenti della stretta collaborazione tra NATO e Unione europea figurano:</p><ul><li>nel settore della sicurezza marittima, l’operazione Irini nel Mediterraneo, in cui la Forza navale dell’Unione europea ha collaborato con l’operazione Sea Guardian della NATO;</li><li>nel Medio Oriente, dove l’Unione europea è impiegata come partner non militare, con tutti i 27 Stati membri coinvolti come partner, mentre la NATO sostiene la coalizione globale anti-Daesh/ISIS.</li></ul><p>Gli obblighi e la cooperazione degli Stati membri dell’Unione europea nel quadro della politica di sicurezza e di difesa comune sono compatibili con gli obblighi derivanti dal trattato dell’Atlantico del Nord.</p></section><section class="lseu-section-relevant-terms" id="lseu-section-relevant-terms"><h2>SI VEDA ANCHE</h2><ul class="lseu-bullet-none"><li><a href="https://eur-lex.europa.eu/IT/legal-content/glossary/collective-defence.html" hreflang="it">Difesa collettiva</a>.</li><li><a href="https://eur-lex.europa.eu/IT/legal-content/glossary/common-security-and-defence-policy-csdp.html" hreflang="it">Politica di sicurezza e di difesa comune (PSDC)</a>.</li><li><a href="https://eur-lex.europa.eu/IT/legal-content/glossary/common-foreign-and-security-policy-cfsp.html" hreflang="it">Politica estera e di sicurezza comune (PESC)</a>.</li><li><a href="https://eur-lex.europa.eu/IT/legal-content/glossary/common-foreign-and-security-policy-and-common-security-and-defence-policy.html" hreflang="it">Politica estera e di sicurezza comune e politica di sicurezza e di difesa comune</a>.</li><li><a href="https://eur-lex.europa.eu/IT/legal-content/glossary/permanent-structured-cooperation.html" hreflang="it">Cooperazione strutturata permanente</a>.</li><li><a href="https://eur-lex.europa.eu/IT/legal-content/summary/the-eu-s-common-security-and-defence-policy.html" hreflang="it">La politica di sicurezza e di difesa comune dell’Unione europea</a> (sintesi).</li><li><a href="https://eur-lex.europa.eu/IT/legal-content/summary/a-european-union-military-operation-in-the-mediterranean-european-union-naval-force-mediterranean-operation-irini.html" hreflang="it">Operazione militare dell’Unione europea nel Mediterraneo (Forza navale dell’Unione europea, operazione Irini nel Mediterraneo)</a> (sintesi).</li><li><a href="https://www.eeas.europa.eu/eeas/shaping-common-security-and-defence-policy_en" target="_blank" rel="noopener" hreflang="en">Plasmare una politica di sicurezza e di difesa comune</a> (servizio europeo per l’azione esterna).</li><li><a href="http://www.operationirini.eu" target="_blank" rel="noopener" hreflang="en">Eunavfor Med</a> (Forza navale dell’Unione europea — Operazione Irini nel Mediterraneo).</li><li><a href="http://theglobalcoalition.org/en/partners/" target="_blank" rel="noopener" hreflang="en">Coalizione globale anti-Daesh/ISIS</a> (sito web).</li><li><a href="http://www.nato.int/cps/en/natohq/index.htm" target="_blank" rel="noopener" hreflang="en">Organizzazione del trattato dell’Atlantico del Nord — NATO</a> (sito web).</li><li><a href="http://www.nato.int/cps/en/natohq/topics_136233.htm" target="_blank" rel="noopener" hreflang="en">Operazione Sea Guardian</a> (sito web).</li><li><a href="http://www.nato.int/cps/eu/natohq/topics_49217.htm" target="_blank" rel="noopener" hreflang="en">Relazioni con l’Unione europea</a> (sito web).</li></ul></section>
 													</div>
-													<a class="" href="#document1">In alto</a>	</div>	</div>	
+													<a class="" href="#document1">Top</a>	</div>	</div>	
 	</div>	
 	
 	</div><!-- panel-body -->	</div><!-- panel-collapse -->	</div>	
@@ -3114,7 +3144,7 @@
 
 	<script type="text/javascript">
 		$(document).ready(function () {
-			popUpWidget("./../../../", "it", "800");
+			popUpWidget("./../../../", "en", "800");
 			popUpWidgetAccessible("./../../../", "IT");
 		})
 	</script>
@@ -3125,7 +3155,7 @@
 			$(document).ready(function () {
 			    
 				if ("false" == "true" || "false" == "true") {
-					initConsLegTable('Per visualizzare l&#39;indice, riduci le dimensioni del contenuto o aumenta le dimensioni della finestra del browser.');
+					initConsLegTable('To display the table of contents, zoom out or increase the size of your browser window.');
 				}
 				if ("false" == "true") {
 					initToc("false");
@@ -3247,23 +3277,21 @@
 
 
 
-<a href="./../../../homepage.html"                aria-label="">
-                <picture class="ecl-picture ecl-site-footer__picture" title="Torna alla homepage di EUR-Lex">
-                    <img class="ecl-site-footer__logo-image" src="./../../../revamp/images/eurlex_simple.svg"
-                         onerror="this.onerror=null; this.src='./../../../images/n/eurlex_simple.png'"
-                         alt="Torna alla homepage di EUR-Lex" title="Torna alla homepage di EUR-Lex">
+<a href="./../../../homepage.html" aria-label="">
+                <picture class="ecl-picture ecl-site-footer__picture" title="Back to EUR-Lex homepage">
+                    <img class="ecl-site-footer__logo-image" src="./../../../revamp/images/eurlex_simple.svg" onerror="this.onerror=null; this.src='./../../../images/n/eurlex_simple.png'" alt="Back to EUR-Lex homepage" title="Back to EUR-Lex homepage" width="300" height="73">
                 </picture>                
             </a>
             
-            <div class="ecl-site-footer__description">Il sito è gestito dall'
+            <div class="ecl-site-footer__description">This site is managed by the
  
-                <a href="http://op.europa.eu/it/home" title="Ufficio delle pubblicazioni dell'Unione europea" class="ecl-link ecl-link--standalone ecl-site-footer__link underlineLink">Ufficio delle pubblicazioni dell'Unione europea</a>
+                <a href="http://op.europa.eu/en/home" title="Publications Office of the European Union" class="ecl-link ecl-link--standalone ecl-site-footer__link underlineLink">Publications Office of the European Union</a>
             </div>          
         </div>
     </div>
     <div class="ecl-site-footer__column">
         <div class="ecl-site-footer__section">
-          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Serve aiuto?</h2>
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Need help?</h2>
           <ul class="ecl-site-footer__list">
             <li class="ecl-site-footer__list-item">
                 
@@ -3301,8 +3329,8 @@
 
 
 
-<a href="./../../../content/help.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Guida"         aria-label="">
- Guida
+<a href="./../../../content/help.html" class="ecl-link ecl-link--standalone ecl-site-footer__link" title="Help pages" aria-label="">
+ Help pages
  </a>
 
             </li>
@@ -3342,8 +3370,8 @@
 
 
 
-<a href="./../../../contact.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Contatti"         aria-label="">
- Contatti
+<a href="./../../../contact.html" class="ecl-link ecl-link--standalone ecl-site-footer__link" title="Contact" aria-label="">
+ Contact
  </a>
 
             </li>
@@ -3383,8 +3411,8 @@
 
 
 
-<a href="./../../../content/site-map/site-map.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Mappa del sito"         aria-label="">
- Mappa del sito
+<a href="./../../../content/site-map/site-map.html" class="ecl-link ecl-link--standalone ecl-site-footer__link" title="Sitemap" aria-label="">
+ Sitemap
  </a>
 
             </li>
@@ -3392,14 +3420,12 @@
         </div>
         
         <div class="ecl-site-footer__section">
-          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Seguici</h2>
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Follow us</h2>
           <ul class="ecl-site-footer__list">
             <li class="ecl-site-footer__list-item">
                 
                 <a href="https://x.com/EUPublications" title="X" class="ecl-link ecl-link--standalone ecl-link--icon ecl-site-footer__link">
-                    <img class="ecl-icon ecl-icon--m ecl-link__icon ecl-link--icon--twitter" src="./../../../revamp/images/twitter.svg"
-                        onerror="this.onerror=null; this.src='./../../../images/n/twitter.png'"
-                        alt="X" title="X">
+                    <img class="ecl-icon ecl-icon--m ecl-link__icon ecl-link--icon--twitter" src="./../../../revamp/images/twitter.svg" onerror="this.onerror=null; this.src='./../../../images/n/twitter.png'" alt="X" title="X">
                     <span class="ecl-link__label--twitter">X</span>            
                 </a>
             </li>            
@@ -3407,7 +3433,7 @@
         </div>
         
         <div class="ecl-site-footer__section">
-            <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Aspetti giuridici</h2>
+            <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Legal</h2>
             <ul class="ecl-site-footer__list">
                 <li class="ecl-site-footer__list-item">
                     
@@ -3445,8 +3471,8 @@
 
 
 
-<a href="./../../../content/legal-notice/legal-notice.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Note legali"         aria-label="">
- Note legali
+<a href="./../../../content/legal-notice/legal-notice.html" class="ecl-link ecl-link--standalone ecl-site-footer__link" title="Legal notice" aria-label="">
+ Legal notice
  </a>
 
                 </li>
@@ -3486,8 +3512,8 @@
 
 
 
-<a href="./../../../content/legal-notice/legal-notice.html#5.%20Cookies%20notice"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Politica sull&#039;uso dei cookie"         aria-label="">
- Politica sull'uso dei cookie
+<a href="./../../../content/legal-notice/legal-notice.html#5.%20Cookies%20notice" class="ecl-link ecl-link--standalone ecl-site-footer__link" title="Cookies policy" aria-label="">
+ Cookies policy
  </a>
 
                 </li>
@@ -3527,8 +3553,8 @@
 
 
 
-<a href="./../../../content/legal-notice/legal-notice.html#4.%20Accessibility%20statement"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Accessibilità"         aria-label="">
- Accessibilità
+<a href="./../../../content/legal-notice/legal-notice.html#4.%20Accessibility%20statement" class="ecl-link ecl-link--standalone ecl-site-footer__link" title="Accessibility" aria-label="">
+ Accessibility
  </a>
 
                 </li>
@@ -3568,8 +3594,8 @@
 
 
 
-<a href="./../../../content/legal-notice/legal-notice.html#3.%20protection"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Informativa sulla privacy"         aria-label="">
- Informativa sulla privacy
+<a href="./../../../content/legal-notice/legal-notice.html#3.%20protection" class="ecl-link ecl-link--standalone ecl-site-footer__link" title="Privacy statement" aria-label="">
+ Privacy statement
  </a>
 
                 </li>
@@ -3579,7 +3605,7 @@
     
      <div class="ecl-site-footer__column">
          <div class="ecl-site-footer__section">
-           <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Informazioni</h2>
+           <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Information</h2>
            <ul class="ecl-site-footer__list">
              <li class="ecl-site-footer__list-item">
                  
@@ -3617,8 +3643,8 @@
 
 
 
-<a href="./../../../content/welcome/about.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Cos&#039;è EUR-Lex"         aria-label="">
- Cos'è EUR-Lex
+<a href="./../../../content/welcome/about.html" class="ecl-link ecl-link--standalone ecl-site-footer__link" title="About EUR-Lex" aria-label="">
+ About EUR-Lex
  </a>
 
              </li>
@@ -3658,7 +3684,7 @@
 
 
 
-<a href="./../../../newsletter/newsletterLatest.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Newsletter"         aria-label="">
+<a href="./../../../newsletter/newsletterLatest.html" class="ecl-link ecl-link--standalone ecl-site-footer__link" title="Newsletter" aria-label="">
  Newsletter
  </a>
 
@@ -3699,44 +3725,44 @@
 
 
 
-<a href="./../../../content/links/links.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Link utili"         aria-label="">
- Link utili
+<a href="./../../../content/links/links.html" class="ecl-link ecl-link--standalone ecl-site-footer__link" title="Useful links" aria-label="">
+ Useful links
  </a>
 
              </li>
            </ul>
          </div>
          <div class="ecl-site-footer__section">
-           <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Altri servizi</h2>
+           <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Other services</h2>
            <ul class="ecl-site-footer__list">
              <li class="ecl-site-footer__list-item">
                  
-                 <a href="https://data.europa.eu/euodp/it/data/" title="Dati europei" class="ecl-link ecl-link--standalone ecl-site-footer__link">
-                     Dati europei
+                 <a href="https://data.europa.eu/euodp/en/data/" title="European Data" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                     European Data
                  </a>
              </li>
              <li class="ecl-site-footer__list-item">
                  
-                 <a href="https://ted.europa.eu/TED/main/HomePage.do" title="Appalti dell'UE" class="ecl-link ecl-link--standalone ecl-site-footer__link">
-                     Appalti dell'UE
+                 <a href="https://ted.europa.eu/TED/main/HomePage.do" title="EU tenders" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                     EU tenders
                  </a>
              </li>
              <li class="ecl-site-footer__list-item">
                  
-                 <a href="http://cordis.europa.eu/it/" title="Risultati della ricerca dell'UE" class="ecl-link ecl-link--standalone ecl-site-footer__link">
-                     Risultati della ricerca dell'UE
+                 <a href="http://cordis.europa.eu/en/" title="EU research results" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                     EU research results
                  </a>
              </li>
              <li class="ecl-site-footer__list-item">
                  
-                 <a href="http://op.europa.eu/it/web/who-is-who" title="EU Whoiswho" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                 <a href="http://op.europa.eu/en/web/who-is-who" title="EU Whoiswho" class="ecl-link ecl-link--standalone ecl-site-footer__link">
                      EU Whoiswho
                  </a>
              </li>
              <li class="ecl-site-footer__list-item">
                  
-                 <a href="http://op.europa.eu/it/web/general-publications/publications" title="Pubblicazioni dell'UE" class="ecl-link ecl-link--standalone ecl-site-footer__link">
-                     Pubblicazioni dell'UE
+                 <a href="http://op.europa.eu/en/web/general-publications/publications" title="EU publications" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                     EU publications
                  </a>
              </li>
            </ul>
@@ -3745,19 +3771,19 @@
            <ul class="ecl-site-footer__list">
              <li class="ecl-site-footer__list-item">
              
-             <a href="http://n-lex.europa.eu/n-lex/index?lang=it" title="N-Lex" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+             <a href="http://n-lex.europa.eu/n-lex/index?lang=en" title="N-Lex" class="ecl-link ecl-link--standalone ecl-site-footer__link">
                  N-Lex
              </a>
              </li>
              <li class="ecl-site-footer__list-item">
              
-             <a href="http://op.europa.eu/it/web/eu-law-in-force" title="" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+             <a href="http://op.europa.eu/en/web/eu-law-in-force" title="" class="ecl-link ecl-link--standalone ecl-site-footer__link">
                  
              </a>
              </li>
              <li class="ecl-site-footer__list-item">
              
-             <a href="http://law-tracker.europa.eu/homepage?lang=it" title="EU Law Tracker" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+             <a href="http://law-tracker.europa.eu/homepage?lang=en" title="EU Law Tracker" class="ecl-link ecl-link--standalone ecl-site-footer__link">
                  EU Law Tracker
  </a> </li> </ul> </div> </div>
 </div> 
@@ -3769,63 +3795,63 @@
       <div class="ecl-site-footer__column">
         <div class="ecl-site-footer__section"><a href="https://european-union.europa.eu/" class="ecl-link ecl-link--standalone ecl-site-footer__logo-link" aria-label="European Union">
             <picture class="ecl-picture ecl-site-footer__picture" title="European Union">
-              <source srcset="./../../../revamp/images/logo-eu--en.svg" media="(min-width: 996px)"><img class="ecl-site-footer__logo-image" src="./../../../revamp/images/logo-eu--en-sm.svg" alt="European Union logo" />
+              <source srcset="./../../../revamp/images/logo-eu--en.svg" media="(min-width: 996px)"><img class="ecl-site-footer__logo-image" src="./../../../revamp/images/logo-eu--en-sm.svg" alt="European Union logo">
             </picture>
           </a>
-          <div class="ecl-site-footer__description">Scopri di più su <a href="https://europa.eu" class="ecl-link ecl-link--standalone underlineLink">europa.eu</a></div>
+          <div class="ecl-site-footer__description">Discover more on <a href="https://europa.eu" class="ecl-link ecl-link--standalone underlineLink">europa.eu</a></div>
         </div>
       </div>
       <div class="ecl-site-footer__column">
         <div class="ecl-site-footer__section">
-          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Contatta l&#39;UE</h2>
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Contact the EU</h2>
           <ul class="ecl-site-footer__list">
-            <li class="ecl-site-footer__list-item"><a href="tel:0080067891011" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Chiamaci al numero 00 800 6 7 8 9 10 11</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/call-us_en" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Usa altre opzioni telefoniche</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/write-us_en" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Scrivici usando l&#39;apposito modulo</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/meet-us_en" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Incontraci presso uno dei centri dell&#39;UE</a></li>
+            <li class="ecl-site-footer__list-item"><a href="tel:0080067891011" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Call us 00 800 6 7 8 9 10 11</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/call-us_en" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Use other telephone options</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/write-us_en" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Write to us via our contact form</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/meet-us_en" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Meet us at one of the EU centres</a></li>
           </ul>
         </div>
         <div class="ecl-site-footer__section">
           <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Social media</h2>
           <ul class="ecl-site-footer__list">
-            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Cerca i canali social dell&#39;UE</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Search for EU social media channels</a></li>
           </ul>
         </div>
         <div class="ecl-site-footer__section">
-          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Aspetti giuridici</h2>
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Legal</h2>
           <ul class="ecl-site-footer__list">
-            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/languages-our-websites_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Uso delle lingue sui nostri siti web</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/privacy-policy_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Politica di tutela della privacy</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/legal-notice_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Note legali</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/cookies_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Cookie</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/languages-our-websites_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Languages on our websites</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/privacy-policy_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Privacy policy</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/legal-notice_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Legal notice</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/cookies_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Cookies</a></li>
           </ul>
         </div>
       </div>
       <div class="ecl-site-footer__column">
         <div class="ecl-site-footer__section ecl-site-footer__section">
-          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Istituzioni dell&#39;UE</h2>
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">EU institutions</h2>
           <ul class="ecl-site-footer__list">
-            <li class="ecl-site-footer__list-item"><a href="https://www.europarl.europa.eu/portal/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Parlamento europeo</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://www.consilium.europa.eu/en/european-council/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Consiglio europeo</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://www.consilium.europa.eu/en/home/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Consiglio dell&#39;Unione europea</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://commission.europa.eu/index_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Commissione europea</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://curia.europa.eu/jcms/jcms/j_6/en/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Corte di giustizia dell&#39;Unione europea (CGUE)</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://www.ecb.europa.eu/home/html/index.en.html" class="ecl-link ecl-link--standalone ecl-site-footer__link">Banca centrale europea (BCE)</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://www.eca.europa.eu/en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Corte dei conti europea</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://eeas.europa.eu/headquarters/headquarters-homepage_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Servizio europeo per l&#39;azione esterna (SEAE)</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://www.eesc.europa.eu/?i=portal.en.home" class="ecl-link ecl-link--standalone ecl-site-footer__link">Comitato economico e sociale europeo</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://cor.europa.eu/en/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Comitato europeo delle regioni (CdR)</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://www.eib.org/en/index.htm" class="ecl-link ecl-link--standalone ecl-site-footer__link">Banca europea per gli investimenti</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://www.ombudsman.europa.eu/en/home" class="ecl-link ecl-link--standalone ecl-site-footer__link">Mediatore europeo</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://secure.edps.europa.eu/EDPSWEB/edps/EDPS?lang=en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Garante europeo della protezione dei dati (GEPD)</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://edpb.europa.eu/edpb_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Comitato europeo per la protezione dei dati</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://epso.europa.eu/en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Ufficio europeo di selezione del personale</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://op.europa.eu/en/home" class="ecl-link ecl-link--standalone ecl-site-footer__link">Ufficio delle pubblicazioni dell&#39;Unione europea</a></li>
-            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/institutions-and-bodies-profiles_en?f%5B0%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_DEC&f%5B1%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_EXEC&f%5B2%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/EU_JU" class="ecl-link ecl-link--standalone ecl-site-footer__link">Agenzie</a></li> </ul> </div> </div> </div>
+            <li class="ecl-site-footer__list-item"><a href="https://www.europarl.europa.eu/portal/" class="ecl-link ecl-link--standalone ecl-site-footer__link">European Parliament</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.consilium.europa.eu/en/european-council/" class="ecl-link ecl-link--standalone ecl-site-footer__link">European Council</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.consilium.europa.eu/en/home/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Council of the European Union</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://commission.europa.eu/index_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">European Commission</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://curia.europa.eu/jcms/jcms/j_6/en/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Court of Justice of the European Union (CJEU)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.ecb.europa.eu/home/html/index.en.html" class="ecl-link ecl-link--standalone ecl-site-footer__link">European Central Bank (ECB)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.eca.europa.eu/en" class="ecl-link ecl-link--standalone ecl-site-footer__link">European Court of Auditors</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://eeas.europa.eu/headquarters/headquarters-homepage_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">European External Action Service (EEAS)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.eesc.europa.eu/?i=portal.en.home" class="ecl-link ecl-link--standalone ecl-site-footer__link">European Economic and Social Committee</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://cor.europa.eu/en/" class="ecl-link ecl-link--standalone ecl-site-footer__link">European Committee of Regions (CoR)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.eib.org/en/index.htm" class="ecl-link ecl-link--standalone ecl-site-footer__link">European Investment Bank</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.ombudsman.europa.eu/en/home" class="ecl-link ecl-link--standalone ecl-site-footer__link">European Ombudsman</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://secure.edps.europa.eu/EDPSWEB/edps/EDPS?lang=en" class="ecl-link ecl-link--standalone ecl-site-footer__link">European Data Protection Supervisor (EDPS)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://edpb.europa.eu/edpb_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">European Data Protection Board</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://epso.europa.eu/en" class="ecl-link ecl-link--standalone ecl-site-footer__link">European Personnel Selection Office</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://op.europa.eu/en/home" class="ecl-link ecl-link--standalone ecl-site-footer__link">Publications Office of the European Union</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/institutions-and-bodies-profiles_en?f%5B0%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_DEC&amp;f%5B1%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_EXEC&amp;f%5B2%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/EU_JU" class="ecl-link ecl-link--standalone ecl-site-footer__link">Agencies</a></li> </ul> </div> </div> </div>
 
 	
 	
-		<a href="#" aria-label="Inizio pagina" class="btn btn-xs btn-primary EurlexTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+		<a href="#" aria-label="Back to top" class="btn btn-xs btn-primary EurlexTop" style="right: 0px;"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
 
 		
 		<div class="panel-footer text-center switchToDesktop">
@@ -3865,9 +3891,8 @@
 
 
 
-<a href="#"    class="OP-Nlex"  onclick="createCookie(&#039;desktopModeOn&#039;,&#039;false&#039;,&#039;30&#039;);window.location.reload(true);"          aria-label="">
-	Passa a versione mobile&nbsp;<i
-							class="fa fa-mobile" aria-hidden="true"></i>
+<a href="#" class="OP-Nlex" onclick="createCookie('desktopModeOn','false','30');window.location.reload(true);" aria-label="">
+	Switch to mobile&nbsp;<i class="fa fa-mobile" aria-hidden="true"></i>
 					</a>
 
 				</li>
@@ -3906,9 +3931,8 @@
 
 
 
-<a href="#"    class="ecl-link ecl-link--standalone ecl-site-footer__link"  onclick="createCookie(&#039;desktopModeOn&#039;,&#039;true&#039;,&#039;30&#039;);window.location.reload(true);"          aria-label="">
-	Passa a versione desktop&nbsp;<i
-							class="fa fa-desktop" aria-hidden="true"></i>
+<a href="#" class="ecl-link ecl-link--standalone ecl-site-footer__link" onclick="createCookie('desktopModeOn','true','30');window.location.reload(true);" aria-label="">
+	Switch to desktop&nbsp;<i class="fa fa-desktop" aria-hidden="true"></i>
 					</a>
 
 	</li>	</ul>	</div>	
@@ -3930,7 +3954,7 @@
     });
 </script>  
  
-        <script  type="text/javascript" src="./../../../js/jquery.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/jquery.js?v=2.18.4"></script>
         
  
         <script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).on("ready",f)})})(jQuery,document)</script>
@@ -3945,16 +3969,13 @@
 
         
  
-        <script type="text/javascript"
-        src="./../../../revamp/components/vendor/moment/min/moment-with-locales.min.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../revamp/components/vendor/moment/min/moment-with-locales.min.js?v=2.18.4"></script>
         
-        <script type="text/javascript"
-        src="./../../../revamp/components/vendor/bootstrap/dist/js/bootstrap.min.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../revamp/components/vendor/bootstrap/dist/js/bootstrap.min.js?v=2.18.4"></script>
         
  
  
-        <script type="text/javascript"
-        src="./../../../revamp/components/vendor/bootstrap-3-typeahead/js/bootstrap3-typeahead_customized.min.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../revamp/components/vendor/bootstrap-3-typeahead/js/bootstrap3-typeahead_customized.min.js?v=2.18.4"></script>
         
         <script type="text/javascript" src="./../../../revamp/js/ie10-viewport-bug-workaround.js?v=2.18.4"></script>
         <script type="text/javascript" src="./../../../revamp/js/metisMenu.min.js?v=2.18.4"></script>
@@ -3966,20 +3987,16 @@
         <script type="text/javascript" src="./../../../revamp/js/eurlex.js?v=2.18.4"></script>
         
  
-       <script type="text/javascript"
-               src="./../../../js/compatibility-table.js?v=2.18.4"></script>
+       <script type="text/javascript" src="./../../../js/compatibility-table.js?v=2.18.4"></script>
 
 
 
         
-        <script type="text/javascript"
-        src="./../../../revamp/components/vendor/bootstrap/js/transition.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../revamp/components/vendor/bootstrap/js/transition.js?v=2.18.4"></script>
         
-        <script type="text/javascript"
-        src="./../../../revamp/components/vendor/bootstrap/js/collapse.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../revamp/components/vendor/bootstrap/js/collapse.js?v=2.18.4"></script>
         
-        <script type="text/javascript"
-        src="./../../../revamp/components/vendor/gasparesganga-jquery-loading-overlay/src/loadingoverlay.min.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../revamp/components/vendor/gasparesganga-jquery-loading-overlay/src/loadingoverlay.min.js?v=2.18.4"></script>
         
         <script type="text/javascript" src="./../../../js/popupWidgetTitle.js?v=2.18.4"></script>
         
@@ -3992,7 +4009,7 @@
  
         <script type="text/javascript" src="./../../../js/piwik_functionality.js?v=2.18.4"></script>
        
-        <script  src="https://webtools.europa.eu/load.js?globan=1110" type="text/javascript"></script>
+        <script src="https://webtools.europa.eu/load.js?globan=1110" type="text/javascript"></script>
         
         <script type="text/javascript" src="./../../../js/cookieConsentKitUtils.js?v=2.18.4"></script>
 
@@ -4017,4 +4034,5 @@
 
         
  
- </body> </html>
+  
+<script type="text/javascript" src="https://webtools.europa.eu/js/webtools.cck.js?t=cdb5c65d"></script><script type="text/javascript" src="https://webtools.europa.eu/js/webtools.sbkm.js?t=cdb5c65d"></script></body></html>

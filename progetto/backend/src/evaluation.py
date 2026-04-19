@@ -14,6 +14,9 @@ from parsers.parser3 import EurLexParser
 import asyncio
 import markdown2
 import re
+import mistune
+from bs4 import BeautifulSoup
+from parsers.base_parser import BaseParser
 
 class Evaluator:
     """Classe per valutare la qualità del parsing."""
@@ -104,8 +107,9 @@ class Evaluator:
         #TODO: capire se va messa qui o in server
 
         # Pulisci il testo Markdown prima della valutazione
-        cleaned_extracted_text = clean_markdown(extracted_text)
-
+        cleaned_extracted_text = BaseParser.remove_markdown(extracted_text)
+        print("=============testo dopo la pulizia da markdown:===============\n", cleaned_extracted_text[:500])
+        print("=============gold text:===============\n", gold_text[:500])
         extracted_tokens = self.tokenize(cleaned_extracted_text)
         gold_tokens = self.tokenize(gold_text)
         precision = self.calculate_precision(extracted_tokens, gold_tokens)
@@ -184,14 +188,11 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
             with open(gold_file_path, 'r', encoding='utf-8') as f:
                 gold_text = f.read()
             
-            #print("=============testo prima della pulizia markdown:===============\n", extracted_text[:2000])
+        
+            
            
-            # Pulizia del testo Markdown
-           # extracted_text = clean_markdown(extracted_text)
             
-            print("=============testo dopo la pulizia markdown:===============\n", extracted_text[:])
-            
-            print("=============gold text:===============\n", gold_text[:2000])
+           
             
             # Calcola le metriche
             token_eval_result = evaluator.token_level_eval(extracted_text, gold_text)
@@ -203,21 +204,10 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
     return result
 
 
-def clean_markdown(text: str) -> str:
-    """
-    Pulisce il testo Markdown convertendolo in testo semplice.
-    Parametri:
-        text (str): Testo in formato Markdown.
-    Ritorna:
-        str: Testo convertito in testo semplice.
-    """
-    #TODO: non sono sicuro che sia la migliro libreria per fare cio
-    # Converte Markdown in HTML
-    html_text = markdown2.markdown(text)
-    # Rimuove i tag HTML
-    print("=============testo dopo la conversione markdown->html:===============\n", html_text[:2000])  
-    plain_text = re.sub(r'<[^>]+>', '', html_text)
-    return plain_text.strip()
+
+
+
+
 
 
 def generate_evaluation_report(results: Dict[str, Dict]) -> str:

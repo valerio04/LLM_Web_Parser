@@ -1,40 +1,100 @@
 import asyncio
-from urllib.parse import urlparse
-from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, CacheMode
+import re
+import html
+from typing import Any, Dict
+from crawl4ai import CrawlerRunConfig, CacheMode, CrawlResult
 from .base_parser import BaseParser
 
-# Questo parser si riferisce al dominio: https://eur-lex.europa.eu
-
-
-#TODO: aggiungere golden text piu variegati per testare meglio il parser
 class EurLexParser(BaseParser):
     def __init__(self):
         super().__init__("eur-lex.europa.eu")
-
-    def create_crawler_config(self):
+        
+        # Pattern di pulizia
+        self.re_gu_headers = re.compile(r'(?mi)^(?:L\s+\d+/\d+\s*$|C\s+\d+/\d+\s*$|[A-Z]{2}\s*$)')
+        self.re_ui_noise = re.compile(r'(?mi)^\s*\[(?:Top|Inizio pagina|.*?\*)\](?:\(.*?\))?\s*$')
+        self.re_banners = re.compile(r'(?mi)^.*(?:cookies|official website of the European Union|sito ufficiale dell\'Unione).*$')
+        self.re_ieni_nav = re.compile(r'(?ms)\n?(?:Below,\s+you\s+will\s+find|Qui\s+di\s+seguito\s+sono\s+disponibili):.*$')
+        self.re_img = re.compile(r'!\[[^\]]*\]\([^)]*\)')
+        self.re_start_noise = re.compile(r'(?s)^EUR-Lex\s*-\s*.*?\n.*?\n')
+        self.re_barre = re.compile(r'\|') 
+        
+        
+    def create_crawler_config(self) -> CrawlerRunConfig:
         return CrawlerRunConfig(
-            excluded_tags=['nav', 'footer', 'header', 'aside'],
-            word_count_threshold=10,
+            excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'noscript', 'form', 'iframe'],
+            excluded_selector=(
+                "header#op-header, #op-header-pdf, .ecl-site-footer, .ecl-site-header__banner, "
+                ".sidebar-offcanvas, .NavSearch, .EurlexSearch, .Sidebar, .SidebarTools, "
+                ".PubFormat, .PubFormats, .Logo, .Emission, "
+                ".wt-banner, .modal, .cookie-consent, #iubenda-cs-banner"
+            ),
+            word_count_threshold=0,
             cache_mode=CacheMode.BYPASS,
-            exclude_external_images=True
+            exclude_external_images=True,
+            delay_before_return_html=3.5 
         )
     
-    def format_result(self, url, result):
-        """Formats the final result. Can be overridden by subclasses."""
+    def extract_title(self, result: CrawlResult) -> str:
+        if not result.html:
+            return "EUR_Lex_Senza_Titolo"
+            
+        match = re.search(r'<title>(.*?)</title>', result.html, re.IGNORECASE)
+        if match:
+            title = html.unescape(re.sub(r'<[^>]+>', '', match.group(1)).strip())
+            return title.replace(" - EUR-Lex", "")
+                
+        if result.metadata:
+            return result.metadata.get("title", "EUR_Lex_Senza_Titolo")
+        return "EUR_Lex_Senza_Titolo"
+
+    def _deduplicate(self, text: str) -> str:
+        paragraphs = re.split(r'\n{2,}', text)
+        clean_paras = []
+        seen = set()
+
+        for p in paragraphs:
+            norm = " ".join(p.lower().split())
+            if norm and norm not in seen:
+                clean_paras.append(p)
+                seen.add(norm)
+                if len(seen) > 10: 
+                    seen.clear() 
+
+        return '\n\n'.join(clean_paras)
+
+    def parse_markdown(self, result: CrawlResult) -> str:
+        if hasattr(result, 'markdown_v2') and result.markdown_v2:
+            text = result.markdown_v2.raw_markdown
+        else:
+            text = result.markdown or ""
+            
+        if not text: 
+            return ""
+        
+        text = self.re_gu_headers.sub('', text)
+        text = self.re_ui_noise.sub('', text)
+        text = self.re_banners.sub('', text)
+        text = self.re_img.sub('', text)
+        text = self.re_start_noise.sub('', text)
+        text = self.re_ieni_nav.sub('', text)
+        text = self.re_barre.sub(' ', text) 
+        
+        text = self._deduplicate(text)
+        text = re.sub(r'\n{3,}', '\n\n', text)
+
+        return text.strip()
+        
+    def format_result(self, url: str, result: CrawlResult) -> Dict[str, Any]:
         return {
             "url": url,
             "domain": self.domain,
             "title": self.extract_title(result),
-            "html_text": self.parse_html(result),
-            "parsed_text": self.parse_markdown(result)[:500]
+            "html_text": result.html or "",
+            "parsed_text": self.parse_markdown(result)
         }
 
-
-#per usare questa devi togliere il punto davanti base_parsr
-#per testare se il parsing restituisce i campi corretti:
 if __name__ == "__main__":
-    url = input("Inserisci l'URL della pagina di eur-lex.europa.eu: ")
+    url = input("Inserisci URL EUR-Lex: ")
     parser = EurLexParser()
-    result = asyncio.run(parser.run(url))
-    print("--- JSON OUTPUT ---")
-    print(result)
+    res = asyncio.run(parser.run(url))
+    print(f"--- Salvato: {res['title']} ---")

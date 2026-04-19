@@ -2,6 +2,8 @@ import asyncio
 from urllib.parse import urlparse
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
 import re
+import mistune
+from bs4 import BeautifulSoup
 # Cose da modificare in ogni parser specifico:
 
 # 1. create_crawler_config()
@@ -60,41 +62,22 @@ class BaseParser:
             headless=True,
             verbose=True
         )
-    def extract_unwanted_content(self, html: str, tags: list, text: str) -> str:
-        """Estrae il contenuto testuale dai tag indesiderati.
-        
-        Args:
-            html: HTML da cui estrarre
-            tags: Lista di tag da cercare (es: ['figcaption', 'figure', 'caption'])
-        
-        Returns:
-            Lista di stringhe trovate nei tag specificati (senza i tag HTML)
-        """
-        unwanted_content = []
-        
-        for tag in tags:
-            # Pattern regex per trovare <tag>...</tag>
-            pattern = rf'<{tag}[^>]*>(.*?)</{tag}>'
-            matches = re.findall(pattern, html, re.IGNORECASE | re.DOTALL)
-            
-            for match in matches:
-                # Rimuove tag HTML dal contenuto
-                clean_text = re.sub(r'<[^>]+>', '', match).strip()
-                if clean_text:
-                    unwanted_content.append(clean_text)
-        
-        #rimuovi gli oggetti non volut dal testo markdown
-        
-        
-        
-        # Rimuovi il testo trovato dal markdown
-        for content in unwanted_content:
-            # Escapa i caratteri speciali per regex
-            escaped_content = re.escape(content)
-            text = re.sub(escaped_content, '', text, flags=re.IGNORECASE)
-        return text
+    
 
-        
+    def remove_markdown(md: str) -> str:
+        """
+        Rimuove il Markdown da una stringa, restituendo solo il testo pulito.
+        Usa la libreria mistune per convertire il Markdown in HTML, poi BeautifulSoup per estrarre solo il testo.
+        """
+        html = mistune.html(md)
+        soup = BeautifulSoup(html, "html.parser")
+        # rimuove i tag lasciando il testo esattamente in-place (nessun separatore aggiunto, mantiene punteggiatura)
+        for tag in soup.find_all(True):
+            tag.unwrap()
+            text = re.sub(r'[ \t]+', ' ', str(soup)) # collassa spazi orizzontali (non \n)
+            text = re.sub(r'\n+', '\n', text) # collassa nuove linee multiple in una sola
+        return text.strip()
+   
 
     def format_result(self, url, result):
         """Formats the final result. Can be overridden by subclasses."""

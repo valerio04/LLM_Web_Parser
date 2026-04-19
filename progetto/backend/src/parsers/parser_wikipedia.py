@@ -29,9 +29,8 @@ class WikipediaParser(BaseParser):
         - Elementi di tabelle e info box
         - Elementi minori (span, abbr, sub)
         """
-        return CrawlerRunConfig(
-            css_selector='.mw-content-ltr.mw-parser-output , .IPA.nopopups.noexcerpt',
-            excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'table', 'infobox', 'toc', 'span', 'abbr', 'sub'],
+        '''css_selector='.mw-content-ltr.mw-parser-output , .IPA.nopopups.noexcerpt',
+            excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'infobox', 'toc', 'span', 'abbr', 'sub', 'figure', 'figcaption'],
             excluded_selector='.hatnote.navigation-not-searchable, .noprint, .mw-references-wrap, .citation, .external.text, .side-box-flex, #References, #Bibliography, #External_links, .mw-file-description',
             word_count_threshold=0,
             cache_mode=CacheMode.BYPASS,
@@ -39,7 +38,15 @@ class WikipediaParser(BaseParser):
             remove_forms=True,
             remove_consent_popups=True,
             exclude_all_images=True,
-            exclude_external_links=True
+            exclude_external_links=True'''
+        return CrawlerRunConfig(
+           
+            excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'noscript', 'figure', 'img'],
+            # RIMOSSI .reference e .noprint da qui!
+            excluded_selector=".infobox, .metadata, .vevent, .toc, .vertical-navbox, .hatnote, .mw-editsection, .sidebar, .ambox, .navbox, .shortdescription",
+            word_count_threshold=0,  # IMPERATIVO metterlo a 0
+            cache_mode=CacheMode.BYPASS,
+            exclude_external_images=True
         )
 
     def extract_title(self, result) -> str:
@@ -100,9 +107,9 @@ class WikipediaParser(BaseParser):
         # 0. RIMUOVE CONTENUTO DA TAG INDESIDERATI (figcaption, caption, ecc.)
         # Estrai dal cleaned_html il contenuto di tag che non vuoi nel markdown
         html = self.parse_html(result)
-        if html:
+        #if html:
             # Cerca contenuto da <figcaption>, <caption>, <aside> nel HTML
-            text = self.extract_unwanted_content(html, ['figcaption'], text) #, 'caption', 'aside', 'figure'
+        #    text = self.extract_unwanted_content(html, ['figcaption'], text) #, 'caption', 'aside', 'figure'
             
         # 1. Rimuove "Jump to content" e intestazioni standard
         text = re.sub(r'\[Jump to content\]\([^)]*\)', '', text)
@@ -126,6 +133,9 @@ class WikipediaParser(BaseParser):
         # 6. Corregge punti/virgole incollati ai link
         text = re.sub(r'\.\[', '. [', text)
         text = re.sub(r',\[', ', [', text)
+
+        # 6.1 
+        text = re.sub(r'\|', '', text)
 
         # 7. Rimuove il template "v t e"
         text = re.sub(r'\bv\s*t\s*e\b', '', text)
@@ -157,7 +167,7 @@ class WikipediaParser(BaseParser):
 if __name__ == "__main__":
     """Test script per verificare il parser Wikipedia."""
     #url = input("Inserisci l'URL della pagina Wikipedia: ")
-    url="https://en.wikipedia.org/wiki/BabelNet"
+    url="https://en.wikipedia.org/wiki/List_of_largest_empires"
     parser = WikipediaParser()
     result = asyncio.run(parser.run(url))
 

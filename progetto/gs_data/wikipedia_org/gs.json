@@ -13,24 +13,24 @@
     "html_file": "wikipedia_org/texts/gs_2_html.txt",
     "gold_file": "wikipedia_org/texts/gs_2_gold.txt"  
   },
-    {
-    "url": "https://en.wikipedia.org/wiki/",
+  {
+    "url": "https://en.wikipedia.org/wiki/List_of_largest_empires",
     "domain": "wikipedia.org",
-    "title": "", 
+    "title": "List of largest empires",
     "html_file": "wikipedia_org/texts/gs_3_html.txt",
     "gold_file": "wikipedia_org/texts/gs_3_gold.txt"
   },
   {
-    "url": "https://en.wikipedia.org/wiki/",
+    "url": "https://en.wikipedia.org/wiki/Python_(programming_language)",
     "domain": "wikipedia.org",
-    "title": "",
+    "title": "Python (programming language)",
     "html_file": "wikipedia_org/texts/gs_4_html.txt",
     "gold_file": "wikipedia_org/texts/gs_4_gold.txt"
   },
   {
-    "url": "https://en.wikipedia.org/wiki/",
+    "url": "https://en.wikipedia.org/wiki/Apollo_11",
     "domain": "wikipedia.org",
-    "title": "",
+    "title": "Apollo 11",
     "html_file": "wikipedia_org/texts/gs_5_html.txt",
     "gold_file": "wikipedia_org/texts/gs_5_gold.txt"
   }
