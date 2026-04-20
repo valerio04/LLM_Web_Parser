@@ -2,10 +2,9 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY requirements.tx
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip install -U crawl4ai
 RUN crawl4ai-setup
 
 COPY src/ ./src

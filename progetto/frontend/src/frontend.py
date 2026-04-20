@@ -179,4 +179,5 @@ def call_backend(endpoint: str, params: Optional[Dict[str, str]] = None, json_pa
 if __name__ == "__main__":
     import uvicorn
     # Assicurati che il nome del file Python corrisponda a "frontend" in "frontend:app"
-    uvicorn.run("frontend:app", host="0.0.0.0", port=8004, reload=True)
+    # TODO: ricontrolla
+    uvicorn.run("src.frontend:app", host="0.0.0.0", port=8004)
