@@ -4,11 +4,11 @@ from typing import Dict, Optional, List, Any
 from pathlib import Path
 import json
 
-from evaluation import *
-from parsers.parser1 import IlPostParser
-from parsers.parser2 import StatMuseParser
-from parsers.parser3 import EurLexParser
-from parsers.parser_wikipedia import WikipediaParser
+from src.evaluation import *
+from src.parsers.parser1 import IlPostParser
+from src.parsers.parser2 import StatMuseParser
+from src.parsers.parser3 import EurLexParser
+from src.parsers.parser_wikipedia import WikipediaParser
 
 app = FastAPI(title="Parser API")
 
@@ -101,8 +101,16 @@ async def get_domains() -> DomainsResponse:
     """
     Restituisce la lista dei domini assegnati con i link associati.
     """
+    """
+    IN LOCALE
+
     script_dir = Path(__file__).parent.resolve()
     base_dir = script_dir.parent.parent
+    json_path = base_dir / "domains.json"
+    """
+    
+    script_dir = Path(__file__).parent.resolve()
+    base_dir = script_dir.parent
     json_path = base_dir / "domains.json"
 
     if not json_path.exists():
@@ -119,10 +127,16 @@ async def get_gold_standard(url: str) -> GoldStandardResponse:
     """
     Restituisce il gold standard per un documento.
     """
+    """
+    IN LOCALE
+    
+    script_dir = Path(__file__).parent.resolve()
+    base_dir = script_dir.parent.parent
+    """
 
     # Determina il file JSON da cui caricare il gold standard in base al dominio dell'URL
     script_dir = Path(__file__).parent.resolve()
-    base_dir = script_dir.parent.parent  
+    base_dir = script_dir.parent  
     """if "wikipedia.org" in url:
         json_path = base_dir / "gs_data" / "wikipedia_org"/ "gs.json"
     elif "ilpost.it" in url:
@@ -168,9 +182,16 @@ async def get_full_gold_standard(domain: str) -> FullGoldStandardResponse:
     """
     Restituisce tutto il GS del dominio.
     """
-    # Seleziona il parser in base al dominio
+    """
+    IN LOCALE
+    
     script_dir = Path(__file__).parent.resolve()
     base_dir = script_dir.parent.parent
+    """
+
+    # Determina il file JSON da cui caricare il gold standard in base al dominio dell'URL
+    script_dir = Path(__file__).parent.resolve()
+    base_dir = script_dir.parent  
     """if domain == "wikipedia.org":
         json_path = base_dir / "gs_data" / "wikipedia_org"/ "gs.json"
     elif domain == "ilpost.it":
@@ -235,9 +256,18 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
     """
     Restituisce l'evaluation aggregata su tutto il GS.
     """
+    """
+    IN LOCALE
+    
     script_dir = Path(__file__).parent.resolve()
-    base_dir = script_dir.parent.parent 
-    """if domain == "wikipedia.org":
+    base_dir = script_dir.parent.parent
+    """
+
+    # Determina il file JSON da cui caricare il gold standard in base al dominio dell'URL
+    script_dir = Path(__file__).parent.resolve()
+    base_dir = script_dir.parent  
+    """ 
+    if domain == "wikipedia.org":
         json_path = base_dir / "gs_data" / "wikipedia_org"/ "gs.json"
     elif domain == "ilpost.it":
         json_path = base_dir / "gs_data" / "ilpost_it" / "gs.json"

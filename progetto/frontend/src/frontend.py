@@ -17,7 +17,7 @@ app = FastAPI()
 _templates_dir = Path(__file__).parent.parent / "templates"
 templates = Jinja2Templates(directory=str(_templates_dir)) 
 
-API_BASE_URL = "http://localhost:8003"
+API_BASE_URL = "http://backend:8003"
 
 def find_path_parser(url: str, base_dir: Path) -> Optional[Any]:
     """
