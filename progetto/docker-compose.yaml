@@ -1,19 +1,22 @@
-version: '3.8'
-
 services: 
   backend:
     build: ./backend
+    container_name: esonero_backend
     ports:
       - "8003:8003"
     volumes:
-      - ./gs_data:/app/gs_data
-      - ./domain.json:/app/domains.json
+      - ./gs_data:/gs_data
+      #- ./domains.json:/app/domains.json
+      - ./domains.json:/domains.json
 
-    frontend:
-      build: ./frontend
-      ports:
-        - "8004:8004"
-      depends_on:
-        - backend
-      environment:
-        - BACKEND_URL=http://backend:8003
+  frontend:
+    build: ./frontend
+    container_name: esonero_frontend
+    ports:
+      - "8004:8004"
+    volumes:
+      - ./gs_data:/gs_data
+    depends_on:
+      - backend
+    environment:
+      - BACKEND_URL=http://backend:8003

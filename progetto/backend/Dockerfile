@@ -7,7 +7,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 RUN crawl4ai-setup
 
-COPY src/ ./src
+COPY . .
 
 EXPOSE 8003
 

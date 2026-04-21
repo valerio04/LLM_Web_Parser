@@ -17,7 +17,7 @@ app = FastAPI()
 _templates_dir = Path(__file__).parent.parent / "templates"
 templates = Jinja2Templates(directory=str(_templates_dir)) 
 
-API_BASE_URL = "http://localhost:8003"
+API_BASE_URL = "http://backend:8003"
 
 def find_path_parser(url: str, base_dir: Path) -> Optional[Any]:
     """
@@ -169,9 +169,9 @@ def fetch_gs_urls() -> List[str]:
 def call_backend(endpoint: str, params: Optional[Dict[str, str]] = None, json_payload: Optional[Dict] = None) -> Dict:
     url = f"{API_BASE_URL}{endpoint}"
     if json_payload is None:
-        response = requests.get(url, params=params, timeout=20)
+        response = requests.get(url, params=params, timeout=120)
     else:
-        response = requests.post(url, json=json_payload, timeout=20)
+        response = requests.post(url, json=json_payload, timeout=120)
     
     response.raise_for_status()
     return response.json()
