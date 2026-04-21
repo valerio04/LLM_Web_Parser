@@ -92,7 +92,7 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
                 try:
                     metrics_data = call_backend(
                         "/evaluate", 
-                        json_payload={"parsed_text": parsed_text, "gold_standard": gold_text}
+                        json_payload={"parsed_text": parsed_text, "gold_text": gold_text}
                     )
                 except requests.RequestException as e:
                     print(f"[ERROR] Errore durante l'evaluation: {e}")

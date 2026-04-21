@@ -47,7 +47,7 @@ class FullGoldStandardResponse(BaseModel):
 
 class EvaluateRequest(BaseModel):
     parsed_text: str
-    gold_standard: str
+    gold_text: str
 
 class EvaluateResponse(BaseModel):
     token_level_eval: Dict[str, float]
@@ -237,7 +237,7 @@ async def get_gold_standard(url: str) -> GoldStandardResponse:
     raise HTTPException(status_code=404, detail="l'url non è nel GS")
 
 
-@app.get("/full_gold_standard/{domain}")
+@app.get("/full_gold_standard")
 async def get_full_gold_standard(domain: str) -> FullGoldStandardResponse:
     """
     Restituisce tutto il GS del dominio.
@@ -297,7 +297,7 @@ async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
     # Pulisci il testo Markdown prima della valutazione
     #cleaned_parsed_text = clean_markdown(request.parsed_text)
     
-    token_level_eval = evaluator.token_level_eval(request.parsed_text, request.gold_standard)
+    token_level_eval = evaluator.token_level_eval(request.parsed_text, request.gold_text)
     result.token_level_eval= token_level_eval
     return result
 

@@ -287,6 +287,20 @@ Obiettivo 2: Gold Standard Esempi di GS
 
 Navigli, Fedele - Laboratorio di Ingegneria Informatica
 
+Obiettivo 2: Gold Standard Trovare pagine interessanti per domini aggiuntivi
+
+- **●** Per trovare pagine interessanti per uno specifico dominio, si possonoseguire gli _esempi_ presenti nell’_elenco completo dei domini_ condiviso
+_su_ Classroom
+
+- **●** Per trovare _altre tipologie_ di _pagine_ interessanti si può usare_l’operatore_ _“site: <sito web>”_ di Google” per _limitare_ la _ricerca_ sul
+browser **ad un** sito specifico
+
+- **●** L’idea è cercare contenuti utili e informativi, adatti ad un LLM che cercasul Web
+- **●** _Alcuni Esempi_ con Wikipedia in Italiano (_it.wikipedia.org_):**○** _“_città italiane _site:__it.wikipedia.org_”
+**○** “energia nucleare _site:__it.wikipedia.org_”**○** “Dante Alighieri _site:__it.wikipedia.org_”
+
+Navigli, Fedele - Laboratorio di Ingegneria Informatica
+
 ### Obiettivo 3: Valutazione Parser
 
 Valutare Qualità Parsing
@@ -357,6 +371,8 @@ Obiettivo 4: API REST Overview API REST
 - **●** Implementare con _FastAPI_ un _WEB Server_ per accedere ai seguenti endpoint:
 **○** _GET /parse_: esegue il parser per un documento di un dominio
 
+**○** _POST /parse_: esegue il parser per un documento di un dominio da html diretto
+
 **○** _GET /domains_: restituisce la lista dei domini assegnati
 
 **○** _GET /gold_standard_: restituisce il gold standard per un documento
@@ -389,6 +405,45 @@ esegue il parsing _//_ **OUTPUT - JSON**_{_
 **○** Se il dominio non è supportato _formato MARKDOWN"_
 
 **○** Se l'URL è irraggiungibile _}_
+
+Navigli, Fedele - Laboratorio di Ingegneria Informatica
+
+Obiettivo 4: API REST POST /parse
+
+- **●** Seleziona automaticamente il parsercorretto in base al dominio dell'URL ed
+esegue il _parsing_ sull’_html_text_ dato in _//_ **OUTPUT - JSON**_{_input _"url": "[https://...",_](https://...",_)
+
+- domain": "esempio.it",
+- **●** _Input__:_ _{"url": str, "html_text": str}_ "title": "Titolo estratto dalla pagina web",
+- html_text": "Html estratto dalla
+- **●** _Output_: oggetto JSON nel formato indicato _pagina web, input del parser",_
+- parsed_text": "Testo pulito, output del parser di riferimento, in
+- **●** _Errori__:_ formato MARKDOWN"
+**○** Se il dominio non è supportato _}_
+
+Navigli, Fedele - Laboratorio di Ingegneria Informatica
+
+### Obiettivo 4: API REST
+
+Come gestire parsing di HTML diretto
+
+```
+SAMPLE_HTML = """<html><body><h1>Minerva</h1><p>Dea romana della sapienza. Corrisponde alla greca
+Atena.</p></body></html>"""
+async def parse_html():
+browser_config = BrowserConfig(headless=True)
+run_config = CrawlerRunConfig(cache_mode=CacheMode.BYPASS)
+async with AsyncWebCrawler(config=browser_config) as crawler:
+# prefisso "raw:" per indicare che voglio parsare direttamente una stringa HTML
+result = await crawler.arun(
+url=f"raw:{SAMPLE_HTML}",
+config=run_config,
+)
+print(result.markdown)
+```
+
+- **●** Utilizzando il _prefisso "raw:"_ è possibile parsare direttamente una _stringa HTML_,invece di scaricare da un URL.
+Potete comunque usare l’URL per selezionare il parse appropriato.
 
 Navigli, Fedele - Laboratorio di Ingegneria Informatica
 
@@ -468,6 +523,29 @@ _recall_ e _f1_ è obbligatorio
 
 Navigli, Fedele - Laboratorio di Ingegneria Informatica
 
+Obiettivo 4: API REST
+
+Come gestire confronto tra output in Markdown e Gold Standard
+
+- _●_ Pur non coprendo tutti i casi possibili, una possibile soluzione per **rimuovere** il **Markdown** nellavalutazione con la _token_level_eval_ è la seguente:
+```
+def remove_markdown(md: str) -> str:
+"""
+Rimuove il Markdown da una stringa, restituendo solo il testo pulito.
+Usa la libreria mistune per convertire il Markdown in HTML, poi BeautifulSoup per estrarre solo il testo.
+"""
+html = mistune.html(md)
+soup = BeautifulSoup(html, "html.parser")
+# rimuove i tag lasciando il testo esattamente in-place (nessun separatore aggiunto, mantiene punteggiatura)
+for tag in soup.find_all(True):
+tag.unwrap()
+text = re.sub(r'[ \t]+', ' ', str(soup)) # collassa spazi orizzontali (non \n)
+text = re.sub(r'\n+', '\n', text) # collassa nuove linee multiple in una sola
+return text.strip()
+```
+
+Navigli, Fedele - Laboratorio di Ingegneria Informatica
+
 Obiettivo 4: API REST GET /full_gs_eval
 
 - **●** Restituisce la valutazione complessiva del Gold _//_ _OUTPUT - JSON_
@@ -515,11 +593,17 @@ Navigli, Fedele - Laboratorio di Ingegneria Informatica
 
 Obiettivo 5: Web UI e Containerizzazione Containerizzazione con Docker
 
-- **●** _Containerizzazione_ del sistema con _Docker_ (vedi lezione del 9 aprile)
+- **●** Containerizzazione _del sistema con_ Docker
+_Il sistema deve usare_ 2 Docker _(_Backend & Frontend)
+
 - **●** Requisiti
 _○_ **Backend** containerizzato (FastAPI) sulla porta _8003_
 
+Un **unico docker** per tutti i parser del server.
+
 **○** _Frontend_ containerizzato (HTML + Jinja2) sulla porta _8004_
+
+Un **unico docker** per la UI
 
 **○** _docker-compose.yaml_ per avviare tutto con un solo comando
 
@@ -553,7 +637,7 @@ progetto/
 - **●** _report.pdf_: max 2 pagine, redatto in **│ └──** _frontend.py_LaTeX **│ └──** _templates/_
 **└──** report.pdf
 
-**33** Navigli, Fedele - Laboratorio di Ingegneria Informatica
+**37** Navigli, Fedele - Laboratorio di Ingegneria Informatica
 
 Test automatico
 
@@ -567,7 +651,7 @@ per eseguire il test automatico (non modificare la porta nello script di test)
 - **●** Il test deve funzionare subito dopo il comando: _docker compose up --build_Non ci devono essere passaggi intermedi tra questa inizializzazione automatica e
 l’esecuzione dello script di test
 
-**34** Navigli, Fedele - Laboratorio di Ingegneria Informatica
+**38** Navigli, Fedele - Laboratorio di Ingegneria Informatica
 
 Test automatico
 
@@ -577,14 +661,14 @@ Test del backend
 - **“ALL TESTS PASS!”**Indispensabile prima di effettuare la consegna
 - **●** _Non_ dovete _modificare_ lo _script_ di _test_, dato che noi lo useremo esattamente cosìcom’è per valutare i progetti
 - **●** Se pensate di aver _trovato_ un _errore_ nello script di test _comunicarlo_ tramite_Google Classroom_
-**35** Navigli, Fedele - Laboratorio di Ingegneria Informatica
+**39** Navigli, Fedele - Laboratorio di Ingegneria Informatica
 
 Test automatico Test del frontend
 
 - **●** Ricordate di _testare_ voi stessi anche il _frontend_ del vostro _progetto_, dopo avereseguito i test automatici con successo e prima di consegnare
 - **●** Il frontend _non viene valutato automaticamente_ dallo script di test
 - **●** _Non_ dovete _consegnare_ lo _script di test_ insieme al vostro progetto(è uguale per tutti)
-**36** Navigli, Fedele - Laboratorio di Ingegneria Informatica
+**40** Navigli, Fedele - Laboratorio di Ingegneria Informatica
 
 Test automatico
 
@@ -599,11 +683,11 @@ assicurarvi che funzioni anche sul nostro computer che useremo per le correzioni
 controllare che questo comando funzioni correttamente anche su **Ubuntu** prima diconsegnare (usate un **macchina virutale**, vedere slide successive)
 
 - **●** Ricordate di eseguire anche il test automatico e di testare il frontend dopo ognuno diquesti test
-**37** Navigli, Fedele - Laboratorio di Ingegneria Informatica
+**41** Navigli, Fedele - Laboratorio di Ingegneria Informatica
 
 # Consegna
 
-Navigli, Fedele - Laboratorio di Ingegneria Informatica **38**
+Navigli, Fedele - Laboratorio di Ingegneria Informatica **42**
 
 Consegna
 
@@ -614,7 +698,7 @@ matricola1_matricola2_matricola3_lab_esonero_1.zip
 
 - **●** La _struttura_ delle _directory_ all’interno del file zip deve essere in linea con quella_specificata_ nelle _slide precedenti_
 - **●** Potete usare più file, cartelle e sottocartelle se li reputate utili a organizzaremeglio il progetto
-**39** Navigli, Fedele - Laboratorio di Ingegneria Informatica
+**43** Navigli, Fedele - Laboratorio di Ingegneria Informatica
 
 Consegna
 
@@ -627,7 +711,7 @@ eseguito da terminale nella directory del file**docker-compose.yaml**
 - **●** I due moduli _frontend_ e _backend_ sono separati in cartelle diverse, ognuna con ilsui file _requirements.txt_ e _Dockerfile_, necessari per la costruzione del loro Docker
 container. Nel modulo **frontend** c’è la cartella **templates** per i file HTML necessariper creare l’interfaccia web.
 
-**40** Navigli, Fedele - Laboratorio di Ingegneria Informatica
+**44** Navigli, Fedele - Laboratorio di Ingegneria Informatica
 
 Consegna
 
@@ -642,7 +726,7 @@ il progetto, questo vi garantisce che funzionerà anche nel mio.
 - **●** Navigate da terminale nella _cartella_ del vostro _esonero_ esattamente come laconsegnerete, salvatene anche una copia dato che la dovete consegnare come è
 prima di _eseguire_ i _test_ e non dopo
 
-**41** Navigli, Fedele - Laboratorio di Ingegneria Informatica
+**45** Navigli, Fedele - Laboratorio di Ingegneria Informatica
 
 Consegna
 
@@ -653,7 +737,7 @@ Step da Seguire (2)
 - **●** Eseguire il comando lo script di test che deve funzionare dando in output
 - ALL TESTS PASS”
 - **●** Consegnare la copia della cartella così come era prima di eseguire il testcompressa in un unico file _.zip_
-**42** Navigli, Fedele - Laboratorio di Ingegneria Informatica
+**46** Navigli, Fedele - Laboratorio di Ingegneria Informatica
 
 Consegna
 
@@ -670,17 +754,23 @@ responsabilità di ogni modulo**○** _Valutazione parser:_ Come sono stati valu
 **○** Decommentare _\aclfinalcopy_ eliminando il % davanti a quella riga del file _.tex_ per poter mostrare ilvostro nome e cognome (altrimenti verrà mostrato “anonymous submission”)
 
 - **●** Il progetto va consegnato su _Google Classroom_ (tramite l’apposito form)
-**43** Navigli, Fedele - Laboratorio di Ingegneria Informatica
+**47** Navigli, Fedele - Laboratorio di Ingegneria Informatica
 
 ### Valutazione
 
 - **●** L’esonero conterà metà del progetto
 - **●** Saranno valutati:
-**○** L’effettivo funzionamento del progetto (bloccante: non si passa se il progetto nonfunziona e non passa il test automatico)
+**○** L’effettivo funzionamento del progetto (bloccante: non si passa se il progetto non
 
-**○** L’organizzazione del progetto (cartelle, file, ecc.)**○** La qualità e la pulizia del codice (inclusi i commenti e i type hint)
+funziona e non passa il test automatico)
 
-**○** La modularità del progetto: la corretta suddivisione in moduli**○** La corretta gestione dei casi limiti o di errore
+**○** L’organizzazione del progetto (cartelle, file, ecc.)
+
+**○** La qualità e la pulizia del codice (inclusi i commenti e i type hint)
+
+**○** La modularità del progetto: la corretta suddivisione in moduli
+
+**○** La corretta gestione dei casi limiti o di errore
 
 **○** Il report
 
