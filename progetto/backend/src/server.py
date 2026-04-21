@@ -42,8 +42,7 @@ class GoldStandardResponse(BaseModel):
     gold_text: str
 
 class FullGoldStandardResponse(BaseModel):
-    domain: str
-    gold_standards: List[GoldStandardResponse]
+    gold_standard: List[GoldStandardResponse]
 
 class EvaluateRequest(BaseModel):
     parsed_text: str
@@ -51,9 +50,11 @@ class EvaluateRequest(BaseModel):
 
 class EvaluateResponse(BaseModel):
     token_level_eval: Dict[str, float]
+    x_eval: Dict[str, Any] = {}
 
 class FullGsEvalResponse(BaseModel):
-    aggregated_metrics: Dict[str, float]
+    token_level_eval: Dict[str, float]
+    x_eval: Dict[str, Any] = {}
 
 
 # Endpoint
@@ -266,8 +267,8 @@ async def get_full_gold_standard(domain: str) -> FullGoldStandardResponse:
 
     print("Oggetto JSON caricato:", gold_data)
 
-    result = FullGoldStandardResponse(domain=domain, gold_standards=[])
-
+    
+    gold_standard=[]
     # cerco l'entry corrispondente all'url e restituisco il gold standard
     for entry in gold_data:
         gold_file_path = base_dir / "gs_data" / entry['gold_file']
@@ -281,7 +282,8 @@ async def get_full_gold_standard(domain: str) -> FullGoldStandardResponse:
         with open(html_file_path, 'r', encoding='utf-8') as f:
             html_text = f.read()
 
-        result.gold_standards.append(GoldStandardResponse(url=entry['url'], domain=entry['domain'], title=entry['title'], html_text=html_text, gold_text=gold_text))
+        gold_standard.append(GoldStandardResponse(url=entry['url'], domain=entry['domain'], title=entry['title'], html_text=html_text, gold_text=gold_text))
+    result = FullGoldStandardResponse(gold_standard=gold_standard)
     return result
 
 
@@ -291,14 +293,15 @@ async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
     """
     Dato risultato parsing e gs restituisce le metriche di evaluation.
     """
-    result = EvaluateResponse(token_level_eval={})
-    evaluator = Evaluator()
     
+    evaluator = Evaluator()
+    clean_parsed = BaseParser.remove_markdown(request.parsed_text)# è doppiona , da capire dove metterla
     # Pulisci il testo Markdown prima della valutazione
     #cleaned_parsed_text = clean_markdown(request.parsed_text)
     
-    token_level_eval = evaluator.token_level_eval(request.parsed_text, request.gold_text)
-    result.token_level_eval= token_level_eval
+    token_level_eval = evaluator.token_level_eval(clean_parsed, request.gold_text)
+    
+    result=EvaluateResponse(token_level_eval=token_level_eval, x_eval={})
     return result
 
 
@@ -333,7 +336,7 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
     
     eval_response = await evaluate_gold_standard(gold_data)
 
-    result = FullGsEvalResponse(aggregated_metrics= {})
+    
     precisions = []
     recalls = []
     f1_scores = []
@@ -352,7 +355,8 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
         avg_recall = sum(recalls) / len(recalls)
         avg_f1 = sum(f1_scores) / len(f1_scores)
     
-    result.aggregated_metrics = {"precision": avg_precision, "recall": avg_recall,"f1": avg_f1}
+    
+    result = FullGsEvalResponse(token_level_eval=  {"precision": avg_precision, "recall": avg_recall,"f1": avg_f1}, x_eval={})
     return result
 
 def find_path_parser(url: str,base_dir: Path) -> Optional[Any]:
