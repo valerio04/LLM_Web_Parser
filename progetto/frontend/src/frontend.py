@@ -169,9 +169,9 @@ def fetch_gs_urls() -> List[str]:
 def call_backend(endpoint: str, params: Optional[Dict[str, str]] = None, json_payload: Optional[Dict] = None) -> Dict:
     url = f"{API_BASE_URL}{endpoint}"
     if json_payload is None:
-        response = requests.get(url, params=params, timeout=120)
+        response = requests.get(url, params=params)
     else:
-        response = requests.post(url, json=json_payload, timeout=120)
+        response = requests.post(url, json=json_payload)
     
     response.raise_for_status()
     return response.json()
