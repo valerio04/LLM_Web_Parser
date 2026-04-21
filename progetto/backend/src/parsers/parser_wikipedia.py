@@ -172,7 +172,7 @@ if __name__ == "__main__":
     result = asyncio.run(parser.run(url))
 
   #PULISCE FACENDOLO DIVETARE UN SEMPLICE TESTO PULITO SENZA MARKDOWN O HTML
-    html_text = markdown2.markdown(result.get('parsed_text'))
+    html_text = BaseParser.remove_markdown(result.get('parsed_text'))
     # Rimuove i tag HTML
     print("=============testo dopo la conversione markdown->html:===============\n", html_text[:2000])  
     plain_text = re.sub(r'<[^>]+>', '', html_text)

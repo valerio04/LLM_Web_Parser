@@ -26,8 +26,9 @@ class EurLexParser(BaseParser):
                 "header#op-header, #op-header-pdf, .ecl-site-footer, .ecl-site-header__banner, "
                 ".sidebar-offcanvas, .NavSearch, .EurlexSearch, .Sidebar, .SidebarTools, "
                 ".PubFormat, .PubFormats, .Logo, .Emission, "
-                ".wt-banner, .modal, .cookie-consent, #iubenda-cs-banner"
+                ".wt-banner, .modal, .cookie-consent, #iubenda-cs-banner, .DocumentTitle.pull-left, #PP1Contents, #PP2Contents, #PP3Contents, .hd-ti, .hd-lg, .hd-oj, #PP3, #PP1, #PP2, .lseu-section-relevant-terms"
             ),
+            css_selector=".panel.panel-default.PagePanel, .EurlexContent",
             word_count_threshold=0,
             cache_mode=CacheMode.BYPASS,
             exclude_external_images=True,
@@ -94,7 +95,17 @@ class EurLexParser(BaseParser):
         }
 
 if __name__ == "__main__":
-    url = input("Inserisci URL EUR-Lex: ")
-    parser = EurLexParser()
-    res = asyncio.run(parser.run(url))
-    print(f"--- Salvato: {res['title']} ---")
+    async def main():
+        url = "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A12016M%2FTXT" # Esempio
+        url = "https://eur-lex.europa.eu/content/news/index.html?locale=it"
+        url = "https://eur-lex.europa.eu/IT/legal-content/glossary/nato-north-atlantic-treaty-organisation.html"
+        parser = EurLexParser()
+        result = await parser.run(url)
+        
+        print("\n--- RISULTATO PARSING IL POST ---")
+        print(f"Titolo: {result['title']}")
+
+        html_text = BaseParser.remove_markdown(result.get('parsed_text'))
+        print(f"Testo Parsato (primi 500 car.):\n{html_text[:10000]}...")
+
+    asyncio.run(main())
