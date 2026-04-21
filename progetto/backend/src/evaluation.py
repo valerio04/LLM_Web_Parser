@@ -154,9 +154,9 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
 
         # Seleziona il parser in base al dominio
         domain = entry.get('domain')
-        if domain == "wikipedia.org":
+        if domain == "en.wikipedia.org":
             parser = WikipediaParser()
-        elif domain == "ilpost.it":
+        elif domain == "www.ilpost.it":
             parser = IlPostParser()
         elif domain == "statmuse.com":
             parser = StatMuseParser()
@@ -196,6 +196,7 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
             
             # Calcola le metriche
             token_eval_result = evaluator.token_level_eval(extracted_text, gold_text)
+            print(f"[INFO] Valutazione completata per {entry['title']}: {token_eval_result}")
             result[entry['title']] = token_eval_result
         except Exception as e:
             print(f"[ERROR] Errore nella valutazione di {entry['title']}: {e}")
