@@ -72,6 +72,7 @@ class BaseParser:
         html = mistune.html(md)
         soup = BeautifulSoup(html, "html.parser")
         # rimuove i tag lasciando il testo esattamente in-place (nessun separatore aggiunto, mantiene punteggiatura)
+        text= ""
         for tag in soup.find_all(True):
             tag.unwrap()
             text = re.sub(r'[ \t]+', ' ', str(soup)) # collassa spazi orizzontali (non \n)

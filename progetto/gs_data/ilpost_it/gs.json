@@ -1,35 +1,35 @@
 [
   {
     "url": "https://www.ilpost.it/2024/08/29/test-bomba-atomica-unione-sovietica/",
-    "domain": "ilpost.it",
+    "domain": "https://www.ilpost.it",
     "title": "Il primo di centinaia di test atomici sovietici",
     "html_file": "ilpost_it/texts/gs_1_html.txt",
     "gold_file": "ilpost_it/texts/gs_1_gold.txt"
   },
   {
     "url": "https://www.ilpost.it/2024/12/03/newsletter-regali-natale-consumismi-2/",
-    "domain": "ilpost.it",
+    "domain": "https://www.ilpost.it",
     "title": "Torna la newsletter di idee per i regali di Natale",
     "html_file": "ilpost_it/texts/gs_2_html.txt",
     "gold_file": "ilpost_it/texts/gs_2_gold.txt"
   },
   {
     "url": "https://www.ilpost.it/2022/03/28/indagini-podcast-stefano-nazzi/",
-    "domain": "ilpost.it",
+    "domain": "https://www.ilpost.it",
     "title": "“Indagini”, come si cerca la verità",
     "html_file": "ilpost_it/texts/gs_3_html.txt",
     "gold_file": "ilpost_it/texts/gs_3_gold.txt"
   },
   {
     "url": "https://www.ilpost.it/2026/04/15/wout-van-aert-storia-parigi-roubaix/",
-    "domain": "ilpost.it",
+    "domain": "https://www.ilpost.it",
     "title": "Come perde, e come vince, Wout van Aert",
     "html_file": "ilpost_it/texts/gs_4_html.txt",
     "gold_file": "ilpost_it/texts/gs_4_gold.txt"
   },
   {
     "url": "https://www.ilpost.it/2026/04/14/cannes-2026-assenza-film-italiani/",
-    "domain": "ilpost.it",
+    "domain": "https://www.ilpost.it",
     "title": "L’assenza di film italiani a Cannes è il segnale di qualcosa?",
     "html_file": "ilpost_it/texts/gs_5_html.txt",
     "gold_file": "ilpost_it/texts/gs_5_gold.txt"

@@ -1,35 +1,35 @@
 [
   {
     "url": "https://en.wikipedia.org/wiki/Minerva",
-    "domain": "wikipedia.org",
+    "domain": "https://en.wikipedia.org",
     "title": "Minerva",
     "html_file": "wikipedia_org/texts/gs_1_html.txt",
     "gold_file": "wikipedia_org/texts/gs_1_gold.txt"
   },
   {
     "url": "https://en.wikipedia.org/wiki/BabelNet",
-    "domain": "wikipedia.org", 
+    "domain": "https://en.wikipedia.org", 
     "title": "BabelNet",
     "html_file": "wikipedia_org/texts/gs_2_html.txt",
     "gold_file": "wikipedia_org/texts/gs_2_gold.txt"  
   },
   {
     "url": "https://en.wikipedia.org/wiki/List_of_largest_empires",
-    "domain": "wikipedia.org",
+    "domain": "https://en.wikipedia.org",
     "title": "List of largest empires",
     "html_file": "wikipedia_org/texts/gs_3_html.txt",
     "gold_file": "wikipedia_org/texts/gs_3_gold.txt"
   },
   {
     "url": "https://en.wikipedia.org/wiki/Python_(programming_language)",
-    "domain": "wikipedia.org",
+    "domain": "https://en.wikipedia.org",
     "title": "Python (programming language)",
     "html_file": "wikipedia_org/texts/gs_4_html.txt",
     "gold_file": "wikipedia_org/texts/gs_4_gold.txt"
   },
   {
     "url": "https://en.wikipedia.org/wiki/Apollo_11",
-    "domain": "wikipedia.org",
+    "domain": "https://en.wikipedia.org",
     "title": "Apollo 11",
     "html_file": "wikipedia_org/texts/gs_5_html.txt",
     "gold_file": "wikipedia_org/texts/gs_5_gold.txt"
