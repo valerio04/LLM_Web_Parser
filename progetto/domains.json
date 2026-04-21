@@ -1,8 +1,8 @@
 {
     "domains": [
-        "https://en.wikipedia.org",
-        "https://eur-lex.europa.eu",
-        "https://www.ilpost.it"
+        "eur-lex.europa.eu",
+        "www.ilpost.it",
+        "en.wikipedia.org"
         
     ]
 }
