@@ -21,6 +21,10 @@ class ParseResponse(BaseModel):
     html_text: str
     parsed_text: str
 
+class ParseRequest(BaseModel):
+    url: str
+    html_text: str
+
 # chiedere al professore se bisogna fare in questo modo o basta restituire un dizionario nella funzione
 # chiedere se è corretta l'organizazione dei file txt
 # TODO: controllare i domini in server direttamente da qui
@@ -95,6 +99,76 @@ async def parse_document(url: str) -> ParseResponse:
     except Exception as e:
         print(f"[ERROR] Errore durante il parsing: {e}")
         raise HTTPException(status_code=500, detail="Errore durante il parsing")
+
+
+
+
+
+
+
+@app.post("/parse")
+async def parse_document_from_html(parse_request: ParseRequest) -> ParseResponse:
+    """
+    Esegue il parser per un documento di un dominio.
+    """
+    url = parse_request.url
+    html_text = parse_request.html_text
+    # Seleziona il parser in base al dominio
+    """if "wikipedia.org" in url:
+        parser = WikipediaParser()
+    elif "ilpost.it" in url:
+        parser = IlPostParser()
+    elif "statmuse.com" in url:
+        parser = StatMuseParser()
+    elif "eur-lex.europa.eu" in url:
+        parser = EurLexParser()
+    else:
+        print(f"[WARNING] Dominio non riconosciuto: {url}")
+        raise HTTPException(status_code=400, detail="Dominio non supportato")"""
+    
+    # 1. Ricava le informazioni di parser e path
+    parser_info = find_path_parser(url, Path(__file__).parent.resolve())
+    
+    # 2. Se parser_info è None (dominio non riconosciuto), da subito l'eccezione 400
+    if not parser_info:
+        print(f"[WARNING] Dominio non riconosciuto: {url}")
+        raise HTTPException(status_code=400, detail="Dominio non supportato")
+        
+    # 3. Altrimenti prendi il parser e procedi
+    parser = parser_info[0]
+    
+    try:
+        result = await parser.run_from_html(url, html_text)
+        return ParseResponse(url = result['url'], 
+                             domain=result['domain'], 
+                             title=result['title'], 
+                             html_text=result['html_text'], 
+                             parsed_text=result['parsed_text'])
+    
+    # TODO: testare se questa eccezione viene catturata quando il parsing fallisce (es: url non esistente, timeout, ecc.)
+    except Exception as e:
+        print(f"[ERROR] Errore durante il parsing: {e}")
+        raise HTTPException(status_code=500, detail="Errore durante il parsing")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @app.get("/domains")
 async def get_domains() -> DomainsResponse:

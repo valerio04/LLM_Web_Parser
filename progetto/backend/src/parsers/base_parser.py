@@ -96,3 +96,11 @@ class BaseParser:
         async with AsyncWebCrawler(config=self.browser_config) as crawler:
             result = await crawler.arun(url=url, config=self.crawler_config)
             return self.format_result(url, result)
+    
+    async def run_from_html(self, url, html):
+        """Runs the parser on the provided HTML and returns the parsed result."""
+        self.validate_url(url)
+
+        async with AsyncWebCrawler(config=self.browser_config) as crawler:
+            result = await crawler.arun(url=f"raw:{html}", config=self.crawler_config)
+            return self.format_result(url, result)  
