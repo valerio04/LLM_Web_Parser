@@ -4,11 +4,11 @@ from typing import Dict, Optional, List, Any
 from pathlib import Path
 import json
 
-from evaluation import *
-from parsers.parser1 import IlPostParser
-from parsers.parser2 import StatMuseParser
-from parsers.parser3 import EurLexParser
-from parsers.parser_wikipedia import WikipediaParser
+from .evaluation import *
+from .parsers.parser1 import IlPostParser
+from .parsers.parser2 import StatMuseParser
+from .parsers.parser3 import EurLexParser
+from .parsers.parser_wikipedia import WikipediaParser
 
 app = FastAPI(title="Parser API")
 

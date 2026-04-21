@@ -2,4 +2,5 @@ fastapi
 jinja2
 requests
 uvicorn
-
+markdown2
+python-multipart

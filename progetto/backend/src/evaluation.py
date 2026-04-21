@@ -7,16 +7,16 @@ from typing import Dict, List
 from pathlib import Path
 
 from aiohttp import request
-from parsers.parser_wikipedia import WikipediaParser
-from parsers.parser1 import IlPostParser
-from parsers.parser2 import StatMuseParser
-from parsers.parser3 import EurLexParser
+from .parsers.parser_wikipedia import WikipediaParser
+from .parsers.parser1 import IlPostParser
+from .parsers.parser2 import StatMuseParser
+from .parsers.parser3 import EurLexParser
+from .parsers.base_parser import BaseParser
 import asyncio
 import markdown2
 import re
 import mistune
 from bs4 import BeautifulSoup
-from parsers.base_parser import BaseParser
 
 class Evaluator:
     """Classe per valutare la qualità del parsing."""
