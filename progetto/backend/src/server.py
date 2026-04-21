@@ -350,6 +350,9 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
         recalls.append(recall)
         f1_scores.append(f1)
     
+    avg_f1 = 0
+    avg_precision = 0
+    avg_recall = 0
     if precisions:
         avg_precision = sum(precisions) / len(precisions)
         avg_recall = sum(recalls) / len(recalls)
