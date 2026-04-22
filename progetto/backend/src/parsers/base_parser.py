@@ -1,9 +1,10 @@
 import asyncio
 from urllib.parse import urlparse
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
-import re
 import mistune
+import re
 from bs4 import BeautifulSoup
+
 # Cose da modificare in ogni parser specifico:
 
 # 1. create_crawler_config()

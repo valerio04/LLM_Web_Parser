@@ -1,8 +1,8 @@
 [
   {
-    "url": "https://statmuse.com/",
-    "domain": "https://www.statmuse.com",
-    "title": "",
+    "url": "https://www.statmuse.com/nba/ask/nba-ppg-leaders-this-season",
+    "domain": "www.statmuse.com",
+    "title": "Luka Dončić scored the most points per game this season, with 33.5 per game.",
     "html_file": "statmuse_com/texts/gs_1_html.txt",
     "gold_file": "statmuse_com/texts/gs_1_gold.txt"
   },

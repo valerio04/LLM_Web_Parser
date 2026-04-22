@@ -4,7 +4,6 @@ import re
 from typing import Dict, Any
 from urllib.parse import urlparse
 
-from bs4 import BeautifulSoup
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, CacheMode
 
 from .base_parser import BaseParser
