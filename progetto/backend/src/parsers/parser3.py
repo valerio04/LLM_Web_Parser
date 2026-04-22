@@ -28,7 +28,7 @@ class EurLexParser(BaseParser):
                 ".PubFormat, .PubFormats, .Logo, .Emission, "
                 ".wt-banner, .modal, .cookie-consent, #iubenda-cs-banner, .DocumentTitle.pull-left, #PP1Contents, #PP2Contents, #PP3Contents, .hd-ti, .hd-lg, .hd-oj, #PP3, #PP1, #PP2, .lseu-section-relevant-terms"
             ),
-            css_selector=".panel.panel-default.PagePanel, .EurlexContent",
+            css_selector=".panel.panel-default.PagePanel, .EurlexContent, .active",
             word_count_threshold=0,
             cache_mode=CacheMode.BYPASS,
             exclude_external_images=True,
@@ -36,17 +36,32 @@ class EurLexParser(BaseParser):
         )
     
     def extract_title(self, result: CrawlResult) -> str:
-        if not result.html:
-            return "EUR_Lex_Senza_Titolo"
-            
-        match = re.search(r'<title>(.*?)</title>', result.html, re.IGNORECASE)
-        if match:
-            title = html.unescape(re.sub(r'<[^>]+>', '', match.group(1)).strip())
-            return title.replace(" - EUR-Lex", "")
-                
+        # 1. Inizializziamo con il valore di default
+        title = "EUR_Lex_Senza_Titolo"
+
+        # 2. Tentativo 1: Metadata
         if result.metadata:
-            return result.metadata.get("title", "EUR_Lex_Senza_Titolo")
-        return "EUR_Lex_Senza_Titolo"
+            potential_title = result.metadata.get("title","EUR_Lex_Senza_Titolo").strip()
+            if potential_title and potential_title != "EUR_Lex_Senza_Titolo":
+                title = potential_title
+
+        # 3. Tentativo 2: Se ancora non abbiamo un titolo valido, cerchiamo in <title>
+        if title == "EUR_Lex_Senza_Titolo" and result.html:
+            if match := re.search(r'<title>(.*?)</title>', result.html, re.IGNORECASE | re.DOTALL):
+                extracted = html.unescape(re.sub(r'<[^>]+>', '', match.group(1)).strip())
+                if extracted:
+                    title = extracted
+
+        # 4. Tentativo 3: Se ancora nulla, cerchiamo in <h1>
+        if title == "EUR_Lex_Senza_Titolo" and result.html:
+            if match := re.search(r'<h1[^>]*>(.*?)</h1>', result.html, re.IGNORECASE | re.DOTALL):
+                extracted = html.unescape(re.sub(r'<[^>]+>', '', match.group(1)).strip())
+                if extracted:
+                    title = extracted
+
+        # 5. Pulizia finale comune e ritorno
+        # Rimuoviamo il suffisso fastidioso se presente in qualsiasi dei casi sopra
+        return title.replace(" - EUR-Lex", "").strip()
 
     def _deduplicate(self, text: str) -> str:
         paragraphs = re.split(r'\n{2,}', text)
@@ -79,6 +94,7 @@ class EurLexParser(BaseParser):
         text = self.re_start_noise.sub('', text)
         text = self.re_ieni_nav.sub('', text)
         text = self.re_barre.sub(' ', text) 
+
         
         text = self._deduplicate(text)
         text = re.sub(r'\n{3,}', '\n\n', text)

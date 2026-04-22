@@ -4,3 +4,5 @@ requests
 uvicorn
 markdown2
 python-multipart
+bs4 
+mistune

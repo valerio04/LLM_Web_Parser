@@ -29,7 +29,7 @@
             
  
  
-        <script type="text/javascript" src="/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js" data-dtconfig="app=47d4c64c3b67ec69|agentId=b72d000cb8e84482|owasp=1|featureHash=ICANVfgqrux|rdnt=1|uxrgce=1|cuc=m097nmfl|mel=100000|mb=null|dpvc=1|iub=null|lastModification=1776680137626|tp=500,50,0|srbbv=2|agentUri=/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js|reportUrl=/eurlex-frontoffice/rb_39a3e95b-5423-482c-879b-99ef235dffeb|rid=RID_-1540857505|rpid=708545698|domain=europa.eu"></script><script type="text/javascript" src="./../../revamp/components/vendor/modernizr/modernizr.js?v=2.18.4"></script>
+        <script type="text/javascript" src="/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js" data-dtconfig="app=47d4c64c3b67ec69|agentId=43163ecbd74b7421|owasp=1|featureHash=ICANVfgqrux|rdnt=1|uxrgce=1|cuc=m097nmfl|mel=100000|mb=null|dpvc=1|iub=null|lastModification=1776680137626|tp=500,50,0|srbbv=2|agentUri=/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js|reportUrl=/eurlex-frontoffice/rb_39a3e95b-5423-482c-879b-99ef235dffeb|rid=RID_1679531563|rpid=-1238758691|domain=europa.eu"></script><script type="text/javascript" src="./../../../revamp/components/vendor/modernizr/modernizr.js?v=2.18.4"></script>
         
  
 
@@ -52,14 +52,12 @@
  
  
  
- <title>Accordi internazionali - EUR-Lex</title> 
+ <title>EUR-Lex - 62023CO0034 - IT - EUR-Lex</title> 
  
 
 
 
-	<meta name="description" content="Accordi dell'UE con paesi terzi e organizzazioni internazionali"/>
-
- <meta name="WT.cg_n" content="International agreements"/><meta name="WT.cg_s" content="International agreements"/><meta name="WT.z_usr_lan" content="it"/><meta name="WT.seg_1" content="Unregistered"/>
+ <meta name="WT.z_docTitle" content="Ordinanza della Corte (Nona Sezione) del 20 febbraio 2024.#RF contro Getin Noble Bank S.A.#Rinvio pregiudiziale &ndash; Articolo 53, paragrafo 2, del regolamento di procedura della Corte &ndash; Risanamento e risoluzione degli enti creditizi &ndash; Potere di restringere l'esecuzione delle garanzie &ndash; Disposizione da interpretare che non ha alcun legame con l'oggetto del procedimento principale &ndash; Irricevibilit&agrave; manifesta.#Causa C-34/23."/><meta name="WT.z_docID" content="62023CO0034_INF"/><meta name="WT.z_docSector" content="6"/><meta name="WT.z_docType" content="CO"/><meta name="WT.cg_n" content="Legal content view"/><meta name="WT.cg_s" content="Notices"/><meta name="WT.pi" content="Legal content pages"/><meta name="WT.z_usr_lan" content="it"/><meta name="WT.seg_1" content="Unregistered"/>
 
  
  
@@ -72,20 +70,20 @@
         <meta name="fo-db-version" content="2.18.1"/>
         <meta name="sl-api-version" content="3.9.8/CORPORATE_SEARCH/2.146"/>
 
-        <meta name="app-relative-path" content="./../../"/>
+        <meta name="app-relative-path" content="./../../../"/>
 
         <link rel="stylesheet" media="all"
-        href="./../../revamp/components/vendor/bootstrap/dist/css/bootstrap.css?v=2.18.4">
+        href="./../../../revamp/components/vendor/bootstrap/dist/css/bootstrap.css?v=2.18.4">
         
         <link rel="stylesheet" media="all"
-        href="./../../revamp/components/vendor/font-awesome/css/font-awesome.min.css?v=2.18.4">
-        <link rel="stylesheet" media="all" href="./../../revamp/components/vendor/roboto/roboto.css?v=2.18.4">
-        <link rel="stylesheet" media="all" href="./../../revamp/css/eurlex.css?v=2.18.4">
-        <link rel="stylesheet" media="all" href="./../../revamp/css/eurlex-dev.css?v=2.18.4">
+        href="./../../../revamp/components/vendor/font-awesome/css/font-awesome.min.css?v=2.18.4">
+        <link rel="stylesheet" media="all" href="./../../../revamp/components/vendor/roboto/roboto.css?v=2.18.4">
+        <link rel="stylesheet" media="all" href="./../../../revamp/css/eurlex.css?v=2.18.4">
+        <link rel="stylesheet" media="all" href="./../../../revamp/css/eurlex-dev.css?v=2.18.4">
         
  
  
-        <link rel="stylesheet" media="all" href="./../../css/eurlex-xml-editorial-content.css?t=1760540477586">
+        <link rel="stylesheet" media="all" href="./../../../css/eurlex-xml-editorial-content.css?t=1760540477586">
 
         
  
@@ -100,12 +98,18 @@
  
  
  
+                <link rel="stylesheet" media="all" href="./../../../css/coj/cj-convex-embedded.css?t=1760540479767">
+            
  
  
  
  
  
-        <link rel="stylesheet" media="print" href="./../../css/eurlex-print.css?t=1760540477398">
+ 
+ 
+ 
+ 
+        <link rel="stylesheet" media="print" href="./../../../css/eurlex-print.css?t=1760540477398">
         
  
  
@@ -114,13 +118,13 @@
 
         
 
-        <script type="text/javascript" src="./../../dynamic-js/labels_it.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../dynamic-js/labels_it.js?v=2.18.4"></script>
         
-        <script type="text/javascript" src="./../../dynamic-js/WT_labels_it.js?v=2.18.4"></script>
-        <script type="text/javascript" src="./../../dynamic-js/config.js?v=2.18.4"></script>
-        <script type="text/javascript" src="./../../dynamic-js/const.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../dynamic-js/WT_labels_it.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../dynamic-js/config.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../dynamic-js/const.js?v=2.18.4"></script>
         
-        <script type="text/javascript" src="./../../dynamic-js/paths.js?requestURL=%2Fcollection%2Feu-law%2Finter-agree.html"></script>
+        <script type="text/javascript" src="./../../../dynamic-js/paths.js?requestURL=%2Flegal-content%2FIT%2FSUM%2F"></script>
         
 
 			<script type="text/javascript">
@@ -129,7 +133,7 @@
         var interStyleGuideUrl = 'http://publications.europa.eu/code/it/it-000100.htm';
         var sessionExpired = false;
         var pageUrl = '';
-        var queryString = '';
+        var queryString = 'uri=CELEX%3A62023CO0034_INF';
         var sessionTimeout = '900000';
         </script>
 
@@ -140,8 +144,8 @@
         
  
 
-        <link rel="shortcut icon" href="./../../images/eurlex.ico"/>
-        <link rel="canonical" href="https://eur-lex.europa.eu/collection/eu-law/inter-agree.html"/>
+        <link rel="shortcut icon" href="./../../../images/eurlex.ico"/>
+        <link rel="canonical" href="https://eur-lex.europa.eu/legal-content/IT/SUM/?uri=celex:62023CO0034"/>
         
  
  
@@ -149,21 +153,21 @@
  
  
  
-        <link rel="stylesheet" media="all" href="./../../revamp/css/custom-infinite-scroll.css?v=2.18.4">
+        <link rel="stylesheet" media="all" href="./../../../revamp/css/custom-infinite-scroll.css?v=2.18.4">
         
         
  
  
    
  
-                <link rel="stylesheet" media="all" href="./../../revamp/components/vendor/ec/eu-preset-v4.1.1/styles/ecl-eu.css?v=2.18.4">
+                <link rel="stylesheet" media="all" href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/styles/ecl-eu.css?v=2.18.4">
             
    
  
  
-         <link rel="stylesheet" media="all" href="./../../revamp/css/eurlex-ec.css?v=2.18.4">
+         <link rel="stylesheet" media="all" href="./../../../revamp/css/eurlex-ec.css?v=2.18.4">
         
-		<script type="text/javascript" src="./../../js/survey/survey.js?v=2.18.4"></script>
+		<script type="text/javascript" src="./../../../js/survey/survey.js?v=2.18.4"></script>
          
         </head>
         
@@ -274,8 +278,8 @@
                     <div class="ecl-site-header__top" data-ecl-site-header-top>
                         <a id="homepageLogo" href="https://european-union.europa.eu/index_en" class="ecl-link ecl-link--standalone ecl-site-header__logo-link" ariaLabel="aria-label=European Union">
                             <picture class="ecl-picture ecl-site-header__picture" title="European Union">
-                              <source srcset="./../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/logo/standard-version/positive/logo-eu--it.svg" media="(min-width: 996px)">
-                                <img class="ecl-site-header__logo-image eu-logo-size" src="./../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/logo/condensed-version/positive/logo-eu--it.svg" alt="European Union flag" />
+                              <source srcset="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/logo/standard-version/positive/logo-eu--it.svg" media="(min-width: 996px)">
+                                <img class="ecl-site-header__logo-image eu-logo-size" src="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/logo/condensed-version/positive/logo-eu--it.svg" alt="European Union flag" />
                             </picture>
                         </a>
                             <div class="ecl-site-header__action">
@@ -287,7 +291,7 @@
  
                                                 <a id="MyEurlex" class="ecl-button ecl-button--tertiary ecl-site-header__login-toggle dropdown-toggle login-lang-text-size" href="#" data-toggle="dropdown" aria-haspopup="true" >
                                                     <svg class="ecl-icon ecl-icon--s ecl-site-header__icon login-lang-image-size" focusable="false" aria-hidden="false" role="img" ">
-                                                        <use alt="Log in" xlink:href="./../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/log-in.svg#log-in"/>
+                                                        <use alt="Log in" xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/log-in.svg#log-in"/>
                                                         <title>Log in</title>
                                                     </svg>
                                                     Il mio EUR-Lex
@@ -338,7 +342,7 @@
 
 
 
-<a href="./../../protected/homepage.html?url=%2Fcollection%2Feu-law%2Finter-agree.html"                aria-label=""><i class="fa fa-sign-in" aria-hidden="true"></i>Connettersi</a>
+<a href="./../../../protected/homepage.html?url=%2Flegal-content%2FIT%2FSUM%2F%3Furi%3DCELEX%253A62023CO0034_INF"                aria-label=""><i class="fa fa-sign-in" aria-hidden="true"></i>Connettersi</a>
 </li>
                                                     <li><a href="https://ecas.ec.europa.eu/cas/eim/external/register.cgi/"><i class="fa fa-user-plus" aria-hidden="true"></i>Registrarsi</a></li>
                                                     <li role="separator" class="divider"></li>
@@ -382,7 +386,7 @@
 
 
 
-<a href="./../../my-eurlex/my-queries.html#recentQueries"       title="Le mie ricerche recenti (0)" id="myRecentQueriesLink"        aria-label=""><i class="fa fa-history" aria-hidden="true"></i>Le mie ricerche recenti (0)</a>
+<a href="./../../../my-eurlex/my-queries.html#recentQueries"       title="Le mie ricerche recenti (1)" id="myRecentQueriesLink"        aria-label=""><i class="fa fa-history" aria-hidden="true"></i>Le mie ricerche recenti (1)</a>
 </li> 
  
  
@@ -392,7 +396,7 @@
                                     <a class="ecl-button ecl-button--tertiary ecl-site-header__language-selector login-lang-text-size" href="#" data-ecl-language-selector role="button" aria-label="Change language, current language is English" aria-controls="language-list-overlay">
                                         <span class="ecl-site-header__language-icon">
                                             <svg class="ecl-icon ecl-icon--s ecl-site-header__icon login-lang-image-size" focusable="false" aria-hidden="false" role="img" ">
-                                                <use xlink:href="./../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/global.svg#global"/use>
+                                                <use xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/global.svg#global"/use>
                                                 <title>English</title>
                                             </svg>
                                         </span>
@@ -407,7 +411,7 @@
                                                 <span class="ecl-button__container">
                                                     <span class="ecl-button__label" data-ecl-label="true"></span>
                                                     <svg class="ecl-icon ecl-icon--l ecl-button__icon lang-panel-close" focusable="false" aria-hidden="true" data-ecl-icon>
-                                                        <use alt="Close button" xlink:href="./../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/close-filled.svg#close-filled"/>
+                                                        <use alt="Close button" xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/close-filled.svg#close-filled"/>
                                                     </svg>
                                                 </span>
                                             </button>
@@ -421,7 +425,7 @@
                                                 <form id="languageForm" method="get" name="languageForm">
 	                                                
 	
-	
+	<input type="hidden" name="uri" value="CELEX:62023CO0034_INF"></input>
                                                     <ul class="ecl-site-header__language-list">
                                                         <li class="ecl-site-header__language-item">
 
@@ -1337,7 +1341,7 @@
 
 
 
-<a href="./../../homepage.html?lang=it"    class="header-link"    id="eurlex-logo-text-size"        aria-label="">
+<a href="./../../../homepage.html?lang=it"    class="header-link"    id="eurlex-logo-text-size"        aria-label="">
  EUR-Lex
  </a>
 
@@ -1363,9 +1367,9 @@
 		
 	
 	
-	<form id="disableExperimentalFeatures" name="disableExperimentalFeatures" action="./../../experimental-features.html?action=disableExperimentalFeatures" method="post">
-			<input type="hidden" value="collection/eu-law/inter-agree.html" name="relativeRequestUrl" />
-			<input type="hidden" value="" name="queryString" />
+	<form id="disableExperimentalFeatures" name="disableExperimentalFeatures" action="./../../../experimental-features.html?action=disableExperimentalFeatures" method="post">
+			<input type="hidden" value="legal-content/IT/SUM/" name="relativeRequestUrl" />
+			<input type="hidden" value="?uri=CELEX%3A62023CO0034_INF" name="queryString" />
 
 			<div class="input-group input-group-sm experimental-feature-div-position radius5p">
 					
@@ -1373,7 +1377,7 @@
 						<a href="#" data-toggle="tooltip" data-placement="bottom" aria-description="&lt;a href=&quot;https://eur-lex.europa.eu/content/help/eurlex-content/experimental-features.html&quot; target=&quot;_blank&quot;&gt;Per saperne di più sull&#39;angolo delle funzioni sperimentali&lt;/a&gt;"  id="expFeatHelp" data-original-title="&lt;a href=&quot;https://eur-lex.europa.eu/content/help/eurlex-content/experimental-features.html&quot; target=&quot;_blank&quot;&gt;Per saperne di più sull&#39;angolo delle funzioni sperimentali&lt;/a&gt;">
    		 					<i>
    		 					    <svg class="ef-questionmark-icon" focusable="false" aria-hidden="false" role="img" ">
-                                    <use xlink:href="./../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/questionmark.svg#questionmark"/>
+                                    <use xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/questionmark.svg#questionmark"/>
                                 </svg>
                             </i>
 							<span class="sr-only togglable-screenReader">&lt;a href=&quot;https://eur-lex.europa.eu/content/help/eurlex-content/experimental-features.html&quot; target=&quot;_blank&quot;&gt;Per saperne di più sull&#39;angolo delle funzioni sperimentali&lt;/a&gt;</span>	</a>	</span>	
@@ -1388,11 +1392,11 @@
 				</span>
 			</div>
 		<div>
-<input type="hidden" name="_csrf" value="445aa6d6-888d-4dff-8668-14a340eeb4c7" />
+<input type="hidden" name="_csrf" value="dda6b8ef-2ad7-42b1-9eac-8c49a7ecbda9" />
 </div></form>
-	<form id="applyExperimentalFeatures" name="applyExperimentalFeatures" action="./../../experimental-features.html?action=applyExperimentalFeatures" method="post">
-			<input type="hidden" value="collection/eu-law/inter-agree.html" name="relativeRequestUrl" />
-			<input type="hidden" value="" name="queryString" />
+	<form id="applyExperimentalFeatures" name="applyExperimentalFeatures" action="./../../../experimental-features.html?action=applyExperimentalFeatures" method="post">
+			<input type="hidden" value="legal-content/IT/SUM/" name="relativeRequestUrl" />
+			<input type="hidden" value="?uri=CELEX%3A62023CO0034_INF" name="queryString" />
 			<div class="exp-feature-float-box popover fade in">
 				<button type="button" class="close" id="experimental-feature-close" aria-label="Close"><span aria-hidden="true">×</span></button>
 				<div>
@@ -1435,7 +1439,7 @@
 					<div>
 						<button  id="exp-feature-btn-apply" type="submit" class="btn btn-sm btn-primary radius5p"> Applicare
 	</button>	</div>	</div>	</div>	<div>
-<input type="hidden" name="_csrf" value="445aa6d6-888d-4dff-8668-14a340eeb4c7" />
+<input type="hidden" name="_csrf" value="dda6b8ef-2ad7-42b1-9eac-8c49a7ecbda9" />
 </div></form>
 	
 
@@ -1471,7 +1475,7 @@
 
 
 
-<a href="./../../experimental-features.html?action=confirmFeedback"    class="eurlexModal btn btn-primary btn-sm hidden"    id="link-give-feedback"        aria-label=""></a>
+<a href="./../../../experimental-features.html?action=confirmFeedback"    class="eurlexModal btn btn-primary btn-sm hidden"    id="link-give-feedback"        aria-label=""></a>
 
 	</div>
 </div>
@@ -1509,7 +1513,7 @@
         <div class="ecl-site-header__header">
             <div class="ecl-site-header__container ecl-container upper-header-border header-width-override pdf-logo-img-container">
                 <div class="ecl-site-header__top" data-ecl-site-header-top>
-                    <img class="ecl-site-footer__logo-image pdf-logo-img" src="./../../images/eu-logo/logo-eu-it-01.jpg" >
+                    <img class="ecl-site-footer__logo-image pdf-logo-img" src="./../../../images/eu-logo/logo-eu-it-01.jpg" >
                 </div>
             </div>
             <div class="ecl-site-header__container ecl-container header-width-override">
@@ -1615,18 +1619,10 @@
 
 
 
-<a href="./../../homepage.html"       title="EUR-Lex home"         aria-label=""><i class="fa-li fa fa-angle-right"></i>EUR-Lex home</a>
+<a href="./../../../homepage.html"       title="EUR-Lex home"         aria-label=""><i class="fa-li fa fa-angle-right"></i>EUR-Lex home</a>
 </li>	
 	
-	
-	
-	
-	
-					<li class="active"><i class="fa-li fa fa-angle-right"></i>Diritto dell&#039;UE</li>	
-	
-	
-	
-	<li class="active"><i class="fa-li fa fa-angle-right"></i>Accordi internazionali
+	<li class="active"><i class="fa-li fa fa-angle-right"></i>EUR-Lex - 62023CO0034 - IT
 	</li>
 	</ol>
 </div><!-- SiteBreadcrumb -->
@@ -1664,7 +1660,7 @@
  
  
  
- <a href="./../../content/help.html" class="PSHelp EurlexTooltip" aria-description = "Help" data-toggle="tooltip" title="Guida" data-original-title="Help" ><svg class="ecl-icon ecl-icon--s faq-image-size" focusable="false" aria-hidden="false" role="img"><use xlink:href="./../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/faq.svg#faq" /></svg>Guida</a>
+ <a href="./../../../content/help.html" class="PSHelp EurlexTooltip" aria-description = "Help" data-toggle="tooltip" title="Guida" data-original-title="Help" ><svg class="ecl-icon ecl-icon--s faq-image-size" focusable="false" aria-hidden="false" role="img"><use xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/faq.svg#faq" /></svg>Guida</a>
  
  
  
@@ -1683,55 +1679,13 @@
  
  
  
- 
-            <li class="hidden-xs hidden-sm">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a href="./../../print-pdf.html?pageTitle=Accordi+internazionali&amp;currentUrl=%2Fcollection%2Feu-law%2Finter-agree.html"    class="PSPDF EurlexTooltip"   title="Esporta come PDF"    data-toggle="tooltip" aria-description="Export PDF" data-original-title="Export PDF"   aria-label="">
-                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                    Esporta come PDF
- </a>
-
- </li> 
  
  
  
  
  
         <li class="hidden-xs hidden-sm">
-            <button data-target="./../../collection/eu-law/inter-agree.html?print=true" onclick="window.open('./../../collection/eu-law/inter-agree.html?print=true','','scrollbars=yes,menubar=no, status=no, directories=no, location=no, resizable=no, width=1024, height=600');return false;" target="_blank" class="PSPrint EurlexTooltip" data-toggle="tooltip" title="Stampare" aria-description="Stampare"  data-original-title="Print this page">
+            <button data-target="./../../../legal-content/IT/SUM/?uri=CELEX%3A62023CO0034_INF&amp;print=true" onclick="window.open('./../../../legal-content/IT/SUM/?uri=CELEX%3A62023CO0034_INF&amp;print=true','','scrollbars=yes,menubar=no, status=no, directories=no, location=no, resizable=no, width=1024, height=600');return false;" target="_blank" class="PSPrint EurlexTooltip" data-toggle="tooltip" title="Stampare" aria-description="Stampare"  data-original-title="Print this page">
                 <i class="fa fa-print" aria-hidden="true"></i>
                 Stampare
  </button> </li> 
@@ -1746,7 +1700,7 @@
                     "css": {
                         "button": "myButton"
                     },
-                    "link": "https://eur-lex.europa.eu/collection/eu-law/inter-agree.html"
+                    "link": "https://eur-lex.europa.eu/legal-content/IT/SUM/?uri=celex:62023CO0034"
                 }</script>
             </li>
         
@@ -1853,33 +1807,33 @@
             <p class="BlockTitle" role="heading">Diritto dell'UE</p>
             <ul class="MenuList TreeMenu">
                <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="treaties" title="Trattati"><i class="fa fa-angle-right" aria-hidden="true"></i>Trattati</a><ul class="collapse">
-                     <li class=""><a href="./../../collection/eu-law/treaties/treaties-force.html" id="treaties-force" title="Trattati attualmente in vigore">Trattati attualmente in vigore</a></li>
-                     <li class=""><a href="./../../collection/eu-law/treaties/treaties-founding.html" id="treaties-founding" title="Trattati costitutivi">Trattati costitutivi</a></li>
-                     <li class=""><a href="./../../collection/eu-law/treaties/treaties-accession.html" id="treaties-accession" title="Trattati di adesione">Trattati di adesione</a></li>
-                     <li class=""><a href="./../../collection/eu-law/treaties/treaties-other.html" id="treaties-other" title="Altri trattati e protocolli">Altri trattati e protocolli</a></li>
-                     <li class=""><a href="./../../collection/eu-law/treaties/treaties-overview.html" id="treaties-overview" title="Cronologia">Cronologia</a></li>
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-force.html" id="treaties-force" title="Trattati attualmente in vigore">Trattati attualmente in vigore</a></li>
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-founding.html" id="treaties-founding" title="Trattati costitutivi">Trattati costitutivi</a></li>
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-accession.html" id="treaties-accession" title="Trattati di adesione">Trattati di adesione</a></li>
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-other.html" id="treaties-other" title="Altri trattati e protocolli">Altri trattati e protocolli</a></li>
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-overview.html" id="treaties-overview" title="Cronologia">Cronologia</a></li>
                   </ul>
                </li>
-               <li class=""><a href="./../../collection/eu-law/legal-acts/recent.html" class="no-arrow" id="recent" title="Atti giuridici">Atti giuridici</a></li>
-               <li class=""><a href="./../../collection/eu-law/consleg.html" class="no-arrow" id="consolidated-texts" title="Testi consolidati">Testi consolidati</a></li>
-               <li class="Selected"><a href="./../../collection/eu-law/inter-agree.html" class="no-arrow" id="inter-agree" title="Accordi internazionali">Accordi internazionali</a></li>
-               <li class=""><a href="./../../collection/eu-law/pre-acts.html" class="no-arrow" id="working-documents" title="Documenti preparatori">Documenti preparatori</a></li>
-               <li class=""><a href="./../../collection/eu-law/efta.html" class="no-arrow" id="efta" title="Documenti EFTA (Associazione europea di libero scambio)">Documenti EFTA</a></li>
-               <li class=""><a href="./../../collection/legislative-procedures.html" class="no-arrow" id="procedures" title="Procedure normative e EU Law Tracker">Procedure normative</a></li>
-               <li class=""><a href="./../../browse/summaries.html" class="no-arrow" id="summary" title="Sintesi della legislazione dell'UE">Sintesi della legislazione dell'UE</a></li>
+               <li class=""><a href="./../../../collection/eu-law/legal-acts/recent.html" class="no-arrow" id="recent" title="Atti giuridici">Atti giuridici</a></li>
+               <li class=""><a href="./../../../collection/eu-law/consleg.html" class="no-arrow" id="consolidated-texts" title="Testi consolidati">Testi consolidati</a></li>
+               <li class=""><a href="./../../../collection/eu-law/inter-agree.html" class="no-arrow" id="inter-agree" title="Accordi internazionali">Accordi internazionali</a></li>
+               <li class=""><a href="./../../../collection/eu-law/pre-acts.html" class="no-arrow" id="working-documents" title="Documenti preparatori">Documenti preparatori</a></li>
+               <li class=""><a href="./../../../collection/eu-law/efta.html" class="no-arrow" id="efta" title="Documenti EFTA (Associazione europea di libero scambio)">Documenti EFTA</a></li>
+               <li class=""><a href="./../../../collection/legislative-procedures.html" class="no-arrow" id="procedures" title="Procedure normative e EU Law Tracker">Procedure normative</a></li>
+               <li class=""><a href="./../../../browse/summaries.html" class="no-arrow" id="summary" title="Sintesi della legislazione dell'UE">Sintesi della legislazione dell'UE</a></li>
                <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="institutions-intro" title="Istituzioni dell’UE"><i class="fa fa-angle-right" aria-hidden="true"></i>Istituzioni dell’UE</a><ul class="collapse">
-                     <li class=""><a href="./../../browse/institutions/eu-parliament.html" id="eu-parliament" title="Parlamento europeo">Parlamento europeo</a></li>
-                     <li class=""><a href="./../../browse/institutions/eu-council.html" id="European-Council" title="Consiglio europeo">Consiglio europeo</a></li>
-                     <li class=""><a href="./../../browse/institutions/council.html" id="Council" title="Consiglio dell’Unione europea">Consiglio dell’Unione europea</a></li>
-                     <li class=""><a href="./../../browse/institutions/eu-commission.html" id="European-Commission" title="Commissione europea">Commissione europea</a></li>
-                     <li class=""><a href="./../../browse/institutions/justice.html" id="Court-of-Justice-of-the-European-Union" title="Corte di giustizia dell’Unione europea">Corte di giustizia dell’Unione europea</a></li>
-                     <li class=""><a href="./../../browse/institutions/bank.html" id="European-Central-Bank" title="Banca centrale europea">Banca centrale europea<i class="fa fa-bar-chart" aria-hidden="true" style="margin-left:5px;"></i></a></li>
-                     <li class=""><a href="./../../browse/institutions/auditors.html" id="Court-of-Auditors" title="Corte dei conti europea">Corte dei conti europea</a></li>
-                     <li class=""><a href="./../../browse/institutions/eco-social.html" id="EESC" title="Comitato economico e sociale europeo">Comitato economico e sociale europeo</a></li>
-                     <li class=""><a href="./../../browse/institutions/regions.html" id="Committee-of-Regions" title="Comitato europeo delle regioni">Comitato europeo delle regioni</a></li>
+                     <li class=""><a href="./../../../browse/institutions/eu-parliament.html" id="eu-parliament" title="Parlamento europeo">Parlamento europeo</a></li>
+                     <li class=""><a href="./../../../browse/institutions/eu-council.html" id="European-Council" title="Consiglio europeo">Consiglio europeo</a></li>
+                     <li class=""><a href="./../../../browse/institutions/council.html" id="Council" title="Consiglio dell’Unione europea">Consiglio dell’Unione europea</a></li>
+                     <li class=""><a href="./../../../browse/institutions/eu-commission.html" id="European-Commission" title="Commissione europea">Commissione europea</a></li>
+                     <li class=""><a href="./../../../browse/institutions/justice.html" id="Court-of-Justice-of-the-European-Union" title="Corte di giustizia dell’Unione europea">Corte di giustizia dell’Unione europea</a></li>
+                     <li class=""><a href="./../../../browse/institutions/bank.html" id="European-Central-Bank" title="Banca centrale europea">Banca centrale europea<i class="fa fa-bar-chart" aria-hidden="true" style="margin-left:5px;"></i></a></li>
+                     <li class=""><a href="./../../../browse/institutions/auditors.html" id="Court-of-Auditors" title="Corte dei conti europea">Corte dei conti europea</a></li>
+                     <li class=""><a href="./../../../browse/institutions/eco-social.html" id="EESC" title="Comitato economico e sociale europeo">Comitato economico e sociale europeo</a></li>
+                     <li class=""><a href="./../../../browse/institutions/regions.html" id="Committee-of-Regions" title="Comitato europeo delle regioni">Comitato europeo delle regioni</a></li>
                   </ul>
                </li>
-               <li class=""><a href="./../../browse/eurovoc.html" class="no-arrow" id="eurovoc" title="Cerca con EuroVoc (il thesaurus multilingue e multidisciplinare dell'UE)">EuroVoc</a></li>
+               <li class=""><a href="./../../../browse/eurovoc.html" class="no-arrow" id="eurovoc" title="Cerca con EuroVoc (il thesaurus multilingue e multidisciplinare dell'UE)">EuroVoc</a></li>
             </ul>
          </nav>
       </div>
@@ -1887,9 +1841,9 @@
          <nav class="MenuBlock ">
             <p class="BlockTitle" role="heading">Giurisprudenza dell'UE</p>
             <ul class="MenuList">
-               <li class=""><a href="./../../collection/eu-law/eu-case-law.html" class="no-arrow" id="case-law" title="Giurisprudenza">Giurisprudenza</a></li>
-               <li class=""><a href="./../../collection/eu-law/eu-case-law/reports.html" class="no-arrow" id="electronic-report" title="Raccolta della giurisprudenza">Raccolta della giurisprudenza</a></li>
-               <li class=""><a href="./../../browse/directories/new-case-law.html" class="no-arrow" id="directory-eu-case-law" title="Repertorio della giurisprudenza">Repertorio della giurisprudenza</a></li>
+               <li class=""><a href="./../../../collection/eu-law/eu-case-law.html" class="no-arrow" id="case-law" title="Giurisprudenza">Giurisprudenza</a></li>
+               <li class=""><a href="./../../../collection/eu-law/eu-case-law/reports.html" class="no-arrow" id="electronic-report" title="Raccolta della giurisprudenza">Raccolta della giurisprudenza</a></li>
+               <li class=""><a href="./../../../browse/directories/new-case-law.html" class="no-arrow" id="directory-eu-case-law" title="Repertorio della giurisprudenza">Repertorio della giurisprudenza</a></li>
             </ul>
          </nav>
       </div>
@@ -1897,12 +1851,12 @@
          <nav class="MenuBlock ">
             <p class="BlockTitle" role="heading">Gazzetta ufficiale</p>
             <ul class="MenuList">
-               <li class=""><a href="./../../oj/direct-access.html" class="no-arrow" id="direct-access" title="Accesso alla Gazzetta ufficiale">Accesso alla Gazzetta ufficiale</a></li>
-               <li class=""><a href="./../../oj/daily-view/L-series/default.html" class="no-arrow" id="L-series" title="Serie L della Gazzetta ufficiale, visualizzazione per giorno">Serie L della Gazzetta ufficiale, visualizzazione per giorno</a></li>
-               <li class=""><a href="./../../oj/daily-view/C-series/default.html" class="no-arrow" id="C-series" title="Serie C della Gazzetta ufficiale, visualizzazione per giorno">Serie C della Gazzetta ufficiale, visualizzazione per giorno</a></li>
-               <li class=""><a href="./../../oj/browse-oj.html" class="no-arrow" id="boj" title="Consulta la Gazzetta ufficiale">Consulta la Gazzetta ufficiale</a></li>
-               <li class=""><a href="./../../oj/all/auth-direct-access.html" class="no-arrow" id="auth-direct-access" title="Edizioni su carta giuridicamente vincolanti">Edizioni su carta giuridicamente vincolanti</a></li>
-               <li class=""><a href="./../../eu-enlargement/special.html" class="no-arrow" id="se" title="Edizione speciale">Edizione speciale</a></li>
+               <li class=""><a href="./../../../oj/direct-access.html" class="no-arrow" id="direct-access" title="Accesso alla Gazzetta ufficiale">Accesso alla Gazzetta ufficiale</a></li>
+               <li class=""><a href="./../../../oj/daily-view/L-series/default.html" class="no-arrow" id="L-series" title="Serie L della Gazzetta ufficiale, visualizzazione per giorno">Serie L della Gazzetta ufficiale, visualizzazione per giorno</a></li>
+               <li class=""><a href="./../../../oj/daily-view/C-series/default.html" class="no-arrow" id="C-series" title="Serie C della Gazzetta ufficiale, visualizzazione per giorno">Serie C della Gazzetta ufficiale, visualizzazione per giorno</a></li>
+               <li class=""><a href="./../../../oj/browse-oj.html" class="no-arrow" id="boj" title="Consulta la Gazzetta ufficiale">Consulta la Gazzetta ufficiale</a></li>
+               <li class=""><a href="./../../../oj/all/auth-direct-access.html" class="no-arrow" id="auth-direct-access" title="Edizioni su carta giuridicamente vincolanti">Edizioni su carta giuridicamente vincolanti</a></li>
+               <li class=""><a href="./../../../eu-enlargement/special.html" class="no-arrow" id="se" title="Edizione speciale">Edizione speciale</a></li>
             </ul>
          </nav>
       </div>
@@ -1910,9 +1864,9 @@
          <nav class="MenuBlock ">
             <p class="BlockTitle" role="heading">Legislazione nazionale e giurisprudenza</p>
             <ul class="MenuList">
-               <li class=""><a href="./../../collection/n-law/mne.html" class="no-arrow" id="mne" title="Recepimento nazionale">Recepimento nazionale</a></li>
-               <li class=""><a href="./../../collection/n-law/n-case-law.html" class="no-arrow" id="n-case-law" title="Giurisprudenza nazionale">Giurisprudenza nazionale</a></li>
-               <li class=""><a href="./../../collection/n-law/jure.html" class="no-arrow" id="JURE" title="JURE (Competenza, riconoscimento ed esecuzione delle decisioni in materia civile e commerciale) ">Giurisprudenza JURE</a></li>
+               <li class=""><a href="./../../../collection/n-law/mne.html" class="no-arrow" id="mne" title="Recepimento nazionale">Recepimento nazionale</a></li>
+               <li class=""><a href="./../../../collection/n-law/n-case-law.html" class="no-arrow" id="n-case-law" title="Giurisprudenza nazionale">Giurisprudenza nazionale</a></li>
+               <li class=""><a href="./../../../collection/n-law/jure.html" class="no-arrow" id="JURE" title="JURE (Competenza, riconoscimento ed esecuzione delle decisioni in materia civile e commerciale) ">Giurisprudenza JURE</a></li>
             </ul>
          </nav>
       </div>
@@ -1920,20 +1874,20 @@
          <nav class="MenuBlock ">
             <p class="BlockTitle" role="heading">Informazioni</p>
             <ul class="MenuList TreeMenu">
-               <li class=""><a href="./../../content/news/index.html" class="no-arrow" id="Themes_in_focus" title="Temi di attualità">Temi di attualità</a></li>
-               <li class=""><a href="./../../content/development/index.html" class="no-arrow" id="developmentsEUR-Lex" title="Ultime novità su EUR-Lex">Ultime novità su EUR-Lex</a></li>
-               <li class=""><a href="./../../statistics/statistics.html" class="no-arrow" id="statistic" title="Statistiche">Statistiche</a></li>
+               <li class=""><a href="./../../../content/news/index.html" class="no-arrow" id="Themes_in_focus" title="Temi di attualità">Temi di attualità</a></li>
+               <li class=""><a href="./../../../content/development/index.html" class="no-arrow" id="developmentsEUR-Lex" title="Ultime novità su EUR-Lex">Ultime novità su EUR-Lex</a></li>
+               <li class=""><a href="./../../../statistics/statistics.html" class="no-arrow" id="statistic" title="Statistiche">Statistiche</a></li>
                <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="eli-register-nav" title="Registro dell'ELI (identificatore della legislazione europea)"><i class="fa fa-angle-right" aria-hidden="true"></i>Registro ELI</a><ul class="collapse">
-                     <li class=""><a href="./../../eli-register/what_is_eli.html" id="what_is_eli" title="Cos'è l'ELI?">Cos'è l'ELI?</a></li>
-                     <li class=""><a href="./../../eli-register/background.html" id="eli_background" title="L'ELI - informazioni generali">L'ELI - informazioni generali</a></li>
-                     <li class=""><a href="./../../eli-register/benefits.html" id="advantages" title="Perché attuare l'ELI">Perché attuare l'ELI</a></li>
-                     <li class=""><a href="./../../eli-register/implementing_countries.html" id="implementing_countries" title="I paesi che attuano l'ELI">I paesi che attuano l'ELI</a></li>
-                     <li class=""><a href="./../../eli-register/testimonials.html" id="testimonials" title="Testimonianze">Testimonianze</a></li>
-                     <li class=""><a href="./../../eli-register/implementing_eli.html" id="implementing_eli" title="Attuazione dell'ELI">Attuazione dell'ELI</a></li>
-                     <li class=""><a href="./../../eli-register/glossary.html" id="eli_glossary" title="Glossario">Glossario</a></li>
+                     <li class=""><a href="./../../../eli-register/what_is_eli.html" id="what_is_eli" title="Cos'è l'ELI?">Cos'è l'ELI?</a></li>
+                     <li class=""><a href="./../../../eli-register/background.html" id="eli_background" title="L'ELI - informazioni generali">L'ELI - informazioni generali</a></li>
+                     <li class=""><a href="./../../../eli-register/benefits.html" id="advantages" title="Perché attuare l'ELI">Perché attuare l'ELI</a></li>
+                     <li class=""><a href="./../../../eli-register/implementing_countries.html" id="implementing_countries" title="I paesi che attuano l'ELI">I paesi che attuano l'ELI</a></li>
+                     <li class=""><a href="./../../../eli-register/testimonials.html" id="testimonials" title="Testimonianze">Testimonianze</a></li>
+                     <li class=""><a href="./../../../eli-register/implementing_eli.html" id="implementing_eli" title="Attuazione dell'ELI">Attuazione dell'ELI</a></li>
+                     <li class=""><a href="./../../../eli-register/glossary.html" id="eli_glossary" title="Glossario">Glossario</a></li>
                   </ul>
                </li>
-               <li class=""><a href="./../../budget/www/index-en.htm" class="no-arrow" id="EU_budget" title="Bilancio on line">Bilancio on line</a></li>
+               <li class=""><a href="./../../../budget/www/index-en.htm" class="no-arrow" id="EU_budget" title="Bilancio on line">Bilancio on line</a></li>
             </ul>
          </nav>
       </div>
@@ -1959,8 +1913,8 @@
 	<div class="col-xs-10">
 		<div class="EurlexSearch">
 			
-	<form id="quick-search" name="quick-search" class="DistinctiveForm QSF" action="./../../quick-search-form.html" method="post" onsubmit="showHourglass();" autocomplete="off">
-				<input id="editscope" type="hidden" name="scope" value="EU_LAW"/>
+	<form id="quick-search" name="quick-search" class="DistinctiveForm QSF" action="./../../../quick-search-form.html" method="post" onsubmit="showHourglass();" autocomplete="off">
+				<input id="editscope" type="hidden" name="scope" value="EURLEX"/>
 				<div class="QuickSearch">
 					
 	
@@ -1988,7 +1942,7 @@
 	
 				<div class="DistinctiveFormMessage EurlexTooltip" tabindex="0" data-toggle="tooltip" title="Rimuovere le altre opzioni di ricerca rapida prima di usare questa opzione"></div>	
 			<div>
-<input type="hidden" name="_csrf" value="445aa6d6-888d-4dff-8668-14a340eeb4c7" />
+<input type="hidden" name="_csrf" value="dda6b8ef-2ad7-42b1-9eac-8c49a7ecbda9" />
 </div></form>
 	
 			<div class="QuickSearchOptions fade sr-only">
@@ -2094,7 +2048,7 @@
 
 
 
-<a href="./../../advanced-search-form.html"       title="Ricerca avanzata"         aria-label="">Ricerca avanzata</a>
+<a href="./../../../advanced-search-form.html"       title="Ricerca avanzata"         aria-label="">Ricerca avanzata</a>
  	
 	
 	</div>	</div>
@@ -2102,7 +2056,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			var quickSearchFld = $('#QuickSearchField.autocompleteField');
-			typeaheadFld(quickSearchFld, "./../../autocomplete.html", true, 'QuickSearch');
+			typeaheadFld(quickSearchFld, "./../../../autocomplete.html", true, 'QuickSearch');
 		});
 		var quickSearchHelpAlt="Utilizzare le virgolette per cercare una &quot;frase esatta&quot;. Aggiungere un asterisco (<abbr title='Asterisco'>*</abbr>) a un termine di ricerca per trovarne le varianti (recep<abbr title='Asterisco'>*</abbr>, 32019R<abbr title='Asterisco'>*</abbr>). Utilizzare un punto interrogativo (<abbr title='Punto interrogativo'>?</abbr>) al posto di un determinato carattere nella ricerca per trovare le possibili varianti (cercando &quot;ca<abbr title='Punto interrogativo'>?</abbr>o&quot; si trovano i seguenti risultati: caso, capo, calo).";
 		var quickSearchHelp="Utilizzare le virgolette per cercare una &quot;frase esatta&quot;. Aggiungere un asterisco (<abbr title='Asterisco'>*</abbr>) a un termine di ricerca per trovarne le varianti (recep<abbr title='Asterisco'>*</abbr>, 32019R<abbr title='Asterisco'>*</abbr>). Utilizzare un punto interrogativo (<abbr title='Punto interrogativo'>?</abbr>) al posto di un determinato carattere nella ricerca per trovare le possibili varianti (cercando &quot;ca<abbr title='Punto interrogativo'>?</abbr>o&quot; si trovano i seguenti risultati: caso, capo, calo).";
@@ -2162,10 +2116,144 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
 	
 		<div id="MainContent">
 			
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
  
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 
@@ -2197,30 +2285,44 @@
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 			<div class="row">
-					
+				
 				<div class="col-xs-2 col-sm-1 visible-xs-block visible-sm-block">
-					<button type="button" class="btn btn-default btn-sm btn-block visible-xs-inline visible-sm-inline"
-							data-toggle="offcanvas">
-						<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-					</button>
+					
+						<button type="button" class="btn btn-default btn-sm btn-block visible-xs-inline visible-sm-inline"
+								data-toggle="offcanvas">
+							<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+						</button>
+					
+					
+					
 				</div><!-- col -->
+				
+				<div class="col-xs-2 col-sm-1 visible-xs-block visible-sm-block">
 					
-				<div class="col-xs-8 col-sm-10 visible-xs-block visible-sm-block"></div><!-- col -->
+	</div>	
+				<div class="col-xs-5 col-sm-4 col-md-3 col-sm-push-4 col-md-push-3 col-xs-pull-2">
+					<p class="DocumentTitle pull-left">Documento&nbsp;62023CO0034</p>
+				</div><!-- col -->
+				<div class="col-sm-5 col-md-3 col-md-pull-3 hidden-xs col-sm-pull-5">
 					
-					<div class="col-xs-2 col-sm-1 col-md-12">
-						<div class="PageShare pageShareMobile">
-							
+
+
+
+
+
+
+
+
+
+
+
+	
+	</div>	
+						<div class="col-xs-2 col-sm-1 col-md-6 " >
+							<div class="PageShare pageShareMobile">
+								
 
 
 
@@ -2243,7 +2345,7 @@
  
  
  
- <a href="./../../content/help.html" class="PSHelp EurlexTooltip" aria-description = "Help" data-toggle="tooltip" title="Guida" data-original-title="Help" ><svg class="ecl-icon ecl-icon--s faq-image-size" focusable="false" aria-hidden="false" role="img"><use xlink:href="./../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/faq.svg#faq" /></svg>Guida</a>
+ <a href="./../../../content/help.html" class="PSHelp EurlexTooltip" aria-description = "Help" data-toggle="tooltip" title="Guida" data-original-title="Help" ><svg class="ecl-icon ecl-icon--s faq-image-size" focusable="false" aria-hidden="false" role="img"><use xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/faq.svg#faq" /></svg>Guida</a>
  
  
  
@@ -2262,55 +2364,13 @@
  
  
  
- 
-            <li class="hidden-xs hidden-sm">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a href="./../../print-pdf.html?pageTitle=Accordi+internazionali&amp;currentUrl=%2Fcollection%2Feu-law%2Finter-agree.html"    class="PSPDF EurlexTooltip"   title="Esporta come PDF"    data-toggle="tooltip" aria-description="Export PDF" data-original-title="Export PDF"   aria-label="">
-                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                    Esporta come PDF
- </a>
-
- </li> 
  
  
  
  
  
         <li class="hidden-xs hidden-sm">
-            <button data-target="./../../collection/eu-law/inter-agree.html?print=true" onclick="window.open('./../../collection/eu-law/inter-agree.html?print=true','','scrollbars=yes,menubar=no, status=no, directories=no, location=no, resizable=no, width=1024, height=600');return false;" target="_blank" class="PSPrint EurlexTooltip" data-toggle="tooltip" title="Stampare" aria-description="Stampare"  data-original-title="Print this page">
+            <button data-target="./../../../legal-content/IT/SUM/?uri=CELEX%3A62023CO0034_INF&amp;print=true" onclick="window.open('./../../../legal-content/IT/SUM/?uri=CELEX%3A62023CO0034_INF&amp;print=true','','scrollbars=yes,menubar=no, status=no, directories=no, location=no, resizable=no, width=1024, height=600');return false;" target="_blank" class="PSPrint EurlexTooltip" data-toggle="tooltip" title="Stampare" aria-description="Stampare"  data-original-title="Print this page">
                 <i class="fa fa-print" aria-hidden="true"></i>
                 Stampare
  </button> </li> 
@@ -2325,7 +2385,7 @@
                     "css": {
                         "button": "myButton"
                     },
-                    "link": "https://eur-lex.europa.eu/collection/eu-law/inter-agree.html"
+                    "link": "https://eur-lex.europa.eu/legal-content/IT/SUM/?uri=celex:62023CO0034"
                 }</script>
             </li>
         
@@ -2359,12 +2419,27 @@
 
 	</div>	</div><!-- col -->	</div>	<!-- row -->	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </div>
 
 
-    <div class="row row-offcanvas">
-    
- 
+
+
+		<div class="row row-offcanvas">
+				
+	
+	
+	
+	
 
 
 
@@ -2377,102 +2452,356 @@
  
  
  
+            <div class="AffixSidebarWrapper">
+                <nav class="Sidebar" id="AffixSidebar">
+                    
+	
+	
+	
+				<ul class="MenuList">
+
+
+						
+	
+	
+	<li >	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../legal-content/IT/TXT/?uri=CELEX:62023CO0034_INF"                aria-label="">
+	Testo
+	</a>
+
+	
+							<input type="hidden" id="selectedTabEnglishTranslationID_text"
+								   value="Text">
+						</li>
+					
+	
+	
+	
+	<li >	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../legal-content/IT/ALL/?uri=CELEX:62023CO0034_INF"                aria-label="">
+	Informazioni sul documento
+	</a>
+
+	
+							<input type="hidden" id="selectedTabEnglishTranslationID_all"
+								   value="Document information">
+						</li>
+					
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="Selected">	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../legal-content/IT/SUM/?uri=CELEX:62023CO0034_INF"                aria-label="">
+	
+	
+	
+	
+	
+	Info
+	
+	
+	
+	
+	
+	
+	
+	
+	</a>
+
+	
+	
+	
+	
+	
+	
+	
+												<input type="hidden" id="selectedTabEnglishTranslationID_inf"
+										   			   value="Information">
+											
+	
+	
+	
+	
+	
+	
+	
+	</li>	
+	
  
-            <nav class="Sidebar">
-                
+ 
+	
+ 
+	
+	
+	
+	</ul>	
+				<ul class="SidebarTools">
+
+				    
+ 
+ 
+ <li>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a
+        id="link-permanent-link" class="hidden-print hideInPdf" style="display:none"
+        href="javascript:;"
+        onclick="createCookie('bookmark','trigger',1); window.open('./../../../legal-content/IT/SUM/?uri=CELEX:62023CO0034_INF'+window.location.hash); return true;"
+        title="Link a questa versione del documento"><i
+        class="fa fa-bookmark" aria-hidden="true"></i>Link permanente</a>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (readCookie('bookmark') == 'trigger') {
+            deleteCookie('bookmark');
+
+        } else {
+        	// Permanent link (DISPLAYED FIST) should remove qid from query string, and bookmark link should be displayed in its place when page refreshes
+            $('#link-permanent-link').addClass("onlyJsInlineBlock");
+            $('#link-permanent-link').show();
+        }
+    });
+</script>
+
+ </li> 
  
  
  
+	
+	
+	<li>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../error/authentication-required.html?callingUrl=%2Flegal-content%2FIT%2FSUM%2F%3Furi%3DCELEX%253A62023CO0034_INF&amp;towardUrl=%2Fprotected%2Fsave-document.html%3FlegalContentId%3Dcellar%3Aa4cb8278-dacf-11ee-b9d9-01aa75ed71a1%26callingUrl%3D%252Flegal-content%252FIT%252FSUM%252F%253Furi%253DCELEX%25253A62023CO0034_INF"    class="eurlexModal grayLink"   title="Salvare l&#039;elemento" id="link-save-document"        aria-label="">
+	
+	
+	 
+	
+                    			<i class="fa fa-sticky-note-o" aria-hidden="true"></i> Salvare ne &quot;I miei elementi&quot;
+	
+	
+	
+	
+</a>
+
+	</li> 
+	
+	
+	
+	
+	
+	
  
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
+ 
 	
 	
 	
-	
-
-
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	<ul class="MenuList">
-   <li class="Selected"><a href="./../../collection/eu-law/inter-agree.html" title="" id="inter-agree_menu">Accordi internazionali</a></li>
-</ul>
-<ul class="SidebarTools secondaryMenu">
-   <li><a href="./../../redirect-advanced-search-form.html?DTS_DOM=EU_LAW&amp;DTS_SUBDOM=INTER_AGREE" title="" id="search-inter-agree_menu"><i class="fa fa-search-plus" aria-hidden="true"></i>Ricerca negli accordi internazionali</a></li>
-   <li><a href="./../../browse/directories/inter-agree.html" title="" id="browse-agreements_menu"><i class="fa fa-indent" aria-hidden="true"></i>Repertorio degli accordi internazionali</a></li>
-   <li><a href="./../../search.html?type=named&amp;name=collection:eu-law-inter-agree" title="" id="recent-inter-agree_menu"><i class="fa fa-clock-o" aria-hidden="true"></i>Pubblicazioni recenti</a></li>
-</ul>
-	
-
  
  
+	
+	
+	</ul>	
+	
+	
+	
+ 
+	
+	
+ </nav> </div> <!-- AffixSidebarWrapper --> 
  
  
- </nav> 
  
 </div>
 
- 
- 
-        <div class="col-md-9">
-            <div class="EurlexContent">
-                
+	
+			<div class="col-md-9"  id="documentView">
+				<div class="EurlexContent">
+						
 	
 
 
@@ -2480,76 +2809,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
- 
-            <h1 class="SectionTitle">
-                
- 
- Accordi internazionali
- 
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
- 
- </h1> 
- 
-
-
-
-
-
-
  
  
  
@@ -2593,52 +2852,6 @@
 
 
 
- 
- 
-
-
-	
- 
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	
-	
-	
-
-
-	
-		<!-- Editorial content start -->
-		<div class="EurlexEditorial">
 	
 	
 
@@ -2653,115 +2866,1114 @@
 
 
 
+
+
+
+ 
+ 
+ 
 	
 	
+	
+	
+	
 
-<p>In questa sezione si trovano gli strumenti prodotti dall'UE nell'esercizio delle sue
-   competenze esterne, tra cui:
-</p>
+								<div class="PageTools clearfix hideInPdf">
 
-
-
-<ul>
-   
-   
-   <li>gli accordi conclusi congiuntamente dagli Stati membri e dall'Unione europea (o dalle
-      ex Comunità europee - CE, CEE, CECA) e/o dalla Comunità europea dell'energia atomica
-      con paesi terzi o con organizzazioni internazionali in settori di competenza concorrente
-      tra l'UE e gli Stati membri ("accordi misti")
-   </li>
-   
-   
-   <li>gli accordi bilaterali e multilaterali conclusi congiuntamente dagli Stati membri
-      e dall'Unione europea (o dalle ex Comunità europee - CE, CEE, CECA) e/o dalla Comunità
-      europea dell'energia atomica con paesi terzi o con organizzazioni internazionali in
-      settori in cui l'UE può agire da sola ("di competenza esclusiva dell'UE")
-   </li>
-   
-   
-   <li>gli atti degli organismi istituiti da tali accordi internazionali.</li>
-   
-</ul>
-<br>
-
-
-<p>Gli accordi internazionali dell'UE sono accompagnati da una ricca analisi giuridica
-   e da link a informazioni correlate (validità degli atti, date di decorrenza, rapporti
-   con altri documenti, ecc.).
-</p>
-
-
-
-<h2>Come effettuare una ricerca in questa sezione?</h2>
-
-
-
-<p>Sul lato sinistro di questa pagina si accede agli strumenti di ricerca.</p>
-
-
-
-<ul>
-   
-   
-   <li>Cliccando su <strong>Ricerca negli accordi internazionali</strong> si apre un modulo di ricerca avanzata che offre molte opzioni. Le ricerche saranno
-      effettuate solo nell'ambito della sezione "Accordi internazionali".
-   </li>
-   
-   
-   <li>Il <strong>Repertorio degli accordi internazionali</strong> contiene tutti i documenti di questa sezione organizzati in 20 argomenti principali
-      e diversi sottoargomenti.
-   </li>
-   
-   
-   <li>Cliccando su <strong>Pubblicazioni recenti</strong> si accede a tutti i documenti pubblicati in questa sezione negli ultimi 14 giorni.
-   </li>
-   
-</ul>
-
-<br>
-<br>
-
-
-<p>
-   <button class="btn btn-link ViewMoreInfo collapsed" data-toggle="collapse" data-target="#AdditionalEditorial" aria-expanded="false" aria-controls="AdditionalEditorial"> <i class="fa fa-angle-right" aria-hidden="true"></i>
-      <span class="VMIMore">Visualizza di più sugli accordi internazionali</span>
-      <span class="VMILess">Visualizza di meno sugli accordi internazionali</span>
-      </button>
-   
-</p>
-<br>
-
-
-
-<div class="collapse" id="AdditionalEditorial" aria-expanded="false">
-   
-   
-   <p>Gli accordi internazionali dell'UE sono accordi giuridicamente vincolanti tra l'Unione
-      europea e uno o più paesi terzi o organizzazioni internazionali. Possono essere conclusi
-      quando i trattati lo prevedono o quando la conclusione di un accordo: i) è necessaria
-      per realizzare, nel quadro delle politiche dell'Unione, uno degli obiettivi previsti
-      dai trattati ii) è prevista in un atto giuridicamente vincolante dell'UE oppure iii)
-      può incidere su norme comuni o modificarne la portata.
-   </p>
-   
-   
-   <p>L' <a class="underlineLink" href="./../../summary/glossary/external_responsibilities.html" target="_blank">azione esterna dell'UE</a> è definita nel titolo V del trattato sull'Unione europea e nella parte 5 del trattato
-      sul funzionamento dell'Unione europea (TFUE). La procedura di negoziazione e adozione
-      degli <a class="underlineLink" href="./../../legal-content/IT/TXT/?uri=LEGISSUM:ai0034" target="_blank">accordi internazionali</a> è definita negli articoli <a class="underlineLink" href="./../../legal-content/IT/TXT/?uri=CELEX:12016E207" target="_blank">207</a> e <a class="underlineLink" href="./../../legal-content/IT/TXT/?uri=CELEX:12016E218" target="_blank">218</a> del TFUE per la politica commerciale comune e per gli altri settori dell'azione esterna,
-      rispettivamente.
-   </p>
-   
+									<div class="btn-group btn-group-xs pull-right" role="group" aria-label="">
+										<button onclick="expandAll()" id="ExpandAll" type="button" class="btn btn-link"><i
+												class="fa fa-angle-double-down" aria-hidden="true"></i> Espandere tutto
+										</button>
+										<button onclick="collapseAll()" id="CollapseAll" type="button" class="btn btn-link"><i
+												class="fa fa-angle-double-up" aria-hidden="true"></i> Comprimere tutto
+	</button>	</div>	</div>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- panel-group that hosts all page panels -->
+	<div class="panel-group" role="tablist" aria-multiselectable="true">
+		<div class="panel panel-default PagePanel">
+   <div class="panel-heading" role="tab" id="PP1">
+      <h2 class="panel-title">
+         <button data-toggle="collapse" data-target="#PP1Contents" aria-expanded="true"
+                 aria-controls="PP1Contents"
+                 onclick="createDocPartCookie(this);">
+            <i class="fa fa-angle-right" aria-hidden="true">&nbsp;</i>Titolo e riferimento</button>
+      </h2>
+   </div>
+   <div id="PP1Contents" class="panel-collapse collapse in" role="tabpanel"
+        aria-labelledby="PP1">
+      <div class="panel-body" lang="IT">
+         <div id="translatedTitle" class="hidden">
+            ​
+        </div>
+         <p id="englishTitle" class="hidden"/>
+         <p id="title" class="title-bold">Ordinanza della Corte (Nona Sezione) del 20 febbraio 2024.<br xmlns="http://www.w3.org/1999/xhtml"/>RF contro Getin Noble Bank S.A.<br xmlns="http://www.w3.org/1999/xhtml"/>Rinvio pregiudiziale – Articolo 53, paragrafo 2, del regolamento di procedura della Corte – Risanamento e risoluzione degli enti creditizi – Potere di restringere l'esecuzione delle garanzie – Disposizione da interpretare che non ha alcun legame con l'oggetto del procedimento principale – Irricevibilità manifesta.<br xmlns="http://www.w3.org/1999/xhtml"/>Causa C-34/23.</p>
+         <p id="originalTitle" class="hidden">Ordinanza della Corte (Nona Sezione) del 20 febbraio 2024.<br xmlns="http://www.w3.org/1999/xhtml"/>RF contro Getin Noble Bank S.A.<br xmlns="http://www.w3.org/1999/xhtml"/>Rinvio pregiudiziale – Articolo 53, paragrafo 2, del regolamento di procedura della Corte – Risanamento e risoluzione degli enti creditizi – Potere di restringere l'esecuzione delle garanzie – Disposizione da interpretare che non ha alcun legame con l'oggetto del procedimento principale – Irricevibilità manifesta.<br xmlns="http://www.w3.org/1999/xhtml"/>Causa C-34/23.</p>
+         <p>
+            <em>Raccolta della giurisprudenza - generale</em>
+         </p>
+         <p>Identificatore ECLI: ECLI:EU:C:2024:203</p>
+      </div>
+   </div>
 </div>
+<div class="panel panel-default PagePanel">
+   <div class="panel-heading" role="tab" id="PP2">
+      <p class="panel-title">
+         <button data-toggle="collapse" data-target="#PP2Contents" aria-expanded="true"
+                 aria-controls="PP2Contents"
+                 class=" "
+                 onclick="createDocPartCookie(this);">
+            <i class="fa fa-angle-right" aria-hidden="true">&nbsp;</i>Lingue e formati disponibili</button>
+      </p>
+   </div>
+   <div id="PP2Contents" class="panel-collapse collapse in" role="tabpanel"
+        aria-labelledby="PP2">
+      <div class="panel-body PanelBodyB">
+         <span class="small pull-right hidden-xs hidden-sm">
+            <sup>
+               <i class="fa fa-asterisk" aria-hidden="true">&nbsp;</i>
+            </sup>Lingua della causa</span>
+         <div class="PubFormats">
+            <div class="PubFormat visible-lg-table">
+               <div class="PubFormatType">
+                  <span class="sr-only">Lingua</span>
+               </div>
+               <div class="btn-group btn-group-sm">
+                  <ul class="dropdown-menu PubFormatVIEW">
+                     <li class="">
+                        <a href="./../../../legal-content/BG/SUM/?uri=CELEX:62023CO0034_INF" lang="bg"
+                           hreflang="bg"
+                           title="български">
+                           <span>BG</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/ES/SUM/?uri=CELEX:62023CO0034_INF" lang="es"
+                           hreflang="es"
+                           title="Español">
+                           <span>ES</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/CS/SUM/?uri=CELEX:62023CO0034_INF" lang="cs"
+                           hreflang="cs"
+                           title="Čeština">
+                           <span>CS</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/DA/SUM/?uri=CELEX:62023CO0034_INF" lang="da"
+                           hreflang="da"
+                           title="Dansk">
+                           <span>DA</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/DE/SUM/?uri=CELEX:62023CO0034_INF" lang="de"
+                           hreflang="de"
+                           title="Deutsch">
+                           <span>DE</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/ET/SUM/?uri=CELEX:62023CO0034_INF" lang="et"
+                           hreflang="et"
+                           title="Eesti keel">
+                           <span>ET</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/EL/SUM/?uri=CELEX:62023CO0034_INF" lang="el"
+                           hreflang="el"
+                           title="Ελληνικά">
+                           <span>EL</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/EN/SUM/?uri=CELEX:62023CO0034_INF" lang="en"
+                           hreflang="en"
+                           title="English">
+                           <span>EN</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/FR/SUM/?uri=CELEX:62023CO0034_INF" lang="fr"
+                           hreflang="fr"
+                           title="Français">
+                           <span>FR</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/GA/SUM/?uri=CELEX:62023CO0034_INF" lang="ga"
+                           hreflang="ga"
+                           title="Gaeilge">
+                           <span>GA</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/HR/SUM/?uri=CELEX:62023CO0034_INF" lang="hr"
+                           hreflang="hr"
+                           title="Hrvatski">
+                           <span>HR</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/IT/SUM/?uri=CELEX:62023CO0034_INF" lang="it"
+                           hreflang="it"
+                           title="Italiano">
+                           <span>IT</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/LV/SUM/?uri=CELEX:62023CO0034_INF" lang="lv"
+                           hreflang="lv"
+                           title="Latviešu valoda">
+                           <span>LV</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/LT/SUM/?uri=CELEX:62023CO0034_INF" lang="lt"
+                           hreflang="lt"
+                           title="Lietuvių kalba">
+                           <span>LT</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/HU/SUM/?uri=CELEX:62023CO0034_INF" lang="hu"
+                           hreflang="hu"
+                           title="Magyar">
+                           <span>HU</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/MT/SUM/?uri=CELEX:62023CO0034_INF" lang="mt"
+                           hreflang="mt"
+                           title="Malti">
+                           <span>MT</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/NL/SUM/?uri=CELEX:62023CO0034_INF" lang="nl"
+                           hreflang="nl"
+                           title="Nederlands">
+                           <span>NL</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/PL/SUM/?uri=CELEX:62023CO0034_INF" lang="pl"
+                           hreflang="pl"
+                           title="Polski">
+                           <span>PL<sup class="languageAsterisk">
+                                 <i class="fa fa-asterisk" aria-hidden="true">&nbsp;</i>
+                              </sup>
+                           </span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/PT/SUM/?uri=CELEX:62023CO0034_INF" lang="pt"
+                           hreflang="pt"
+                           title="Português">
+                           <span>PT</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/RO/SUM/?uri=CELEX:62023CO0034_INF" lang="ro"
+                           hreflang="ro"
+                           title="Română">
+                           <span>RO</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/SK/SUM/?uri=CELEX:62023CO0034_INF" lang="sk"
+                           hreflang="sk"
+                           title="Slovenčina">
+                           <span>SK</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/SL/SUM/?uri=CELEX:62023CO0034_INF" lang="sl"
+                           hreflang="sl"
+                           title="Slovenščina">
+                           <span>SL</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/FI/SUM/?uri=CELEX:62023CO0034_INF" lang="fi"
+                           hreflang="fi"
+                           title="Suomi">
+                           <span>FI</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/SV/SUM/?uri=CELEX:62023CO0034_INF" lang="sv"
+                           hreflang="sv"
+                           title="Svenska">
+                           <span>SV</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="PubFormat">
+               <div class="PubFormatType">
+                  <i class="exi exi-html" aria-hidden="true">&nbsp;</i>
+                  <span>HTML</span>
+               </div>
+               <div class="btn-group btn-group-md">
+                  <button type="button" class="btn btn-primary " title="HTML Italiano"
+                          onclick="$('#format_language_table_HTML_IT').click();">
+                     <span>IT</span>
+                  </button>
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                     <i class="fa fa-caret-down" aria-hidden="true"> </i>
+                     <span class="sr-only">Attiva menu a discesa</span>
+                  </button>
+                  <ul class="dropdown-menu PubFormatHTML">
+                     <li>
+                        <a href="./../../../legal-content/BG/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_BG"
+                           class="piwik_download"
+                           title="HTML български"
+                           lang="bg"
+                           hreflang="bg">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>BG</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/ES/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_ES"
+                           class="piwik_download"
+                           title="HTML Español"
+                           lang="es"
+                           hreflang="es">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>ES</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/CS/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_CS"
+                           class="piwik_download"
+                           title="HTML Čeština"
+                           lang="cs"
+                           hreflang="cs">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>CS</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/DA/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_DA"
+                           class="piwik_download"
+                           title="HTML Dansk"
+                           lang="da"
+                           hreflang="da">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>DA</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/DE/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_DE"
+                           class="piwik_download"
+                           title="HTML Deutsch"
+                           lang="de"
+                           hreflang="de">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>DE</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/ET/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_ET"
+                           class="piwik_download"
+                           title="HTML Eesti keel"
+                           lang="et"
+                           hreflang="et">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>ET</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/EL/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_EL"
+                           class="piwik_download"
+                           title="HTML Ελληνικά"
+                           lang="el"
+                           hreflang="el">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>EL</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/EN/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_EN"
+                           class="piwik_download"
+                           title="HTML English"
+                           lang="en"
+                           hreflang="en">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>EN</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/FR/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_FR"
+                           class="piwik_download"
+                           title="HTML Français"
+                           lang="fr"
+                           hreflang="fr">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>FR</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/GA/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_GA"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>GA</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/HR/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_HR"
+                           class="piwik_download"
+                           title="HTML Hrvatski"
+                           lang="hr"
+                           hreflang="hr">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>HR</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/IT/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_IT"
+                           class="piwik_download"
+                           title="HTML Italiano"
+                           lang="it"
+                           hreflang="it">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>IT</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/LV/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_LV"
+                           class="piwik_download"
+                           title="HTML Latviešu valoda"
+                           lang="lv"
+                           hreflang="lv">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>LV</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/LT/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_LT"
+                           class="piwik_download"
+                           title="HTML Lietuvių kalba"
+                           lang="lt"
+                           hreflang="lt">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>LT</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/HU/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_HU"
+                           class="piwik_download"
+                           title="HTML Magyar"
+                           lang="hu"
+                           hreflang="hu">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>HU</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/MT/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_MT"
+                           class="piwik_download"
+                           title="HTML Malti"
+                           lang="mt"
+                           hreflang="mt">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>MT</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/NL/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_NL"
+                           class="piwik_download"
+                           title="HTML Nederlands"
+                           lang="nl"
+                           hreflang="nl">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>NL</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/PL/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_PL"
+                           class="piwik_download"
+                           title="HTML Polski"
+                           lang="pl"
+                           hreflang="pl">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>PL</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/PT/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_PT"
+                           class="piwik_download"
+                           title="HTML Português"
+                           lang="pt"
+                           hreflang="pt">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>PT</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/RO/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_RO"
+                           class="piwik_download"
+                           title="HTML Română"
+                           lang="ro"
+                           hreflang="ro">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>RO</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/SK/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_SK"
+                           class="piwik_download"
+                           title="HTML Slovenčina"
+                           lang="sk"
+                           hreflang="sk">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>SK</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/SL/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_SL"
+                           class="piwik_download"
+                           title="HTML Slovenščina"
+                           lang="sl"
+                           hreflang="sl">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>SL</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/FI/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_FI"
+                           class="piwik_download"
+                           title="HTML Suomi"
+                           lang="fi"
+                           hreflang="fi">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>FI</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/SV/TXT/HTML/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_HTML_SV"
+                           class="piwik_download"
+                           title="HTML Svenska"
+                           lang="sv"
+                           hreflang="sv">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>SV</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="PubFormat">
+               <div class="PubFormatType">
+                  <i class="exi exi-recueil" aria-hidden="true">&nbsp;</i>
+                  <span>PDF</span>
+               </div>
+               <div class="btn-group btn-group-md">
+                  <button type="button" class="btn btn-primary " title="PDF Italiano"
+                          onclick="$('#format_language_table_PDF_IT').click();">
+                     <span>IT</span>
+                  </button>
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                     <i class="fa fa-caret-down" aria-hidden="true"> </i>
+                     <span class="sr-only">Attiva menu a discesa</span>
+                  </button>
+                  <ul class="dropdown-menu PubFormatPDF">
+                     <li>
+                        <a href="./../../../legal-content/BG/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_BG"
+                           class="piwik_download"
+                           title="PDF български"
+                           lang="bg"
+                           hreflang="bg"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>BG</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/ES/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_ES"
+                           class="piwik_download"
+                           title="PDF Español"
+                           lang="es"
+                           hreflang="es"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>ES</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/CS/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_CS"
+                           class="piwik_download"
+                           title="PDF Čeština"
+                           lang="cs"
+                           hreflang="cs"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>CS</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/DA/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_DA"
+                           class="piwik_download"
+                           title="PDF Dansk"
+                           lang="da"
+                           hreflang="da"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>DA</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/DE/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_DE"
+                           class="piwik_download"
+                           title="PDF Deutsch"
+                           lang="de"
+                           hreflang="de"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>DE</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/ET/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_ET"
+                           class="piwik_download"
+                           title="PDF Eesti keel"
+                           lang="et"
+                           hreflang="et"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>ET</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/EL/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_EL"
+                           class="piwik_download"
+                           title="PDF Ελληνικά"
+                           lang="el"
+                           hreflang="el"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>EL</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/EN/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_EN"
+                           class="piwik_download"
+                           title="PDF English"
+                           lang="en"
+                           hreflang="en"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>EN</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/FR/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_FR"
+                           class="piwik_download"
+                           title="PDF Français"
+                           lang="fr"
+                           hreflang="fr"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>FR</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/GA/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_GA"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-recueil " aria-hidden="true"> </i>
+                           <span>GA</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/HR/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_HR"
+                           class="piwik_download"
+                           title="PDF Hrvatski"
+                           lang="hr"
+                           hreflang="hr"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>HR</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/IT/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_IT"
+                           class="piwik_download"
+                           title="PDF Italiano"
+                           lang="it"
+                           hreflang="it"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>IT</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/LV/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_LV"
+                           class="piwik_download"
+                           title="PDF Latviešu valoda"
+                           lang="lv"
+                           hreflang="lv"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>LV</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/LT/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_LT"
+                           class="piwik_download"
+                           title="PDF Lietuvių kalba"
+                           lang="lt"
+                           hreflang="lt"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>LT</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/HU/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_HU"
+                           class="piwik_download"
+                           title="PDF Magyar"
+                           lang="hu"
+                           hreflang="hu"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>HU</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/MT/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_MT"
+                           class="piwik_download"
+                           title="PDF Malti"
+                           lang="mt"
+                           hreflang="mt"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>MT</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/NL/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_NL"
+                           class="piwik_download"
+                           title="PDF Nederlands"
+                           lang="nl"
+                           hreflang="nl"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>NL</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/PL/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_PL"
+                           class="piwik_download"
+                           title="PDF Polski"
+                           lang="pl"
+                           hreflang="pl"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>PL</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/PT/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_PT"
+                           class="piwik_download"
+                           title="PDF Português"
+                           lang="pt"
+                           hreflang="pt"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>PT</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/RO/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_RO"
+                           class="piwik_download"
+                           title="PDF Română"
+                           lang="ro"
+                           hreflang="ro"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>RO</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/SK/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_SK"
+                           class="piwik_download"
+                           title="PDF Slovenčina"
+                           lang="sk"
+                           hreflang="sk"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>SK</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/SL/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_SL"
+                           class="piwik_download"
+                           title="PDF Slovenščina"
+                           lang="sl"
+                           hreflang="sl"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>SL</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/FI/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_FI"
+                           class="piwik_download"
+                           title="PDF Suomi"
+                           lang="fi"
+                           hreflang="fi"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>FI</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/SV/TXT/PDF/?uri=CELEX:62023CO0034_INF"
+                           id="format_language_table_PDF_SV"
+                           class="piwik_download"
+                           title="PDF Svenska"
+                           lang="sv"
+                           hreflang="sv"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-recueil" aria-hidden="true"> </i>
+                           <span>SV</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="panel-footer">
+         <span>
+            <i class="exi exi-recueil" aria-hidden="true">&nbsp;</i>&nbsp;Documento pubblicato nella raccolta digitale. Ha status ufficiale.</span>
+      </div>
+   </div>
+</div>
+<div class="panel panel-default PagePanel ">
+   <div class="panel-heading" role="tab" id="PP3">
+      <p class="panel-title">
+         <button data-toggle="collapse" data-target="#PP3Contents" aria-expanded="true"
+                 aria-controls="PP3Contents"
+                 class=" "
+                 onclick="createDocPartCookie(this);">
+            <i class="fa fa-angle-right" aria-hidden="true">&nbsp;</i>Visualizzazione multilingue</button>
+      </p>
+   </div>
+   <div id="PP3Contents" class="panel-collapse collapse in" role="tabpanel"
+        aria-labelledby="PP3">
+      <div class="panel-body PanelBodyB">
+         <form action="./../../../legal-content/IT/SUM/?uri=&#xA;&#x9;&#x9;&#x9;&#x9;CELEX:62023CO0034_INF"
+               class="form-inline"
+               id="form"
+               name="multilingualForm"
+               method="post"><input type="hidden" name="_csrf" value="dda6b8ef-2ad7-42b1-9eac-8c49a7ecbda9" /><input type="hidden" name="from" value="IT"/>
+            <div class="form-group">
+               <label for="MDLang1" class="sr-only">Lingua 1 </label>
+               <select id="MDLang1" name="lang1" class="input-sm form-control NoBorders"
+                       aria-label="Scegli una lingua">
+                  <option value="IT">Italiano (it)</option>
+                  <option value="BG">Bulgaro (bg)</option>
+                  <option value="ES">Spagnolo (es)</option>
+                  <option value="CS">Ceco (cs)</option>
+                  <option value="DA">Danese (da)</option>
+                  <option value="DE">Tedesco (de)</option>
+                  <option value="ET">Estone (et)</option>
+                  <option value="EL">Greco (el)</option>
+                  <option value="EN">Inglese (en)</option>
+                  <option value="FR">Francese (fr)</option>
+                  <option value="HR">Croato (hr)</option>
+                  <option value="IT" selected="selected">Italiano (it)</option>
+                  <option value="LV">Lettone (lv)</option>
+                  <option value="LT">Lituano (lt)</option>
+                  <option value="HU">Ungherese (hu)</option>
+                  <option value="MT">Maltese (mt)</option>
+                  <option value="NL">Neerlandese (nl)</option>
+                  <option value="PL">Polacco (pl)</option>
+                  <option value="PT">Portoghese (pt)</option>
+                  <option value="RO">Rumeno (ro)</option>
+                  <option value="SK">Slovacco (sk)</option>
+                  <option value="SL">Sloveno (sl)</option>
+                  <option value="FI">Finlandese (fi)</option>
+                  <option value="SV">Svedese (sv)</option>
+               </select>
+            </div>
+            <div class="form-group">
+               <label for="MDLang2" class="sr-only">Lingua 2 </label>
+               <select id="MDLang2" name="lang2" class="input-sm form-control NoBorders"
+                       aria-label="Scegli una lingua">
+                  <option value="choose" selected="selected">Scegliere</option>
+                  <option value="BG">Bulgaro (bg)</option>
+                  <option value="ES">Spagnolo (es)</option>
+                  <option value="CS">Ceco (cs)</option>
+                  <option value="DA">Danese (da)</option>
+                  <option value="DE">Tedesco (de)</option>
+                  <option value="ET">Estone (et)</option>
+                  <option value="EL">Greco (el)</option>
+                  <option value="EN">Inglese (en)</option>
+                  <option value="FR">Francese (fr)</option>
+                  <option value="HR">Croato (hr)</option>
+                  <option value="IT">Italiano (it)</option>
+                  <option value="LV">Lettone (lv)</option>
+                  <option value="LT">Lituano (lt)</option>
+                  <option value="HU">Ungherese (hu)</option>
+                  <option value="MT">Maltese (mt)</option>
+                  <option value="NL">Neerlandese (nl)</option>
+                  <option value="PL">Polacco (pl)</option>
+                  <option value="PT">Portoghese (pt)</option>
+                  <option value="RO">Rumeno (ro)</option>
+                  <option value="SK">Slovacco (sk)</option>
+                  <option value="SL">Sloveno (sl)</option>
+                  <option value="FI">Finlandese (fi)</option>
+                  <option value="SV">Svedese (sv)</option>
+               </select>
+            </div>
+            <div class="form-group">
+               <label for="MDLang3" class="sr-only">Lingua 3 </label>
+               <select id="MDLang3" name="lang3" class="input-sm form-control NoBorders"
+                       aria-label="Scegli una lingua">
+                  <option value="choose" selected="selected">Scegliere</option>
+                  <option value="BG">Bulgaro (bg)</option>
+                  <option value="ES">Spagnolo (es)</option>
+                  <option value="CS">Ceco (cs)</option>
+                  <option value="DA">Danese (da)</option>
+                  <option value="DE">Tedesco (de)</option>
+                  <option value="ET">Estone (et)</option>
+                  <option value="EL">Greco (el)</option>
+                  <option value="EN">Inglese (en)</option>
+                  <option value="FR">Francese (fr)</option>
+                  <option value="HR">Croato (hr)</option>
+                  <option value="IT">Italiano (it)</option>
+                  <option value="LV">Lettone (lv)</option>
+                  <option value="LT">Lituano (lt)</option>
+                  <option value="HU">Ungherese (hu)</option>
+                  <option value="MT">Maltese (mt)</option>
+                  <option value="NL">Neerlandese (nl)</option>
+                  <option value="PL">Polacco (pl)</option>
+                  <option value="PT">Portoghese (pt)</option>
+                  <option value="RO">Rumeno (ro)</option>
+                  <option value="SK">Slovacco (sk)</option>
+                  <option value="SL">Sloveno (sl)</option>
+                  <option value="FI">Finlandese (fi)</option>
+                  <option value="SV">Svedese (sv)</option>
+               </select>
+            </div>
+            <button type="submit" class="btn btn-sm btn-primary" aria-label="Visualizzare"
+                    onclick="javascript:($('.AffixSidebarWrapper .Selected').length &gt; 0) ?           multilingualFormPiwikTracking($('.AffixSidebarWrapper .Selected a').siblings('input[id^=selectedTabEnglishTranslationID]').val()) :           multilingualFormPiwikTracking('') ;submit(); showHourglass();">Visualizzare</button>
+         </form>
+      </div>
+   </div>
+</div>
+	
+	
+	
+				<div class="panel panel-default PagePanel">
+					<div class="panel-heading" role="tab" id="PP4">
+						<p class="panel-title">
+							<button data-toggle="collapse" data-target="#PP4Contents" aria-expanded="true"
+							   aria-controls="PP4Contents" onclick="createDocPartCookie(this);">
+								<i class="fa fa-angle-right" aria-hidden="true">&nbsp;</i>
+								Sintesi
+							</button>
+						</p>
+					</div><!-- panel-heading -->
+
+					<div id="PP4Contents" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="PP4">
+						
+
+
+
+
+
+
+						<div id="text" class="panel-body">
+							
+	
+			
+	
+										<div id="document1" class="tabContent">
+											<div lang="">
+												
+      <p class="coj-sum-title-1">
+         <a id="judgment" > </a>Ordinanza della Corte (Nona Sezione) del 20 febbraio 2024 –<br/>Getin Noble Bank</p>
+      <p class="coj-sum-title-1">(causa C-34/23 (<span class="coj-note">
+            <a id="c-ECR_62023CO0034_INF_IT_01-E0001"
+               href="#t-ECR_62023CO0034_INF_IT_01-E0001"
+               >1</a>
+         </span>))</p>
+      <p class="coj-index">«Rinvio pregiudiziale – Articolo 53, paragrafo 2, del regolamento di procedura della Corte – Risanamento e risoluzione degli enti creditizi – Potere di restringere l'esecuzione delle garanzie – Disposizione da interpretare che non ha alcun legame con l'oggetto del procedimento principale – Irricevibilità manifesta»</p>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+         <col width="5%"/>
+         <col width="95%"/>
+         <tr>
+            <td valign="top"  >
+               <p class="coj-count" id="001.001">1. </p>
+            </td>
+            <td valign="top"  >
+               <p class="coj-normal">Questioni pregiudiziali – Procedimento pregiudiziale accelerato – Presupposti – Circostanze che giustificano un rapido trattamento – Interesse dei singoli a determinare il più rapidamente possibile la portata dei diritti conferiti dal diritto dell’Unione – Esclusione – Controversia nazionale che presenta carattere urgente – Esclusione</p>
+               <p class="coj-normal">
+                  <span class="coj-italic">(Regolamento di procedura della Corte, art. 105, § 1)</span>
+               </p>
+               <p class="coj-normal">
+                  <span class="coj-italic">(v. punto 24)</span>
+               </p>
+            </td>
+         </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+         <col width="5%"/>
+         <col width="95%"/>
+         <tr>
+            <td valign="top"  >
+               <p class="coj-count" id="002.001">2. </p>
+            </td>
+            <td valign="top"  >
+               <p class="coj-normal">Questioni pregiudiziali – Ricevibilità – Limiti – Disposizioni di diritto dell’Unione manifestamente inapplicabili – Questioni prive di relazione con l'oggetto del procedimento principale – Irricevibilità</p>
+               <p class="coj-normal">
+                  <span class="coj-italic">(Art. 267 TFUE; regolamento di procedura della Corte, art. 53, § 2)</span>
+               </p>
+               <p class="coj-normal">
+                  <span class="coj-italic">(v. punti 32, 33)</span>
+               </p>
+            </td>
+         </tr>
+      </table>
+      <p class="coj-normal"/>
+      <p class="coj-sum-title-1">
+         <span class="coj-bold">Dispositivo</span>
+      </p>
+      <p class="coj-normal">La domanda di pronuncia pregiudiziale presentata dal Sąd Okręgowy w Koszalinie (tribunale regionale di Koszalin, Polonia), con decisione del 30 dicembre 2022, è manifestamente irricevibile.</p>
+      <hr class="coj-note"/>
+      <p class="coj-note">(<span class="coj-note">
+            <a id="t-ECR_62023CO0034_INF_IT_01-E0001"
+               href="#c-ECR_62023CO0034_INF_IT_01-E0001"
+               >1</a>
+         </span>)	<a href="./../../../legal-content/IT/AUTO/?uri=OJ:C:2023:155:TOC"
+            hreflang="it"
+            onclick="target='CourtTab';"
+            >GU C 155 del 2.5.2023</a>.</p>
+   
+											</div>
+											<a href="#document1">In alto</a>	</div>	
+	
+	
+	</div><!-- panel-body -->	</div><!-- panel-collapse -->	</div>	<!-- panel -->	
+	
+	
+	 
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			popUpWidget("./../../../", "it", "800");
+			popUpWidgetAccessible("./../../../", "IT");
+		})
+	</script>
+
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				setTimeout(function(){ loadDocState("SUM","PP"); }, 0);
+			});
+		</script>
+	</div>
+	<!-- panel-group -->
 
 	
-	<!-- Editorial content end -->	</div>	
+	
+	
+	
+	
+	
+ 
 
+	
+	</div>
+	</div>
+	
+	
+	</div>
+	
 
-
- </div> </div> </div>
 
 	</div>	
 	
+
 
  </div> </div> </div> 
 
@@ -2848,10 +4060,10 @@
 
 
 
-<a href="./../../homepage.html"                aria-label="">
+<a href="./../../../homepage.html"                aria-label="">
                 <picture class="ecl-picture ecl-site-footer__picture" title="Torna alla homepage di EUR-Lex">
-                    <img class="ecl-site-footer__logo-image" src="./../../revamp/images/eurlex_simple.svg"
-                         onerror="this.onerror=null; this.src='./../../images/n/eurlex_simple.png'"
+                    <img class="ecl-site-footer__logo-image" src="./../../../revamp/images/eurlex_simple.svg"
+                         onerror="this.onerror=null; this.src='./../../../images/n/eurlex_simple.png'"
                          alt="Torna alla homepage di EUR-Lex" title="Torna alla homepage di EUR-Lex">
                 </picture>                
             </a>
@@ -2902,7 +4114,7 @@
 
 
 
-<a href="./../../content/help.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Guida"         aria-label="">
+<a href="./../../../content/help.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Guida"         aria-label="">
  Guida
  </a>
 
@@ -2943,7 +4155,7 @@
 
 
 
-<a href="./../../contact.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Contatti"         aria-label="">
+<a href="./../../../contact.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Contatti"         aria-label="">
  Contatti
  </a>
 
@@ -2984,7 +4196,7 @@
 
 
 
-<a href="./../../content/site-map/site-map.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Mappa del sito"         aria-label="">
+<a href="./../../../content/site-map/site-map.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Mappa del sito"         aria-label="">
  Mappa del sito
  </a>
 
@@ -2998,8 +4210,8 @@
             <li class="ecl-site-footer__list-item">
                 
                 <a href="https://x.com/EUPublications" title="X" class="ecl-link ecl-link--standalone ecl-link--icon ecl-site-footer__link">
-                    <img class="ecl-icon ecl-icon--m ecl-link__icon ecl-link--icon--twitter" src="./../../revamp/images/twitter.svg"
-                        onerror="this.onerror=null; this.src='./../../images/n/twitter.png'"
+                    <img class="ecl-icon ecl-icon--m ecl-link__icon ecl-link--icon--twitter" src="./../../../revamp/images/twitter.svg"
+                        onerror="this.onerror=null; this.src='./../../../images/n/twitter.png'"
                         alt="X" title="X">
                     <span class="ecl-link__label--twitter">X</span>            
                 </a>
@@ -3046,7 +4258,7 @@
 
 
 
-<a href="./../../content/legal-notice/legal-notice.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Note legali"         aria-label="">
+<a href="./../../../content/legal-notice/legal-notice.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Note legali"         aria-label="">
  Note legali
  </a>
 
@@ -3087,7 +4299,7 @@
 
 
 
-<a href="./../../content/legal-notice/legal-notice.html#5.%20Cookies%20notice"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Politica sull&#039;uso dei cookie"         aria-label="">
+<a href="./../../../content/legal-notice/legal-notice.html#5.%20Cookies%20notice"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Politica sull&#039;uso dei cookie"         aria-label="">
  Politica sull'uso dei cookie
  </a>
 
@@ -3128,7 +4340,7 @@
 
 
 
-<a href="./../../content/legal-notice/legal-notice.html#4.%20Accessibility%20statement"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Accessibilità"         aria-label="">
+<a href="./../../../content/legal-notice/legal-notice.html#4.%20Accessibility%20statement"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Accessibilità"         aria-label="">
  Accessibilità
  </a>
 
@@ -3169,7 +4381,7 @@
 
 
 
-<a href="./../../content/legal-notice/legal-notice.html#3.%20protection"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Informativa sulla privacy"         aria-label="">
+<a href="./../../../content/legal-notice/legal-notice.html#3.%20protection"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Informativa sulla privacy"         aria-label="">
  Informativa sulla privacy
  </a>
 
@@ -3218,7 +4430,7 @@
 
 
 
-<a href="./../../content/welcome/about.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Cos&#039;è EUR-Lex"         aria-label="">
+<a href="./../../../content/welcome/about.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Cos&#039;è EUR-Lex"         aria-label="">
  Cos'è EUR-Lex
  </a>
 
@@ -3259,7 +4471,7 @@
 
 
 
-<a href="./../../newsletter/newsletterLatest.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Newsletter"         aria-label="">
+<a href="./../../../newsletter/newsletterLatest.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Newsletter"         aria-label="">
  Newsletter
  </a>
 
@@ -3300,7 +4512,7 @@
 
 
 
-<a href="./../../content/links/links.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Link utili"         aria-label="">
+<a href="./../../../content/links/links.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Link utili"         aria-label="">
  Link utili
  </a>
 
@@ -3370,7 +4582,7 @@
       <div class="ecl-site-footer__column">
         <div class="ecl-site-footer__section"><a href="https://european-union.europa.eu/" class="ecl-link ecl-link--standalone ecl-site-footer__logo-link" aria-label="European Union">
             <picture class="ecl-picture ecl-site-footer__picture" title="European Union">
-              <source srcset="./../../revamp/images/logo-eu--en.svg" media="(min-width: 996px)"><img class="ecl-site-footer__logo-image" src="./../../revamp/images/logo-eu--en-sm.svg" alt="European Union logo" />
+              <source srcset="./../../../revamp/images/logo-eu--en.svg" media="(min-width: 996px)"><img class="ecl-site-footer__logo-image" src="./../../../revamp/images/logo-eu--en-sm.svg" alt="European Union logo" />
             </picture>
           </a>
           <div class="ecl-site-footer__description">Scopri di più su <a href="https://europa.eu" class="ecl-link ecl-link--standalone underlineLink">europa.eu</a></div>
@@ -3531,58 +4743,58 @@
     });
 </script>  
  
-        <script  type="text/javascript" src="./../../js/jquery.js?v=2.18.4"></script>
+        <script  type="text/javascript" src="./../../../js/jquery.js?v=2.18.4"></script>
         
  
         <script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).on("ready",f)})})(jQuery,document)</script>
 
-        <script type="text/javascript" src="./../../js/eur-lex-sanitizer.js?v=2.18.4"></script>
-        <script type="text/javascript" src="./../../js/eur-lex.js?v=2.18.4"></script>
-        <script type="text/javascript" src="./../../js/experimentalFeatures.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/eur-lex-sanitizer.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/eur-lex.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/experimentalFeatures.js?v=2.18.4"></script>
 
         
         
-        <script type="text/javascript" src="./../../js/machineTranslation.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/machineTranslation.js?v=2.18.4"></script>
 
         
  
         <script type="text/javascript"
-        src="./../../revamp/components/vendor/moment/min/moment-with-locales.min.js?v=2.18.4"></script>
+        src="./../../../revamp/components/vendor/moment/min/moment-with-locales.min.js?v=2.18.4"></script>
         
         <script type="text/javascript"
-        src="./../../revamp/components/vendor/bootstrap/dist/js/bootstrap.min.js?v=2.18.4"></script>
+        src="./../../../revamp/components/vendor/bootstrap/dist/js/bootstrap.min.js?v=2.18.4"></script>
         
  
  
         <script type="text/javascript"
-        src="./../../revamp/components/vendor/bootstrap-3-typeahead/js/bootstrap3-typeahead_customized.min.js?v=2.18.4"></script>
+        src="./../../../revamp/components/vendor/bootstrap-3-typeahead/js/bootstrap3-typeahead_customized.min.js?v=2.18.4"></script>
         
-        <script type="text/javascript" src="./../../revamp/js/ie10-viewport-bug-workaround.js?v=2.18.4"></script>
-        <script type="text/javascript" src="./../../revamp/js/metisMenu.min.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../revamp/js/ie10-viewport-bug-workaround.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../revamp/js/metisMenu.min.js?v=2.18.4"></script>
         
-        <script type="text/javascript" src="./../../revamp/js/timeline.main.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../revamp/js/timeline.main.js?v=2.18.4"></script>
         
-        <script type="text/javascript" src="./../../revamp/js/jquery.autoresize.min.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../revamp/js/jquery.autoresize.min.js?v=2.18.4"></script>
         
-        <script type="text/javascript" src="./../../revamp/js/eurlex.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../revamp/js/eurlex.js?v=2.18.4"></script>
         
  
        <script type="text/javascript"
-               src="./../../js/compatibility-table.js?v=2.18.4"></script>
+               src="./../../../js/compatibility-table.js?v=2.18.4"></script>
 
 
 
         
         <script type="text/javascript"
-        src="./../../revamp/components/vendor/bootstrap/js/transition.js?v=2.18.4"></script>
+        src="./../../../revamp/components/vendor/bootstrap/js/transition.js?v=2.18.4"></script>
         
         <script type="text/javascript"
-        src="./../../revamp/components/vendor/bootstrap/js/collapse.js?v=2.18.4"></script>
+        src="./../../../revamp/components/vendor/bootstrap/js/collapse.js?v=2.18.4"></script>
         
         <script type="text/javascript"
-        src="./../../revamp/components/vendor/gasparesganga-jquery-loading-overlay/src/loadingoverlay.min.js?v=2.18.4"></script>
+        src="./../../../revamp/components/vendor/gasparesganga-jquery-loading-overlay/src/loadingoverlay.min.js?v=2.18.4"></script>
         
-        <script type="text/javascript" src="./../../js/popupWidgetTitle.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/popupWidgetTitle.js?v=2.18.4"></script>
         
  
  
@@ -3591,29 +4803,29 @@
  
  
  
-        <script type="text/javascript" src="./../../js/piwik_functionality.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/piwik_functionality.js?v=2.18.4"></script>
        
         <script  src="https://webtools.europa.eu/load.js?globan=1110" type="text/javascript"></script>
         
-        <script type="text/javascript" src="./../../js/cookieConsentKitUtils.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/cookieConsentKitUtils.js?v=2.18.4"></script>
 
         
-        <script type="text/javascript" src="./../../js/d3/d3.v7.min.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/d3/d3.v7.min.js?v=2.18.4"></script>
         
  
-        <script type="text/javascript" src="./../../js/browse-by-collection.js?v=2.18.4"></script>
-        <script type="text/javascript" src="./../../js/d3-timeline.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/browse-by-collection.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/d3-timeline.js?v=2.18.4"></script>
         
-        <script type="text/javascript" src="./../../js/url-dynamic-util.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/url-dynamic-util.js?v=2.18.4"></script>
           
  
  
-        <script type="text/javascript" src="./../../js/pdfjs/build/pdf.js?v=2.18.4"></script>
-        <script type="text/javascript" src="./../../js/pdfjs/build/pdf.worker.js?v=2.18.4"></script>
-        <script type="text/javascript" src="./../../js/pdf-infinite-scroll.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/pdfjs/build/pdf.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/pdfjs/build/pdf.worker.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/pdf-infinite-scroll.js?v=2.18.4"></script>
         
         
-        <script type="text/javascript" src="./../../revamp/components/vendor/ec/eu-preset-v4.1.1/scripts/ecl-eu.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/scripts/ecl-eu.js?v=2.18.4"></script>
         <script type="text/javascript" src="https://unpkg.com/svg4everybody@2.1.9/dist/svg4everybody.js"></script>
 
         

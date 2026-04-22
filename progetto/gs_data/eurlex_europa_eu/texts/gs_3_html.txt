@@ -29,7 +29,7 @@
             
  
  
-        <script type="text/javascript" src="/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js" data-dtconfig="app=47d4c64c3b67ec69|agentId=9c3a2aaf4036cc3f|owasp=1|featureHash=ICANVfgqrux|rdnt=1|uxrgce=1|cuc=m097nmfl|mel=100000|mb=null|dpvc=1|iub=null|lastModification=1775994558700|tp=500,50,0|srbbv=2|agentUri=/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js|reportUrl=/eurlex-frontoffice/rb_39a3e95b-5423-482c-879b-99ef235dffeb|rid=RID_1844123496|rpid=-1290363728|domain=europa.eu"></script><script type="text/javascript" src="./../../../revamp/components/vendor/modernizr/modernizr.js?v=2.18.4"></script>
+        <script type="text/javascript" src="/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js" data-dtconfig="app=47d4c64c3b67ec69|agentId=a2fac5cff893c9e6|owasp=1|featureHash=ICANVfgqrux|rdnt=1|uxrgce=1|cuc=m097nmfl|mel=100000|mb=null|dpvc=1|iub=null|lastModification=1776680137626|tp=500,50,0|srbbv=2|agentUri=/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js|reportUrl=/eurlex-frontoffice/rb_39a3e95b-5423-482c-879b-99ef235dffeb|rid=RID_1844123496|rpid=-2106504716|domain=europa.eu"></script><script type="text/javascript" src="./../../../revamp/components/vendor/modernizr/modernizr.js?v=2.18.4"></script>
         
  
 
@@ -388,7 +388,7 @@
 
 
 
-<a href="./../../../my-eurlex/my-queries.html#recentQueries"       title="Le mie ricerche recenti (3)" id="myRecentQueriesLink"        aria-label=""><i class="fa fa-history" aria-hidden="true"></i>Le mie ricerche recenti (3)</a>
+<a href="./../../../my-eurlex/my-queries.html#recentQueries"       title="Le mie ricerche recenti (0)" id="myRecentQueriesLink"        aria-label=""><i class="fa fa-history" aria-hidden="true"></i>Le mie ricerche recenti (0)</a>
 </li> 
  
  
@@ -1394,7 +1394,7 @@
 				</span>
 			</div>
 		<div>
-<input type="hidden" name="_csrf" value="9d05c718-6adb-4289-9463-ac3744fc6f02" />
+<input type="hidden" name="_csrf" value="53fb0969-1cb8-437e-a1d8-08857a7608eb" />
 </div></form>
 	<form id="applyExperimentalFeatures" name="applyExperimentalFeatures" action="./../../../experimental-features.html?action=applyExperimentalFeatures" method="post">
 			<input type="hidden" value="IT/legal-content/glossary/enforcement-of-eu-law.html" name="relativeRequestUrl" />
@@ -1441,7 +1441,7 @@
 					<div>
 						<button  id="exp-feature-btn-apply" type="submit" class="btn btn-sm btn-primary radius5p"> Applicare
 	</button>	</div>	</div>	</div>	<div>
-<input type="hidden" name="_csrf" value="9d05c718-6adb-4289-9463-ac3744fc6f02" />
+<input type="hidden" name="_csrf" value="53fb0969-1cb8-437e-a1d8-08857a7608eb" />
 </div></form>
 	
 
@@ -1987,7 +1987,7 @@
 	
 				<div class="DistinctiveFormMessage EurlexTooltip" tabindex="0" data-toggle="tooltip" title="Rimuovere le altre opzioni di ricerca rapida prima di usare questa opzione"></div>	
 			<div>
-<input type="hidden" name="_csrf" value="9d05c718-6adb-4289-9463-ac3744fc6f02" />
+<input type="hidden" name="_csrf" value="53fb0969-1cb8-437e-a1d8-08857a7608eb" />
 </div></form>
 	
 			<div class="QuickSearchOptions fade sr-only">
@@ -2940,7 +2940,7 @@
                class="form-inline"
                id="form"
                name="multilingualForm"
-               method="post"><input type="hidden" name="_csrf" value="9d05c718-6adb-4289-9463-ac3744fc6f02" /><input type="hidden" name="from" value="IT"/>
+               method="post"><input type="hidden" name="_csrf" value="53fb0969-1cb8-437e-a1d8-08857a7608eb" /><input type="hidden" name="from" value="IT"/>
             <div class="form-group">
                <label for="MDLang1" class="sr-only">Lingua 1 </label>
                <select id="MDLang1" name="lang1" class="input-sm form-control NoBorders"

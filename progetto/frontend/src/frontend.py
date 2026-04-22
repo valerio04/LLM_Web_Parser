@@ -5,9 +5,11 @@ import json
 from typing import Dict, List, Optional, Any  # <-- Aggiunto Any
 from pathlib import Path
 
+from bs4 import BeautifulSoup
 from fastapi import FastAPI, Form, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+import mistune
 import requests
 import markdown2
 import re
@@ -72,7 +74,40 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
 
     if selected_url:
         try:
-            parse_data = call_backend("/parse", {"url": selected_url})
+            #questa per online########
+            '''parse_data = call_backend("/parse", {"url": selected_url})'''
+            ##########################
+
+            #######################################
+            #altra opzione per parseroffline se non ce lo fa online:
+            # Se l'URL selezionato è presente nel GS locale, usa il json locale per trovare
+            # il corrispondente file HTML e chiamare il backend in POST (run_from_html)
+            script_dir = Path(__file__).parent.resolve()
+            base_dir = script_dir.parent.parent
+            local_html = None
+            try:
+                json_path = find_path_parser(selected_url, base_dir)
+                if json_path and json_path.exists():
+                    with open(json_path, 'r', encoding='utf-8') as f:
+                        entries = json.load(f)
+                    for entry in entries:
+                        if entry.get('url') == selected_url and entry.get('html_file'):
+                            html_file_path = base_dir / 'gs_data' / entry.get('html_file')
+                            if html_file_path.exists():
+                                with open(html_file_path, 'r', encoding='utf-8') as hf:
+                                    local_html = hf.read()
+                            break
+            except Exception:
+                # se qualcosa fallisce, continueremo con il parsing online
+                local_html = None
+
+            if local_html is not None:
+                # invia il payload al backend per usare run_from_html
+                parse_data = call_backend("/parse", json_payload={"url": selected_url, "html_text": local_html})
+            else:
+                # fallback: parsing online
+                parse_data = call_backend("/parse", {"url": selected_url})
+            #############################################################
             
             gold_data = {}
             metrics_data = {}
@@ -97,17 +132,18 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
                 except requests.RequestException as e:
                     print(f"[ERROR] Errore durante l'evaluation: {e}")
 
-			# TODO: non so se il prof vuole il md o il testo pulito nell intefaccia
+			# TTODO: non so se il prof vuole il md o il testo pulito nell intefaccia
 			
-			#html_text = markdown2.markdown(parse_data.get("parsed_text", ""))
-            #plain_text = (re.sub(r'<[^>]+>', '', html_text)).strip()
+            html_text = remove_markdown(parse_data.get("parsed_text", ""))
+            plain_text = (re.sub(r'<[^>]+>', '', html_text)).strip()
+            
             result = UiResult(
                 url=parse_data.get("url", selected_url),
                 domain=parse_data.get("domain", ""),
                 title=parse_data.get("title", ""),
                 html_text=parse_data.get("html_text", ""),
-                #parsed_text=plain_text,
-                parsed_text=parse_data.get("parsed_text", ""),
+                parsed_text=plain_text,
+                #parsed_text=parse_data.get("parsed_text", ""),
                 gold_text=gold_data.get("gold_text", ""),
             )
             metrics = metrics_data.get("token_level_eval", {})
@@ -175,6 +211,19 @@ def call_backend(endpoint: str, params: Optional[Dict[str, str]] = None, json_pa
     
     response.raise_for_status()
     return response.json()
+
+
+def remove_markdown(md: str) -> str:
+    """Rimuove ogni traccia di formattazione per il confronto metrico."""
+    # Trasforma MD in HTML
+    html = mistune.html(md)
+    # Estrae solo il testo puro dall'HTML
+    soup = BeautifulSoup(html, "html.parser")
+    # Rimuove i tag ma mantiene il contenuto
+    text = soup.get_text(separator=' ') 
+    # Normalizza spazi e newline
+    text = re.sub(r'\s+', ' ', text)
+    return text.strip()
 
 if __name__ == "__main__":
     import uvicorn

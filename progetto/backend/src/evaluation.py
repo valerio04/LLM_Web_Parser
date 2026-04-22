@@ -126,7 +126,7 @@ class Evaluator:
 
 
   
-async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
+'''async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
     """
     Valuta tutto il Gold Standard.
     
@@ -205,9 +205,9 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
             result[entry['title']] = {"precision": 0, "recall": 0, "f1": 0}
 
     return result
-
-
 '''
+
+#funzione per parser offline, usando html gia scarivcati
 async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
     if not gold_data:
         return {}
@@ -249,12 +249,30 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
                 print(f"[WARNING] File gold standard mancante: {gold_file_path}")
                 continue
 
-            with open(html_file_path, 'r', encoding='utf-8') as f:
-                html_text = f.read()
+            # Leggi il gold standard
             with open(gold_file_path, 'r', encoding='utf-8') as f:
                 gold_text = f.read()
 
-            extracted_result = await parser.run_from_html(entry['url'], html_text)
+            # Se esiste l'HTML locale, usalo con run_from_html; altrimenti prova il parsing online
+            extracted_result = None
+            if html_file_path.exists():
+                try:
+                    with open(html_file_path, 'r', encoding='utf-8') as f:
+                        html_text = f.read()
+                    extracted_result = await parser.run_from_html(entry['url'], html_text)
+                except Exception as e:
+                    print(f"[WARNING] run_from_html fallito per {entry['url']}: {e} — provo run online")
+                    try:
+                        extracted_result = await parser.run(entry['url'])
+                    except Exception as e2:
+                        print(f"[ERROR] run online fallito per {entry['url']}: {e2}")
+                        extracted_result = None
+            else:
+                try:
+                    extracted_result = await parser.run(entry['url'])
+                except Exception as e:
+                    print(f"[ERROR] run online fallito per {entry['url']}: {e}")
+                    extracted_result = None
             extracted_text = extracted_result.get('parsed_text', '')
 
             if not extracted_text:
@@ -272,7 +290,7 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
     return result
 
 
-'''
+
 
 
 

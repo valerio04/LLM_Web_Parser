@@ -28,9 +28,9 @@
     "gold_file": "eurlex_europa_eu/texts/gs_4_gold.txt"
   },
   {
-    "url": "https://eur-lex.europa.eu/collection/eu-law/inter-agree.html",
+    "url": "https://eur-lex.europa.eu/legal-content/IT/SUM/?uri=CELEX%3A62023CO0034_INF#document1",
     "domain": "eur-lex.europa.eu",
-    "title": "Consolidated version of the Treaty on European Union",
+    "title": "62023CO0034 - IT",
     "html_file": "eurlex_europa_eu/texts/gs_5_html.txt",
     "gold_file": "eurlex_europa_eu/texts/gs_5_gold.txt"
   }
