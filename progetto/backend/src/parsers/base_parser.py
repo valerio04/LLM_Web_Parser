@@ -63,8 +63,8 @@ class BaseParser:
             verbose=True
         )
     
-
-    def remove_markdown(md: str) -> str:
+    '''
+    def remove_markdownn(md: str) -> str:
         """
         Rimuove il Markdown da una stringa, restituendo solo il testo pulito.
         Usa la libreria mistune per convertire il Markdown in HTML, poi BeautifulSoup per estrarre solo il testo.
@@ -72,13 +72,23 @@ class BaseParser:
         html = mistune.html(md)
         soup = BeautifulSoup(html, "html.parser")
         # rimuove i tag lasciando il testo esattamente in-place (nessun separatore aggiunto, mantiene punteggiatura)
-        text= ""
         for tag in soup.find_all(True):
             tag.unwrap()
-            text = re.sub(r'[ \t]+', ' ', str(soup)) # collassa spazi orizzontali (non \n)
-            text = re.sub(r'\n+', '\n', text) # collassa nuove linee multiple in una sola
+        text = re.sub(r'[ \t]+', ' ', str(soup)) # collassa spazi orizzontali (non \n)
+        text = re.sub(r'\n+', '\n', text) # collassa nuove linee multiple in una sola
         return text.strip()
-   
+    '''
+    def remove_markdown(md: str) -> str:
+        """Rimuove ogni traccia di formattazione per il confronto metrico."""
+        # Trasforma MD in HTML
+        html = mistune.html(md)
+        # Estrae solo il testo puro dall'HTML
+        soup = BeautifulSoup(html, "html.parser")
+        # Rimuove i tag ma mantiene il contenuto
+        text = soup.get_text(separator=' ') 
+        # Normalizza spazi e newline
+        text = re.sub(r'\s+', ' ', text)
+        return text.strip()
 
     def format_result(self, url, result):
         """Formats the final result. Can be overridden by subclasses."""

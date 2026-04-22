@@ -12,6 +12,7 @@ from .parsers.parser1 import IlPostParser
 from .parsers.parser2 import StatMuseParser
 from .parsers.parser3 import EurLexParser
 from .parsers.base_parser import BaseParser
+from collections import Counter
 import asyncio
 import markdown2
 import re
@@ -41,17 +42,17 @@ class Evaluator:
         Parametri: extracted_tokens, gold_tokens
         Ritorna: float - valore di precisione [0, 1]
         """
-        # Versione con SET (senza contare le ripetizioni):
-        # if len(extracted_tokens) == 0:
-        #     return 0
-        # common_tokens = set(extracted_tokens) & set(gold_tokens)
-        # precision = len(common_tokens) / len(set(extracted_tokens))
-        # return precision
+        ''' # Versione con SET (senza contare le ripetizioni):
+        if len(extracted_tokens) == 0:
+            return 0
+        common_tokens = set(extracted_tokens) & set(gold_tokens)
+        precision = len(common_tokens) / len(set(extracted_tokens))
+        return precision'''
         
         # Versione con Counter (conta le ripetizioni):
         from collections import Counter
         if len(extracted_tokens) == 0:
-            return 0
+            return 0.0
         extracted_count = Counter(extracted_tokens)
         gold_count = Counter(gold_tokens)
         common = sum((extracted_count & gold_count).values())
@@ -65,17 +66,17 @@ class Evaluator:
         Parametri: extracted_tokens, gold_tokens
         Ritorna: float - valore di recall [0, 1]
         """
-        # Versione con SET (senza contare le ripetizioni):
-        # if len(gold_tokens) == 0:
-        #     return 0
-        # common_tokens = set(extracted_tokens) & set(gold_tokens)
-        # recall = len(common_tokens) / len(set(gold_tokens))
-        # return recall
-        
-        # Versione con Counter (conta le ripetizioni):
-        from collections import Counter
+        '''# Versione con SET (senza contare le ripetizioni):
         if len(gold_tokens) == 0:
             return 0
+        common_tokens = set(extracted_tokens) & set(gold_tokens)
+        recall = len(common_tokens) / len(set(gold_tokens))
+        return recall'''
+        
+        # Versione con Counter (conta le ripetizioni):
+        
+        if len(gold_tokens) == 0:
+            return 0.0
         extracted_count = Counter(extracted_tokens)
         gold_count = Counter(gold_tokens)
         common = sum((extracted_count & gold_count).values())
@@ -190,7 +191,8 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
             
         
             
-           
+            print(f"=== PARSED ({entry['title']}) ===\n{extracted_text[:1000]}")
+            print(f"=== GOLD ({entry['title']}) ===\n{gold_text[:1000]}")
             
            
             
@@ -205,9 +207,72 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
     return result
 
 
+'''
+async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
+    if not gold_data:
+        return {}
+
+    result = dict()
+    evaluator = Evaluator()
+
+    # Definisci base_dir UNA VOLTA, FUORI dal loop
+    script_dir = Path(__file__).parent.resolve()
+    base_dir = script_dir.parent.parent
+
+    for entry in gold_data:
+        if not entry.get('title'):
+            continue
+        if not entry.get('gold_file'):
+            continue
+        if not entry.get('url'):
+            continue
+
+        domain = entry.get('domain')
+        if domain == "en.wikipedia.org":
+            parser = WikipediaParser()
+        elif domain == "www.ilpost.it":
+            parser = IlPostParser()
+        elif domain == "statmuse.com":
+            parser = StatMuseParser()
+        elif domain == "eur-lex.europa.eu":
+            parser = EurLexParser()
+        else:
+            print(f"[WARNING] Dominio non riconosciuto: {domain}")
+            continue
+
+        try:
+            
+            html_file_path = base_dir / "gs_data" / entry['html_file']
+            gold_file_path = base_dir / "gs_data" / entry['gold_file']
+
+            if not gold_file_path.exists():
+                print(f"[WARNING] File gold standard mancante: {gold_file_path}")
+                continue
+
+            with open(html_file_path, 'r', encoding='utf-8') as f:
+                html_text = f.read()
+            with open(gold_file_path, 'r', encoding='utf-8') as f:
+                gold_text = f.read()
+
+            extracted_result = await parser.run_from_html(entry['url'], html_text)
+            extracted_text = extracted_result.get('parsed_text', '')
+
+            if not extracted_text:
+                print(f"[WARNING] Testo parsato vuoto per: {entry['url']}")
+                continue
+
+            token_eval_result = evaluator.token_level_eval(extracted_text, gold_text)
+            print(f"[INFO] {entry['title']}: {token_eval_result}")
+            result[entry['title']] = token_eval_result
+
+        except Exception as e:
+            print(f"[ERROR] Errore per {entry['title']}: {e}")
+            result[entry['title']] = {"precision": 0, "recall": 0, "f1": 0}
+
+    return result
 
 
-
+'''
 
 
 

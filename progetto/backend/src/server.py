@@ -295,11 +295,11 @@ async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
     """
     
     evaluator = Evaluator()
-    clean_parsed = BaseParser.remove_markdown(request.parsed_text)# è doppiona , da capire dove metterla
+    #clean_parsed = BaseParser.remove_markdown(request.parsed_text)# da capire meglio
     # Pulisci il testo Markdown prima della valutazione
     #cleaned_parsed_text = clean_markdown(request.parsed_text)
     
-    token_level_eval = evaluator.token_level_eval(clean_parsed, request.gold_text)
+    token_level_eval = evaluator.token_level_eval(request.parsed_text, request.gold_text)
     
     result=EvaluateResponse(token_level_eval=token_level_eval, x_eval={})
     return result
@@ -336,6 +336,8 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
     
     eval_response = await evaluate_gold_standard(gold_data)
 
+    if not eval_response:
+        return FullGsEvalResponse(token_level_eval={"precision": 0, "recall": 0, "f1": 0})
     
     precisions = []
     recalls = []
@@ -354,9 +356,18 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
     avg_precision = 0
     avg_recall = 0
     if precisions:
-        avg_precision = sum(precisions) / len(precisions)
-        avg_recall = sum(recalls) / len(recalls)
-        avg_f1 = sum(f1_scores) / len(f1_scores)
+        if len(precisions)==0:
+            avg_precision =0
+        else:
+            avg_precision = sum(precisions) / len(precisions)
+        if len(recalls)==0:
+            avg_recall =0
+        else:   
+            avg_recall = sum(recalls) / len(recalls)
+        if len(f1_scores)==0:
+            avg_f1 =0
+        else:
+            avg_f1 = sum(f1_scores) / len(f1_scores)
     
     
     result = FullGsEvalResponse(token_level_eval=  {"precision": avg_precision, "recall": avg_recall,"f1": avg_f1}, x_eval={})
