@@ -1,0 +1,46 @@
+Statistiche sugli atti giuridici
+Consulta per anno e per mese il numero di atti giuridici adottati, abrogati o scaduti in un determinato mese.
+
+Per gli atti adottati, sono consultabili sia quelli in vigore che quelli che non lo sono più. Sono fornite cifre distinte per gli atti di base e quelli modificativi (gli atti che modificano atti adottati precedentemente*). Le cifre si basano sulla data di adozione dell'atto. Le rettifiche sono escluse. Le cifre relative agli atti abrogati e a quelli scaduti sono basate sulla data di fine periodo di validità. Gli atti non legislativi figurano in corsivo.
+
+	Atti adottati
+Di base	Modificativi
+Atti legislativi - Procedura legislativa ordinaria
+Regolamenti del Parlamento europeo e del Consiglio	6	7
+Direttive del Parlamento europeo e del Consiglio	1	5
+Decisioni del Parlamento europeo e del Consiglio**	1	0
+Totale	8	12
+Altri atti legislativi
+Regolamenti del Consiglio	5	8
+Direttive del Consiglio	0	0
+Decisioni del Consiglio	66	32
+Totale	71	40
+Atti non legislativi
+Atti delegati
+Regolamenti delegati della Commissione	10	12
+Direttive delegate della Commissione	0	1
+Decisioni delegate della Commissione	0	0
+Totale	10	13
+Atti di esecuzione
+Regolamenti di esecuzione del Consiglio	1	23
+Decisioni di esecuzione del Consiglio	22	6
+Regolamenti di esecuzione della Commissione***	139	95
+Direttive di esecuzione della Commissione	0	0
+Decisioni di esecuzione della Commissione	57	57
+Totale	219	181
+Other acts [it]
+Regolamenti della Commissione***	4	22
+Direttive della Commissione	0	3
+Decisioni della Commissione	112	4
+Regolamenti della Banca centrale europea	0	0
+Decisioni della Banca centrale europea	2	1
+Orientamenti della Banca centrale europea****	0	5
+Raccomandazioni della Banca centrale europea	1	0
+Pareri della Banca centrale europea	13	0
+Totale	132	35
+
+* Per ragioni bibliografiche, un atto è classificato come modificativo se, in base al suo titolo, modifica uno o più atti, sebbene contenga anche disposizioni autonome.
+
+** La maggior parte delle decisioni hanno dei destinatari (uno Stato membro, un gruppo di Stati membri, una o più imprese). A norma dell’articolo 288 del trattato sul funzionamento dell’Unione europea (TFUE), una decisione, se designa i destinatari, è obbligatoria soltanto nei confronti di questi.
+
+*** Gli atti effimeri sono esclusi. Gli atti relativi alla gestione corrente e quotidiana delle questioni agricole ("atti effimeri") sono generalmente validi solo per un periodo di tempo limitato. Dal 1º marzo 2011 sono stati principalmente adottati come regolamenti di esecuzione della Commissione. Prima di tale data, erano adottati principalmente sotto forma di regolamenti della Commissione.

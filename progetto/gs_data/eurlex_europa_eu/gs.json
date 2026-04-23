@@ -47,5 +47,19 @@
     "title": "62023CO0034 - IT",
     "html_file": "eurlex_europa_eu/texts/gs_7_html.txt",
     "gold_file": "eurlex_europa_eu/texts/gs_7_gold.txt"
+  },
+  {
+    "url": "https://eur-lex.europa.eu/statistics/legislative-acts-statistics.html",
+    "domain": "eur-lex.europa.eu",
+    "title": "62023CO0034 - IT",
+    "html_file": "eurlex_europa_eu/texts/gs_8_html.txt",
+    "gold_file": "eurlex_europa_eu/texts/gs_8_gold.txt"
+  },
+  {
+    "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A22026D0607&qid=1776985310585",
+    "domain": "eur-lex.europa.eu",
+    "title": "62023CO0034 - IT",
+    "html_file": "eurlex_europa_eu/texts/gs_9_html.txt",
+    "gold_file": "eurlex_europa_eu/texts/gs_9_gold.txt"
   }
 ]
