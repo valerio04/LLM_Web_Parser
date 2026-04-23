@@ -33,5 +33,19 @@
     "title": "62023CO0034 - IT",
     "html_file": "eurlex_europa_eu/texts/gs_5_html.txt",
     "gold_file": "eurlex_europa_eu/texts/gs_5_gold.txt"
+  },
+  {
+    "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A22026X00875&qid=1776978713919",
+    "domain": "eur-lex.europa.eu",
+    "title": "62023CO0034 - IT",
+    "html_file": "eurlex_europa_eu/texts/gs_6_html.txt",
+    "gold_file": "eurlex_europa_eu/texts/gs_6_gold.txt"
+  },
+  {
+    "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A52003IE0410&qid=1776981429924",
+    "domain": "eur-lex.europa.eu",
+    "title": "62023CO0034 - IT",
+    "html_file": "eurlex_europa_eu/texts/gs_7_html.txt",
+    "gold_file": "eurlex_europa_eu/texts/gs_7_gold.txt"
   }
 ]

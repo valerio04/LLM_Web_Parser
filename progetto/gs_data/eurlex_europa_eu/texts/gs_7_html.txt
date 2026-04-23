@@ -1,0 +1,5359 @@
+
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+        <!DOCTYPE html>
+        <html lang="it" class="no-js"
+        xml:lang="it"  >
+        <head>
+        <meta charset="utf-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        
+ 
+ 
+ 
+ 
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+            
+ 
+ 
+        <script type="text/javascript" src="/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js" data-dtconfig="app=47d4c64c3b67ec69|agentId=a2fac5cff893c9e6|owasp=1|featureHash=ICANVfgqrux|rdnt=1|uxrgce=1|cuc=m097nmfl|mel=100000|mb=null|dpvc=1|iub=null|lastModification=1776873616089|tp=500,50,0|srbbv=2|agentUri=/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js|reportUrl=/eurlex-frontoffice/rb_39a3e95b-5423-482c-879b-99ef235dffeb|rid=RID_-1307691721|rpid=-683345601|domain=europa.eu"></script><script type="text/javascript" src="./../../../revamp/components/vendor/modernizr/modernizr.js?v=2.18.4"></script>
+        
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ <title>EUR-Lex - 52003IE0410 - IT - EUR-Lex</title> 
+ 
+
+
+
+ <meta name="WT.z_docTitle" content="Parere del Comitato economico e sociale europeo in merito agli &quot;Indirizzi di massima per le politiche economiche 2003&quot;"/><meta name="WT.z_docID" content="52003IE0410"/><meta name="WT.z_docSector" content="5"/><meta name="WT.z_docType" content="IE"/><meta name="WT.cg_n" content="Legal content view"/><meta name="WT.cg_s" content="Notices"/><meta name="WT.pi" content="Legal content pages"/><meta name="WT.z_usr_lan" content="it"/><meta name="WT.seg_1" content="Unregistered"/>
+
+ 
+ 
+        <meta name="google-site-verification" content="hl-zFNRVYTzOJ4xGdc2Wl9h6Ezs9rbbdMgFYLFvx6cA"/>
+        <meta name="msvalidate.01" content="6F74BA769F6140EC354DF6BE33F86005"/>
+        
+        <meta name="format-detection" content="telephone=no"/>
+        
+        <meta name="war-version" content="2.18.4"/>
+        <meta name="fo-db-version" content="2.18.1"/>
+        <meta name="sl-api-version" content="3.9.8/CORPORATE_SEARCH/2.146"/>
+
+        <meta name="app-relative-path" content="./../../../"/>
+
+        <link rel="stylesheet" media="all"
+        href="./../../../revamp/components/vendor/bootstrap/dist/css/bootstrap.css?v=2.18.4">
+        
+        <link rel="stylesheet" media="all"
+        href="./../../../revamp/components/vendor/font-awesome/css/font-awesome.min.css?v=2.18.4">
+        <link rel="stylesheet" media="all" href="./../../../revamp/components/vendor/roboto/roboto.css?v=2.18.4">
+        <link rel="stylesheet" media="all" href="./../../../revamp/css/eurlex.css?v=2.18.4">
+        <link rel="stylesheet" media="all" href="./../../../revamp/css/eurlex-dev.css?v=2.18.4">
+        
+ 
+ 
+        <link rel="stylesheet" media="all" href="./../../../css/eurlex-xml-editorial-content.css?t=1760540477586">
+
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                <link rel="stylesheet" media="all" href="./../../../css/generic-embedded.css?t=1760540477605">
+            
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+        <link rel="stylesheet" media="print" href="./../../../css/eurlex-print.css?t=1760540477398">
+        
+ 
+ 
+ 
+        <script>(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document)</script>
+
+        
+
+        <script type="text/javascript" src="./../../../dynamic-js/labels_it.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../../../dynamic-js/WT_labels_it.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../dynamic-js/config.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../dynamic-js/const.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../../../dynamic-js/paths.js?requestURL=%2Flegal-content%2FIT%2FTXT%2F"></script>
+        
+
+			<script type="text/javascript">
+        var legislativeUrl = 'http://old.eur-lex.europa.eu/it/techleg/index.htm';
+        var eurovocUrl = 'http://eurovoc.europa.eu/drupal/?q=it/node';
+        var interStyleGuideUrl = 'http://publications.europa.eu/code/it/it-000100.htm';
+        var sessionExpired = false;
+        var pageUrl = '';
+        var queryString = 'uri=CELEX%3A52003IE0410&amp;qid=1776981429924';
+        var sessionTimeout = '900000';
+        </script>
+
+        <!-- [if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif] -->
+        
+ 
+
+        <link rel="shortcut icon" href="./../../../images/eurlex.ico"/>
+        <link rel="canonical" href="https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=oj:JOC_2003_133_R_0063_01"/>
+        
+            <link rel="alternate" type="application/pdf" href="https://eur-lex.europa.eu/legal-content/IT/TXT/PDF/?uri=oj:JOC_2003_133_R_0063_01"/>
+        
+ 
+ 
+ 
+            <link rel="prev" href="./../../../legal-content/IT/TXT/?uri=CELEX:32003H0555&amp;qid=1776981429924"/>
+        
+ 
+ 
+            <link rel="next" href="./../../../legal-content/IT/TXT/?uri=CELEX:51996AP0268&amp;qid=1776981429924"/>
+        
+ 
+ 
+ 
+        <link rel="stylesheet" media="all" href="./../../../revamp/css/custom-infinite-scroll.css?v=2.18.4">
+        
+        
+ 
+ 
+   
+ 
+                <link rel="stylesheet" media="all" href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/styles/ecl-eu.css?v=2.18.4">
+            
+   
+ 
+ 
+         <link rel="stylesheet" media="all" href="./../../../revamp/css/eurlex-ec.css?v=2.18.4">
+        
+		<script type="text/javascript" src="./../../../js/survey/survey.js?v=2.18.4"></script>
+         
+        </head>
+        
+ 
+ 
+ <body > 
+        <script  type="application/json">{
+            "utility": "cck",
+            "url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html?locale=it#5.%20Cookies%20notice"
+        }</script>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<input type="hidden" id="piwikProSiteID" value="0b5594a8-b9c8-4cd6-aa25-5c578dcf91df">
+<input type="hidden" id="piwikProSummariesSiteID" value="46acaa7c-2394-428f-b054-103dec22b689">
+
+
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            (function(window, document, dataLayerName, id) {
+                window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+                function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString();f="; SameSite=Strict"}document.cookie=a+"="+b+d+f+"; path=/"}
+                var isStgDebug=(window.location.href.match("stg_debug")||document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
+                var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName),isStgDebug&&qP.push("stg_debug");var qPString=qP.length>0?("?"+qP.join("&")):"";
+                tags.async=!0,tags.src="https://analytics.webanalytics.op.europa.eu/containers/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
+                !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+            })(window, document, 'dataLayer','0b5594a8-b9c8-4cd6-aa25-5c578dcf91df');
+        }, { once: true });
+    </script>
+
+
+ <!-- // GENERAL Modal which is used by all the dynamic loading modal cases. --> 
+
+
+
+
+
+<div class="modal fade EurlexModal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="DemoModal02Title">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="modal-title" role="heading" aria-level="1" id="DemoModal02Title"></div>
+            </div><!-- modal-header -->
+            <div class="modal-body">
+            </div><!-- modal-body -->
+        </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+
+</div><!-- modal -->
+ 
+ 
+
+
+
+
+
+ 
+ 
+
+        <div class="Wrapper clearfix">
+
+        
+        <a class="sr-only sr-only-focusable SkipLink" href="#MainContent">Passa ai contenuti principali</a> <div> 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<header id="op-header" class="ecl-site-header header-refinement box-shadow-removal" data-ecl-auto-init="SiteHeader">
+        <div class="ecl-site-header__background">
+            <div class="ecl-site-header__header">
+                <div class="ecl-site-header__container ecl-container upper-header-border header-width-override">
+                    
+                    <div class="ecl-site-header__top" data-ecl-site-header-top>
+                        <a id="homepageLogo" href="https://european-union.europa.eu/index_en" class="ecl-link ecl-link--standalone ecl-site-header__logo-link" ariaLabel="aria-label=European Union">
+                            <picture class="ecl-picture ecl-site-header__picture" title="European Union">
+                              <source srcset="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/logo/standard-version/positive/logo-eu--it.svg" media="(min-width: 996px)">
+                                <img class="ecl-site-header__logo-image eu-logo-size" src="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/logo/condensed-version/positive/logo-eu--it.svg" alt="European Union flag" />
+                            </picture>
+                        </a>
+                            <div class="ecl-site-header__action">
+                                
+ 
+                                    <div class="dropdown ecl-site-header__login-container">
+                                        
+ 
+ 
+                                                <a id="MyEurlex" class="ecl-button ecl-button--tertiary ecl-site-header__login-toggle dropdown-toggle login-lang-text-size" href="#" data-toggle="dropdown" aria-haspopup="true" >
+                                                    <svg class="ecl-icon ecl-icon--s ecl-site-header__icon login-lang-image-size" focusable="false" aria-hidden="false" role="img" ">
+                                                        <use alt="Log in" xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/log-in.svg#log-in"/>
+                                                        <title>Log in</title>
+                                                    </svg>
+                                                    Il mio EUR-Lex
+ </a> 
+ 
+ 
+                                        <div class="dropdown-menu MyAccount" role="menu" aria-labelledby="MyEurlex">
+                                            
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+                                                    <li class="dropdown-header visible-xs-block">Il mio EUR-Lex</li> <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../protected/homepage.html?url=%2Flegal-content%2FIT%2FTXT%2F%3Fqid%3D1776981429924%26uri%3DCELEX%253A52003IE0410"                aria-label=""><i class="fa fa-sign-in" aria-hidden="true"></i>Connettersi</a>
+</li>
+                                                    <li><a href="https://ecas.ec.europa.eu/cas/eim/external/register.cgi/"><i class="fa fa-user-plus" aria-hidden="true"></i>Registrarsi</a></li>
+                                                    <li role="separator" class="divider"></li>
+                                                
+ 
+ 
+ 
+ 
+ 
+ <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../my-eurlex/my-queries.html#recentQueries"       title="Le mie ricerche recenti (3)" id="myRecentQueriesLink"        aria-label=""><i class="fa fa-history" aria-hidden="true"></i>Le mie ricerche recenti (3)</a>
+</li> 
+ 
+ 
+ </div> </div> 
+ 
+                                <div id="op-header-language" class="ecl-site-header__language">
+                                    <a class="ecl-button ecl-button--tertiary ecl-site-header__language-selector login-lang-text-size" href="#" data-ecl-language-selector role="button" aria-label="Change language, current language is English" aria-controls="language-list-overlay">
+                                        <span class="ecl-site-header__language-icon">
+                                            <svg class="ecl-icon ecl-icon--s ecl-site-header__icon login-lang-image-size" focusable="false" aria-hidden="false" role="img" ">
+                                                <use xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/global.svg#global"/use>
+                                                <title>English</title>
+                                            </svg>
+                                        </span>
+                                        Italiano
+ </a> 
+                                    <div class="ecl-site-header__language-container" id="language-list-overlay" hidden data-ecl-language-list-overlay aria-labelledby="ecl-site-header__language-title" role="dialog">
+                                        <div class="ecl-site-header__language-header">
+                                            <div class="ecl-site-header__language-title" id="ecl-site-header__language-title">
+                                                Select your language
+                                            </div>
+                                            <button id="languageButtonClose" class="ecl-button ecl-button--tertiary" type="submit" data-ecl-language-list-close>
+                                                <span class="ecl-button__container">
+                                                    <span class="ecl-button__label" data-ecl-label="true"></span>
+                                                    <svg class="ecl-icon ecl-icon--l ecl-button__icon lang-panel-close" focusable="false" aria-hidden="true" data-ecl-icon>
+                                                        <use alt="Close button" xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/close-filled.svg#close-filled"/>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <hr class="lang-box-divisor"/>
+                                        <div class="ecl-site-header__language-content">
+                                            <div class="ecl-site-header__language-category" data-ecl-language-list-eu>
+                                                <div class="ecl-site-header__language-category-title">
+                                                    Official EU languages:
+                                                </div>
+                                                <form id="languageForm" method="get" name="languageForm">
+	                                                
+	
+	<input type="hidden" name="qid" value="1776981429924"></input><input type="hidden" name="uri" value="CELEX:52003IE0410"></input>
+                                                    <ul class="ecl-site-header__language-list">
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;bg&#039;); $(this).closest(&#039;form&#039;).submit();"  id="bg"      lang=bg hreflang=bg aria-label=""><span class="ecl-site-header__language-link-code">bg</span><span class="ecl-site-header__language-link-label">български</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;es&#039;); $(this).closest(&#039;form&#039;).submit();"  id="es"      lang=es hreflang=es aria-label=""><span class="ecl-site-header__language-link-code">es</span><span class="ecl-site-header__language-link-label">Español</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;cs&#039;); $(this).closest(&#039;form&#039;).submit();"  id="cs"      lang=cs hreflang=cs aria-label=""><span class="ecl-site-header__language-link-code">cs</span><span class="ecl-site-header__language-link-label">Čeština</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;da&#039;); $(this).closest(&#039;form&#039;).submit();"  id="da"      lang=da hreflang=da aria-label=""><span class="ecl-site-header__language-link-code">da</span><span class="ecl-site-header__language-link-label">Dansk</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;de&#039;); $(this).closest(&#039;form&#039;).submit();"  id="de"      lang=de hreflang=de aria-label=""><span class="ecl-site-header__language-link-code">de</span><span class="ecl-site-header__language-link-label">Deutsch</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;et&#039;); $(this).closest(&#039;form&#039;).submit();"  id="et"      lang=et hreflang=et aria-label=""><span class="ecl-site-header__language-link-code">et</span><span class="ecl-site-header__language-link-label">Eesti keel</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;el&#039;); $(this).closest(&#039;form&#039;).submit();"  id="el"      lang=el hreflang=el aria-label=""><span class="ecl-site-header__language-link-code">el</span><span class="ecl-site-header__language-link-label">Ελληνικά</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;en&#039;); $(this).closest(&#039;form&#039;).submit();"  id="en"      lang=en hreflang=en aria-label=""><span class="ecl-site-header__language-link-code">en</span><span class="ecl-site-header__language-link-label">English</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;fr&#039;); $(this).closest(&#039;form&#039;).submit();"  id="fr"      lang=fr hreflang=fr aria-label=""><span class="ecl-site-header__language-link-code">fr</span><span class="ecl-site-header__language-link-label">Français</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;ga&#039;); $(this).closest(&#039;form&#039;).submit();"  id="ga"      lang=ga hreflang=ga aria-label=""><span class="ecl-site-header__language-link-code">ga</span><span class="ecl-site-header__language-link-label">Gaeilge</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;hr&#039;); $(this).closest(&#039;form&#039;).submit();"  id="hr"      lang=hr hreflang=hr aria-label=""><span class="ecl-site-header__language-link-code">hr</span><span class="ecl-site-header__language-link-label">Hrvatski</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;it&#039;); $(this).closest(&#039;form&#039;).submit();"  id="it"      lang=it hreflang=it aria-label=""><span class="ecl-site-header__language-link-code">it</span><span class="ecl-site-header__language-link-label">Italiano</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;lv&#039;); $(this).closest(&#039;form&#039;).submit();"  id="lv"      lang=lv hreflang=lv aria-label=""><span class="ecl-site-header__language-link-code">lv</span><span class="ecl-site-header__language-link-label">Latviešu valoda</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;lt&#039;); $(this).closest(&#039;form&#039;).submit();"  id="lt"      lang=lt hreflang=lt aria-label=""><span class="ecl-site-header__language-link-code">lt</span><span class="ecl-site-header__language-link-label">Lietuvių kalba</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;hu&#039;); $(this).closest(&#039;form&#039;).submit();"  id="hu"      lang=hu hreflang=hu aria-label=""><span class="ecl-site-header__language-link-code">hu</span><span class="ecl-site-header__language-link-label">Magyar</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;mt&#039;); $(this).closest(&#039;form&#039;).submit();"  id="mt"      lang=mt hreflang=mt aria-label=""><span class="ecl-site-header__language-link-code">mt</span><span class="ecl-site-header__language-link-label">Malti</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;nl&#039;); $(this).closest(&#039;form&#039;).submit();"  id="nl"      lang=nl hreflang=nl aria-label=""><span class="ecl-site-header__language-link-code">nl</span><span class="ecl-site-header__language-link-label">Nederlands</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;pl&#039;); $(this).closest(&#039;form&#039;).submit();"  id="pl"      lang=pl hreflang=pl aria-label=""><span class="ecl-site-header__language-link-code">pl</span><span class="ecl-site-header__language-link-label">Polski</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;pt&#039;); $(this).closest(&#039;form&#039;).submit();"  id="pt"      lang=pt hreflang=pt aria-label=""><span class="ecl-site-header__language-link-code">pt</span><span class="ecl-site-header__language-link-label">Português</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;ro&#039;); $(this).closest(&#039;form&#039;).submit();"  id="ro"      lang=ro hreflang=ro aria-label=""><span class="ecl-site-header__language-link-code">ro</span><span class="ecl-site-header__language-link-label">Română</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;sk&#039;); $(this).closest(&#039;form&#039;).submit();"  id="sk"      lang=sk hreflang=sk aria-label=""><span class="ecl-site-header__language-link-code">sk</span><span class="ecl-site-header__language-link-label">Slovenčina</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;sl&#039;); $(this).closest(&#039;form&#039;).submit();"  id="sl"      lang=sl hreflang=sl aria-label=""><span class="ecl-site-header__language-link-code">sl</span><span class="ecl-site-header__language-link-label">Slovenščina</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;fi&#039;); $(this).closest(&#039;form&#039;).submit();"  id="fi"      lang=fi hreflang=fi aria-label=""><span class="ecl-site-header__language-link-code">fi</span><span class="ecl-site-header__language-link-label">Suomi</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;sv&#039;); $(this).closest(&#039;form&#039;).submit();"  id="sv"      lang=sv hreflang=sv aria-label=""><span class="ecl-site-header__language-link-code">sv</span><span class="ecl-site-header__language-link-label">Svenska</span></a>
+</li>
+                                                    </ul>
+                                                	<input type="hidden" name="locale" id="langToSubmit" value="">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ecl-site-header__container ecl-container header-width-override bottom-header-padding">
+                    <div class="container-fluid container-width">
+                        <div class="row">
+                            <div class="col-xs-8 ecl-container-padding-removal">
+                                <div id="small-vertical-blue-divisor-with-label" class="ecl-site-header__site-name site-header">
+                                    <div>
+                                    	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../homepage.html?lang=it"    class="header-link"    id="eurlex-logo-text-size"        aria-label="">
+ EUR-Lex
+ </a>
+
+                                    </div>
+                                    <div class="site-name-tagline">
+                                        L&#39;accesso al diritto dell&#39;Unione europea
+ </div> </div> </div> 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+<div class="experimental-feature-tag">
+	<div class=" col-xs-4 experimental-feature-wrapper radius5p">
+		
+	
+	
+	<form id="disableExperimentalFeatures" name="disableExperimentalFeatures" action="./../../../experimental-features.html?action=disableExperimentalFeatures" method="post">
+			<input type="hidden" value="legal-content/IT/TXT/" name="relativeRequestUrl" />
+			<input type="hidden" value="?qid=1776981429924&amp;uri=CELEX%3A52003IE0410" name="queryString" />
+
+			<div class="input-group input-group-sm experimental-feature-div-position radius5p">
+					
+				<span class="input-group-addon FormHelpAddon" id ="helpTooltipEF">
+						<a href="#" data-toggle="tooltip" data-placement="bottom" aria-description="&lt;a href=&quot;https://eur-lex.europa.eu/content/help/eurlex-content/experimental-features.html&quot; target=&quot;_blank&quot;&gt;Per saperne di più sull&#39;angolo delle funzioni sperimentali&lt;/a&gt;"  id="expFeatHelp" data-original-title="&lt;a href=&quot;https://eur-lex.europa.eu/content/help/eurlex-content/experimental-features.html&quot; target=&quot;_blank&quot;&gt;Per saperne di più sull&#39;angolo delle funzioni sperimentali&lt;/a&gt;">
+   		 					<i>
+   		 					    <svg class="ef-questionmark-icon" focusable="false" aria-hidden="false" role="img" ">
+                                    <use xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/questionmark.svg#questionmark"/>
+                                </svg>
+                            </i>
+							<span class="sr-only togglable-screenReader">&lt;a href=&quot;https://eur-lex.europa.eu/content/help/eurlex-content/experimental-features.html&quot; target=&quot;_blank&quot;&gt;Per saperne di più sull&#39;angolo delle funzioni sperimentali&lt;/a&gt;</span>	</a>	</span>	
+
+				<span   title="Funzioni sperimentali" aria-label="Funzioni sperimentali" class="btn btn-sm btn-primary popper experimental-feature-btn radius5p">
+					<span class="hidden-xs">Funzioni sperimentali</span>
+					<span class="visible-xs"><i class="fa fa-flask" aria-hidden="true"></i></span>
+					<label class="experimental-feature-switch">
+                        <input type="checkbox" id="ef-checkbox" data-toggle="popover" data-placement="bottom" aria-label="Funzioni sperimentali" >
+                        <span class="slider round"></span>
+                    </label>
+				</span>
+			</div>
+		<div>
+<input type="hidden" name="_csrf" value="40edc0d9-33dd-4d9e-9fa3-252a830d0d1d" />
+</div></form>
+	<form id="applyExperimentalFeatures" name="applyExperimentalFeatures" action="./../../../experimental-features.html?action=applyExperimentalFeatures" method="post">
+			<input type="hidden" value="legal-content/IT/TXT/" name="relativeRequestUrl" />
+			<input type="hidden" value="?qid=1776981429924&amp;uri=CELEX%3A52003IE0410" name="queryString" />
+			<div class="exp-feature-float-box popover fade in">
+				<button type="button" class="close" id="experimental-feature-close" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<div>
+					<h5 class="text-center">Scegli le funzioni sperimentali da provare</h5>
+					<hr>
+					<div class="homepageMessage experimental-feature-disclaimer hidden-xs">
+						<p>Vuoi aiutarci a migliorare EUR-Lex? Questo è un elenco di funzioni sperimentali che si possono attivare. Queste funzioni sono ancora in fase di sviluppo: non sono testate completamente e potrebbero ridurre la stabilità di EUR-Lex. Vorremmo sapere cosa ne pensi.</p>
+					</div>
+					<div id="exp-feautre-js-warning-box" class="alert-danger exp-feature-alert-danger hidden" role="alert">
+						<span class="fa fa-exclamation-triangle" aria-hidden="true">&nbsp;</span>
+						Attenzione! Il sistema ha individuato un conflitto: scegliere un&#39;altra combinazione di funzioni.
+					</div>
+					<div class="experimental-feature-list">
+						<fieldset>
+							<ul class="browseTree " id="experimental-features-inner-items">
+								
+									<li>
+                                        <ul class="browseTree">
+                                            
+                                                <li>
+                                                    <label class="">
+                                                        <input id="experimentalFeatureCheckbox_EF02" name="selectedExperimentExperimentalFeaturesValues" autocomplete="off" class="exp-feature-child-checkbox" type="checkbox" value="EF02"/><input type="hidden" name="_selectedExperimentExperimentalFeaturesValues" value="on"/> Sostituzione degli identificativi CELEX con titoli brevi - funzione sperimentale. Sostituisce gli identificativi CELEX cliccabili dei trattati e della giurisprudenza con titoli brevi.
+ </label> </li> 
+                                                <li>
+                                                    <label class="">
+                                                        <input id="experimentalFeatureCheckbox_EF03" name="selectedExperimentExperimentalFeaturesValues" autocomplete="off" class="exp-feature-child-checkbox" type="checkbox" value="EF03"/><input type="hidden" name="_selectedExperimentExperimentalFeaturesValues" value="on"/> Visualizzazione delle relazioni tra documenti. Mostra un grafico dinamico con le relazioni tra l&#39;atto e i documenti correlati. Attualmente è disponibile solo per gli atti giuridici.
+ </label> </li> 
+ </ul>	</li>	
+									<li>
+                                        <ul class="browseTree">
+                                            
+                                                <li>
+                                                    <label class="">
+                                                        <input id="experimentalFeatureCheckbox_EF01" name="selectedExperimentExperimentalFeaturesValues" autocomplete="off" class="exp-feature-child-checkbox" type="checkbox" value="EF01"/><input type="hidden" name="_selectedExperimentExperimentalFeaturesValues" value="on"/> Mostra deep linking nel testo del documento (meno di 900 KB). Consente di creare link ad altri atti legali cui si fa riferimento all’interno dei documenti.
+ </label> </li> 
+ </ul>	</li>	
+							</ul>
+						</fieldset>
+					</div>
+					<div>
+						<button  id="exp-feature-btn-apply" type="submit" class="btn btn-sm btn-primary radius5p"> Applicare
+	</button>	</div>	</div>	</div>	<div>
+<input type="hidden" name="_csrf" value="40edc0d9-33dd-4d9e-9fa3-252a830d0d1d" />
+</div></form>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../experimental-features.html?action=confirmFeedback"    class="eurlexModal btn btn-primary btn-sm hidden"    id="link-give-feedback"        aria-label=""></a>
+
+	</div>
+</div>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		var conflicts = {};
+		
+		initializeFloatingBox(conflicts,$(document).find('.exp-feature-child-checkbox'),"");
+
+		var expOriginalTooltip = $('#expFeatHelp').attr('aria-description');
+		expOriginalTooltip = expOriginalTooltip.replace(/(<([^>]+)>)/ig,'');
+		$('#expFeatHelp').attr('aria-description',expOriginalTooltip);
+	});
+</script>
+
+ 
+                        </div>
+                        <div id="horizontal-blue-divisor" class="row blue-divisor-padding">
+                            <div class="container-fluid lower-header-border blue-horizontal-margin"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+<div id="op-header-pdf" class="visible-print-block">
+    <div class="ecl-site-header__background">
+        <div class="ecl-site-header__header">
+            <div class="ecl-site-header__container ecl-container upper-header-border header-width-override pdf-logo-img-container">
+                <div class="ecl-site-header__top" data-ecl-site-header-top>
+                    <img class="ecl-site-footer__logo-image pdf-logo-img" src="./../../../images/eu-logo/logo-eu-it-01.jpg" >
+                </div>
+            </div>
+            <div class="ecl-site-header__container ecl-container header-width-override">
+                <div class="container-fluid container-width elx-container-rows-pdf">                    
+                    <div class="row elx-container-pdf">
+                        <div class="col-xs-8 ecl-container-padding-removal">
+                            <div class="ecl-site-header__site-name site-header">
+                                <div class="elx-label-pdf">
+                                    EUR-Lex
+                                </div>
+                                <div class="elx-label-text-pdf site-name-tagline">
+                                    L&#39;accesso al diritto dell&#39;Unione europea
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row blue-divisor-padding">
+                       <div class="container-fluid lower-header-border lower-header-border-pdf blue-horizontal-margin"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="op-site-subtitle-pdf">
+        <p class="subtitle-extraction-info-pdf">
+            Questo documento è un estratto del sito web EUR-Lex.
+        </p>
+        <div class="subtitle-url-info-pdf">
+        
+ 
+ 
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var home_lang = it;
+    $(document).ready(function(){
+        svg4everybody({ polyfill: true });
+        ECL.autoInit();
+    });
+
+    $(document).ready(function(){
+        $(".ecl-site-header__language-link--active").removeClass("ecl-site-header__language-link--active");
+        $(home_lang).addClass("ecl-site-header__language-link--active");
+    });
+</script>
+
+<div class="left-right-padding">
+
+	
+			<div class="row ecl-container ecl-container-padding-removal">
+				<div class="col-md-8 breadcrumbs-padding">
+					
+
+
+
+
+
+ 
+
+
+
+
+
+<div class="SiteBreadcrumb">
+	<span class="sr-only">Siete qui</span>
+	<ol class="fa-ul notBootstrapBreadcrumb hidden-xs hidden-sm">
+		<li><a target="_blank" href="https://europa.eu/european-union/index_it">EUROPA</a></li>
+		
+		
+		<li class="breadcrumbPathItemWithArrow">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../homepage.html"       title="EUR-Lex home"         aria-label=""><i class="fa-li fa fa-angle-right"></i>EUR-Lex home</a>
+</li>	
+	
+	
+	
+	
+					<li class="breadcrumbPathItemWithArrow">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../execute-query.html?qid=1776981429924"       title="Risultati della ricerca"         aria-label=""><i class="fa-li fa fa-angle-right"></i>Risultati della ricerca</a>
+</li>	
+	
+	
+	
+	
+	<li class="active"><i class="fa-li fa fa-angle-right"></i>EUR-Lex - 52003IE0410 - IT
+	</li>
+	</ol>
+</div><!-- SiteBreadcrumb -->
+				</div>
+				<div class="col-md-4 ShareBar breadcrumbs-padding">
+					<div class="PageShare">
+						
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul>
+        <li class="hidden-xs hidden-sm">
+            
+ 
+ 
+ 
+ 
+ 
+ <a href="./../../../content/help.html" class="PSHelp EurlexTooltip" aria-description = "Help" data-toggle="tooltip" title="Guida" data-original-title="Help" ><svg class="ecl-icon ecl-icon--s faq-image-size" focusable="false" aria-hidden="false" role="img"><use xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/faq.svg#faq" /></svg>Guida</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </li> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+        <li class="hidden-xs hidden-sm">
+            <button data-target="./../../../legal-content/IT/TXT/?uri=CELEX%3A52003IE0410&amp;qid=1776981429924&amp;print=true" onclick="window.open('./../../../legal-content/IT/TXT/?uri=CELEX%3A52003IE0410&amp;qid=1776981429924&amp;print=true','','scrollbars=yes,menubar=no, status=no, directories=no, location=no, resizable=no, width=1024, height=600');return false;" target="_blank" class="PSPrint EurlexTooltip" data-toggle="tooltip" title="Stampare" aria-description="Stampare"  data-original-title="Print this page">
+                <i class="fa fa-print" aria-hidden="true"></i>
+                Stampare
+ </button> </li> 
+ 
+ 
+ 
+
+            <li class="shareApi">
+                <script type="application/json">{
+                    "service": "share",
+                    "counter": false,
+                    "css": {
+                        "button": "myButton"
+                    },
+                    "link": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=oj:JOC_2003_133_R_0063_01"
+                }</script>
+            </li>
+        
+ </ul>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.PageShare').each(function() { 
+            const target = this;
+            let observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (!mutation.addedNodes) return
+                    for (let i = 0; i < mutation.addedNodes.length; i++) {
+                        let node = mutation.addedNodes[i]
+                        if ($(node) != undefined && $(node).is("a") && $(node).hasClass("myButton") && $(node).find("i").length === 0) {
+                            $(node).prepend("<i class='fa fa-share-alt' aria-hidden='true'></i>")
+                            observer.disconnect();
+                        }
+                    }
+                })
+            })
+            observer.observe(target, {
+                subtree: true,
+                childList: true
+            });
+        });
+    });
+</script>
+
+
+	
+	
+					</div>
+				</div>
+			</div>
+
+		<div class="NavSearch">
+			<div class="row">
+				
+				<div class="col-xs-2 dropdown EurlexNav">
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+	
+	
+	
+	
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<button type="button" class="btn btn-primary btn-block" id="EurlexNavBtn" title="Menu EUR-Lex" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Open Navigation Menu"><i class="fa fa-bars" aria-hidden="true"></i><span class="hidden-xs">Menu</span></button><div class="dropdown-menu MegaMenu" aria-labelledby="EurlexNavBtn">
+   <div class="row">
+      <div class="col-sm-6 col-md-4">
+         <nav class="MenuBlock ">
+            <p class="BlockTitle" role="heading">Diritto dell'UE</p>
+            <ul class="MenuList TreeMenu">
+               <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="treaties" title="Trattati"><i class="fa fa-angle-right" aria-hidden="true"></i>Trattati</a><ul class="collapse">
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-force.html" id="treaties-force" title="Trattati attualmente in vigore">Trattati attualmente in vigore</a></li>
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-founding.html" id="treaties-founding" title="Trattati costitutivi">Trattati costitutivi</a></li>
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-accession.html" id="treaties-accession" title="Trattati di adesione">Trattati di adesione</a></li>
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-other.html" id="treaties-other" title="Altri trattati e protocolli">Altri trattati e protocolli</a></li>
+                     <li class=""><a href="./../../../collection/eu-law/treaties/treaties-overview.html" id="treaties-overview" title="Cronologia">Cronologia</a></li>
+                  </ul>
+               </li>
+               <li class=""><a href="./../../../collection/eu-law/legal-acts/recent.html" class="no-arrow" id="recent" title="Atti giuridici">Atti giuridici</a></li>
+               <li class=""><a href="./../../../collection/eu-law/consleg.html" class="no-arrow" id="consolidated-texts" title="Testi consolidati">Testi consolidati</a></li>
+               <li class=""><a href="./../../../collection/eu-law/inter-agree.html" class="no-arrow" id="inter-agree" title="Accordi internazionali">Accordi internazionali</a></li>
+               <li class=""><a href="./../../../collection/eu-law/pre-acts.html" class="no-arrow" id="working-documents" title="Documenti preparatori">Documenti preparatori</a></li>
+               <li class=""><a href="./../../../collection/eu-law/efta.html" class="no-arrow" id="efta" title="Documenti EFTA (Associazione europea di libero scambio)">Documenti EFTA</a></li>
+               <li class=""><a href="./../../../collection/legislative-procedures.html" class="no-arrow" id="procedures" title="Procedure normative e EU Law Tracker">Procedure normative</a></li>
+               <li class=""><a href="./../../../browse/summaries.html" class="no-arrow" id="summary" title="Sintesi della legislazione dell'UE">Sintesi della legislazione dell'UE</a></li>
+               <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="institutions-intro" title="Istituzioni dell’UE"><i class="fa fa-angle-right" aria-hidden="true"></i>Istituzioni dell’UE</a><ul class="collapse">
+                     <li class=""><a href="./../../../browse/institutions/eu-parliament.html" id="eu-parliament" title="Parlamento europeo">Parlamento europeo</a></li>
+                     <li class=""><a href="./../../../browse/institutions/eu-council.html" id="European-Council" title="Consiglio europeo">Consiglio europeo</a></li>
+                     <li class=""><a href="./../../../browse/institutions/council.html" id="Council" title="Consiglio dell’Unione europea">Consiglio dell’Unione europea</a></li>
+                     <li class=""><a href="./../../../browse/institutions/eu-commission.html" id="European-Commission" title="Commissione europea">Commissione europea</a></li>
+                     <li class=""><a href="./../../../browse/institutions/justice.html" id="Court-of-Justice-of-the-European-Union" title="Corte di giustizia dell’Unione europea">Corte di giustizia dell’Unione europea</a></li>
+                     <li class=""><a href="./../../../browse/institutions/bank.html" id="European-Central-Bank" title="Banca centrale europea">Banca centrale europea<i class="fa fa-bar-chart" aria-hidden="true" style="margin-left:5px;"></i></a></li>
+                     <li class=""><a href="./../../../browse/institutions/auditors.html" id="Court-of-Auditors" title="Corte dei conti europea">Corte dei conti europea</a></li>
+                     <li class=""><a href="./../../../browse/institutions/eco-social.html" id="EESC" title="Comitato economico e sociale europeo">Comitato economico e sociale europeo</a></li>
+                     <li class=""><a href="./../../../browse/institutions/regions.html" id="Committee-of-Regions" title="Comitato europeo delle regioni">Comitato europeo delle regioni</a></li>
+                  </ul>
+               </li>
+               <li class=""><a href="./../../../browse/eurovoc.html" class="no-arrow" id="eurovoc" title="Cerca con EuroVoc (il thesaurus multilingue e multidisciplinare dell'UE)">EuroVoc</a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="col-sm-6 col-md-4">
+         <nav class="MenuBlock ">
+            <p class="BlockTitle" role="heading">Giurisprudenza dell'UE</p>
+            <ul class="MenuList">
+               <li class=""><a href="./../../../collection/eu-law/eu-case-law.html" class="no-arrow" id="case-law" title="Giurisprudenza">Giurisprudenza</a></li>
+               <li class=""><a href="./../../../collection/eu-law/eu-case-law/reports.html" class="no-arrow" id="electronic-report" title="Raccolta della giurisprudenza">Raccolta della giurisprudenza</a></li>
+               <li class=""><a href="./../../../browse/directories/new-case-law.html" class="no-arrow" id="directory-eu-case-law" title="Repertorio della giurisprudenza">Repertorio della giurisprudenza</a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="col-sm-6 col-md-4">
+         <nav class="MenuBlock ">
+            <p class="BlockTitle" role="heading">Gazzetta ufficiale</p>
+            <ul class="MenuList">
+               <li class=""><a href="./../../../oj/direct-access.html" class="no-arrow" id="direct-access" title="Accesso alla Gazzetta ufficiale">Accesso alla Gazzetta ufficiale</a></li>
+               <li class=""><a href="./../../../oj/daily-view/L-series/default.html" class="no-arrow" id="L-series" title="Serie L della Gazzetta ufficiale, visualizzazione per giorno">Serie L della Gazzetta ufficiale, visualizzazione per giorno</a></li>
+               <li class=""><a href="./../../../oj/daily-view/C-series/default.html" class="no-arrow" id="C-series" title="Serie C della Gazzetta ufficiale, visualizzazione per giorno">Serie C della Gazzetta ufficiale, visualizzazione per giorno</a></li>
+               <li class=""><a href="./../../../oj/browse-oj.html" class="no-arrow" id="boj" title="Consulta la Gazzetta ufficiale">Consulta la Gazzetta ufficiale</a></li>
+               <li class=""><a href="./../../../oj/all/auth-direct-access.html" class="no-arrow" id="auth-direct-access" title="Edizioni su carta giuridicamente vincolanti">Edizioni su carta giuridicamente vincolanti</a></li>
+               <li class=""><a href="./../../../eu-enlargement/special.html" class="no-arrow" id="se" title="Edizione speciale">Edizione speciale</a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="col-sm-6 col-md-4 col-break-sm">
+         <nav class="MenuBlock ">
+            <p class="BlockTitle" role="heading">Legislazione nazionale e giurisprudenza</p>
+            <ul class="MenuList">
+               <li class=""><a href="./../../../collection/n-law/mne.html" class="no-arrow" id="mne" title="Recepimento nazionale">Recepimento nazionale</a></li>
+               <li class=""><a href="./../../../collection/n-law/n-case-law.html" class="no-arrow" id="n-case-law" title="Giurisprudenza nazionale">Giurisprudenza nazionale</a></li>
+               <li class=""><a href="./../../../collection/n-law/jure.html" class="no-arrow" id="JURE" title="JURE (Competenza, riconoscimento ed esecuzione delle decisioni in materia civile e commerciale) ">Giurisprudenza JURE</a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="col-sm-6 col-md-4">
+         <nav class="MenuBlock ">
+            <p class="BlockTitle" role="heading">Informazioni</p>
+            <ul class="MenuList TreeMenu">
+               <li class=""><a href="./../../../content/news/index.html" class="no-arrow" id="Themes_in_focus" title="Temi di attualità">Temi di attualità</a></li>
+               <li class=""><a href="./../../../content/development/index.html" class="no-arrow" id="developmentsEUR-Lex" title="Ultime novità su EUR-Lex">Ultime novità su EUR-Lex</a></li>
+               <li class=""><a href="./../../../statistics/statistics.html" class="no-arrow" id="statistic" title="Statistiche">Statistiche</a></li>
+               <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="eli-register-nav" title="Registro dell'ELI (identificatore della legislazione europea)"><i class="fa fa-angle-right" aria-hidden="true"></i>Registro ELI</a><ul class="collapse">
+                     <li class=""><a href="./../../../eli-register/what_is_eli.html" id="what_is_eli" title="Cos'è l'ELI?">Cos'è l'ELI?</a></li>
+                     <li class=""><a href="./../../../eli-register/background.html" id="eli_background" title="L'ELI - informazioni generali">L'ELI - informazioni generali</a></li>
+                     <li class=""><a href="./../../../eli-register/benefits.html" id="advantages" title="Perché attuare l'ELI">Perché attuare l'ELI</a></li>
+                     <li class=""><a href="./../../../eli-register/implementing_countries.html" id="implementing_countries" title="I paesi che attuano l'ELI">I paesi che attuano l'ELI</a></li>
+                     <li class=""><a href="./../../../eli-register/testimonials.html" id="testimonials" title="Testimonianze">Testimonianze</a></li>
+                     <li class=""><a href="./../../../eli-register/implementing_eli.html" id="implementing_eli" title="Attuazione dell'ELI">Attuazione dell'ELI</a></li>
+                     <li class=""><a href="./../../../eli-register/glossary.html" id="eli_glossary" title="Glossario">Glossario</a></li>
+                  </ul>
+               </li>
+               <li class=""><a href="./../../../budget/www/index-en.htm" class="no-arrow" id="EU_budget" title="Bilancio on line">Bilancio on line</a></li>
+            </ul>
+         </nav>
+      </div>
+   </div>
+</div>
+	
+
+	</div>	
+	
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	<div class="col-xs-10">
+		<div class="EurlexSearch">
+			
+	<form id="quick-search" name="quick-search" class="DistinctiveForm QSF" action="./../../../quick-search-form.html" method="post" onsubmit="showHourglass();" autocomplete="off">
+				<input id="editscope" type="hidden" name="scope" value="EURLEX"/>
+				<div class="QuickSearch">
+					
+	
+	
+	
+	
+	
+	
+
+					<label for="QuickSearchField"><i class="fa fa-search hidden-xs" aria-hidden="true"></i><span class="sr-only">Ricerca rapida</span></label>	
+	
+	
+	
+	
+					
+					<textarea id="QuickSearchField" name="text" class="form-control NoBorders AutoGrow typeahead autocompleteField" data-provide="typeahead" placeholder="RICERCA RAPIDA" aria-describedby="QuickSearchHelp" rows="1" autocomplete="off"></textarea>	
+					<button class="btn btn-primary QuickSearchBtn" type="submit" title="Cercare" aria-label="Cercare">
+						
+	
+	
+							<i class="fa fa-search" aria-hidden="true"></i>
+						
+	
+	</button>	</div>
+	
+				<div class="DistinctiveFormMessage EurlexTooltip" tabindex="0" data-toggle="tooltip" title="Rimuovere le altre opzioni di ricerca rapida prima di usare questa opzione"></div>	
+			<div>
+<input type="hidden" name="_csrf" value="40edc0d9-33dd-4d9e-9fa3-252a830d0d1d" />
+</div></form>
+	
+			<div class="QuickSearchOptions fade sr-only">
+				<div id="QuickSearchHelp">
+				    <i class="fa fa-info" aria-hidden="true"></i>
+					
+	
+	
+	
+	
+	
+	
+			
+	
+	
+	
+	
+	
+	
+	Utilizzare le virgolette per cercare una &quot;frase esatta&quot;. Aggiungere un asterisco (<abbr title='Asterisco'>*</abbr>) a un termine di ricerca per trovarne le varianti (recep<abbr title='Asterisco'>*</abbr>, 32019R<abbr title='Asterisco'>*</abbr>). Utilizzare un punto interrogativo (<abbr title='Punto interrogativo'>?</abbr>) al posto di un determinato carattere nella ricerca per trovare le possibili varianti (cercando &quot;ca<abbr title='Punto interrogativo'>?</abbr>o&quot; si trovano i seguenti risultati: caso, capo, calo).		</div>
+				<button id="QuickSearchClose" type="button" class="close" aria-label="Close" onclick="closeQSHelp()">
+					<i class="fa fa-times" aria-hidden="true">&nbsp;</i>
+				</button>
+			</div>
+	
+			<div class="QSMore">
+				<div class="col-xs-4 text-left">
+					
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"      onclick="showQSHelpAlt()" title="Consigli per la ricerca"         aria-label="">
+						<i class="fa fa-info-circle" aria-hidden="true">&nbsp;</i>
+						Consigli per la ricerca
+	</a>
+
+				</div>
+				<div class="col-xs-8 text-right">
+					<span class=" ">Servono più opzioni di ricerca? Utilizzare la</span>	
+	
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../advanced-search-form.html"       title="Ricerca avanzata"         aria-label="">Ricerca avanzata</a>
+ 	
+	
+	</div>	</div>
+	</div>	</div>	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var quickSearchFld = $('#QuickSearchField.autocompleteField');
+			typeaheadFld(quickSearchFld, "./../../../autocomplete.html", true, 'QuickSearch');
+		});
+		var quickSearchHelpAlt="Utilizzare le virgolette per cercare una &quot;frase esatta&quot;. Aggiungere un asterisco (<abbr title='Asterisco'>*</abbr>) a un termine di ricerca per trovarne le varianti (recep<abbr title='Asterisco'>*</abbr>, 32019R<abbr title='Asterisco'>*</abbr>). Utilizzare un punto interrogativo (<abbr title='Punto interrogativo'>?</abbr>) al posto di un determinato carattere nella ricerca per trovare le possibili varianti (cercando &quot;ca<abbr title='Punto interrogativo'>?</abbr>o&quot; si trovano i seguenti risultati: caso, capo, calo).";
+		var quickSearchHelp="Utilizzare le virgolette per cercare una &quot;frase esatta&quot;. Aggiungere un asterisco (<abbr title='Asterisco'>*</abbr>) a un termine di ricerca per trovarne le varianti (recep<abbr title='Asterisco'>*</abbr>, 32019R<abbr title='Asterisco'>*</abbr>). Utilizzare un punto interrogativo (<abbr title='Punto interrogativo'>?</abbr>) al posto di un determinato carattere nella ricerca per trovare le possibili varianti (cercando &quot;ca<abbr title='Punto interrogativo'>?</abbr>o&quot; si trovano i seguenti risultati: caso, capo, calo).";
+	</script>
+
+	</div>	</div>	
+ 
+
+</div>
+
+        <div class="left-right-padding">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+	
+		<div id="MainContent">
+			
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+ 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="PageTitle">
+	
+	
+	
+		
+			<div class="row">
+				
+				<div class="col-xs-2 col-sm-1 visible-xs-block visible-sm-block">
+					
+						<button type="button" class="btn btn-default btn-sm btn-block visible-xs-inline visible-sm-inline"
+								data-toggle="offcanvas">
+							<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+						</button>
+					
+					
+					
+				</div><!-- col -->
+				
+				<div class="col-xs-2 col-sm-1 visible-xs-block visible-sm-block">
+					
+	</div>	
+				<div class="col-xs-5 col-sm-4 col-md-3 col-sm-push-4 col-md-push-3 col-xs-pull-2">
+					<p class="DocumentTitle pull-left">Documento&nbsp;52003IE0410</p>
+				</div><!-- col -->
+				<div class="col-sm-5 col-md-3 col-md-pull-3 hidden-xs col-sm-pull-5">
+					
+
+
+
+
+
+
+
+
+
+
+
+<div class="noticeSearchLinksBtnGroup">
+	<div class="noticeSearchLinks">
+	    
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../execute-query.html?qid=1776981429924"                aria-label="">
+	            <button type="button" class="btn btn-sm btn-link">
+	                <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+	                <span class="hidden-xs">Tornare all&#39;elenco dei risultati</span> </button> </a>
+
+ 
+	</div>    
+	<div  class="noticeSearchLinks">
+	    
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../legal-content/IT/TXT/?uri=CELEX:32003H0555&amp;qid=1776981429924"                aria-label="">
+	            <button type="button" class="btn btn-sm btn-link "><i class="fa fa-arrow-left" aria-hidden="true"></i><span class="hidden-xs"></span></button> </a>
+
+ 
+ 
+	<span>10/1230</span>	
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../legal-content/IT/TXT/?uri=CELEX:51996AP0268&amp;qid=1776981429924"                aria-label="">
+	            <button type="button" class="btn btn-sm btn-link"><span class="hidden-xs"></span><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+	        </a>
+
+ 
+	</div>
+</div>
+
+	
+	</div>	
+						<div class="col-xs-2 col-sm-1 col-md-6 " >
+							<div class="PageShare pageShareMobile">
+								
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul>
+        <li class="hidden-xs hidden-sm">
+            
+ 
+ 
+ 
+ 
+ 
+ <a href="./../../../content/help.html" class="PSHelp EurlexTooltip" aria-description = "Help" data-toggle="tooltip" title="Guida" data-original-title="Help" ><svg class="ecl-icon ecl-icon--s faq-image-size" focusable="false" aria-hidden="false" role="img"><use xlink:href="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/faq.svg#faq" /></svg>Guida</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </li> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+        <li class="hidden-xs hidden-sm">
+            <button data-target="./../../../legal-content/IT/TXT/?uri=CELEX%3A52003IE0410&amp;qid=1776981429924&amp;print=true" onclick="window.open('./../../../legal-content/IT/TXT/?uri=CELEX%3A52003IE0410&amp;qid=1776981429924&amp;print=true','','scrollbars=yes,menubar=no, status=no, directories=no, location=no, resizable=no, width=1024, height=600');return false;" target="_blank" class="PSPrint EurlexTooltip" data-toggle="tooltip" title="Stampare" aria-description="Stampare"  data-original-title="Print this page">
+                <i class="fa fa-print" aria-hidden="true"></i>
+                Stampare
+ </button> </li> 
+ 
+ 
+ 
+
+            <li class="shareApi">
+                <script type="application/json">{
+                    "service": "share",
+                    "counter": false,
+                    "css": {
+                        "button": "myButton"
+                    },
+                    "link": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=oj:JOC_2003_133_R_0063_01"
+                }</script>
+            </li>
+        
+ </ul>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.PageShare').each(function() { 
+            const target = this;
+            let observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (!mutation.addedNodes) return
+                    for (let i = 0; i < mutation.addedNodes.length; i++) {
+                        let node = mutation.addedNodes[i]
+                        if ($(node) != undefined && $(node).is("a") && $(node).hasClass("myButton") && $(node).find("i").length === 0) {
+                            $(node).prepend("<i class='fa fa-share-alt' aria-hidden='true'></i>")
+                            observer.disconnect();
+                        }
+                    }
+                })
+            })
+            observer.observe(target, {
+                subtree: true,
+                childList: true
+            });
+        });
+    });
+</script>
+
+
+	</div>	</div><!-- col -->	</div>	<!-- row -->	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</div>
+
+
+
+
+		<div class="row row-offcanvas">
+				
+	
+	
+	
+	
+
+
+
+
+
+
+<div class="col-md-3 sidebar-offcanvas">
+    
+ 
+ 
+ 
+ 
+            <div class="AffixSidebarWrapper">
+                <nav class="Sidebar" id="AffixSidebar">
+                    
+	
+	
+	
+				<ul class="MenuList">
+
+
+						
+	
+	
+	<li class="Selected">	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../legal-content/IT/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"                aria-label="">
+	Testo
+	</a>
+
+	
+							<input type="hidden" id="selectedTabEnglishTranslationID_text"
+								   value="Text">
+						</li>
+					
+	
+	
+	
+	<li >	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../legal-content/IT/ALL/?uri=CELEX:52003IE0410&amp;qid=1776981429924"                aria-label="">
+	Informazioni sul documento
+	</a>
+
+	
+							<input type="hidden" id="selectedTabEnglishTranslationID_all"
+								   value="Document information">
+						</li>
+					
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+ 
+ 
+	
+ 
+	
+	
+	
+	</ul>	
+				<ul class="SidebarTools">
+
+				    
+ 
+ 
+ <li>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a
+        id="link-permanent-link" class="hidden-print hideInPdf" style="display:none"
+        href="javascript:;"
+        onclick="createCookie('bookmark','trigger',1); window.open('./../../../legal-content/IT/TXT/?uri=CELEX:52003IE0410'+window.location.hash); return true;"
+        title="Link a questa versione del documento"><i
+        class="fa fa-bookmark" aria-hidden="true"></i>Link permanente</a>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (readCookie('bookmark') == 'trigger') {
+            deleteCookie('bookmark');
+
+        } else {
+        	// Permanent link (DISPLAYED FIST) should remove qid from query string, and bookmark link should be displayed in its place when page refreshes
+            $('#link-permanent-link').addClass("onlyJsInlineBlock");
+            $('#link-permanent-link').show();
+        }
+    });
+</script>
+
+ </li> 
+ 
+	
+	
+	
+	
+ 
+	
+                    	<li class=" ">
+                    		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../download-notice.html?legalContentId=cellar:be39d28a-8613-4cbd-b512-54e3823d8095&amp;noticeType=branch&amp;callingUrl=%2Flegal-content%2FIT%2FTXT%2F%3Fqid%3D1776981429924%26uri%3DCELEX%253A52003IE0410&amp;lng=IT"       title="Scaricare la notifica XML del documento" id="link-download-notice"        aria-label="">
+                    			<i class="fa fa-download" aria-hidden="true"></i>
+                    			Scaricare la nota
+	</a>
+
+	</li> 
+ 
+ 
+	
+	
+	<li>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../error/authentication-required.html?callingUrl=%2Flegal-content%2FIT%2FTXT%2F%3Fqid%3D1776981429924%26uri%3DCELEX%253A52003IE0410%26qid%3D1776981429924&amp;towardUrl=%2Fprotected%2Fsave-document.html%3FlegalContentId%3Dcellar%3Abe39d28a-8613-4cbd-b512-54e3823d8095%26callingUrl%3D%252Flegal-content%252FIT%252FTXT%252F%253Fqid%253D1776981429924%2526uri%253DCELEX%25253A52003IE0410%26qid%3D1776981429924"    class="eurlexModal grayLink"   title="Salvare l&#039;elemento" id="link-save-document"        aria-label="">
+	
+	
+	 
+	
+                    			<i class="fa fa-sticky-note-o" aria-hidden="true"></i> Salvare ne &quot;I miei elementi&quot;
+	
+	
+	
+	
+</a>
+
+	</li> 
+	
+	
+	
+	
+	
+	
+ 
+ 
+ 
+	
+	
+	
+ 
+ 
+ 
+ <li> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../error/authentication-required.html?callingUrl=%2Fhomepage.html&amp;towardUrl=%2Fprotected%2Fsave-email-alert%2Fnotice-to-email.html%3FlegalContentId%3Dcellar%3Abe39d28a-8613-4cbd-b512-54e3823d8095%26callingUrl%3D%252Flegal-content%252FIT%252FTXT%252F%253Fqid%253D1776981429924%2526uri%253DCELEX%25253A52003IE0410%26isAddNoticeRSS%3Dtrue%26celex%3D52003IE0410"    class="eurlexModal grayLink"   title="Segui questo documento con notifiche per e-mail. Per attivare questa funzione, occorre prima effettuare l&#039;accesso." id="link-follow-document"        aria-label="">
+	
+	
+	 
+	
+                                <i class="fa fa-bell-o" aria-hidden="true"></i> Crea un avviso per e-mail
+ 
+
+	
+	
+	
+</a>
+
+ </li> 
+	
+	
+	
+	<li>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../error/authentication-required.html?callingUrl=%2Fhomepage.html&amp;towardUrl=%2Fprotected%2Fsave-rss%2Fnotice-to-rss.html%3FlegalContentId%3Dcellar%3Abe39d28a-8613-4cbd-b512-54e3823d8095%26callingUrl%3D%252Flegal-content%252FIT%252FTXT%252F%253Fqid%253D1776981429924%2526uri%253DCELEX%25253A52003IE0410%26isAddNoticeRSS%3Dtrue%26celex%3D52003IE0410"    class="eurlexModal grayLink"   title="Segui questo documento con i feed RSS. Per attivare questa funzione, occorre prima effettuare l&#039;accesso." id="link-follow-document"        aria-label="">
+	
+	
+	 
+								<i class="fa fa-rss" aria-hidden="true"></i> Crea un avviso RSS
+	
+	
+	
+	
+</a>
+
+	</li>	
+	</ul>	
+	
+	
+	
+ 
+	
+	
+ </nav> </div> <!-- AffixSidebarWrapper --> 
+ 
+ 
+ 
+</div>
+
+	
+			<div class="col-md-9"  id="documentView">
+				<div class="EurlexContent">
+						
+	
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- panel-group that hosts all page panels -->
+	<div class="panel-group" role="tablist" aria-multiselectable="true">
+		<!-- Transform the document notice xml with the corresponding xslt -->
+		<div id="PP1Contents" class="" role="" aria-labelledby="">
+   <div class="" lang="IT">
+      <div id="translatedTitle" class="hidden">
+            ​
+        </div>
+      <p id="englishTitle" class="hidden">Opinion of the European Economic and Social Committee on "The 2003 broad economic policy guidelines"</p>
+      <p id="title" class="title-bold">Parere del Comitato economico e sociale europeo in merito agli "Indirizzi di massima per le politiche economiche 2003"</p>
+      <p id="originalTitle" class="hidden">Parere del Comitato economico e sociale europeo in merito agli "Indirizzi di massima per le politiche economiche 2003"</p>
+      <p>
+         <em>GU C 133 del 6.6.2003, pagg. 63-69
+		 (ES, DA, DE, EL, EN, FR, IT, NL, PT, FI, SV)<br/>
+         </em>
+      </p>
+      <div class="PageTools clearfix hideInPdf hide-border">
+         <div class="btn-group btn-group-xs pull-right" role="group" aria-label="">
+            <button onclick="expandAll()" id="ExpandAll" type="button" class="btn btn-link">
+               <i class="fa fa-angle-double-down" aria-hidden="true">&nbsp;</i>Espandere tutto</button>
+            <button onclick="collapseAll()" id="CollapseAll" type="button" class="btn btn-link">
+               <i class="fa fa-angle-double-up" aria-hidden="true">&nbsp;</i>Comprimere tutto</button>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="panel panel-default PagePanel">
+   <div class="panel-heading" role="tab" id="PP2">
+      <p class="panel-title">
+         <button data-toggle="collapse" data-target="#PP2Contents" aria-expanded="true"
+                 aria-controls="PP2Contents"
+                 class=" "
+                 onclick="createDocPartCookie(this);">
+            <i class="fa fa-angle-right" aria-hidden="true">&nbsp;</i>Lingue, formati e link alla GU</button>
+      </p>
+   </div>
+   <div id="PP2Contents" class="panel-collapse collapse in" role="tabpanel"
+        aria-labelledby="PP2">
+      <div class="panel-body PanelBodyB">
+         <div class="PubFormats">
+            <div class="PubFormat visible-lg-table">
+               <div class="PubFormatType">
+                  <span class="sr-only">Lingua</span>
+               </div>
+               <div class="btn-group btn-group-sm">
+                  <ul class="dropdown-menu PubFormatVIEW">
+                     <li class="disabled">
+                        <a href="./../../../legal-content/BG/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="bg"
+                           hreflang="bg"
+                           title="български">
+                           <span>BG</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/ES/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="es"
+                           hreflang="es"
+                           title="Español">
+                           <span>ES</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/CS/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="cs"
+                           hreflang="cs"
+                           title="Čeština">
+                           <span>CS</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/DA/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="da"
+                           hreflang="da"
+                           title="Dansk">
+                           <span>DA</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/DE/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="de"
+                           hreflang="de"
+                           title="Deutsch">
+                           <span>DE</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/ET/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="et"
+                           hreflang="et"
+                           title="Eesti keel">
+                           <span>ET</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/EL/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="el"
+                           hreflang="el"
+                           title="Ελληνικά">
+                           <span>EL</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/EN/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="en"
+                           hreflang="en"
+                           title="English">
+                           <span>EN</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/FR/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="fr"
+                           hreflang="fr"
+                           title="Français">
+                           <span>FR</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/GA/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="ga"
+                           hreflang="ga"
+                           title="Gaeilge">
+                           <span>GA</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/HR/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="hr"
+                           hreflang="hr"
+                           title="Hrvatski">
+                           <span>HR</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/IT/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="it"
+                           hreflang="it"
+                           title="Italiano">
+                           <span>IT</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/LV/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="lv"
+                           hreflang="lv"
+                           title="Latviešu valoda">
+                           <span>LV</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/LT/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="lt"
+                           hreflang="lt"
+                           title="Lietuvių kalba">
+                           <span>LT</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/HU/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="hu"
+                           hreflang="hu"
+                           title="Magyar">
+                           <span>HU</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/MT/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="mt"
+                           hreflang="mt"
+                           title="Malti">
+                           <span>MT</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/NL/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="nl"
+                           hreflang="nl"
+                           title="Nederlands">
+                           <span>NL</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/PL/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="pl"
+                           hreflang="pl"
+                           title="Polski">
+                           <span>PL</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/PT/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="pt"
+                           hreflang="pt"
+                           title="Português">
+                           <span>PT</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/RO/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="ro"
+                           hreflang="ro"
+                           title="Română">
+                           <span>RO</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/SK/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="sk"
+                           hreflang="sk"
+                           title="Slovenčina">
+                           <span>SK</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/SL/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="sl"
+                           hreflang="sl"
+                           title="Slovenščina">
+                           <span>SL</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/FI/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="fi"
+                           hreflang="fi"
+                           title="Suomi">
+                           <span>FI</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/SV/TXT/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           lang="sv"
+                           hreflang="sv"
+                           title="Svenska">
+                           <span>SV</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="PubFormat">
+               <div class="PubFormatType">
+                  <i class="exi exi-html" aria-hidden="true">&nbsp;</i>
+                  <span>HTML</span>
+               </div>
+               <div class="btn-group btn-group-md">
+                  <button type="button" class="btn btn-primary " title="HTML Italiano"
+                          onclick="$('#format_language_table_HTML_IT').click();">
+                     <span>IT</span>
+                  </button>
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                     <i class="fa fa-caret-down" aria-hidden="true"> </i>
+                     <span class="sr-only">Attiva menu a discesa</span>
+                  </button>
+                  <ul class="dropdown-menu PubFormatHTML">
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/BG/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_BG"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>BG</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/ES/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_ES"
+                           class="piwik_download"
+                           title="HTML Español"
+                           lang="es"
+                           hreflang="es">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>ES</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/CS/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_CS"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>CS</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/DA/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_DA"
+                           class="piwik_download"
+                           title="HTML Dansk"
+                           lang="da"
+                           hreflang="da">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>DA</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/DE/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_DE"
+                           class="piwik_download"
+                           title="HTML Deutsch"
+                           lang="de"
+                           hreflang="de">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>DE</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/ET/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_ET"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>ET</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/EL/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_EL"
+                           class="piwik_download"
+                           title="HTML Ελληνικά"
+                           lang="el"
+                           hreflang="el">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>EL</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/EN/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_EN"
+                           class="piwik_download"
+                           title="HTML English"
+                           lang="en"
+                           hreflang="en">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>EN</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/FR/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_FR"
+                           class="piwik_download"
+                           title="HTML Français"
+                           lang="fr"
+                           hreflang="fr">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>FR</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/GA/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_GA"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>GA</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/HR/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_HR"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>HR</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/IT/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_IT"
+                           class="piwik_download"
+                           title="HTML Italiano"
+                           lang="it"
+                           hreflang="it">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>IT</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/LV/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_LV"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>LV</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/LT/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_LT"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>LT</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/HU/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_HU"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>HU</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/MT/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_MT"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>MT</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/NL/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_NL"
+                           class="piwik_download"
+                           title="HTML Nederlands"
+                           lang="nl"
+                           hreflang="nl">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>NL</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/PL/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_PL"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>PL</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/PT/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_PT"
+                           class="piwik_download"
+                           title="HTML Português"
+                           lang="pt"
+                           hreflang="pt">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>PT</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/RO/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_RO"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>RO</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/SK/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_SK"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>SK</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/SL/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_SL"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>SL</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/FI/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_FI"
+                           class="piwik_download"
+                           title="HTML Suomi"
+                           lang="fi"
+                           hreflang="fi">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>FI</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/SV/TXT/HTML/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_HTML_SV"
+                           class="piwik_download"
+                           title="HTML Svenska"
+                           lang="sv"
+                           hreflang="sv">
+                           <i class="exi exi-html" aria-hidden="true"> </i>
+                           <span>SV</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="PubFormat">
+               <div class="PubFormatType">
+                  <i class="exi exi-pdf" aria-hidden="true">&nbsp;</i>
+                  <span>PDF</span>
+               </div>
+               <div class="btn-group btn-group-md">
+                  <button type="button" class="btn btn-primary " title="PDF Italiano"
+                          onclick="$('#format_language_table_PDF_IT').click();">
+                     <span>IT</span>
+                  </button>
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                     <i class="fa fa-caret-down" aria-hidden="true"> </i>
+                     <span class="sr-only">Attiva menu a discesa</span>
+                  </button>
+                  <ul class="dropdown-menu PubFormatPDF">
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/BG/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_BG"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-pdf " aria-hidden="true"> </i>
+                           <span>BG</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/ES/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_ES"
+                           class="piwik_download"
+                           title="PDF Español"
+                           lang="es"
+                           hreflang="es"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-pdf" aria-hidden="true"> </i>
+                           <span>ES</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/CS/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_CS"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-pdf " aria-hidden="true"> </i>
+                           <span>CS</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/DA/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_DA"
+                           class="piwik_download"
+                           title="PDF Dansk"
+                           lang="da"
+                           hreflang="da"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-pdf" aria-hidden="true"> </i>
+                           <span>DA</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/DE/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_DE"
+                           class="piwik_download"
+                           title="PDF Deutsch"
+                           lang="de"
+                           hreflang="de"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-pdf" aria-hidden="true"> </i>
+                           <span>DE</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/ET/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_ET"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-pdf " aria-hidden="true"> </i>
+                           <span>ET</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/EL/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_EL"
+                           class="piwik_download"
+                           title="PDF Ελληνικά"
+                           lang="el"
+                           hreflang="el"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-pdf" aria-hidden="true"> </i>
+                           <span>EL</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/EN/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_EN"
+                           class="piwik_download"
+                           title="PDF English"
+                           lang="en"
+                           hreflang="en"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-pdf" aria-hidden="true"> </i>
+                           <span>EN</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/FR/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_FR"
+                           class="piwik_download"
+                           title="PDF Français"
+                           lang="fr"
+                           hreflang="fr"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-pdf" aria-hidden="true"> </i>
+                           <span>FR</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/GA/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_GA"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-pdf " aria-hidden="true"> </i>
+                           <span>GA</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/HR/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_HR"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-pdf " aria-hidden="true"> </i>
+                           <span>HR</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/IT/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_IT"
+                           class="piwik_download"
+                           title="PDF Italiano"
+                           lang="it"
+                           hreflang="it"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-pdf" aria-hidden="true"> </i>
+                           <span>IT</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/LV/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_LV"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-pdf " aria-hidden="true"> </i>
+                           <span>LV</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/LT/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_LT"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-pdf " aria-hidden="true"> </i>
+                           <span>LT</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/HU/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_HU"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-pdf " aria-hidden="true"> </i>
+                           <span>HU</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/MT/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_MT"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-pdf " aria-hidden="true"> </i>
+                           <span>MT</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/NL/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_NL"
+                           class="piwik_download"
+                           title="PDF Nederlands"
+                           lang="nl"
+                           hreflang="nl"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-pdf" aria-hidden="true"> </i>
+                           <span>NL</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/PL/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_PL"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-pdf " aria-hidden="true"> </i>
+                           <span>PL</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/PT/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_PT"
+                           class="piwik_download"
+                           title="PDF Português"
+                           lang="pt"
+                           hreflang="pt"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-pdf" aria-hidden="true"> </i>
+                           <span>PT</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/RO/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_RO"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-pdf " aria-hidden="true"> </i>
+                           <span>RO</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/SK/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_SK"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-pdf " aria-hidden="true"> </i>
+                           <span>SK</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a class="disabled"
+                           href="./../../../legal-content/SL/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_SL"
+                           title="Non disponibile in questa lingua">
+                           <i class="exi exi-pdf " aria-hidden="true"> </i>
+                           <span>SL</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/FI/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_FI"
+                           class="piwik_download"
+                           title="PDF Suomi"
+                           lang="fi"
+                           hreflang="fi"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-pdf" aria-hidden="true"> </i>
+                           <span>FI</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="./../../../legal-content/SV/TXT/PDF/?uri=CELEX:52003IE0410&amp;qid=1776981429924"
+                           id="format_language_table_PDF_SV"
+                           class="piwik_download"
+                           title="PDF Svenska"
+                           lang="sv"
+                           hreflang="sv"
+                           onclick="eurlexDcsMultiTrack('DCS.dcsuri','/document-format.html','WT.ti','Document format','WT.z_docFormat', 'pdf', 'WT.dl', '20'); return true;">
+                           <i class="exi exi-pdf" aria-hidden="true"> </i>
+                           <span>SV</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="PubFormat">
+               <div class="PubFormatType">
+                  <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                  <span>Gazzetta ufficiale</span>
+               </div>
+               <div class="btn-group btn-group-md">
+                  <button type="button" class="btn btn-primary " title="OJ Italiano"
+                          onclick="$('#format_language_table_digital_sign_act_IT').click();">
+                     <span>IT</span>
+                  </button>
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                     <i class="fa fa-caret-down" aria-hidden="true"> </i>
+                     <span class="sr-only">Attiva menu a discesa</span>
+                  </button>
+                  <ul class="dropdown-menu PubFormatOJ">
+                     <li class="disabled">
+                        <a href="./../../../legal-content/BG/TXT/?uri="
+                           id="format_language_table_digital_sign_act_BG"
+                           title="Non disponibile in questa lingua"
+                           lang="bg"
+                           hreflang="bg"
+                           class="disabled">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>BG</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/ES/TXT/?uri=OJ:C:2003:133:TOC"
+                           id="format_language_table_digital_sign_act_ES"
+                           title="OJ Español"
+                           lang="es"
+                           hreflang="es">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>ES</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/CS/TXT/?uri="
+                           id="format_language_table_digital_sign_act_CS"
+                           title="Non disponibile in questa lingua"
+                           lang="cs"
+                           hreflang="cs"
+                           class="disabled">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>CS</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/DA/TXT/?uri=OJ:C:2003:133:TOC"
+                           id="format_language_table_digital_sign_act_DA"
+                           title="OJ Dansk"
+                           lang="da"
+                           hreflang="da">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>DA</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/DE/TXT/?uri=OJ:C:2003:133:TOC"
+                           id="format_language_table_digital_sign_act_DE"
+                           title="OJ Deutsch"
+                           lang="de"
+                           hreflang="de">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>DE</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/ET/TXT/?uri="
+                           id="format_language_table_digital_sign_act_ET"
+                           title="Non disponibile in questa lingua"
+                           lang="et"
+                           hreflang="et"
+                           class="disabled">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>ET</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/EL/TXT/?uri=OJ:C:2003:133:TOC"
+                           id="format_language_table_digital_sign_act_EL"
+                           title="OJ Ελληνικά"
+                           lang="el"
+                           hreflang="el">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>EL</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/EN/TXT/?uri=OJ:C:2003:133:TOC"
+                           id="format_language_table_digital_sign_act_EN"
+                           title="OJ English"
+                           lang="en"
+                           hreflang="en">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>EN</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/FR/TXT/?uri=OJ:C:2003:133:TOC"
+                           id="format_language_table_digital_sign_act_FR"
+                           title="OJ Français"
+                           lang="fr"
+                           hreflang="fr">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>FR</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/GA/TXT/?uri="
+                           id="format_language_table_digital_sign_act_GA"
+                           title="Non disponibile in questa lingua"
+                           lang="ga"
+                           hreflang="ga"
+                           class="disabled">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>GA</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/HR/TXT/?uri="
+                           id="format_language_table_digital_sign_act_HR"
+                           title="Non disponibile in questa lingua"
+                           lang="hr"
+                           hreflang="hr"
+                           class="disabled">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>HR</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/IT/TXT/?uri=OJ:C:2003:133:TOC"
+                           id="format_language_table_digital_sign_act_IT"
+                           title="OJ Italiano"
+                           lang="it"
+                           hreflang="it">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>IT</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/LV/TXT/?uri="
+                           id="format_language_table_digital_sign_act_LV"
+                           title="Non disponibile in questa lingua"
+                           lang="lv"
+                           hreflang="lv"
+                           class="disabled">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>LV</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/LT/TXT/?uri="
+                           id="format_language_table_digital_sign_act_LT"
+                           title="Non disponibile in questa lingua"
+                           lang="lt"
+                           hreflang="lt"
+                           class="disabled">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>LT</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/HU/TXT/?uri="
+                           id="format_language_table_digital_sign_act_HU"
+                           title="Non disponibile in questa lingua"
+                           lang="hu"
+                           hreflang="hu"
+                           class="disabled">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>HU</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/MT/TXT/?uri="
+                           id="format_language_table_digital_sign_act_MT"
+                           title="Non disponibile in questa lingua"
+                           lang="mt"
+                           hreflang="mt"
+                           class="disabled">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>MT</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/NL/TXT/?uri=OJ:C:2003:133:TOC"
+                           id="format_language_table_digital_sign_act_NL"
+                           title="OJ Nederlands"
+                           lang="nl"
+                           hreflang="nl">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>NL</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/PL/TXT/?uri="
+                           id="format_language_table_digital_sign_act_PL"
+                           title="Non disponibile in questa lingua"
+                           lang="pl"
+                           hreflang="pl"
+                           class="disabled">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>PL</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/PT/TXT/?uri=OJ:C:2003:133:TOC"
+                           id="format_language_table_digital_sign_act_PT"
+                           title="OJ Português"
+                           lang="pt"
+                           hreflang="pt">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>PT</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/RO/TXT/?uri="
+                           id="format_language_table_digital_sign_act_RO"
+                           title="Non disponibile in questa lingua"
+                           lang="ro"
+                           hreflang="ro"
+                           class="disabled">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>RO</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/SK/TXT/?uri="
+                           id="format_language_table_digital_sign_act_SK"
+                           title="Non disponibile in questa lingua"
+                           lang="sk"
+                           hreflang="sk"
+                           class="disabled">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>SK</span>
+                        </a>
+                     </li>
+                     <li class="disabled">
+                        <a href="./../../../legal-content/SL/TXT/?uri="
+                           id="format_language_table_digital_sign_act_SL"
+                           title="Non disponibile in questa lingua"
+                           lang="sl"
+                           hreflang="sl"
+                           class="disabled">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>SL</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/FI/TXT/?uri=OJ:C:2003:133:TOC"
+                           id="format_language_table_digital_sign_act_FI"
+                           title="OJ Suomi"
+                           lang="fi"
+                           hreflang="fi">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>FI</span>
+                        </a>
+                     </li>
+                     <li class="">
+                        <a href="./../../../legal-content/SV/TXT/?uri=OJ:C:2003:133:TOC"
+                           id="format_language_table_digital_sign_act_SV"
+                           title="OJ Svenska"
+                           lang="sv"
+                           hreflang="sv">
+                           <i class="exi exi-oj" aria-hidden="true">&nbsp;</i>
+                           <span>SV</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="panel panel-default PagePanel ">
+   <div class="panel-heading" role="tab" id="PP3">
+      <p class="panel-title">
+         <button data-toggle="collapse" data-target="#PP3Contents" aria-expanded="true"
+                 aria-controls="PP3Contents"
+                 class=" "
+                 onclick="createDocPartCookie(this);">
+            <i class="fa fa-angle-right" aria-hidden="true">&nbsp;</i>Visualizzazione multilingue</button>
+      </p>
+   </div>
+   <div id="PP3Contents" class="panel-collapse collapse in" role="tabpanel"
+        aria-labelledby="PP3">
+      <div class="panel-body PanelBodyB">
+         <form action="./../../../legal-content/IT/TXT/?qid=1776981429924&amp;uri=&#xA;&#x9;&#x9;&#x9;&#x9;CELEX:52003IE0410"
+               class="form-inline"
+               id="form"
+               name="multilingualForm"
+               method="post"><input type="hidden" name="_csrf" value="40edc0d9-33dd-4d9e-9fa3-252a830d0d1d" /><input type="hidden" name="from" value="IT"/>
+            <div class="form-group">
+               <label for="MDLang1" class="sr-only">Lingua 1 </label>
+               <select id="MDLang1" name="lang1" class="input-sm form-control NoBorders"
+                       aria-label="Scegli una lingua">
+                  <option value="IT">Italiano (it)</option>
+                  <option value="ES">Spagnolo (es)</option>
+                  <option value="DA">Danese (da)</option>
+                  <option value="DE">Tedesco (de)</option>
+                  <option value="EL">Greco (el)</option>
+                  <option value="EN">Inglese (en)</option>
+                  <option value="FR">Francese (fr)</option>
+                  <option value="IT" selected="selected">Italiano (it)</option>
+                  <option value="NL">Neerlandese (nl)</option>
+                  <option value="PT">Portoghese (pt)</option>
+                  <option value="FI">Finlandese (fi)</option>
+                  <option value="SV">Svedese (sv)</option>
+               </select>
+            </div>
+            <div class="form-group">
+               <label for="MDLang2" class="sr-only">Lingua 2 </label>
+               <select id="MDLang2" name="lang2" class="input-sm form-control NoBorders"
+                       aria-label="Scegli una lingua">
+                  <option value="choose" selected="selected">Scegliere</option>
+                  <option value="ES">Spagnolo (es)</option>
+                  <option value="DA">Danese (da)</option>
+                  <option value="DE">Tedesco (de)</option>
+                  <option value="EL">Greco (el)</option>
+                  <option value="EN">Inglese (en)</option>
+                  <option value="FR">Francese (fr)</option>
+                  <option value="IT">Italiano (it)</option>
+                  <option value="NL">Neerlandese (nl)</option>
+                  <option value="PT">Portoghese (pt)</option>
+                  <option value="FI">Finlandese (fi)</option>
+                  <option value="SV">Svedese (sv)</option>
+               </select>
+            </div>
+            <div class="form-group">
+               <label for="MDLang3" class="sr-only">Lingua 3 </label>
+               <select id="MDLang3" name="lang3" class="input-sm form-control NoBorders"
+                       aria-label="Scegli una lingua">
+                  <option value="choose" selected="selected">Scegliere</option>
+                  <option value="ES">Spagnolo (es)</option>
+                  <option value="DA">Danese (da)</option>
+                  <option value="DE">Tedesco (de)</option>
+                  <option value="EL">Greco (el)</option>
+                  <option value="EN">Inglese (en)</option>
+                  <option value="FR">Francese (fr)</option>
+                  <option value="IT">Italiano (it)</option>
+                  <option value="NL">Neerlandese (nl)</option>
+                  <option value="PT">Portoghese (pt)</option>
+                  <option value="FI">Finlandese (fi)</option>
+                  <option value="SV">Svedese (sv)</option>
+               </select>
+            </div>
+            <button type="submit" class="btn btn-sm btn-primary" aria-label="Visualizzare"
+                    onclick="javascript:($('.AffixSidebarWrapper .Selected').length &gt; 0) ?           multilingualFormPiwikTracking($('.AffixSidebarWrapper .Selected a').siblings('input[id^=selectedTabEnglishTranslationID]').val()) :           multilingualFormPiwikTracking('') ;submit(); showHourglass();">Visualizzare</button>
+         </form>
+      </div>
+   </div>
+</div>
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+				<div class="panel panel-default PagePanel">
+					
+	
+						<div class="panel-heading" role="tab" id="PP4">
+							<p class="panel-title">
+								<button data-toggle="collapse" data-target="#PP4Contents" aria-expanded="true"
+								   aria-controls="PP4Contents" onclick="createDocPartCookie(this);">
+								    <i class="fa fa-angle-right" aria-hidden="true"></i>
+									Testo
+	
+	</button>	</p>	</div><!-- panel-heading -->	
+					
+					<div id="PP4Contents" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="PP4">
+						
+
+
+
+
+
+
+						<div id="text" class="panel-body">
+							
+
+
+
+
+	
+	
+	
+									<div id="textTabContent">
+									
+										
+	
+	
+											<div id="document1" class="tabContent">
+												<div class="tabContent">
+													<div lang="">
+														
+<div id="banner">
+<a name="top"></a>
+<div class="bglang">
+<p class="bglang">
+<a class="langue" href="../../../editorial/legal_notice.htm" accesskey="8"><b>Avis juridique important</b></a>
+<br>
+</p>
+</div>
+<div class="bgtool">
+<em class="none">|</em>
+</div>
+</div>
+<a name="top"></a>
+<h1>52003IE0410</h1>
+<p>
+<strong>Parere del Comitato economico e sociale europeo in merito agli "Indirizzi di massima per le politiche economiche 2003"  </strong>
+<br>
+<em>
+<br>Gazzetta ufficiale n. C 133 del 06/06/2003 pag. 0063 - 0069<br> </em>
+</p>
+<br>
+<div id="TexteOnly">
+<p>
+<TXT_TE>
+<p>Parere del Comitato economico e sociale europeo in merito agli &quot;Indirizzi di massima per le politiche economiche 2003&quot;</p><p>(2003/C 133/14)</p><p></p><p>Il Comitato economico e sociale europeo, in data 10 dicembre 2002, ha deciso, conformemente all&#039;articolo 29, paragrafo 2, del proprio Regolamento interno, di elaborare un parere di iniziativa in merito agli &quot;Indirizzi di massima per le politiche economiche 2003&quot;.</p><p>La sezione specializzata Unione economica e monetaria, coesione economica e sociale, incaricata di preparare i lavori in materia, ha formulato il parere sulla base del rapporto introduttivo del relatore Vever, in data 6 marzo 2003.</p><p>Il Comitato economico e sociale europeo ha adottato il 26 marzo 2003, nel corso della 398a sessione plenaria, con 96 voti favorevoli e 8 astensioni il seguente parere.</p><p>1. Sintesi</p><p>1.1. Il Comitato economico e sociale europeo approva l&#039;inserimento, a cominciare dal 2003, degli indirizzi di massima per le politiche economiche (IMPE e relazione d&#039;attuazione) in un nuovo pacchetto di attuazione, che la Commissione ha presentato in gennaio e che ingloba altre politiche comunitarie correlate (occupazione, mercato unico, riforme di Lisbona), così come avviene per &quot;il pacchetto orientamento&quot; in aprile, assumendo comunque una prospettiva triennale. Ribadisce nondimeno la necessità di non appesantire né &quot;diluire&quot; le priorità, ma al contrario di definirle con maggior precisione.</p><p>1.2. Il Comitato osserva che i prossimi tre anni saranno segnati da sfide particolarmente complesse, cui si dovrà far fronte con una politica economica in cui l&#039;euro sia meglio integrato, con un sostegno veramente efficace all&#039;adesione dei nuovi Stati membri e con un&#039;attuazione più efficace delle riforme stabilite a Lisbona.</p><p>1.3. Il Comitato prende atto che realizzare questi obiettivi sarà più difficile a causa del preoccupante deterioramento della situazione economica verificatosi negli ultimi due anni, nonostante i progressi compiuti in relazione al mercato unico e ai processi politici di convergenza economica tra gli Stati membri.</p><p>1.4. A questo punto il Comitato ritiene prioritario dare il via ad una nuova dinamica europea di crescita, da cui dipende il rilancio dell&#039;occupazione, sulla base di una definizione più precisa degli indirizzi di massima, una loro applicazione più efficace e un loro inquadramento più coerente.</p><p>1.5. Definire con più precisione gli indirizzi di massima dovrebbe permettere, senza provocare una rottura con gli indirizzi di massima per il 2002, di privilegiare l&#039;aspetto &quot;crescita&quot; del patto di stabilità, di avviare una gestione più coordinata dell&#039;economia, che integri l&#039;euro, e di sostenere più efficacemente il processo di aggiustamento del Sistema Europa sotto il profilo della competitività e della tecnologia.</p><p>1.6. Applicare meglio gli indirizzi di massima significa anche rafforzare la posizione dell&#039;Eurogruppo nell&#039;ambito di un dialogo efficace con la Banca centrale europea, coinvolgere in modo più diretto e in una fase iniziale i rappresentanti socioprofessionali e delle parti sociali e mettere a punto degli indicatori che valutino il grado di attuazione degli indirizzi economici e delle riforme, e più specificamente i progressi compiuti dall&#039;economia basata sulla conoscenza.</p><p>1.7. Inquadrare meglio gli indirizzi di massima presuppone accelerare il completamento del mercato unico in settori prioritari, determinando l&#039;aumento della fiducia e della crescita, la riattivazione delle riforme di Lisbona, tra cui la semplificazione delle normative, e il rafforzamento delle disposizioni di governance economica comune nel futuro trattato che la Convenzione sta preparando.</p><p>2. Le proposte della Commissione</p><p>2.1. Nel settembre 2002(1) la Commissione europea ha proposto di inaugurare, a cominciare dal 2003, un nuovo ciclo annuale integrato di presentazione e attuazione degli indirizzi di massima per le politiche economiche, degli orientamenti e delle raccomandazioni per l&#039;occupazione, nonché della strategia per il mercato interno, allo scopo di organizzare e coordinare meglio queste diverse politiche.</p><p>2.2. Nell&#039;ambito del nuovo ciclo, il Consiglio europeo di primavera riveste un ruolo chiave.</p><p>2.2.1. Esso è infatti preceduto, a metà gennaio, dalla presentazione di una serie di relazioni della Commissione sullo stato di attuazione degli indirizzi di massima per le politiche economiche, della strategia per l&#039;occupazione, della strategia per il mercato unico e delle riforme strutturali stabilite a Lisbona. Le relazioni della Commissione al Consiglio di primavera comprendono anche le valutazioni riguardanti il processo di Cardiff, il quadro della situazione degli aiuti di Stato, l&#039;innovazione e la politica delle imprese.</p><p>2.2.2. Alla luce delle conclusioni del Consiglio di primavera, elaborate dalla Presidenza, la Commissione adotterà ad aprile nuove proposte per gli indirizzi di massima (a livello europeo e nazionale), gli orientamenti e le raccomandazioni in materia di occupazione e strategia per il mercato unico. A partire dal 2003, tali proposte vengono formulate in una prospettiva a medio termine, da rivedere ogni tre anni (in questo caso nel 2006). Negli anni intermedi (2004 e 2005), verranno effettuati solo adeguamenti di portata limitata, se giustificati da nuovi sviluppi.</p><p>2.3. Al Consiglio europeo di giugno spetterà approvare il pacchetto proposto dalla Commissione, previa prima lettura da parte delle formazioni competenti del Consiglio (in particolare Ecofin, Occupazione-Affari sociali, Competitività), le quali adotteranno poi formalmente i rispettivi orientamenti.</p><p>2.4. Negli ultimi mesi dell&#039;anno, la Commissione, una volta raccolte le relazioni trasmesse dagli Stati membri in merito all&#039;attuazione degli orientamenti e alle azioni previste, le esaminerà per avviare poi in gennaio un nuovo ciclo.</p><p>2.5. La Commissione propone altresì di inserire in tale ciclo il metodo aperto di coordinamento nel settore della protezione sociale.</p><p>2.6. Il 14 gennaio 2003 la Commissione ha pertanto presentato il suo primo pacchetto di attuazione comprendente:</p><p>2.6.1. una comunicazione sull&#039;attuazione degli indirizzi di massima per le politiche economiche nel 2002(2) la quale traccia, al di là delle differenti situazioni nazionali, un bilancio complessivo piuttosto deludente, principalmente a causa della debolezza della crescita e del deterioramento dei bilanci di numerosi Stati membri, mentre si constata il persistere di ritardi nell&#039;apertura dei mercati delle infrastrutture e dell&#039;energia, nelle riforme strutturali dei mercati del lavoro e in quelle intese a ristabilire l&#039;equilibrio finanziario dei vari regimi previdenziali;</p><p>2.6.2. una comunicazione sul futuro della strategia europea per l&#039;occupazione(3): se, da un lato, l&#039;obiettivo della piena occupazione è complicato dall&#039;invecchiamento demografico, dall&#039;altro la qualità del lavoro e la produttività vanno rafforzati eliminando le disparità ancora esistenti in termini di accesso al mercato del lavoro;</p><p>2.6.3. una relazione sullo stato di avanzamento del mercato interno europeo(4): il giudizio è in chiaroscuro dal momento che ai progressi compiuti, tutto sommato solo parziali (cfr. servizi finanziari, apertura dei mercati dell&#039;energia, appalti pubblici), si contrappongono ritardi persistenti (cfr. fondi pensione, armonizzazione fiscale, brevetto comunitario);</p><p>2.6.4. una relazione sullo stato delle riforme previste dalla strategia di Lisbona(5) (la relazione di primavera): traccia anch&#039;essa un bilancio contrastato, in linea con le conclusioni dei precedenti documenti, e sottolinea la necessità di intensificare gli sforzi di riforma economica e sociale per raggiungere gli obiettivi di competitività fissati dai 15 Stati membri dell&#039;UE.</p><p>3. Osservazioni del Comitato</p><p>3.1. Per quanto concerne la revisione della procedura, il Comitato approva:</p><p>3.1.1. la maggiore coerenza tra gli indirizzi di massima per le politiche economiche, gli orientamenti per l&#039;occupazione, le misure per il completamento del mercato unico e le riforme previste dalla strategia di Lisbona; tale coerenza dovrebbe rappresentare un progresso concreto vista la stretta correlazione tra questi diversi aspetti;</p><p>3.1.2. in particolare l&#039;interrelazione tra i diversi &quot;processi&quot; di Lussemburgo, Cardiff, Colonia e la strategia di Lisbona - aggiornata, quest&#039;ultima, prima a Göteborg e poi a Barcellona;</p><p>3.1.3. l&#039;attenzione mostrata per definire orientamenti politici più coerenti, articolati intorno a una prospettiva triennale di più ampio respiro;</p><p>3.1.4. la semplificazione del ciclo grazie a uno sforzo di sintesi delle relazioni, degli orientamenti e dei &quot;processi&quot;, la cui proliferazione negli ultimi anni cominciava in effetti a creare procedure complesse, parallele e persino contraddittorie, sprovviste di una visione d&#039;insieme.</p><p>3.2. Il Comitato giudica però necessario:</p><p>3.2.1. non sovraccaricare i pacchetti di sintesi della Commissione e il ciclo annuale di orientamenti economici e sull&#039;occupazione inserendovi le analisi e le prescrizioni, che andrebbero invece sintetizzate, e</p><p>3.2.2. in particolare individuare delle vere priorità di governance economica a livello europeo, fondate su un&#039;analisi macroeconomica documentata, sostenute e monitorate a livello politico, e non solo a livello tecnico; tali priorità devono impegnare le istituzioni dell&#039;UE e gli Stati membri sulla base di orientamenti sufficientemente convergenti e costanti, senza tuttavia dimenticare che le situazioni nazionali e regionali sono tra loro diverse.</p><p>3.3. Quanto al contenuto del pacchetto di attuazione, e più specificamente la valutazione dell&#039;attuazione degli indirizzi di massima, il Comitato ribadisce che l&#039;analisi della Commissione e le proposte che l&#039;accompagnano vengono presentate in un momento in cui la situazione economica e sociale dell&#039;UE suscita, a buon diritto, fortissime preoccupazioni.</p><p>3.3.1. La fiducia dei vari soggetti economici (investitori, imprenditori, consumatori, risparmiatori e lavoratori dipendenti) si è alquanto affievolita dopo l&#039;11 settembre 2001, specialmente alla luce delle nuove minacce di guerra nel Medio Oriente e delle conseguenti tensioni internazionali a livello politico, economico, finanziario e petrolifero, nonché del forte calo registrato per due anni consecutivi (2001/2002) dai mercati finanziari e borsistici, tutti fattori, questi, che contribuiscono a mantenere un ciclo economico depresso.</p><p>3.3.2. La crescita è rimasta debole, non superando in media, nel biennio 2001/2002, l&#039;1 % nell&#039;Unione e, nel 2003, rimarrà ben al di sotto del 2 %, per gli effetti combinati della fiacca domanda interna e delle crescenti difficoltà di esportazione causate dal rafforzamento dell&#039;euro. Tali risultati sono nettamente inferiori all&#039;obiettivo del 3 % fissato per la crescita annua nella strategia di Lisbona. A differenza di altre regioni del mondo, l&#039;Unione europea non dispone di una politica macroeconomica sufficientemente consolidata per stimolare il suo potenziale di crescita, fatto che le consentirebbe meglio di far fronte all&#039;indebolimento congiunturale, di rivitalizzare la crescita e sostenere la domanda interna.</p><p>3.3.3. Dopo un periodo, nel 2002, in cui è sembrato che continuasse a resistere al rallentamento economico, il livello dell&#039;occupazione nei primi mesi del 2003 è sceso di nuovo in misura considerevole e questa volta bruscamente, con conseguenze sul mercato del lavoro sia per i più giovani che per i più anziani.</p><p>3.3.4. I disavanzi pubblici di quattro Stati membri della zona dell&#039;euro (Francia, Germania, Italia e Portogallo) hanno raggiunto un livello tale da far scattare il richiamo a non superare il tetto massimo del 3 % previsto dal patto di stabilità e di crescita. La tendenza a disavanzi più elevati si è estesa anche ad altri Stati.</p><p>3.3.5. L&#039;inflazione rimane globalmente moderata e vari osservatori si preoccupano piuttosto delle pressioni deflazionistiche sui prezzi. Numerosi consumatori hanno visto nell&#039;immissione in circolazione delle banconote e monete in euro all&#039;inizio del 2002 un fattore di rincaro di certi prodotti di uso comune, nonostante il quadro differente fornito generalmente dagli istituti economici e statistici.</p><p>3.3.6. Al di là di questi dati globali e in mancanza di una governance economica più coordinata e integrata di quella consentita attualmente dagli indirizzi di massima, le differenze tra le economie nazionali restano marcate sia all&#039;interno dell&#039;UE sia, in modo forse più paradossale, nella zona dell&#039;euro.</p><p>3.3.7. Tali differenze sono destinate ad accentuarsi con l&#039;allargamento dell&#039;UE da 15 a 25 membri previsto ufficialmente per il maggio 2004. Sebbene i tassi di crescita nei paesi candidati siano talvolta doppi rispetto a quelli degli attuali Stati membri, il loro livello di sviluppo è inferiore di quasi la metà ed essi devono ancora completare e consolidare l&#039;adeguamento all&#039;economia di mercato e all&#039;acquis comunitario.</p><p>3.3.8. Vanno altresì sottolineati, al di là dei cattivi risultati congiunturali più visibili, gli indicatori negativi riguardanti dati strutturali di fondo, come le prospettive demografiche estremamente negative, la frammentazione dei sistemi fiscali nel mercato interno, il peso eccessivo delle tasse e dei prelievi obbligatori sul lavoro in Europa rispetto ai suoi principali concorrenti, a causa soprattutto di un deterioramento della struttura dell&#039;imposizione fiscale europea (cfr. relazione Monti), gli sforzi da compiere nei mercati del lavoro, e la necessità per l&#039;economia europea di generare molta più crescita di quella richiesta, ad esempio, dall&#039;economia americana per creare occupazione. In definitiva, sono proprio l&#039;insufficienza del potenziale di crescita autonoma del sistema Europa e i suoi svantaggi in termini di attrattiva e di competitività, che costituiscono il problema e che rischiano di mettere in discussione il raggiungimento degli obiettivi per il 2010 fissati dal vertice di Lisbona nel 2000, in un clima economico effettivamente molto più incoraggiante.</p><p>3.4. Questa situazione socioeconomica mediocre e il pericolo che corre la strategia di Lisbona sono oltremodo preoccupanti in quanto seguono i progressi concreti compiuti in materia di armonizzazione giuridica, unificazione monetaria e introduzione di numerosi strumenti politici di accompagnamento.</p><p>3.4.1. L&#039;armonizzazione giuridica nell&#039;ambito del processo di completamento del mercato unico è proseguita (si pensi, ad esempio, alla soppressione dei controlli tra Stati membri, alle numerose normative introdotte, alla normalizzazione, ecc.), benché, trascorsi dieci anni dalla scadenza del 1992, si riscontrino ancora dei ritardi.</p><p>3.4.2. Da 4 anni a questa parte, l&#039;unificazione monetaria è una realtà riguardante al momento 12 Stati membri che dal gennaio 2002 mettono in circolazione banconote e monete in euro.</p><p>3.4.3. In applicazione degli indirizzi di massima per le politiche economiche, sono stati introdotti numerosi meccanismi di orientamento comuni, e l&#039;obiettivo stesso del pacchetto di attuazione, presentato dalla Commissione in gennaio, è quello di fare il punto sulle interazioni tra i vari processi. Il trattato di Amsterdam, del giugno 1997, ha stabilito l&#039;elaborazione annuale da parte del Consiglio di orientamenti, di cui gli Stati membri tengono conto nelle loro politiche in materia d&#039;occupazione. Il processo di Lussemburgo, che risale al novembre 1997, ha precisato a sua volta il contenuto di tali orientamenti. Nel giugno 1998 il processo di Cardiff ha stabilito di fare il punto, ogni anno, sulle riforme strutturali dei mercati di prodotti, servizi e capitali per un miglior funzionamento del mercato unico. In occasione del Consiglio europeo di Colonia del giugno 1999, è stato avviato un nuovo processo che prevede l&#039;elaborazione di raccomandazioni nell&#039;ambito di un patto europeo per l&#039;occupazione. Al Consiglio europeo di Lisbona del marzo 2000, l&#039;UE ha convenuto di lanciare un&#039;ambiziosa strategia pluriennale di rilancio del mercato unico europeo e di riforme economiche, sociali e amministrative a livello europeo e nazionale, allo scopo di &quot;divenire&quot; di qui al 2010 &quot;l&#039;economia basata sulla conoscenza più competitiva e dinamica del mondo&quot;.</p><p>3.5. A questo punto vale la pena di chiedersi perché mai i progressi registrati con il mercato unico, l&#039;introduzione dell&#039;euro, l&#039;attuazione degli indirizzi di massima per le politiche economiche e i numerosi processi di convergenza e di riforma che li accompagnano non siano ancora riusciti a imprimere dinamismo alla crescita, alla competitività e all&#039;occupazione in Europa. La risposta potrebbe essere triplice.</p><p>3.5.1. Da un lato, si può rilevare che gli indirizzi di massima, nonostante i loro meriti, restano ancora approssimativi e poco precisi nella definizione degli obiettivi. Si constata in particolare che i paesi della zona dell&#039;euro hanno ricevuto dalla Commissione voti globalmente inferiori (in materia, ad es., di finanze pubbliche, mercato del lavoro, mercati dei prodotti) rispetto ai tre paesi dell&#039;UE che non hanno ancora adottato la moneta unica. Sia ben chiaro: non si vuole in questa sede mettere in dubbio gli evidenti vantaggi dell&#039;euro, di cui il Comitato è sempre stato convinto assertore. Si constata invece che all&#039;euro non si è ancora associata una politica economica sufficientemente coerente, coordinata ed adeguata alla moneta unica. In queste circostanze, l&#039;applicazione di una politica monetaria e di tassi d&#039;interessi unici ad economie e politiche che rimangono diverse crea dei problemi. A quattro anni dall&#039;introduzione della moneta unica rimane ancora da elaborare e da applicare un adeguato dosaggio di politiche (policy mix) di cui l&#039;euro faccia parte integrante. Sono in molti attualmente ad auspicare un patto di stabilità più flessibile, sottolineando in particolare che i paesi che trovano difficile rispettarlo, primi fra tutti Germania e Francia, rappresentano la quota preponderante del PIL europeo e che la rigidità di questo patto ostacola il loro potenziale di crescita. Va tuttavia notato che negli anni di crescita più intensa questi paesi non hanno fatto grandi sforzi per prevenire le difficoltà.</p><p>3.5.2. D&#039;altro lato, si può dire che gli indirizzi di massima non sono applicati correttamente dagli Stati. I progressi realizzati si accompagnano a ritardi nel completamento del mercato unico e nelle riforme nazionali. Per quanto riguarda il mercato unico, si constata che, trascorsi già dieci anni dalla scadenza del 1992, non si è ancora riusciti a eliminare tutte le doppie imposizioni intracomunitarie, a istituire in via definitiva un regime IVA semplice, a ottenere l&#039;apertura e la libera interconnessione delle reti dell&#039;energia o a compiere passi decisivi verso l&#039;apertura del settore dei servizi. Anche l&#039;attuazione a livello nazionale delle direttive registra troppi ritardi. Del resto, alcune delle riforme essenziali programmate a Lisbona relative al potenziamento della ricerca e della formazione, alla modernizzazione negoziata del mercato del lavoro e a regimi di protezione sociale equilibrati e duraturi registrano ritardi in numerosi paesi. Questa applicazione insufficiente spiega in buona parte i cattivi risultati dell&#039;economia europea.</p><p>3.5.3. Va infine considerato che gli indirizzi di massima per le politiche economiche rimangono di per sé insufficienti. Un primo tentativo di rimediare a tale situazione è costituito, nell&#039;anno in corso, dall&#039;introduzione di un solo pacchetto che raggruppa assieme le relazioni, gli indirizzi di massima per le politiche economiche, gli orientamenti in materia di occupazione, la strategia per il mercato unico e la valutazione dei progressi compiuti nelle riforme strutturali di Lisbona. Tuttavia, tale raggruppamento potrebbe risultare insufficiente se non sarà accompagnato da priorità sostenute con maggior convinzione. Ad esempio sono decisamente troppo rare misure energiche dirette a ridurre la frammentazione dei sistemi fiscali, ottimizzando al contempo la struttura dell&#039;imposizione fiscale europea. La questione dell&#039;attrattiva del sistema Europa agli occhi degli investitori diretti non europei, in presenza di una globalizzazione economica, non viene neanche sollevata, anche se essa è strettamente legata alla mancanza di dinamismo dell&#039;economia europea.</p><p>4. Le priorità del Comitato</p><p>4.1. La Commissione annuncia che, ai primi di aprile 2003, presenterà un pacchetto contenente le proprie proposte per gli indirizzi di massima per le politiche economiche e gli orientamenti per l&#039;occupazione.</p><p>4.1.1. In questa prospettiva, il Comitato pone l&#039;accento sulla necessità che nel 2003 si garantiscano le condizioni di un rilancio significativo e duraturo della crescita economica, da cui dipendono le altre priorità, tra cui quella sociale e quella ambientale.</p><p>4.1.2. Data la prospettiva triennale degli indirizzi di massima, tale esigenza dovrà tradursi nella formulazione di una politica economica comune legata all&#039;euro e nel provvedere ai nuovi bisogni di sostegno e di coesione collegati all&#039;adesione di 10 paesi nel 2004. Ciò implica una politica macroeconomica fondata sulle interdipendenze in seno ai circuiti economici, proattiva, dinamica, di natura tale da consolidare la fiducia degli investitori e dei vari attori dell&#039;economia e quindi in grado di stimolare la crescita.</p><p>4.1.3. A tal fine, il Comitato formula tre proposte: mirare, applicare e inquadrare meglio gli indirizzi di massima per le politiche economiche.</p><p>4.2. Mirare meglio gli indirizzi di massima</p><p>4.2.1. Gli indirizzi di massima avevano nel 2002 le seguenti priorità:</p><p>- attuare politiche macroeconomiche orientate verso la crescita e la stabilità;</p><p>- migliorare la qualità e la sostenibilità delle finanze pubbliche;</p><p>- rendere più dinamici i mercati del lavoro;</p><p>- dare nuovo impulso alle riforme strutturali sui mercati dei prodotti;</p><p>- promuovere l&#039;efficienza e l&#039;integrazione del mercato UE dei servizi finanziari;</p><p>- incoraggiare l&#039;iniziativa imprenditoriale;</p><p>- promuovere l&#039;economia basata sulla conoscenza;</p><p>- migliorare la sostenibilità ambientale.</p><p>4.2.2. Il Comitato ritiene che questi obiettivi restino validi non soltanto per l&#039;anno in corso, ma anche per il triennio 2003-2006; a suo avviso, tuttavia, sarebbe opportuno porre maggiormente l&#039;accento su talune esigenze che hanno un effetto diretto sul rilancio della crescita, vale a dire l&#039;applicazione del patto di stabilità, l&#039;armonizzazione fiscale e la promozione dell&#039;innovazione.</p><p>4.2.3. Il Comitato constata che le modalità d&#039;applicazione del patto di stabilità sono state negli ultimi mesi al centro dei dibattiti economici nell&#039;UE, specie a seguito del vertice di Barcellona del marzo 2002, in cui è stato fissato al 2004 il termine ultimo per il riequilibrio delle finanze pubbliche. Dato il peggioramento della situazione economica, che ha provocato disavanzi più elevati, la scadenza è stata rinviata poi al 2006 su iniziativa della Commissione. Nelle attuali condizioni il Comitato chiede una lettura realistica del patto di stabilità e di crescita, che pur riducendo i rischi di un impatto economico negativo a breve termine non ne alteri lo spirito, dato che la riduzione dei disavanzi è un elemento centrale per lo sviluppo sostenibile. Il Comitato raccomanda pertanto:</p><p>4.2.3.1. che la Commissione presenti delle relazioni regolari sull&#039;evoluzione della finanza pubblica in ciascuno Stato membro e renda pubblica immediatamente qualunque raccomandazione elaborata della Commissione o del Consiglio nel caso di deterioramento sensibile delle finanze di uno Stato;</p><p>4.2.3.2. che si tenga maggiormente presente la componente &quot;crescita&quot; del patto di stabilità, includendovi dei criteri complementari a quelli del disavanzo e del debito pubblico, quali per es. quelli riguardanti l&#039;inflazione, l&#039;occupazione, lo sviluppo sostenibile (pensione, salute, investimenti), l&#039;imposizione fiscale e i prelievi obbligatori;</p><p>4.2.3.3. che, nel caso in cui gravi circostanze internazionali, in seguito al conflitto nel Medio Oriente, lo giustifichino, vengano concesse deroghe eccezionali e temporanee alla stretta applicazione del patto, per evitare di aggravare ulteriormente i problemi economici nel breve periodo.</p><p>4.2.4. Il Comitato sottolinea inoltre la necessità di avviare una governance economica maggiormente coordinata, che integri l&#039;euro. Dato il peso preponderante degli Stati della zona euro nell&#039;UE, che rimarrà tale anche dopo l&#039;ampliamento, l&#039;attuazione di una politica economica realmente coordinata tra questi Stati avrebbe effetti molto positivi per l&#039;intera Unione. Un obiettivo prioritario di tale politica dovrebbe essere quello di accrescere l&#039;armonizzazione fiscale, la quale potrebbe concentrarsi sul ravvicinamento delle basi imponibili, senza toccare le aliquote, compensando una concorrenza eccessiva mediante disposizioni minime, tenuto conto in ogni caso dell&#039;esigenza di assicurare un equilibrio fiscale nell&#039;Unione europea propizio agli investimenti, nonché della necessità di alleviare una pressione fiscale sul lavoro che oggi è troppo elevata.</p><p>4.2.5. Il Comitato sottolinea altresì la necessità di promuovere in modo più appropriato il tessuto industriale e tecnologico delle imprese europee, non separabile dallo sviluppo pure necessario e parallelo dei servizi. Va inoltre sostenuto in questo quadro il processo d&#039;innovazione che, come sottolineato in occasione del Vertice di Lisbona del marzo 2000, costituisce un motore essenziale della crescita economica a livello europeo. Occorre, ovviamente, migliorare le sinergie tra il programma quadro europeo di ricerca e i programmi nazionali, ma anche incoraggiare la formazione, la ricerca e l&#039;innovazione nelle imprese, adottando, tra l&#039;altro, misure fiscali più favorevoli. Ai fini della crescita economica europea, occorre evitare ad ogni costo che i giovani più qualificati lascino definitivamente l&#039;Europa per altri lidi.</p><p>4.3. Applicare meglio gli indirizzi di massima</p><p>4.3.1. Non basta adottare indirizzi di massima ben mirati; l&#039;importante, infatti, è applicarli correttamente; a tal fine occorre strutturare meglio l&#039;Eurogruppo e il Consiglio Ecofin, coinvolgere maggiormente i rappresentanti economici e le parti sociali e individuare altri indicatori in grado di valutarne l&#039;attuazione.</p><p>4.3.2. Per un&#039;applicazione più efficace degli indirizzi di massima, occorre in primo luogo strutturare meglio l&#039;Eurogruppo e la coesione economica nella zona dell&#039;euro, che riguarda 12 dei 15 Stati membri. L&#039;Eurogruppo deve diventare un vero governo economico della zona dell&#039;euro, sostenuto dalla Commissione e in grado di sviluppare un dialogo efficace su base permanente con la Banca centrale europea, come già avviene negli Stati Uniti tra l&#039;esecutivo e la Riserva federale. Aggiustamenti dei tassi d&#039;interessi effettuati in tempi più brevi contribuirebbero anch&#039;essi alla ripresa dell&#039;attività economica. Il 2003 è l&#039;anno più adatto per garantire questa evoluzione dell&#039;Eurogruppo: anche se l&#039;adesione nel 2004 di dieci nuovi Stati membri non altererà praticamente il peso economico della zona euro nell&#039;UE ampliata, nella misura in cui il PIL di questi nuovi membri non raggiunge il 10 % di quello dell&#039;attuale Unione, essa modificherà comunque il rapporto numerico tra gli Stati membri della zona dell&#039;euro e l&#039;UE nel suo complesso, facendolo passare da 12: 15 a 12: 25.</p><p>4.3.3. È inoltre opportuno coinvolgere più direttamente i rappresentanti economici e le parti sociali nell&#039;attuazione del nuovo ciclo annuale degli orientamenti economici e sociali dell&#039;UE. Un importante passo avanti è rappresentato dall&#039;organizzazione, dopo il vertice di Barcellona del marzo 2002, di vertici tripartiti con la partecipazione delle parti sociali e dei Presidenti del Consiglio europeo e della Commissione alla vigilia del Consiglio di primavera. Tali incontri devono costituire il momento cruciale di una concertazione meno episodica tra i partner socio-economici e la Commissione, il Consiglio Ecofin, l&#039;Eurogruppo e il Consiglio Affari sociali, e devono peraltro svolgersi in vista del Consiglio di primavera anche a livello nazionale. In concreto, le organizzazioni patronali e sindacali dovrebbero presentare annualmente ai poteri pubblici del loro paese le loro osservazioni sui progressi delle riforme economiche e sociali, soffermandosi altresì sulle proprie iniziative e sui propri negoziati e accordi contrattuali.</p><p>4.3.4. Le relazioni nazionali elaborate dalle associazioni socioprofessionali dovrebbero fornire un contributo prezioso all&#039;elaborazione di indicatori migliori per valutare il livello di attuazione degli indirizzi di massima economici e delle riforme. L&#039;analisi comparativa (benchmarking) dovrebbe essere sistematizzata e includere indicatori in grado di misurare meglio la diffusione dell&#039;economia della conoscenza e il suo contributo alla ripresa della crescita. Occorre infine analizzare tanto le buone pratiche quanto quelle meno positive o addirittura negative: una valutazione franca delle iniziative e dei relativi risultati è indispensabile per progredire nell&#039;attuazione di una migliore governance economica.</p><p>4.4. Inquadrare meglio gli indirizzi di massima</p><p>4.4.1. La presentazione di un pacchetto di attuazione che definisca l&#039;esatta collocazione degli orientamenti economici e sociali tra le altre politiche comunitarie deve essere l&#039;occasione per porre tali politiche al servizio della strategia di crescita. Ai fini di un miglior inquadramento degli indirizzi di massima, tre sfide sembrano qui prioritarie: il completamento del mercato unico, una migliore applicazione delle riforme di Lisbona e un&#039;adeguata riforma delle procedure di governance economica come risultato della Convenzione.</p><p>4.4.2. Parlando di completamento del mercato unico, il Comitato non ignora che al di là del suo funzionamento carente e del suo definitivo perfezionamento, cinque o sei misure di importanza capitale, a tutt&#039;oggi non realizzate e spesso boicottate, permetterebbero già a breve termine, e se esistesse la volontà politica, un vero e proprio balzo in avanti con le relative conseguenze in termini di crescita economica e di occupazione: pur esprimendo il proprio compiacimento per il compromesso recentemente raggiunto in sede di Consiglio e che permette finalmente di dare il via libera all&#039;adozione del brevetto comunitario, il Comitato ricorda la necessità di procedere a colmare alcune lacune, per esempio attraverso la soppressione, mediante regolamento comunitario, di tutte le doppie imposizioni transnazionali (eliminando così l&#039;attuale intrico di convenzioni bilaterali), l&#039;adozione di un regime IVA definitivo su scala europea, che sia semplice e alla portata di tutti, lo statuto di &quot;società europea&quot; per le imprese di qualunque dimensione.</p><p>4.4.3. Per quanto riguarda, infine, i ritardi nell&#039;attuazione delle riforme di Lisbona, il Comitato condivide le preoccupazioni espresse dalla Commissione. Tutti sanno quali siano le riforme da avviare o da portare avanti; è l&#039;attuazione che non procede al ritmo richiesto dagli obiettivi di competitività di Lisbona. Il Comitato insiste pertanto sulla necessità di accelerare il ritmo di attuazione delle riforme, il che sarà possibile solo grazie a un coinvolgimento attivo dei rappresentanti degli ambienti socioprofessionali e delle parti sociali, come già, del resto, ribadito nel presente contributo.</p><p>4.4.4. Tra queste riforme dovrebbero figurare la semplificazione e il miglioramento qualitativo della legislazione, sia a livello europeo che nazionale; il Comitato ne ha ripetutamente sottolineato l&#039;importanza negli ultimi anni, presentando a tal fine proposte concrete. La semplificazione libererebbe le energie e lo spirito imprenditoriale, permettendo di aumentare sensibilmente il potenziale di crescita dell&#039;economia europea e di incoraggiare la costituzione di nuove imprese di ogni dimensione. Il Comitato, nel rispondere alle consultazioni che gli vengono rivolte, continuerà a richiamare l&#039;attenzione su questa esigenza, così come si è impegnato a fare nel proprio codice di comportamento per la semplificazione.</p><p>4.4.5. Il Comitato sottolinea infine l&#039;esigenza di strutturare meglio la governance economica dell&#039;Unione rinforzando le procedure del trattato, come risultato dei lavori della Convenzione. In particolare sarebbe utile inserire nel nuovo trattato le seguenti disposizioni:</p><p>4.4.5.1. per le questioni che rientrano nella sfera di competenza comunitaria invece che in quella del metodo aperto di coordinamento, occorre rafforzare il ruolo della Commissione europea per quanto riguarda gli indirizzi di massima di politica economica, attribuendole la facoltà di presentare proposte, e non raccomandazioni, proposte per la cui modifica sarebbe richiesta l&#039;unanimità in Consiglio;</p><p>4.4.5.2. altrettanto vale per l&#039;intervento della Commissione nell&#039;ambito del patto di stabilità e di crescita: le raccomandazioni della Commissione, comprese quelle relative a eventuali sanzioni, dovrebbero avere forma di proposte, per modificare le quali sarebbe richiesta l&#039;unanimità in Consiglio;</p><p>4.4.5.3. le decisioni relative alla politica economica nell&#039;area dell&#039;euro e ai problemi relativi all&#039;euro dovrebbero essere prese dai ministri delle finanze della zona dell&#039;euro riuniti nel quadro del Consiglio Ecofin, nell&#039;ambito tuttavia dell&#039;intensificazione del loro dialogo economico interno e con la Banca centrale europea nel quadro dell&#039;Eurogruppo;</p><p>4.4.5.4. la rappresentanza esterna dell&#039;euro dovrebbe essere unificata, principalmente attraverso la Commissione;</p><p>4.4.5.5. si dovrebbe rendere possibile un&#039;armonizzazione fiscale rinunciando al requisito dell&#039;unanimità in Consiglio per le decisioni in materia fiscale direttamente legate al funzionamento del mercato interno, lasciando liberi gli Stati membri per quanto riguarda i livelli di imposizione.</p><p></p><p>Bruxelles, 26 marzo 2003.</p><p></p><p>Il Presidente</p><p>del Comitato economico e sociale europeo</p><p>Roger Briesch</p><p></p><p>(1) COM(2002) 487 def.</p><p>(2) COM(2003) 4 def.</p><p>(3) COM(2003) 6 def.</p><p>(4) SEC(2003) 43 def.</p><p>(5) COM(2003) 5 def.</p><p> </p>
+</TXT_TE>
+</p>
+</div>
+
+													</div>
+													<a class="" href="#document1">In alto</a>	</div>	</div>	
+	</div>	
+	
+	</div><!-- panel-body -->	</div><!-- panel-collapse -->	</div>	
+
+
+	<!-- panel -->	
+	
+	
+	 
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			popUpWidget("./../../../", "it", "800");
+			popUpWidgetAccessible("./../../../", "IT");
+		})
+	</script>
+
+
+	
+		<script type="text/javascript">
+			$(document).ready(function () {
+			    
+				if ("false" == "true" || "false" == "true") {
+					initConsLegTable('Per visualizzare l&#39;indice, riduci le dimensioni del contenuto o aumenta le dimensioni della finestra del browser.');
+				}
+				if ("false" == "true") {
+					initToc("false");
+					
+					eliResolutionResolver("/legal-content/IT/TXT/");
+				}
+				setTimeout(function(){ loadDocState("TXT false","PP"); }, 0);
+		        $(document).trigger("enhance");
+			});
+		</script>
+	</div>
+	<!-- panel-group -->
+
+
+	
+	
+	
+	
+	
+	
+ 
+
+	
+	</div>
+	</div>
+	
+	
+	</div>
+	
+
+
+	</div>	
+	
+
+
+
+ </div> </div> </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- New EUR-Lex footer -->
+	<footer class="ecl-site-footer">	
+	  <div class="ecl-container ecl-site-footer__container ecl-site-footer__container-override">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="ecl-site-footer__row">
+    <div class="ecl-site-footer__column">
+        <div class="ecl-site-footer__section ecl-site-footer__section--site-info">
+            
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../homepage.html"                aria-label="">
+                <picture class="ecl-picture ecl-site-footer__picture" title="Torna alla homepage di EUR-Lex">
+                    <img class="ecl-site-footer__logo-image" src="./../../../revamp/images/eurlex_simple.svg"
+                         onerror="this.onerror=null; this.src='./../../../images/n/eurlex_simple.png'"
+                         alt="Torna alla homepage di EUR-Lex" title="Torna alla homepage di EUR-Lex">
+                </picture>                
+            </a>
+            
+            <div class="ecl-site-footer__description">Il sito è gestito dall'
+ 
+                <a href="http://op.europa.eu/it/home" title="Ufficio delle pubblicazioni dell'Unione europea" class="ecl-link ecl-link--standalone ecl-site-footer__link underlineLink">Ufficio delle pubblicazioni dell'Unione europea</a>
+            </div>          
+        </div>
+    </div>
+    <div class="ecl-site-footer__column">
+        <div class="ecl-site-footer__section">
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Serve aiuto?</h2>
+          <ul class="ecl-site-footer__list">
+            <li class="ecl-site-footer__list-item">
+                
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../content/help.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Guida"         aria-label="">
+ Guida
+ </a>
+
+            </li>
+            <li class="ecl-site-footer__list-item">
+                
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../contact.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Contatti"         aria-label="">
+ Contatti
+ </a>
+
+            </li>
+            <li class="ecl-site-footer__list-item">
+                
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../content/site-map/site-map.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Mappa del sito"         aria-label="">
+ Mappa del sito
+ </a>
+
+            </li>
+          </ul>
+        </div>
+        
+        <div class="ecl-site-footer__section">
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Seguici</h2>
+          <ul class="ecl-site-footer__list">
+            <li class="ecl-site-footer__list-item">
+                
+                <a href="https://x.com/EUPublications" title="X" class="ecl-link ecl-link--standalone ecl-link--icon ecl-site-footer__link">
+                    <img class="ecl-icon ecl-icon--m ecl-link__icon ecl-link--icon--twitter" src="./../../../revamp/images/twitter.svg"
+                        onerror="this.onerror=null; this.src='./../../../images/n/twitter.png'"
+                        alt="X" title="X">
+                    <span class="ecl-link__label--twitter">X</span>            
+                </a>
+            </li>            
+          </ul>
+        </div>
+        
+        <div class="ecl-site-footer__section">
+            <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Aspetti giuridici</h2>
+            <ul class="ecl-site-footer__list">
+                <li class="ecl-site-footer__list-item">
+                    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../content/legal-notice/legal-notice.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Note legali"         aria-label="">
+ Note legali
+ </a>
+
+                </li>
+                <li class="ecl-site-footer__list-item">
+                    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../content/legal-notice/legal-notice.html#5.%20Cookies%20notice"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Politica sull&#039;uso dei cookie"         aria-label="">
+ Politica sull'uso dei cookie
+ </a>
+
+                </li>
+                <li class="ecl-site-footer__list-item">
+                    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../content/legal-notice/legal-notice.html#4.%20Accessibility%20statement"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Accessibilità"         aria-label="">
+ Accessibilità
+ </a>
+
+                </li>
+                <li class="ecl-site-footer__list-item">     
+                    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../content/legal-notice/legal-notice.html#3.%20protection"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Informativa sulla privacy"         aria-label="">
+ Informativa sulla privacy
+ </a>
+
+                </li>
+          </ul>
+        </div>
+    </div>
+    
+     <div class="ecl-site-footer__column">
+         <div class="ecl-site-footer__section">
+           <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Informazioni</h2>
+           <ul class="ecl-site-footer__list">
+             <li class="ecl-site-footer__list-item">
+                 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../content/welcome/about.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Cos&#039;è EUR-Lex"         aria-label="">
+ Cos'è EUR-Lex
+ </a>
+
+             </li>
+             <li class="ecl-site-footer__list-item">
+                 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../newsletter/newsletterLatest.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Newsletter"         aria-label="">
+ Newsletter
+ </a>
+
+             </li>
+             <li class="ecl-site-footer__list-item">
+                 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../../../content/links/links.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Link utili"         aria-label="">
+ Link utili
+ </a>
+
+             </li>
+           </ul>
+         </div>
+         <div class="ecl-site-footer__section">
+           <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Altri servizi</h2>
+           <ul class="ecl-site-footer__list">
+             <li class="ecl-site-footer__list-item">
+                 
+                 <a href="https://data.europa.eu/euodp/it/data/" title="Dati europei" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                     Dati europei
+                 </a>
+             </li>
+             <li class="ecl-site-footer__list-item">
+                 
+                 <a href="https://ted.europa.eu/TED/main/HomePage.do" title="Appalti dell'UE" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                     Appalti dell'UE
+                 </a>
+             </li>
+             <li class="ecl-site-footer__list-item">
+                 
+                 <a href="http://cordis.europa.eu/it/" title="Risultati della ricerca dell'UE" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                     Risultati della ricerca dell'UE
+                 </a>
+             </li>
+             <li class="ecl-site-footer__list-item">
+                 
+                 <a href="http://op.europa.eu/it/web/who-is-who" title="EU Whoiswho" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                     EU Whoiswho
+                 </a>
+             </li>
+             <li class="ecl-site-footer__list-item">
+                 
+                 <a href="http://op.europa.eu/it/web/general-publications/publications" title="Pubblicazioni dell'UE" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                     Pubblicazioni dell'UE
+                 </a>
+             </li>
+           </ul>
+         </div>
+         <div class="ecl-site-footer__section ecl-site-footer__section--separator">
+           <ul class="ecl-site-footer__list">
+             <li class="ecl-site-footer__list-item">
+             
+             <a href="http://n-lex.europa.eu/n-lex/index?lang=it" title="N-Lex" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                 N-Lex
+             </a>
+             </li>
+             <li class="ecl-site-footer__list-item">
+             
+             <a href="http://op.europa.eu/it/web/eu-law-in-force" title="" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                 
+             </a>
+             </li>
+             <li class="ecl-site-footer__list-item">
+             
+             <a href="http://law-tracker.europa.eu/homepage?lang=it" title="EU Law Tracker" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                 EU Law Tracker
+ </a> </li> </ul> </div> </div>
+</div> 
+ 
+
+
+
+    <div class="ecl-site-footer__row">
+      <div class="ecl-site-footer__column">
+        <div class="ecl-site-footer__section"><a href="https://european-union.europa.eu/" class="ecl-link ecl-link--standalone ecl-site-footer__logo-link" aria-label="European Union">
+            <picture class="ecl-picture ecl-site-footer__picture" title="European Union">
+              <source srcset="./../../../revamp/images/logo-eu--en.svg" media="(min-width: 996px)"><img class="ecl-site-footer__logo-image" src="./../../../revamp/images/logo-eu--en-sm.svg" alt="European Union logo" />
+            </picture>
+          </a>
+          <div class="ecl-site-footer__description">Scopri di più su <a href="https://europa.eu" class="ecl-link ecl-link--standalone underlineLink">europa.eu</a></div>
+        </div>
+      </div>
+      <div class="ecl-site-footer__column">
+        <div class="ecl-site-footer__section">
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Contatta l&#39;UE</h2>
+          <ul class="ecl-site-footer__list">
+            <li class="ecl-site-footer__list-item"><a href="tel:0080067891011" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Chiamaci al numero 00 800 6 7 8 9 10 11</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/call-us_en" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Usa altre opzioni telefoniche</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/write-us_en" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Scrivici usando l&#39;apposito modulo</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/meet-us_en" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Incontraci presso uno dei centri dell&#39;UE</a></li>
+          </ul>
+        </div>
+        <div class="ecl-site-footer__section">
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Social media</h2>
+          <ul class="ecl-site-footer__list">
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Cerca i canali social dell&#39;UE</a></li>
+          </ul>
+        </div>
+        <div class="ecl-site-footer__section">
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Aspetti giuridici</h2>
+          <ul class="ecl-site-footer__list">
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/languages-our-websites_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Uso delle lingue sui nostri siti web</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/privacy-policy_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Politica di tutela della privacy</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/legal-notice_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Note legali</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/cookies_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Cookie</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ecl-site-footer__column">
+        <div class="ecl-site-footer__section ecl-site-footer__section">
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Istituzioni dell&#39;UE</h2>
+          <ul class="ecl-site-footer__list">
+            <li class="ecl-site-footer__list-item"><a href="https://www.europarl.europa.eu/portal/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Parlamento europeo</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.consilium.europa.eu/en/european-council/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Consiglio europeo</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.consilium.europa.eu/en/home/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Consiglio dell&#39;Unione europea</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://commission.europa.eu/index_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Commissione europea</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://curia.europa.eu/jcms/jcms/j_6/en/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Corte di giustizia dell&#39;Unione europea (CGUE)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.ecb.europa.eu/home/html/index.en.html" class="ecl-link ecl-link--standalone ecl-site-footer__link">Banca centrale europea (BCE)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.eca.europa.eu/en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Corte dei conti europea</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://eeas.europa.eu/headquarters/headquarters-homepage_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Servizio europeo per l&#39;azione esterna (SEAE)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.eesc.europa.eu/?i=portal.en.home" class="ecl-link ecl-link--standalone ecl-site-footer__link">Comitato economico e sociale europeo</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://cor.europa.eu/en/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Comitato europeo delle regioni (CdR)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.eib.org/en/index.htm" class="ecl-link ecl-link--standalone ecl-site-footer__link">Banca europea per gli investimenti</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.ombudsman.europa.eu/en/home" class="ecl-link ecl-link--standalone ecl-site-footer__link">Mediatore europeo</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://secure.edps.europa.eu/EDPSWEB/edps/EDPS?lang=en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Garante europeo della protezione dei dati (GEPD)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://edpb.europa.eu/edpb_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Comitato europeo per la protezione dei dati</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://epso.europa.eu/en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Ufficio europeo di selezione del personale</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://op.europa.eu/en/home" class="ecl-link ecl-link--standalone ecl-site-footer__link">Ufficio delle pubblicazioni dell&#39;Unione europea</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/institutions-and-bodies-profiles_en?f%5B0%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_DEC&f%5B1%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_EXEC&f%5B2%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/EU_JU" class="ecl-link ecl-link--standalone ecl-site-footer__link">Agenzie</a></li> </ul> </div> </div> </div>
+
+	
+	
+		<a href="#" aria-label="Inizio pagina" class="btn btn-xs btn-primary EurlexTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+
+		
+		<div class="panel-footer text-center switchToDesktop">
+			<ul class="list-unstyled">
+				<li class="hide" id="switchToMobile">
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="OP-Nlex"  onclick="createCookie(&#039;desktopModeOn&#039;,&#039;false&#039;,&#039;30&#039;);window.location.reload(true);"          aria-label="">
+	Passa a versione mobile&nbsp;<i
+							class="fa fa-mobile" aria-hidden="true"></i>
+					</a>
+
+				</li>
+				<li class="hide" id="switchToDesktop">
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-site-footer__link"  onclick="createCookie(&#039;desktopModeOn&#039;,&#039;true&#039;,&#039;30&#039;);window.location.reload(true);"          aria-label="">
+	Passa a versione desktop&nbsp;<i
+							class="fa fa-desktop" aria-hidden="true"></i>
+					</a>
+
+	</li>	</ul>	</div>	
+ </div>	</footer>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var switchToDesktop = "notSelected";
+        var deviceDetected = "desktop";
+        //enable switch to desktop view for mobile devices
+        if (deviceDetected == 'mobile' ){
+            if ((switchToDesktop == 'false' || switchToDesktop == 'notSelected') && window.innerWidth<992 ){
+                $("#switchToDesktop").removeClass("hide");
+            }else if (switchToDesktop == 'true'){
+                $("#switchToMobile").removeClass("hide");
+            }
+        }
+    });
+</script>  
+ 
+        <script  type="text/javascript" src="./../../../js/jquery.js?v=2.18.4"></script>
+        
+ 
+        <script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).on("ready",f)})})(jQuery,document)</script>
+
+        <script type="text/javascript" src="./../../../js/eur-lex-sanitizer.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/eur-lex.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/experimentalFeatures.js?v=2.18.4"></script>
+
+        
+        
+        <script type="text/javascript" src="./../../../js/machineTranslation.js?v=2.18.4"></script>
+
+        
+ 
+        <script type="text/javascript"
+        src="./../../../revamp/components/vendor/moment/min/moment-with-locales.min.js?v=2.18.4"></script>
+        
+        <script type="text/javascript"
+        src="./../../../revamp/components/vendor/bootstrap/dist/js/bootstrap.min.js?v=2.18.4"></script>
+        
+ 
+ 
+        <script type="text/javascript"
+        src="./../../../revamp/components/vendor/bootstrap-3-typeahead/js/bootstrap3-typeahead_customized.min.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../../../revamp/js/ie10-viewport-bug-workaround.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../revamp/js/metisMenu.min.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../../../revamp/js/timeline.main.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../../../revamp/js/jquery.autoresize.min.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../../../revamp/js/eurlex.js?v=2.18.4"></script>
+        
+ 
+       <script type="text/javascript"
+               src="./../../../js/compatibility-table.js?v=2.18.4"></script>
+
+
+
+        
+        <script type="text/javascript"
+        src="./../../../revamp/components/vendor/bootstrap/js/transition.js?v=2.18.4"></script>
+        
+        <script type="text/javascript"
+        src="./../../../revamp/components/vendor/bootstrap/js/collapse.js?v=2.18.4"></script>
+        
+        <script type="text/javascript"
+        src="./../../../revamp/components/vendor/gasparesganga-jquery-loading-overlay/src/loadingoverlay.min.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../../../js/popupWidgetTitle.js?v=2.18.4"></script>
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+        <script type="text/javascript" src="./../../../js/piwik_functionality.js?v=2.18.4"></script>
+       
+        <script  src="https://webtools.europa.eu/load.js?globan=1110" type="text/javascript"></script>
+        
+        <script type="text/javascript" src="./../../../js/cookieConsentKitUtils.js?v=2.18.4"></script>
+
+        
+        <script type="text/javascript" src="./../../../js/d3/d3.v7.min.js?v=2.18.4"></script>
+        
+ 
+        <script type="text/javascript" src="./../../../js/browse-by-collection.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/d3-timeline.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../../../js/url-dynamic-util.js?v=2.18.4"></script>
+          
+ 
+ 
+        <script type="text/javascript" src="./../../../js/pdfjs/build/pdf.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/pdfjs/build/pdf.worker.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../../../js/pdf-infinite-scroll.js?v=2.18.4"></script>
+        
+        
+        <script type="text/javascript" src="./../../../revamp/components/vendor/ec/eu-preset-v4.1.1/scripts/ecl-eu.js?v=2.18.4"></script>
+        <script type="text/javascript" src="https://unpkg.com/svg4everybody@2.1.9/dist/svg4everybody.js"></script>
+
+        
+ 
+ </body> </html>

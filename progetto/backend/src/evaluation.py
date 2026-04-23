@@ -109,8 +109,8 @@ class Evaluator:
 
         # Pulisci il testo Markdown prima della valutazione
         cleaned_extracted_text = BaseParser.remove_markdown(extracted_text)
-        print("=============testo dopo la pulizia da markdown:===============\n", cleaned_extracted_text[:500])
-        print("=============gold text:===============\n", gold_text[:500])
+        print("=============testo dopo la pulizia da markdown:===============\n", cleaned_extracted_text[:1500])
+        print("=============gold text:===============\n", gold_text[:1500])
         extracted_tokens = self.tokenize(cleaned_extracted_text)
         gold_tokens = self.tokenize(gold_text)
         precision = self.calculate_precision(extracted_tokens, gold_tokens)

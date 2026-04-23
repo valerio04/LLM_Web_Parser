@@ -140,6 +140,8 @@ progetto/
 
 ---
 
+https://eur-lex.europa.eu/IT/legal-content/summary/exchange-rate-mechanism-between-the-euro-and-other-participating-national-currencies.html?fromSummary=14
+
 **Per domande o problemi: Contattare il team!** 💬
 
 
