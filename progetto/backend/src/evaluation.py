@@ -7,11 +7,11 @@ from typing import Dict, List
 from pathlib import Path
 
 from aiohttp import request
-from parsers.parser_wikipedia import WikipediaParser
-from parsers.parser1 import IlPostParser
-from parsers.parser2 import StatMuseParser
-from parsers.parser3 import EurLexParser
-from parsers.base_parser import BaseParser
+from .parsers.parser_wikipedia import WikipediaParser
+from .parsers.parser1 import IlPostParser
+from .parsers.parser2 import StatMuseParser
+from .parsers.parser3 import EurLexParser
+from .parsers.base_parser import BaseParser
 from collections import Counter
 import asyncio
 import markdown2
