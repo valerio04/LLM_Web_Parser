@@ -1,0 +1,23 @@
+Juan Lebrón had 2 appearances versus Barcelona in LaLiga in his career.
+	NAME	DATE	CLUB		OPP	Rating	MIN	G	A	xG	xA	PK	FK	SH	SOT	WOOD	TCH	TCH-BOX	OFF	FOUL	YC	RC
+1	Juan Lebrón	
+3/7/1971	
+Sevilla
+@	
+Barcelona
+90	
+0	
+0	
+0	
+0
+2	Juan Lebrón	
+12/19/1971	
+Sevilla
+@	
+Barcelona
+79	
+0	
+0	
+0	
+0
+Total						169	0				0									0	0

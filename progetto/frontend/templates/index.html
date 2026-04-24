@@ -213,6 +213,34 @@
 				</div>
 			</section>
 
+			
+
+			<section class="card">
+				<h2>Metriche estese</h2>
+				<div class="grid-2">
+					<div>
+						<strong>Jaccard</strong>
+						<p class="muted">{{ x_metrics.jaccard or '-' }}</p>
+					</div>
+					<div>
+						<strong>Levenshtein</strong>
+						<p class="muted">{{ x_metrics.levenshtein or '-' }}</p>
+					</div>
+					<div>
+						<strong>Similarity Ratio</strong>
+						<p class="muted">{{ x_metrics.similarity_ratio or '-' }}</p>
+					</div>
+					<div>
+						<strong>ROUGE-L</strong>
+						<p class="muted">{{ x_metrics.rouge_l or '-' }}</p>
+					</div>
+					<div>
+						<strong>Cosine Similarity</strong>
+						<p class="muted">{{ x_metrics.cosine_similarity or '-' }}</p>
+					</div>
+				</div>
+			</section>
+
 			<div class="texts-grid">
 				<section class="card">
 					<h2>HTML grezzo</h2>

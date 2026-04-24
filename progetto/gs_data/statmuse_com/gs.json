@@ -1,37 +1,72 @@
 [
   {
-    "url": "https://statmuse.com/",
-    "domain": "https://www.statmuse.com",
-    "title": "",
+    "url": "https://www.statmuse.com/nba/ask/nba-ppg-leaders-this-season",
+    "domain": "www.statmuse.com",
+    "title": "Luka Dončić scored the most points per game this season, with 33.5 per game.",
     "html_file": "statmuse_com/texts/gs_1_html.txt",
     "gold_file": "statmuse_com/texts/gs_1_gold.txt"
   },
   {
-    "url": "https://statmuse.com/",
-    "domain": "https://www.statmuse.com",
-    "title": "",
+    "url": "https://www.statmuse.com/nba/ask/lebron-james-career-stats",
+    "domain": "www.statmuse.com",
+    "title": "LeBron James has played 23 seasons for the Cavaliers, Lakers and Heat. He has averaged 26.8 points, 7.5 rebounds and 7.4 assists in 1,622 regular-season games. He was selected to play in 21 All-Star games. He has won the Rookie of the Year award, 4 MVP awards, 4 Finals MVP awards and 4 NBA championships.",
     "html_file": "statmuse_com/texts/gs_2_html.txt",
     "gold_file": "statmuse_com/texts/gs_2_gold.txt"
   },
   {
-    "url": "https://statmuse.com/",
-    "domain": "https://www.statmuse.com",
-    "title": "",
+    "url": "https://www.statmuse.com/fc/ask?q=Kylian+Mbapp%C3%A9+stats+vs+Lille&l=ligue1",
+    "domain": "www.statmuse.com",
+    "title": "Kylian Mbappé has a hat trick, 9 goals and 6 assists in 13 appearances against Lille in Ligue 1 in his career.",
     "html_file": "statmuse_com/texts/gs_3_html.txt",
     "gold_file": "statmuse_com/texts/gs_3_gold.txt"
   },
   {
-    "url": "https://statmuse.com/",
-    "domain": "https://www.statmuse.com",
-    "title": "",
+    "url": "https://www.statmuse.com/mlb/ask/mlb-standings-2023",
+    "domain": "www.statmuse.com",
+    "title": "The Atlanta Braves finished 1st in the NL East in 2023 with a record of 104-58. They won their division.",
     "html_file": "statmuse_com/texts/gs_4_html.txt",
     "gold_file": "statmuse_com/texts/gs_4_gold.txt"
   },
   {
-    "url": "https://statmuse.com/",
-    "domain": "https://www.statmuse.com",
-    "title": "",
+    "url": "https://www.statmuse.com/nhl/ask/auston-matthews-game-log-2023-24",
+    "domain": "www.statmuse.com",
+    "title": "Auston Matthews games in 2023-24",
     "html_file": "statmuse_com/texts/gs_5_html.txt",
     "gold_file": "statmuse_com/texts/gs_5_gold.txt"
+  },
+  {
+    "url": "https://www.statmuse.com/money/ask/apple-stock-price-last-10-years",
+    "domain": "www.statmuse.com",
+    "title": "The closing price for Apple (AAPL) between April 23, 2016 and April 23, 2026 is $273.17, yesterday. It is up 1,048.7% in that time. The latest price is $274.44.",
+    "html_file": "statmuse_com/texts/gs_6_html.txt",
+    "gold_file": "statmuse_com/texts/gs_6_gold.txt"
+  },
+  {
+    "url": "https://www.statmuse.com/money/ask/bitcoin-price-history",
+    "domain": "www.statmuse.com",
+    "title": "The average closing price for Bitcoin (BTC) all-time is $20,723.91. The latest price is $77,532.23.",
+    "html_file": "statmuse_com/texts/gs_7_html.txt",
+    "gold_file": "statmuse_com/texts/gs_7_gold.txt"
+  },
+  {
+    "url": "https://www.statmuse.com/fc/ask?q=juan+lebr%C3%B3n+stats+vs+barcelona",
+    "domain": "www.statmuse.com",
+    "title": "Juan Lebrón had 2 appearances versus Barcelona in LaLiga in his career.",
+    "html_file": "statmuse_com/texts/gs_8_html.txt",
+    "gold_file": "statmuse_com/texts/gs_8_gold.txt"
+  },
+  {
+    "url": "https://www.statmuse.com/nba/ask/stephen-curry-stats-this-season",
+    "domain": "www.statmuse.com",
+    "title": "Stephen Curry averaged 26.6 points, 4.7 assists and 3.6 rebounds in 43 games this season.",
+    "html_file": "statmuse_com/texts/gs_9_html.txt",
+    "gold_file": "statmuse_com/texts/gs_9_gold.txt"
+  },
+  {
+    "url": "https://www.statmuse.com/pga/ask?q=who+had+the+best+driving+distance+average+in+a+season%2C+minimum+80+events",
+    "domain": "www.statmuse.com",
+    "title": "Bubba Watson has the longest average driving distance with 80+ events played in a season, at 319.6 yards in 2006.",
+    "html_file": "statmuse_com/texts/gs_10_html.txt",
+    "gold_file": "statmuse_com/texts/gs_10_gold.txt"
   }
 ]
