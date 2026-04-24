@@ -368,10 +368,10 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
         f1_scores.append(f1)
         #extra metrics
         jaccard_scores.append(jaccard)
-        rouge_l_scores.append(rouge_l)
-        levenshtein_distances.append(levenshtein)
         similarity_ratios.append(similarity_ratio)
         cosine_similarities.append(cosine_similarity)
+        rouge_l_scores.append(rouge_l)
+        levenshtein_distances.append(levenshtein)
 
     avg_f1 = 0
     avg_precision = 0
