@@ -18,25 +18,33 @@ import markdown2
 import re
 import mistune
 from bs4 import BeautifulSoup
+from difflib import SequenceMatcher
+import math
+
+
 
 class Evaluator:
     """Classe per valutare la qualità del parsing."""
 
     def __init__(self):
         pass
-
-    def tokenize(self, text: str) -> List[str]:
+    
+    @staticmethod
+    def tokenize(text: str) -> List[str]:
         """
         Tokenizza il testo in token (parole).
         Parametri: text (str) - testo da tokenizzare
         Ritorna: List[str] - lista di token
         """
+        #TODO: da lasciare o no la regex per togliere puntegiatura?
+
+        text = re.sub(r'[^\w\s]', ' ', text)
         text = text.lower()  # Converti tutto in minuscolo per uniformità
         tokens = text.split()  # Semplice tokenizzazione basata su spazi
         return tokens
  
-
-    def calculate_precision(self, extracted_tokens: List[str], gold_tokens: List[str]) -> float:
+    @staticmethod
+    def calculate_precision(extracted_tokens: List[str], gold_tokens: List[str]) -> float:
         """
         Calcola la precisione a livello token.
         Parametri: extracted_tokens, gold_tokens
@@ -50,7 +58,7 @@ class Evaluator:
         return precision'''
         
         # Versione con Counter (conta le ripetizioni):
-        from collections import Counter
+        
         if len(extracted_tokens) == 0:
             return 0.0
         extracted_count = Counter(extracted_tokens)
@@ -59,8 +67,9 @@ class Evaluator:
         precision = common / len(extracted_tokens)
         return precision
         
-
-    def calculate_recall(self, extracted_tokens: List[str], gold_tokens: List[str]) -> float:
+    
+    @staticmethod
+    def calculate_recall(extracted_tokens: List[str], gold_tokens: List[str]) -> float:
         """
         Calcola il recall a livello token.
         Parametri: extracted_tokens, gold_tokens
@@ -83,7 +92,8 @@ class Evaluator:
         recall = common / len(gold_tokens)
         return recall
 
-    def calculate_f1(self, precision: float, recall: float) -> float:
+    @staticmethod
+    def calculate_f1(precision: float, recall: float) -> float:
         """
         Calcola l'F1 score combinando precisione e recall.
         Parametri: precision, recall
@@ -94,7 +104,8 @@ class Evaluator:
         f1 = (2 * precision * recall) / (precision + recall)
         return f1
 
-    def token_level_eval(self, extracted_text: str, gold_text: str) -> Dict[str, float]:
+    @staticmethod
+    def token_level_eval(extracted_text: str, gold_text: str) -> Dict[str, float]:
         """
         Esegue la valutazione completa a livello token.
         Calcola precision, recall, F1.
@@ -111,17 +122,198 @@ class Evaluator:
         cleaned_extracted_text = BaseParser.remove_markdown(extracted_text)
         print("=============testo dopo la pulizia da markdown:===============\n", cleaned_extracted_text[:1500])
         print("=============gold text:===============\n", gold_text[:1500])
-        extracted_tokens = self.tokenize(cleaned_extracted_text)
-        gold_tokens = self.tokenize(gold_text)
-        precision = self.calculate_precision(extracted_tokens, gold_tokens)
-        recall = self.calculate_recall(extracted_tokens, gold_tokens)
-        f1 = self.calculate_f1(precision, recall)
+        extracted_tokens = Evaluator.tokenize(cleaned_extracted_text)
+        gold_tokens = Evaluator.tokenize(gold_text)
+        precision = Evaluator.calculate_precision(extracted_tokens, gold_tokens)
+        recall = Evaluator.calculate_recall(extracted_tokens, gold_tokens)
+        f1 = Evaluator.calculate_f1(precision, recall)
 
         result = {"precision": precision,
                   "recall": recall,
                   "f1": f1}
         
         return result
+
+
+#======================EXTRA====================
+
+
+    #extra
+    @staticmethod
+    def jaccard_similarity(extracted_tokens: List[str], gold_tokens: List[str]) -> float:
+        
+        '''Misura quanto il vocabolario usato è lo stesso, senza contare le ripetizioni.'''
+        
+        set1 = set(extracted_tokens)
+        set2 = set(gold_tokens)
+
+        intersezione = len(set1.intersection(set2))
+        unione = len(set1.union(set2))
+        
+        if unione == 0:
+            return 0.0
+        
+        return intersezione / unione 
+
+
+
+    #0 è identico, più alto è il numero più sono diversi
+    @staticmethod    
+    def levenshtein_dist(extracted_tokens: List[str], gold_tokens: List[str]) -> int:
+
+        '''Misura il numero minimo di modifiche (inserimenti, cancellazioni, sostituzioni)
+        necessarie per trasformare un testo nell'altro. 
+        0 indica testi identici; valori più alti indicano maggiore differenza a livello di caratteri.'''
+
+        if not extracted_tokens and not gold_tokens:
+            return 1.0
+        
+        max_len = max(len(extracted_tokens), len(gold_tokens))
+        if max_len == 0:
+            return 1.0
+
+
+        # Operiamo direttamente su liste di token (parole)
+        if len(extracted_tokens) < len(gold_tokens):
+            extracted_tokens, gold_tokens = gold_tokens, extracted_tokens
+
+        if len(gold_tokens) == 0:
+            return len(extracted_tokens)
+
+        previous_row = list(range(len(gold_tokens) + 1))
+        for i, ta in enumerate(extracted_tokens, start=1):
+            current_row = [i]
+            for j, tb in enumerate(gold_tokens, start=1):
+                insertions = previous_row[j] + 1
+                deletions = current_row[j-1] + 1
+                substitutions = previous_row[j-1] + (0 if ta == tb else 1)
+                current_row.append(min(insertions, deletions, substitutions))
+            previous_row = current_row
+
+        return 1.0 - (previous_row[-1] / max_len)  # Normalizza in [0, 1]
+
+   
+
+    
+
+    @staticmethod    # è l unica cvhe mantiene la punteggiatura cosi da valutarla nella similarità in quanto analizza le stringhe intere e non i token
+    def similarity_ratio(gold_text: str, extracted_text: str) -> float:
+        return SequenceMatcher(None, gold_text, extracted_text).ratio()
+
+
+
+    @staticmethod
+    def lcs(gold_tokens: List[str], extracted_tokens: List[str]) -> int:
+        # Calcola la lunghezza della sottosequenza comune più lunga
+        m, n = len(gold_tokens), len(extracted_tokens)
+        L = [[0] * (n + 1) for _ in range(m + 1)]
+
+        for i in range(m + 1):
+            for j in range(n + 1):
+                if i == 0 or j == 0:
+                    L[i][j] = 0
+                elif gold_tokens[i-1] == extracted_tokens[j-1]:
+                    L[i][j] = L[i-1][j-1] + 1
+                else:
+                    L[i][j] = max(L[i-1][j], L[i][j-1])
+        return L[m][n]
+
+    @staticmethod
+    def rouge_l_simplified(gold_tokens: List[str], parsed_tokens: List[str]) -> float:
+        
+        '''Verifica se l'ordine delle parole è mantenuto'''
+
+        if not gold_tokens or not parsed_tokens:
+            return 0.0
+        
+        lcs_count = Evaluator.lcs(gold_tokens, parsed_tokens)
+        
+        # Calcoliamo la F-measure di ROUGE-L
+        precision = lcs_count / len(parsed_tokens)
+        recall = lcs_count / len(gold_tokens)
+        
+        if (precision + recall) == 0: return 0.0
+        return (2 * precision * recall) / (precision + recall)
+
+
+
+
+    
+    
+
+    @staticmethod
+    def cosine_similarity_manual(gold_tokens: List[str], parsed_tokens: List[str]) -> float:
+        
+        '''parole	Capisce se il tema del discorso è lo stesso, 
+        dando meno importanza alle parole comuni e più a quelle chiave.'''
+
+        # Creiamo i "vettori" contando le frequenze delle parole
+        vec1 = Counter(gold_tokens)
+        vec2 = Counter(parsed_tokens)
+
+        # Troviamo l'unione di tutte le parole (vocabolario)
+        words = set(vec1.keys()) | set(vec2.keys())
+        
+        # Calcoliamo il prodotto scalare (dot product)
+        dot_product = sum(vec1.get(w, 0) * vec2.get(w, 0) for w in words)
+        
+        # Calcoliamo le magnitudo (norme) dei vettori
+        norm1 = math.sqrt(sum(v**2 for v in vec1.values()))
+        norm2 = math.sqrt(sum(v**2 for v in vec2.values()))
+        
+        if not norm1 or not norm2:
+            return 0.0
+        
+        return dot_product / (norm1 * norm2)
+
+    
+
+
+    @staticmethod
+    def x_eval(extracted_text: str, gold_text: str) -> Dict[str, float]:
+        
+        # Esempio di valutazione combinata
+        
+        cleaned_extracted_text = BaseParser.remove_markdown(extracted_text)
+        extracted_tokens = Evaluator.tokenize(cleaned_extracted_text)
+        gold_tokens = Evaluator.tokenize(gold_text)
+            
+        levenshtein = 0
+        similarity = 0
+        jaccard = 0
+        rouge_l = 0
+        cosine_sim = 0
+
+        #TODO: capire com egestire il fatto che rallentano molto la valutazione
+        
+        # O(N + M) 
+        cosine_sim = Evaluator.cosine_similarity_manual(gold_tokens, extracted_tokens)
+
+        # O(N + M) 
+        jaccard = Evaluator.jaccard_similarity(extracted_tokens, gold_tokens)
+
+        # O(N^2) 
+        similarity = Evaluator.similarity_ratio(gold_text, cleaned_extracted_text)
+        
+        # O(N * M) 
+        #levenshtein = Evaluator.levenshtein_dist(extracted_tokens, gold_tokens)
+        
+        # O(N * M) 
+        #rouge_l = Evaluator.rouge_l_simplified(gold_tokens, extracted_tokens)
+        
+        
+
+        return {
+            "jaccard": jaccard,
+            "levenshtein": levenshtein,
+            "similarity_ratio": similarity,
+            "rouge_l": rouge_l,
+            "cosine_similarity": cosine_sim
+        }
+
+
+#=================fine extra======================
+
 
 
 
@@ -213,11 +405,13 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
         return {}
 
     result = dict()
-    evaluator = Evaluator()
+    
 
     # Definisci base_dir UNA VOLTA, FUORI dal loop
     script_dir = Path(__file__).parent.resolve()
     base_dir = script_dir.parent.parent
+
+    
 
     for entry in gold_data:
         if not entry.get('title'):
@@ -228,64 +422,69 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
             continue
 
         domain = entry.get('domain')
-        if domain == "en.wikipedia.org":
+        if "en.wikipedia.org" in domain:
             parser = WikipediaParser()
-        elif domain == "www.ilpost.it":
+        elif "www.ilpost.it" in domain:
             parser = IlPostParser()
-        elif domain == "statmuse.com":
+        elif "www.statmuse.com" in domain:
             parser = StatMuseParser()
-        elif domain == "eur-lex.europa.eu":
+        elif "eur-lex.europa.eu" in domain:
             parser = EurLexParser()
         else:
             print(f"[WARNING] Dominio non riconosciuto: {domain}")
             continue
 
         try:
-            
+            # 1. Definizione percorsi e verifica Gold Standard
             html_file_path = base_dir / "gs_data" / entry['html_file']
             gold_file_path = base_dir / "gs_data" / entry['gold_file']
 
             if not gold_file_path.exists():
-                print(f"[WARNING] File gold standard mancante: {gold_file_path}")
+                print(f"[WARNING] Gold Standard mancante: {gold_file_path}")
                 continue
 
-            # Leggi il gold standard
-            with open(gold_file_path, 'r', encoding='utf-8') as f:
-                gold_text = f.read()
-
-            # Se esiste l'HTML locale, usalo con run_from_html; altrimenti prova il parsing online
+            gold_text = gold_file_path.read_text(encoding='utf-8')
             extracted_result = None
+
+            # 2. Tentativo di Parsing (Locale -> Online)
             if html_file_path.exists():
                 try:
-                    with open(html_file_path, 'r', encoding='utf-8') as f:
-                        html_text = f.read()
+                    html_text = html_file_path.read_text(encoding='utf-8')
                     extracted_result = await parser.run_from_html(entry['url'], html_text)
                 except Exception as e:
-                    print(f"[WARNING] run_from_html fallito per {entry['url']}: {e} — provo run online")
-                    try:
-                        extracted_result = await parser.run(entry['url'])
-                    except Exception as e2:
-                        print(f"[ERROR] run online fallito per {entry['url']}: {e2}")
-                        extracted_result = None
-            else:
+                    print(f"[WARNING] run_from_html fallito per {entry['url']}: {e}")
+
+            # Se il locale non esiste o ha fallito, prova online
+            if not extracted_result:
                 try:
                     extracted_result = await parser.run(entry['url'])
                 except Exception as e:
-                    print(f"[ERROR] run online fallito per {entry['url']}: {e}")
-                    extracted_result = None
-            extracted_text = extracted_result.get('parsed_text', '')
+                    print(f"[ERROR] Anche il parsing online è fallito per {entry['url']}: {e}")
+
+            # 3. Estrazione e validazione del testo
+            extracted_text = (extracted_result or {}).get('parsed_text', '').strip()
 
             if not extracted_text:
-                print(f"[WARNING] Testo parsato vuoto per: {entry['url']}")
+                print(f"[WARNING] Testo estratto vuoto o nullo per: {entry['url']}")
                 continue
-
-            token_eval_result = evaluator.token_level_eval(extracted_text, gold_text)
-            print(f"[INFO] {entry['title']}: {token_eval_result}")
-            result[entry['title']] = token_eval_result
-
+            
+            # 4. Valutazione
+            token_eval_result = Evaluator.token_level_eval(extracted_text, gold_text)
+            x_eval_result = {}
+            x_eval_result = Evaluator.x_eval(extracted_text, gold_text)
+            print(f"[INFO] {entry['title']}: {token_eval_result} | x_eval: {x_eval_result}")
+           
+            merged = {
+                "precision": token_eval_result.get("precision", 0),
+                "recall": token_eval_result.get("recall", 0),
+                "f1": token_eval_result.get("f1", 0),
+                "x_eval": x_eval_result,
+            }
+            result[entry['title']] = merged
+            
         except Exception as e:
             print(f"[ERROR] Errore per {entry['title']}: {e}")
-            result[entry['title']] = {"precision": 0, "recall": 0, "f1": 0}
+            result[entry['title']] = {"precision": 0, "recall": 0, "f1": 0, "x_eval": {}}
 
     return result
 

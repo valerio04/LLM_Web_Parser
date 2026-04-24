@@ -60,6 +60,7 @@ def index(request: Request) -> HTMLResponse:
             "selected_url": "",
             "result": UiResult(),
             "metrics": {},
+            "x_metrics": {},
         },
     )
 
@@ -134,19 +135,21 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
 
 			# TTODO: non so se il prof vuole il md o il testo pulito nell intefaccia
 			
-            html_text = remove_markdown(parse_data.get("parsed_text", ""))
-            plain_text = (re.sub(r'<[^>]+>', '', html_text)).strip()
+            #html_text = remove_markdown(parse_data.get("parsed_text", ""))
+            #plain_text = (re.sub(r'<[^>]+>', '', html_text)).strip()
             
             result = UiResult(
                 url=parse_data.get("url", selected_url),
                 domain=parse_data.get("domain", ""),
                 title=parse_data.get("title", ""),
                 html_text=parse_data.get("html_text", ""),
-                parsed_text=plain_text,
-                #parsed_text=parse_data.get("parsed_text", ""),
+                #parsed_text=plain_text,
+                parsed_text=parse_data.get("parsed_text", ""),
                 gold_text=gold_data.get("gold_text", ""),
             )
             metrics = metrics_data.get("token_level_eval", {})
+            x_metrics = metrics_data.get("x_eval", {})
+
             
         except requests.RequestException as e:
             # Gestione base dell'errore per il parsing
@@ -170,6 +173,7 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
             "selected_url": selected_url,
             "result": result,
             "metrics": metrics,
+            "x_metrics": x_metrics,
         },
     )
 
