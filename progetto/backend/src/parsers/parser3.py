@@ -33,7 +33,7 @@ class EurLexParser(BaseParser):
                 ".NavSearch, .EurlexSearch, .Sidebar, .SidebarTools, .wt-banner, "
                 ".cookie-consent, #iubenda-cs-banner, .lseu-section-relevant-terms, "
                 ".dropdown-menu, .LanguageSearch, p.cojnote, #PP1Contents, #PP2Contents, #PP3Contents, .oj-note,"
-                ".lseu-section-summary-of, .dropdown-menu"
+                ".lseu-section-summary-of, .dropdown-menu, .oj-hd-lg, .oj-hd-coll"
             ),
             # Selettore specifico per il corpo del testo del glossario
             # #PP3Contents è il contenitore standard del testo istituzionale 

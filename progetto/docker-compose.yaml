@@ -8,6 +8,14 @@ services:
       - ./gs_data:/gs_data
       #- ./domains.json:/app/domains.json
       - ./domains.json:/domains.json
+    # 1. Aggiungiamo l'healthcheck per assicurarci che il server sia pronto
+    healthcheck:
+      # Usa un comando Python integrato per fare una richiesta GET (compatibile con l'immagine python:3.10-slim)
+      test: ["CMD-SHELL", "python -c 'import urllib.request; urllib.request.urlopen(\"http://127.0.0.1:8003/docs\")' || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 2s
 
   frontend:
     build: ./frontend
@@ -17,6 +25,8 @@ services:
     volumes:
       - ./gs_data:/gs_data
     depends_on:
-      - backend
+      backend:
+        # 2. Il frontend aspetterà che l'healthcheck del backend abbia successo
+        condition: service_healthy
     environment:
       - BACKEND_URL=http://backend:8003
