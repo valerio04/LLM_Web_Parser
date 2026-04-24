@@ -4,7 +4,7 @@ import html
 from typing import Any, Dict
 from crawl4ai import CrawlerRunConfig, CacheMode, CrawlResult
 from .base_parser import BaseParser
-
+from bs4 import BeautifulSoup
 class EurLexParser(BaseParser):
     def __init__(self):
         super().__init__("eur-lex.europa.eu")
@@ -18,51 +18,83 @@ class EurLexParser(BaseParser):
         self.re_start_noise = re.compile(r'(?s)^EUR-Lex\s*-\s*.*?\n.*?\n')
         self.re_barre = re.compile(r'\|') 
         
-        
     def create_crawler_config(self) -> CrawlerRunConfig:
         return CrawlerRunConfig(
+            simulate_user=True,           # Simula comportamento umano
+            override_navigator=True,      # Bypassa bot-detection
+            wait_for="css:#document1, .EurlexContent",
+
             excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'noscript', 'form', 'iframe'],
+            # Pulizia mirata: rimuoviamo i componenti UI di EUR-Lex
             excluded_selector=(
-                "header#op-header, #op-header-pdf, .ecl-site-footer, .ecl-site-header__banner, "
-                ".sidebar-offcanvas, .NavSearch, .EurlexSearch, .Sidebar, .SidebarTools, "
-                ".PubFormat, .PubFormats, .Logo, .Emission, "
-                ".wt-banner, .modal, .cookie-consent, #iubenda-cs-banner, .DocumentTitle.pull-left, #PP1Contents, #PP2Contents, #PP3Contents, .hd-ti, .hd-lg, .hd-oj, #PP3, #PP1, #PP2, .lseu-section-relevant-terms"
+                "button, .ecl-site-footer, .ecl-site-header__banner, .sidebar-offcanvas, "
+                ".NavSearch, .EurlexSearch, .Sidebar, .SidebarTools, .wt-banner, "
+                ".cookie-consent, #iubenda-cs-banner, .lseu-section-relevant-terms, "
+                ".dropdown-menu, .LanguageSearch, p.cojnote"
             ),
-            css_selector=".panel.panel-default.PagePanel, .EurlexContent, .active",
-            word_count_threshold=0,
+            # Selettore specifico per il corpo del testo del glossario
+            # #PP3Contents è il contenitore standard del testo istituzionale
+            css_selector="#PP3Contents, .EurlexContent", 
+            word_count_threshold=10,
             cache_mode=CacheMode.BYPASS,
             exclude_external_images=True,
-            delay_before_return_html=3.5 
+            # Importante per Crawl4AI: prova a usare 'fit_markdown' per evitare ripetizioni
+            process_iframes=False,
+            remove_overlay_elements=True,
+            page_timeout=60000, 
+            delay_before_return_html=2.0
         )
     
     def extract_title(self, result: CrawlResult) -> str:
-        # 1. Inizializziamo con il valore di default
-        title = "EUR_Lex_Senza_Titolo"
+        # Helper per pulire la formattazione
+        def clean_title(text: str) -> str:
+            if not text:
+                return ""
+            return re.sub(r'\s+', ' ', text).replace(" - EUR-Lex", "").strip()
 
-        # 2. Tentativo 1: Metadata
-        if result.metadata:
-            potential_title = result.metadata.get("title","EUR_Lex_Senza_Titolo").strip()
-            if potential_title and potential_title != "EUR_Lex_Senza_Titolo":
-                title = potential_title
+        title = ""
 
-        # 3. Tentativo 2: Se ancora non abbiamo un titolo valido, cerchiamo in <title>
-        if title == "EUR_Lex_Senza_Titolo" and result.html:
-            if match := re.search(r'<title>(.*?)</title>', result.html, re.IGNORECASE | re.DOTALL):
-                extracted = html.unescape(re.sub(r'<[^>]+>', '', match.group(1)).strip())
+        # 1. TENTATIVO 1: Metadati (Il tuo metodo originale che funziona quasi sempre)
+        if result.metadata and result.metadata.get("title"):
+            title = result.metadata.get("title", "")
+        elif result.html:
+            soup = BeautifulSoup(result.html, 'html.parser')
+            if soup.title and soup.title.string:
+                title = soup.title.string
+
+        title = clean_title(title)
+
+        # 2. CONTROLLO TRAPPOLA: È un VERO titolo o solo il codice CELEX?
+        # Le stringhe fittizie di EUR-Lex sono fatte così: "EUR-Lex - 52026PC0130 - IT" o solo "52026PC0130"
+        # Usiamo una regex rigorosa per capire se la stringa è composta solo dal CELEX e dalla lingua.
+        is_fake_title = bool(re.match(r'^(?:EUR-Lex\s*-\s*)?[0-9][A-Z0-9]{8,12}(?:\s*-\s*[A-Za-z]{2})?$', title))
+
+        # Se il titolo è buono, lo restituiamo subito (così salviamo tutti gli altri documenti!)
+        if title and not is_fake_title and title != "EUR_Lex_Senza_Titolo":
+            return title
+
+        # 3. TENTATIVO 2 (FALLBACK): Scansione del DOM (Per documenti come 52026PC0130)
+        # Arriviamo qui SOLO se il metadato era vuoto o se era un falso titolo CELEX
+        if result.html:
+            soup = BeautifulSoup(result.html, 'html.parser')
+            
+            # Cerchiamo le classi specifiche che EUR-Lex usa per i titoli
+            title_element = soup.select_one('.Titreobjet_cp, .Titreobjet_sg, .doc-ti, .oj-doc-ti, p.title, .doc-title')
+            
+            if title_element:
+                extracted = clean_title(title_element.get_text(separator=' '))
                 if extracted:
-                    title = extracted
+                    return extracted
+            
+            # Ultima spiaggia assoluta: il primo H1
+            if soup.h1:
+                h1_text = clean_title(soup.h1.get_text(separator=' '))
+                if h1_text:
+                    return h1_text
 
-        # 4. Tentativo 3: Se ancora nulla, cerchiamo in <h1>
-        if title == "EUR_Lex_Senza_Titolo" and result.html:
-            if match := re.search(r'<h1[^>]*>(.*?)</h1>', result.html, re.IGNORECASE | re.DOTALL):
-                extracted = html.unescape(re.sub(r'<[^>]+>', '', match.group(1)).strip())
-                if extracted:
-                    title = extracted
-
-        # 5. Pulizia finale comune e ritorno
-        # Rimuoviamo il suffisso fastidioso se presente in qualsiasi dei casi sopra
-        return title.replace(" - EUR-Lex", "").strip()
-
+        # Se proprio fallisce tutto, restituisce il fake title o la stringa di default
+        return title if title else "EUR_Lex_Senza_Titolo"
+    
     def _deduplicate(self, text: str) -> str:
         paragraphs = re.split(r'\n{2,}', text)
         clean_paras = []

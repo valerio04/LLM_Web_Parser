@@ -8,10 +8,10 @@ if __name__ == "__main__":
     #domain = input("Inserisci il dominio per il quale vuoi caricare il file JSON (esempio: wikipedia_org): ").strip()
     
     # dominio statico se preferisci:
-    #domain = "wikipedia_org" 
+    domain = "wikipedia_org" 
     #domain = "eurlex_europa_eu" 
     #domain = "ilpost_it"
-    domain= "statmuse_com"
+    #domain= "statmuse_com"
 
     # Percorso del file gs.json basato sul dominio
     script_dir = Path(__file__).parent.resolve()
