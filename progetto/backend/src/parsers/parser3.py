@@ -1,4 +1,5 @@
 import asyncio
+import mistune
 import re
 import html
 from typing import Any, Dict
@@ -25,16 +26,17 @@ class EurLexParser(BaseParser):
             wait_for="css:#document1, .EurlexContent",
 
             excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'noscript', 'form', 'iframe'],
+            css_selector="#PP3Contents, .EurlexContent",
             # Pulizia mirata: rimuoviamo i componenti UI di EUR-Lex
             excluded_selector=(
                 "button, .ecl-site-footer, .ecl-site-header__banner, .sidebar-offcanvas, "
                 ".NavSearch, .EurlexSearch, .Sidebar, .SidebarTools, .wt-banner, "
                 ".cookie-consent, #iubenda-cs-banner, .lseu-section-relevant-terms, "
-                ".dropdown-menu, .LanguageSearch, p.cojnote"
+                ".dropdown-menu, .LanguageSearch, p.cojnote, #PP1Contents, #PP2Contents, #PP3Contents, .oj-note,"
+                ".lseu-section-summary-of, .dropdown-menu, .oj-hd-lg, .oj-hd-coll"
             ),
             # Selettore specifico per il corpo del testo del glossario
-            # #PP3Contents è il contenitore standard del testo istituzionale
-            css_selector="#PP3Contents, .EurlexContent", 
+            # #PP3Contents è il contenitore standard del testo istituzionale 
             word_count_threshold=10,
             cache_mode=CacheMode.BYPASS,
             exclude_external_images=True,
@@ -54,6 +56,33 @@ class EurLexParser(BaseParser):
 
         title = ""
 
+        # 3. TENTATIVO 2 (FALLBACK): Scansione del DOM (Per documenti come 52026PC0130)
+        # Arriviamo qui SOLO se il metadato era vuoto o se era un falso titolo CELEX
+        if result.html:
+            soup = BeautifulSoup(result.html, 'html.parser')
+            
+            elemento_titolo = soup.find(id="title")
+
+            # 4. Estrai il testo in modo sicuro
+            if elemento_titolo:
+                # get_text(strip=True) prende solo il testo testuale e toglie gli spazi vuoti extra
+                mio_titolo_custom = elemento_titolo.get_text(strip=True)
+                return mio_titolo_custom
+            
+            # Cerchiamo le classi specifiche che EUR-Lex usa per i titoli
+            title_element = soup.select_one('.Titreobjet_cp, .Titreobjet_sg, .doc-ti, .oj-doc-ti, p.title, .doc-title')
+            
+            if title_element:
+                extracted = clean_title(title_element.get_text(separator=' '))
+                if extracted:
+                    return extracted
+            
+            # Ultima spiaggia assoluta: il primo H1
+            if soup.h1:
+                h1_text = clean_title(soup.h1.get_text(separator=' '))
+                if h1_text:
+                    return h1_text
+            
         # 1. TENTATIVO 1: Metadati (Il tuo metodo originale che funziona quasi sempre)
         if result.metadata and result.metadata.get("title"):
             title = result.metadata.get("title", "")
@@ -72,26 +101,7 @@ class EurLexParser(BaseParser):
         # Se il titolo è buono, lo restituiamo subito (così salviamo tutti gli altri documenti!)
         if title and not is_fake_title and title != "EUR_Lex_Senza_Titolo":
             return title
-
-        # 3. TENTATIVO 2 (FALLBACK): Scansione del DOM (Per documenti come 52026PC0130)
-        # Arriviamo qui SOLO se il metadato era vuoto o se era un falso titolo CELEX
-        if result.html:
-            soup = BeautifulSoup(result.html, 'html.parser')
-            
-            # Cerchiamo le classi specifiche che EUR-Lex usa per i titoli
-            title_element = soup.select_one('.Titreobjet_cp, .Titreobjet_sg, .doc-ti, .oj-doc-ti, p.title, .doc-title')
-            
-            if title_element:
-                extracted = clean_title(title_element.get_text(separator=' '))
-                if extracted:
-                    return extracted
-            
-            # Ultima spiaggia assoluta: il primo H1
-            if soup.h1:
-                h1_text = clean_title(soup.h1.get_text(separator=' '))
-                if h1_text:
-                    return h1_text
-
+        
         # Se proprio fallisce tutto, restituisce il fake title o la stringa di default
         return title if title else "EUR_Lex_Senza_Titolo"
     
@@ -132,7 +142,19 @@ class EurLexParser(BaseParser):
         text = re.sub(r'\n{3,}', '\n\n', text)
 
         return text.strip()
-        
+    
+    def remove_markdown(md: str) -> str:
+        """Rimuove ogni traccia di formattazione per il confronto metrico."""
+        # Trasforma MD in HTML
+        html = mistune.html(md)
+        # Estrae solo il testo puro dall'HTML
+        soup = BeautifulSoup(html, "html.parser")
+        # Rimuove i tag ma mantiene il contenuto
+        text = soup.get_text(separator=' ') 
+        # Normalizza spazi e newline
+        text = re.sub(r'\s+', ' ', text)
+        return text.strip()
+
     def format_result(self, url: str, result: CrawlResult) -> Dict[str, Any]:
         return {
             "url": url,

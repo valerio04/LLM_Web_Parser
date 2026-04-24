@@ -1,0 +1,5713 @@
+
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+        <!DOCTYPE html>
+        <html lang="it" class="no-js"
+        xml:lang="it"  >
+        <head>
+        <meta charset="utf-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        
+ 
+ 
+ 
+ 
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+            
+ 
+ 
+        <script type="text/javascript" src="/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js" data-dtconfig="app=47d4c64c3b67ec69|agentId=a2fac5cff893c9e6|owasp=1|featureHash=ICANVfgqrux|rdnt=1|uxrgce=1|cuc=m097nmfl|mel=100000|mb=null|dpvc=1|iub=null|lastModification=1776873616089|tp=500,50,0|srbbv=2|agentUri=/eurlex-frontoffice/ruxitagentjs_ICANVfgqrux_10327251022105625.js|reportUrl=/eurlex-frontoffice/rb_39a3e95b-5423-482c-879b-99ef235dffeb|rid=RID_910560570|rpid=-386386187|domain=europa.eu"></script><script type="text/javascript" src="./../revamp/components/vendor/modernizr/modernizr.js?v=2.18.4"></script>
+        
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ <title>Statistiche sugli atti giuridici - EUR-Lex</title> 
+ 
+
+
+
+ <meta name="WT.cg_n" content="Editorial content"/><meta name="WT.cg_s" content="Statistics"/><meta name="WT.z_usr_lan" content="it"/><meta name="WT.seg_1" content="Unregistered"/>
+
+ 
+ 
+        <meta name="google-site-verification" content="hl-zFNRVYTzOJ4xGdc2Wl9h6Ezs9rbbdMgFYLFvx6cA"/>
+        <meta name="msvalidate.01" content="6F74BA769F6140EC354DF6BE33F86005"/>
+        
+        <meta name="format-detection" content="telephone=no"/>
+        
+        <meta name="war-version" content="2.18.4"/>
+        <meta name="fo-db-version" content="2.18.1"/>
+        <meta name="sl-api-version" content="3.9.8/CORPORATE_SEARCH/2.146"/>
+
+        <meta name="app-relative-path" content="./../"/>
+
+        <link rel="stylesheet" media="all"
+        href="./../revamp/components/vendor/bootstrap/dist/css/bootstrap.css?v=2.18.4">
+        
+        <link rel="stylesheet" media="all"
+        href="./../revamp/components/vendor/font-awesome/css/font-awesome.min.css?v=2.18.4">
+        <link rel="stylesheet" media="all" href="./../revamp/components/vendor/roboto/roboto.css?v=2.18.4">
+        <link rel="stylesheet" media="all" href="./../revamp/css/eurlex.css?v=2.18.4">
+        <link rel="stylesheet" media="all" href="./../revamp/css/eurlex-dev.css?v=2.18.4">
+        
+ 
+ 
+        <link rel="stylesheet" media="all" href="./../css/eurlex-xml-editorial-content.css?t=1760540477586">
+
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+        <link rel="stylesheet" media="print" href="./../css/eurlex-print.css?t=1760540477398">
+        
+ 
+ 
+ 
+        <script>(function(w,d,u){w.readyQ=[];w.bindReadyQ=[];function p(x,y){if(x=="ready"){w.bindReadyQ.push(y);}else{w.readyQ.push(x);}};var a={ready:p,bind:p};w.$=w.jQuery=function(f){if(f===d||f===u){return a}else{p(f)}}})(window,document)</script>
+
+        
+
+        <script type="text/javascript" src="./../dynamic-js/labels_it.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../dynamic-js/WT_labels_it.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../dynamic-js/config.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../dynamic-js/const.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../dynamic-js/paths.js?requestURL=%2Fstatistics%2Flegislative-acts-statistics.html"></script>
+        
+
+			<script type="text/javascript">
+        var legislativeUrl = 'http://old.eur-lex.europa.eu/it/techleg/index.htm';
+        var eurovocUrl = 'http://eurovoc.europa.eu/drupal/?q=it/node';
+        var interStyleGuideUrl = 'http://publications.europa.eu/code/it/it-000100.htm';
+        var sessionExpired = false;
+        var pageUrl = '';
+        var queryString = '';
+        var sessionTimeout = '900000';
+        </script>
+
+        <!-- [if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif] -->
+        
+ 
+
+        <link rel="shortcut icon" href="./../images/eurlex.ico"/>
+        <link rel="canonical" href="https://eur-lex.europa.eu/statistics/legislative-acts-statistics.html"/>
+        
+ 
+ 
+ 
+ 
+ 
+ 
+        <link rel="stylesheet" media="all" href="./../revamp/css/custom-infinite-scroll.css?v=2.18.4">
+        
+        
+ 
+ 
+   
+ 
+                <link rel="stylesheet" media="all" href="./../revamp/components/vendor/ec/eu-preset-v4.1.1/styles/ecl-eu.css?v=2.18.4">
+            
+   
+ 
+ 
+         <link rel="stylesheet" media="all" href="./../revamp/css/eurlex-ec.css?v=2.18.4">
+        
+		<script type="text/javascript" src="./../js/survey/survey.js?v=2.18.4"></script>
+         
+        </head>
+        
+ 
+ 
+ <body > 
+        <script  type="application/json">{
+            "utility": "cck",
+            "url": "https://eur-lex.europa.eu/content/legal-notice/legal-notice.html?locale=it#5.%20Cookies%20notice"
+        }</script>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<input type="hidden" id="piwikProSiteID" value="0b5594a8-b9c8-4cd6-aa25-5c578dcf91df">
+<input type="hidden" id="piwikProSummariesSiteID" value="46acaa7c-2394-428f-b054-103dec22b689">
+
+
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            (function(window, document, dataLayerName, id) {
+                window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+                function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString();f="; SameSite=Strict"}document.cookie=a+"="+b+d+f+"; path=/"}
+                var isStgDebug=(window.location.href.match("stg_debug")||document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
+                var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName),isStgDebug&&qP.push("stg_debug");var qPString=qP.length>0?("?"+qP.join("&")):"";
+                tags.async=!0,tags.src="https://analytics.webanalytics.op.europa.eu/containers/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
+                !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+            })(window, document, 'dataLayer','0b5594a8-b9c8-4cd6-aa25-5c578dcf91df');
+        }, { once: true });
+    </script>
+
+
+ <!-- // GENERAL Modal which is used by all the dynamic loading modal cases. --> 
+
+
+
+
+
+<div class="modal fade EurlexModal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="DemoModal02Title">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="modal-title" role="heading" aria-level="1" id="DemoModal02Title"></div>
+            </div><!-- modal-header -->
+            <div class="modal-body">
+            </div><!-- modal-body -->
+        </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+
+</div><!-- modal -->
+ 
+ 
+
+
+
+
+
+ 
+ 
+
+        <div class="Wrapper clearfix">
+
+        
+        <a class="sr-only sr-only-focusable SkipLink" href="#MainContent">Passa ai contenuti principali</a> <div> 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<header id="op-header" class="ecl-site-header header-refinement box-shadow-removal" data-ecl-auto-init="SiteHeader">
+        <div class="ecl-site-header__background">
+            <div class="ecl-site-header__header">
+                <div class="ecl-site-header__container ecl-container upper-header-border header-width-override">
+                    
+                    <div class="ecl-site-header__top" data-ecl-site-header-top>
+                        <a id="homepageLogo" href="https://european-union.europa.eu/index_en" class="ecl-link ecl-link--standalone ecl-site-header__logo-link" ariaLabel="aria-label=European Union">
+                            <picture class="ecl-picture ecl-site-header__picture" title="European Union">
+                              <source srcset="./../revamp/components/vendor/ec/eu-preset-v4.1.1/images/logo/standard-version/positive/logo-eu--it.svg" media="(min-width: 996px)">
+                                <img class="ecl-site-header__logo-image eu-logo-size" src="./../revamp/components/vendor/ec/eu-preset-v4.1.1/images/logo/condensed-version/positive/logo-eu--it.svg" alt="European Union flag" />
+                            </picture>
+                        </a>
+                            <div class="ecl-site-header__action">
+                                
+ 
+                                    <div class="dropdown ecl-site-header__login-container">
+                                        
+ 
+ 
+                                                <a id="MyEurlex" class="ecl-button ecl-button--tertiary ecl-site-header__login-toggle dropdown-toggle login-lang-text-size" href="#" data-toggle="dropdown" aria-haspopup="true" >
+                                                    <svg class="ecl-icon ecl-icon--s ecl-site-header__icon login-lang-image-size" focusable="false" aria-hidden="false" role="img" ">
+                                                        <use alt="Log in" xlink:href="./../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/log-in.svg#log-in"/>
+                                                        <title>Log in</title>
+                                                    </svg>
+                                                    Il mio EUR-Lex
+ </a> 
+ 
+ 
+                                        <div class="dropdown-menu MyAccount" role="menu" aria-labelledby="MyEurlex">
+                                            
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+                                                    <li class="dropdown-header visible-xs-block">Il mio EUR-Lex</li> <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../protected/homepage.html?url=%2Fstatistics%2Flegislative-acts-statistics.html"                aria-label=""><i class="fa fa-sign-in" aria-hidden="true"></i>Connettersi</a>
+</li>
+                                                    <li><a href="https://ecas.ec.europa.eu/cas/eim/external/register.cgi/"><i class="fa fa-user-plus" aria-hidden="true"></i>Registrarsi</a></li>
+                                                    <li role="separator" class="divider"></li>
+                                                
+ 
+ 
+ 
+ 
+ 
+ <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../my-eurlex/my-queries.html#recentQueries"       title="Le mie ricerche recenti (0)" id="myRecentQueriesLink"        aria-label=""><i class="fa fa-history" aria-hidden="true"></i>Le mie ricerche recenti (0)</a>
+</li> 
+ 
+ 
+ </div> </div> 
+ 
+                                <div id="op-header-language" class="ecl-site-header__language">
+                                    <a class="ecl-button ecl-button--tertiary ecl-site-header__language-selector login-lang-text-size" href="#" data-ecl-language-selector role="button" aria-label="Change language, current language is English" aria-controls="language-list-overlay">
+                                        <span class="ecl-site-header__language-icon">
+                                            <svg class="ecl-icon ecl-icon--s ecl-site-header__icon login-lang-image-size" focusable="false" aria-hidden="false" role="img" ">
+                                                <use xlink:href="./../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/global.svg#global"/use>
+                                                <title>English</title>
+                                            </svg>
+                                        </span>
+                                        Italiano
+ </a> 
+                                    <div class="ecl-site-header__language-container" id="language-list-overlay" hidden data-ecl-language-list-overlay aria-labelledby="ecl-site-header__language-title" role="dialog">
+                                        <div class="ecl-site-header__language-header">
+                                            <div class="ecl-site-header__language-title" id="ecl-site-header__language-title">
+                                                Select your language
+                                            </div>
+                                            <button id="languageButtonClose" class="ecl-button ecl-button--tertiary" type="submit" data-ecl-language-list-close>
+                                                <span class="ecl-button__container">
+                                                    <span class="ecl-button__label" data-ecl-label="true"></span>
+                                                    <svg class="ecl-icon ecl-icon--l ecl-button__icon lang-panel-close" focusable="false" aria-hidden="true" data-ecl-icon>
+                                                        <use alt="Close button" xlink:href="./../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/close-filled.svg#close-filled"/>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <hr class="lang-box-divisor"/>
+                                        <div class="ecl-site-header__language-content">
+                                            <div class="ecl-site-header__language-category" data-ecl-language-list-eu>
+                                                <div class="ecl-site-header__language-category-title">
+                                                    Official EU languages:
+                                                </div>
+                                                <form id="languageForm" method="get" name="languageForm">
+	                                                
+	
+	
+                                                    <ul class="ecl-site-header__language-list">
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;bg&#039;); $(this).closest(&#039;form&#039;).submit();"  id="bg"      lang=bg hreflang=bg aria-label=""><span class="ecl-site-header__language-link-code">bg</span><span class="ecl-site-header__language-link-label">български</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;es&#039;); $(this).closest(&#039;form&#039;).submit();"  id="es"      lang=es hreflang=es aria-label=""><span class="ecl-site-header__language-link-code">es</span><span class="ecl-site-header__language-link-label">Español</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;cs&#039;); $(this).closest(&#039;form&#039;).submit();"  id="cs"      lang=cs hreflang=cs aria-label=""><span class="ecl-site-header__language-link-code">cs</span><span class="ecl-site-header__language-link-label">Čeština</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;da&#039;); $(this).closest(&#039;form&#039;).submit();"  id="da"      lang=da hreflang=da aria-label=""><span class="ecl-site-header__language-link-code">da</span><span class="ecl-site-header__language-link-label">Dansk</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;de&#039;); $(this).closest(&#039;form&#039;).submit();"  id="de"      lang=de hreflang=de aria-label=""><span class="ecl-site-header__language-link-code">de</span><span class="ecl-site-header__language-link-label">Deutsch</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;et&#039;); $(this).closest(&#039;form&#039;).submit();"  id="et"      lang=et hreflang=et aria-label=""><span class="ecl-site-header__language-link-code">et</span><span class="ecl-site-header__language-link-label">Eesti keel</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;el&#039;); $(this).closest(&#039;form&#039;).submit();"  id="el"      lang=el hreflang=el aria-label=""><span class="ecl-site-header__language-link-code">el</span><span class="ecl-site-header__language-link-label">Ελληνικά</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;en&#039;); $(this).closest(&#039;form&#039;).submit();"  id="en"      lang=en hreflang=en aria-label=""><span class="ecl-site-header__language-link-code">en</span><span class="ecl-site-header__language-link-label">English</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;fr&#039;); $(this).closest(&#039;form&#039;).submit();"  id="fr"      lang=fr hreflang=fr aria-label=""><span class="ecl-site-header__language-link-code">fr</span><span class="ecl-site-header__language-link-label">Français</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;ga&#039;); $(this).closest(&#039;form&#039;).submit();"  id="ga"      lang=ga hreflang=ga aria-label=""><span class="ecl-site-header__language-link-code">ga</span><span class="ecl-site-header__language-link-label">Gaeilge</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;hr&#039;); $(this).closest(&#039;form&#039;).submit();"  id="hr"      lang=hr hreflang=hr aria-label=""><span class="ecl-site-header__language-link-code">hr</span><span class="ecl-site-header__language-link-label">Hrvatski</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;it&#039;); $(this).closest(&#039;form&#039;).submit();"  id="it"      lang=it hreflang=it aria-label=""><span class="ecl-site-header__language-link-code">it</span><span class="ecl-site-header__language-link-label">Italiano</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;lv&#039;); $(this).closest(&#039;form&#039;).submit();"  id="lv"      lang=lv hreflang=lv aria-label=""><span class="ecl-site-header__language-link-code">lv</span><span class="ecl-site-header__language-link-label">Latviešu valoda</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;lt&#039;); $(this).closest(&#039;form&#039;).submit();"  id="lt"      lang=lt hreflang=lt aria-label=""><span class="ecl-site-header__language-link-code">lt</span><span class="ecl-site-header__language-link-label">Lietuvių kalba</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;hu&#039;); $(this).closest(&#039;form&#039;).submit();"  id="hu"      lang=hu hreflang=hu aria-label=""><span class="ecl-site-header__language-link-code">hu</span><span class="ecl-site-header__language-link-label">Magyar</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;mt&#039;); $(this).closest(&#039;form&#039;).submit();"  id="mt"      lang=mt hreflang=mt aria-label=""><span class="ecl-site-header__language-link-code">mt</span><span class="ecl-site-header__language-link-label">Malti</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;nl&#039;); $(this).closest(&#039;form&#039;).submit();"  id="nl"      lang=nl hreflang=nl aria-label=""><span class="ecl-site-header__language-link-code">nl</span><span class="ecl-site-header__language-link-label">Nederlands</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;pl&#039;); $(this).closest(&#039;form&#039;).submit();"  id="pl"      lang=pl hreflang=pl aria-label=""><span class="ecl-site-header__language-link-code">pl</span><span class="ecl-site-header__language-link-label">Polski</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;pt&#039;); $(this).closest(&#039;form&#039;).submit();"  id="pt"      lang=pt hreflang=pt aria-label=""><span class="ecl-site-header__language-link-code">pt</span><span class="ecl-site-header__language-link-label">Português</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;ro&#039;); $(this).closest(&#039;form&#039;).submit();"  id="ro"      lang=ro hreflang=ro aria-label=""><span class="ecl-site-header__language-link-code">ro</span><span class="ecl-site-header__language-link-label">Română</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;sk&#039;); $(this).closest(&#039;form&#039;).submit();"  id="sk"      lang=sk hreflang=sk aria-label=""><span class="ecl-site-header__language-link-code">sk</span><span class="ecl-site-header__language-link-label">Slovenčina</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;sl&#039;); $(this).closest(&#039;form&#039;).submit();"  id="sl"      lang=sl hreflang=sl aria-label=""><span class="ecl-site-header__language-link-code">sl</span><span class="ecl-site-header__language-link-label">Slovenščina</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;fi&#039;); $(this).closest(&#039;form&#039;).submit();"  id="fi"      lang=fi hreflang=fi aria-label=""><span class="ecl-site-header__language-link-code">fi</span><span class="ecl-site-header__language-link-label">Suomi</span></a>
+</li>
+                                                        <li class="ecl-site-header__language-item">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-link--no-visited ecl-site-header__language-link"  onclick="$(&#039;#langToSubmit&#039;).val(&#039;sv&#039;); $(this).closest(&#039;form&#039;).submit();"  id="sv"      lang=sv hreflang=sv aria-label=""><span class="ecl-site-header__language-link-code">sv</span><span class="ecl-site-header__language-link-label">Svenska</span></a>
+</li>
+                                                    </ul>
+                                                	<input type="hidden" name="locale" id="langToSubmit" value="">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ecl-site-header__container ecl-container header-width-override bottom-header-padding">
+                    <div class="container-fluid container-width">
+                        <div class="row">
+                            <div class="col-xs-8 ecl-container-padding-removal">
+                                <div id="small-vertical-blue-divisor-with-label" class="ecl-site-header__site-name site-header">
+                                    <div>
+                                    	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../homepage.html?lang=it"    class="header-link"    id="eurlex-logo-text-size"        aria-label="">
+ EUR-Lex
+ </a>
+
+                                    </div>
+                                    <div class="site-name-tagline">
+                                        L&#39;accesso al diritto dell&#39;Unione europea
+ </div> </div> </div> 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+<div class="experimental-feature-tag">
+	<div class=" col-xs-4 experimental-feature-wrapper radius5p">
+		
+	
+	
+	<form id="disableExperimentalFeatures" name="disableExperimentalFeatures" action="./../experimental-features.html?action=disableExperimentalFeatures" method="post">
+			<input type="hidden" value="statistics/legislative-acts-statistics.html" name="relativeRequestUrl" />
+			<input type="hidden" value="" name="queryString" />
+
+			<div class="input-group input-group-sm experimental-feature-div-position radius5p">
+					
+				<span class="input-group-addon FormHelpAddon" id ="helpTooltipEF">
+						<a href="#" data-toggle="tooltip" data-placement="bottom" aria-description="&lt;a href=&quot;https://eur-lex.europa.eu/content/help/eurlex-content/experimental-features.html&quot; target=&quot;_blank&quot;&gt;Per saperne di più sull&#39;angolo delle funzioni sperimentali&lt;/a&gt;"  id="expFeatHelp" data-original-title="&lt;a href=&quot;https://eur-lex.europa.eu/content/help/eurlex-content/experimental-features.html&quot; target=&quot;_blank&quot;&gt;Per saperne di più sull&#39;angolo delle funzioni sperimentali&lt;/a&gt;">
+   		 					<i>
+   		 					    <svg class="ef-questionmark-icon" focusable="false" aria-hidden="false" role="img" ">
+                                    <use xlink:href="./../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/questionmark.svg#questionmark"/>
+                                </svg>
+                            </i>
+							<span class="sr-only togglable-screenReader">&lt;a href=&quot;https://eur-lex.europa.eu/content/help/eurlex-content/experimental-features.html&quot; target=&quot;_blank&quot;&gt;Per saperne di più sull&#39;angolo delle funzioni sperimentali&lt;/a&gt;</span>	</a>	</span>	
+
+				<span   title="Funzioni sperimentali" aria-label="Funzioni sperimentali" class="btn btn-sm btn-primary popper experimental-feature-btn radius5p">
+					<span class="hidden-xs">Funzioni sperimentali</span>
+					<span class="visible-xs"><i class="fa fa-flask" aria-hidden="true"></i></span>
+					<label class="experimental-feature-switch">
+                        <input type="checkbox" id="ef-checkbox" data-toggle="popover" data-placement="bottom" aria-label="Funzioni sperimentali" >
+                        <span class="slider round"></span>
+                    </label>
+				</span>
+			</div>
+		<div>
+<input type="hidden" name="_csrf" value="f5b4fb2d-373c-44d5-a9a7-3019bddc3453" />
+</div></form>
+	<form id="applyExperimentalFeatures" name="applyExperimentalFeatures" action="./../experimental-features.html?action=applyExperimentalFeatures" method="post">
+			<input type="hidden" value="statistics/legislative-acts-statistics.html" name="relativeRequestUrl" />
+			<input type="hidden" value="" name="queryString" />
+			<div class="exp-feature-float-box popover fade in">
+				<button type="button" class="close" id="experimental-feature-close" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<div>
+					<h5 class="text-center">Scegli le funzioni sperimentali da provare</h5>
+					<hr>
+					<div class="homepageMessage experimental-feature-disclaimer hidden-xs">
+						<p>Vuoi aiutarci a migliorare EUR-Lex? Questo è un elenco di funzioni sperimentali che si possono attivare. Queste funzioni sono ancora in fase di sviluppo: non sono testate completamente e potrebbero ridurre la stabilità di EUR-Lex. Vorremmo sapere cosa ne pensi.</p>
+					</div>
+					<div id="exp-feautre-js-warning-box" class="alert-danger exp-feature-alert-danger hidden" role="alert">
+						<span class="fa fa-exclamation-triangle" aria-hidden="true">&nbsp;</span>
+						Attenzione! Il sistema ha individuato un conflitto: scegliere un&#39;altra combinazione di funzioni.
+					</div>
+					<div class="experimental-feature-list">
+						<fieldset>
+							<ul class="browseTree " id="experimental-features-inner-items">
+								
+									<li>
+                                        <ul class="browseTree">
+                                            
+                                                <li>
+                                                    <label class="">
+                                                        <input id="experimentalFeatureCheckbox_EF02" name="selectedExperimentExperimentalFeaturesValues" autocomplete="off" class="exp-feature-child-checkbox" type="checkbox" value="EF02"/><input type="hidden" name="_selectedExperimentExperimentalFeaturesValues" value="on"/> Sostituzione degli identificativi CELEX con titoli brevi - funzione sperimentale. Sostituisce gli identificativi CELEX cliccabili dei trattati e della giurisprudenza con titoli brevi.
+ </label> </li> 
+                                                <li>
+                                                    <label class="">
+                                                        <input id="experimentalFeatureCheckbox_EF03" name="selectedExperimentExperimentalFeaturesValues" autocomplete="off" class="exp-feature-child-checkbox" type="checkbox" value="EF03"/><input type="hidden" name="_selectedExperimentExperimentalFeaturesValues" value="on"/> Visualizzazione delle relazioni tra documenti. Mostra un grafico dinamico con le relazioni tra l&#39;atto e i documenti correlati. Attualmente è disponibile solo per gli atti giuridici.
+ </label> </li> 
+ </ul>	</li>	
+									<li>
+                                        <ul class="browseTree">
+                                            
+                                                <li>
+                                                    <label class="">
+                                                        <input id="experimentalFeatureCheckbox_EF01" name="selectedExperimentExperimentalFeaturesValues" autocomplete="off" class="exp-feature-child-checkbox" type="checkbox" value="EF01"/><input type="hidden" name="_selectedExperimentExperimentalFeaturesValues" value="on"/> Mostra deep linking nel testo del documento (meno di 900 KB). Consente di creare link ad altri atti legali cui si fa riferimento all’interno dei documenti.
+ </label> </li> 
+ </ul>	</li>	
+							</ul>
+						</fieldset>
+					</div>
+					<div>
+						<button  id="exp-feature-btn-apply" type="submit" class="btn btn-sm btn-primary radius5p"> Applicare
+	</button>	</div>	</div>	</div>	<div>
+<input type="hidden" name="_csrf" value="f5b4fb2d-373c-44d5-a9a7-3019bddc3453" />
+</div></form>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../experimental-features.html?action=confirmFeedback"    class="eurlexModal btn btn-primary btn-sm hidden"    id="link-give-feedback"        aria-label=""></a>
+
+	</div>
+</div>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		var conflicts = {};
+		
+		initializeFloatingBox(conflicts,$(document).find('.exp-feature-child-checkbox'),"");
+
+		var expOriginalTooltip = $('#expFeatHelp').attr('aria-description');
+		expOriginalTooltip = expOriginalTooltip.replace(/(<([^>]+)>)/ig,'');
+		$('#expFeatHelp').attr('aria-description',expOriginalTooltip);
+	});
+</script>
+
+ 
+                        </div>
+                        <div id="horizontal-blue-divisor" class="row blue-divisor-padding">
+                            <div class="container-fluid lower-header-border blue-horizontal-margin"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+<div id="op-header-pdf" class="visible-print-block">
+    <div class="ecl-site-header__background">
+        <div class="ecl-site-header__header">
+            <div class="ecl-site-header__container ecl-container upper-header-border header-width-override pdf-logo-img-container">
+                <div class="ecl-site-header__top" data-ecl-site-header-top>
+                    <img class="ecl-site-footer__logo-image pdf-logo-img" src="./../images/eu-logo/logo-eu-it-01.jpg" >
+                </div>
+            </div>
+            <div class="ecl-site-header__container ecl-container header-width-override">
+                <div class="container-fluid container-width elx-container-rows-pdf">                    
+                    <div class="row elx-container-pdf">
+                        <div class="col-xs-8 ecl-container-padding-removal">
+                            <div class="ecl-site-header__site-name site-header">
+                                <div class="elx-label-pdf">
+                                    EUR-Lex
+                                </div>
+                                <div class="elx-label-text-pdf site-name-tagline">
+                                    L&#39;accesso al diritto dell&#39;Unione europea
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row blue-divisor-padding">
+                       <div class="container-fluid lower-header-border lower-header-border-pdf blue-horizontal-margin"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="op-site-subtitle-pdf">
+        <p class="subtitle-extraction-info-pdf">
+            Questo documento è un estratto del sito web EUR-Lex.
+        </p>
+        <div class="subtitle-url-info-pdf">
+        
+ 
+ 
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var home_lang = it;
+    $(document).ready(function(){
+        svg4everybody({ polyfill: true });
+        ECL.autoInit();
+    });
+
+    $(document).ready(function(){
+        $(".ecl-site-header__language-link--active").removeClass("ecl-site-header__language-link--active");
+        $(home_lang).addClass("ecl-site-header__language-link--active");
+    });
+</script>
+
+<div class="left-right-padding">
+
+	
+			<div class="row ecl-container ecl-container-padding-removal">
+				<div class="col-md-8 breadcrumbs-padding">
+					
+
+
+
+
+
+ 
+
+
+
+
+
+<div class="SiteBreadcrumb">
+	<span class="sr-only">Siete qui</span>
+	<ol class="fa-ul notBootstrapBreadcrumb hidden-xs hidden-sm">
+		<li><a target="_blank" href="https://europa.eu/european-union/index_it">EUROPA</a></li>
+		
+		
+		<li class="breadcrumbPathItemWithArrow">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../homepage.html"       title="EUR-Lex home"         aria-label=""><i class="fa-li fa fa-angle-right"></i>EUR-Lex home</a>
+</li>	
+	
+	
+	
+	
+	
+					<li class="active"><i class="fa-li fa fa-angle-right"></i>Diritto dell&#039;UE</li>	
+	
+	
+	
+	
+	
+	
+					<li class="breadcrumbPathItemWithArrow">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../collection/eu-law/legal-acts/recent.html"       title="Atti giuridici"         aria-label=""><i class="fa-li fa fa-angle-right"></i>Atti giuridici</a>
+</li>	
+	
+	
+	
+	
+	<li class="active"><i class="fa-li fa fa-angle-right"></i>Statistiche sugli atti giuridici
+	</li>
+	</ol>
+</div><!-- SiteBreadcrumb -->
+				</div>
+				<div class="col-md-4 ShareBar breadcrumbs-padding">
+					<div class="PageShare">
+						
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul>
+        <li class="hidden-xs hidden-sm">
+            
+ 
+ 
+ 
+ 
+ 
+ <a href="./../content/help.html" class="PSHelp EurlexTooltip" aria-description = "Help" data-toggle="tooltip" title="Guida" data-original-title="Help" ><svg class="ecl-icon ecl-icon--s faq-image-size" focusable="false" aria-hidden="false" role="img"><use xlink:href="./../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/faq.svg#faq" /></svg>Guida</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </li> 
+ 
+ 
+ 
+ 
+            <li class="hidden-xs hidden-sm">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../print-pdf.html?pageTitle=Statistiche+sugli+atti+giuridici&amp;currentUrl=%2Fstatistics%2Flegislative-acts-statistics.html"    class="PSPDF EurlexTooltip"   title="Esporta come PDF"    data-toggle="tooltip" aria-description="Export PDF" data-original-title="Export PDF"   aria-label="">
+                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                    Esporta come PDF
+ </a>
+
+ </li> 
+ 
+ 
+ 
+ 
+ 
+        <li class="hidden-xs hidden-sm">
+            <button data-target="./../statistics/legislative-acts-statistics.html?print=true" onclick="window.open('./../statistics/legislative-acts-statistics.html?print=true','','scrollbars=yes,menubar=no, status=no, directories=no, location=no, resizable=no, width=1024, height=600');return false;" target="_blank" class="PSPrint EurlexTooltip" data-toggle="tooltip" title="Stampare" aria-description="Stampare"  data-original-title="Print this page">
+                <i class="fa fa-print" aria-hidden="true"></i>
+                Stampare
+ </button> </li> 
+ 
+ 
+ 
+
+            <li class="shareApi">
+                <script type="application/json">{
+                    "service": "share",
+                    "counter": false,
+                    "css": {
+                        "button": "myButton"
+                    },
+                    "link": "https://eur-lex.europa.eu/statistics/legislative-acts-statistics.html"
+                }</script>
+            </li>
+        
+ </ul>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.PageShare').each(function() { 
+            const target = this;
+            let observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (!mutation.addedNodes) return
+                    for (let i = 0; i < mutation.addedNodes.length; i++) {
+                        let node = mutation.addedNodes[i]
+                        if ($(node) != undefined && $(node).is("a") && $(node).hasClass("myButton") && $(node).find("i").length === 0) {
+                            $(node).prepend("<i class='fa fa-share-alt' aria-hidden='true'></i>")
+                            observer.disconnect();
+                        }
+                    }
+                })
+            })
+            observer.observe(target, {
+                subtree: true,
+                childList: true
+            });
+        });
+    });
+</script>
+
+
+	
+	
+					</div>
+				</div>
+			</div>
+
+		<div class="NavSearch">
+			<div class="row">
+				
+				<div class="col-xs-2 dropdown EurlexNav">
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+	
+	
+	
+	
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<button type="button" class="btn btn-primary btn-block" id="EurlexNavBtn" title="Menu EUR-Lex" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Open Navigation Menu"><i class="fa fa-bars" aria-hidden="true"></i><span class="hidden-xs">Menu</span></button><div class="dropdown-menu MegaMenu" aria-labelledby="EurlexNavBtn">
+   <div class="row">
+      <div class="col-sm-6 col-md-4">
+         <nav class="MenuBlock ">
+            <p class="BlockTitle" role="heading">Diritto dell'UE</p>
+            <ul class="MenuList TreeMenu">
+               <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="treaties" title="Trattati"><i class="fa fa-angle-right" aria-hidden="true"></i>Trattati</a><ul class="collapse">
+                     <li class=""><a href="./../collection/eu-law/treaties/treaties-force.html" id="treaties-force" title="Trattati attualmente in vigore">Trattati attualmente in vigore</a></li>
+                     <li class=""><a href="./../collection/eu-law/treaties/treaties-founding.html" id="treaties-founding" title="Trattati costitutivi">Trattati costitutivi</a></li>
+                     <li class=""><a href="./../collection/eu-law/treaties/treaties-accession.html" id="treaties-accession" title="Trattati di adesione">Trattati di adesione</a></li>
+                     <li class=""><a href="./../collection/eu-law/treaties/treaties-other.html" id="treaties-other" title="Altri trattati e protocolli">Altri trattati e protocolli</a></li>
+                     <li class=""><a href="./../collection/eu-law/treaties/treaties-overview.html" id="treaties-overview" title="Cronologia">Cronologia</a></li>
+                  </ul>
+               </li>
+               <li class=""><a href="./../collection/eu-law/legal-acts/recent.html" class="no-arrow" id="recent" title="Atti giuridici">Atti giuridici</a></li>
+               <li class=""><a href="./../collection/eu-law/consleg.html" class="no-arrow" id="consolidated-texts" title="Testi consolidati">Testi consolidati</a></li>
+               <li class=""><a href="./../collection/eu-law/inter-agree.html" class="no-arrow" id="inter-agree" title="Accordi internazionali">Accordi internazionali</a></li>
+               <li class=""><a href="./../collection/eu-law/pre-acts.html" class="no-arrow" id="working-documents" title="Documenti preparatori">Documenti preparatori</a></li>
+               <li class=""><a href="./../collection/eu-law/efta.html" class="no-arrow" id="efta" title="Documenti EFTA (Associazione europea di libero scambio)">Documenti EFTA</a></li>
+               <li class=""><a href="./../collection/legislative-procedures.html" class="no-arrow" id="procedures" title="Procedure normative e EU Law Tracker">Procedure normative</a></li>
+               <li class=""><a href="./../browse/summaries.html" class="no-arrow" id="summary" title="Sintesi della legislazione dell'UE">Sintesi della legislazione dell'UE</a></li>
+               <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="institutions-intro" title="Istituzioni dell’UE"><i class="fa fa-angle-right" aria-hidden="true"></i>Istituzioni dell’UE</a><ul class="collapse">
+                     <li class=""><a href="./../browse/institutions/eu-parliament.html" id="eu-parliament" title="Parlamento europeo">Parlamento europeo</a></li>
+                     <li class=""><a href="./../browse/institutions/eu-council.html" id="European-Council" title="Consiglio europeo">Consiglio europeo</a></li>
+                     <li class=""><a href="./../browse/institutions/council.html" id="Council" title="Consiglio dell’Unione europea">Consiglio dell’Unione europea</a></li>
+                     <li class=""><a href="./../browse/institutions/eu-commission.html" id="European-Commission" title="Commissione europea">Commissione europea</a></li>
+                     <li class=""><a href="./../browse/institutions/justice.html" id="Court-of-Justice-of-the-European-Union" title="Corte di giustizia dell’Unione europea">Corte di giustizia dell’Unione europea</a></li>
+                     <li class=""><a href="./../browse/institutions/bank.html" id="European-Central-Bank" title="Banca centrale europea">Banca centrale europea<i class="fa fa-bar-chart" aria-hidden="true" style="margin-left:5px;"></i></a></li>
+                     <li class=""><a href="./../browse/institutions/auditors.html" id="Court-of-Auditors" title="Corte dei conti europea">Corte dei conti europea</a></li>
+                     <li class=""><a href="./../browse/institutions/eco-social.html" id="EESC" title="Comitato economico e sociale europeo">Comitato economico e sociale europeo</a></li>
+                     <li class=""><a href="./../browse/institutions/regions.html" id="Committee-of-Regions" title="Comitato europeo delle regioni">Comitato europeo delle regioni</a></li>
+                  </ul>
+               </li>
+               <li class=""><a href="./../browse/eurovoc.html" class="no-arrow" id="eurovoc" title="Cerca con EuroVoc (il thesaurus multilingue e multidisciplinare dell'UE)">EuroVoc</a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="col-sm-6 col-md-4">
+         <nav class="MenuBlock ">
+            <p class="BlockTitle" role="heading">Giurisprudenza dell'UE</p>
+            <ul class="MenuList">
+               <li class=""><a href="./../collection/eu-law/eu-case-law.html" class="no-arrow" id="case-law" title="Giurisprudenza">Giurisprudenza</a></li>
+               <li class=""><a href="./../collection/eu-law/eu-case-law/reports.html" class="no-arrow" id="electronic-report" title="Raccolta della giurisprudenza">Raccolta della giurisprudenza</a></li>
+               <li class=""><a href="./../browse/directories/new-case-law.html" class="no-arrow" id="directory-eu-case-law" title="Repertorio della giurisprudenza">Repertorio della giurisprudenza</a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="col-sm-6 col-md-4">
+         <nav class="MenuBlock ">
+            <p class="BlockTitle" role="heading">Gazzetta ufficiale</p>
+            <ul class="MenuList">
+               <li class=""><a href="./../oj/direct-access.html" class="no-arrow" id="direct-access" title="Accesso alla Gazzetta ufficiale">Accesso alla Gazzetta ufficiale</a></li>
+               <li class=""><a href="./../oj/daily-view/L-series/default.html" class="no-arrow" id="L-series" title="Serie L della Gazzetta ufficiale, visualizzazione per giorno">Serie L della Gazzetta ufficiale, visualizzazione per giorno</a></li>
+               <li class=""><a href="./../oj/daily-view/C-series/default.html" class="no-arrow" id="C-series" title="Serie C della Gazzetta ufficiale, visualizzazione per giorno">Serie C della Gazzetta ufficiale, visualizzazione per giorno</a></li>
+               <li class=""><a href="./../oj/browse-oj.html" class="no-arrow" id="boj" title="Consulta la Gazzetta ufficiale">Consulta la Gazzetta ufficiale</a></li>
+               <li class=""><a href="./../oj/all/auth-direct-access.html" class="no-arrow" id="auth-direct-access" title="Edizioni su carta giuridicamente vincolanti">Edizioni su carta giuridicamente vincolanti</a></li>
+               <li class=""><a href="./../eu-enlargement/special.html" class="no-arrow" id="se" title="Edizione speciale">Edizione speciale</a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="col-sm-6 col-md-4 col-break-sm">
+         <nav class="MenuBlock ">
+            <p class="BlockTitle" role="heading">Legislazione nazionale e giurisprudenza</p>
+            <ul class="MenuList">
+               <li class=""><a href="./../collection/n-law/mne.html" class="no-arrow" id="mne" title="Recepimento nazionale">Recepimento nazionale</a></li>
+               <li class=""><a href="./../collection/n-law/n-case-law.html" class="no-arrow" id="n-case-law" title="Giurisprudenza nazionale">Giurisprudenza nazionale</a></li>
+               <li class=""><a href="./../collection/n-law/jure.html" class="no-arrow" id="JURE" title="JURE (Competenza, riconoscimento ed esecuzione delle decisioni in materia civile e commerciale) ">Giurisprudenza JURE</a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="col-sm-6 col-md-4">
+         <nav class="MenuBlock ">
+            <p class="BlockTitle" role="heading">Informazioni</p>
+            <ul class="MenuList TreeMenu">
+               <li class=""><a href="./../content/news/index.html" class="no-arrow" id="Themes_in_focus" title="Temi di attualità">Temi di attualità</a></li>
+               <li class=""><a href="./../content/development/index.html" class="no-arrow" id="developmentsEUR-Lex" title="Ultime novità su EUR-Lex">Ultime novità su EUR-Lex</a></li>
+               <li class=""><a href="./../statistics/statistics.html" class="no-arrow" id="statistic" title="Statistiche">Statistiche</a></li>
+               <li><a href="#" class="has-arrow" aria-expanded="false" role="button" id="eli-register-nav" title="Registro dell'ELI (identificatore della legislazione europea)"><i class="fa fa-angle-right" aria-hidden="true"></i>Registro ELI</a><ul class="collapse">
+                     <li class=""><a href="./../eli-register/what_is_eli.html" id="what_is_eli" title="Cos'è l'ELI?">Cos'è l'ELI?</a></li>
+                     <li class=""><a href="./../eli-register/background.html" id="eli_background" title="L'ELI - informazioni generali">L'ELI - informazioni generali</a></li>
+                     <li class=""><a href="./../eli-register/benefits.html" id="advantages" title="Perché attuare l'ELI">Perché attuare l'ELI</a></li>
+                     <li class=""><a href="./../eli-register/implementing_countries.html" id="implementing_countries" title="I paesi che attuano l'ELI">I paesi che attuano l'ELI</a></li>
+                     <li class=""><a href="./../eli-register/testimonials.html" id="testimonials" title="Testimonianze">Testimonianze</a></li>
+                     <li class=""><a href="./../eli-register/implementing_eli.html" id="implementing_eli" title="Attuazione dell'ELI">Attuazione dell'ELI</a></li>
+                     <li class=""><a href="./../eli-register/glossary.html" id="eli_glossary" title="Glossario">Glossario</a></li>
+                  </ul>
+               </li>
+               <li class=""><a href="./../budget/www/index-en.htm" class="no-arrow" id="EU_budget" title="Bilancio on line">Bilancio on line</a></li>
+            </ul>
+         </nav>
+      </div>
+   </div>
+</div>
+	
+
+	</div>	
+	
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	<div class="col-xs-10">
+		<div class="EurlexSearch">
+			
+	<form id="quick-search" name="quick-search" class="DistinctiveForm QSF" action="./../quick-search-form.html" method="post" onsubmit="showHourglass();" autocomplete="off">
+				<input id="editscope" type="hidden" name="scope" value="EURLEX"/>
+				<div class="QuickSearch">
+					
+	
+	
+	
+	
+	
+	
+
+					<label for="QuickSearchField"><i class="fa fa-search hidden-xs" aria-hidden="true"></i><span class="sr-only">Ricerca rapida</span></label>	
+	
+	
+	
+	
+					
+					<textarea id="QuickSearchField" name="text" class="form-control NoBorders AutoGrow typeahead autocompleteField" data-provide="typeahead" placeholder="RICERCA RAPIDA" aria-describedby="QuickSearchHelp" rows="1" autocomplete="off"></textarea>	
+					<button class="btn btn-primary QuickSearchBtn" type="submit" title="Cercare" aria-label="Cercare">
+						
+	
+	
+							<i class="fa fa-search" aria-hidden="true"></i>
+						
+	
+	</button>	</div>
+	
+				<div class="DistinctiveFormMessage EurlexTooltip" tabindex="0" data-toggle="tooltip" title="Rimuovere le altre opzioni di ricerca rapida prima di usare questa opzione"></div>	
+			<div>
+<input type="hidden" name="_csrf" value="f5b4fb2d-373c-44d5-a9a7-3019bddc3453" />
+</div></form>
+	
+			<div class="QuickSearchOptions fade sr-only">
+				<div id="QuickSearchHelp">
+				    <i class="fa fa-info" aria-hidden="true"></i>
+					
+	
+	
+	
+	
+	
+	
+			
+	
+	
+	
+	
+	
+	
+	Utilizzare le virgolette per cercare una &quot;frase esatta&quot;. Aggiungere un asterisco (<abbr title='Asterisco'>*</abbr>) a un termine di ricerca per trovarne le varianti (recep<abbr title='Asterisco'>*</abbr>, 32019R<abbr title='Asterisco'>*</abbr>). Utilizzare un punto interrogativo (<abbr title='Punto interrogativo'>?</abbr>) al posto di un determinato carattere nella ricerca per trovare le possibili varianti (cercando &quot;ca<abbr title='Punto interrogativo'>?</abbr>o&quot; si trovano i seguenti risultati: caso, capo, calo).		</div>
+				<button id="QuickSearchClose" type="button" class="close" aria-label="Close" onclick="closeQSHelp()">
+					<i class="fa fa-times" aria-hidden="true">&nbsp;</i>
+				</button>
+			</div>
+	
+			<div class="QSMore">
+				<div class="col-xs-4 text-left">
+					
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"      onclick="showQSHelpAlt()" title="Consigli per la ricerca"         aria-label="">
+						<i class="fa fa-info-circle" aria-hidden="true">&nbsp;</i>
+						Consigli per la ricerca
+	</a>
+
+				</div>
+				<div class="col-xs-8 text-right">
+					<span class=" ">Servono più opzioni di ricerca? Utilizzare la</span>	
+	
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../advanced-search-form.html"       title="Ricerca avanzata"         aria-label="">Ricerca avanzata</a>
+ 	
+	
+	</div>	</div>
+	</div>	</div>	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var quickSearchFld = $('#QuickSearchField.autocompleteField');
+			typeaheadFld(quickSearchFld, "./../autocomplete.html", true, 'QuickSearch');
+		});
+		var quickSearchHelpAlt="Utilizzare le virgolette per cercare una &quot;frase esatta&quot;. Aggiungere un asterisco (<abbr title='Asterisco'>*</abbr>) a un termine di ricerca per trovarne le varianti (recep<abbr title='Asterisco'>*</abbr>, 32019R<abbr title='Asterisco'>*</abbr>). Utilizzare un punto interrogativo (<abbr title='Punto interrogativo'>?</abbr>) al posto di un determinato carattere nella ricerca per trovare le possibili varianti (cercando &quot;ca<abbr title='Punto interrogativo'>?</abbr>o&quot; si trovano i seguenti risultati: caso, capo, calo).";
+		var quickSearchHelp="Utilizzare le virgolette per cercare una &quot;frase esatta&quot;. Aggiungere un asterisco (<abbr title='Asterisco'>*</abbr>) a un termine di ricerca per trovarne le varianti (recep<abbr title='Asterisco'>*</abbr>, 32019R<abbr title='Asterisco'>*</abbr>). Utilizzare un punto interrogativo (<abbr title='Punto interrogativo'>?</abbr>) al posto di un determinato carattere nella ricerca per trovare le possibili varianti (cercando &quot;ca<abbr title='Punto interrogativo'>?</abbr>o&quot; si trovano i seguenti risultati: caso, capo, calo).";
+	</script>
+
+	</div>	</div>	
+ 
+
+</div>
+
+        <div class="left-right-padding">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		<div id="MainContent">
+			
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="PageTitle">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			<div class="row">
+					
+				<div class="col-xs-2 col-sm-1 visible-xs-block visible-sm-block">
+					<button type="button" class="btn btn-default btn-sm btn-block visible-xs-inline visible-sm-inline"
+							data-toggle="offcanvas">
+						<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+					</button>
+				</div><!-- col -->
+					
+				<div class="col-xs-8 col-sm-10 visible-xs-block visible-sm-block"></div><!-- col -->
+					
+					<div class="col-xs-2 col-sm-1 col-md-12">
+						<div class="PageShare pageShareMobile">
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <ul>
+        <li class="hidden-xs hidden-sm">
+            
+ 
+ 
+ 
+ 
+ 
+ <a href="./../content/help.html" class="PSHelp EurlexTooltip" aria-description = "Help" data-toggle="tooltip" title="Guida" data-original-title="Help" ><svg class="ecl-icon ecl-icon--s faq-image-size" focusable="false" aria-hidden="false" role="img"><use xlink:href="./../revamp/components/vendor/ec/eu-preset-v4.1.1/images/icons/svg/all/faq.svg#faq" /></svg>Guida</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </li> 
+ 
+ 
+ 
+ 
+            <li class="hidden-xs hidden-sm">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../print-pdf.html?pageTitle=Statistiche+sugli+atti+giuridici&amp;currentUrl=%2Fstatistics%2Flegislative-acts-statistics.html"    class="PSPDF EurlexTooltip"   title="Esporta come PDF"    data-toggle="tooltip" aria-description="Export PDF" data-original-title="Export PDF"   aria-label="">
+                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                    Esporta come PDF
+ </a>
+
+ </li> 
+ 
+ 
+ 
+ 
+ 
+        <li class="hidden-xs hidden-sm">
+            <button data-target="./../statistics/legislative-acts-statistics.html?print=true" onclick="window.open('./../statistics/legislative-acts-statistics.html?print=true','','scrollbars=yes,menubar=no, status=no, directories=no, location=no, resizable=no, width=1024, height=600');return false;" target="_blank" class="PSPrint EurlexTooltip" data-toggle="tooltip" title="Stampare" aria-description="Stampare"  data-original-title="Print this page">
+                <i class="fa fa-print" aria-hidden="true"></i>
+                Stampare
+ </button> </li> 
+ 
+ 
+ 
+
+            <li class="shareApi">
+                <script type="application/json">{
+                    "service": "share",
+                    "counter": false,
+                    "css": {
+                        "button": "myButton"
+                    },
+                    "link": "https://eur-lex.europa.eu/statistics/legislative-acts-statistics.html"
+                }</script>
+            </li>
+        
+ </ul>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.PageShare').each(function() { 
+            const target = this;
+            let observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (!mutation.addedNodes) return
+                    for (let i = 0; i < mutation.addedNodes.length; i++) {
+                        let node = mutation.addedNodes[i]
+                        if ($(node) != undefined && $(node).is("a") && $(node).hasClass("myButton") && $(node).find("i").length === 0) {
+                            $(node).prepend("<i class='fa fa-share-alt' aria-hidden='true'></i>")
+                            observer.disconnect();
+                        }
+                    }
+                })
+            })
+            observer.observe(target, {
+                subtree: true,
+                childList: true
+            });
+        });
+    });
+</script>
+
+
+	</div>	</div><!-- col -->	</div>	<!-- row -->	
+	
+</div>
+
+
+	<div class="row row-offcanvas">
+
+        
+
+
+
+
+
+
+<div class="col-md-3 sidebar-offcanvas">
+    
+ 
+ 
+ 
+ 
+ 
+            <nav class="Sidebar">
+                
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+	
+ 
+
+
+<ul class="MenuList TreeMenu">
+    
+ 
+    <li class="Selected Expanded">
+        <a href="./../statistics/legislative-acts-statistics.html" class="has-arrow" aria-expanded="true">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <span class="linkText">Atti adottati - Sintesi</span>
+        </a>     
+        <ul aria-expanded="true" class="collapse in">
+        	
+		    <li class="">
+				<a href="./../statistics/legal-acts/legislative-acts-statistics-by-author.html">
+		            Atti adottati - Per autore
+ </a> </li> 
+		    <li class="">
+				<a href="./../statistics/legal-acts/legislative-acts-statistics-by-type-of-act.html">
+		            Atti adottati - Per tipo di atto
+ </a> </li> </ul> </li> 
+    <li class="">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/legal-acts/legislative-acts-statistics-repealed-and-expired-acts.html"                aria-label="">
+ Atti abrogati e scaduti
+ </a>
+
+ </li> 
+ 
+    <li class=" ">
+        <a href="./../statistics/commission-proposals-statistics.html" class="has-arrow" aria-expanded="false">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <span class="linkText">Proposte della Commissione - Sintesi</span>
+        </a>     
+        <ul aria-expanded="false" class="collapse ">
+		    
+		    <li class="">
+				<a href="./../statistics/legal-acts/commission-proposals-statistics-by-type-of-act.html">
+		            Proposte della Commissione - Per tipo di atto
+		        </a> 
+		    </li>
+        </ul>
+    </li>
+
+    <li class="">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/legal-acts/commission-proposals-statistics-withdrawn-and-rejected.html"                aria-label="">
+ Proposte della Commissione ritirate e respinte
+ </a>
+
+    </li>
+</ul>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+			$(".linkText").click(function (e) {
+			e.stopPropagation();
+			window.location.replace($(this).parent().attr("href"));
+		});
+	});
+</script>
+ 
+ </nav> 
+ 
+</div>
+
+
+		<div id="middleColumn" class="col-md-9" role="main">
+			<div class="EurlexContent">
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+            <h1 class="SectionTitle">
+                
+ 
+ Statistiche sugli atti giuridici
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ </h1> 
+ 
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+
+
+	
+		<!-- Editorial content start -->
+		<div class="EurlexEditorial">
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+<p>Consulta per anno e per mese il numero di <a class="underlineLink" href="./../collection/eu-law/legal-acts/recent.html?locale=it" target="_blank">atti giuridici</a> adottati, abrogati o scaduti in un determinato mese. 
+</p>
+
+
+<p>Per gli atti adottati, sono consultabili sia quelli in vigore che quelli che non lo
+   sono più. Sono fornite cifre distinte per gli atti di base e quelli modificativi (gli
+   atti che modificano atti adottati precedentemente*). Le cifre si basano sulla data
+   di adozione dell'atto. Le rettifiche sono escluse. Le cifre relative agli atti abrogati
+   e a quelli scaduti sono basate sulla data di fine periodo di validità. Gli atti non
+   legislativi figurano in corsivo.
+</p>
+
+	
+	<!-- Editorial content end -->	</div>	
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="statisticsExport" class="btn-group onlyJs" role="group">
+	<button class="btn btn-link btn-sm dropdown-toggle" type="button" id="statisticsExportFormats" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<i class="fa fa-download" aria-hidden="true"></i>Esportare<i class="fa fa-angle-down" aria-hidden="true"></i>
+	</button>
+	
+	<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="statisticsExportFormats">
+		<li>
+			
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../export-statistics.html?callingUrl=%2Fstatistics%2Flegislative-acts-statistics.html&amp;statisticsType=LEGISLATIVE_ACTS&amp;year=2026&amp;month=all"    class="eurlexModal onlyJsInline"   title="Esporta pagina corrente" id="link-export-statistics"        aria-label="">Esporta pagina corrente</a>
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../export-statistics-all.html?callingUrl=%2Fstatistics%2Flegislative-acts-statistics.html&amp;statisticsType=LEGISLATIVE_ACTS"       title="Esporta tutto (CSV)" id="link-export-statisticsAll"        aria-label="">Esporta tutto (CSV)</a>
+
+	</li>	</ul>
+</div>
+
+<div id="statisticsExportNoJs" class="btn-group hideInJsInline" role="group">
+	<div class="btn btn-link btn-sm hideInJsInline">
+		<i class="fa fa-download" aria-hidden="true"></i>
+		
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../export-statistics.html?callingUrl=%2Fstatistics%2Flegislative-acts-statistics.html&amp;statisticsType=LEGISLATIVE_ACTS&amp;year=2026&amp;month=all"    class="eurlexModal"   title="Esporta pagina corrente" id="link-export-statisticsNoJs"        aria-label="">Esporta pagina corrente</a>
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../export-statistics-all.html?callingUrl=%2Fstatistics%2Flegislative-acts-statistics.html&amp;statisticsType=LEGISLATIVE_ACTS"       title="Esporta tutto (CSV)" id="link-export-statisticsAllNoJs"        aria-label="">Esporta tutto (CSV)</a>
+
+	</div>
+</div>
+
+	<br/>	
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+<form id="form" name="form" class="EurlexForm" action="./../statistics/2026/legislative-acts-statistics.html" method="post">
+    <div class="row">
+        <div class="col-xs-4 col-sm-2">
+            <div class="form-group">
+                <fieldset>
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+
+
+
+
+
+<select id="year" name="year" class="input-sm form-control NoBorders " onchange="$(&#39;#form&#39;).submit();showHourglass();">
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2026" value="2026" selected="selected">2026</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2025" value="2025">2025</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2024" value="2024">2024</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2023" value="2023">2023</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2022" value="2022">2022</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2021" value="2021">2021</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2020" value="2020">2020</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2019" value="2019">2019</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2018" value="2018">2018</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2017" value="2017">2017</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2016" value="2016">2016</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2015" value="2015">2015</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2014" value="2014">2014</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2013" value="2013">2013</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2012" value="2012">2012</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2011" value="2011">2011</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2010" value="2010">2010</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2009" value="2009">2009</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2008" value="2008">2008</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2007" value="2007">2007</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2006" value="2006">2006</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2005" value="2005">2005</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2004" value="2004">2004</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2003" value="2003">2003</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2002" value="2002">2002</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2001" value="2001">2001</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="2000" value="2000">2000</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="1999" value="1999">1999</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="1998" value="1998">1998</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="1997" value="1997">1997</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="1996" value="1996">1996</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="1995" value="1995">1995</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="1994" value="1994">1994</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="1993" value="1993">1993</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="1992" value="1992">1992</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="1991" value="1991">1991</option>
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<option title="1990" value="1990">1990</option>
+	
+	
+</select>
+
+
+ <input style="" id="button.ok" name="button.ok" type="submit" class="btn btn-primary btn-sm hideInJs facetsNoJS" value="Ok" title="" aria-label="Ok"   />
+
+                </fieldset>
+            </div><!-- form-group -->
+        </div><!-- col -->
+        <div class="col-xs-8 col-sm-10">
+            <div class="dropdown MonthSelection">
+                <button class="btn btn-sm btn-default" id="OJMonth" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    
+ 
+ 
+ Tutto
+ 
+ 
+                    <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                <ul class="dropdown-menu" aria-labelledby="OJMonth">
+                    
+ 
+ 
+                            <li class="active">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/2026/legislative-acts-statistics.html"      onclick="showHourglass();"  id="month.all"        aria-label="">Tutto</a>
+</li> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/2026/01/legislative-acts-statistics.html"      onclick="showHourglass();"  id="month.01"        aria-label="">Gen</a>
+</li> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/2026/02/legislative-acts-statistics.html"      onclick="showHourglass();"  id="month.02"        aria-label="">Feb</a>
+</li> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/2026/03/legislative-acts-statistics.html"      onclick="showHourglass();"  id="month.03"        aria-label="">Mar</a>
+</li> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/2026/04/legislative-acts-statistics.html"      onclick="showHourglass();"  id="month.04"        aria-label="">Apr</a>
+</li> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/2026/05/legislative-acts-statistics.html"      onclick="showHourglass();"  id="month.05"        aria-label="">Mag</a>
+</li> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/2026/06/legislative-acts-statistics.html"      onclick="showHourglass();"  id="month.06"        aria-label="">Giu</a>
+</li> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/2026/07/legislative-acts-statistics.html"      onclick="showHourglass();"  id="month.07"        aria-label="">Lug</a>
+</li> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/2026/08/legislative-acts-statistics.html"      onclick="showHourglass();"  id="month.08"        aria-label="">Ago</a>
+</li> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/2026/09/legislative-acts-statistics.html"      onclick="showHourglass();"  id="month.09"        aria-label="">Set</a>
+</li> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/2026/10/legislative-acts-statistics.html"      onclick="showHourglass();"  id="month.10"        aria-label="">Ott</a>
+</li> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/2026/11/legislative-acts-statistics.html"      onclick="showHourglass();"  id="month.11"        aria-label="">Nov</a>
+</li> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../statistics/2026/12/legislative-acts-statistics.html"      onclick="showHourglass();"  id="month.12"        aria-label="">Dic</a>
+</li> 
+ 
+ 
+ </ul> </div><!-- dropdown --> </div><!-- col --> </div><!-- row -->
+<div>
+<input type="hidden" name="_csrf" value="f5b4fb2d-373c-44d5-a9a7-3019bddc3453" />
+</div></form>
+
+				<div class="table-responsive">
+					<table id="legalActsStatisticsTable" class="table table-hover table-condensed" cellspacing="0">
+						<thead>
+						<tr>
+							<th rowspan="2"></th>
+							<td id="adoptedActs" colspan="2">Atti adottati</td>
+						</tr>
+						<tr>
+							<td id="adActsBasic">Di base</td>
+							<td id="adActsAmending">Modificativi</td>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th id="labelText_ord" colspan="3" aria-hidden="true">Atti legislativi - Procedura legislativa ordinaria</th>
+						</tr>
+						<tr>
+						<th id="legislativeActsOrdReg" aria-hidden="true">Regolamenti del Parlamento europeo e del Consiglio</th>	
+	
+						<td><a id="legActsOrdRegAdActsBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=REGULATIONS_EP_AND_COUNCIL_BASIC" aria-labelledby="labelText_ord legislativeActsOrdReg adoptedActs adActsBasic legActsOrdRegAdActsBasic">6</a></td>
+						<td><a id="legActsOrdRegAdActsAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=REGULATIONS_EP_AND_COUNCIL_AMENDING" aria-labelledby="labelText_ord legislativeActsOrdReg adoptedActs adActsAmending legActsOrdRegAdActsAmending">7</a></td>
+					</tr>
+					<tr>
+						<th id="legislativeActsOrdDir" aria-hidden="true">Direttive del Parlamento europeo e del Consiglio</th>	
+	
+						<td><a id="legActsOrdDirAdActsBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DIRECTIVES_EP_AND_COUNCIL_BASIC" aria-labelledby="labelText_ord legislativeActsOrdDir adoptedActs adActsBasic legActsOrdDirAdActsBasic">1</a></td>
+						<td><a id="legActsOrdDirAdActsAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DIRECTIVES_EP_AND_COUNCIL_AMENDING" aria-labelledby="labelText_ord legislativeActsOrdDir adoptedActs adActsAmending legActsOrdDirAdActsAmending">5</a></td>
+					</tr>
+					<tr>
+						<th id="legislativeActsOrdDec" aria-hidden="true">Decisioni del Parlamento europeo e del Consiglio**</th>	
+	
+						<td><a id="legActsOrdDecAdActsBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DECISIONS_EP_AND_COUNCIL_BASIC" aria-labelledby="labelText_ord legislativeActsOrdDec adoptedActs adActsBasic legActsOrdDecAdActsBasic">1</a></td>
+						<td><a id="legActsOrdDecAdActsAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DECISIONS_EP_AND_COUNCIL_AMENDING" aria-labelledby="labelText_ord legislativeActsOrdDec adoptedActs adActsAmending legActsOrdDecAdActsAmending">0</a></td>
+					</tr>
+					<tr class="totalRow">
+						<th id="legislativeActsOrdTotal" class="totalRow" aria-hidden="true">Totale</th>
+						<td><a id="legActsOrdTotalBasic" href="./../search.html?type=statistics&amp;statIsTotal=true&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=REGULATIONS_EP_AND_COUNCIL_BASIC,DIRECTIVES_EP_AND_COUNCIL_BASIC,DECISIONS_EP_AND_COUNCIL_BASIC" aria-labelledby="labelText_ord legislativeActsOrdTotal adoptedActs adActsBasic legActsOrdTotalBasic">8</a></td>
+						<td><a id="legActsOrdTotalAmending" href="./../search.html?type=statistics&amp;statIsTotal=true&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=REGULATIONS_EP_AND_COUNCIL_AMENDING,DIRECTIVES_EP_AND_COUNCIL_AMENDING,DECISIONS_EP_AND_COUNCIL_AMENDING" aria-labelledby="labelText_ord legislativeActsOrdTotal adoptedActs adActsAmending legActsOrdTotalAmending">12</a></td>
+					</tr>
+					<tr>
+						<th colspan="3" id="labelText_others" aria-hidden="true">Altri atti legislativi</th>
+						</tr>
+						<tr>
+						<th id="otherLegislativeActsCouncilReg" aria-hidden="true">Regolamenti del Consiglio</th>	
+	
+						<td><a id="otherLegActsCouncilRegBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=REGULATIONS_COUNCIL_BASIC" aria-labelledby="labelText_others otherLegislativeActsCouncilReg adoptedActs adActsBasic otherLegActsCouncilRegBasic">5</a></td>
+						<td><a id="otherLegActsCouncilRegAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=REGULATIONS_COUNCIL_AMENDING" aria-labelledby="labelText_others otherLegislativeActsCouncilReg adoptedActs adActsAmending otherLegActsCouncilRegAmending">8</a></td>
+					</tr>
+					<tr>
+						<th id="otherLegislativeActsCouncilDir" aria-hidden="true">Direttive del Consiglio</th>	
+	
+						<td><a id="otherLegActsCouncilDirBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DIRECTIVES_COUNCIL_BASIC" aria-labelledby="labelText_others otherLegislativeActsCouncilDir adoptedActs adActsBasic otherLegActsCouncilDirBasic">0</a></td>
+						<td><a id="otherLegActsCouncilDirAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DIRECTIVES_COUNCIL_AMENDING" aria-labelledby="labelText_others otherLegislativeActsCouncilDir adoptedActs adActsAmending otherLegActsCouncilDirAmending">0</a></td>
+					</tr>
+					<tr>
+						<th id="otherLegislativeActsCouncilDec" aria-hidden="true">Decisioni del Consiglio</th>	
+	
+						<td><a id="otherLegActsCouncilDecBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DECISIONS_COUNCIL_BASIC" aria-labelledby="labelText_others otherLegislativeActsCouncilDec adoptedActs adActsBasic otherLegActsCouncilDecBasic">66</a></td>
+						<td><a id="otherLegActsCouncilDecAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DECISIONS_COUNCIL_AMENDING" aria-labelledby="labelText_others otherLegislativeActsCouncilDec adoptedActs adActsAmending otherLegActsCouncilDecAmending">32</a></td>
+					</tr>
+					<tr class="totalRow">
+						<th id="otherLegislativeActsTotal" class="totalRow" aria-hidden="true">Totale</th>
+							<td><a id="otherLegActsTotalBasic" href="./../search.html?type=statistics&amp;statIsTotal=true&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=REGULATIONS_COUNCIL_BASIC,DIRECTIVES_COUNCIL_BASIC,DECISIONS_COUNCIL_BASIC" aria-labelledby="labelText_others otherLegislativeActsTotal adoptedActs adActsBasic otherLegActsTotalBasic">71</a></td>
+							<td><a id="otherLegActsTotalAmending" href="./../search.html?type=statistics&amp;statIsTotal=true&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=REGULATIONS_COUNCIL_AMENDING,DIRECTIVES_COUNCIL_AMENDING,DECISIONS_COUNCIL_AMENDING" aria-labelledby="labelText_others otherLegislativeActsTotal adoptedActs adActsAmending otherLegActsTotalAmending">40</a></td>
+						</tr>
+						<tr>
+							<th colspan="3" id="labelText_non" aria-hidden="true">Atti non legislativi</th>
+						</tr>
+						<tr>
+							<th colspan="3" id="labelTextNotBold_del" aria-hidden="true">Atti delegati</th>
+						</tr>
+						<tr>
+						<th id="italicText_comDelReg" aria-hidden="true">Regolamenti delegati della Commissione</th>	
+	
+						<td><a id="italComDelRegBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DELEGATED_REGULATIONS_COMMISSION_BASIC" aria-labelledby="labelText_non labelTextNotBold_del italicText_comDelReg adoptedActs adActsBasic italComDelRegBasic">10</a></td>
+						<td><a id="italComDelRegAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DELEGATED_REGULATIONS_COMMISSION_AMENDING" aria-labelledby="labelText_non labelTextNotBold_del italicText_comDelReg adoptedActs adActsAmending italComDelRegAmending">12</a></td>
+					</tr>
+					<tr>
+						<th id="italicText_comDelDir" aria-hidden="true">Direttive delegate della Commissione</th>	
+	
+						<td><a id="italComDelDirBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DELEGATED_DIRECTIVES_COMMISSION_BASIC" aria-labelledby="labelText_non labelTextNotBold_del italicText_comDelDir adoptedActs adActsBasic italComDelDirBasic">0</a></td>
+						<td><a id="italComDelDirAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DELEGATED_DIRECTIVES_COMMISSION_AMENDING" aria-labelledby="labelText_non labelTextNotBold_del italicText_comDelDir adoptedActs adActsAmending italComDelDirAmending">1</a></td>
+					</tr>
+					<tr>
+						<th id="italicText_comDelDec" aria-hidden="true">Decisioni delegate della Commissione</th>	
+	
+						<td><a id="italComDelDecBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DELEGATED_DECISIONS_COMMISSION_BASIC" aria-labelledby="labelText_non labelTextNotBold_del italicText_comDelDec adoptedActs adActsBasic italComDelDecBasic">0</a></td>
+						<td><a id="italComDelDecAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DELEGATED_DECISIONS_COMMISSION_AMENDING" aria-labelledby="labelText_non labelTextNotBold_del italicText_comDelDec adoptedActs adActsAmending italComDelDecAmending">0</a></td>
+					</tr>
+					<tr class="totalRow">
+						<th id="delegatedActsTotal" class="totalRow" aria-hidden="true">Totale</th>
+							<td><a id="delActsTotalBasic" href="./../search.html?type=statistics&amp;statIsTotal=true&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DELEGATED_REGULATIONS_COMMISSION_BASIC,DELEGATED_DIRECTIVES_COMMISSION_BASIC,DELEGATED_DECISIONS_COMMISSION_BASIC" aria-labelledby="labelText_non labelTextNotBold_del delegatedActsTotal adoptedActs adActsBasic delActsTotalBasic">10</a></td>
+							<td><a id="delActsTotalAmending" href="./../search.html?type=statistics&amp;statIsTotal=true&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DELEGATED_REGULATIONS_COMMISSION_AMENDING,DELEGATED_DIRECTIVES_COMMISSION_AMENDING,DELEGATED_DECISIONS_COMMISSION_AMENDING" aria-labelledby="labelText_non labelTextNotBold_del delegatedActsTotal adoptedActs adActsAmending delActsTotalAmending">13</a></td>
+						</tr>
+						<tr>
+							<th colspan="3" id="labelTextNotBold_impl" aria-hidden="true">Atti di esecuzione</th>
+						</tr>
+						<tr>
+						<th id="italicText_counImplReg" aria-hidden="true">Regolamenti di esecuzione del Consiglio</th>	
+	
+						<td><a id="italCounImplRegBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=IMPLEMENTING_REGULATIONS_COUNCIL_BASIC" aria-labelledby="labelText_non labelTextNotBold_impl italicText_counImplReg adoptedActs adActsBasic italCounImplRegBasic">1</a></td>
+						<td><a id="italCounImplRegAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=IMPLEMENTING_REGULATIONS_COUNCIL_AMENDING" aria-labelledby="labelText_non labelTextNotBold_impl italicText_counImplReg adoptedActs adActsAmending italCounImplRegAmending">23</a></td>
+					</tr>
+					<tr>
+						<th id="italicText_counImplDec" aria-hidden="true">Decisioni di esecuzione del Consiglio</th>	
+	
+						<td><a id="italCounImplDecBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=IMPLEMENTING_DECISIONS_COUNCIL_BASIC" aria-labelledby="labelText_non labelTextNotBold_impl italicText_counImplDec adoptedActs adActsBasic italCounImplDecBasic">22</a></td>
+						<td><a id="italCounImplDecAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=IMPLEMENTING_DECISIONS_COUNCIL_AMENDING" aria-labelledby="labelText_non labelTextNotBold_impl italicText_counImplDec adoptedActs adActsAmending italCounImplDecAmending">6</a></td>
+					</tr>
+					<tr>
+						<th id="italicText_comImplReg" aria-hidden="true">Regolamenti di esecuzione della Commissione***</th>	
+	
+						<td><a id="italComImplRegBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=IMPLEMENTING_REGULATIONS_COMMISSION_BASIC" aria-labelledby="labelText_non labelTextNotBold_impl italicText_comImplReg adoptedActs adActsBasic italComImplRegBasic">139</a></td>
+						<td><a id="italComImplRegAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=IMPLEMENTING_REGULATIONS_COMMISSION_AMENDING" aria-labelledby="labelText_non labelTextNotBold_impl italicText_comImplReg adoptedActs adActsAmending italComImplRegAmending">95</a></td>
+					</tr>
+					<tr>
+						<th id="italicText_comImplDir" aria-hidden="true">Direttive di esecuzione della Commissione</th>	
+	
+						<td><a id="italComImplDirBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=IMPLEMENTING_DIRECTIVES_COMMISSION_BASIC" aria-labelledby="labelText_non labelTextNotBold_impl italicText_comImplDir adoptedActs adActsBasic italComImplDirBasic">0</a></td>
+						<td><a id="italComImplDirAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=IMPLEMENTING_DIRECTIVES_COMMISSION_AMENDING" aria-labelledby="labelText_non labelTextNotBold_impl italicText_comImplDir adoptedActs adActsAmending italComImplDirAmending">0</a></td>
+					</tr>
+					<tr>
+						<th id="italicText_comImplDec" aria-hidden="true">Decisioni di esecuzione della Commissione</th>	
+	
+						<td><a id="italComImplDecBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=IMPLEMENTING_DECISIONS_COMMISSION_BASIC" aria-labelledby="labelText_non labelTextNotBold_impl italicText_comImplDec adoptedActs adActsBasic italComImplDecBasic">57</a></td>
+						<td><a id="italComImplDecAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=IMPLEMENTING_DECISIONS_COMMISSION_AMENDING" aria-labelledby="labelText_non labelTextNotBold_impl italicText_comImplDec adoptedActs adActsAmending italComImplDecAmending">57</a></td>
+					</tr>
+					<tr class="totalRow">
+						<th id="labelTextNotBold_implTotal" class="totalRow" aria-hidden="true">Totale</th>
+							<td><a id="lblTxtNBldImplTotalBasic" href="./../search.html?type=statistics&amp;statIsTotal=true&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=IMPLEMENTING_REGULATIONS_COUNCIL_BASIC,IMPLEMENTING_DECISIONS_COUNCIL_BASIC,IMPLEMENTING_REGULATIONS_COMMISSION_BASIC,IMPLEMENTING_DIRECTIVES_COMMISSION_BASIC,IMPLEMENTING_DECISIONS_COMMISSION_BASIC" aria-labelledby="labelText_non labelTextNotBold_impl labelTextNotBold_implTotal adoptedActs adActsBasic lblTxtNBldImplTotalBasic">219</a></td>
+							<td><a id="lblTxtNBldImplTotalAmending" href="./../search.html?type=statistics&amp;statIsTotal=true&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=IMPLEMENTING_REGULATIONS_COUNCIL_AMENDING,IMPLEMENTING_DECISIONS_COUNCIL_AMENDING,IMPLEMENTING_REGULATIONS_COMMISSION_AMENDING,IMPLEMENTING_DIRECTIVES_COMMISSION_AMENDING,IMPLEMENTING_DECISIONS_COMMISSION_AMENDING" aria-labelledby="labelText_non labelTextNotBold_impl labelTextNotBold_implTotal adoptedActs adActsAmending lblTxtNBldImplTotalAmending">181</a></td>
+						</tr>
+						<tr>
+							<th colspan="3" id="labelTextNotBold_others" aria-hidden="true">Other acts [it]</th>
+						</tr>
+						<tr>
+						<th id="italicText_comReg" aria-hidden="true">Regolamenti della Commissione***</th>	
+	
+						<td><a id="italComRegBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=REGULATIONS_COMMISSION_BASIC" aria-labelledby="labelText_non labelTextNotBold_others italicText_comReg adoptedActs adActsBasic italComRegBasic">4</a></td>
+						<td><a id="italComRegAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=REGULATIONS_COMMISSION_AMENDING" aria-labelledby="labelText_non labelTextNotBold_others italicText_comReg adoptedActs adActsAmending italComRegAmending">22</a></td>
+					</tr>
+					<tr>
+						<th id="italicText_comDir" aria-hidden="true">Direttive della Commissione</th>	
+	
+						<td><a id="italComDirBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DIRECTIVES_COMMISSION_BASIC" aria-labelledby="labelText_non labelTextNotBold_others italicText_comDir adoptedActs adActsBasic italComDirBasic">0</a></td>
+						<td><a id="italComDirAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DIRECTIVES_COMMISSION_AMENDING" aria-labelledby="labelText_non labelTextNotBold_others italicText_comDir adoptedActs adActsAmending italComDirAmending">3</a></td>
+					</tr>
+					<tr>
+						<th id="italicText_comDec" aria-hidden="true">Decisioni della Commissione</th>	
+	
+						<td><a id="italComDecBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DECISIONS_COMMISSION_BASIC" aria-labelledby="labelText_non labelTextNotBold_others italicText_comDec adoptedActs adActsBasic italComDecBasic">112</a></td>
+						<td><a id="italComDecAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DECISIONS_COMMISSION_AMENDING" aria-labelledby="labelText_non labelTextNotBold_others italicText_comDec adoptedActs adActsAmending italComDecAmending">4</a></td>
+					</tr>
+					<tr>
+						<th id="italicText_ecbReg" aria-hidden="true">Regolamenti della Banca centrale europea</th>	
+	
+						<td><a id="italEcbRegBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=REGULATIONS_ECB_BASIC" aria-labelledby="labelText_non labelTextNotBold_others italicText_ecbReg adoptedActs adActsBasic italEcbRegBasic">0</a></td>
+						<td><a id="italEcbRegAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=REGULATIONS_ECB_AMENDING" aria-labelledby="labelText_non labelTextNotBold_others italicText_ecbReg adoptedActs adActsAmending italEcbRegAmending">0</a></td>
+					</tr>
+					<tr>
+						<th id="italicText_ecbDec" aria-hidden="true">Decisioni della Banca centrale europea</th>	
+	
+						<td><a id="italEcbDecBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DECISIONS_ECB_BASIC" aria-labelledby="labelText_non labelTextNotBold_others italicText_ecbDec adoptedActs adActsBasic italEcbDecBasic">2</a></td>
+						<td><a id="italEcbDecAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=DECISIONS_ECB_AMENDING" aria-labelledby="labelText_non labelTextNotBold_others italicText_ecbDec adoptedActs adActsAmending italEcbDecAmending">1</a></td>
+					</tr>
+                    <tr>
+                        <th id="italicText_ecbGuid" aria-hidden="true">Orientamenti della Banca centrale europea****</th> 
+ 
+                        <td><a id="italEcbGuidBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=GUIDELINES_ECB_BASIC" aria-labelledby="labelText_non labelTextNotBold_others italicText_ecbGuid adoptedActs adActsBasic italEcbGuidBasic">0</a></td>
+                        <td><a id="italEcbGuidAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=GUIDELINES_ECB_AMENDING" aria-labelledby="labelText_non labelTextNotBold_others italicText_ecbGuid adoptedActs adActsAmending italEcbGuidAmending">5</a></td>
+                    </tr>
+                    <tr>
+                        <th id="italicText_ecbRec" aria-hidden="true">Raccomandazioni della Banca centrale europea</th> 
+ 
+                        <td><a id="italEcbRecBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=RECOMMENDATIONS_ECB_BASIC" aria-labelledby="labelText_non labelTextNotBold_others italicText_ecbRec adoptedActs adActsBasic italEcbRecBasic">1</a></td>
+                        <td><a id="italEcbRecAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=RECOMMENDATIONS_ECB_AMENDING" aria-labelledby="labelText_non labelTextNotBold_others italicText_ecbRec adoptedActs adActsAmending italEcbRecAmending">0</a></td>
+                    </tr>
+                    <tr>
+                        <th id="italicText_ecbOpin" aria-hidden="true">Pareri della Banca centrale europea</th> 
+ 
+                        <td><a id="italEcbOpinBasic" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=OPINIONS_ECB_BASIC" aria-labelledby="labelText_non labelTextNotBold_others italicText_ecbOpin adoptedActs adActsBasic italEcbOpinBasic">13</a></td>
+                        <td><a id="italEcbOpinAmending" href="./../search.html?type=statistics&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=OPINIONS_ECB_AMENDING" aria-labelledby="labelText_non labelTextNotBold_others italicText_ecbOpin adoptedActs adActsAmending italEcbOpinAmending">0</a></td>
+                    </tr>
+					<tr class="totalRow">
+						<th id="labelTextNotBold_othersTotal" class="totalRow" aria-hidden="true">Totale</th>
+							<td>
+							    <a id="lblTxtNBldOthersTotalBasic" href="./../search.html?type=statistics&amp;statIsTotal=true&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=REGULATIONS_COMMISSION_BASIC,DIRECTIVES_COMMISSION_BASIC,DECISIONS_COMMISSION_BASIC,REGULATIONS_ECB_BASIC,DECISIONS_ECB_BASIC,GUIDELINES_ECB_BASIC,RECOMMENDATIONS_ECB_BASIC,OPINIONS_ECB_BASIC" aria-labelledby="labelText_non labelTextNotBold_others labelTextNotBold_othersTotal adoptedActs adActsBasic lblTxtNBldOthersTotalBasic">
+							    132</a>
+							</td>
+							<td>
+							    <a id="lblTxtNBldOthersTotalAmending" href="./../search.html?type=statistics&amp;statIsTotal=true&amp;statYear=2026&amp;statMonth=&amp;statType=
+LEGISLATIVE_ACTS&amp;statSubType=REGULATIONS_COMMISSION_AMENDING,DIRECTIVES_COMMISSION_AMENDING,DECISIONS_COMMISSION_AMENDING,REGULATIONS_ECB_AMENDING,DECISIONS_ECB_AMENDING,GUIDELINES_ECB_AMENDING,RECOMMENDATIONS_ECB_AMENDING,OPINIONS_ECB_AMENDING" aria-labelledby="labelText_non labelTextNotBold_others labelTextNotBold_othersTotal adoptedActs adActsAmending lblTxtNBldOthersTotalAmending">
+							    35</a>	</td>	</tr>	</tbody>	</table>	</div>	<br/>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+
+
+	
+		<!-- Editorial content start -->
+		<div class="EurlexEditorial">
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+<p>* Per ragioni bibliografiche, un atto è classificato come modificativo se, in base
+   al suo titolo, modifica uno o più atti, sebbene contenga anche disposizioni autonome.
+</p>
+
+
+<p>** La maggior parte delle decisioni hanno dei destinatari (uno Stato membro, un gruppo
+   di Stati membri, una o più imprese). A norma dell’articolo&nbsp;288 del trattato sul funzionamento
+   dell’Unione europea (TFUE), una decisione, se designa i destinatari, è obbligatoria
+   soltanto nei confronti di questi.
+</p>
+
+
+<p>*** Gli atti effimeri sono esclusi. Gli atti relativi alla gestione corrente e quotidiana
+   delle questioni agricole ("atti effimeri") sono generalmente validi solo per un periodo
+   di tempo limitato. Dal 1º marzo 2011 sono stati principalmente adottati come regolamenti
+   di esecuzione della Commissione. Prima di tale data, erano adottati principalmente
+   sotto forma di regolamenti della Commissione.
+</p>
+
+	
+	<!-- Editorial content end -->	</div>	
+
+	</div>	</div>	</div>
+
+	</div>	
+	
+
+ </div> </div> </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- New EUR-Lex footer -->
+	<footer class="ecl-site-footer">	
+	  <div class="ecl-container ecl-site-footer__container ecl-site-footer__container-override">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="ecl-site-footer__row">
+    <div class="ecl-site-footer__column">
+        <div class="ecl-site-footer__section ecl-site-footer__section--site-info">
+            
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../homepage.html"                aria-label="">
+                <picture class="ecl-picture ecl-site-footer__picture" title="Torna alla homepage di EUR-Lex">
+                    <img class="ecl-site-footer__logo-image" src="./../revamp/images/eurlex_simple.svg"
+                         onerror="this.onerror=null; this.src='./../images/n/eurlex_simple.png'"
+                         alt="Torna alla homepage di EUR-Lex" title="Torna alla homepage di EUR-Lex">
+                </picture>                
+            </a>
+            
+            <div class="ecl-site-footer__description">Il sito è gestito dall'
+ 
+                <a href="http://op.europa.eu/it/home" title="Ufficio delle pubblicazioni dell'Unione europea" class="ecl-link ecl-link--standalone ecl-site-footer__link underlineLink">Ufficio delle pubblicazioni dell'Unione europea</a>
+            </div>          
+        </div>
+    </div>
+    <div class="ecl-site-footer__column">
+        <div class="ecl-site-footer__section">
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Serve aiuto?</h2>
+          <ul class="ecl-site-footer__list">
+            <li class="ecl-site-footer__list-item">
+                
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../content/help.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Guida"         aria-label="">
+ Guida
+ </a>
+
+            </li>
+            <li class="ecl-site-footer__list-item">
+                
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../contact.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Contatti"         aria-label="">
+ Contatti
+ </a>
+
+            </li>
+            <li class="ecl-site-footer__list-item">
+                
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../content/site-map/site-map.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Mappa del sito"         aria-label="">
+ Mappa del sito
+ </a>
+
+            </li>
+          </ul>
+        </div>
+        
+        <div class="ecl-site-footer__section">
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Seguici</h2>
+          <ul class="ecl-site-footer__list">
+            <li class="ecl-site-footer__list-item">
+                
+                <a href="https://x.com/EUPublications" title="X" class="ecl-link ecl-link--standalone ecl-link--icon ecl-site-footer__link">
+                    <img class="ecl-icon ecl-icon--m ecl-link__icon ecl-link--icon--twitter" src="./../revamp/images/twitter.svg"
+                        onerror="this.onerror=null; this.src='./../images/n/twitter.png'"
+                        alt="X" title="X">
+                    <span class="ecl-link__label--twitter">X</span>            
+                </a>
+            </li>            
+          </ul>
+        </div>
+        
+        <div class="ecl-site-footer__section">
+            <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Aspetti giuridici</h2>
+            <ul class="ecl-site-footer__list">
+                <li class="ecl-site-footer__list-item">
+                    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../content/legal-notice/legal-notice.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Note legali"         aria-label="">
+ Note legali
+ </a>
+
+                </li>
+                <li class="ecl-site-footer__list-item">
+                    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../content/legal-notice/legal-notice.html#5.%20Cookies%20notice"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Politica sull&#039;uso dei cookie"         aria-label="">
+ Politica sull'uso dei cookie
+ </a>
+
+                </li>
+                <li class="ecl-site-footer__list-item">
+                    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../content/legal-notice/legal-notice.html#4.%20Accessibility%20statement"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Accessibilità"         aria-label="">
+ Accessibilità
+ </a>
+
+                </li>
+                <li class="ecl-site-footer__list-item">     
+                    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../content/legal-notice/legal-notice.html#3.%20protection"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Informativa sulla privacy"         aria-label="">
+ Informativa sulla privacy
+ </a>
+
+                </li>
+          </ul>
+        </div>
+    </div>
+    
+     <div class="ecl-site-footer__column">
+         <div class="ecl-site-footer__section">
+           <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Informazioni</h2>
+           <ul class="ecl-site-footer__list">
+             <li class="ecl-site-footer__list-item">
+                 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../content/welcome/about.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Cos&#039;è EUR-Lex"         aria-label="">
+ Cos'è EUR-Lex
+ </a>
+
+             </li>
+             <li class="ecl-site-footer__list-item">
+                 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../newsletter/newsletterLatest.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Newsletter"         aria-label="">
+ Newsletter
+ </a>
+
+             </li>
+             <li class="ecl-site-footer__list-item">
+                 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./../content/links/links.html"    class="ecl-link ecl-link--standalone ecl-site-footer__link"   title="Link utili"         aria-label="">
+ Link utili
+ </a>
+
+             </li>
+           </ul>
+         </div>
+         <div class="ecl-site-footer__section">
+           <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Altri servizi</h2>
+           <ul class="ecl-site-footer__list">
+             <li class="ecl-site-footer__list-item">
+                 
+                 <a href="https://data.europa.eu/euodp/it/data/" title="Dati europei" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                     Dati europei
+                 </a>
+             </li>
+             <li class="ecl-site-footer__list-item">
+                 
+                 <a href="https://ted.europa.eu/TED/main/HomePage.do" title="Appalti dell'UE" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                     Appalti dell'UE
+                 </a>
+             </li>
+             <li class="ecl-site-footer__list-item">
+                 
+                 <a href="http://cordis.europa.eu/it/" title="Risultati della ricerca dell'UE" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                     Risultati della ricerca dell'UE
+                 </a>
+             </li>
+             <li class="ecl-site-footer__list-item">
+                 
+                 <a href="http://op.europa.eu/it/web/who-is-who" title="EU Whoiswho" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                     EU Whoiswho
+                 </a>
+             </li>
+             <li class="ecl-site-footer__list-item">
+                 
+                 <a href="http://op.europa.eu/it/web/general-publications/publications" title="Pubblicazioni dell'UE" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                     Pubblicazioni dell'UE
+                 </a>
+             </li>
+           </ul>
+         </div>
+         <div class="ecl-site-footer__section ecl-site-footer__section--separator">
+           <ul class="ecl-site-footer__list">
+             <li class="ecl-site-footer__list-item">
+             
+             <a href="http://n-lex.europa.eu/n-lex/index?lang=it" title="N-Lex" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                 N-Lex
+             </a>
+             </li>
+             <li class="ecl-site-footer__list-item">
+             
+             <a href="http://op.europa.eu/it/web/eu-law-in-force" title="" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                 
+             </a>
+             </li>
+             <li class="ecl-site-footer__list-item">
+             
+             <a href="http://law-tracker.europa.eu/homepage?lang=it" title="EU Law Tracker" class="ecl-link ecl-link--standalone ecl-site-footer__link">
+                 EU Law Tracker
+ </a> </li> </ul> </div> </div>
+</div> 
+ 
+
+
+
+    <div class="ecl-site-footer__row">
+      <div class="ecl-site-footer__column">
+        <div class="ecl-site-footer__section"><a href="https://european-union.europa.eu/" class="ecl-link ecl-link--standalone ecl-site-footer__logo-link" aria-label="European Union">
+            <picture class="ecl-picture ecl-site-footer__picture" title="European Union">
+              <source srcset="./../revamp/images/logo-eu--en.svg" media="(min-width: 996px)"><img class="ecl-site-footer__logo-image" src="./../revamp/images/logo-eu--en-sm.svg" alt="European Union logo" />
+            </picture>
+          </a>
+          <div class="ecl-site-footer__description">Scopri di più su <a href="https://europa.eu" class="ecl-link ecl-link--standalone underlineLink">europa.eu</a></div>
+        </div>
+      </div>
+      <div class="ecl-site-footer__column">
+        <div class="ecl-site-footer__section">
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Contatta l&#39;UE</h2>
+          <ul class="ecl-site-footer__list">
+            <li class="ecl-site-footer__list-item"><a href="tel:0080067891011" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Chiamaci al numero 00 800 6 7 8 9 10 11</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/call-us_en" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Usa altre opzioni telefoniche</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/write-us_en" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Scrivici usando l&#39;apposito modulo</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/meet-us_en" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Incontraci presso uno dei centri dell&#39;UE</a></li>
+          </ul>
+        </div>
+        <div class="ecl-site-footer__section">
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Social media</h2>
+          <ul class="ecl-site-footer__list">
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search" class="ecl-link ecl-link--standalone ecl-site-footer__link"> Cerca i canali social dell&#39;UE</a></li>
+          </ul>
+        </div>
+        <div class="ecl-site-footer__section">
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Aspetti giuridici</h2>
+          <ul class="ecl-site-footer__list">
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/languages-our-websites_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Uso delle lingue sui nostri siti web</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/privacy-policy_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Politica di tutela della privacy</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/legal-notice_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Note legali</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/cookies_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Cookie</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ecl-site-footer__column">
+        <div class="ecl-site-footer__section ecl-site-footer__section">
+          <h2 class="ecl-site-footer__title ecl-site-footer__title--separator">Istituzioni dell&#39;UE</h2>
+          <ul class="ecl-site-footer__list">
+            <li class="ecl-site-footer__list-item"><a href="https://www.europarl.europa.eu/portal/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Parlamento europeo</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.consilium.europa.eu/en/european-council/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Consiglio europeo</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.consilium.europa.eu/en/home/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Consiglio dell&#39;Unione europea</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://commission.europa.eu/index_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Commissione europea</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://curia.europa.eu/jcms/jcms/j_6/en/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Corte di giustizia dell&#39;Unione europea (CGUE)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.ecb.europa.eu/home/html/index.en.html" class="ecl-link ecl-link--standalone ecl-site-footer__link">Banca centrale europea (BCE)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.eca.europa.eu/en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Corte dei conti europea</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://eeas.europa.eu/headquarters/headquarters-homepage_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Servizio europeo per l&#39;azione esterna (SEAE)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.eesc.europa.eu/?i=portal.en.home" class="ecl-link ecl-link--standalone ecl-site-footer__link">Comitato economico e sociale europeo</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://cor.europa.eu/en/" class="ecl-link ecl-link--standalone ecl-site-footer__link">Comitato europeo delle regioni (CdR)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.eib.org/en/index.htm" class="ecl-link ecl-link--standalone ecl-site-footer__link">Banca europea per gli investimenti</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://www.ombudsman.europa.eu/en/home" class="ecl-link ecl-link--standalone ecl-site-footer__link">Mediatore europeo</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://secure.edps.europa.eu/EDPSWEB/edps/EDPS?lang=en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Garante europeo della protezione dei dati (GEPD)</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://edpb.europa.eu/edpb_en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Comitato europeo per la protezione dei dati</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://epso.europa.eu/en" class="ecl-link ecl-link--standalone ecl-site-footer__link">Ufficio europeo di selezione del personale</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://op.europa.eu/en/home" class="ecl-link ecl-link--standalone ecl-site-footer__link">Ufficio delle pubblicazioni dell&#39;Unione europea</a></li>
+            <li class="ecl-site-footer__list-item"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/institutions-and-bodies-profiles_en?f%5B0%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_DEC&f%5B1%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_EXEC&f%5B2%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/EU_JU" class="ecl-link ecl-link--standalone ecl-site-footer__link">Agenzie</a></li> </ul> </div> </div> </div>
+
+	
+	
+		<a href="#" aria-label="Inizio pagina" class="btn btn-xs btn-primary EurlexTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+
+		
+		<div class="panel-footer text-center switchToDesktop">
+			<ul class="list-unstyled">
+				<li class="hide" id="switchToMobile">
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="OP-Nlex"  onclick="createCookie(&#039;desktopModeOn&#039;,&#039;false&#039;,&#039;30&#039;);window.location.reload(true);"          aria-label="">
+	Passa a versione mobile&nbsp;<i
+							class="fa fa-mobile" aria-hidden="true"></i>
+					</a>
+
+				</li>
+				<li class="hide" id="switchToDesktop">
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#"    class="ecl-link ecl-link--standalone ecl-site-footer__link"  onclick="createCookie(&#039;desktopModeOn&#039;,&#039;true&#039;,&#039;30&#039;);window.location.reload(true);"          aria-label="">
+	Passa a versione desktop&nbsp;<i
+							class="fa fa-desktop" aria-hidden="true"></i>
+					</a>
+
+	</li>	</ul>	</div>	
+ </div>	</footer>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var switchToDesktop = "notSelected";
+        var deviceDetected = "desktop";
+        //enable switch to desktop view for mobile devices
+        if (deviceDetected == 'mobile' ){
+            if ((switchToDesktop == 'false' || switchToDesktop == 'notSelected') && window.innerWidth<992 ){
+                $("#switchToDesktop").removeClass("hide");
+            }else if (switchToDesktop == 'true'){
+                $("#switchToMobile").removeClass("hide");
+            }
+        }
+    });
+</script>  
+ 
+        <script  type="text/javascript" src="./../js/jquery.js?v=2.18.4"></script>
+        
+ 
+        <script>(function($,d){$.each(readyQ,function(i,f){$(f)});$.each(bindReadyQ,function(i,f){$(d).on("ready",f)})})(jQuery,document)</script>
+
+        <script type="text/javascript" src="./../js/eur-lex-sanitizer.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../js/eur-lex.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../js/experimentalFeatures.js?v=2.18.4"></script>
+
+        
+        
+        <script type="text/javascript" src="./../js/machineTranslation.js?v=2.18.4"></script>
+
+        
+ 
+        <script type="text/javascript"
+        src="./../revamp/components/vendor/moment/min/moment-with-locales.min.js?v=2.18.4"></script>
+        
+        <script type="text/javascript"
+        src="./../revamp/components/vendor/bootstrap/dist/js/bootstrap.min.js?v=2.18.4"></script>
+        
+ 
+ 
+        <script type="text/javascript"
+        src="./../revamp/components/vendor/bootstrap-3-typeahead/js/bootstrap3-typeahead_customized.min.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../revamp/js/ie10-viewport-bug-workaround.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../revamp/js/metisMenu.min.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../revamp/js/timeline.main.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../revamp/js/jquery.autoresize.min.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../revamp/js/eurlex.js?v=2.18.4"></script>
+        
+ 
+       <script type="text/javascript"
+               src="./../js/compatibility-table.js?v=2.18.4"></script>
+
+
+
+        
+        <script type="text/javascript"
+        src="./../revamp/components/vendor/bootstrap/js/transition.js?v=2.18.4"></script>
+        
+        <script type="text/javascript"
+        src="./../revamp/components/vendor/bootstrap/js/collapse.js?v=2.18.4"></script>
+        
+        <script type="text/javascript"
+        src="./../revamp/components/vendor/gasparesganga-jquery-loading-overlay/src/loadingoverlay.min.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../js/popupWidgetTitle.js?v=2.18.4"></script>
+        
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+        <script type="text/javascript" src="./../js/piwik_functionality.js?v=2.18.4"></script>
+       
+        <script  src="https://webtools.europa.eu/load.js?globan=1110" type="text/javascript"></script>
+        
+        <script type="text/javascript" src="./../js/cookieConsentKitUtils.js?v=2.18.4"></script>
+
+        
+        <script type="text/javascript" src="./../js/d3/d3.v7.min.js?v=2.18.4"></script>
+        
+ 
+        <script type="text/javascript" src="./../js/browse-by-collection.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../js/d3-timeline.js?v=2.18.4"></script>
+        
+        <script type="text/javascript" src="./../js/url-dynamic-util.js?v=2.18.4"></script>
+          
+ 
+ 
+        <script type="text/javascript" src="./../js/pdfjs/build/pdf.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../js/pdfjs/build/pdf.worker.js?v=2.18.4"></script>
+        <script type="text/javascript" src="./../js/pdf-infinite-scroll.js?v=2.18.4"></script>
+        
+        
+        <script type="text/javascript" src="./../revamp/components/vendor/ec/eu-preset-v4.1.1/scripts/ecl-eu.js?v=2.18.4"></script>
+        <script type="text/javascript" src="https://unpkg.com/svg4everybody@2.1.9/dist/svg4everybody.js"></script>
+
+        
+ 
+ </body> </html>

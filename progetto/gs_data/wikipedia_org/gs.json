@@ -33,5 +33,40 @@
     "title": "Apollo 11",
     "html_file": "wikipedia_org/texts/gs_5_html.txt",
     "gold_file": "wikipedia_org/texts/gs_5_gold.txt"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Mount_Vesuvius",
+    "domain": "en.wikipedia.org",
+    "title": "Mount Vesuvius",
+    "html_file": "wikipedia_org/texts/gs_6_html.txt",
+    "gold_file": "wikipedia_org/texts/gs_6_gold.txt"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Apple_Inc.",
+    "domain": "en.wikipedia.org",
+    "title": "Apple Inc.",
+    "html_file": "wikipedia_org/texts/gs_7_html.txt",
+    "gold_file": "wikipedia_org/texts/gs_7_gold.txt"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Arduino",
+    "domain": "en.wikipedia.org",
+    "title": "Arduino",
+    "html_file": "wikipedia_org/texts/gs_8_html.txt",
+    "gold_file": "wikipedia_org/texts/gs_8_gold.txt"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Vespa",
+    "domain": "en.wikipedia.org",
+    "title": "Vespa",
+    "html_file": "wikipedia_org/texts/gs_9_html.txt",
+    "gold_file": "wikipedia_org/texts/gs_9_gold.txt"
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Colosseum",
+    "domain": "en.wikipedia.org",
+    "title": "Colosseum",
+    "html_file": "wikipedia_org/texts/gs_10_html.txt",
+    "gold_file": "wikipedia_org/texts/gs_10_gold.txt"
   }
 ]

@@ -294,14 +294,15 @@ async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
     Dato risultato parsing e gs restituisce le metriche di evaluation.
     """
     
-    evaluator = Evaluator()
     #clean_parsed = BaseParser.remove_markdown(request.parsed_text)# da capire meglio
     # Pulisci il testo Markdown prima della valutazione
     #cleaned_parsed_text = clean_markdown(request.parsed_text)
     
-    token_level_eval = evaluator.token_level_eval(request.parsed_text, request.gold_text)
+    token_level_eval = Evaluator.token_level_eval(request.parsed_text, request.gold_text)
+    x_eval = Evaluator.x_eval(request.parsed_text, request.gold_text)
     
-    result=EvaluateResponse(token_level_eval=token_level_eval, x_eval={})
+
+    result=EvaluateResponse(token_level_eval=token_level_eval, x_eval=x_eval)
     return result
 
 
@@ -337,24 +338,50 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
     eval_response = await evaluate_gold_standard(gold_data)
 
     if not eval_response:
-        return FullGsEvalResponse(token_level_eval={"precision": 0, "recall": 0, "f1": 0})
+        return FullGsEvalResponse(token_level_eval={"precision": 0, "recall": 0, "f1": 0}, x_eval={"jaccard": 0, "rouge_l": 0, "levenshtein": 0, "similarity_ratio": 0, "cosine_similarity": 0})
     
     precisions = []
     recalls = []
     f1_scores = []
+    #extra metrics
+    jaccard_scores = []
+    rouge_l_scores = []
+    levenshtein_distances = []
+    similarity_ratios = []
+    cosine_similarities = []
 
     for entry_name, metrics in eval_response.items():
         precision = metrics.get("precision", 0)
         recall = metrics.get("recall", 0)
         f1 = metrics.get("f1", 0)
+        #extra metrics
+        x_eval = metrics.get("x_eval", {})
+        jaccard = x_eval.get("jaccard", 0)
+        rouge_l = x_eval.get("rouge_l", 0)
+        levenshtein = x_eval.get("levenshtein", 0)
+        similarity_ratio = x_eval.get("similarity_ratio", 0)
+        cosine_similarity = x_eval.get("cosine_similarity", 0)
+
         
         precisions.append(precision)
         recalls.append(recall)
         f1_scores.append(f1)
-    
+        #extra metrics
+        jaccard_scores.append(jaccard)
+        similarity_ratios.append(similarity_ratio)
+        cosine_similarities.append(cosine_similarity)
+        rouge_l_scores.append(rouge_l)
+        levenshtein_distances.append(levenshtein)
+
     avg_f1 = 0
     avg_precision = 0
     avg_recall = 0
+    #extra metrics
+    avg_jaccard = 0
+    avg_rouge_l = 0
+    avg_levenshtein = 0
+    avg_similarity_ratio = 0
+    avg_cosine_similarity = 0
     if precisions:
         if len(precisions)==0:
             avg_precision =0
@@ -368,9 +395,30 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
             avg_f1 =0
         else:
             avg_f1 = sum(f1_scores) / len(f1_scores)
-    
-    
-    result = FullGsEvalResponse(token_level_eval=  {"precision": avg_precision, "recall": avg_recall,"f1": avg_f1}, x_eval={})
+        #extra metrics
+        if len(jaccard_scores)==0:
+            avg_jaccard =0
+        else:
+            avg_jaccard = sum(jaccard_scores) / len(jaccard_scores)
+        if len(rouge_l_scores)==0:
+            avg_rouge_l =0
+        else:
+            avg_rouge_l = sum(rouge_l_scores) / len(rouge_l_scores)
+        if len(levenshtein_distances)==0:
+            avg_levenshtein =0
+        else:
+            avg_levenshtein = sum(levenshtein_distances) / len(levenshtein_distances)
+        if len(similarity_ratios)==0:
+            avg_similarity_ratio =0
+        else:
+            avg_similarity_ratio = sum(similarity_ratios) / len(similarity_ratios)
+        if len(cosine_similarities)==0:
+            avg_cosine_similarity =0
+        else:
+            avg_cosine_similarity = sum(cosine_similarities) / len(cosine_similarities)
+
+
+    result = FullGsEvalResponse(token_level_eval=  {"precision": avg_precision, "recall": avg_recall,"f1": avg_f1}, x_eval={"jaccard": avg_jaccard, "rouge_l": avg_rouge_l, "levenshtein": avg_levenshtein, "similarity_ratio": avg_similarity_ratio, "cosine_similarity": avg_cosine_similarity})
     return result
 
 def find_path_parser(url: str,base_dir: Path) -> Optional[Any]:

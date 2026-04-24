@@ -33,5 +33,40 @@
     "title": "L’assenza di film italiani a Cannes è il segnale di qualcosa?",
     "html_file": "ilpost_it/texts/gs_5_html.txt",
     "gold_file": "ilpost_it/texts/gs_5_gold.txt"
+  },
+  {
+    "url": "https://www.ilpost.it/2026/04/11/anthropic-ai-governo-stati-uniti-mythos-falle-sicurezza-banche/?homepagePosition=11.1&referrerPost=3566771",
+    "domain": "www.ilpost.it",
+    "title": "Il nuovo modello di Anthropic che ha mandato nel panico le banche statunitensi",
+    "html_file": "ilpost_it/texts/gs_6_html.txt",
+    "gold_file": "ilpost_it/texts/gs_6_gold.txt"
+  },
+  {
+    "url": "https://www.ilpost.it/2026/04/21/tim-cook-apple/",
+    "domain": "www.ilpost.it",
+    "title": "Tim Cook il consolidatore",
+    "html_file": "ilpost_it/texts/gs_7_html.txt",
+    "gold_file": "ilpost_it/texts/gs_7_gold.txt"
+  },
+  {
+    "url": "https://www.ilpost.it/2026/04/16/bayern-monaco-champions-league-statistiche-numeri-gol-stagionali-assist-harry-kane/",
+    "domain": "www.ilpost.it",
+    "title": "Una squadra da più di 150 gol",
+    "html_file": "ilpost_it/texts/gs_8_html.txt",
+    "gold_file": "ilpost_it/texts/gs_8_gold.txt"
+  },
+  {
+    "url": "https://www.ilpost.it/2026/03/26/parlamento-europeo-accordo-dazi-stati-uniti-ue/",
+    "domain": "www.ilpost.it",
+    "title": "Il Parlamento europeo ha approvato la proposta di accordo commerciale tra Unione Europea e Stati Uniti",
+    "html_file": "ilpost_it/texts/gs_9_html.txt",
+    "gold_file": "ilpost_it/texts/gs_9_gold.txt"
+  },
+  {
+    "url": "https://www.ilpost.it/2026/04/24/microsoft-meta-riduzione-personale-inteligenza-artificiale/",
+    "domain": "www.ilpost.it",
+    "title": "Microsoft e Meta vogliono liberarsi di migliaia di dipendenti",
+    "html_file": "ilpost_it/texts/gs_10_html.txt",
+    "gold_file": "ilpost_it/texts/gs_10_gold.txt"
   }
 ]
