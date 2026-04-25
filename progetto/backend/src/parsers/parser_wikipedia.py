@@ -4,7 +4,6 @@ import re
 from typing import Dict, Any
 from urllib.parse import urlparse
 
-from bs4 import BeautifulSoup
 from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig, CacheMode
 
 from .base_parser import BaseParser
@@ -40,11 +39,10 @@ class WikipediaParser(BaseParser):
             exclude_all_images=True,
             exclude_external_links=True'''
         return CrawlerRunConfig(
-           
             excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'noscript', 'figure', 'img'],
-            # RIMOSSI .reference e .noprint da qui!
-            excluded_selector=".infobox, .metadata, .vevent, .toc, .vertical-navbox, .hatnote, .mw-editsection, .sidebar, .ambox, .navbox, .shortdescription",
-            word_count_threshold=0,  # IMPERATIVO metterlo a 0
+            # AGGIUNTI .gallery e .thumb per eliminare le gallerie e le miniature (con le loro didascalie)
+            excluded_selector=".infobox, .metadata, .vevent, .toc, .vertical-navbox, .hatnote, .mw-editsection, .sidebar, .ambox, .navbox, .shortdescription, .gallery, .thumb",
+            word_count_threshold=0, 
             cache_mode=CacheMode.BYPASS,
             exclude_external_images=True
         )
@@ -116,8 +114,10 @@ class WikipediaParser(BaseParser):
         text = re.sub(r'From Wikipedia, the free encyclopedia', '', text)
         text = re.sub(r'^#bodyContent\)?\s*', '', text)
 
-        # 2. Rimuove le icone vuote iniziali (Stella, lucchetto, audio)
-        text = re.sub(r'(?m)^\[\]\(https://en\.wikipedia\.org/wiki/(?:Wikipedia:|File:).*?\)\n*', '', text)
+        # 2. Rimuove le icone vuote e i link ai file immagine rimasti
+        text = re.sub(r'(?m)^\[\]\((?:https://en\.wikipedia\.org)?/wiki/(?:Wikipedia:|File:)[^)]+\)\n*', '', text)
+        # E per sicurezza, rimuove anche quelli inline (non all'inizio della riga)
+        text = re.sub(r'\[\]\((?:https://en\.wikipedia\.org)?/wiki/(?:Wikipedia:|File:)[^)]+\)', '', text)
 
         # 3. Rimuove riferimenti a note: [1], [2], [a], [citation needed], ecc.
         text = re.sub(r'\s*\[(?:\[?\d+\]?|[a-zA-Z]?|)\]\([^\[\]\n]*?cite_note[^\[\]\n]*?\)', '', text)

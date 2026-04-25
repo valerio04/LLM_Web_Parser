@@ -8,10 +8,10 @@
   },
   {
     "url": "https://en.wikipedia.org/wiki/BabelNet",
-    "domain": "en.wikipedia.org", 
+    "domain": "en.wikipedia.org",
     "title": "BabelNet",
     "html_file": "wikipedia_org/texts/gs_2_html.txt",
-    "gold_file": "wikipedia_org/texts/gs_2_gold.txt"  
+    "gold_file": "wikipedia_org/texts/gs_2_gold.txt"
   },
   {
     "url": "https://en.wikipedia.org/wiki/List_of_largest_empires",
@@ -42,9 +42,9 @@
     "gold_file": "wikipedia_org/texts/gs_6_gold.txt"
   },
   {
-    "url": "https://en.wikipedia.org/wiki/Apple_Inc.",
+    "url": "https://en.wikipedia.org/wiki/Bubble_sort",
     "domain": "en.wikipedia.org",
-    "title": "Apple Inc.",
+    "title": "Bubble sort",
     "html_file": "wikipedia_org/texts/gs_7_html.txt",
     "gold_file": "wikipedia_org/texts/gs_7_gold.txt"
   },
