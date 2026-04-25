@@ -44,15 +44,16 @@ class StatMuseParser(BaseParser):
         if title and title != "N/A":
             return title.replace(" | StatMuse", "").strip()
         return "N/A"
-
+    
     def _extract_text_with_bs4(self, html_content: str, url: str) -> str:
         if not html_content:
             return ""
             
         soup = BeautifulSoup(html_content, 'html.parser')
         
-        # Eliminiamo file multimediali e loghi che inquinano il testo
-        for tag in soup.find_all(['img', 'svg']):
+        # Eliminiamo SOLO gli svg che inquinano il testo con path interni.
+        # Manteniamo i tag 'img' per poterne estrarre l'attributo 'alt' se necessario.
+        for tag in soup.find_all(['svg']):
             tag.decompose()
                 
         parts = []
@@ -100,19 +101,34 @@ class StatMuseParser(BaseParser):
                 processed_tables.add(id(tag))
                 
                 rows = []
-                for tr in tag.find_all('tr'):
+                trs = tag.find_all('tr')
+                for tr_idx, tr in enumerate(trs):
+                    is_last_row = (tr_idx == len(trs) - 1)
                     cells = []
                     for i, cell in enumerate(tr.find_all(['th', 'td'])):
                         c_text = cell.get_text(separator=' ', strip=True)
                         
-                        # FIX PERFETTO: Iniezione dinamica dell'header vuoto
-                        if cell.name == 'th' and not c_text:
-                            if i == 0:
-                                if is_standings: c_text = "TEAM"
-                                elif is_finance: c_text = "DATE"
-                            elif i == 1 and not is_standings and not is_finance:
-                                c_text = "NAME"
-                                
+                        # FIX: Se la cella è testualmente vuota, prova a recuperare 
+                        # il nome dall'attributo 'alt' della foto o dal 'title'
+                        if not c_text:
+                            img = cell.find('img')
+                            if img and img.get('alt'):
+                                c_text = img.get('alt').strip()
+                            elif cell.get('title'):
+                                c_text = cell.get('title').strip()
+                        
+                        # FIX PERFETTO: Iniezione dinamica di header e Total
+                        if not c_text:
+                            if cell.name == 'th':
+                                if i == 0:
+                                    if is_standings: c_text = "TEAM"
+                                    elif is_finance: c_text = "DATE"
+                                elif i == 1 and not is_standings and not is_finance:
+                                    c_text = "NAME"
+                            elif cell.name == 'td':
+                                if i == 0 and is_last_row:
+                                    c_text = "Total"
+                                    
                         cells.append(c_text)
                         
                     if any(c.strip() for c in cells): 
