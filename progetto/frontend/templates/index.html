@@ -178,6 +178,13 @@
 				</form>
 			</section>
 
+
+			{% if result.error_message %}
+			<div style="color: red; padding: 10px; border: 1px solid red; background: #fee;">
+				<strong>Errore:</strong> {{ result.error_message }}
+			</div>
+			{% endif %}
+
 			<section class="card">
 				<div class="grid-3">
 					<div>
@@ -194,6 +201,8 @@
 					</div>
 				</div>
 			</section>
+
+
 
 			<section class="card">
 				<h2>Metriche di valutazione</h2>
@@ -258,11 +267,6 @@
 				</section>
 			</div>
 
-			{% if result.error_message %}
-			<div style="color: red; padding: 10px; border: 1px solid red; background: #fee;">
-				<strong>Errore:</strong> {{ result.error_message }}
-			</div>
-			{% endif %}
 
 		</main>
 	</body>

@@ -21,7 +21,7 @@ templates = Jinja2Templates(directory=str(_templates_dir))
 
 API_BASE_URL = "http://backend:8003"
 
-def find_path_parser(url: str, base_dir: Path) -> Optional[Any]:
+def find_path(url: str, base_dir: Path) -> Optional[Any]:
     """
     Restituisce il parser e il percorso del file JSON corrispondente al dominio dell'URL.
     """
@@ -71,6 +71,7 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
     
     result = UiResult(url=selected_url)
     metrics: Dict[str, str] = {}
+    x_metrics: Dict[str, str] = {}  
     gs_urls = fetch_gs_urls()
 
     if selected_url:
@@ -86,8 +87,9 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
             script_dir = Path(__file__).parent.resolve()
             base_dir = script_dir.parent.parent
             local_html = None
+            json_path = find_path(selected_url, base_dir)
             try:
-                json_path = find_path_parser(selected_url, base_dir)
+                
                 if json_path and json_path.exists():
                     with open(json_path, 'r', encoding='utf-8') as f:
                         entries = json.load(f)
@@ -190,7 +192,7 @@ def fetch_gs_urls() -> List[str]:
         base_dir = script_dir.parent.parent
         
         for dominio in domini:
-            json_path = find_path_parser(dominio, base_dir)
+            json_path = find_path(dominio, base_dir)
             if json_path and json_path.exists():
                 with open(json_path, 'r', encoding='utf-8') as f:
                     domains_data = json.load(f)
