@@ -31,6 +31,9 @@ class IlPostParser(BaseParser):
 
         # 6. Minutaggio player audio
         self.re_audio_time = re.compile(r'(?mi)^\s*(?:\d{1,2}:)?\d{1,2}:\d{2}\s*$')
+        
+        # 7. DIDASCALIE FOTO: Intercetta righe che finiscono con "(.../Getty Images)" ecc.
+        self.re_captions = re.compile(r'(?mi)^.*\([^)]*(?:Getty Images|AP Photo|ANSA|Reuters|EPA|Lapresse|LaPresse|Fotogramma|Tim de Waele|Luc Claessen)[^)]*\)\s*$')
 
     def create_crawler_config(self) -> CrawlerRunConfig:
         """Configurazione del crawler per Il Post."""
@@ -39,7 +42,7 @@ class IlPostParser(BaseParser):
             excluded_selector=(
                 ".cookie-banner, #iubenda-cs-banner, .share, .social, .social-share, "
                 ".newsletter, .banner, .adv, .ad-container, #pp-paywall, .tags, "
-                ".author-box, .related-posts"
+                ".author-box, .related-posts, .caption, figcaption"
             ),
             word_count_threshold=0, 
             cache_mode=CacheMode.BYPASS,
@@ -64,11 +67,8 @@ class IlPostParser(BaseParser):
         """Restituisce l'HTML grezzo estratto."""
         return result.html if result.html else ""
 
-        
-       
-
     def parse_markdown(self, result: CrawlResult) -> str:
-        """Pulisce il markdown rimuovendo social, abbonamenti e rumore editoriale."""
+        """Pulisce il markdown rimuovendo rumore editoriale ma conservando la sintassi MD."""
         text = ""
         if hasattr(result, 'markdown_v2') and result.markdown_v2:
             text = result.markdown_v2.raw_markdown
@@ -78,30 +78,29 @@ class IlPostParser(BaseParser):
         if not text:
             return ""
 
-        
         # 1. Taglia tutto ciò che precede il titolo H1
         match_start = self.re_h1_start.search(text)
         if match_start:
             text = text[match_start.start():]
         
-        # 2. Taglia commenti, tag e footer)
+        # 2. Taglia commenti, tag e footer
         text = self.re_footer_cut.split(text)[0]
         
-        # 3. RIMOZIONE RUMORE (Social, Leggi anche, Abbonamenti)
+        # 3. RIMOZIONE RUMORE (Social, Leggi anche, Abbonamenti, Audio, Didascalie)
         text = self.re_social_noise.sub('', text)
         text = self.re_leggi_anche.sub('', text)
         text = self.re_abbonamento.sub('', text)
         text = self.re_audio_time.sub('', text)
+        text = self.re_captions.sub('', text) # <--- Taglio didascalie!
         
-        # 4. NORMALIZZAZIONE SPAZI E PUNTEGGIATURA
-        text = re.sub(r'\.\[', '. [', text)
-        text = re.sub(r',\[', ', [', text)
+        # 4. NORMALIZZAZIONE SPAZI (Senza intaccare i marcatori Markdown)
+        text = '\n'.join([line.strip() for line in text.split('\n')])
         text = re.sub(r'\n{3,}', '\n\n', text)
 
         return text.strip()
         
     def format_result(self, url: str, result: CrawlResult) -> Dict[str, Any]:
-        """Formatta il risultato finale speculare a WikipediaParser."""
+        """Formatta il risultato finale."""
         return {
             "url": url,
             "domain": self.domain,
@@ -112,7 +111,7 @@ class IlPostParser(BaseParser):
 
 if __name__ == "__main__":
     async def main():
-        url = "https://www.ilpost.it/2023/05/02/le-nuove-regole-del-post/" # Esempio
+        url = "https://www.ilpost.it/2023/05/02/le-nuove-regole-del-post/"
         parser = IlPostParser()
         result = await parser.run(url)
         
