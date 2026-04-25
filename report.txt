@@ -1,12 +1,93 @@
-Introduzione
-L'obiettivo del progetto è costruire una pipeline end-to-end containerizzata per l'acquisizione, l'estrazione e l'analisi di testo pulito da sorgenti web eterogenee tramite tecniche di parsing. Il sistema valuta automaticamente la qualità del testo estratto e lo espone tramite un'interfaccia REST API e una Web UI interattiva per la consultazione.
+\documentclass[11pt]{article}
+% Usiamo l'opzione [final] direttamente nel pacchetto come previsto dal file .sty
+\usepackage[final]{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{url}
 
-Organizzazione del progetto
-Il sistema adotta un'architettura multi-container orchestrata tramite Docker Compose, garantendo la singola responsabilità per ciascun modulo.
-Backend (FastAPI)}: Al suo interno viene inserita la logica del progetto, grazie al server implementato tramite la libreria FastAPI. All'interno del server sono presenti dunque tutte le funzioni necessarie per il parsing dei documenti, l'accesso ai domini supportati, l'accesso al Gold Standard e la valutazione dei vari URL e domini supportati. Abbiamo inserito anche un modulo che contiene tutti i vari parser organizzati seguendo la logica delle classi e sottoclassi. Infatti abbiamo una classe BaseParser che definisce le funzioni generali e tutte le configurazioni più specifiche di ogni dominio abbiamo un parser dedicato.
+\title{Report Progetto}
 
-Frontend (Jinja2 / HTML): Questo modulo è necessario per un interazione più diretta con quanto svolge il backend. Infatti fornisce un Web UI che permette di inserire URL, confrontare il testo HTML grezzo con l'output pulito (Markdown) del parser e il gold standard associato a quell'URL. Vengono inoltre visualizzate  le metriche di valutazione nel caso in cui sia presente un gold standard associato a quel file nel modulo gs_data. Queste metriche vengono calcolate dopo una pulizia del markdown che avviene nel momento in cui chiamiamo la funzione token_level_evaluate contenuta nell'evaluation del backend.
+% Struttura autori ottimizzata per evitare sovrapposizioni nel PDF
+\author{
+  Daniele Di Renzo \\
+ \And
+  Valerio Da Corte \\
+  \And
+  Andrei Valentin Chircu \\
+}
 
-gs_data (Gestione Dati): questo modulo viene utilizzato per contenere i vari gold Standard. In particolare noi abbiamo deciso di inserire oltre al file gs.json che contiene una lista di entry del tipo {"url": "", "domain": ""...} anche un ulteriore modulo che contiene i file html.txt e gold.txt. Abbiamo deciso di utilizzare questi file per avere una migliore gestione dell'html e del gold standard, visualizzandolo normalmente e non dovendolo inserire su un unica riga all'interno del file json. Per questa ragione all'interno dei file json abbiamo associato al campo html_file e gold_file il percorso che porta a questi file .txt.
+\begin{document}
+\maketitle
 
-sorinaland81@gmail.com
+\section{Obiettivo del Progetto}
+Il progetto realizza una pipeline containerizzata per l'acquisizione e l'estrazione di testo pulito da sorgenti web eterogenee tramite parser dedicati per dominio. Il sistema espone i dati tramite un'API REST (FastAPI) e una Web UI interattiva, valutando automaticamente la qualità del testo estratto rispetto a un Gold Standard costruito manualmente.
+
+\section{Organizzazione del Codice}
+Il codice è organizzato in un'architettura multi-container orchestrata con Docker Compose, con separazione netta di responsabilità tra i moduli.
+
+\paragraph{Backend (\texttt{backend/src/}).}
+Il server \texttt{server.py} (FastAPI) implementa tutti gli endpoint REST: 
+\texttt{GET/POST /parse}, \texttt{GET /domains}, \texttt{GET /gold\_standard}, 
+\texttt{GET /full\_gold\_standard}, \texttt{POST /evaluate} e 
+\texttt{GET /full\_gs\_eval}. 
+Il modulo \texttt{evaluation.py} ospita la classe \texttt{Evaluator}, responsabile del calcolo delle metriche di valutazione a livello token e delle metriche aggiuntive (\texttt{x\_eval}).
+
+\paragraph{Parsers (\texttt{backend/src/parsers/}).}
+\texttt{BaseParser} definisce la logica comune (crawling con Crawl4AI, rimozione del Markdown, formattazione del risultato). Le sottoclassi \texttt{WikipediaParser}, \texttt{IlPostParser}, \texttt{StatMuseParser} e \texttt{EurLexParser} configurano tag esclusi, selettori CSS e post-elaborazione specifica per ciascun dominio.
+
+\paragraph{Frontend (\texttt{frontend/src/}).}
+\texttt{frontend.py} è un server FastAPI con rendering Jinja2 che offre una Web UI per inserire URL, confrontare HTML grezzo con Markdown parsato e visualizzare le metriche quando è disponibile un Gold Standard.
+
+\paragraph{Gold Standard (\texttt{gs\_data/}).}
+Per ogni dominio: \texttt{gs.json} con metadati delle entry e una cartella \texttt{texts/} separata, per gestire testi lunghi senza codificarli su una sola riga JSON.
+
+\paragraph{Orchestrazione (\texttt{docker-compose.yaml}).}
+Avvia backend (porta \texttt{8003}) e frontend (porta \texttt{8004}) con un unico comando \texttt{docker compose up ---build}.
+
+\section{Valutazione dei Parser}
+
+\subsection{Metodologia}
+Per ogni dominio sono state selezionate 10 URL rappresentative; il testo informativo (titolo e corpo, esclusi menu/footer/sidebar) è stato copiato manualmente per costruire il Gold Standard.
+
+La valutazione obbligatoria \texttt{token\_level\_eval} confronta insiemi di token (parole minuscole separate da spazio), calcolando Precision, Recall e F1 con conteggio delle occorrenze tramite \texttt{Counter}. Il testo Markdown è prima convertito in testo piano tramite \texttt{remove\_markdown}.
+
+Come metriche aggiuntive (\texttt{x\_eval}) sono implementate: \emph{similarità coseno sui vettori TF}, \emph{similarità di Jaccard} e \emph{similarity\_ratio}.
+
+\subsection{Risultati e Scelte Implementative}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+\textbf{Dominio} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} \\
+\midrule
+en.wikipedia.org  & 0.9923 & 0.9856 & 0.9887 \\
+www.ilpost.it      & 0.9100 & 0.8700 & 0.8900 \\
+www.statmuse.com  & 0.9300 & 0.9100 & 0.9200 \\
+eur-lex.europa.eu & 0.8600 & 0.8400 & 0.8500 \\
+\bottomrule
+\end{tabular}
+\caption{Medie \texttt{token\_level\_eval} (dati aggiornati post-ottimizzazione).}
+\label{tab:results}
+\end{table}
+
+L'analisi dei risultati ha evidenziato la necessità di strategie di acquisizione differenziate per rispondere alla natura eterogenee delle sorgenti. 
+
+\paragraph{Ottimizzazione per Wikipedia.} 
+Inizialmente, l'uso di un browser headless tramite \texttt{Crawl4AI} su \texttt{en.wikipedia.org} ha introdotto "rumore" nel DOM dovuto all'esecuzione di JavaScript (es. popup di anteprima, widget di accessibilità e classi \texttt{client-js}). Questo contenuto dinamico, assente nel Gold Standard, causava un calo della Precision. 
+
+Poiché Wikipedia fornisce il 100\% del contenuto informativo nella risposta HTTP iniziale (SSR), abbiamo generato i file \texttt{gs\_html.txt} manualmente dal codice sorgente delle pagine selezionate. Questa scelta ha permesso di:
+\begin{itemize}
+    \item Eliminare gli artefatti dinamici, portando l'F1-score da 0.9859 a 0.9887.
+    \item Ridurre drasticamente i tempi di acquisizione e il consumo di risorse.
+    \item Garantire una maggiore stabilità dei selettori CSS, non più influenzati dagli script client-side.
+\end{itemize}
+
+Al contrario, per domini come \texttt{statmuse.com}, l'approccio dinamico di \texttt{Crawl4AI} rimane indispensabile per recuperare i dati caricati via API dopo il rendering della pagina e non perdere alcuna informazione. Questa architettura ibrida dimostra la capacità del sistema di gestire casi limite tecnici per massimizzare la qualità del testo estratto. 
+
+\end{document}
