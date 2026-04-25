@@ -240,7 +240,7 @@ async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
     #cleaned_parsed_text = clean_markdown(request.parsed_text)
     
     token_level_eval = Evaluator.token_level_eval(request.parsed_text, request.gold_text)
-    x_eval = Evaluator.x_eval(request.parsed_text, request.gold_text)
+    x_eval = Evaluator.x_eval_complete(request.parsed_text, request.gold_text)
     
 
     result=EvaluateResponse(token_level_eval=token_level_eval, x_eval=x_eval)
@@ -251,104 +251,54 @@ async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
 #TODO: fixato. x Valerio rivedi se è corretto 
 @app.get("/full_gs_eval")
 async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
-    """
-    Restituisce l'evaluation aggregata su tutto il GS.
-    """
-    script_dir = Path(__file__).parent.resolve()
-    base_dir = script_dir.parent.parent
+    
     json_path = find_path(domain)
     if not json_path:
         raise HTTPException(status_code=400, detail="Dominio non supportato")
     
-    # Carica i dati dal file JSON
     with open(json_path, 'r', encoding='utf-8') as f:
         gold_data = json.load(f)
     
     eval_response = await evaluate_gold_standard(gold_data)
 
     if not eval_response:
-        return FullGsEvalResponse(token_level_eval={"precision": 0, "recall": 0, "f1": 0}, x_eval={"jaccard": 0, "rouge_l": 0, "levenshtein": 0, "similarity_ratio": 0, "cosine_similarity": 0})
+        return FullGsEvalResponse(
+            token_level_eval={"precision": 0, "recall": 0, "f1": 0}, 
+            x_eval={"boilerplate_ratio_extracted": 0, "boilerplate_fidelity": 0, "cosine_similarity": 0}
+        )
     
-    precisions = []
-    recalls = []
-    f1_scores = []
-    #extra metrics
-    jaccard_scores = []
-    rouge_l_scores = []
-    levenshtein_distances = []
-    similarity_ratios = []
-    cosine_similarities = []
+    # Inizializziamo le liste
+    data = {
+        "p": [], "r": [], "f1": [],
+        "cos": [], "bp_ext": [], "bp_diff": []
+    }
 
-    for entry_name, metrics in eval_response.items():
-        precision = metrics.get("precision", 0)
-        recall = metrics.get("recall", 0)
-        f1 = metrics.get("f1", 0)
-        #extra metrics
-        x_eval = metrics.get("x_eval", {})
-        jaccard = x_eval.get("jaccard", 0)
-        rouge_l = x_eval.get("rouge_l", 0)
-        levenshtein = x_eval.get("levenshtein", 0)
-        similarity_ratio = x_eval.get("similarity_ratio", 0)
-        cosine_similarity = x_eval.get("cosine_similarity", 0)
-
+    # Popolamento (un solo ciclo)
+    for metrics in eval_response.values():
+        data["p"].append(metrics.get("precision", 0))
+        data["r"].append(metrics.get("recall", 0))
+        data["f1"].append(metrics.get("f1", 0))
         
-        precisions.append(precision)
-        recalls.append(recall)
-        f1_scores.append(f1)
-        #extra metrics
-        jaccard_scores.append(jaccard)
-        similarity_ratios.append(similarity_ratio)
-        cosine_similarities.append(cosine_similarity)
-        rouge_l_scores.append(rouge_l)
-        levenshtein_distances.append(levenshtein)
+        x = metrics.get("x_eval", {})
+        data["cos"].append(x.get("cosine_similarity", 0))
+        data["bp_ext"].append(x.get("boilerplate_ratio_extracted", 0))
+        data["bp_diff"].append(x.get("boilerplate_fidelity", 0))
 
-    avg_f1 = 0
-    avg_precision = 0
-    avg_recall = 0
-    #extra metrics
-    avg_jaccard = 0
-    avg_rouge_l = 0
-    avg_levenshtein = 0
-    avg_similarity_ratio = 0
-    avg_cosine_similarity = 0
-    if precisions:
-        if len(precisions)==0:
-            avg_precision =0
-        else:
-            avg_precision = sum(precisions) / len(precisions)
-        if len(recalls)==0:
-            avg_recall =0
-        else:   
-            avg_recall = sum(recalls) / len(recalls)
-        if len(f1_scores)==0:
-            avg_f1 =0
-        else:
-            avg_f1 = sum(f1_scores) / len(f1_scores)
-        #extra metrics
-        if len(jaccard_scores)==0:
-            avg_jaccard =0
-        else:
-            avg_jaccard = sum(jaccard_scores) / len(jaccard_scores)
-        if len(rouge_l_scores)==0:
-            avg_rouge_l =0
-        else:
-            avg_rouge_l = sum(rouge_l_scores) / len(rouge_l_scores)
-        if len(levenshtein_distances)==0:
-            avg_levenshtein =0
-        else:
-            avg_levenshtein = sum(levenshtein_distances) / len(levenshtein_distances)
-        if len(similarity_ratios)==0:
-            avg_similarity_ratio =0
-        else:
-            avg_similarity_ratio = sum(similarity_ratios) / len(similarity_ratios)
-        if len(cosine_similarities)==0:
-            avg_cosine_similarity =0
-        else:
-            avg_cosine_similarity = sum(cosine_similarities) / len(cosine_similarities)
+    # Helper per la media
+    avg = lambda l: sum(l) / len(l) if l else 0.0
 
-
-    result = FullGsEvalResponse(token_level_eval=  {"precision": avg_precision, "recall": avg_recall,"f1": avg_f1}, x_eval={"jaccard": avg_jaccard, "rouge_l": avg_rouge_l, "levenshtein": avg_levenshtein, "similarity_ratio": avg_similarity_ratio, "cosine_similarity": avg_cosine_similarity})
-    return result
+    return FullGsEvalResponse(
+        token_level_eval={
+            "precision": avg(data["p"]),
+            "recall": avg(data["r"]),
+            "f1": avg(data["f1"])
+        },
+        x_eval={
+            "boilerplate_ratio_extracted": avg(data["bp_ext"]),
+            "boilerplate_fidelity": avg(data["bp_diff"]),
+            "cosine_similarity": avg(data["cos"])
+        }
+    )
 
 def find_path_parser(url: str,base_dir: Path) -> Optional[Any]:
     """
