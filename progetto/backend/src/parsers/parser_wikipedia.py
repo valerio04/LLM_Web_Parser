@@ -17,7 +17,7 @@ class WikipediaParser(BaseParser):
     """Parser specializzato per articoli Wikipedia con pulizia markdown avanzata."""
 
     def __init__(self):
-        super().__init__("wikipedia.org")
+        super().__init__("en.wikipedia.org")
 
     def create_crawler_config(self) -> CrawlerRunConfig:
         """Configurazione del crawler per Wikipedia.

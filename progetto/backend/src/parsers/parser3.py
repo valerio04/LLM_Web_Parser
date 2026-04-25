@@ -21,8 +21,8 @@ class EurLexParser(BaseParser):
         
     def create_crawler_config(self) -> CrawlerRunConfig:
         return CrawlerRunConfig(
-            simulate_user=True,           # Simula comportamento umano
-            override_navigator=True,      # Bypassa bot-detection
+            simulate_user=True,
+            override_navigator=True,
             wait_for="css:#document1, .EurlexContent",
 
             excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'noscript', 'form', 'iframe'],
@@ -33,14 +33,14 @@ class EurLexParser(BaseParser):
                 ".NavSearch, .EurlexSearch, .Sidebar, .SidebarTools, .wt-banner, "
                 ".cookie-consent, #iubenda-cs-banner, .lseu-section-relevant-terms, "
                 ".dropdown-menu, .LanguageSearch, p.cojnote, #PP1Contents, #PP2Contents, #PP3Contents, .oj-note,"
-                ".lseu-section-summary-of, .dropdown-menu"
+                ".lseu-section-summary-of, .dropdown-menu, .oj-hd-lg, .oj-hd-coll"
             ),
             # Selettore specifico per il corpo del testo del glossario
             # #PP3Contents è il contenitore standard del testo istituzionale 
             word_count_threshold=10,
             cache_mode=CacheMode.BYPASS,
             exclude_external_images=True,
-            # Importante per Crawl4AI: prova a usare 'fit_markdown' per evitare ripetizioni
+            
             process_iframes=False,
             remove_overlay_elements=True,
             page_timeout=60000, 
@@ -56,16 +56,13 @@ class EurLexParser(BaseParser):
 
         title = ""
 
-        # 3. TENTATIVO 2 (FALLBACK): Scansione del DOM (Per documenti come 52026PC0130)
-        # Arriviamo qui SOLO se il metadato era vuoto o se era un falso titolo CELEX
         if result.html:
             soup = BeautifulSoup(result.html, 'html.parser')
             
+            # estrazione titolo per pagine con id title
             elemento_titolo = soup.find(id="title")
 
-            # 4. Estrai il testo in modo sicuro
             if elemento_titolo:
-                # get_text(strip=True) prende solo il testo testuale e toglie gli spazi vuoti extra
                 mio_titolo_custom = elemento_titolo.get_text(strip=True)
                 return mio_titolo_custom
             
@@ -83,7 +80,7 @@ class EurLexParser(BaseParser):
                 if h1_text:
                     return h1_text
             
-        # 1. TENTATIVO 1: Metadati (Il tuo metodo originale che funziona quasi sempre)
+        # se i tentativi precedenti falliscono provo ad estrarre da metadata (funziona quasi sempre)
         if result.metadata and result.metadata.get("title"):
             title = result.metadata.get("title", "")
         elif result.html:
@@ -106,6 +103,7 @@ class EurLexParser(BaseParser):
         return title if title else "EUR_Lex_Senza_Titolo"
     
     def _deduplicate(self, text: str) -> str:
+        """"""
         paragraphs = re.split(r'\n{2,}', text)
         clean_paras = []
         seen = set()
