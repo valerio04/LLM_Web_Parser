@@ -265,12 +265,30 @@ class Evaluator:
             return 0.0
         
         return dot_product / (norm1 * norm2)
+    
+
+    
+
+    @staticmethod
+    def boilerplate_ratio(text: str) -> float:
+        """
+        Calcola il rapporto tra caratteri alfanumerici e lunghezza totale.
+        Un ratio basso indica molto 'rumore' (simboli, spazi eccessivi, boilerplate).
+        """
+        if not text:
+            return 0.0
+        
+        # Conta solo lettere e numeri
+        alphanumeric_chars = len(re.sub(r'[^\w]', '', text))
+        total_chars = len(text)
+        
+        return alphanumeric_chars / total_chars if total_chars > 0 else 0.0
 
     
 
 
     @staticmethod
-    def x_eval(extracted_text: str, gold_text: str) -> Dict[str, float]:
+    def x_eval_fast(extracted_text: str, gold_text: str) -> Dict[str, float]:
         
         # Esempio di valutazione combinata
         
@@ -278,39 +296,65 @@ class Evaluator:
         extracted_tokens = Evaluator.tokenize(cleaned_extracted_text)
         gold_tokens = Evaluator.tokenize(gold_text)
             
-        levenshtein = 0
-        similarity = 0
-        jaccard = 0
-        rouge_l = 0
+        
         cosine_sim = 0
+        bp_extracted = 0
+        bp_gold = 0
+        bp_diff = 0
 
-        #TODO: capire com egestire il fatto che rallentano molto la valutazione
+      
         
         # O(N + M) 
         cosine_sim = Evaluator.cosine_similarity_manual(gold_tokens, extracted_tokens)
 
-        # O(N + M) 
-        jaccard = Evaluator.jaccard_similarity(extracted_tokens, gold_tokens)
-
-        # O(N^2) 
-        similarity = Evaluator.similarity_ratio(gold_text, cleaned_extracted_text)
-        
-        # O(N * M) 
-        #levenshtein = Evaluator.levenshtein_dist(extracted_tokens, gold_tokens)
-        
-        # O(N * M) 
-        #rouge_l = Evaluator.rouge_l_simplified(gold_tokens, extracted_tokens)
-        
-        
+        # O(N) + O(M)
+        # Boilerplate Ratio: la calcoliamo per entrambi per vedere quanto è "sporco" il parser
+        bp_extracted = Evaluator.boilerplate_ratio(cleaned_extracted_text)
+        bp_gold = Evaluator.boilerplate_ratio(gold_text)
+        # La differenza ci dice quanto boilerplate il parser ha lasciato dentro (o tolto troppo)
+        bp_diff = abs(bp_extracted - bp_gold) 
+        bp_fidelity = 1.0 - bp_diff
 
         return {
-            "jaccard": jaccard,
-            "levenshtein": levenshtein,
-            "similarity_ratio": similarity,
-            "rouge_l": rouge_l,
-            "cosine_similarity": cosine_sim
+            "cosine_similarity": cosine_sim,
+            "boilerplate_ratio_extracted": bp_extracted,
+            "boilerplate_fidelity": bp_fidelity
         }
 
+
+
+
+    @staticmethod
+    def x_eval_complete(extracted_text: str, gold_text: str) -> Dict[str, float]:
+        
+        cleaned_extracted_text = BaseParser.remove_markdown(extracted_text)
+        extracted_tokens = Evaluator.tokenize(cleaned_extracted_text)
+        gold_tokens = Evaluator.tokenize(gold_text)
+            
+        # --- Metriche Veloci ---
+        cosine_sim = Evaluator.cosine_similarity_manual(gold_tokens, extracted_tokens)
+        
+        # Boilerplate Ratio: la calcoliamo per entrambi per vedere quanto è "sporco" il parser
+        bp_extracted = Evaluator.boilerplate_ratio(cleaned_extracted_text)
+        bp_gold = Evaluator.boilerplate_ratio(gold_text)
+        # La differenza ci dice quanto boilerplate il parser ha lasciato dentro (o tolto troppo)
+        bp_diff = abs(bp_extracted - bp_gold) 
+        bp_fidelity = 1.0 - bp_diff
+
+        
+        
+        # --- Metriche Molto Lente ---
+        levenshtein = Evaluator.levenshtein_dist(extracted_tokens, gold_tokens)
+        rouge_l = Evaluator.rouge_l_simplified(gold_tokens, extracted_tokens)
+       
+
+        return {
+            "levenshtein": levenshtein,
+            "rouge_l": rouge_l,
+            "cosine_similarity": cosine_sim, 
+            "boilerplate_ratio_extracted": bp_extracted,
+            "boilerplate_fidelity": bp_fidelity
+        }
 
 #=================fine extra======================
 
@@ -471,7 +515,7 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
             # 4. Valutazione
             token_eval_result = Evaluator.token_level_eval(extracted_text, gold_text)
             x_eval_result = {}
-            x_eval_result = Evaluator.x_eval(extracted_text, gold_text)
+            x_eval_result = Evaluator.x_eval_fast(extracted_text, gold_text)
             print(f"[INFO] {entry['title']}: {token_eval_result} | x_eval: {x_eval_result}")
            
             merged = {
