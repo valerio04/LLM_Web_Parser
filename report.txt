@@ -1,0 +1,12 @@
+Introduzione
+L'obiettivo del progetto è costruire una pipeline end-to-end containerizzata per l'acquisizione, l'estrazione e l'analisi di testo pulito da sorgenti web eterogenee tramite tecniche di parsing. Il sistema valuta automaticamente la qualità del testo estratto e lo espone tramite un'interfaccia REST API e una Web UI interattiva per la consultazione.
+
+Organizzazione del progetto
+Il sistema adotta un'architettura multi-container orchestrata tramite Docker Compose, garantendo la singola responsabilità per ciascun modulo.
+Backend (FastAPI)}: Al suo interno viene inserita la logica del progetto, grazie al server implementato tramite la libreria FastAPI. All'interno del server sono presenti dunque tutte le funzioni necessarie per il parsing dei documenti, l'accesso ai domini supportati, l'accesso al Gold Standard e la valutazione dei vari URL e domini supportati. Abbiamo inserito anche un modulo che contiene tutti i vari parser organizzati seguendo la logica delle classi e sottoclassi. Infatti abbiamo una classe BaseParser che definisce le funzioni generali e tutte le configurazioni più specifiche di ogni dominio abbiamo un parser dedicato.
+
+Frontend (Jinja2 / HTML): Questo modulo è necessario per un interazione più diretta con quanto svolge il backend. Infatti fornisce un Web UI che permette di inserire URL, confrontare il testo HTML grezzo con l'output pulito (Markdown) del parser e il gold standard associato a quell'URL. Vengono inoltre visualizzate  le metriche di valutazione nel caso in cui sia presente un gold standard associato a quel file nel modulo gs_data. Queste metriche vengono calcolate dopo una pulizia del markdown che avviene nel momento in cui chiamiamo la funzione token_level_evaluate contenuta nell'evaluation del backend.
+
+gs_data (Gestione Dati): questo modulo viene utilizzato per contenere i vari gold Standard. In particolare noi abbiamo deciso di inserire oltre al file gs.json che contiene una lista di entry del tipo {"url": "", "domain": ""...} anche un ulteriore modulo che contiene i file html.txt e gold.txt. Abbiamo deciso di utilizzare questi file per avere una migliore gestione dell'html e del gold standard, visualizzandolo normalmente e non dovendolo inserire su un unica riga all'interno del file json. Per questa ragione all'interno dei file json abbiamo associato al campo html_file e gold_file il percorso che porta a questi file .txt.
+
+sorinaland81@gmail.com

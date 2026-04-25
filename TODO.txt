@@ -1,0 +1,3 @@
+verificare se si può sostituire remove_markdown in base_parser
+vedere parser_wikipedia
+nei json dovremmo avere html_text invece di html_file
