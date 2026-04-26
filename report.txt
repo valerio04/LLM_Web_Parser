@@ -1,12 +1,130 @@
-Introduzione
-L'obiettivo del progetto è costruire una pipeline end-to-end containerizzata per l'acquisizione, l'estrazione e l'analisi di testo pulito da sorgenti web eterogenee tramite tecniche di parsing. Il sistema valuta automaticamente la qualità del testo estratto e lo espone tramite un'interfaccia REST API e una Web UI interattiva per la consultazione.
+\documentclass[11pt]{article}
+\usepackage[final]{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{url}
 
-Organizzazione del progetto
-Il sistema adotta un'architettura multi-container orchestrata tramite Docker Compose, garantendo la singola responsabilità per ciascun modulo.
-Backend (FastAPI)}: Al suo interno viene inserita la logica del progetto, grazie al server implementato tramite la libreria FastAPI. All'interno del server sono presenti dunque tutte le funzioni necessarie per il parsing dei documenti, l'accesso ai domini supportati, l'accesso al Gold Standard e la valutazione dei vari URL e domini supportati. Abbiamo inserito anche un modulo che contiene tutti i vari parser organizzati seguendo la logica delle classi e sottoclassi. Infatti abbiamo una classe BaseParser che definisce le funzioni generali e tutte le configurazioni più specifiche di ogni dominio abbiamo un parser dedicato.
+\title{Report Progetto}
 
-Frontend (Jinja2 / HTML): Questo modulo è necessario per un interazione più diretta con quanto svolge il backend. Infatti fornisce un Web UI che permette di inserire URL, confrontare il testo HTML grezzo con l'output pulito (Markdown) del parser e il gold standard associato a quell'URL. Vengono inoltre visualizzate  le metriche di valutazione nel caso in cui sia presente un gold standard associato a quel file nel modulo gs_data. Queste metriche vengono calcolate dopo una pulizia del markdown che avviene nel momento in cui chiamiamo la funzione token_level_evaluate contenuta nell'evaluation del backend.
+\author{
+  Daniele Di Renzo \\
+ \And
+  Valerio Da Corte \\
+  \And
+  Andrei Valentin Chircu \\
+}
 
-gs_data (Gestione Dati): questo modulo viene utilizzato per contenere i vari gold Standard. In particolare noi abbiamo deciso di inserire oltre al file gs.json che contiene una lista di entry del tipo {"url": "", "domain": ""...} anche un ulteriore modulo che contiene i file html.txt e gold.txt. Abbiamo deciso di utilizzare questi file per avere una migliore gestione dell'html e del gold standard, visualizzandolo normalmente e non dovendolo inserire su un unica riga all'interno del file json. Per questa ragione all'interno dei file json abbiamo associato al campo html_file e gold_file il percorso che porta a questi file .txt.
+\begin{document}
+\maketitle
 
-sorinaland81@gmail.com
+\section{Obiettivo del Progetto}
+
+Il progetto realizza una pipeline containerizzata per l'acquisizione e l'estrazione di testo pulito da sorgenti web eterogenee tramite parser dedicati per dominio. Il sistema espone i dati tramite un'API REST (FastAPI) e una Web UI interattiva, valutando automaticamente la qualità del testo estratto rispetto a un Gold Standard costruito manualmente.
+
+\section{Organizzazione del Codice}
+
+Il codice segue un'architettura multi-container orchestrata con Docker Compose, con separazione netta di responsabilità tra i moduli.
+
+\paragraph{Server REST (\texttt{backend/src/server.py}).}
+Implementa tutti gli endpoint FastAPI: \texttt{GET/POST /parse}, \texttt{GET /domains}, \texttt{GET /gold\_standard}, \texttt{GET /full\_gold\_standard}, \texttt{POST /evaluate} e \texttt{GET /full\_gs\_eval}. I due metodi \texttt{/parse} gestiscono rispettivamente il parsing online (via \texttt{GET}) e il parsing da HTML locale già scaricato (via \texttt{POST}).
+
+\paragraph{Valutazione (\texttt{backend/src/evaluation.py}).}
+La classe \texttt{Evaluator} implementa le metriche di valutazione a livello token (\texttt{token\_level\_eval}) e le metriche aggiuntive (\texttt{x\_eval}). La funzione \texttt{evaluate\_gold\_standard} orchestra la valutazione su tutto il Gold Standard, selezionando il parser corretto per dominio.
+
+\paragraph{Parser (\texttt{backend/src/parsers/}).}
+\texttt{BaseParser} definisce la logica comune: crawling con Crawl4AI, metodo \texttt{remove\_markdown} per convertire Markdown in testo piano, e il metodo \texttt{run\_from\_html} per il parsing da HTML locale. Le sottoclassi \texttt{WikipediaParser}, \texttt{IlPostParser}, \texttt{StatMuseParser} ed \texttt{EurLexParser} sovrascrivono \texttt{create\_crawler\_config}, \texttt{extract\_title}, \texttt{parse\_markdown} e \texttt{format\_result} con selettori CSS e logica di post-elaborazione specifici per ciascun dominio.
+
+\paragraph{Frontend (\texttt{frontend/src/frontend.py}).}
+Server FastAPI con rendering Jinja2 che offre una Web UI per inserire URL, confrontare HTML grezzo con il testo parsato e visualizzare le metriche di valutazione quando è disponibile un Gold Standard per quell'URL.
+
+\paragraph{Gold Standard (\texttt{gs\_data/}).}
+Per ogni dominio è presente un file \texttt{gs.json} con i metadati delle 10 entry (URL, dominio, titolo, percorsi ai file) e una cartella \texttt{texts/} con i testi lunghi. Il contenuto testuale è referenziato tramite percorso a file esterno anziché inline nel JSON, per mantenere il file leggero e facilmente versionabile.
+
+\paragraph{Orchestrazione (\texttt{docker-compose.yaml}).}
+Avvia backend (porta \texttt{8003}) e frontend (porta \texttt{8004}) con un unico comando \texttt{docker compose up {-}{-}build}. Il frontend è configurato con \texttt{depends\_on: condition: service\_healthy}, garantendo che si avvii solo dopo che il backend ha superato il proprio healthcheck HTTP.
+
+\section{Valutazione dei Parser}
+
+\subsection{Metodologia}
+
+Per ogni dominio sono state selezionate 10 URL rappresentative; il testo informativo (titolo e corpo, esclusi menu, footer e sidebar) è stato copiato manualmente per costruire il Gold Standard.
+
+La metrica principale \texttt{token\_level\_eval} confronta i token (parole minuscole, punteggiatura rimossa) dei due testi usando \texttt{Counter}, che tiene conto delle ripetizioni anziché operare su insiemi puri. Questa scelta è deliberata: un parser che duplica interi paragrafi verrebbe penalizzato correttamente sulla Precision, mentre con un approccio a insiemi tale difetto passerebbe inosservato.
+
+\subsection{Risultati}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+\textbf{Dominio} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} \\
+\midrule
+en.wikipedia.org  & 0.993 & 0.986 & 0.989 \\
+www.ilpost.it      & 0.999 & 1 & 1 \\
+www.statmuse.com  & 0.999 & 1 & 0.999 \\
+eur-lex.europa.eu & 0.969 & 1 & 0.984 \\
+\bottomrule
+\end{tabular}
+\caption{Medie \texttt{token\_level\_eval} per dominio (post-ottimizzazione).}
+\label{tab:results}
+\end{table}
+
+I risultati mostrano un'elevata qualità di estrazione su tutti i domini, con F1 sempre superiore a 0.98. Il valore di Precision leggermente inferiore per EUR-Lex (0.969) riflette la presenza di elementi strutturali non sempre eliminabili con i soli selettori CSS.
+
+\subsection{Scelte Implementative}
+\label{sec:scelte}
+
+L'analisi ha evidenziato come strategie di acquisizione differenziate siano fondamentali
+per massimizzare la qualità dell'estrazione.
+
+Per \texttt{en.wikipedia.org}, l'uso del browser headless introduceva rumore nel DOM
+causato dall'esecuzione di JavaScript (popup di anteprima, widget di accessibilità,
+classi \texttt{client-js}), contenuto dinamico assente nel Gold Standard e responsabile
+di un calo di Precision. Poiché Wikipedia serve il 100\% del testo informativo già nella
+risposta HTTP iniziale (Server-Side Rendering), abbiamo salvato il sorgente HTML statico
+delle 10 pagine selezionate ed eseguito il parsing da locale tramite \texttt{run\_from\_html}:
+l'F1 è salito da 0.9859 a 0.9887, i tempi di acquisizione si sono ridotti drasticamente
+e i selettori CSS sono diventati più stabili.
+
+La situazione è opposta per \texttt{statmuse.com}, dove il browser headless rimane
+indispensabile: i dati statistici vengono iniettati nel DOM via API \emph{dopo} il
+rendering della pagina e sono quindi assenti nel sorgente HTML iniziale. Per questo
+dominio è stata adottata anche una strategia di post-elaborazione con BeautifulSoup
+per estrarre sequenzialmente titoli e tabelle, con deduplicazione per gestire le tabelle
+duplicate generate dai breakpoint CSS responsive.
+
+Questa architettura ibrida --- SSR dove sufficiente, headless dove necessario --- è
+implementata in \texttt{evaluate\_gold\_standard} come strategia locale\,$\rightarrow$\,online:
+si tenta prima il parsing dall'HTML su disco, con fallback automatico al crawling online
+in caso di file mancante o errore.
+\subsection{Metriche Aggiuntive}
+
+Accanto a Precision/Recall/F1, sono implementate cinque metriche aggiuntive raggruppate in \texttt{x\_eval}. Per gestire il loro diverso costo computazionale, sono disponibili in due varianti: \texttt{x\_eval\_fast} ($O(N{+}M)$), usata nella valutazione completa del Gold Standard dove si valutano 10 URL per dominio, e \texttt{x\_eval\_complete} (fino a $O(N{\times}M)$), disponibile nella Web UI per la valutazione di singole URL dove la latenza è accettabile.
+
+\paragraph{Cosine Similarity} [\textit{fast}].
+Rappresenta ciascun testo come vettore di frequenze (TF) e ne misura l'angolo nel spazio vettoriale. A differenza dell'F1, non è influenzata dalla lunghezza del testo: due articoli sullo stesso argomento con vocabolario simile otterranno un punteggio alto anche se uno è molto più lungo dell'altro, rendendola una buona misura di somiglianza tematica.
+
+\paragraph{Boilerplate Ratio \& Fidelity} [\textit{fast}].
+Il \emph{Boilerplate Ratio} è il rapporto tra caratteri alfanumerici e caratteri totali nel testo estratto: un valore basso segnala simboli, spazi eccessivi o markup residuo. La \emph{Boilerplate Fidelity} è il complemento a 1 della differenza assoluta tra il Boilerplate Ratio del testo estratto e quello del Gold Standard: misura quanto il parser preserva la densità informativa della sorgente, penalizzando sia l'estrazione di rumore sia la perdita eccessiva di contenuto.
+
+\paragraph{Levenshtein normalizzato} [\textit{complete}].
+Calcola il numero minimo di operazioni (inserimenti, cancellazioni e sostituzioni di token) necessarie per trasformare la sequenza estratta in quella di riferimento, normalizzato in $[0,1]$. Rispetto all'F1, penalizza esplicitamente le sostituzioni: due testi con lo stesso numero di token ma vocabolario diverso ricevono un punteggio basso, mentre l'F1 potrebbe comunque risultare alto se i token in comune sono molti. Il costo $O(N{\times}M)$ lo rende impraticabile sulla valutazione dell'intero Gold Standard, motivo per cui è incluso solo in \texttt{x\_eval\_complete}.
+
+\paragraph{ROUGE-L} [\textit{complete}].
+Basata sulla Longest Common Subsequence (LCS) tra i token, valuta se l'ordine delle parole è
+preservato. È utile per rilevare parser che estraggono il contenuto corretto ma in ordine alterato,
+ad esempio per sorgenti con layout a colonne o contenuti riorganizzati dal renderer JavaScript.
+Analogamente a Levenshtein, il costo $O(N{\times}M)$ della LCS lo confina in
+\texttt{x\_eval\_complete}.
+
+Nel complesso, le cinque metriche sono state scelte per coprire
+aspetti complementari della qualità: contenuto (\textit{token\_level\_eval}, \textit{Cosine
+Similarity}), struttura e ordine (\textit{ROUGE-L}, \textit{Levenshtein}) e pulizia del testo
+estratto (\textit{Boilerplate Ratio \& Fidelity}).
+
+\end{document}

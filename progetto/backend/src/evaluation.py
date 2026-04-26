@@ -105,8 +105,8 @@ class Evaluator:
         # Pulisci il testo Markdown prima della valutazione
         cleaned_extracted_text = BaseParser.remove_markdown(extracted_text)
 
-        print("=============testo dopo la pulizia da markdown:===============\n", cleaned_extracted_text[:1500])
-        print("=============gold text:===============\n", gold_text[:1500])
+        #print("=============testo dopo la pulizia da markdown:===============\n", cleaned_extracted_text[:1500])
+        #print("=============gold text:===============\n", gold_text[:1500])
 
         extracted_tokens = Evaluator.tokenize(cleaned_extracted_text)
         gold_tokens = Evaluator.tokenize(gold_text)
@@ -397,6 +397,7 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
                 try:
                     html_text = html_file_path.read_text(encoding='utf-8')
                     extracted_result = await parser.run_from_html(entry['url'], html_text)
+                    print(f"[INFO] Parsing LOCALE completato per {entry['url']}")
                 except Exception as e:
                     print(f"[WARNING] run_from_html fallito per {entry['url']}: {e}")
 
@@ -404,6 +405,7 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
             if not extracted_result:
                 try:
                     extracted_result = await parser.run(entry['url'])
+                    print(f"[INFO] Parsing ONLINE completato per {entry['url']}")
                 except Exception as e:
                     print(f"[ERROR] Anche il parsing online è fallito per {entry['url']}: {e}")
 
