@@ -21,10 +21,12 @@ templates = Jinja2Templates(directory=str(_templates_dir))
 
 API_BASE_URL = "http://backend:8003"
 
-def find_path(url: str, base_dir: Path) -> Optional[Any]:
+def find_path(url: str) -> Optional[Any]:
     """
-    Restituisce il parser e il percorso del file JSON corrispondente al dominio dell'URL.
+    Restituisce il percorso del file JSON corrispondente al dominio dell'URL.
     """
+    script_dir = Path(__file__).parent.resolve()
+    base_dir = script_dir.parent.parent
     if "wikipedia.org" in url:
         return base_dir / "gs_data" / "wikipedia_org" / "gs.json"
     elif "ilpost.it" in url:
@@ -47,8 +49,6 @@ class UiResult:
     gold_text: str = ""
     error_message: str = ""
 
-# --- ROTTE SPOSTATE FUORI DA create_app() e rimosso 'async' ---
-
 @app.get("/", response_class=HTMLResponse)
 def index(request: Request) -> HTMLResponse:
     gs_urls = fetch_gs_urls()
@@ -64,9 +64,12 @@ def index(request: Request) -> HTMLResponse:
         },
     )
 
-# TODO: oltre all if selected url, aggiungi and seected_url in gs_urls, vedi se ha senso 
 @app.post("/", response_class=HTMLResponse)
 def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(default="")) -> HTMLResponse:
+    """
+    Esegue il parsing dell'URL selezionato, recupera il gold standard associato e calcola le metriche di valutazione.
+    restituisce una pagina HTML con i risultati.
+    """
     selected_url = url or gs_url or "" 
     
     result = UiResult(url=selected_url)
@@ -76,23 +79,22 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
 
     if selected_url:
         try:
-            #questa per online########
-            '''parse_data = call_backend("/parse", {"url": selected_url})'''
-            ##########################
-
-            #######################################
-            #altra opzione per parseroffline se non ce lo fa online:
-            # Se l'URL selezionato è presente nel GS locale, usa il json locale per trovare
-            # il corrispondente file HTML e chiamare il backend in POST (run_from_html)
+            # cerca il percorso di progetto
             script_dir = Path(__file__).parent.resolve()
             base_dir = script_dir.parent.parent
             local_html = None
-            json_path = find_path(selected_url, base_dir)
+
+            # cerca il percorso associato all'url selezionato
+            json_path = find_path(selected_url)
+
             try:
-                
+                # se il percorso e il file JSON esistono carica il contenuto
                 if json_path and json_path.exists():
                     with open(json_path, 'r', encoding='utf-8') as f:
                         entries = json.load(f)
+
+                    # cerca nel contenuto caricato se trova una entry con lo stesso url di quello selezionato.
+                    # Qui tentiamo di caricare il file HTML associato all'URL (se presente nel GS)
                     for entry in entries:
                         if entry.get('url') == selected_url and entry.get('html_file'):
                             html_file_path = base_dir / 'gs_data' / entry.get('html_file')
@@ -110,22 +112,20 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
             else:
                 # fallback: parsing online
                 parse_data = call_backend("/parse", {"url": selected_url})
-            #############################################################
-            
+
             gold_data = {}
             metrics_data = {}
             
+            # carico il gold standar dell'URL tramite la GET
             try:
                 gold_data = call_backend("/gold_standard", {"url": selected_url})
             except requests.RequestException as e:
                 print(f"[INFO] Nessun Gold Standard trovato per questo URL: {e}")
             
-            
             parsed_text = parse_data.get("parsed_text", "")
             gold_text = gold_data.get("gold_text", "")
           
-            
-			
+            # se esiste il gold_standard associato a quell'URL faccio l'evaluate
             if gold_text:
                 try:
                     metrics_data = call_backend(
@@ -134,11 +134,6 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
                     )
                 except requests.RequestException as e:
                     print(f"[ERROR] Errore durante l'evaluation: {e}")
-
-			# TTODO: non so se il prof vuole il md o il testo pulito nell intefaccia
-			
-            #html_text = remove_markdown(parse_data.get("parsed_text", ""))
-            #plain_text = (re.sub(r'<[^>]+>', '', html_text)).strip()
             
             result = UiResult(
                 url=parse_data.get("url", selected_url),
@@ -182,20 +177,27 @@ def run_parse(request: Request, url: str = Form(default=""), gs_url: str = Form(
 # -------------------------------------------------------------
 
 def fetch_gs_urls() -> List[str]:
+    """
+    Recupera la lista degli URL dei Gold Standard dai file JSON locali.
+    Ritorna una lista di URL.
+    """
     urls = []
     try:
+        # fa una GET domains/ per ottenere tutti i domini supportati e li salva in una lista
         response = requests.get(f"{API_BASE_URL}/domains")
         response.raise_for_status() 
         domini = response.json().get('domains', [])
-        
-        script_dir = Path(__file__).parent.resolve()
-        base_dir = script_dir.parent.parent
-        
+                
         for dominio in domini:
-            json_path = find_path(dominio, base_dir)
+            # cerca il percorso del file JSON associato al dominio
+            json_path = find_path(dominio)
+
+            # se il percorso e il file JSON esistono carica il contenuto
             if json_path and json_path.exists():
                 with open(json_path, 'r', encoding='utf-8') as f:
                     domains_data = json.load(f)
+
+                # inserisci nella lista gli url presenti nel file JSON
                 for entry in domains_data:
                     urls.append(entry.get('url'))
             else:
@@ -209,6 +211,11 @@ def fetch_gs_urls() -> List[str]:
     return urls
 
 def call_backend(endpoint: str, params: Optional[Dict[str, str]] = None, json_payload: Optional[Dict] = None) -> Dict:
+    """
+    Effettua una chiamata al backend, gestendo sia GET che POST a seconda della presenza di json_payload.
+    Ritorna la risposta JSON come dizionario.
+    """
+
     url = f"{API_BASE_URL}{endpoint}"
     if json_payload is None:
         response = requests.get(url, params=params)
@@ -217,22 +224,3 @@ def call_backend(endpoint: str, params: Optional[Dict[str, str]] = None, json_pa
     
     response.raise_for_status()
     return response.json()
-
-
-def remove_markdown(md: str) -> str:
-    """Rimuove ogni traccia di formattazione per il confronto metrico."""
-    # Trasforma MD in HTML
-    html = mistune.html(md)
-    # Estrae solo il testo puro dall'HTML
-    soup = BeautifulSoup(html, "html.parser")
-    # Rimuove i tag ma mantiene il contenuto
-    text = soup.get_text(separator=' ') 
-    # Normalizza spazi e newline
-    text = re.sub(r'\s+', ' ', text)
-    return text.strip()
-
-if __name__ == "__main__":
-    import uvicorn
-    # Assicurati che il nome del file Python corrisponda a "frontend" in "frontend:app"
-    # TODO: ricontrolla
-    uvicorn.run("src.frontend:app", host="0.0.0.0", port=8004)

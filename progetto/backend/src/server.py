@@ -25,9 +25,6 @@ class ParseRequest(BaseModel):
     url: str
     html_text: str
 
-
-# TODO: controllare i domini in server direttamente da qui
-
 class DomainsResponse(BaseModel):
     domains: List[str]
 
@@ -58,6 +55,12 @@ class FullGsEvalResponse(BaseModel):
 
 @app.get("/parse")
 async def parse_document(url: str) -> ParseResponse:
+    """
+    Esegue il parser per un documento di un dominio.
+    Parametri: URL del documento da parsare
+    Ritorna: URL, dominio, titolo, testo HTML originale, testo parsato
+    """
+
     # 1. Ricava le informazioni di parser e path
     parser= find_parser(url)
     
@@ -75,22 +78,20 @@ async def parse_document(url: str) -> ParseResponse:
                              html_text=result['html_text'], 
                              parsed_text=result['parsed_text'])
     
-    # TODO: testare se questa eccezione viene catturata quando il parsing fallisce (es: url non esistente, timeout, ecc.)
     except Exception as e:
         print(f"[ERROR] Errore durante il parsing: {e}")
         raise HTTPException(status_code=500, detail="Errore durante il parsing")
 
 
 
-
-
-
-
 @app.post("/parse")
 async def parse_document_from_html(parse_request: ParseRequest) -> ParseResponse:
     """
-    Esegue il parser per un documento di un dominio.
+    Esegue il parser per un documento di un dominio direttamente dall'HTML presente nel gold standard (se esiste).
+    Parametri: URL, file_HTML
+    Ritorna: URL, dominio, titolo, testo HTML originale, testo parsato
     """
+
     url = parse_request.url
     html_text = parse_request.html_text
     
@@ -111,28 +112,9 @@ async def parse_document_from_html(parse_request: ParseRequest) -> ParseResponse
                              html_text=result['html_text'], 
                              parsed_text=result['parsed_text'])
     
-    # TODO: testare se questa eccezione viene catturata quando il parsing fallisce (es: url non esistente, timeout, ecc.)
     except Exception as e:
         print(f"[ERROR] Errore durante il parsing: {e}")
         raise HTTPException(status_code=500, detail="Errore durante il parsing")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -140,9 +122,13 @@ async def parse_document_from_html(parse_request: ParseRequest) -> ParseResponse
 async def get_domains() -> DomainsResponse:
     """
     Restituisce la lista dei domini assegnati con i link associati.
+    Parametri: None
+    Ritorna: lista domini
     """
+    # cerca il path del progetto a partire da questo file
     script_dir = Path(__file__).parent.resolve()
     base_dir = script_dir.parent.parent
+    # prende il percorso del file domains.json
     json_path = base_dir / "domains.json"
 
     if not json_path.exists():
@@ -158,11 +144,17 @@ async def get_domains() -> DomainsResponse:
 async def get_gold_standard(url: str) -> GoldStandardResponse:
     """
     Restituisce il gold standard per un documento.
+    Parametri: URL
+    Ritorna: URL, dominio, titolo, testo HTML originale, gold_text
     """
-
+    
+    # cerca il path del progetto a partire da questo file
     script_dir = Path(__file__).parent.resolve()
     base_dir = script_dir.parent.parent
+    # restituisce il percorso del file JSON associato al dominio
     json_path = find_path(url)
+
+    # Se il percorso è None (dominio non riconosciuto), da subito l'eccezione 400
     if not json_path:
         raise HTTPException(status_code=400, detail="Dominio non supportato")
     
@@ -194,10 +186,17 @@ async def get_gold_standard(url: str) -> GoldStandardResponse:
 async def get_full_gold_standard(domain: str) -> FullGoldStandardResponse:
     """
     Restituisce tutto il GS del dominio.
+    Parametri: dominio
+    Ritorna: List[{URL, dominio, title, HTML_file, gold_text}]
     """
+
+    # cerca il path del progetto a partire da questo file
     script_dir = Path(__file__).parent.resolve()
     base_dir = script_dir.parent.parent
+    # restituisce il percorso del file JSON associato al dominio
     json_path = find_path(domain)
+
+    # Se il percorso è None (dominio non riconosciuto), da subito l'eccezione 400
     if not json_path:
         raise HTTPException(status_code=400, detail="Dominio non supportato")
     
@@ -206,11 +205,8 @@ async def get_full_gold_standard(domain: str) -> FullGoldStandardResponse:
     with open(json_path, 'r', encoding='utf-8') as f:
         gold_data = json.load(f)
 
-    print("Oggetto JSON caricato:", gold_data)
-
-    
+    # inizializzo la lista che conterrà i GoldStandardResponse
     gold_standard=[]
-    # cerco l'entry corrispondente all'url e restituisco il gold standard
     for entry in gold_data:
         gold_file_path = base_dir / "gs_data" / entry['gold_file']
         html_file_path = base_dir / "gs_data" / entry['html_file']
@@ -232,13 +228,11 @@ async def get_full_gold_standard(domain: str) -> FullGoldStandardResponse:
 @app.post("/evaluate")
 async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
     """
-    Dato risultato parsing e gs restituisce le metriche di evaluation.
-    """
-    
-    #clean_parsed = BaseParser.remove_markdown(request.parsed_text)# da capire meglio
-    # Pulisci il testo Markdown prima della valutazione
-    #cleaned_parsed_text = clean_markdown(request.parsed_text)
-    
+    Esegue l'eval tra il testo parsato e il gold standard.
+    Parametri: parsed_text e gold_text
+    Ritorna: risultati delle metriche associate all'URL (token_level_eval e x_level eval)
+    """    
+        
     token_level_eval = Evaluator.token_level_eval(request.parsed_text, request.gold_text)
     x_eval = Evaluator.x_eval_complete(request.parsed_text, request.gold_text)
     
@@ -247,18 +241,26 @@ async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
     return result
 
 
-
-#TODO: fixato. x Valerio rivedi se è corretto 
 @app.get("/full_gs_eval")
 async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
+    """
+    Esegue l'eval su tutto il GS di un dominio e restituisce la media dei risultati.
+    Parametri: dominio
+    Ritorna: risultati delle metriche associate al dominio (token_level_eval e x_level eval)
+    """
     
+    # restituisce il percorso del file JSON associato al dominio
     json_path = find_path(domain)
+    
+    # Se il percorso è None (dominio non riconosciuto), da subito l'eccezione 400
     if not json_path:
         raise HTTPException(status_code=400, detail="Dominio non supportato")
     
+    # Carico i dati contenuti nel file json
     with open(json_path, 'r', encoding='utf-8') as f:
         gold_data = json.load(f)
     
+    # chiamo la funzione che calcola le metriche di tutto il GS del dominio
     eval_response = await evaluate_gold_standard(gold_data)
 
     if not eval_response:
@@ -273,7 +275,7 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
         "cos": [], "bp_ext": [], "bp_diff": []
     }
 
-    # Popolamento (un solo ciclo)
+    # Popolamento delle liste con i risultati di ogni entry del GS
     for metrics in eval_response.values():
         data["p"].append(metrics.get("precision", 0))
         data["r"].append(metrics.get("recall", 0))
@@ -300,25 +302,11 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
         }
     )
 
-def find_path_parser(url: str,base_dir: Path) -> Optional[Any]:
-    """
-    Restituisce il parser e il percorso del file JSON corrispondente al dominio dell'URL.
-    """
-    if "wikipedia.org" in url:
-        return WikipediaParser(), base_dir / "gs_data" / "wikipedia_org"/ "gs.json"
-    elif "ilpost.it" in url:
-        return IlPostParser(), base_dir / "gs_data" / "ilpost_it" / "gs.json"
-    elif "statmuse.com" in url:
-        return StatMuseParser(), base_dir / "gs_data" / "statmuse_com" / "gs.json"
-    elif "eur-lex.europa.eu" in url:
-        return EurLexParser(), base_dir / "gs_data" / "eurlex_europa_eu" / "gs.json"
-    else:
-        print(f"[WARNING] Dominio non riconosciuto: {url}")
-        return None
-
 def find_parser(url: str) -> Optional[BaseParser]:
     """
     Restituisce il parser corrispondente al dominio dell'URL.
+    Parametri: URL
+    Ritorna: parser associato all'URL
     """
     if "wikipedia.org" in url:
         return WikipediaParser()
@@ -335,6 +323,8 @@ def find_parser(url: str) -> Optional[BaseParser]:
 def find_path(url: str) -> Optional[Path]:
     """
     Restituisce il percorso del file JSON corrispondente al dominio dell'URL.
+    Parametri: URL
+    Ritorna: percorso del file JSON associato al dominio
     """
     script_dir = Path(__file__).parent.resolve()
     base_dir = script_dir.parent.parent
@@ -349,7 +339,3 @@ def find_path(url: str) -> Optional[Path]:
     else:
         print(f"[WARNING] Dominio non riconosciuto: {url}")
         return None
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8003)

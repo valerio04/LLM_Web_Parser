@@ -4,25 +4,6 @@ from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
 import re
 import mistune
 from bs4 import BeautifulSoup
-# Cose da modificare in ogni parser specifico:
-
-# 1. create_crawler_config()
-#    - excluded_tags: adatta ai tag HTML del sito (nav, footer, aside, ecc.) (non home page ma pagine interne)
-#    - word_count_threshold: alza/abbassa per filtrare testo non rilevante
-#    - cache_mode: BYPASS per no-cache, ENABLED per usare cache
-
-# 2. create_browser_config() (OPZIONALE)
-#    - timeout: se il sito è lento
-#    - user_agent: se il sito richiede uno specifico
-#    - headless: sempre True se possibile
-
-# 3. extract_title() (OPZIONALE)
-#    - Se il titolo non è nei metadati standard
-#    - Se serve estrarlo da un selettore CSS particolare
-
-# 4. parse_markdown() / parse_html() (OPZIONALE)
-#    - Se il contenuto deve essere processato in modo speciale
-#    - Es: rimuovere sezioni, formattare diversamente, ecc.
 
 class BaseParser:
     def __init__(self, domain):
@@ -63,21 +44,6 @@ class BaseParser:
             verbose=True
         )
     
-    '''
-    def remove_markdownn(md: str) -> str:
-        """
-        Rimuove il Markdown da una stringa, restituendo solo il testo pulito.
-        Usa la libreria mistune per convertire il Markdown in HTML, poi BeautifulSoup per estrarre solo il testo.
-        """
-        html = mistune.html(md)
-        soup = BeautifulSoup(html, "html.parser")
-        # rimuove i tag lasciando il testo esattamente in-place (nessun separatore aggiunto, mantiene punteggiatura)
-        for tag in soup.find_all(True):
-            tag.unwrap()
-        text = re.sub(r'[ \t]+', ' ', str(soup)) # collassa spazi orizzontali (non \n)
-        text = re.sub(r'\n+', '\n', text) # collassa nuove linee multiple in una sola
-        return text.strip()
-    '''
     def remove_markdown(md: str) -> str:
         """Rimuove ogni traccia di formattazione per il confronto metrico."""
         html = mistune.html(md)
@@ -89,7 +55,7 @@ class BaseParser:
         return text.strip()
 
     def format_result(self, url, result):
-        """Formatta il risultato finale. CPuò essere sovrascritto dalle sottoclassi."""
+        """Formatta il risultato finale. Può essere sovrascritto dalle sottoclassi."""
         return {
             "url": url,
             "domain": self.domain,

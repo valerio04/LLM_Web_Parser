@@ -50,15 +50,7 @@ class Evaluator:
         Parametri: extracted_tokens, gold_tokens
         Ritorna: float - valore di precisione [0, 1]
         """
-        ''' # Versione con SET (senza contare le ripetizioni):
-        if len(extracted_tokens) == 0:
-            return 0
-        common_tokens = set(extracted_tokens) & set(gold_tokens)
-        precision = len(common_tokens) / len(set(extracted_tokens))
-        return precision'''
-        
         # Versione con Counter (conta le ripetizioni):
-        
         if len(extracted_tokens) == 0:
             return 0.0
         extracted_count = Counter(extracted_tokens)
@@ -75,15 +67,8 @@ class Evaluator:
         Parametri: extracted_tokens, gold_tokens
         Ritorna: float - valore di recall [0, 1]
         """
-        '''# Versione con SET (senza contare le ripetizioni):
-        if len(gold_tokens) == 0:
-            return 0
-        common_tokens = set(extracted_tokens) & set(gold_tokens)
-        recall = len(common_tokens) / len(set(gold_tokens))
-        return recall'''
-        
+
         # Versione con Counter (conta le ripetizioni):
-        
         if len(gold_tokens) == 0:
             return 0.0
         extracted_count = Counter(extracted_tokens)
@@ -116,12 +101,13 @@ class Evaluator:
         
         Ritorna: Dict con chiavi 'precision', 'recall', 'f1'
         """
-        #TODO: capire se va messa qui o in server
 
         # Pulisci il testo Markdown prima della valutazione
         cleaned_extracted_text = BaseParser.remove_markdown(extracted_text)
+
         print("=============testo dopo la pulizia da markdown:===============\n", cleaned_extracted_text[:1500])
         print("=============gold text:===============\n", gold_text[:1500])
+
         extracted_tokens = Evaluator.tokenize(cleaned_extracted_text)
         gold_tokens = Evaluator.tokenize(gold_text)
         precision = Evaluator.calculate_precision(extracted_tokens, gold_tokens)
@@ -360,89 +346,6 @@ class Evaluator:
 
 
 
-
-  
-'''async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
-    """
-    Valuta tutto il Gold Standard.
-    
-    Parametri:
-        gold_data (List[Dict]) - lista di entry Gold Standard con parser output
-    
-    Ritorna: Dict con risultati per ogni entry
-    """
-    if not gold_data:
-        return {}
-
-    result = dict()
-    evaluator = Evaluator()
-
-    for entry in gold_data:
-        # Controllo sui campi obbligatori
-        if not entry.get('title'):
-            print(f"[WARNING] Entry senza titolo: {entry}")
-            continue
-        if not entry.get('gold_file'):
-            print(f"[WARNING] Entry senza gold_file: {entry}")
-            continue
-        if not entry.get('url'):
-            print(f"[WARNING] Entry senza URL: {entry}")
-            continue
-
-        # Seleziona il parser in base al dominio
-        domain = entry.get('domain')
-        if domain == "en.wikipedia.org":
-            parser = WikipediaParser()
-        elif domain == "www.ilpost.it":
-            parser = IlPostParser()
-        elif domain == "statmuse.com":
-            parser = StatMuseParser()
-        elif domain == "eur-lex.europa.eu":
-            parser = EurLexParser()
-        else:
-            print(f"[WARNING] Dominio non riconosciuto: {domain}")
-            continue
-
-        try:
-            # Estrai il testo usando il parser
-            extracted_result = await parser.run(entry['url']) # usare async invece di asyncio.run(parser.run(entry['url'])) per evitare problemi di event loop
-            extracted_text = extracted_result.get('parsed_text', '')
-
-            # Controllo sul testo parsato
-            if not extracted_text:
-                print(f"[WARNING] Testo parsato vuoto per l'URL: {entry['url']}")
-                continue
-
-            # Controllo sull'esistenza del file gold standard
-            script_dir = Path(__file__).parent.resolve()
-            base_dir = script_dir.parent.parent
-            gold_file_path = base_dir / "gs_data" / entry['gold_file']
-            if not gold_file_path.exists():
-                print(f"[WARNING] File gold standard mancante: {gold_file_path}")
-                continue
-
-            # Leggi il contenuto del file gold standard
-            with open(gold_file_path, 'r', encoding='utf-8') as f:
-                gold_text = f.read()
-            
-        
-            
-            print(f"=== PARSED ({entry['title']}) ===\n{extracted_text[:1000]}")
-            print(f"=== GOLD ({entry['title']}) ===\n{gold_text[:1000]}")
-            
-           
-            
-            # Calcola le metriche
-            token_eval_result = evaluator.token_level_eval(extracted_text, gold_text)
-            print(f"[INFO] Valutazione completata per {entry['title']}: {token_eval_result}")
-            result[entry['title']] = token_eval_result
-        except Exception as e:
-            print(f"[ERROR] Errore nella valutazione di {entry['title']}: {e}")
-            result[entry['title']] = {"precision": 0, "recall": 0, "f1": 0}
-
-    return result
-'''
-
 #funzione per parser offline, usando html gia scarivcati
 async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
     if not gold_data:
@@ -450,12 +353,10 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
 
     result = dict()
     
-
-    # Definisci base_dir UNA VOLTA, FUORI dal loop
+    # percorso del file di questo script e del progetto
     script_dir = Path(__file__).parent.resolve()
     base_dir = script_dir.parent.parent
 
-    
 
     for entry in gold_data:
         if not entry.get('title'):
@@ -464,7 +365,8 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
             continue
         if not entry.get('url'):
             continue
-
+        
+        # Selezione del parser in base al dominio
         domain = entry.get('domain')
         if "en.wikipedia.org" in domain:
             parser = WikipediaParser()
@@ -533,14 +435,10 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
     return result
 
 
-
-
-
-
 def generate_evaluation_report(results: Dict[str, Dict]) -> str:
     """
-    Genera un report testuale dei risultati di valutazione.
-    
+    Genera un report testuale dei risultati di valutazione di token_level_eval.
+
     Parametri:
         results (Dict) - risultati della valutazione
     

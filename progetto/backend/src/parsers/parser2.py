@@ -22,7 +22,7 @@ class StatMuseParser(BaseParser):
     """
 
     def __init__(self):
-        super().__init__("statmuse.com")
+        super().__init__("www.statmuse.com")
 
     def create_crawler_config(self) -> CrawlerRunConfig:
         return CrawlerRunConfig(
@@ -33,6 +33,7 @@ class StatMuseParser(BaseParser):
         )
     
     def extract_title(self, result) -> str:
+        """Estrae il titolo cercando il tag h1 nell'HTML o nei metadati."""
         html_content = getattr(result, 'html', "")
         if html_content:
             soup = BeautifulSoup(html_content, 'html.parser')
@@ -154,7 +155,8 @@ class StatMuseParser(BaseParser):
             "html_text": html_content,
             "parsed_text": parsed_text
         }
-
+    
+    #TODO: capire se si può cancellare.
     async def parse(self, url: str) -> Dict[str, Any]:
         try:
             self.validate_url(url)

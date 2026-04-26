@@ -1,3 +1,9 @@
 verificare se si può sostituire remove_markdown in base_parser
 vedere parser_wikipedia
 nei json dovremmo avere html_text invece di html_file
+
+togliere find_path_parser da server
+serve remove markdown in frontend?
+serve parse in parser2?
+
+FATTI BASE_PARSER, SERVER, FRONTEND

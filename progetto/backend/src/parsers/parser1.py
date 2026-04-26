@@ -8,10 +8,10 @@ from crawl4ai import CrawlerRunConfig, CacheMode, CrawlResult
 from .base_parser import BaseParser
 
 class IlPostParser(BaseParser):
-    """Parser specializzato per ilpost.it con pulizia markdown avanzata."""
+    """Parser specializzato per www.ilpost.it con pulizia markdown avanzata."""
 
     def __init__(self) -> None:
-        super().__init__("ilpost.it")
+        super().__init__("www.ilpost.it")
         
         # --- PRE-COMPILAZIONE REGEX ---
         # 1. H1 Iniziale

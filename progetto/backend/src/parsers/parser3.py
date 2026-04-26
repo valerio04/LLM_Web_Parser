@@ -21,12 +21,16 @@ class EurLexParser(BaseParser):
         
     def create_crawler_config(self) -> CrawlerRunConfig:
         return CrawlerRunConfig(
-            simulate_user=True,
-            override_navigator=True,
-            wait_for="css:#document1, .EurlexContent",
+            simulate_user=True, # Simula un utente reale per evitare di essere bloccati da EUR-Lex
+            override_navigator=True, # Override del navigator per bypassare i blocchi basati su User-Agent e altre proprietà JS
+            wait_for="css:#document1, .EurlexContent", 
 
+            # Escludiamo i tag che sicuramente non contengono testo rilevante
             excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'noscript', 'form', 'iframe'],
+            # Selettore specifico per il corpo del testo 
+            # #PP3Contents è il contenitore standard del testo istituzionale 
             css_selector="#PP3Contents, .EurlexContent",
+
             # Pulizia mirata: rimuoviamo i componenti UI di EUR-Lex
             excluded_selector=(
                 "button, .ecl-site-footer, .ecl-site-header__banner, .sidebar-offcanvas, "
@@ -35,8 +39,6 @@ class EurLexParser(BaseParser):
                 ".dropdown-menu, .LanguageSearch, p.cojnote, #PP1Contents, #PP2Contents, #PP3Contents, .oj-note,"
                 ".lseu-section-summary-of, .dropdown-menu, .oj-hd-lg, .oj-hd-coll"
             ),
-            # Selettore specifico per il corpo del testo del glossario
-            # #PP3Contents è il contenitore standard del testo istituzionale 
             word_count_threshold=10,
             cache_mode=CacheMode.BYPASS,
             exclude_external_images=True,
@@ -90,12 +92,12 @@ class EurLexParser(BaseParser):
 
         title = clean_title(title)
 
-        # 2. CONTROLLO TRAPPOLA: È un VERO titolo o solo il codice CELEX?
+        # CONTROLLO TRAPPOLA: È un VERO titolo o solo il codice CELEX?
         # Le stringhe fittizie di EUR-Lex sono fatte così: "EUR-Lex - 52026PC0130 - IT" o solo "52026PC0130"
         # Usiamo una regex rigorosa per capire se la stringa è composta solo dal CELEX e dalla lingua.
         is_fake_title = bool(re.match(r'^(?:EUR-Lex\s*-\s*)?[0-9][A-Z0-9]{8,12}(?:\s*-\s*[A-Za-z]{2})?$', title))
 
-        # Se il titolo è buono, lo restituiamo subito (così salviamo tutti gli altri documenti!)
+        # Se il titolo è buono lo restituiamo
         if title and not is_fake_title and title != "EUR_Lex_Senza_Titolo":
             return title
         
@@ -103,7 +105,7 @@ class EurLexParser(BaseParser):
         return title if title else "EUR_Lex_Senza_Titolo"
     
     def _deduplicate(self, text: str) -> str:
-        """"""
+        """Rimuove paragrafi duplicati mantenendo la formattazione Markdown."""
         paragraphs = re.split(r'\n{2,}', text)
         clean_paras = []
         seen = set()
@@ -119,6 +121,7 @@ class EurLexParser(BaseParser):
         return '\n\n'.join(clean_paras)
 
     def parse_markdown(self, result: CrawlResult) -> str:
+        """Pulisce il markdown rimuovendo rumore specifico di EUR-Lex ma conservando la sintassi MD."""
         if hasattr(result, 'markdown_v2') and result.markdown_v2:
             text = result.markdown_v2.raw_markdown
         else:
@@ -154,6 +157,7 @@ class EurLexParser(BaseParser):
         return text.strip()
 
     def format_result(self, url: str, result: CrawlResult) -> Dict[str, Any]:
+        """Formatta il risultato finale"""
         return {
             "url": url,
             "domain": self.domain,
