@@ -13,10 +13,7 @@ from .parsers.parser2 import StatMuseParser
 from .parsers.parser3 import EurLexParser
 from .parsers.base_parser import BaseParser
 from collections import Counter
-import asyncio
-import markdown2
 import re
-import mistune
 from bs4 import BeautifulSoup
 from difflib import SequenceMatcher
 import math
@@ -24,7 +21,10 @@ import math
 
 
 class Evaluator:
-    """Classe per valutare la qualità del parsing."""
+    
+    """
+    Classe per valutare la qualità del parsing.
+    """
 
     def __init__(self):
         pass
@@ -35,12 +35,10 @@ class Evaluator:
         Tokenizza il testo in token (parole).
         Parametri: text (str) - testo da tokenizzare
         Ritorna: List[str] - lista di token
-        """
-        #TODO: da lasciare o no la regex per togliere puntegiatura?
-
+        """   
         text = re.sub(r'[^\w\s]', ' ', text)
-        text = text.lower()  # Converti tutto in minuscolo per uniformità
-        tokens = text.split()  # Semplice tokenizzazione basata su spazi
+        text = text.lower()  
+        tokens = text.split()  
         return tokens
  
     @staticmethod
@@ -67,8 +65,6 @@ class Evaluator:
         Parametri: extracted_tokens, gold_tokens
         Ritorna: float - valore di recall [0, 1]
         """
-
-        # Versione con Counter (conta le ripetizioni):
         if len(gold_tokens) == 0:
             return 0.0
         extracted_count = Counter(extracted_tokens)
@@ -94,22 +90,15 @@ class Evaluator:
         """
         Esegue la valutazione completa a livello token.
         Calcola precision, recall, F1.
-        
-        Parametri:
-            extracted_text (str) - testo estratto dal parser
-            gold_text (str) - testo di riferimento (gold standard)
-        
+        Parametri: extracted_tokens, gold_tokens
         Ritorna: Dict con chiavi 'precision', 'recall', 'f1'
         """
-
-        # Pulisci il testo Markdown prima della valutazione
-        cleaned_extracted_text = BaseParser.remove_markdown(extracted_text)
-
-        #print("=============testo dopo la pulizia da markdown:===============\n", cleaned_extracted_text[:1500])
-        #print("=============gold text:===============\n", gold_text[:1500])
-
+        # Pulisce il testo Markdown prima della valutazione
+        cleaned_extracted_text = BaseParser.remove_markdown(extracted_text) 
+        # tookenizza entrambi i testi
         extracted_tokens = Evaluator.tokenize(cleaned_extracted_text)
         gold_tokens = Evaluator.tokenize(gold_text)
+        # Calcola le metriche
         precision = Evaluator.calculate_precision(extracted_tokens, gold_tokens)
         recall = Evaluator.calculate_recall(extracted_tokens, gold_tokens)
         f1 = Evaluator.calculate_f1(precision, recall)
@@ -123,34 +112,17 @@ class Evaluator:
 
 #======================EXTRA====================
 
+    #Metriche aggiuntive di valutazione per analizzare diversi aspetti della qualità del parsing
 
-    #extra
-    @staticmethod
-    def jaccard_similarity(extracted_tokens: List[str], gold_tokens: List[str]) -> float:
-        
-        '''Misura quanto il vocabolario usato è lo stesso, senza contare le ripetizioni.'''
-        
-        set1 = set(extracted_tokens)
-        set2 = set(gold_tokens)
-
-        intersezione = len(set1.intersection(set2))
-        unione = len(set1.union(set2))
-        
-        if unione == 0:
-            return 0.0
-        
-        return intersezione / unione 
-
-
-
-    #0 è identico, più alto è il numero più sono diversi
+    
     @staticmethod    
     def levenshtein_dist(extracted_tokens: List[str], gold_tokens: List[str]) -> int:
-
-        '''Misura il numero minimo di modifiche (inserimenti, cancellazioni, sostituzioni)
-        necessarie per trasformare un testo nell'altro. 
-        0 indica testi identici; valori più alti indicano maggiore differenza a livello di caratteri.'''
-
+        '''
+        Misura il numero minimo di modifiche (inserimenti, cancellazioni, sostituzioni)
+        necessarie per trasformare un testo nell'altro.
+        parametri: extracted_tokens, gold_tokens
+        ritorna: float - valore di distanza di Levenshtein [0, 1]
+        '''
         if not extracted_tokens and not gold_tokens:
             return 1.0
         
@@ -178,19 +150,15 @@ class Evaluator:
 
         return 1.0 - (previous_row[-1] / max_len)  # Normalizza in [0, 1]
 
-   
-
-    
-
-    @staticmethod    # è l unica cvhe mantiene la punteggiatura cosi da valutarla nella similarità in quanto analizza le stringhe intere e non i token
-    def similarity_ratio(gold_text: str, extracted_text: str) -> float:
-        return SequenceMatcher(None, gold_text, extracted_text).ratio()
-
 
 
     @staticmethod
     def lcs(gold_tokens: List[str], extracted_tokens: List[str]) -> int:
-        # Calcola la lunghezza della sottosequenza comune più lunga
+        '''
+        Calcola la lunghezza della sottosequenza comune più lunga
+        parametri: gold_tokens, extracted_tokens
+        ritorna: int - lunghezza della sottosequenza comune più lunga
+        '''
         m, n = len(gold_tokens), len(extracted_tokens)
         L = [[0] * (n + 1) for _ in range(m + 1)]
 
@@ -206,8 +174,11 @@ class Evaluator:
 
     @staticmethod
     def rouge_l_simplified(gold_tokens: List[str], parsed_tokens: List[str]) -> float:
-        
-        '''Verifica se l'ordine delle parole è mantenuto'''
+        '''
+        Verifica se l'ordine delle parole è mantenuto
+        parametri: gold_tokens, parsed_tokens
+        ritorna: float - valore di ROUGE-L [0, 1]
+        '''
 
         if not gold_tokens or not parsed_tokens:
             return 0.0
@@ -222,16 +193,17 @@ class Evaluator:
         return (2 * precision * recall) / (precision + recall)
 
 
-
-
     
     
 
     @staticmethod
     def cosine_similarity_manual(gold_tokens: List[str], parsed_tokens: List[str]) -> float:
-        
-        '''parole	Capisce se il tema del discorso è lo stesso, 
-        dando meno importanza alle parole comuni e più a quelle chiave.'''
+        '''
+        Capisce se il tema del discorso è lo stesso, 
+        dando meno importanza alle parole comuni e più a quelle chiave.
+        parametri: gold_tokens, parsed_tokens
+        ritorna: float - valore di cosine similarity [0, 1]
+        '''
 
         # Creiamo i "vettori" contando le frequenze delle parole
         vec1 = Counter(gold_tokens)
@@ -260,6 +232,8 @@ class Evaluator:
         """
         Calcola il rapporto tra caratteri alfanumerici e lunghezza totale.
         Un ratio basso indica molto 'rumore' (simboli, spazi eccessivi, boilerplate).
+        parametri: text (str) - testo da analizzare
+        ritorna: float - rapporto alfanumerico [0, 1]
         """
         if not text:
             return 0.0
@@ -275,21 +249,22 @@ class Evaluator:
 
     @staticmethod
     def x_eval_fast(extracted_text: str, gold_text: str) -> Dict[str, float]:
-        
-        # Esempio di valutazione combinata
-        
+        """
+        Esegue una valutazione rapida combinando metriche veloci come cosine similarity e boilerplate ratio.
+        Parametri: extracted_text (str), gold_text (str) 
+        Ritorna: Dict con chiavi 'cosine_similarity', 'boilerplate_ratio, 'boilerplate_fidelity'
+        """
+        # pulisce e tokenizza entrambi i testi        
         cleaned_extracted_text = BaseParser.remove_markdown(extracted_text)
         extracted_tokens = Evaluator.tokenize(cleaned_extracted_text)
         gold_tokens = Evaluator.tokenize(gold_text)
             
-        
+        #Metriche Veloci
         cosine_sim = 0
         bp_extracted = 0
         bp_gold = 0
-        bp_diff = 0
 
-      
-        
+        #N e M sono il numero di token nei due testi
         # O(N + M) 
         cosine_sim = Evaluator.cosine_similarity_manual(gold_tokens, extracted_tokens)
 
@@ -298,8 +273,7 @@ class Evaluator:
         bp_extracted = Evaluator.boilerplate_ratio(cleaned_extracted_text)
         bp_gold = Evaluator.boilerplate_ratio(gold_text)
         # La differenza ci dice quanto boilerplate il parser ha lasciato dentro (o tolto troppo)
-        bp_diff = abs(bp_extracted - bp_gold) 
-        bp_fidelity = 1.0 - bp_diff
+        bp_fidelity = 1.0 - abs(bp_extracted - bp_gold)
 
         return {
             "cosine_similarity": cosine_sim,
@@ -312,25 +286,31 @@ class Evaluator:
 
     @staticmethod
     def x_eval_complete(extracted_text: str, gold_text: str) -> Dict[str, float]:
-        
+        """
+        Esegue una valutazione completa combinando metriche veloci come cosine similarity e boilerplate ratio
+        con metriche più lente ma più precise come Levenshtein e ROUGE-L.
+        Parametri: extracted_text (str), gold_text (str) 
+        Ritorna: Dict con chiavi 'levenshtein', 'rouge_l', 'cosine_similarity', 'boilerplate_ratio, 'boilerplate_fidelity'
+        """
+        # pulisce e tokenizza entrambi i testi
         cleaned_extracted_text = BaseParser.remove_markdown(extracted_text)
         extracted_tokens = Evaluator.tokenize(cleaned_extracted_text)
         gold_tokens = Evaluator.tokenize(gold_text)
             
-        # --- Metriche Veloci ---
+        # --- Metriche Veloci O(N + M)---
+        #cosine similarity
         cosine_sim = Evaluator.cosine_similarity_manual(gold_tokens, extracted_tokens)
-        
-        # Boilerplate Ratio: la calcoliamo per entrambi per vedere quanto è "sporco" il parser
+        # Boilerplate Ratio
         bp_extracted = Evaluator.boilerplate_ratio(cleaned_extracted_text)
         bp_gold = Evaluator.boilerplate_ratio(gold_text)
         # La differenza ci dice quanto boilerplate il parser ha lasciato dentro (o tolto troppo)
         bp_diff = abs(bp_extracted - bp_gold) 
         bp_fidelity = 1.0 - bp_diff
 
-        
-        
-        # --- Metriche Molto Lente ---
+        # --- Metriche Lente O(N * M) ---
+        #lenshtein
         levenshtein = Evaluator.levenshtein_dist(extracted_tokens, gold_tokens)
+        #rouge_l
         rouge_l = Evaluator.rouge_l_simplified(gold_tokens, extracted_tokens)
        
 
@@ -348,6 +328,12 @@ class Evaluator:
 
 #funzione per parser offline, usando html gia scarivcati
 async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
+    '''
+    Esegue il parsing dell'URL selezionato, recupera il gold standard associato e calcola le metriche di valutazione.
+    Restituisce un dizionario con i risultati di valutazione per ogni entry.
+    Parametri: gold_data (List[Dict]) - lista di dizionari con chiavi 'title', 'url', 'html_file', 'gold_file', 'domain'
+    Ritorna: Dict[str, Dict] - dizionario con chiavi il titolo dell'entry e valori un altro dizionario con le metriche di valutazione (precision, recall, f1, x_eval)
+    '''
     if not gold_data:
         return {}
 
@@ -357,7 +343,7 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
     script_dir = Path(__file__).parent.resolve()
     base_dir = script_dir.parent.parent
 
-
+    # Itera su ogni entry del gold standard
     for entry in gold_data:
         if not entry.get('title'):
             continue
@@ -381,7 +367,7 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
             continue
 
         try:
-            # 1. Definizione percorsi e verifica Gold Standard
+            # Definizione percorsi e verifica Gold Standard
             html_file_path = base_dir / "gs_data" / entry['html_file']
             gold_file_path = base_dir / "gs_data" / entry['gold_file']
 
@@ -392,7 +378,7 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
             gold_text = gold_file_path.read_text(encoding='utf-8')
             extracted_result = None
 
-            # 2. Tentativo di Parsing (Locale -> Online)
+            # Tentativo di Parsing Locale 
             if html_file_path.exists():
                 try:
                     html_text = html_file_path.read_text(encoding='utf-8')
@@ -409,14 +395,14 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
                 except Exception as e:
                     print(f"[ERROR] Anche il parsing online è fallito per {entry['url']}: {e}")
 
-            # 3. Estrazione e validazione del testo
+            # Estrazione e validazione del testo
             extracted_text = (extracted_result or {}).get('parsed_text', '').strip()
 
             if not extracted_text:
                 print(f"[WARNING] Testo estratto vuoto o nullo per: {entry['url']}")
                 continue
             
-            # 4. Valutazione
+            # Valutazione
             token_eval_result = Evaluator.token_level_eval(extracted_text, gold_text)
             x_eval_result = {}
             x_eval_result = Evaluator.x_eval_fast(extracted_text, gold_text)
@@ -436,54 +422,3 @@ async def evaluate_gold_standard(gold_data: List[Dict]) -> Dict[str, Dict]:
 
     return result
 
-
-def generate_evaluation_report(results: Dict[str, Dict]) -> str:
-    """
-    Genera un report testuale dei risultati di valutazione di token_level_eval.
-
-    Parametri:
-        results (Dict) - risultati della valutazione
-    
-    Ritorna: str - report formattato
-    """
-    report = "=" * 60 + "\n"
-    report += "EVALUATION REPORT - Gold Standard\n"
-    report += "=" * 60 + "\n\n"
-    
-    # Calcola statistiche per ogni entry
-    precisions = []
-    recalls = []
-    f1_scores = []
-    
-    for entry_name, metrics in results.items():
-        precision = metrics.get("precision", 0)
-        recall = metrics.get("recall", 0)
-        f1 = metrics.get("f1", 0)
-        
-        precisions.append(precision)
-        recalls.append(recall)
-        f1_scores.append(f1)
-        
-        report += f"Entry: {entry_name}\n"
-        report += f"  Precision: {precision:.4f}\n"
-        report += f"  Recall:    {recall:.4f}\n"
-        report += f"  F1:        {f1:.4f}\n\n"
-    
-    # Aggiungi statistiche aggregate
-    report += "-" * 60 + "\n"
-    report += "OVERALL STATISTICS\n"
-    report += "-" * 60 + "\n"
-    
-    if precisions:
-        avg_precision = sum(precisions) / len(precisions)
-        avg_recall = sum(recalls) / len(recalls)
-        avg_f1 = sum(f1_scores) / len(f1_scores)
-        
-        report += f"Average Precision: {avg_precision:.4f}\n"
-        report += f"Average Recall:    {avg_recall:.4f}\n"
-        report += f"Average F1:        {avg_f1:.4f}\n"
-        report += f"Total Entries:     {len(precisions)}\n"
-    
-    report += "=" * 60 + "\n"
-    
-    return report
