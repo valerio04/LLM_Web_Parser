@@ -8,7 +8,9 @@ from crawl4ai import CrawlerRunConfig, CacheMode, CrawlResult
 from .base_parser import BaseParser
 
 class IlPostParser(BaseParser):
-    """Parser specializzato per www.ilpost.it con pulizia markdown avanzata."""
+    """
+    Parser specializzato per www.ilpost.it con pulizia markdown avanzata.
+    """
 
     def __init__(self) -> None:
         super().__init__("www.ilpost.it")
@@ -36,7 +38,9 @@ class IlPostParser(BaseParser):
         self.re_captions = re.compile(r'(?mi)^.*\([^)]*(?:Getty Images|AP Photo|ANSA|Reuters|EPA|Lapresse|LaPresse|Fotogramma|Tim de Waele|Luc Claessen)[^)]*\)\s*$')
 
     def create_crawler_config(self) -> CrawlerRunConfig:
-        """Configurazione del crawler per Il Post."""
+        """
+        Configurazione del crawler per Il Post.
+        """
         return CrawlerRunConfig(
             excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'noscript', 'figure', 'img', 'iframe', 'form'],
             excluded_selector=(
@@ -50,7 +54,9 @@ class IlPostParser(BaseParser):
         )
     
     def extract_title(self, result: CrawlResult) -> str:
-        """Estrae il titolo cercando il tag h1 nell'HTML o nei metadati."""
+        """
+        Estrae il titolo cercando il tag h1 nell'HTML o nei metadati.
+        """
         if not result.html:
             return "N/A"
             
@@ -64,11 +70,15 @@ class IlPostParser(BaseParser):
         return result.metadata.get("title", "N/A")
 
     def parse_html(self, result: CrawlResult) -> str:
-        """Restituisce l'HTML grezzo estratto."""
+        """
+        Restituisce l'HTML grezzo estratto.
+        """
         return result.html if result.html else ""
 
     def parse_markdown(self, result: CrawlResult) -> str:
-        """Pulisce il markdown rimuovendo rumore editoriale ma conservando la sintassi MD."""
+        """
+        Pulisce il markdown rimuovendo rumore editoriale ma conservando la sintassi MD.
+        """
         text = ""
         if hasattr(result, 'markdown_v2') and result.markdown_v2:
             text = result.markdown_v2.raw_markdown
@@ -100,7 +110,9 @@ class IlPostParser(BaseParser):
         return text.strip()
         
     def format_result(self, url: str, result: CrawlResult) -> Dict[str, Any]:
-        """Formatta il risultato finale."""
+        """
+        Formatta il risultato finale.
+        """
         return {
             "url": url,
             "domain": self.domain,
@@ -108,15 +120,3 @@ class IlPostParser(BaseParser):
             "html_text": self.parse_html(result),
             "parsed_text": self.parse_markdown(result)
         }
-
-if __name__ == "__main__":
-    async def main():
-        url = "https://www.ilpost.it/2023/05/02/le-nuove-regole-del-post/"
-        parser = IlPostParser()
-        result = await parser.run(url)
-        
-        print("\n--- RISULTATO PARSING IL POST ---")
-        print(f"Titolo: {result['title']}")
-        print(f"Testo Parsato (primi 500 car.):\n{result['parsed_text'][:500]}...")
-
-    asyncio.run(main())

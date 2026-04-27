@@ -15,18 +15,20 @@ class EurLexParser(BaseParser):
         self.re_ui_noise = re.compile(r'(?mi)^\s*\[(?:Top|Inizio pagina|.*?\*)\](?:\(.*?\))?\s*$')
         self.re_banners = re.compile(r'(?mi)^.*(?:cookies|official website of the European Union|sito ufficiale dell\'Unione).*$')
         self.re_ieni_nav = re.compile(r'(?ms)\n?(?:Below,\s+you\s+will\s+find|Qui\s+di\s+seguito\s+sono\s+disponibili):.*$')
-        self.re_img = re.compile(r'!\[[^\]]*\]\([^)]*\)')
         self.re_start_noise = re.compile(r'(?s)^EUR-Lex\s*-\s*.*?\n.*?\n')
         self.re_barre = re.compile(r'\|') 
         
     def create_crawler_config(self) -> CrawlerRunConfig:
+        """
+        Configurazione del crawler
+        """
         return CrawlerRunConfig(
             simulate_user=True, # Simula un utente reale per evitare di essere bloccati da EUR-Lex
             override_navigator=True, # Override del navigator per bypassare i blocchi basati su User-Agent e altre proprietà JS
             wait_for="css:#document1, .EurlexContent", 
 
             # Escludiamo i tag che sicuramente non contengono testo rilevante
-            excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'noscript', 'form', 'iframe'],
+            excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'noscript', 'form', 'iframe','img', 'svg', 'picture'],
             # Selettore specifico per il corpo del testo 
             # #PP3Contents è il contenitore standard del testo istituzionale 
             css_selector="#PP3Contents, .EurlexContent",
@@ -50,6 +52,10 @@ class EurLexParser(BaseParser):
         )
     
     def extract_title(self, result: CrawlResult) -> str:
+        """
+        Estrae il titolo cercando prima se esiste un elemento con id 'title', poi cercando classi specifiche, e infine come ultima spiaggia il primo H1.
+        Se tutto fallisce, prova a estrarre il titolo dai metadata.
+        """
         # Helper per pulire la formattazione
         def clean_title(text: str) -> str:
             if not text:
@@ -92,7 +98,6 @@ class EurLexParser(BaseParser):
 
         title = clean_title(title)
 
-        # CONTROLLO TRAPPOLA: È un VERO titolo o solo il codice CELEX?
         # Le stringhe fittizie di EUR-Lex sono fatte così: "EUR-Lex - 52026PC0130 - IT" o solo "52026PC0130"
         # Usiamo una regex rigorosa per capire se la stringa è composta solo dal CELEX e dalla lingua.
         is_fake_title = bool(re.match(r'^(?:EUR-Lex\s*-\s*)?[0-9][A-Z0-9]{8,12}(?:\s*-\s*[A-Za-z]{2})?$', title))
@@ -105,7 +110,9 @@ class EurLexParser(BaseParser):
         return title if title else "EUR_Lex_Senza_Titolo"
     
     def _deduplicate(self, text: str) -> str:
-        """Rimuove paragrafi duplicati mantenendo la formattazione Markdown."""
+        """
+        Rimuove paragrafi duplicati mantenendo la formattazione Markdown.
+        """
         paragraphs = re.split(r'\n{2,}', text)
         clean_paras = []
         seen = set()
@@ -121,7 +128,9 @@ class EurLexParser(BaseParser):
         return '\n\n'.join(clean_paras)
 
     def parse_markdown(self, result: CrawlResult) -> str:
-        """Pulisce il markdown rimuovendo rumore specifico di EUR-Lex ma conservando la sintassi MD."""
+        """
+        Pulisce il markdown rimuovendo rumore specifico di EUR-Lex ma conservando la sintassi MD.
+        """
         if hasattr(result, 'markdown_v2') and result.markdown_v2:
             text = result.markdown_v2.raw_markdown
         else:
@@ -133,7 +142,6 @@ class EurLexParser(BaseParser):
         text = self.re_gu_headers.sub('', text)
         text = self.re_ui_noise.sub('', text)
         text = self.re_banners.sub('', text)
-        text = self.re_img.sub('', text)
         text = self.re_start_noise.sub('', text)
         text = self.re_ieni_nav.sub('', text)
         text = self.re_barre.sub(' ', text) 
@@ -145,7 +153,9 @@ class EurLexParser(BaseParser):
         return text.strip()
     
     def remove_markdown(md: str) -> str:
-        """Rimuove ogni traccia di formattazione per il confronto metrico."""
+        """
+        Rimuove ogni traccia di formattazione per il confronto metrico.
+        """
         # Trasforma MD in HTML
         html = mistune.html(md)
         # Estrae solo il testo puro dall'HTML
@@ -157,7 +167,9 @@ class EurLexParser(BaseParser):
         return text.strip()
 
     def format_result(self, url: str, result: CrawlResult) -> Dict[str, Any]:
-        """Formatta il risultato finale"""
+        """
+        Formatta il risultato finale
+        """
         return {
             "url": url,
             "domain": self.domain,
@@ -166,18 +178,3 @@ class EurLexParser(BaseParser):
             "parsed_text": self.parse_markdown(result)
         }
 
-if __name__ == "__main__":
-    async def main():
-        url = "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A12016M%2FTXT" # Esempio
-        url = "https://eur-lex.europa.eu/content/news/index.html?locale=it"
-        url = "https://eur-lex.europa.eu/IT/legal-content/glossary/nato-north-atlantic-treaty-organisation.html"
-        parser = EurLexParser()
-        result = await parser.run(url)
-        
-        print("\n--- RISULTATO PARSING IL POST ---")
-        print(f"Titolo: {result['title']}")
-
-        html_text = BaseParser.remove_markdown(result.get('parsed_text'))
-        print(f"Testo Parsato (primi 500 car.):\n{html_text[:10000]}...")
-
-    asyncio.run(main())

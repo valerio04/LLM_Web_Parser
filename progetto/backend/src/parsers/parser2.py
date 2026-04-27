@@ -25,6 +25,9 @@ class StatMuseParser(BaseParser):
         super().__init__("www.statmuse.com")
 
     def create_crawler_config(self) -> CrawlerRunConfig:
+        """
+        Configurazione del crawler per Wikipedia.
+        """
         return CrawlerRunConfig(
             excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'noscript', 'svg'],
             cache_mode=CacheMode.BYPASS,
@@ -33,7 +36,9 @@ class StatMuseParser(BaseParser):
         )
     
     def extract_title(self, result) -> str:
-        """Estrae il titolo cercando il tag h1 nell'HTML o nei metadati."""
+        """
+        Estrae il titolo cercando il tag h1 nell'HTML o nei metadati.
+        """
         html_content = getattr(result, 'html', "")
         if html_content:
             soup = BeautifulSoup(html_content, 'html.parser')
@@ -77,7 +82,6 @@ class StatMuseParser(BaseParser):
                 if "interpreted as:" in lower_text:
                     continue
                 
-                # --- GHIGLIOTTINA DEL RUMORE ---
                 is_noise = any(kw in lower_text for kw in [
                     "related searches", "trending", "statmuse app",
                     "team leaders", "team rankings", "fantasy", "betting",
@@ -109,7 +113,7 @@ class StatMuseParser(BaseParser):
                     for i, cell in enumerate(tr.find_all(['th', 'td'])):
                         c_text = cell.get_text(separator=' ', strip=True)
                         
-                        # FIX: Se la cella è testualmente vuota, prova a recuperare 
+                        # Se la cella è testualmente vuota, prova a recuperare 
                         # il nome dall'attributo 'alt' della foto o dal 'title'
                         if not c_text:
                             img = cell.find('img')
@@ -118,7 +122,7 @@ class StatMuseParser(BaseParser):
                             elif cell.get('title'):
                                 c_text = cell.get('title').strip()
                         
-                        # FIX PERFETTO: Iniezione dinamica di header e Total
+                        # Iniezione dinamica di header e Total
                         if not c_text:
                             if cell.name == 'th':
                                 if i == 0:
@@ -137,7 +141,6 @@ class StatMuseParser(BaseParser):
                         
                 if rows:
                     table_text = '\n'.join(rows)
-                    # Deduplicatore che risolve le classifiche MLB duplicate per CSS responsive
                     if table_text not in parsed_tables_text:
                         parsed_tables_text.add(table_text)
                         parts.append(table_text)
@@ -145,6 +148,9 @@ class StatMuseParser(BaseParser):
         return '\n\n'.join(parts)
 
     def format_result(self, url: str, result) -> Dict[str, Any]:
+        """
+        Formatta il risultato finale del parsing.
+        """
         html_content = getattr(result, 'html', "")
         parsed_text = self._extract_text_with_bs4(html_content, url)
         
@@ -155,42 +161,3 @@ class StatMuseParser(BaseParser):
             "html_text": html_content,
             "parsed_text": parsed_text
         }
-    
-    #TODO: capire se si può cancellare.
-    async def parse(self, url: str) -> Dict[str, Any]:
-        try:
-            self.validate_url(url)
-            data = await self.run(url)
-            data["success"] = True
-            return data
-        except Exception as e:
-            return {
-                "success": False,
-                "error": str(e),
-                "url": url,
-                "domain": self.domain,
-                "title": "Error",
-                "html_text": "",
-                "parsed_text": ""
-            }
-
-
-if __name__ == "__main__":
-    async def main():
-        parser = StatMuseParser()
-        url = "https://www.statmuse.com/nba/ask/nba-ppg-leaders-this-season"
-        
-        output_dir = Path("output")
-        output_dir.mkdir(exist_ok=True)
-        
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        risultato = await parser.parse(url)
-        
-        if risultato.get("success"):
-            print(f"Titolo: {risultato['title']}")
-            print("\n--- CONTENUTO PULITO (primi 800 caratteri) ---")
-            print(risultato["parsed_text"][:800] + "...")
-        else:
-            print(f"Errore: {risultato.get('error')}")
-
-    asyncio.run(main())

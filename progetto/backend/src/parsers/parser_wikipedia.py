@@ -10,37 +10,21 @@ from .base_parser import BaseParser
 #from base_parser import BaseParser
 
 import markdown2
-#TODO: sbaglia i titoli, non riesce a estrarre quelli corretti, forse perche sono in un tag particolare da capire meglio
 
-# Parser per Wikipedia: https://en.wikipedia.org
 class WikipediaParser(BaseParser):
-    """Parser specializzato per articoli Wikipedia con pulizia markdown avanzata."""
+    """
+    Parser specializzato per articoli Wikipedia con pulizia markdown avanzata.
+    """
 
     def __init__(self):
         super().__init__("en.wikipedia.org")
 
     def create_crawler_config(self) -> CrawlerRunConfig:
-        """Configurazione del crawler per Wikipedia.
-        
-        Esclude:
-        - Elementi di navigazione (nav, header, footer, aside)
-        - Elementi di scripting (script, style)
-        - Elementi di tabelle e info box
-        - Elementi minori (span, abbr, sub)
         """
-        '''css_selector='.mw-content-ltr.mw-parser-output , .IPA.nopopups.noexcerpt',
-            excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'infobox', 'toc', 'span', 'abbr', 'sub', 'figure', 'figcaption'],
-            excluded_selector='.hatnote.navigation-not-searchable, .noprint, .mw-references-wrap, .citation, .external.text, .side-box-flex, #References, #Bibliography, #External_links, .mw-file-description',
-            word_count_threshold=0,
-            cache_mode=CacheMode.BYPASS,
-            exclude_external_images=True,
-            remove_forms=True,
-            remove_consent_popups=True,
-            exclude_all_images=True,
-            exclude_external_links=True'''
+        Configurazione del crawler per Wikipedia.
+        """
         return CrawlerRunConfig(
             excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'noscript', 'figure', 'img'],
-            # AGGIUNTI .gallery e .thumb per eliminare le gallerie e le miniature (con le loro didascalie)
             excluded_selector=".infobox, .metadata, .vevent, .toc, .vertical-navbox, .hatnote, .mw-editsection, .sidebar, .ambox, .navbox, .shortdescription, .gallery, .thumb",
             word_count_threshold=0, 
             cache_mode=CacheMode.BYPASS,
@@ -48,7 +32,8 @@ class WikipediaParser(BaseParser):
         )
 
     def extract_title(self, result) -> str:
-        """Estrae il titolo della pagina Wikipedia.
+        """
+        Estrae il titolo della pagina Wikipedia.
         
         Cerca il tag h1 con id "firstHeading", altrimenti usa i metadati.
         """
@@ -73,7 +58,9 @@ class WikipediaParser(BaseParser):
         return "N/A"
 
     def parse_html(self, result) -> str:
-        """Estrae l'HTML grezzo della pagina."""
+        """
+        Estrae l'HTML grezzo della pagina.
+        """
         if hasattr(result, 'html') and result.html:
             return result.html
         return ""
@@ -81,7 +68,8 @@ class WikipediaParser(BaseParser):
     
 
     def parse_markdown(self, result) -> str:
-        """Converte il markdown estratto in testo pulito.
+        """
+        Converte il markdown estratto in testo pulito.
         
         Rimuove:
         - Icone e link di navigazione Wikipedia
@@ -101,13 +89,6 @@ class WikipediaParser(BaseParser):
 
         if not text:
             return ""
-
-        # 0. RIMUOVE CONTENUTO DA TAG INDESIDERATI (figcaption, caption, ecc.)
-        # Estrai dal cleaned_html il contenuto di tag che non vuoi nel markdown
-        html = self.parse_html(result)
-        #if html:
-            # Cerca contenuto da <figcaption>, <caption>, <aside> nel HTML
-        #    text = self.extract_unwanted_content(html, ['figcaption'], text) #, 'caption', 'aside', 'figure'
             
         # 1. Rimuove "Jump to content" e intestazioni standard
         text = re.sub(r'\[Jump to content\]\([^)]*\)', '', text)
@@ -121,8 +102,6 @@ class WikipediaParser(BaseParser):
 
         # 3. Rimuove riferimenti a note: [1], [2], [a], [citation needed], ecc.
         text = re.sub(r'\s*\[(?:\[?\d+\]?|[a-zA-Z]?|)\]\([^\[\]\n]*?cite_note[^\[\]\n]*?\)', '', text)
-
-    
 
         # 4. Rimuove note testuali isolate
         text = re.sub(r'\s*\[(?:\d+|[a-zA-Z])\]', '', text)
@@ -152,7 +131,9 @@ class WikipediaParser(BaseParser):
         return text.strip()
 
     def format_result(self, url: str, result) -> Dict[str, Any]:
-        """Formatta il risultato finale del parsing."""
+        """
+        Formatta il risultato finale del parsing.
+        """
         return {
             "url": url,
             "domain": self.domain,
@@ -163,30 +144,3 @@ class WikipediaParser(BaseParser):
             #"parsed_text_markdown_grezzo": result.markdown, ##canc
         }
  
-
-if __name__ == "__main__":
-    """Test script per verificare il parser Wikipedia."""
-    #url = input("Inserisci l'URL della pagina Wikipedia: ")
-    url="https://en.wikipedia.org/wiki/List_of_largest_empires"
-    parser = WikipediaParser()
-    result = asyncio.run(parser.run(url))
-
-  #PULISCE FACENDOLO DIVETARE UN SEMPLICE TESTO PULITO SENZA MARKDOWN O HTML
-    html_text = BaseParser.remove_markdown(result.get('parsed_text'))
-    # Rimuove i tag HTML
-    print("=============testo dopo la conversione markdown->html:===============\n", html_text[:2000])  
-    plain_text = re.sub(r'<[^>]+>', '', html_text)
-    
-
-
-
-    print("\n--- RESULT ---")
-    print(f"Title: {result.get('title')}")
-    print(f"Domain: {result.get('domain')}")
-    #print(f"\n--- HTML TEXT (pulito)-------------------------")
-    #print(result.get('html_cleaned'))
-    #print(f"\n--- PARSED TEXT grezzo--------------------------------")
-    #print(result.get('parsed_text_markdown_grezzo'))
-   
-    print(f"\n--- PLAIN TEXT---")
-    print(plain_text)
