@@ -6,3 +6,4 @@ markdown2
 mistune       # Parser Markdown per HTML
 bs4
 #difflib       # Per calcolare la distanza di Levenshtein e ROUGE-L
+mariadb

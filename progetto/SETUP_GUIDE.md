@@ -30,6 +30,21 @@ pip install -U "crawl4ai[setup]"  # Assicura il supporto per il setup
 crawl4ai-setup                     # Configura i browser headless
 ```
 
+### **Step 6: Installa i prerequisiti di sistema per MariaDB**
+MariaDB Connector/Python richiede il pacchetto di sistema `libmariadb-dev` per funzionare correttamente. Installa il prerequisito con il seguente comando:
+```bash
+sudo apt update
+sudo apt install libmariadb-dev
+```
+
+### **Step 7: Verifica l'installazione di MariaDB Connector/Python**
+Dopo aver installato il prerequisito, verifica che il pacchetto Python `mariadb` sia installato correttamente:
+```bash
+pip install mariadb
+python3 -c "import mariadb; print('MariaDB Connector installed successfully')"
+```
+Se vedi il messaggio "MariaDB Connector installed successfully", l'installazione è completa.
+
 **Fatto!** Setup completato! 🎉
 
 ---
@@ -143,5 +158,30 @@ progetto/
 https://eur-lex.europa.eu/IT/legal-content/summary/exchange-rate-mechanism-between-the-euro-and-other-participating-national-currencies.html?fromSummary=14
 
 **Per domande o problemi: Contattare il team!** 💬
+
+---
+
+## **Gestione del container MariaDB**
+
+#### **Chiudere il container senza cancellare i dati**
+Per fermare il container MariaDB senza eliminare i dati persistenti:
+```bash
+docker compose stop mariadb
+```
+Questo comando ferma il servizio MariaDB, ma i dati rimangono salvati nel volume `mariadb_data`.
+
+#### **Chiudere il container e cancellare i dati**
+Per fermare il container e rimuovere i dati:
+```bash
+docker compose down -v
+```
+Il flag `-v` rimuove anche i volumi associati, cancellando tutti i dati salvati.
+
+#### **Avviare il container MariaDB**
+Per avviare il container MariaDB:
+```bash
+docker compose up -d mariadb
+```
+Il flag `-d` esegue il container in background.
 
 

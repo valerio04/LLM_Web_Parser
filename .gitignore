@@ -4,3 +4,7 @@ __pycache__/
 .playwright/
 ms-playwright/
 
+# Local docs and scratch
+canc/
+progetto/panoramica_persona1_db.md
+
