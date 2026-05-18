@@ -1,4 +1,8 @@
-from connection import get_connection
+try:
+    from .connection import get_connection
+except ImportError:
+    from connection import get_connection
+
 import json
 
 def get_web_resource(url: str):

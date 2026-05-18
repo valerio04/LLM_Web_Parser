@@ -10,6 +10,19 @@ from .parsers.parser2 import StatMuseParser
 from .parsers.parser3 import EurLexParser
 from .parsers.parser_wikipedia import WikipediaParser
 
+try:
+    from .db.repository import db_schema as repo_db_schema
+    from .db.repository import db_stats as repo_db_stats
+    from .db.repository import get_web_resource as repo_get_web_resource
+    from .db.repository import get_gold_standard as repo_get_gold_standard
+    from .db.repository import list_gold_standard_urls as repo_list_gold_standard_urls
+except ImportError:
+    from db.repository import db_schema as repo_db_schema
+    from db.repository import db_stats as repo_db_stats
+    from db.repository import get_web_resource as repo_get_web_resource
+    from db.repository import get_gold_standard as repo_get_gold_standard
+    from db.repository import list_gold_standard_urls as repo_list_gold_standard_urls
+
 app = FastAPI(title="Parser API")
 
 # Modelli Pydantic per validazione I/O
@@ -302,6 +315,36 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
         }
     )
 
+@app.get("/db_schema")
+async def get_db_schema():
+    """
+    Restituisce lo schema del database.
+    """
+    try:
+        return repo_db_schema()
+    except Exception as e:
+        print(f"[ERROR] Errore durante il recupero dello schema DB: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail="Errore durante il recupero dello schema DB"
+        )
+
+
+@app.get("/db_stats")
+async def get_db_stats():
+    """
+    Restituisce statistiche generali sui dati salvati nel database.
+    """
+    try:
+        return repo_db_stats()
+    except Exception as e:
+        print(f"[ERROR] Errore durante il recupero delle statistiche DB: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail="Errore durante il recupero delle statistiche DB"
+        )
+
+
 def find_parser(url: str) -> Optional[BaseParser]:
     """
     Restituisce il parser corrispondente al dominio dell'URL.
@@ -339,3 +382,5 @@ def find_path(url: str) -> Optional[Path]:
     else:
         print(f"[WARNING] Dominio non riconosciuto: {url}")
         return None
+
+
