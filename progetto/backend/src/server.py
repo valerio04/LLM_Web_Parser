@@ -36,7 +36,7 @@ class ParseResponse(BaseModel):
 
 class ParseRequest(BaseModel):
     url: str
-    html_text: str
+    local: Optional[bool] = False
 
 class DomainsResponse(BaseModel):
     domains: List[str]
@@ -47,6 +47,9 @@ class GoldStandardResponse(BaseModel):
     title: str
     html_text: str
     gold_text: str
+
+class GoldStandardUrlsResponse(BaseModel):
+    gold_standard_urls: List[str]
 
 class FullGoldStandardResponse(BaseModel):
     gold_standard: List[GoldStandardResponse]
@@ -66,71 +69,62 @@ class FullGsEvalResponse(BaseModel):
 
 # Endpoint
 
-@app.get("/parse")
-async def parse_document(url: str) -> ParseResponse:
-    """
-    Esegue il parser per un documento di un dominio.
-    Parametri: URL del documento da parsare
-    Ritorna: URL, dominio, titolo, testo HTML originale, testo parsato
-    """
-
-    # 1. Ricava le informazioni di parser e path
-    parser= find_parser(url)
-    
-    # 2. Se parser_info è None (dominio non riconosciuto), da subito l'eccezione 400
-    if not parser:
-        print(f"[WARNING] Dominio non riconosciuto: {url}")
-        raise HTTPException(status_code=400, detail="Dominio non supportato")
-        
-    
-    try:
-        result = await parser.run(url)
-        return ParseResponse(url = result['url'], 
-                             domain=result['domain'], 
-                             title=result['title'], 
-                             html_text=result['html_text'], 
-                             parsed_text=result['parsed_text'])
-    
-    except Exception as e:
-        print(f"[ERROR] Errore durante il parsing: {e}")
-        raise HTTPException(status_code=500, detail="Errore durante il parsing")
-
-
 
 @app.post("/parse")
-async def parse_document_from_html(parse_request: ParseRequest) -> ParseResponse:
+async def parse_document(parse_request: ParseRequest) -> ParseResponse:
     """
-    Esegue il parser per un documento di un dominio direttamente dall'HTML presente nel gold standard (se esiste).
-    Parametri: URL, file_HTML
-    Ritorna: URL, dominio, titolo, testo HTML originale, testo parsato
+    Esegue il parser per un documento.
+
+    Se local=True:
+    - legge html_text dal DB usando l'URL
+    - non scarica la pagina online
+
+    Se local=False:
+    - scarica la pagina online
     """
 
     url = parse_request.url
-    html_text = parse_request.html_text
-    
-    # 1. Ricava le informazioni di parser e path
     parser = find_parser(url)
 
-    # 2. Se parser è None (dominio non riconosciuto), da subito l'eccezione 400
     if not parser:
         print(f"[WARNING] Dominio non riconosciuto: {url}")
         raise HTTPException(status_code=400, detail="Dominio non supportato")
-        
-    
+
     try:
-        result = await parser.run_from_html(url, html_text)
-        return ParseResponse(url = result['url'], 
-                             domain=result['domain'], 
-                             title=result['title'], 
-                             html_text=result['html_text'], 
-                             parsed_text=result['parsed_text'])
-    
+        if parse_request.local:
+            web_resource = repo_get_web_resource(url)
+
+            if not web_resource:
+                print(f"[WARNING] URL non presente nel DB: {url}")
+                raise HTTPException(
+                    status_code=404,
+                    detail="URL non presente nel DB"
+                )
+
+            result = await parser.run_from_html(
+                url,
+                web_resource["html_text"]
+            )
+
+        else:
+            result = await parser.run(url)
+
+        return ParseResponse(
+            url=result["url"],
+            domain=result["domain"],
+            title=result["title"],
+            html_text=result["html_text"],
+            parsed_text=result["parsed_text"]
+        )
+
+    except HTTPException:
+        raise
+
     except Exception as e:
         print(f"[ERROR] Errore durante il parsing: {e}")
         raise HTTPException(status_code=500, detail="Errore durante il parsing")
 
-
-
+#da modificare ancora
 @app.get("/domains")
 async def get_domains() -> DomainsResponse:
     """
@@ -156,85 +150,73 @@ async def get_domains() -> DomainsResponse:
 @app.get("/gold_standard")
 async def get_gold_standard(url: str) -> GoldStandardResponse:
     """
-    Restituisce il gold standard per un documento.
+    Restituisce il gold standard per un documento leggendo dal DB.
     Parametri: URL
-    Ritorna: URL, dominio, titolo, testo HTML originale, gold_text
+    Ritorna: URL, dominio, titolo, HTML grezzo, gold_text
     """
-    
-    # cerca il path del progetto a partire da questo file
-    script_dir = Path(__file__).parent.resolve()
-    base_dir = script_dir.parent.parent
-    # restituisce il percorso del file JSON associato al dominio
-    json_path = find_path(url)
 
-    # Se il percorso è None (dominio non riconosciuto), da subito l'eccezione 400
-    if not json_path:
+    parser = find_parser(url)
+
+    if not parser:
+        print(f"[WARNING] Dominio non riconosciuto: {url}")
         raise HTTPException(status_code=400, detail="Dominio non supportato")
-    
-    # Carica i dati dal file JSON
-    with open(json_path, 'r', encoding='utf-8') as f:
-        gold_data = json.load(f)
 
-    print("Oggetto JSON caricato:", gold_data)
+    try:
+        entry = repo_get_gold_standard(url)
 
-    # cerco l'entry corrispondente all'url e restituisco il gold standard
-    for entry in gold_data:
-        if entry['url'] == url:
-            gold_file_path = base_dir / "gs_data" / entry['gold_file']
-            html_file_path = base_dir / "gs_data" / entry['html_file']
+        if not entry:
+            print(f"[WARNING] URL non presente nel Gold Standard: {url}")
+            raise HTTPException(
+                status_code=404,
+                detail="URL non presente nel Gold Standard"
+            )
 
-            # Leggi il contenuto del file gold standard
-            with open(gold_file_path, 'r', encoding='utf-8') as f:
-                gold_text = f.read()
+        return GoldStandardResponse(
+            url=entry["url"],
+            domain=entry["domain"],
+            title=entry["title"],
+            html_text=entry["html_text"],
+            gold_text=entry["gold_text"]
+        )
 
-            # Leggi il contenuto del file html standard
-            with open(html_file_path, 'r', encoding='utf-8') as f:
-                html_text = f.read()
+    except HTTPException:
+        raise
 
-            return GoldStandardResponse(url=entry['url'], domain=entry['domain'], title=entry['title'], html_text=html_text, gold_text=gold_text) 
-    raise HTTPException(status_code=404, detail="l'url non è nel GS")
+    except Exception as e:
+        print(f"[ERROR] Errore durante il recupero del Gold Standard dal DB: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail="Errore durante il recupero del Gold Standard"
+        )
 
 
-@app.get("/full_gold_standard")
-async def get_full_gold_standard(domain: str) -> FullGoldStandardResponse:
+@app.get("/gold_standard_urls")
+async def get_gold_standard_urls(domain: str) -> GoldStandardUrlsResponse:
     """
-    Restituisce tutto il GS del dominio.
+    Restituisce tutti gli URL del Gold Standard per un dominio leggendo dal DB.
     Parametri: dominio
-    Ritorna: List[{URL, dominio, title, HTML_file, gold_text}]
+    Ritorna: lista URL del Gold Standard
     """
+    parser = find_path(domain)
 
-    # cerca il path del progetto a partire da questo file
-    script_dir = Path(__file__).parent.resolve()
-    base_dir = script_dir.parent.parent
-    # restituisce il percorso del file JSON associato al dominio
-    json_path = find_path(domain)
-
-    # Se il percorso è None (dominio non riconosciuto), da subito l'eccezione 400
-    if not json_path:
+    if not parser:
+        print(f"[WARNING] Dominio non riconosciuto: {domain}")
         raise HTTPException(status_code=400, detail="Dominio non supportato")
-    
-    
-    # Carica i dati dal file JSON
-    with open(json_path, 'r', encoding='utf-8') as f:
-        gold_data = json.load(f)
 
-    # inizializzo la lista che conterrà i GoldStandardResponse
-    gold_standard=[]
-    for entry in gold_data:
-        gold_file_path = base_dir / "gs_data" / entry['gold_file']
-        html_file_path = base_dir / "gs_data" / entry['html_file']
+    try:
+        urls = repo_list_gold_standard_urls(domain)
 
-        # Leggi il contenuto del file gold standard
-        with open(gold_file_path, 'r', encoding='utf-8') as f:
-            gold_text = f.read()
+        return GoldStandardUrlsResponse(
+            gold_standard_urls=urls
+        )
 
-        # Leggi il contenuto del file html standard
-        with open(html_file_path, 'r', encoding='utf-8') as f:
-            html_text = f.read()
+    except Exception as e:
+        print(f"[ERROR] Errore durante il recupero degli URL GS dal DB: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail="Errore durante il recupero degli URL del Gold Standard"
+        )
 
-        gold_standard.append(GoldStandardResponse(url=entry['url'], domain=entry['domain'], title=entry['title'], html_text=html_text, gold_text=gold_text))
-    result = FullGoldStandardResponse(gold_standard=gold_standard)
-    return result
 
 
 
@@ -371,11 +353,11 @@ def find_path(url: str) -> Optional[Path]:
     """
     script_dir = Path(__file__).parent.resolve()
     base_dir = script_dir.parent.parent
-    if "wikipedia.org" in url:
+    if "en.wikipedia.org" in url:
         return base_dir / "gs_data" / "wikipedia_org"/ "gs.json"
-    elif "ilpost.it" in url:
+    elif "www.ilpost.it" in url:
         return base_dir / "gs_data" / "ilpost_it" / "gs.json"
-    elif "statmuse.com" in url:
+    elif "www.statmuse.com" in url:
         return base_dir / "gs_data" / "statmuse_com" / "gs.json"
     elif "eur-lex.europa.eu" in url:
         return base_dir / "gs_data" / "eurlex_europa_eu" / "gs.json"
