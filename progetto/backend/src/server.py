@@ -16,13 +16,20 @@ try:
     from .db.repository import get_web_resource as repo_get_web_resource
     from .db.repository import get_gold_standard as repo_get_gold_standard
     from .db.repository import list_gold_standard_urls as repo_list_gold_standard_urls
+    from .db.repository import add_web_resource as repo_add_web_resource
+    from .db.repository import add_gold_standard as repo_add_gold_standard
+    from .db.repository import delete_web_resource as repo_delete_web_resource
+    from .db.repository import delete_gold_standard as repo_delete_gold_standard
 except ImportError:
     from db.repository import db_schema as repo_db_schema
     from db.repository import db_stats as repo_db_stats
     from db.repository import get_web_resource as repo_get_web_resource
     from db.repository import get_gold_standard as repo_get_gold_standard
     from db.repository import list_gold_standard_urls as repo_list_gold_standard_urls
-
+    from db.repository import add_web_resource as repo_add_web_resource
+    from db.repository import add_gold_standard as repo_add_gold_standard
+    from db.repository import delete_web_resource as repo_delete_web_resource
+    from db.repository import delete_gold_standard as repo_delete_gold_standard
 app = FastAPI(title="Parser API")
 
 # Modelli Pydantic per validazione I/O
@@ -66,6 +73,24 @@ class FullGsEvalResponse(BaseModel):
     token_level_eval: Dict[str, float]
     x_eval: Dict[str, Any] = {}
 
+class AddWebResourceRequest(BaseModel):
+    url: str
+    html_text: str
+    domain: Optional[str] = None
+    title: Optional[str] = None
+
+
+class AddGoldStandardRequest(BaseModel):
+    url: str
+    gold_text: str
+
+
+class DeleteByUrlRequest(BaseModel):
+    url: str
+
+
+class StatusResponse(BaseModel):
+    status: str
 
 # Endpoint
 
@@ -297,6 +322,156 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
         }
     )
 
+@app.post("/add_web_resource")
+async def add_web_resource(request: AddWebResourceRequest) -> StatusResponse:
+    """
+    Aggiunge una risorsa web nella tabella web_resources.
+    Input minimo: url, html_text.
+    """
+
+    parser = find_parser(request.url)
+
+    if not parser:
+        print(f"[WARNING] Dominio non riconosciuto: {request.url}")
+        raise HTTPException(status_code=400, detail="Dominio non supportato")
+
+    try:
+        domain = request.domain or get_domain_from_url(request.url)
+        title = request.title or ""
+
+        repo_add_web_resource(
+            url=request.url,
+            domain=domain,
+            title=title,
+            html_text=request.html_text
+        )
+
+        return StatusResponse(status="ok")
+
+    except Exception as e:
+        print(f"[ERROR] Errore durante add_web_resource: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail="Errore durante l'aggiunta della web resource"
+        )
+
+
+@app.delete("/web_resource")
+async def delete_web_resource(request: DeleteByUrlRequest) -> StatusResponse:
+    """
+    Rimuove una risorsa web.
+    Il gold_standard collegato viene rimosso a cascata tramite FK.
+    """
+
+    parser = find_parser(request.url)
+
+    if not parser:
+        print(f"[WARNING] Dominio non riconosciuto: {request.url}")
+        raise HTTPException(status_code=400, detail="Dominio non supportato")
+
+    try:
+        deleted = repo_delete_web_resource(request.url)
+
+        if not deleted:
+            print(f"[WARNING] URL non presente in web_resources: {request.url}")
+            raise HTTPException(
+                status_code=404,
+                detail="URL non presente in web_resources"
+            )
+
+        return StatusResponse(status="ok")
+
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        print(f"[ERROR] Errore durante delete_web_resource: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail="Errore durante la rimozione della web resource"
+        )
+
+
+
+
+@app.post("/add_gold_standard")
+async def add_gold_standard(request: AddGoldStandardRequest) -> StatusResponse:
+    """
+    Aggiunge una entry nella tabella gold_standard.
+    La web_resource corrispondente deve già esistere.
+    """
+
+    parser = find_parser(request.url)
+
+    if not parser:
+        print(f"[WARNING] Dominio non riconosciuto: {request.url}")
+        raise HTTPException(status_code=400, detail="Dominio non supportato")
+
+    try:
+        web_resource = repo_get_web_resource(request.url)
+
+        if not web_resource:
+            print(f"[WARNING] URL non presente in web_resources: {request.url}")
+            raise HTTPException(
+                status_code=404,
+                detail="URL non presente in web_resources"
+            )
+
+        repo_add_gold_standard(
+            url=request.url,
+            gold_text=request.gold_text
+        )
+
+        return StatusResponse(status="ok")
+
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        print(f"[ERROR] Errore durante add_gold_standard: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail="Errore durante l'aggiunta del gold standard"
+        )
+
+
+@app.delete("/gold_standard")
+async def delete_gold_standard(request: DeleteByUrlRequest) -> StatusResponse:
+    """
+    Rimuove solo una entry da gold_standard,
+    lasciando intatta la web_resource associata.
+    """
+
+    parser = find_parser(request.url)
+
+    if not parser:
+        print(f"[WARNING] Dominio non riconosciuto: {request.url}")
+        raise HTTPException(status_code=400, detail="Dominio non supportato")
+
+    try:
+        deleted = repo_delete_gold_standard(request.url)
+
+        if not deleted:
+            print(f"[WARNING] URL non presente nel Gold Standard: {request.url}")
+            raise HTTPException(
+                status_code=404,
+                detail="URL non presente nel Gold Standard"
+            )
+
+        return StatusResponse(status="ok")
+
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        print(f"[ERROR] Errore durante delete_gold_standard: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail="Errore durante la rimozione del gold standard"
+        )
+    
+    
+
 @app.get("/db_schema")
 async def get_db_schema():
     """
@@ -365,4 +540,17 @@ def find_path(url: str) -> Optional[Path]:
         print(f"[WARNING] Dominio non riconosciuto: {url}")
         return None
 
-
+def get_domain_from_url(url: str) -> str:
+    """
+    Ricava il dominio supportato a partire dall'URL.
+    """
+    if "wikipedia.org" in url:
+        return "en.wikipedia.org"
+    elif "ilpost.it" in url:
+        return "www.ilpost.it"
+    elif "statmuse.com" in url:
+        return "www.statmuse.com"
+    elif "eur-lex.europa.eu" in url:
+        return "eur-lex.europa.eu"
+    else:
+        return ""
