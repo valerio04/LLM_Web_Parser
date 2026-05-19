@@ -20,6 +20,8 @@ try:
     from .db.repository import add_gold_standard as repo_add_gold_standard
     from .db.repository import delete_web_resource as repo_delete_web_resource
     from .db.repository import delete_gold_standard as repo_delete_gold_standard
+    from .db.repository import add_parsed_document as repo_add_parsed_document
+    from .db.repository import add_evaluation as repo_add_evaluation
 except ImportError:
     from db.repository import db_schema as repo_db_schema
     from db.repository import db_stats as repo_db_stats
@@ -30,6 +32,10 @@ except ImportError:
     from db.repository import add_gold_standard as repo_add_gold_standard
     from db.repository import delete_web_resource as repo_delete_web_resource
     from db.repository import delete_gold_standard as repo_delete_gold_standard
+    from db.repository import add_parsed_document as repo_add_parsed_document
+    from db.repository import add_evaluation as repo_add_evaluation 
+    
+
 app = FastAPI(title="Parser API")
 
 # Modelli Pydantic per validazione I/O
@@ -64,6 +70,8 @@ class FullGoldStandardResponse(BaseModel):
 class EvaluateRequest(BaseModel):
     parsed_text: str
     gold_text: str
+    url: Optional[str] = None
+    parsed_document_id: Optional[int] = None
 
 class EvaluateResponse(BaseModel):
     token_level_eval: Dict[str, float]
@@ -133,6 +141,17 @@ async def parse_document(parse_request: ParseRequest) -> ParseResponse:
 
         else:
             result = await parser.run(url)
+
+        
+        try:
+            #salo il risultato del prsing nel db
+            repo_add_parsed_document(
+                url=result["url"],
+                parsed_text=result["parsed_text"],
+                parser_name=parser.__class__.__name__
+            )
+        except Exception as e:
+            print(f"[WARNING] Impossibile salvare parsed_document nel DB: {e}")
 
         return ParseResponse(
             url=result["url"],
@@ -222,9 +241,9 @@ async def get_gold_standard_urls(domain: str) -> GoldStandardUrlsResponse:
     Parametri: dominio
     Ritorna: lista URL del Gold Standard
     """
-    parser = find_path(domain)
+    
 
-    if not parser:
+    if not is_supported_domain(domain):
         print(f"[WARNING] Dominio non riconosciuto: {domain}")
         raise HTTPException(status_code=400, detail="Dominio non supportato")
 
@@ -244,81 +263,151 @@ async def get_gold_standard_urls(domain: str) -> GoldStandardUrlsResponse:
 
 
 
-
 @app.post("/evaluate")
 async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
     """
     Esegue l'eval tra il testo parsato e il gold standard.
-    Parametri: parsed_text e gold_text
-    Ritorna: risultati delle metriche associate all'URL (token_level_eval e x_level eval)
-    """    
-        
-    token_level_eval = Evaluator.token_level_eval(request.parsed_text, request.gold_text)
-    x_eval = Evaluator.x_eval_complete(request.parsed_text, request.gold_text)
-    
+    Se viene passato url, salva anche le metriche nel DB.
+    """
 
-    result=EvaluateResponse(token_level_eval=token_level_eval, x_eval=x_eval)
-    return result
+    token_level_eval = Evaluator.token_level_eval(
+        request.parsed_text,
+        request.gold_text
+    )
 
+    x_eval = Evaluator.x_eval_fast(
+        request.parsed_text,
+        request.gold_text
+    )
+
+    if request.url:
+        try:
+            repo_add_evaluation(
+                url=request.url,
+                token_level_eval=token_level_eval,
+                x_eval=x_eval,
+                parsed_document_id=request.parsed_document_id
+            )
+        except Exception as e:
+            print(f"[WARNING] Impossibile salvare evaluation nel DB: {e}")
+
+    return EvaluateResponse(
+        token_level_eval=token_level_eval,
+        x_eval=x_eval
+    )
 
 @app.get("/full_gs_eval")
 async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
     """
-    Esegue l'eval su tutto il GS di un dominio e restituisce la media dei risultati.
-    Parametri: dominio
-    Ritorna: risultati delle metriche associate al dominio (token_level_eval e x_level eval)
+    Esegue l'eval su tutto il GS di un dominio usando HTML e gold_text dal DB.
+    Salva parsed_documents ed evaluations nel DB.
+    Usa x_eval_fast invece di x_eval_complete.
     """
-    
-    # restituisce il percorso del file JSON associato al dominio
-    json_path = find_path(domain)
-    
-    # Se il percorso è None (dominio non riconosciuto), da subito l'eccezione 400
-    if not json_path:
-        raise HTTPException(status_code=400, detail="Dominio non supportato")
-    
-    # Carico i dati contenuti nel file json
-    with open(json_path, 'r', encoding='utf-8') as f:
-        gold_data = json.load(f)
-    
-    # chiamo la funzione che calcola le metriche di tutto il GS del dominio
-    eval_response = await evaluate_gold_standard(gold_data)
 
-    if not eval_response:
-        return FullGsEvalResponse(
-            token_level_eval={"precision": 0, "recall": 0, "f1": 0}, 
-            x_eval={"boilerplate_ratio_extracted": 0, "boilerplate_fidelity": 0, "cosine_similarity": 0}
+    if not is_supported_domain(domain):
+        print(f"[WARNING] Dominio non riconosciuto: {domain}")
+        raise HTTPException(status_code=400, detail="Dominio non supportato")
+
+    urls = repo_list_gold_standard_urls(domain)
+
+    if not urls:
+        raise HTTPException(
+            status_code=404,
+            detail="Nessun Gold Standard trovato per questo dominio"
         )
-    
-    # Inizializziamo le liste
+
     data = {
-        "p": [], "r": [], "f1": [],
-        "cos": [], "bp_ext": [], "bp_diff": []
+        "precision": [],
+        "recall": [],
+        "f1": [],
+        "cosine_similarity": [],
+        "boilerplate_ratio_extracted": [],
+        "boilerplate_fidelity": [],
     }
 
-    # Popolamento delle liste con i risultati di ogni entry del GS
-    for metrics in eval_response.values():
-        data["p"].append(metrics.get("precision", 0))
-        data["r"].append(metrics.get("recall", 0))
-        data["f1"].append(metrics.get("f1", 0))
-        
-        x = metrics.get("x_eval", {})
-        data["cos"].append(x.get("cosine_similarity", 0))
-        data["bp_ext"].append(x.get("boilerplate_ratio_extracted", 0))
-        data["bp_diff"].append(x.get("boilerplate_fidelity", 0))
+    for url in urls:
+        try:
+            entry = repo_get_gold_standard(url)
 
-    # Helper per la media
-    avg = lambda l: sum(l) / len(l) if l else 0.0
+            if not entry:
+                print(f"[WARNING] Entry GS non trovata nel DB: {url}")
+                continue
+
+            parser = find_parser(url)
+
+            if not parser:
+                print(f"[WARNING] Parser non trovato per: {url}")
+                continue
+
+            parsed_result = await parser.run_from_html(
+                url,
+                entry["html_text"]
+            )
+
+            parsed_text = parsed_result.get("parsed_text", "").strip()
+
+            if not parsed_text:
+                print(f"[WARNING] parsed_text vuoto per: {url}")
+                continue
+
+            parsed_document_id = None
+
+            try:
+                parsed_document_id = repo_add_parsed_document(
+                    url=url,
+                    parsed_text=parsed_text,
+                    parser_name=parser.__class__.__name__
+                )
+            except Exception as e:
+                print(f"[WARNING] Impossibile salvare parsed_document per {url}: {e}")
+
+            token_level_eval = Evaluator.token_level_eval(
+                parsed_text,
+                entry["gold_text"]
+            )
+
+            x_eval = Evaluator.x_eval_fast(
+                parsed_text,
+                entry["gold_text"]
+            )
+
+            try:
+                repo_add_evaluation(
+                    url=url,
+                    parsed_document_id=parsed_document_id,
+                    token_level_eval=token_level_eval,
+                    x_eval=x_eval
+                )
+            except Exception as e:
+                print(f"[WARNING] Impossibile salvare evaluation per {url}: {e}")
+
+            data["precision"].append(token_level_eval.get("precision", 0))
+            data["recall"].append(token_level_eval.get("recall", 0))
+            data["f1"].append(token_level_eval.get("f1", 0))
+
+            data["cosine_similarity"].append(x_eval.get("cosine_similarity", 0))
+            data["boilerplate_ratio_extracted"].append(
+                x_eval.get("boilerplate_ratio_extracted", 0)
+            )
+            data["boilerplate_fidelity"].append(
+                x_eval.get("boilerplate_fidelity", 0)
+            )
+
+        except Exception as e:
+            print(f"[ERROR] Errore durante full_gs_eval per {url}: {e}")
+
+    avg = lambda values: sum(values) / len(values) if values else 0.0
 
     return FullGsEvalResponse(
         token_level_eval={
-            "precision": avg(data["p"]),
-            "recall": avg(data["r"]),
-            "f1": avg(data["f1"])
+            "precision": avg(data["precision"]),
+            "recall": avg(data["recall"]),
+            "f1": avg(data["f1"]),
         },
         x_eval={
-            "boilerplate_ratio_extracted": avg(data["bp_ext"]),
-            "boilerplate_fidelity": avg(data["bp_diff"]),
-            "cosine_similarity": avg(data["cos"])
+            "cosine_similarity": avg(data["cosine_similarity"]),
+            "boilerplate_ratio_extracted": avg(data["boilerplate_ratio_extracted"]),
+            "boilerplate_fidelity": avg(data["boilerplate_fidelity"]),
         }
     )
 
@@ -470,7 +559,7 @@ async def delete_gold_standard(request: DeleteByUrlRequest) -> StatusResponse:
             detail="Errore durante la rimozione del gold standard"
         )
     
-    
+
 
 @app.get("/db_schema")
 async def get_db_schema():
@@ -554,3 +643,16 @@ def get_domain_from_url(url: str) -> str:
         return "eur-lex.europa.eu"
     else:
         return ""
+
+
+def is_supported_domain(value: str) -> bool:
+    """
+    Controlla se una stringa contiene un dominio supportato.
+    Funziona sia con URL completi sia con domini tipo www.ilpost.it.
+    """
+    return (
+        "wikipedia.org" in value
+        or "ilpost.it" in value
+        or "statmuse.com" in value
+        or "eur-lex.europa.eu" in value
+    )

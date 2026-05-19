@@ -298,8 +298,6 @@ def db_stats():
             AVG(ev.precision_score) AS avg_precision,
             AVG(ev.recall_score) AS avg_recall,
             AVG(ev.f1_score) AS avg_f1,
-            AVG(CAST(JSON_UNQUOTE(JSON_EXTRACT(ev.x_eval, '$.levenshtein')) AS DOUBLE)) AS avg_levenshtein,
-            AVG(CAST(JSON_UNQUOTE(JSON_EXTRACT(ev.x_eval, '$.rouge_l')) AS DOUBLE)) AS avg_rouge_l,
             AVG(CAST(JSON_UNQUOTE(JSON_EXTRACT(ev.x_eval, '$.cosine_similarity')) AS DOUBLE)) AS avg_cosine_similarity,
             AVG(CAST(JSON_UNQUOTE(JSON_EXTRACT(ev.x_eval, '$.boilerplate_ratio_extracted')) AS DOUBLE)) AS avg_boilerplate_ratio_extracted,
             AVG(CAST(JSON_UNQUOTE(JSON_EXTRACT(ev.x_eval, '$.boilerplate_fidelity')) AS DOUBLE)) AS avg_boilerplate_fidelity
@@ -346,8 +344,6 @@ def db_stats():
                 "f1": float(row["avg_f1"] or 0),
             },
             "x_eval": {
-                "levenshtein": float(row["avg_levenshtein"] or 0),
-                "rouge_l": float(row["avg_rouge_l"] or 0),
                 "cosine_similarity": float(row["avg_cosine_similarity"] or 0),
                 "boilerplate_ratio_extracted": float(row["avg_boilerplate_ratio_extracted"] or 0),
                 "boilerplate_fidelity": float(row["avg_boilerplate_fidelity"] or 0),
