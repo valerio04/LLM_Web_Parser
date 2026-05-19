@@ -3,6 +3,8 @@ from pydantic import BaseModel
 from typing import Dict, Optional, List, Any
 from pathlib import Path
 import json
+import os
+import urllib.request
 
 from .evaluation import *
 from .parsers.parser1 import IlPostParser
@@ -11,6 +13,7 @@ from .parsers.parser3 import EurLexParser
 from .parsers.parser_wikipedia import WikipediaParser
 
 try:
+    from .db.connection import get_connection
     from .db.repository import db_schema as repo_db_schema
     from .db.repository import db_stats as repo_db_stats
     from .db.repository import get_web_resource as repo_get_web_resource
@@ -22,7 +25,10 @@ try:
     from .db.repository import delete_gold_standard as repo_delete_gold_standard
     from .db.repository import add_parsed_document as repo_add_parsed_document
     from .db.repository import add_evaluation as repo_add_evaluation
+    from .db.repository import add_llm_judgement as repo_add_llm_judgement
+    from .ollama.judge import evaluate_with_ollama
 except ImportError:
+    from db.connection import get_connection
     from db.repository import db_schema as repo_db_schema
     from db.repository import db_stats as repo_db_stats
     from db.repository import get_web_resource as repo_get_web_resource
@@ -33,8 +39,9 @@ except ImportError:
     from db.repository import delete_web_resource as repo_delete_web_resource
     from db.repository import delete_gold_standard as repo_delete_gold_standard
     from db.repository import add_parsed_document as repo_add_parsed_document
-    from db.repository import add_evaluation as repo_add_evaluation 
-    
+    from db.repository import add_evaluation as repo_add_evaluation
+    from db.repository import add_llm_judgement as repo_add_llm_judgement
+    from ollama.judge import evaluate_with_ollama
 
 app = FastAPI(title="Parser API")
 
@@ -77,6 +84,19 @@ class EvaluateResponse(BaseModel):
     token_level_eval: Dict[str, float]
     x_eval: Dict[str, Any] = {}
 
+class JudgeRequest(BaseModel):
+    parsed_text: str
+    gold_text: str
+    url: Optional[str] = None
+    parsed_document_id: Optional[int] = None
+
+
+class JudgeResponse(BaseModel):
+    model_name: str
+    judge_score: int
+    judge_feedback: str
+    extra_info: Dict[str, Any] = {}
+
 class FullGsEvalResponse(BaseModel):
     token_level_eval: Dict[str, float]
     x_eval: Dict[str, Any] = {}
@@ -99,6 +119,11 @@ class DeleteByUrlRequest(BaseModel):
 
 class StatusResponse(BaseModel):
     status: str
+
+class StatusSystemResponse(BaseModel):
+    backend: str
+    database: str
+    ollama: str
 
 # Endpoint
 
@@ -295,6 +320,41 @@ async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
         token_level_eval=token_level_eval,
         x_eval=x_eval
     )
+
+
+@app.post("/evaluate_judge")
+async def evaluate_judge(request: JudgeRequest) -> JudgeResponse:
+    """
+    Valuta il testo parsato rispetto al gold standard usando LLM-as-Judge.
+    Se viene passato url, salva il giudizio nel DB.
+    """
+
+    result = evaluate_with_ollama(
+        parsed_text=request.parsed_text,
+        gold_text=request.gold_text
+    )
+
+    if request.url:
+        try:
+            repo_add_llm_judgement(
+                url=request.url,
+                parsed_document_id=request.parsed_document_id,
+                model_name=result["model_name"],
+                judge_score=result["judge_score"],
+                judge_feedback=result["judge_feedback"],
+                extra_info=result.get("extra_info", {})
+            )
+        except Exception as e:
+            print(f"[WARNING] Impossibile salvare llm_judgement nel DB: {e}")
+
+    return JudgeResponse(
+        model_name=result["model_name"],
+        judge_score=result["judge_score"],
+        judge_feedback=result["judge_feedback"],
+        extra_info=result.get("extra_info", {})
+    )
+
+
 
 @app.get("/full_gs_eval")
 async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
@@ -590,6 +650,21 @@ async def get_db_stats():
             detail="Errore durante il recupero delle statistiche DB"
         )
 
+@app.get("/status")
+async def get_status() -> StatusSystemResponse:
+    """
+    Restituisce lo stato dei componenti del sistema.
+    L'endpoint risponde sempre HTTP 200.
+    """
+
+    return StatusSystemResponse(
+        backend="ok",
+        database=check_database_status(),
+        ollama=check_ollama_status()
+    )
+
+
+# =================helper=====================
 
 def find_parser(url: str) -> Optional[BaseParser]:
     """
@@ -656,3 +731,42 @@ def is_supported_domain(value: str) -> bool:
         or "statmuse.com" in value
         or "eur-lex.europa.eu" in value
     )
+
+def check_database_status() -> str:
+    """
+    Controlla se il database è raggiungibile.
+    """
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute("SELECT 1")
+        cursor.fetchone()
+
+        cursor.close()
+        conn.close()
+
+        return "ok"
+
+    except Exception as e:
+        print(f"[WARNING] Database non raggiungibile: {e}")
+        return "error"
+
+
+def check_ollama_status() -> str:
+    """
+    Controlla se Ollama è raggiungibile.
+    """
+    try:
+        ollama_url = os.getenv("OLLAMA_URL", "http://ollama:11434")
+        url = f"{ollama_url}/api/tags"
+
+        with urllib.request.urlopen(url, timeout=5) as response:
+            if response.status == 200:
+                return "ok"
+
+        return "error"
+
+    except Exception as e:
+        print(f"[WARNING] Ollama non raggiungibile: {e}")
+        return "error"

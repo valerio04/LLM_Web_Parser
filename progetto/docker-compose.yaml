@@ -19,6 +19,36 @@ services:
       timeout: 5s
       retries: 20
       start_period: 10s
+  
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    environment:
+      OLLAMA_MODEL: phi4-mini:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    entrypoint: ["/bin/sh", "-c"]
+    command: >
+      "
+      ollama serve &
+      echo 'Aspetto che Ollama sia pronto...';
+      until ollama list >/dev/null 2>&1; do
+        sleep 2;
+      done;
+      echo 'Scarico il modello se non presente...';
+      ollama pull $${OLLAMA_MODEL};
+      echo 'Modello pronto.';
+      wait
+      "
+    healthcheck:
+      test: ["CMD-SHELL", "ollama list | grep -q 'phi4-mini' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 60
+      start_period: 10s
 
   backend:
     build: ./backend
@@ -34,8 +64,12 @@ services:
       DB_USER: minerva_user
       DB_PASSWORD: minerva_pwd
       DB_NAME: minerva_db
+      OLLAMA_URL: http://ollama:11434
+      OLLAMA_MODEL: phi4-mini:latest
     depends_on:
       mariadb:
+        condition: service_healthy
+      ollama:
         condition: service_healthy
     command: >
       sh -c "
@@ -64,3 +98,4 @@ services:
 
 volumes:
   mariadb_data:
+  ollama_data:

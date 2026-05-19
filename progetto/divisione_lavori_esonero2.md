@@ -1,3 +1,82 @@
+### Mancante
+
+- [ ] Implementare `POST /evaluate_judge`
+- [ ] Collegare `POST /evaluate_judge` al servizio LLM/Ollama
+- [ ] Salvare `model_name`, `judge_score`, `judge_feedback` in `llm_judgements`
+- [ ] Fare comparire `avg_eval_judge` popolato in `GET /db_stats`
+- [ ] Implementare `GET /status`
+- [ ] Verificare che tutti gli endpoint rispettino esattamente input/output della specifica
+- [ ] Fare test automatici finali sugli endpoint
+
+### LLM Judge
+
+- [ ] Aggiungere container Ollama nel `docker-compose.yaml`
+- [ ] Esporre Ollama sulla porta obbligatoria `11434`
+- [ ] Scegliere il modello da usare, per esempio `llama3.2:3b`
+- [ ] Automatizzare il pull/caricamento del modello all’avvio, se possibile
+- [ ] Scrivere il prompt per LLM-as-Judge
+- [ ] Forzare risposta JSON dal modello
+- [ ] Gestire fallback se il modello non restituisce JSON valido
+- [ ] Implementare chiamata Python verso Ollama
+- [ ] Collegare il judge a `POST /evaluate_judge`
+- [ ] Salvare il risultato in `llm_judgements`
+
+### Web UI
+
+- [ ] Pagina/sezione per selezionare dominio
+- [ ] Pagina/sezione per selezionare URL dal Gold Standard
+- [ ] Input manuale URL
+- [ ] Opzione Live/Local per il parsing
+- [ ] Bottone per eseguire `POST /parse`
+- [ ] Visualizzazione `html_text`
+- [ ] Visualizzazione `parsed_text`
+- [ ] Visualizzazione `gold_text` se disponibile
+- [ ] Bottone per eseguire `POST /evaluate`
+- [ ] Visualizzazione metriche automatiche: precision, recall, F1, metriche extra
+- [ ] Bottone per eseguire `POST /evaluate_judge`
+- [ ] Visualizzazione `model_name`, `judge_score`, `judge_feedback`
+- [ ] Pagina/sezione per mostrare `GET /db_stats`
+- [ ] Pagina/sezione per mostrare `GET /status`
+- [ ] Gestione errori restituiti dalle API
+
+### Docker finale
+
+- [x] Backend su porta `8003`
+- [x] Frontend su porta `8004`
+- [x] MariaDB su porta `3306`
+- [ ] Ollama su porta `11434`
+- [ ] Tutti i container avviabili con `docker compose up --build`
+- [ ] Nessun path assoluto
+- [ ] Testare progetto spostandolo in un’altra cartella
+
+
+
+## Test finali e consegna
+
+- [ ] Eseguire `docker compose down -v`
+- [ ] Eseguire `docker compose up --build`
+- [ ] Verificare che il DB venga popolato automaticamente
+- [ ] Verificare `POST /parse`
+- [ ] Verificare `GET /gold_standard`
+- [ ] Verificare `GET /gold_standard_urls`
+- [ ] Verificare `POST /evaluate`
+- [ ] Verificare `POST /evaluate_judge`
+- [ ] Verificare `GET /full_gs_eval`
+- [ ] Verificare `POST /add_web_resource`
+- [ ] Verificare `POST /add_gold_standard`
+- [ ] Verificare `DELETE /web_resource`
+- [ ] Verificare `DELETE /gold_standard`
+- [ ] Verificare `GET /db_schema`
+- [ ] Verificare `GET /db_stats`
+- [ ] Verificare `GET /status`
+- [ ] Eseguire script di test automatico ufficiale
+- [ ] Ottenere `ALL TESTS PASS!`
+- [ ] Aggiornare README / istruzioni di avvio
+- [ ] Preparare `report.pdf`
+- [ ] Pulire file temporanei di test
+- [ ] Creare zip finale con struttura corretta
+
+
 # Divisione dei lavori - Esonero 2 / Progetto Finale
 
 ## Stato attuale del progetto
