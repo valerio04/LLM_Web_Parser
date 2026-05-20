@@ -12,36 +12,20 @@ from .parsers.parser2 import StatMuseParser
 from .parsers.parser3 import EurLexParser
 from .parsers.parser_wikipedia import WikipediaParser
 
-try:
-    from .db.connection import get_connection
-    from .db.repository import db_schema as repo_db_schema
-    from .db.repository import db_stats as repo_db_stats
-    from .db.repository import get_web_resource as repo_get_web_resource
-    from .db.repository import get_gold_standard as repo_get_gold_standard
-    from .db.repository import list_gold_standard_urls as repo_list_gold_standard_urls
-    from .db.repository import add_web_resource as repo_add_web_resource
-    from .db.repository import add_gold_standard as repo_add_gold_standard
-    from .db.repository import delete_web_resource as repo_delete_web_resource
-    from .db.repository import delete_gold_standard as repo_delete_gold_standard
-    from .db.repository import add_parsed_document as repo_add_parsed_document
-    from .db.repository import add_evaluation as repo_add_evaluation
-    from .db.repository import add_llm_judgement as repo_add_llm_judgement
-    from .ollama.judge import evaluate_with_ollama
-except ImportError:
-    from db.connection import get_connection
-    from db.repository import db_schema as repo_db_schema
-    from db.repository import db_stats as repo_db_stats
-    from db.repository import get_web_resource as repo_get_web_resource
-    from db.repository import get_gold_standard as repo_get_gold_standard
-    from db.repository import list_gold_standard_urls as repo_list_gold_standard_urls
-    from db.repository import add_web_resource as repo_add_web_resource
-    from db.repository import add_gold_standard as repo_add_gold_standard
-    from db.repository import delete_web_resource as repo_delete_web_resource
-    from db.repository import delete_gold_standard as repo_delete_gold_standard
-    from db.repository import add_parsed_document as repo_add_parsed_document
-    from db.repository import add_evaluation as repo_add_evaluation
-    from db.repository import add_llm_judgement as repo_add_llm_judgement
-    from ollama.judge import evaluate_with_ollama
+from .db.connection import get_connection
+from .db.repository import db_schema as repo_db_schema
+from .db.repository import db_stats as repo_db_stats
+from .db.repository import get_web_resource as repo_get_web_resource
+from .db.repository import get_gold_standard as repo_get_gold_standard
+from .db.repository import list_gold_standard_urls as repo_list_gold_standard_urls
+from .db.repository import add_web_resource as repo_add_web_resource
+from .db.repository import add_gold_standard as repo_add_gold_standard
+from .db.repository import delete_web_resource as repo_delete_web_resource
+from .db.repository import delete_gold_standard as repo_delete_gold_standard
+from .db.repository import add_parsed_document as repo_add_parsed_document
+from .db.repository import add_evaluation as repo_add_evaluation
+from .db.repository import add_llm_judgement as repo_add_llm_judgement
+from .ollama.judge import evaluate_with_ollama
 
 app = FastAPI(title="Parser API")
 
@@ -99,6 +83,7 @@ class JudgeResponse(BaseModel):
 
 class FullGsEvalResponse(BaseModel):
     token_level_eval: Dict[str, float]
+    judge_score: float
     x_eval: Dict[str, Any] = {}
 
 class AddWebResourceRequest(BaseModel):
@@ -380,6 +365,7 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
         "precision": [],
         "recall": [],
         "f1": [],
+        "judge_score": [],
         "cosine_similarity": [],
         "boilerplate_ratio_extracted": [],
         "boilerplate_fidelity": [],
@@ -431,6 +417,12 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
                 entry["gold_text"]
             )
 
+            judge_result = evaluate_with_ollama(
+                parsed_text=parsed_text,
+                gold_text=entry["gold_text"]
+            )
+
+
             try:
                 repo_add_evaluation(
                     url=url,
@@ -440,10 +432,23 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
                 )
             except Exception as e:
                 print(f"[WARNING] Impossibile salvare evaluation per {url}: {e}")
+            
+            try:
+                repo_add_llm_judgement(
+                    url=url,
+                    parsed_document_id=parsed_document_id,
+                    model_name=judge_result["model_name"],
+                    judge_score=judge_result["judge_score"],
+                    judge_feedback=judge_result["judge_feedback"],
+                    extra_info=judge_result.get("extra_info", {})
+                )
+            except Exception as e:
+                print(f"[WARNING] Impossibile salvare llm_judgement per {url}: {e}")
 
             data["precision"].append(token_level_eval.get("precision", 0))
             data["recall"].append(token_level_eval.get("recall", 0))
             data["f1"].append(token_level_eval.get("f1", 0))
+            data["judge_score"].append(judge_result.get("judge_score", 0))
 
             data["cosine_similarity"].append(x_eval.get("cosine_similarity", 0))
             data["boilerplate_ratio_extracted"].append(
@@ -464,6 +469,7 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
             "recall": avg(data["recall"]),
             "f1": avg(data["f1"]),
         },
+        judge_score=avg(data["judge_score"]),
         x_eval={
             "cosine_similarity": avg(data["cosine_similarity"]),
             "boilerplate_ratio_extracted": avg(data["boilerplate_ratio_extracted"]),

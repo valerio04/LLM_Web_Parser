@@ -29,7 +29,8 @@ CREATE TABLE IF NOT EXISTS parsed_documents (
     CONSTRAINT fk_parsed_documents_web_resource
         FOREIGN KEY (url)
         REFERENCES web_resources(url)
-        ON DELETE CASCADE
+        ON DELETE CASCADE,
+    UNIQUE KEY unique_parsed_url (url)
 );
 
 CREATE TABLE IF NOT EXISTS evaluations (
@@ -48,7 +49,8 @@ CREATE TABLE IF NOT EXISTS evaluations (
     CONSTRAINT fk_evaluations_parsed_document
         FOREIGN KEY (parsed_document_id)
         REFERENCES parsed_documents(id)
-        ON DELETE SET NULL
+        ON DELETE SET NULL,
+    UNIQUE KEY unique_evaluation_url (url)
 );
 
 CREATE TABLE IF NOT EXISTS llm_judgements (
@@ -67,5 +69,6 @@ CREATE TABLE IF NOT EXISTS llm_judgements (
     CONSTRAINT fk_llm_judgements_parsed_document
         FOREIGN KEY (parsed_document_id)
         REFERENCES parsed_documents(id)
-        ON DELETE SET NULL
+        ON DELETE SET NULL,
+    UNIQUE KEY unique_judgement_url (url)
 );

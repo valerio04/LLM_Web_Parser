@@ -157,8 +157,8 @@ def delete_gold_standard(url: str):
 
 def add_parsed_document(url: str, parsed_text: str, parser_name: str = None):
     """
-    Salva nel DB il testo parsato prodotto da un parser.
-    Ritorna l'id del documento parsato inserito.
+    Salva o aggiorna nel DB il testo parsato prodotto da un parser.
+    Ritorna l'id del documento parsato.
     """
     conn = get_connection()
     cursor = conn.cursor()
@@ -167,12 +167,27 @@ def add_parsed_document(url: str, parsed_text: str, parser_name: str = None):
         """
         INSERT INTO parsed_documents (url, parsed_text, parser_name)
         VALUES (?, ?, ?)
+        ON DUPLICATE KEY UPDATE
+            parsed_text = VALUES(parsed_text),
+            parser_name = VALUES(parser_name),
+            created_at = CURRENT_TIMESTAMP
         """,
         (url, parsed_text, parser_name)
     )
 
     conn.commit()
-    parsed_document_id = cursor.lastrowid
+
+    cursor.execute(
+        """
+        SELECT id
+        FROM parsed_documents
+        WHERE url = ?
+        """,
+        (url,)
+    )
+
+    row = cursor.fetchone()
+    parsed_document_id = row[0] if row else None
 
     cursor.close()
     conn.close()
@@ -182,9 +197,7 @@ def add_parsed_document(url: str, parsed_text: str, parser_name: str = None):
 
 def add_evaluation(url: str, token_level_eval: dict, x_eval: dict = None, parsed_document_id: int = None):
     """
-    Salva nel DB le metriche di evaluation per un URL.
-    token_level_eval contiene precision, recall, f1.
-    x_eval contiene le metriche extra.
+    Salva o aggiorna nel DB le metriche di evaluation per un URL.
     """
     conn = get_connection()
     cursor = conn.cursor()
@@ -204,6 +217,13 @@ def add_evaluation(url: str, token_level_eval: dict, x_eval: dict = None, parsed
             x_eval
         )
         VALUES (?, ?, ?, ?, ?, ?)
+        ON DUPLICATE KEY UPDATE
+            parsed_document_id = VALUES(parsed_document_id),
+            precision_score = VALUES(precision_score),
+            recall_score = VALUES(recall_score),
+            f1_score = VALUES(f1_score),
+            x_eval = VALUES(x_eval),
+            created_at = CURRENT_TIMESTAMP
         """,
         (
             url,
@@ -230,7 +250,7 @@ def add_llm_judgement(
     parsed_document_id: int = None
 ):
     """
-    Salva nel DB il giudizio LLM per un URL.
+    Salva o aggiorna nel DB il giudizio LLM per un URL.
     """
     conn = get_connection()
     cursor = conn.cursor()
@@ -246,6 +266,13 @@ def add_llm_judgement(
             extra_info
         )
         VALUES (?, ?, ?, ?, ?, ?)
+        ON DUPLICATE KEY UPDATE
+            parsed_document_id = VALUES(parsed_document_id),
+            model_name = VALUES(model_name),
+            judge_score = VALUES(judge_score),
+            judge_feedback = VALUES(judge_feedback),
+            extra_info = VALUES(extra_info),
+            created_at = CURRENT_TIMESTAMP
         """,
         (
             url,

@@ -24,7 +24,7 @@ services:
     image: ollama/ollama
     container_name: ollama
     environment:
-      OLLAMA_MODEL: phi4-mini:latest
+      OLLAMA_MODEL: ${OLLAMA_MODEL}
     ports:
       - "11434:11434"
     volumes:
@@ -44,8 +44,8 @@ services:
       wait
       "
     healthcheck:
-      test: ["CMD-SHELL", "ollama list | grep -q 'phi4-mini' || exit 1"]
-      interval: 10s
+      test: ["CMD-SHELL", "ollama list >/dev/null 2>&1 || exit 1"]
+      interval: 60s
       timeout: 5s
       retries: 60
       start_period: 10s
@@ -65,7 +65,7 @@ services:
       DB_PASSWORD: minerva_pwd
       DB_NAME: minerva_db
       OLLAMA_URL: http://ollama:11434
-      OLLAMA_MODEL: phi4-mini:latest
+      OLLAMA_MODEL: ${OLLAMA_MODEL}
     depends_on:
       mariadb:
         condition: service_healthy
@@ -78,7 +78,7 @@ services:
       "
     healthcheck:
       test: ["CMD-SHELL", "python -c 'import urllib.request; urllib.request.urlopen(\"http://127.0.0.1:8003/docs\")' || exit 1"]
-      interval: 30s
+      interval: 60s
       timeout: 5s
       retries: 5
       start_period: 10s
