@@ -120,7 +120,7 @@ def build_judge_prompt(parsed_text: str, gold_text: str) -> str:
     parsed_text_clean = BaseParser.remove_markdown(parsed_text)
     gold_text_clean = BaseParser.remove_markdown(gold_text)
 
-    #in teoria non va messo ma il pc muore se gli passi tutto 
+    #in teoria non va messo ma il pc muore se gli passi tutto oppure è troppo grande la finstra e non ce l afa l ai
     
     max_chars = 1200
     parsed_text_clean = parsed_text_clean[:max_chars]
@@ -174,9 +174,11 @@ def evaluate_with_ollama(parsed_text: str, gold_text: str) -> Dict[str, Any]:
     - judge_feedback
     - extra_info
     """
+    #prendo le variabili d'ambiente per configurare la chiamata a ollama:
 
+    #chiama ollama nel docker interno
     ollama_url = os.getenv("OLLAMA_URL", "http://ollama:11434")
-    model_name = os.getenv("OLLAMA_MODEL", "phi4-mini:latest")
+    model_name = os.getenv("OLLAMA_MODEL", "llama3.2:3b")  # default a un modello più leggero per evitare timeout
     endpoint = f"{ollama_url}/api/chat"
 
     payload = {
@@ -187,17 +189,21 @@ def evaluate_with_ollama(parsed_text: str, gold_text: str) -> Dict[str, Any]:
                 "content": build_judge_prompt(parsed_text, gold_text),
             }
         ],
+        # "stream": False, serve per mandare la rispsta tutta in una volta e non a pezzi
         "stream": False,
         "format": "json",
         "options": {
             #"num_predict": 300,
+            #"temperature": 0.2,
             
         }
     }
 
     try:
+        #crea il dato da mandare a ollama
         request_data = json.dumps(payload).encode("utf-8")
 
+        #costruisco la richiesta HTTP POST a Ollama
         request = urllib.request.Request(
             endpoint,
             data=request_data,
@@ -205,6 +211,7 @@ def evaluate_with_ollama(parsed_text: str, gold_text: str) -> Dict[str, Any]:
             method="POST",
         )
 
+        #manda la richiesta a Ollama e aspetta la risposta, con un timeout di 320 secondi
         with urllib.request.urlopen(request, timeout=320) as response:
             response_data = response.read().decode("utf-8")
 
