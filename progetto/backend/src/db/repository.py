@@ -6,6 +6,10 @@ except ImportError:
 import json
 
 def get_web_resource(url: str):
+    '''
+    esegue una query per ottenere i dati di una risorsa web dato il suo URL.
+    Ritorna un dizionario con i campi url, domain, title, html_text, created_at se la risorsa esiste, altrimenti None.
+    '''
     conn = get_connection()
     cursor = conn.cursor(dictionary=True)
 
@@ -27,6 +31,11 @@ def get_web_resource(url: str):
 
 
 def get_gold_standard(url: str):
+    '''
+    esegue una query per ottenere i dati del gold standard associato a una risorsa web dato il suo URL.
+    Ritorna un dizionario con i campi url, domain, title, html_text, gold_text, created_at se il gold standard esiste, altrimenti None.
+    '''
+
     conn = get_connection()
     cursor = conn.cursor(dictionary=True)
 
@@ -54,6 +63,10 @@ def get_gold_standard(url: str):
 
 
 def list_gold_standard_urls(domain: str):
+    '''
+    esegue una query per ottenere la lista degli URL dei gold standard associati a risorse web di un certo dominio.
+    Ritorna una lista di URL ordinata alfabeticamente.
+    '''
     conn = get_connection()
     cursor = conn.cursor()
 
@@ -72,10 +85,17 @@ def list_gold_standard_urls(domain: str):
     cursor.close()
     conn.close()
 
+    #trasformo la lista di tuple in una lista di stringhe con gli URL
     return [row[0] for row in rows]
 
 
 def add_web_resource(url: str, domain: str, title: str, html_text: str):
+    '''
+    Salva o aggiorna nel DB una risorsa web con i dati forniti.
+    - Se la risorsa con lo stesso URL non esiste, viene inserita una nuova riga.
+    - Se la risorsa con lo stesso URL esiste già, vengono aggiornati i campi domain, title, html_text e created_at.
+    Non ritorna valori.
+    '''
     conn = get_connection()
     cursor = conn.cursor()
 
@@ -86,7 +106,8 @@ def add_web_resource(url: str, domain: str, title: str, html_text: str):
         ON DUPLICATE KEY UPDATE 
             domain = VALUES(domain),
             title = VALUES(title),
-            html_text = VALUES(html_text)
+            html_text = VALUES(html_text),
+            created_at = CURRENT_TIMESTAMP
         """,
         (url, domain, title, html_text)
     )
@@ -98,6 +119,12 @@ def add_web_resource(url: str, domain: str, title: str, html_text: str):
 
 
 def add_gold_standard(url: str, gold_text: str):
+    '''
+    Salva o aggiorna nel DB il gold standard associato a un URL.
+    - Se il gold standard per l'URL non esiste, viene inserita una nuova riga.
+    - Se il gold standard per l'URL esiste già, viene aggiornato il campo gold_text e created_at.
+    Non ritorna valori.
+    '''
     conn = get_connection()
     cursor = conn.cursor()
 
@@ -106,7 +133,8 @@ def add_gold_standard(url: str, gold_text: str):
         INSERT INTO gold_standard (url, gold_text)
         VALUES (?, ?)
         ON DUPLICATE KEY UPDATE
-            gold_text = VALUES(gold_text)
+            gold_text = VALUES(gold_text),
+            created_at = CURRENT_TIMESTAMP
         """,
         (url, gold_text)
     )
@@ -118,6 +146,10 @@ def add_gold_standard(url: str, gold_text: str):
 
 
 def delete_web_resource(url: str):
+    '''
+    Elimina la risorsa web con l'URL specificato dal DB.
+    ritorna True se la risorsa è stata eliminata, False se non esisteva.
+    '''
     conn = get_connection()
     cursor = conn.cursor()
 
@@ -137,6 +169,10 @@ def delete_web_resource(url: str):
 
 
 def delete_gold_standard(url: str):
+    '''
+    Elimina il gold standard associato all'URL specificato dal DB.
+    ritorna True se il gold standard è stato eliminato, False se non esisteva.
+    '''
     conn = get_connection()
     cursor = conn.cursor()
 
@@ -187,6 +223,7 @@ def add_parsed_document(url: str, parsed_text: str, parser_name: str = None):
     )
 
     row = cursor.fetchone()
+    #serve per ottenere l'id del documento in formato int invece che una tupla, e per gestire il caso in cui non esista (row è None)
     parsed_document_id = row[0] if row else None
 
     cursor.close()
@@ -231,6 +268,7 @@ def add_evaluation(url: str, token_level_eval: dict, x_eval: dict = None, parsed
             precision_score,
             recall_score,
             f1_score,
+            # Convert x_eval to JSON string e in caso sia None salva un oggetto JSON vuoto, ensure_ascii=False serve per salvare correttamente caratteri non ASCII come quelli accentati
             json.dumps(x_eval or {}, ensure_ascii=False),
         )
     )
@@ -241,13 +279,7 @@ def add_evaluation(url: str, token_level_eval: dict, x_eval: dict = None, parsed
     conn.close()
 
 
-def add_llm_judgement(
-    url: str,
-    model_name: str,
-    judge_score: float,
-    judge_feedback: str,
-    extra_info: dict = None,
-    parsed_document_id: int = None
+def add_llm_judgement(url: str, model_name: str, judge_score: float, judge_feedback: str, extra_info: dict = None, parsed_document_id: int = None
 ):
     """
     Salva o aggiorna nel DB il giudizio LLM per un URL.
@@ -297,6 +329,7 @@ def db_stats():
     conn = get_connection()
     cursor = conn.cursor(dictionary=True)
 
+    # numero di risorse web per dominio
     cursor.execute(
         """
         SELECT domain, COUNT(*) AS count
@@ -307,17 +340,18 @@ def db_stats():
     )
     web_resources_rows = cursor.fetchall()
 
+    # numero di gold standard per dominio
     cursor.execute(
         """
         SELECT wr.domain, COUNT(*) AS count
-        FROM gold_standard gs
-        JOIN web_resources wr ON gs.url = wr.url
+        FROM gold_standard gs JOIN web_resources wr ON gs.url = wr.url
         GROUP BY wr.domain
         ORDER BY wr.domain
         """
     )
     gold_standard_rows = cursor.fetchall()
 
+    # media delle metriche di evaluation per dominio, calcolata sui dati salvati nella tabella evaluations e raggruppata per dominio della risorsa web associata
     cursor.execute(
         """
         SELECT 
@@ -328,21 +362,20 @@ def db_stats():
             AVG(CAST(JSON_UNQUOTE(JSON_EXTRACT(ev.x_eval, '$.cosine_similarity')) AS DOUBLE)) AS avg_cosine_similarity,
             AVG(CAST(JSON_UNQUOTE(JSON_EXTRACT(ev.x_eval, '$.boilerplate_ratio_extracted')) AS DOUBLE)) AS avg_boilerplate_ratio_extracted,
             AVG(CAST(JSON_UNQUOTE(JSON_EXTRACT(ev.x_eval, '$.boilerplate_fidelity')) AS DOUBLE)) AS avg_boilerplate_fidelity
-        FROM evaluations ev
-        JOIN web_resources wr ON ev.url = wr.url
+        FROM evaluations ev JOIN web_resources wr ON ev.url = wr.url
         GROUP BY wr.domain
         ORDER BY wr.domain
         """
     )
     eval_rows = cursor.fetchall()
 
+    # media dei giudizi LLM per dominio, calcolata sui dati salvati nella tabella llm_judgements e raggruppata per dominio della risorsa web associata
     cursor.execute(
         """
         SELECT 
             wr.domain,
             AVG(j.judge_score) AS avg_judge_score
-        FROM llm_judgements j
-        JOIN web_resources wr ON j.url = wr.url
+        FROM llm_judgements j JOIN web_resources wr ON j.url = wr.url
         GROUP BY wr.domain
         ORDER BY wr.domain
         """

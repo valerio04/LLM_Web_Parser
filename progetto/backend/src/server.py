@@ -110,8 +110,9 @@ class StatusSystemResponse(BaseModel):
     database: str
     ollama: str
 
-# Endpoint
 
+
+# Endpoint
 
 @app.post("/parse")
 async def parse_document(parse_request: ParseRequest) -> ParseResponse:
@@ -121,9 +122,11 @@ async def parse_document(parse_request: ParseRequest) -> ParseResponse:
     Se local=True:
     - legge html_text dal DB usando l'URL
     - non scarica la pagina online
+    - carica i risultai nel DB (web_resource e parsed_document)
 
     Se local=False:
     - scarica la pagina online
+    - carica i risultai nel DB (web_resource e parsed_document)
     """
 
     url = parse_request.url
@@ -154,14 +157,21 @@ async def parse_document(parse_request: ParseRequest) -> ParseResponse:
 
         
         try:
-            #salo il risultato del prsing nel db
+            #salvo il risultato del parsing nel db
+            repo_add_web_resource(
+                url=result["url"],
+                domain=result["domain"],
+                title=result["title"],
+                html_text=result["html_text"]
+            )
+
             repo_add_parsed_document(
                 url=result["url"],
                 parsed_text=result["parsed_text"],
                 parser_name=parser.__class__.__name__
             )
         except Exception as e:
-            print(f"[WARNING] Impossibile salvare parsed_document nel DB: {e}")
+            print(f"[WARNING] Impossibile salvare risultato parsing nel DB: {e}")
 
         return ParseResponse(
             url=result["url"],
@@ -178,28 +188,52 @@ async def parse_document(parse_request: ParseRequest) -> ParseResponse:
         print(f"[ERROR] Errore durante il parsing: {e}")
         raise HTTPException(status_code=500, detail="Errore durante il parsing")
 
-#da modificare ancora
+
+
+
+
+#da capire se lasciare cosi o se prendere i dati dal db
 @app.get("/domains")
 async def get_domains() -> DomainsResponse:
     """
-    Restituisce la lista dei domini assegnati con i link associati.
-    Parametri: None
-    Ritorna: lista domini
+    Restituisce la lista dei domini supportati dal sistema.
+    Parametri: nessuno.
+    Ritorna: oggetto JSON con la lista dei domini.
     """
-    # cerca il path del progetto a partire da questo file
+
     script_dir = Path(__file__).parent.resolve()
     base_dir = script_dir.parent.parent
-    # prende il percorso del file domains.json
+
+    # Percorso normale, quando domains.json è copiato/montato dentro /app
     json_path = base_dir / "domains.json"
+
+    # Fallback utile se nel docker-compose è montato ./domains.json:/domains.json
+    if not json_path.exists():
+        json_path = Path("/domains.json")
 
     if not json_path.exists():
         print(f"[WARNING] File domains.json non trovato: {json_path}")
-        raise HTTPException(status_code=500, detail="File domains.json non trovato")
-    
-    with open(json_path, 'r', encoding='utf-8') as f:
-        domains_data = json.load(f)
+        raise HTTPException(
+            status_code=500,
+            detail="File domains.json non trovato"
+        )
 
-    return DomainsResponse(domains=domains_data.get("domains", []))
+    try:
+        with open(json_path, "r", encoding="utf-8") as f:
+            domains_data = json.load(f)
+
+        return DomainsResponse(
+            domains=domains_data.get("domains", [])
+        )
+
+    except Exception as e:
+        print(f"[ERROR] Errore durante la lettura di domains.json: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail="Errore durante la lettura di domains.json"
+        )
+
+
 
 @app.get("/gold_standard")
 async def get_gold_standard(url: str) -> GoldStandardResponse:
@@ -209,9 +243,8 @@ async def get_gold_standard(url: str) -> GoldStandardResponse:
     Ritorna: URL, dominio, titolo, HTML grezzo, gold_text
     """
 
-    parser = find_parser(url)
 
-    if not parser:
+    if not is_supported_domain(url):
         print(f"[WARNING] Dominio non riconosciuto: {url}")
         raise HTTPException(status_code=400, detail="Dominio non supportato")
 
@@ -242,6 +275,8 @@ async def get_gold_standard(url: str) -> GoldStandardResponse:
             status_code=500,
             detail="Errore durante il recupero del Gold Standard"
         )
+
+
 
 
 @app.get("/gold_standard_urls")
@@ -311,7 +346,7 @@ async def evaluate_result(request: EvaluateRequest) -> EvaluateResponse:
 async def evaluate_judge(request: JudgeRequest) -> JudgeResponse:
     """
     Valuta il testo parsato rispetto al gold standard usando LLM-as-Judge.
-    Se viene passato url, salva il giudizio nel DB.
+    Se viene passato url e l'URL esiste nel DB, salva il giudizio nel DB.
     """
 
     result = evaluate_with_ollama(
@@ -320,17 +355,22 @@ async def evaluate_judge(request: JudgeRequest) -> JudgeResponse:
     )
 
     if request.url:
-        try:
-            repo_add_llm_judgement(
-                url=request.url,
-                parsed_document_id=request.parsed_document_id,
-                model_name=result["model_name"],
-                judge_score=result["judge_score"],
-                judge_feedback=result["judge_feedback"],
-                extra_info=result.get("extra_info", {})
-            )
-        except Exception as e:
-            print(f"[WARNING] Impossibile salvare llm_judgement nel DB: {e}")
+        web_resource = repo_get_web_resource(request.url)
+
+        if web_resource:
+            try:
+                repo_add_llm_judgement(
+                    url=request.url,
+                    parsed_document_id=request.parsed_document_id,
+                    model_name=result["model_name"],
+                    judge_score=result["judge_score"],
+                    judge_feedback=result["judge_feedback"],
+                    extra_info=result.get("extra_info", {})
+                )
+            except Exception as e:
+                print(f"[WARNING] Impossibile salvare llm_judgement nel DB: {e}")
+        else:
+            print(f"[WARNING] Judge non salvato: URL non presente in web_resources: {request.url}")
 
     return JudgeResponse(
         model_name=result["model_name"],
@@ -341,12 +381,14 @@ async def evaluate_judge(request: JudgeRequest) -> JudgeResponse:
 
 
 
+
+
 @app.get("/full_gs_eval")
 async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
     """
     Esegue l'eval su tutto il GS di un dominio usando HTML e gold_text dal DB.
-    Salva parsed_documents ed evaluations nel DB.
-    Usa x_eval_fast invece di x_eval_complete.
+    Salva parsed_documents, evaluations e llm_judgements nel DB.
+    Usa x_eval_fast, token_level_eval, evaluate_with_ollama.
     """
 
     if not is_supported_domain(domain):
@@ -448,7 +490,10 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
             data["precision"].append(token_level_eval.get("precision", 0))
             data["recall"].append(token_level_eval.get("recall", 0))
             data["f1"].append(token_level_eval.get("f1", 0))
-            data["judge_score"].append(judge_result.get("judge_score", 0))
+
+            judge_score = judge_result.get("judge_score", 0)
+            if judge_score > 0:
+                data["judge_score"].append(judge_score)
 
             data["cosine_similarity"].append(x_eval.get("cosine_similarity", 0))
             data["boilerplate_ratio_extracted"].append(

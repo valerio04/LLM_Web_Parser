@@ -11,7 +11,6 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import mistune
 import requests
-import markdown2
 import re
 
 app = FastAPI()

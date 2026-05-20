@@ -31,6 +31,7 @@ def find_gs_json_files(base_dir: Path) -> List[Path]:
     Cerca tutti i file gs.json dentro le sottocartelle di gs_data.
     """
     gs_data_dir = base_dir / "gs_data"
+    #permette di trovare tutti i file */gs.jason dentro gs_data
     gs_json_files = sorted(gs_data_dir.glob("*/gs.json"))
 
     if not gs_json_files:
@@ -54,6 +55,7 @@ def load_json_file(json_path: Path) -> List[Dict]:
     """
     Carica il contenuto di un file gs.json.
     Il formato atteso è una lista di entry.
+    l'output è una lista di dizionari, ognuno rappresenta un entry.
     """
     if not json_path.exists():
         raise FileNotFoundError(f"[ERROR] File JSON non trovato: {json_path}")

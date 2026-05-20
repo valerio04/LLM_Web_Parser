@@ -3,6 +3,9 @@ import mariadb
 
 
 def get_connection():
+    '''
+    funzione per ottenere la conessione al database
+    '''
     try:
         return mariadb.connect(
             host=os.getenv("DB_HOST", "127.0.0.1"),
