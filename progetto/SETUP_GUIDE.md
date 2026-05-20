@@ -163,6 +163,53 @@ https://eur-lex.europa.eu/IT/legal-content/summary/exchange-rate-mechanism-betwe
 
 ## **Gestione del container MariaDB**
 
+## 🐳 Avviare il progetto con Docker Compose
+
+### **Build (prima volta o dopo modifiche ai Dockerfile)**
+```bash
+docker compose build
+```
+
+### **Avvio in background**
+```bash
+docker compose up -d
+```
+
+### **Avvio con build automatico**
+```bash
+docker compose up -d --build
+```
+
+### **Avvio in foreground (per vedere i log in tempo reale)**
+```bash
+docker compose up
+```
+
+### **Stop dei container (senza rimuovere i volumi)**
+```bash
+docker compose down
+```
+
+### **Stop + rimozione volumi (cancella dati persistenti)**
+```bash
+docker compose down -v
+```
+
+### **Stato dei servizi**
+```bash
+docker compose ps
+```
+
+### **Log di tutti i servizi**
+```bash
+docker compose logs -f
+```
+
+### **Log di un singolo servizio (es. backend)**
+```bash
+docker compose logs -f backend
+```
+
 #### **Chiudere il container senza cancellare i dati**
 Per fermare il container MariaDB senza eliminare i dati persistenti:
 ```bash
