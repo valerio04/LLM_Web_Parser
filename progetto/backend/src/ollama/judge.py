@@ -118,7 +118,8 @@ def build_judge_prompt(parsed_text: str, gold_text: str) -> str:
     """
 
     parsed_text_clean = BaseParser.remove_markdown(parsed_text)
-    gold_text_clean = BaseParser.remove_markdown(gold_text)
+    gold_text_clean=gold_text
+    #gold_text_clean = BaseParser.remove_markdown(gold_text)
 
     #in teoria non va messo ma il pc muore se gli passi tutto oppure è troppo grande la finstra e non ce l afa l ai
     
