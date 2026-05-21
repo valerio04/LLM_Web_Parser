@@ -96,6 +96,7 @@
             cursor: pointer;
             transition: all var(--transition);
             white-space: nowrap;
+            text-decoration: none;
         }
 
         .nav-tab:hover {
@@ -746,6 +747,17 @@
             margin-right: 12px;
         }
 
+        .badge {
+            display: inline-block;
+            background: #edf1ff;
+            color: var(--accent);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-right: 8px;
+        }
+
         .hero-section {
             text-align: center;
             padding: 40px 20px 30px;
@@ -974,7 +986,7 @@
 
 <body>
 
-    <!-- SVG Defs -->
+    <!-- SVG Defs per i gauge -->
     <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
         <defs>
             <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -984,926 +996,498 @@
         </defs>
     </svg>
 
-    <!-- ═══════════ Navigation ═══════════ -->
+    <!-- Navigazione -->
     <nav>
         <div class="nav-brand">Minerva Parser</div>
-        <div class="nav-tabs" id="nav-tabs">
-            <button class="nav-tab active" data-tab="home" type="button">🏠 Home</button>
-            <button class="nav-tab" data-tab="pipeline" type="button">🔍 Parser</button>
-            <button class="nav-tab" data-tab="gsbuilder" type="button">📝 Gold Standard</button>
-            <button class="nav-tab" data-tab="stats" type="button">📈 Stats</button>
+        <div class="nav-tabs">
+            <a class="nav-tab {% if active_page == 'home' %}active{% endif %}" href="/">🏠 Home</a>
+            <a class="nav-tab {% if active_page == 'pipeline' %}active{% endif %}" href="/pipeline">🔍 Parser</a>
+            <a class="nav-tab {% if active_page == 'gsbuilder' %}active{% endif %}" href="/gsbuilder">📝 Gold Standard</a>
+            <a class="nav-tab {% if active_page == 'stats' %}active{% endif %}" href="/stats">📈 Stats</a>
         </div>
     </nav>
 
     <div class="page-content">
 
-        <!-- ═══════════════ TAB: HOME ═══════════════ -->
-        <div class="tab-content active" id="tab-home">
-            <div class="hero-section">
-                <h1 class="hero-title">Minerva Parser</h1>
-                <p class="hero-subtitle">Pipeline end-to-end per acquisire e analizzare documenti da sorgenti web
-                    eterogenee, con valutazione automatica e LLM-as-Judge.</p>
-            </div>
-            <div class="home-grid">
-                <!-- Matricole -->
-                <section class="card">
-                    <h2><span class="icon">👥</span> Gruppo</h2>
-                    <div class="matricole-list" id="matricole-list">
-                        <!-- Matricole inserite qui - da personalizzare -->
-                    </div>
-                </section>
-                <!-- Status componenti -->
-                <section class="card">
-                    <h2><span class="icon">⚙️</span> Stato Sistema</h2>
-                    <div class="status-grid" id="home-status-grid">
-                        <div class="status-card">
-                            <div class="status-dot" id="home-status-dot-backend"></div>
-                            <div class="status-info">
-                                <h3>Backend</h3>
-                                <span class="status-text" id="home-status-text-backend">Verifica...</span>
-                            </div>
-                        </div>
-                        <div class="status-card">
-                            <div class="status-dot" id="home-status-dot-database"></div>
-                            <div class="status-info">
-                                <h3>Database</h3>
-                                <span class="status-text" id="home-status-text-database">Verifica...</span>
-                            </div>
-                        </div>
-                        <div class="status-card">
-                            <div class="status-dot" id="home-status-dot-ollama"></div>
-                            <div class="status-info">
-                                <h3>Ollama</h3>
-                                <span class="status-text" id="home-status-text-ollama">Verifica...</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Domini supportati -->
-                <section class="card">
-                    <h2><span class="icon">🌐</span> Domini Supportati</h2>
-                    <div class="domains-list" id="home-domains-list">
-                        <p class="muted">Caricamento...</p>
-                    </div>
-                </section>
-            </div>
+        <!-- ═══════════════ HOME ═══════════════ -->
+        {% if active_page == "home" %}
+        <div class="hero-section">
+            <h1 class="hero-title">Minerva Parser</h1>
+            <p class="hero-subtitle">Pipeline end-to-end per acquisire e analizzare documenti da sorgenti web
+                eterogenee, con valutazione automatica e LLM-as-Judge.</p>
         </div>
-
-        <!-- ═══════════════ TAB: PIPELINE (Parser & Evaluation) ═══════════════ -->
-        <div class="tab-content" id="tab-pipeline">
-
+        <div class="home-grid">
             <section class="card">
-                <h2><span class="icon">🔍</span> Parser &amp; Evaluation</h2>
+                <h2><span class="icon">👥</span> Gruppo</h2>
+                <div class="matricole-list">
+                    {% for m in matricole %}
+                    <span class="matricola-badge">{{ m }}</span>
+                    {% endfor %}
+                </div>
+            </section>
+            <section class="card">
+                <h2><span class="icon">⚙️</span> Stato Sistema</h2>
+                <div class="status-grid">
+                    {% for component in ["backend", "database", "ollama"] %}
+                    <div class="status-card">
+                        <div class="status-dot {% if status.get(component, 'error') == 'ok' %}ok{% else %}error{% endif %}"></div>
+                        <div class="status-info">
+                            <h3>{{ component|capitalize }}</h3>
+                            <span class="status-text">
+                                {% if status.get(component, 'error') == 'ok' %}Operativo{% else %}Non raggiungibile{% endif %}
+                            </span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+            <section class="card">
+                <h2><span class="icon">🌐</span> Domini Supportati</h2>
+                <div class="domains-list">
+                    {% for d in domains %}
+                    <div class="domain-chip">{{ d }}</div>
+                    {% else %}
+                    <p class="muted">Nessun dominio disponibile.</p>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+        {% endif %}
+
+        <!-- ═══════════════ PIPELINE ═══════════════ -->
+        {% if active_page == "pipeline" %}
+        <section class="card">
+            <h2><span class="icon">🔍</span> Parser &amp; Evaluation</h2>
+            <form method="post" action="/pipeline">
+                <input type="hidden" name="action" value="parse">
                 <div class="controls-grid">
                     <div class="control-group">
                         <label for="domain-select">Dominio</label>
-                        <select id="domain-select">
-                            <option value="">Caricamento...</option>
+                        <select id="domain-select" name="domain" onchange="updateGsUrls()">
+                            <option value="">— Seleziona dominio —</option>
+                            {% for d in domains %}
+                            <option value="{{ d }}" {% if d == selected_domain %}selected{% endif %}>{{ d }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                     <div class="control-group">
                         <label for="gs-url-select">URL dal Gold Standard</label>
-                        <select id="gs-url-select" disabled>
-                            <option value="">Seleziona dominio</option>
+                        <select id="gs-url-select" onchange="syncUrlField()">
+                            <option value="">— Seleziona URL —</option>
+                            {% if selected_domain and gs_urls_map.get(selected_domain) %}
+                            {% for u in gs_urls_map[selected_domain] %}
+                            <option value="{{ u }}" {% if u == selected_url %}selected{% endif %}>{{ u }}</option>
+                            {% endfor %}
+                            {% endif %}
                         </select>
                     </div>
                     <div class="control-group">
-                        <label for="manual-url">URL manuale</label>
-                        <input type="text" id="manual-url" placeholder="https://...">
+                        <label for="url-input">URL manuale</label>
+                        <input type="text" id="url-input" name="url" placeholder="https://..." value="{{ selected_url or '' }}">
                     </div>
                     <div class="control-group">
                         <label>Modalità</label>
                         <div class="toggle-container">
-                            <button class="toggle-btn active" id="btn-local" type="button">📦 Local</button>
-                            <button class="toggle-btn" id="btn-live" type="button">🌐 Live</button>
+                            <button type="button" class="toggle-btn {% if is_local %}active{% endif %}" onclick="setLocal(true)">📦 Local</button>
+                            <button type="button" class="toggle-btn {% if not is_local %}active{% endif %}" onclick="setLocal(false)">🌐 Live</button>
                         </div>
+                        <input type="hidden" name="is_local" id="is-local-field" value="{{ 'true' if is_local else 'false' }}">
                     </div>
                 </div>
-                <button class="btn-primary" id="btn-parse" type="button">🚀 Esegui Parsing</button>
-            </section>
+                <button class="btn-primary" type="submit">🚀 Esegui Parsing</button>
+            </form>
+        </section>
 
-            <div id="parse-error" class="error-inline hidden"></div>
+        {% if error_message %}
+        <div class="error-inline">{{ error_message }}</div>
+        {% endif %}
 
-            <section class="card hidden" id="parse-info-card">
-                <div class="info-grid">
-                    <div class="info-item"><span class="info-label">Dominio</span><span class="info-value"
-                            id="info-domain">—</span></div>
-                    <div class="info-item"><span class="info-label">Titolo</span><span class="info-value"
-                            id="info-title">—</span></div>
-                    <div class="info-item"><span class="info-label">URL</span><span class="info-value"
-                            id="info-url">—</span></div>
-                </div>
-            </section>
-
-            <div class="hidden" id="text-comparison-section">
-                <div class="texts-grid">
-                    <section class="card text-card">
-                        <h3>HTML Grezzo</h3>
-                        <pre id="text-html">Nessun dato</pre>
-                    </section>
-                    <section class="card text-card">
-                        <h3>Testo Parsato</h3>
-                        <pre id="text-parsed">Nessun dato</pre>
-                    </section>
-                    <section class="card text-card">
-                        <h3>Gold Standard</h3>
-                        <pre id="text-gold">Nessun gold standard</pre>
-                    </section>
-                </div>
+        {% if result %}
+        <!-- Info documento -->
+        <section class="card">
+            <div class="info-grid">
+                <div class="info-item"><span class="info-label">Dominio</span><span class="info-value">{{ result.domain or '—' }}</span></div>
+                <div class="info-item"><span class="info-label">Titolo</span><span class="info-value">{{ result.title or '—' }}</span></div>
+                <div class="info-item"><span class="info-label">URL</span><span class="info-value">{{ result.url or '—' }}</span></div>
             </div>
+        </section>
 
-            <div class="card hidden" id="actions-card">
-                <div class="actions-row">
-                    <button class="btn-secondary" id="btn-evaluate" type="button" disabled>📊 Evaluation
-                        Automatica</button>
-                    <button class="btn-secondary" id="btn-judge" type="button" disabled>🤖 LLM-as-Judge</button>
-                </div>
-            </div>
-
-            <section class="card hidden" id="metrics-card">
-                <h2><span class="icon">📊</span> Metriche di Valutazione</h2>
-                <div class="gauges-grid" id="gauges-container"></div>
-                <hr class="section-divider">
-                <h3>Metriche Estese</h3>
-                <div class="xmetrics-grid" id="xmetrics-container"></div>
+        <!-- Testi a confronto -->
+        <div class="texts-grid">
+            <section class="card text-card">
+                <h3>HTML Grezzo</h3>
+                <pre>{{ result.html_text or 'Nessun dato disponibile' }}</pre>
             </section>
-
-            <section class="card hidden" id="judge-card">
-                <h2><span class="icon">🤖</span> Valutazione LLM Judge</h2>
-                <div class="judge-content">
-                    <div class="judge-model-name">Modello: <span id="judge-model-name">—</span></div>
-                    <div class="judge-stars" id="judge-stars-container"></div>
-                    <div class="judge-score-text">
-                        <span class="score-value" id="judge-score-value">—</span>
-                        <span class="score-max"> / 5</span>
-                    </div>
-                    <div class="judge-feedback-box">
-                        <h4>Feedback</h4>
-                        <p class="judge-feedback-text" id="judge-feedback-text">—</p>
-                    </div>
-                </div>
+            <section class="card text-card">
+                <h3>Testo Parsato</h3>
+                <pre>{{ result.parsed_text or 'Nessun dato disponibile' }}</pre>
+            </section>
+            <section class="card text-card">
+                <h3>Gold Standard</h3>
+                <pre>{{ result.gold_text or 'Gold standard non disponibile per questo URL' }}</pre>
             </section>
         </div>
 
-        <!-- ═══════════════ TAB: GOLD STANDARD BUILDER ═══════════════ -->
-        <div class="tab-content" id="tab-gsbuilder">
+        <!-- Bottoni Evaluation e Judge -->
+        <div class="card">
+            <div class="actions-row">
+                <form method="post" action="/pipeline" style="display:inline">
+                    <input type="hidden" name="action" value="evaluate">
+                    <input type="hidden" name="url" value="{{ result.url }}">
+                    <input type="hidden" name="domain" value="{{ result.domain }}">
+                    <input type="hidden" name="prev_parsed_text" value="{{ result.parsed_text }}">
+                    <input type="hidden" name="prev_gold_text" value="{{ result.gold_text }}">
+                    <input type="hidden" name="prev_html_text" value="{{ result.html_text }}">
+                    <input type="hidden" name="prev_domain" value="{{ result.domain }}">
+                    <input type="hidden" name="prev_title" value="{{ result.title }}">
+                    <input type="hidden" name="prev_url" value="{{ result.url }}">
+                    <button class="btn-secondary" type="submit" {% if not result.gold_text %}disabled{% endif %}>📊 Evaluation Automatica</button>
+                </form>
+                <form method="post" action="/pipeline" style="display:inline">
+                    <input type="hidden" name="action" value="judge">
+                    <input type="hidden" name="url" value="{{ result.url }}">
+                    <input type="hidden" name="domain" value="{{ result.domain }}">
+                    <input type="hidden" name="prev_parsed_text" value="{{ result.parsed_text }}">
+                    <input type="hidden" name="prev_gold_text" value="{{ result.gold_text }}">
+                    <input type="hidden" name="prev_html_text" value="{{ result.html_text }}">
+                    <input type="hidden" name="prev_domain" value="{{ result.domain }}">
+                    <input type="hidden" name="prev_title" value="{{ result.title }}">
+                    <input type="hidden" name="prev_url" value="{{ result.url }}">
+                    <button class="btn-secondary" type="submit" {% if not result.gold_text %}disabled{% endif %}>🤖 LLM-as-Judge</button>
+                </form>
+            </div>
+        </div>
+        {% endif %}
 
-            <section class="card">
-                <h2><span class="icon">📝</span> Gold Standard Builder</h2>
-                <p class="muted" style="margin-bottom:20px">Aggiungi o rimuovi entry dal Gold Standard nel database.</p>
+        <!-- Metriche di valutazione -->
+        {% if metrics %}
+        <section class="card">
+            <h2><span class="icon">📊</span> Metriche di Valutazione</h2>
+            <div class="gauges-grid">
+                {% for metric_key, metric_label in [("precision", "Precision"), ("recall", "Recall"), ("f1", "F1 Score")] %}
+                {% set value = metrics[metric_key] if metrics[metric_key] is not none else 0 %}
+                <div class="gauge-container">
+                    <svg class="gauge-svg" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="42" class="gauge-bg"></circle>
+                        <circle cx="50" cy="50" r="42" class="gauge-fill"
+                            stroke-dasharray="{{ 2 * 3.14159 * 42 }}"
+                            stroke-dashoffset="{{ 2 * 3.14159 * 42 * (1 - value) }}"
+                            transform="rotate(-90 50 50)"></circle>
+                        <text x="50" y="52" text-anchor="middle" dominant-baseline="central" class="gauge-value-text">
+                            {{ "%.1f"|format(value * 100) }}%
+                        </text>
+                    </svg>
+                    <div class="gauge-label-text">{{ metric_label }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <hr class="section-divider">
+            <h3>Metriche Estese</h3>
+            <div class="xmetrics-grid">
+                {% for xkey, xlabel in [("levenshtein", "Levenshtein"), ("rouge_l", "ROUGE-L"), ("cosine_similarity", "Cosine Similarity"), ("boilerplate_ratio_extracted", "Boilerplate Ratio"), ("boilerplate_fidelity", "Boilerplate Fidelity")] %}
+                {% set xval = metrics[xkey] %}
+                {% if xval is not none %}
+                <div class="xmetric-item">
+                    <div class="xmetric-name">{{ xlabel }}</div>
+                    <div class="xmetric-value">{{ "%.4f"|format(xval) }}</div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
 
+        <!-- Risultato LLM Judge -->
+        {% if judge %}
+        <section class="card">
+            <h2><span class="icon">🤖</span> Valutazione LLM Judge</h2>
+            <div class="judge-content">
+                <div class="judge-model-name">Modello: <span>{{ judge.model_name or '—' }}</span></div>
+                <div class="judge-stars">
+                    {% for i in range(1, 6) %}
+                    <span class="{% if i <= judge.judge_score %}star-filled{% else %}star-empty{% endif %}">
+                        {% if i <= judge.judge_score %}★{% else %}☆{% endif %}
+                    </span>
+                    {% endfor %}
+                </div>
+                <div class="judge-score-text">
+                    <span class="score-value">{{ judge.judge_score }}</span>
+                    <span class="score-max"> / 5</span>
+                </div>
+                <div class="judge-feedback-box">
+                    <h4>Feedback</h4>
+                    <p class="judge-feedback-text">{{ judge.judge_feedback or 'Nessun feedback disponibile.' }}</p>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        {% endif %}
+
+        <!-- ═══════════════ GS BUILDER ═══════════════ -->
+        {% if active_page == "gsbuilder" %}
+        <section class="card">
+            <h2><span class="icon">📝</span> Gold Standard Builder</h2>
+            <p class="muted" style="margin-bottom:20px">Aggiungi o rimuovi entry dal Gold Standard nel database.</p>
+
+            {% if gs_message %}
+            <div class="error-inline" style="background:#ecfdf5; border-color:#a7f3d0; color:#059669; margin-bottom:20px;">{{ gs_message }}</div>
+            {% endif %}
+            {% if gs_error %}
+            <div class="error-inline" style="margin-bottom:20px;">{{ gs_error }}</div>
+            {% endif %}
+
+            <!-- Form scarica HTML -->
+            <form method="post" action="/gsbuilder">
+                <input type="hidden" name="action" value="download">
                 <div class="controls-grid">
                     <div class="control-group">
                         <label for="gs-builder-domain">Dominio</label>
-                        <select id="gs-builder-domain">
-                            <option value="">Caricamento...</option>
+                        <select id="gs-builder-domain" name="gs_domain" onchange="updateGsBuilderUrls()">
+                            <option value="">— Seleziona dominio —</option>
+                            {% for d in domains %}
+                            <option value="{{ d }}" {% if d == gs_selected_domain %}selected{% endif %}>{{ d }}</option>
+                            {% endfor %}
                         </select>
                     </div>
                     <div class="control-group">
                         <label for="gs-builder-url">URL della pagina</label>
-                        <input type="text" id="gs-builder-url" placeholder="https://...">
+                        <input type="text" id="gs-builder-url" name="gs_url" placeholder="https://..." value="{{ gs_download_url or '' }}">
                     </div>
                 </div>
-
-                <div class="actions-row" style="margin-top:0; margin-bottom: 20px;">
-                    <button class="btn-secondary" id="btn-gs-download-html" type="button">⬇️ Scarica HTML</button>
+                <div class="actions-row" style="margin-top:0; margin-bottom:20px;">
+                    <button class="btn-secondary" type="submit">⬇️ Scarica HTML</button>
                 </div>
+            </form>
 
-                <div class="hidden" id="gs-html-preview-section">
-                    <h3>HTML Scaricato (preview)</h3>
-                    <pre id="gs-html-preview"
-                        style="max-height:300px; overflow-y:auto; background:var(--pre-bg); padding:14px; border-radius:var(--radius-sm); border:1px solid rgba(255,255,255,0.05); font-size:12px; color:var(--text-secondary); margin-bottom:20px;"></pre>
-                </div>
+            {% if gs_downloaded_html %}
+            <!-- Anteprima HTML scaricato -->
+            <h3>HTML Scaricato (preview)</h3>
+            <pre style="max-height:300px; overflow-y:auto; background:var(--pre-bg); padding:14px; border-radius:var(--radius-sm); border:1px solid var(--border); font-size:12px; color:var(--text-secondary); margin-bottom:20px;">{{ gs_downloaded_html }}</pre>
 
+            <!-- Form salvataggio GS -->
+            <form method="post" action="/gsbuilder">
+                <input type="hidden" name="action" value="save">
+                <input type="hidden" name="gs_domain" value="{{ gs_selected_domain }}">
+                <input type="hidden" name="gs_url" value="{{ gs_download_url }}">
+                <input type="hidden" name="gs_html" value="{{ gs_downloaded_html }}">
                 <div class="control-group" style="margin-bottom:20px">
                     <label for="gs-builder-goldtext">Gold Text (testo informativo copiato manualmente)</label>
-                    <textarea id="gs-builder-goldtext"
+                    <textarea id="gs-builder-goldtext" name="gs_goldtext"
                         placeholder="Incolla qui il testo informativo estratto manualmente dalla pagina web..."></textarea>
                 </div>
-
                 <div class="actions-row">
-                    <button class="btn-primary" id="btn-gs-save" type="button">💾 Salva nel Database</button>
+                    <button class="btn-primary" type="submit">💾 Salva nel Database</button>
                 </div>
-            </section>
+            </form>
+            {% endif %}
+        </section>
 
-            <!-- Lista URL nel GS per dominio selezionato -->
-            <section class="card">
-                <h2><span class="icon">📋</span> URL nel Gold Standard</h2>
-                <div id="gs-existing-list">
-                    <p class="muted">Seleziona un dominio per vedere gli URL nel Gold Standard.</p>
-                </div>
-            </section>
-        </div>
+        <!-- Lista URL nel GS per dominio -->
+        <section class="card">
+            <h2><span class="icon">📋</span> URL nel Gold Standard</h2>
+            {% set all_urls_flat = [] %}
+            {% for d, urls in gs_urls_map.items() %}
+                {% for u in urls %}
+                    {% if all_urls_flat.append((d, u)) %}{% endif %}
+                {% endfor %}
+            {% endfor %}
 
-        <!-- ═══════════════ TAB: STATS ═══════════════ -->
-        <div class="tab-content" id="tab-stats">
+            {% if all_urls_flat %}
+            <div class="gs-url-list">
+                {% for d, u in all_urls_flat %}
+                <div class="gs-url-item">
+                    <span class="gs-url-item-text"><span class="badge">{{ d }}</span> {{ u }}</span>
+                    <form method="post" action="/gsbuilder" style="display:inline; margin:0;">
+                        <input type="hidden" name="action" value="delete">
+                        <input type="hidden" name="gs_delete_url" value="{{ u }}">
+                        <input type="hidden" name="gs_domain" value="{{ gs_selected_domain }}">
+                        <button class="btn-danger" type="submit">🗑️ Rimuovi</button>
+                    </form>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <p class="muted">Nessun URL nel Gold Standard.</p>
+            {% endif %}
+        </section>
+        {% endif %}
 
-            <section class="card">
-                <h2><span class="icon">📈</span> Statistiche Database</h2>
-                <div id="stats-content">
-                    <p class="muted">Premi il bottone per caricare le statistiche.</p>
-                </div>
-                <div class="actions-row">
-                    <button class="btn-primary" id="btn-load-stats" type="button">📈 Carica Statistiche</button>
-                </div>
-            </section>
+        <!-- ═══════════════ STATS ═══════════════ -->
+        {% if active_page == "stats" %}
+        <section class="card">
+            <h2><span class="icon">📈</span> Statistiche Database</h2>
+            {% if db_stats %}
+                {% set web_res = db_stats.get("web_resources", {}) %}
+                {% set gold_st = db_stats.get("gold_standard", {}) %}
+                {% set avg_eval = db_stats.get("avg_eval", {}) %}
+                {% set avg_judge = db_stats.get("avg_eval_judge", {}) %}
 
-            <section class="card">
-                <h2><span class="icon">🗄️</span> Schema Database</h2>
-                <div id="schema-content">
-                    <p class="muted">Premi il bottone per caricare lo schema.</p>
+                {% set all_domains = [] %}
+                {% for d in web_res.keys() %}{% if all_domains.append(d) %}{% endif %}{% endfor %}
+                {% for d in gold_st.keys() %}{% if d not in all_domains and all_domains.append(d) %}{% endif %}{% endfor %}
+                {% for d in avg_eval.keys() %}{% if d not in all_domains and all_domains.append(d) %}{% endif %}{% endfor %}
+                {% for d in avg_judge.keys() %}{% if d not in all_domains and all_domains.append(d) %}{% endif %}{% endfor %}
+
+                {% if all_domains %}
+                <h3>Risorse per Dominio</h3>
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Dominio</th>
+                            <th>Web Resources</th>
+                            <th>Gold Standard</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for d in all_domains %}
+                        <tr>
+                            <td class="stats-domain">{{ d }}</td>
+                            <td>{{ web_res.get(d, 0) }}</td>
+                            <td>{{ gold_st.get(d, 0) }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                {% if avg_eval or avg_judge %}
+                <hr class="section-divider">
+                <h3>Medie Valutazione per Dominio</h3>
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>Dominio</th>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                            <th>F1</th>
+                            <th>Cosine Sim.</th>
+                            <th>Judge Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for d in all_domains %}
+                        {% set ev = avg_eval.get(d, {}) %}
+                        {% set tl = ev.get("token_level_eval", {}) %}
+                        {% set xe = ev.get("x_eval", {}) %}
+                        {% set jd = avg_judge.get(d, {}) %}
+                        {% if ev or jd %}
+                        <tr>
+                            <td class="stats-domain">{{ d }}</td>
+                            <td>{{ "%.4f"|format(tl.precision) if tl.precision is defined and tl.precision is not none else '—' }}</td>
+                            <td>{{ "%.4f"|format(tl.recall) if tl.recall is defined and tl.recall is not none else '—' }}</td>
+                            <td>{{ "%.4f"|format(tl.f1) if tl.f1 is defined and tl.f1 is not none else '—' }}</td>
+                            <td>{{ "%.4f"|format(xe.cosine_similarity) if xe.cosine_similarity is defined and xe.cosine_similarity is not none else '—' }}</td>
+                            <td>{{ "%.2f"|format(jd.judge_score) if jd.judge_score is defined and jd.judge_score is not none else '—' }}</td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% endif %}
+
+                {% else %}
+                <p class="muted">Nessun dato disponibile.</p>
+                {% endif %}
+            {% else %}
+            <p class="muted">Impossibile caricare le statistiche dal backend.</p>
+            {% endif %}
+        </section>
+
+        <section class="card">
+            <h2><span class="icon">🗄️</span> Schema Database</h2>
+            {% if db_schema %}
+                {% for table_name, columns in db_schema.items() %}
+                <div class="schema-table-group">
+                    <div class="schema-table-name">{{ table_name }}</div>
+                    <table class="schema-table">
+                        <thead>
+                            <tr>
+                                <th>Colonna</th>
+                                <th>Tipo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for col_name, col_type in columns.items() %}
+                            <tr>
+                                <td class="schema-col-name">{{ col_name }}</td>
+                                <td class="schema-col-desc">{{ col_type }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
-                <div class="actions-row">
-                    <button class="btn-primary" id="btn-load-schema" type="button">🗄️ Carica Schema</button>
-                </div>
-            </section>
-        </div>
+                {% endfor %}
+            {% else %}
+            <p class="muted">Impossibile caricare lo schema dal backend.</p>
+            {% endif %}
+        </section>
+        {% endif %}
 
     </div>
-
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loading-overlay">
-        <div class="spinner"></div>
-        <div class="loading-text" id="loading-text">Caricamento...</div>
-    </div>
-    <!-- Toast Container -->
-    <div class="toast-container" id="toast-container"></div>
 
     <script>
         /**
-         * Modulo JavaScript principale della Web UI di Minerva Parser.
-         *
-         * Gestisce tutta la logica client-side dell'applicazione SPA:
-         * - Navigazione tra le 4 sezioni (Home, Pipeline, GS Builder, Stats)
-         * - Comunicazione con il backend tramite il reverse proxy /api/*
-         * - Parsing di documenti web con modalità locale o live
-         * - Valutazione automatica (token-level + metriche estese)
-         * - Valutazione LLM-as-Judge tramite Ollama
-         * - Gestione del Gold Standard (aggiunta, rimozione, visualizzazione)
-         * - Visualizzazione statistiche e schema del database
-         * - Controllo dello stato dei componenti del sistema
-         *
-         * Sicurezza: tutti gli inserimenti nel DOM avvengono tramite textContent
-         * e createElement per prevenire attacchi XSS. Non viene mai usato innerHTML.
-         *
-         * @namespace MinervaParserUI
+         * Script JavaScript minimo per la gestione dei menu a tendina
+         * e del toggle locale/live nella pagina Pipeline e GS Builder.
+         * Tutta la logica di business è gestita server-side da frontend.py.
          */
-        (function () {
-            "use strict";
 
-            /**
-             * Stato globale dell'applicazione.
-             *
-             * @property {boolean} isLocal - Indica se il parsing deve usare l'HTML salvato nel DB (true) o scaricare la pagina online (false).
-             * @property {string} parsedText - Testo risultante dall'ultimo parsing eseguito.
-             * @property {string} goldText - Testo del Gold Standard associato all'URL corrente.
-             * @property {string} currentParseUrl - URL attualmente in fase di analisi nella pipeline.
-             * @property {string} gsBuilderHtml - HTML scaricato temporaneamente nel GS Builder, in attesa di salvataggio.
-             */
-            var isLocal = true;
-            var parsedText = "";
-            var goldText = "";
-            var currentParseUrl = "";
-            var gsBuilderHtml = "";
+        {% if active_page == "pipeline" and gs_urls_map is defined %}
+        var gsUrlsMap = {{ gs_urls_map | tojson }};
 
-            /**
-             * Riferimenti agli elementi DOM della sezione Pipeline.
-             * Vengono recuperati una sola volta all'avvio per evitare
-             * query ripetute al DOM durante l'interazione utente.
-             */
-            var domainSelect = document.getElementById("domain-select");
-            var gsUrlSelect = document.getElementById("gs-url-select");
-            var manualUrlInput = document.getElementById("manual-url");
-            var btnParse = document.getElementById("btn-parse");
-            var btnEvaluate = document.getElementById("btn-evaluate");
-            var btnJudge = document.getElementById("btn-judge");
-            var btnLocal = document.getElementById("btn-local");
-            var btnLive = document.getElementById("btn-live");
-            var parseErrorDiv = document.getElementById("parse-error");
-            var parseInfoCard = document.getElementById("parse-info-card");
-            var textComparison = document.getElementById("text-comparison-section");
-            var actionsCard = document.getElementById("actions-card");
-            var metricsCard = document.getElementById("metrics-card");
-            var judgeCard = document.getElementById("judge-card");
-            var loadingOverlay = document.getElementById("loading-overlay");
-            var loadingTextEl = document.getElementById("loading-text");
-            var toastContainer = document.getElementById("toast-container");
-
-            /**
-             * Riferimenti agli elementi DOM della sezione Gold Standard Builder.
-             */
-            var gsBuilderDomain = document.getElementById("gs-builder-domain");
-            var gsBuilderUrl = document.getElementById("gs-builder-url");
-            var gsBuilderGoldtext = document.getElementById("gs-builder-goldtext");
-            var gsHtmlPreview = document.getElementById("gs-html-preview");
-            var gsHtmlSection = document.getElementById("gs-html-preview-section");
-            var gsExistingList = document.getElementById("gs-existing-list");
-
-            /**
-             * Esegue una richiesta HTTP GET al backend tramite il reverse proxy.
-             *
-             * @param {string} path - Percorso dell'endpoint (es. "domains", "db_stats").
-             * @param {Object} [params] - Parametri query string da appendere all'URL.
-             * @returns {Promise<Object>} Promise che si risolve con la risposta JSON del backend.
-             */
-            function apiGet(path, params) {
-                var url = "/api/" + path;
-                if (params) { var qs = new URLSearchParams(params).toString(); if (qs) url += "?" + qs; }
-                return fetch(url).then(handleResponse);
-            }
-
-            /**
-             * Esegue una richiesta HTTP POST al backend tramite il reverse proxy.
-             *
-             * @param {string} path - Percorso dell'endpoint (es. "parse", "evaluate").
-             * @param {Object} body - Corpo della richiesta, serializzato automaticamente in JSON.
-             * @returns {Promise<Object>} Promise che si risolve con la risposta JSON del backend.
-             */
-            function apiPost(path, body) {
-                return fetch("/api/" + path, {
-                    method: "POST", headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(body)
-                }).then(handleResponse);
-            }
-
-            /**
-             * Esegue una richiesta HTTP DELETE al backend tramite il reverse proxy.
-             *
-             * @param {string} path - Percorso dell'endpoint (es. "gold_standard", "web_resource").
-             * @param {Object} body - Corpo della richiesta contenente l'URL da eliminare.
-             * @returns {Promise<Object>} Promise che si risolve con la risposta JSON del backend.
-             */
-            function apiDelete(path, body) {
-                return fetch("/api/" + path, {
-                    method: "DELETE", headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(body)
-                }).then(handleResponse);
-            }
-
-            /**
-             * Gestisce la risposta HTTP dalle chiamate fetch.
-             * Se lo status non è OK, estrae il messaggio di errore dal campo "detail"
-             * della risposta JSON e lancia un'eccezione.
-             *
-             * @param {Response} r - Oggetto Response della Fetch API.
-             * @returns {Promise<Object>} Promise che si risolve con il body JSON parsato.
-             * @throws {Error} Se lo status HTTP non è 2xx, con il messaggio di errore dal backend.
-             */
-            function handleResponse(r) {
-                if (!r.ok) {
-                    return r.json().then(function (e) { throw new Error(e.detail || ("Errore HTTP " + r.status)); })
-                        .catch(function (err) { if (err.message) throw err; throw new Error("Errore HTTP " + r.status); });
-                }
-                return r.json();
-            }
-
-            /**
-             * Mostra l'overlay di caricamento a schermo intero con un messaggio personalizzabile.
-             * L'overlay blocca l'interazione utente fino alla chiamata di hideLoading().
-             *
-             * @param {string} [text="Caricamento..."] - Messaggio da mostrare sotto lo spinner.
-             */
-            function showLoading(text) { loadingTextEl.textContent = text || "Caricamento..."; loadingOverlay.classList.add("visible"); }
-
-            /**
-             * Nasconde l'overlay di caricamento, ripristinando l'interazione utente.
-             */
-            function hideLoading() { loadingOverlay.classList.remove("visible"); }
-
-            /**
-             * Mostra una notifica toast nell'angolo in alto a destra della pagina.
-             * Il toast si rimuove automaticamente dopo 6 secondi oppure al click dell'utente.
-             *
-             * @param {string} message - Testo del messaggio da mostrare.
-             * @param {string} [type] - Tipo di toast: "success" per successo (verde), altrimenti errore (rosso).
-             */
-            function showToast(message, type) {
-                var toast = document.createElement("div");
-                toast.className = "toast" + (type === "success" ? " success" : "");
-                toast.textContent = message;
-                toast.addEventListener("click", function () { toast.remove(); });
-                toastContainer.appendChild(toast);
-                setTimeout(function () { if (toast.parentNode) toast.remove(); }, 6000);
-            }
-
-            /**
-             * Rimuove tutte le opzioni da un elemento <select>.
-             * Utilizza removeChild invece di innerHTML per sicurezza XSS.
-             *
-             * @param {HTMLSelectElement} sel - Elemento select da svuotare.
-             */
-            function clearSelect(sel) { while (sel.firstChild) sel.removeChild(sel.firstChild); }
-
-            /**
-             * Aggiunge un'opzione a un elemento <select> in modo sicuro (XSS-safe).
-             * Crea un elemento <option> tramite createElement e imposta il testo con textContent.
-             *
-             * @param {HTMLSelectElement} sel - Elemento select a cui aggiungere l'opzione.
-             * @param {string} value - Valore dell'attributo value dell'opzione.
-             * @param {string} label - Testo visibile dell'opzione.
-             */
-            function addOption(sel, value, label) {
-                var o = document.createElement("option"); o.value = value; o.textContent = label; sel.appendChild(o);
-            }
-
-            /**
-             * Gestione della navigazione tra le 4 sezioni della SPA.
-             * Al click su un tab della navbar, rimuove la classe "active" da tutti i tab
-             * e dal contenuto delle sezioni, poi attiva il tab e la sezione corrispondente.
-             */
-            document.querySelectorAll(".nav-tab").forEach(function (tab) {
-                tab.addEventListener("click", function () {
-                    document.querySelectorAll(".nav-tab").forEach(function (t) { t.classList.remove("active"); });
-                    tab.classList.add("active");
-                    document.querySelectorAll(".tab-content").forEach(function (tc) { tc.classList.remove("active"); });
-                    document.getElementById("tab-" + tab.getAttribute("data-tab")).classList.add("active");
-                });
-            });
-
-            /**
-             * Toggle tra modalità di parsing locale e live.
-             * - Locale (isLocal=true): usa l'HTML già salvato nel database.
-             * - Live (isLocal=false): scarica la pagina web in tempo reale.
-             */
-            btnLocal.addEventListener("click", function () { isLocal = true; btnLocal.classList.add("active"); btnLive.classList.remove("active"); });
-            btnLive.addEventListener("click", function () { isLocal = false; btnLive.classList.add("active"); btnLocal.classList.remove("active"); });
-
-            /**
-             * Carica la lista dei domini supportati dall'endpoint GET /domains
-             * e popola i menu a tendina della sezione Pipeline, del GS Builder
-             * e la lista visuale nella Home Page.
-             */
-            function loadDomains() {
-                apiGet("domains").then(function (data) {
-                    var domains = data.domains || [];
-                    clearSelect(domainSelect); addOption(domainSelect, "", "— Seleziona dominio —");
-                    domains.forEach(function (d) { addOption(domainSelect, d, d); });
-                    clearSelect(gsBuilderDomain); addOption(gsBuilderDomain, "", "— Seleziona dominio —");
-                    domains.forEach(function (d) { addOption(gsBuilderDomain, d, d); });
-                    var homeList = document.getElementById("home-domains-list");
-                    while (homeList.firstChild) homeList.removeChild(homeList.firstChild);
-                    domains.forEach(function (d) {
-                        var chip = document.createElement("div"); chip.className = "domain-chip"; chip.textContent = d;
-                        homeList.appendChild(chip);
-                    });
-                }).catch(function (err) { showToast("Impossibile caricare i domini: " + err.message); });
-            }
-
-            /**
-             * Listener sul cambio di dominio nella sezione Pipeline.
-             * Quando l'utente seleziona un dominio, carica gli URL del Gold Standard
-             * disponibili per quel dominio tramite GET /gold_standard_urls.
-             */
-            domainSelect.addEventListener("change", function () {
-                var domain = domainSelect.value;
-                if (!domain) { clearSelect(gsUrlSelect); addOption(gsUrlSelect, "", "Seleziona dominio"); gsUrlSelect.disabled = true; return; }
-                gsUrlSelect.disabled = true; clearSelect(gsUrlSelect); addOption(gsUrlSelect, "", "Caricamento...");
-                apiGet("gold_standard_urls", { domain: domain }).then(function (data) {
-                    clearSelect(gsUrlSelect); addOption(gsUrlSelect, "", "— Seleziona URL —");
-                    (data.gold_standard_urls || []).forEach(function (u) { addOption(gsUrlSelect, u, u); });
-                    gsUrlSelect.disabled = false;
-                }).catch(function (err) { clearSelect(gsUrlSelect); addOption(gsUrlSelect, "", "Errore"); showToast("Errore URL: " + err.message); });
-            });
-
-            /**
-             * Sincronizza la selezione dal menu URL Gold Standard con il campo di input manuale.
-             */
-            gsUrlSelect.addEventListener("change", function () { if (gsUrlSelect.value) manualUrlInput.value = gsUrlSelect.value; });
-
-            /**
-             * Esegue il parsing di un documento web tramite POST /parse.
-             * Dopo il parsing, mostra le informazioni del documento (dominio, titolo, URL),
-             * i tre testi a confronto (HTML grezzo, testo parsato, Gold Standard)
-             * e abilita i bottoni di evaluation e judge se il Gold Standard è disponibile.
-             */
-            btnParse.addEventListener("click", function () {
-                var url = manualUrlInput.value.trim() || gsUrlSelect.value;
-                if (!url) { showToast("Inserisci o seleziona un URL."); return; }
-                hideResults(); parseErrorDiv.classList.add("hidden");
-                currentParseUrl = url;
-                showLoading("Parsing in corso...");
-                apiPost("parse", { url: url, local: isLocal }).then(function (data) {
-                    document.getElementById("info-domain").textContent = data.domain || "—";
-                    document.getElementById("info-title").textContent = data.title || "—";
-                    document.getElementById("info-url").textContent = data.url || "—";
-                    parseInfoCard.classList.remove("hidden");
-                    parsedText = data.parsed_text || "";
-                    document.getElementById("text-html").textContent = data.html_text || "Nessun dato";
-                    document.getElementById("text-parsed").textContent = parsedText || "Nessun dato";
-                    textComparison.classList.remove("hidden");
-                    return apiGet("gold_standard", { url: url }).then(function (gs) {
-                        goldText = gs.gold_text || "";
-                        document.getElementById("text-gold").textContent = goldText || "Nessun gold standard";
-                        if (goldText) { btnEvaluate.disabled = false; btnJudge.disabled = false; }
-                    }).catch(function () {
-                        goldText = "";
-                        document.getElementById("text-gold").textContent = "Gold standard non disponibile per questo URL";
-                        btnEvaluate.disabled = true; btnJudge.disabled = true;
-                    });
-                }).then(function () { actionsCard.classList.remove("hidden"); hideLoading(); })
-                    .catch(function (err) { hideLoading(); parseErrorDiv.textContent = "Errore: " + err.message; parseErrorDiv.classList.remove("hidden"); });
-            });
-
-            /**
-             * Nasconde tutte le sezioni dei risultati della pipeline (info, testi, metriche, judge)
-             * e resetta lo stato interno (parsedText, goldText, bottoni disabilitati).
-             * Viene chiamata prima di ogni nuovo parsing per pulire i risultati precedenti.
-             */
-            function hideResults() {
-                parseInfoCard.classList.add("hidden"); textComparison.classList.add("hidden");
-                actionsCard.classList.add("hidden"); metricsCard.classList.add("hidden");
-                judgeCard.classList.add("hidden"); parsedText = ""; goldText = "";
-                btnEvaluate.disabled = true; btnJudge.disabled = true;
-            }
-
-            /**
-             * Esegue la valutazione automatica tramite POST /evaluate.
-             * Invia il testo parsato e il Gold Standard al backend, che calcola
-             * le metriche token-level (precision, recall, F1) e le metriche estese
-             * (Levenshtein, ROUGE-L, cosine similarity, boilerplate ratio/fidelity).
-             * I risultati vengono visualizzati come gauge SVG animati e card metriche.
-             */
-            btnEvaluate.addEventListener("click", function () {
-                if (!parsedText || !goldText) return;
-                showLoading("Calcolo metriche...");
-                apiPost("evaluate", { parsed_text: parsedText, gold_text: goldText, url: currentParseUrl })
-                    .then(function (data) { hideLoading(); renderMetrics(data.token_level_eval || {}, data.x_eval || {}); metricsCard.classList.remove("hidden"); metricsCard.scrollIntoView({ behavior: "smooth", block: "nearest" }); })
-                    .catch(function (err) { hideLoading(); showToast("Errore evaluation: " + err.message); });
-            });
-
-            /**
-             * Esegue la valutazione LLM-as-Judge tramite POST /evaluate_judge.
-             * Invia il testo parsato e il Gold Standard a Ollama, che restituisce
-             * un punteggio da 1 a 5 con feedback testuale in italiano.
-             * Il risultato viene visualizzato con stelle animate e box feedback.
-             */
-            btnJudge.addEventListener("click", function () {
-                if (!parsedText || !goldText) return;
-                showLoading("LLM Judge in corso... questo può richiedere qualche minuto ⏳");
-                apiPost("evaluate_judge", { parsed_text: parsedText, gold_text: goldText, url: currentParseUrl })
-                    .then(function (data) { hideLoading(); renderJudge(data); judgeCard.classList.remove("hidden"); judgeCard.scrollIntoView({ behavior: "smooth", block: "nearest" }); })
-                    .catch(function (err) { hideLoading(); showToast("Errore LLM Judge: " + err.message); });
-            });
-
-            /**
-             * Renderizza le metriche di valutazione nella sezione Pipeline.
-             * Crea gauge SVG circolari animati per precision, recall e F1,
-             * e card numeriche per le metriche estese (Levenshtein, ROUGE-L, ecc.).
-             *
-             * @param {Object} tokenEval - Oggetto con le metriche token-level {precision, recall, f1}.
-             * @param {Object} xEval - Oggetto con le metriche estese {levenshtein, rouge_l, cosine_similarity, ...}.
-             */
-            function renderMetrics(tokenEval, xEval) {
-                var gc = document.getElementById("gauges-container");
-                var xc = document.getElementById("xmetrics-container");
-                while (gc.firstChild) gc.removeChild(gc.firstChild);
-                while (xc.firstChild) xc.removeChild(xc.firstChild);
-                [{ key: "precision", label: "Precision" }, { key: "recall", label: "Recall" }, { key: "f1", label: "F1 Score" }].forEach(function (m) {
-                    gc.appendChild(buildGauge(parseFloat(tokenEval[m.key]) || 0, m.label));
-                });
-                [{ key: "levenshtein", label: "Levenshtein" }, { key: "rouge_l", label: "ROUGE-L" },
-                { key: "cosine_similarity", label: "Cosine Similarity" },
-                { key: "boilerplate_ratio_extracted", label: "Boilerplate Ratio" },
-                { key: "boilerplate_fidelity", label: "Boilerplate Fidelity" }].forEach(function (xm) {
-                    var v = xEval[xm.key]; if (v === undefined || v === null) return;
-                    xc.appendChild(buildXMetric(xm.label, v));
+        /**
+         * Aggiorna il select degli URL GS in base al dominio selezionato.
+         */
+        function updateGsUrls() {
+            var domain = document.getElementById("domain-select").value;
+            var sel = document.getElementById("gs-url-select");
+            while (sel.firstChild) sel.removeChild(sel.firstChild);
+            var opt = document.createElement("option");
+            opt.value = "";
+            opt.textContent = "— Seleziona URL —";
+            sel.appendChild(opt);
+            if (domain && gsUrlsMap[domain]) {
+                gsUrlsMap[domain].forEach(function(u) {
+                    var o = document.createElement("option");
+                    o.value = u;
+                    o.textContent = u;
+                    sel.appendChild(o);
                 });
             }
+        }
 
-            /**
-             * Costruisce un gauge SVG circolare animato per visualizzare un valore percentuale.
-             * Il gauge usa un cerchio SVG con stroke-dashoffset animato tramite CSS transition.
-             * Il gradiente colore è definito nel SVG globale (#gaugeGradient).
-             *
-             * @param {number} value - Valore da 0.0 a 1.0 (es. 0.85 per 85%).
-             * @param {string} label - Etichetta testuale sotto il gauge (es. "Precision").
-             * @returns {HTMLElement} Elemento div contenente il gauge SVG completo.
-             */
-            function buildGauge(value, label) {
-                var c = 2 * Math.PI * 42, off = c * (1 - Math.min(value, 1));
-                var container = document.createElement("div"); container.className = "gauge-container";
-                var ns = "http://www.w3.org/2000/svg";
-                var svg = document.createElementNS(ns, "svg"); svg.setAttribute("class", "gauge-svg"); svg.setAttribute("viewBox", "0 0 100 100");
-                var bg = document.createElementNS(ns, "circle"); bg.setAttribute("cx", "50"); bg.setAttribute("cy", "50"); bg.setAttribute("r", "42"); bg.setAttribute("class", "gauge-bg");
-                var fill = document.createElementNS(ns, "circle"); fill.setAttribute("cx", "50"); fill.setAttribute("cy", "50"); fill.setAttribute("r", "42"); fill.setAttribute("class", "gauge-fill");
-                fill.setAttribute("stroke-dasharray", String(c)); fill.setAttribute("stroke-dashoffset", String(c)); fill.setAttribute("transform", "rotate(-90 50 50)");
-                var txt = document.createElementNS(ns, "text"); txt.setAttribute("x", "50"); txt.setAttribute("y", "52"); txt.setAttribute("text-anchor", "middle"); txt.setAttribute("dominant-baseline", "central"); txt.setAttribute("class", "gauge-value-text");
-                txt.textContent = (value * 100).toFixed(1) + "%";
-                svg.appendChild(bg); svg.appendChild(fill); svg.appendChild(txt); container.appendChild(svg);
-                var lbl = document.createElement("div"); lbl.className = "gauge-label-text"; lbl.textContent = label; container.appendChild(lbl);
-                requestAnimationFrame(function () { requestAnimationFrame(function () { fill.setAttribute("stroke-dashoffset", String(off)); }); });
-                return container;
+        /**
+         * Sincronizza la selezione URL dal select al campo input manuale.
+         */
+        function syncUrlField() {
+            var sel = document.getElementById("gs-url-select");
+            if (sel.value) {
+                document.getElementById("url-input").value = sel.value;
             }
+        }
 
-            /**
-             * Costruisce una card per una singola metrica estesa (x_eval).
-             * Mostra il nome della metrica e il valore numerico formattato a 4 decimali.
-             *
-             * @param {string} label - Nome della metrica (es. "Cosine Similarity").
-             * @param {number|string} value - Valore della metrica.
-             * @returns {HTMLElement} Elemento div con classe "xmetric-item".
-             */
-            function buildXMetric(label, value) {
-                var item = document.createElement("div"); item.className = "xmetric-item";
-                var n = document.createElement("div"); n.className = "xmetric-name"; n.textContent = label;
-                var v = document.createElement("div"); v.className = "xmetric-value"; var num = parseFloat(value); v.textContent = isNaN(num) ? String(value) : num.toFixed(4);
-                item.appendChild(n); item.appendChild(v); return item;
-            }
+        /**
+         * Imposta la modalità di parsing (locale o live).
+         */
+        function setLocal(val) {
+            document.getElementById("is-local-field").value = val ? "true" : "false";
+            var btns = document.querySelectorAll(".toggle-btn");
+            btns[0].classList.toggle("active", val);
+            btns[1].classList.toggle("active", !val);
+        }
+        {% endif %}
 
-            /**
-             * Renderizza i risultati del LLM-as-Judge nella sezione dedicata.
-             * Mostra il nome del modello usato, il punteggio con stelle animate (1-5),
-             * e il feedback testuale del giudice.
-             *
-             * @param {Object} data - Risposta dell'endpoint /evaluate_judge.
-             * @param {string} data.model_name - Nome del modello LLM usato (es. "llama3.2:3b").
-             * @param {number} data.judge_score - Punteggio da 1 a 5 (0 se errore).
-             * @param {string} data.judge_feedback - Feedback testuale in italiano.
-             */
-            function renderJudge(data) {
-                document.getElementById("judge-model-name").textContent = data.model_name || "—";
-                document.getElementById("judge-score-value").textContent = String(data.judge_score || 0);
-                document.getElementById("judge-feedback-text").textContent = data.judge_feedback || "Nessun feedback";
-                var sc = document.getElementById("judge-stars-container"); while (sc.firstChild) sc.removeChild(sc.firstChild);
-                var score = parseInt(data.judge_score) || 0;
-                for (var i = 1; i <= 5; i++) { var s = document.createElement("span"); s.textContent = i <= score ? "\u2605" : "\u2606"; s.className = i <= score ? "star-filled" : "star-empty"; sc.appendChild(s); }
-            }
+        {% if active_page == "gsbuilder" and gs_urls_map is defined %}
+        var gsUrlsMapBuilder = {{ gs_urls_map | tojson }};
 
-            /**
-             * Listener sul cambio dominio nel Gold Standard Builder.
-             * Quando l'utente seleziona un dominio, carica la lista degli URL
-             * già presenti nel Gold Standard per quel dominio.
-             */
-            gsBuilderDomain.addEventListener("change", function () { if (gsBuilderDomain.value) loadGsExistingUrls(gsBuilderDomain.value); });
+        function updateGsBuilderUrls() {
+            /* Non serve filtrare nella lista, la pagina mostra tutti. */
+        }
+        {% endif %}
 
-            /**
-             * Scarica l'HTML di una pagina web tramite POST /parse con local=false.
-             * L'HTML scaricato viene salvato temporaneamente in gsBuilderHtml e mostrato
-             * in anteprima, pronto per essere associato a un Gold Standard.
-             */
-            document.getElementById("btn-gs-download-html").addEventListener("click", function () {
-                var url = gsBuilderUrl.value.trim();
-                if (!url) { showToast("Inserisci un URL."); return; }
-                showLoading("Scaricamento HTML...");
-                apiPost("parse", { url: url, local: false }).then(function (data) {
-                    hideLoading();
-                    gsBuilderHtml = data.html_text || "";
-                    gsHtmlPreview.textContent = gsBuilderHtml || "Nessun HTML scaricato";
-                    gsHtmlSection.classList.remove("hidden");
-                    showToast("HTML scaricato con successo!", "success");
-                }).catch(function (err) { hideLoading(); showToast("Errore download HTML: " + err.message); });
-            });
-
-            /**
-             * Salva una nuova entry nel Gold Standard in due passaggi:
-             * 1. POST /add_web_resource — salva l'HTML scaricato nella tabella web_resources.
-             * 2. POST /add_gold_standard — salva il testo gold nella tabella gold_standard.
-             * Al termine, resetta i campi del form e aggiorna la lista degli URL esistenti.
-             */
-            document.getElementById("btn-gs-save").addEventListener("click", function () {
-                var url = gsBuilderUrl.value.trim();
-                var goldTextInput = gsBuilderGoldtext.value.trim();
-                if (!url) { showToast("Inserisci un URL."); return; }
-                if (!goldTextInput) { showToast("Inserisci il gold text."); return; }
-                if (!gsBuilderHtml) { showToast("Scarica prima l'HTML della pagina."); return; }
-
-                showLoading("Salvataggio nel database...");
-
-                apiPost("add_web_resource", { url: url, html_text: gsBuilderHtml })
-                    .then(function () {
-                        return apiPost("add_gold_standard", { url: url, gold_text: goldTextInput });
-                    })
-                    .then(function () {
-                        hideLoading();
-                        showToast("Gold Standard salvato con successo!", "success");
-                        gsBuilderGoldtext.value = "";
-                        gsBuilderUrl.value = "";
-                        gsBuilderHtml = "";
-                        gsHtmlSection.classList.add("hidden");
-                        if (gsBuilderDomain.value) loadGsExistingUrls(gsBuilderDomain.value);
-                    })
-                    .catch(function (err) { hideLoading(); showToast("Errore salvataggio: " + err.message); });
-            });
-
-            /**
-             * Carica e visualizza la lista degli URL già presenti nel Gold Standard
-             * per un determinato dominio. Ogni URL viene mostrato con un bottone
-             * di rimozione che invoca deleteGsEntry().
-             *
-             * @param {string} domain - Dominio per cui caricare gli URL (es. "www.ilpost.it").
-             */
-            function loadGsExistingUrls(domain) {
-                while (gsExistingList.firstChild) gsExistingList.removeChild(gsExistingList.firstChild);
-                var loading = document.createElement("p"); loading.className = "muted"; loading.textContent = "Caricamento...";
-                gsExistingList.appendChild(loading);
-
-                apiGet("gold_standard_urls", { domain: domain }).then(function (data) {
-                    while (gsExistingList.firstChild) gsExistingList.removeChild(gsExistingList.firstChild);
-                    var urls = data.gold_standard_urls || [];
-                    if (urls.length === 0) {
-                        var p = document.createElement("p"); p.className = "muted"; p.textContent = "Nessun URL nel Gold Standard per questo dominio.";
-                        gsExistingList.appendChild(p); return;
-                    }
-                    urls.forEach(function (url) {
-                        var item = document.createElement("div"); item.className = "gs-url-item";
-                        var text = document.createElement("span"); text.className = "gs-url-item-text"; text.textContent = url;
-                        var delBtn = document.createElement("button"); delBtn.className = "btn-danger"; delBtn.textContent = "🗑️ Rimuovi"; delBtn.type = "button";
-                        delBtn.addEventListener("click", function () { deleteGsEntry(url, domain); });
-                        item.appendChild(text); item.appendChild(delBtn);
-                        gsExistingList.appendChild(item);
-                    });
-                }).catch(function (err) {
-                    while (gsExistingList.firstChild) gsExistingList.removeChild(gsExistingList.firstChild);
-                    showToast("Errore caricamento URL GS: " + err.message);
-                });
-            }
-
-            /**
-             * Rimuove un'entry dal Gold Standard tramite DELETE /gold_standard.
-             * Dopo la rimozione, aggiorna la lista degli URL per il dominio corrente.
-             *
-             * @param {string} url - URL dell'entry da rimuovere.
-             * @param {string} domain - Dominio corrente per aggiornare la lista dopo la rimozione.
-             */
-            function deleteGsEntry(url, domain) {
-                showLoading("Rimozione...");
-                apiDelete("gold_standard", { url: url }).then(function () {
-                    hideLoading(); showToast("Entry rimossa.", "success");
-                    loadGsExistingUrls(domain);
-                }).catch(function (err) { hideLoading(); showToast("Errore rimozione: " + err.message); });
-            }
-
-            /**
-             * Listener per il caricamento delle statistiche del database.
-             * Chiama GET /db_stats e passa i dati a renderStats() per la visualizzazione.
-             */
-            document.getElementById("btn-load-stats").addEventListener("click", function () {
-                showLoading("Caricamento statistiche...");
-                apiGet("db_stats").then(function (data) { hideLoading(); renderStats(data); })
-                    .catch(function (err) { hideLoading(); showToast("Errore statistiche: " + err.message); });
-            });
-
-            /**
-             * Renderizza le statistiche del database nella sezione Stats.
-             * Genera dinamicamente due tabelle HTML:
-             * 1. Conteggio risorse per dominio (web_resources e gold_standard).
-             * 2. Medie delle valutazioni per dominio (precision, recall, F1, cosine sim., judge score).
-             *
-             * @param {Object} data - Risposta dell'endpoint GET /db_stats.
-             * @param {Object} data.web_resources - Conteggio web_resources per dominio.
-             * @param {Object} data.gold_standard - Conteggio gold_standard per dominio.
-             * @param {Object} data.avg_eval - Medie delle valutazioni automatiche per dominio.
-             * @param {Object} data.avg_eval_judge - Medie dei punteggi LLM Judge per dominio.
-             */
-            function renderStats(data) {
-                var container = document.getElementById("stats-content"); while (container.firstChild) container.removeChild(container.firstChild);
-                var webRes = data.web_resources || {}, goldSt = data.gold_standard || {}, avgEval = data.avg_eval || {}, avgJudge = data.avg_eval_judge || {};
-                var domains = new Set();
-                [webRes, goldSt, avgEval, avgJudge].forEach(function (obj) { Object.keys(obj).forEach(function (d) { domains.add(d); }); });
-                if (domains.size === 0) { var p = document.createElement("p"); p.className = "muted"; p.textContent = "Nessun dato."; container.appendChild(p); return; }
-
-                var h3c = document.createElement("h3"); h3c.textContent = "Risorse per Dominio"; container.appendChild(h3c);
-                var ct = document.createElement("table"); ct.className = "stats-table";
-                var cth = document.createElement("thead"); var cthr = document.createElement("tr");
-                ["Dominio", "Web Resources", "Gold Standard"].forEach(function (t) { var th = document.createElement("th"); th.textContent = t; cthr.appendChild(th); });
-                cth.appendChild(cthr); ct.appendChild(cth);
-                var ctb = document.createElement("tbody");
-                domains.forEach(function (d) {
-                    var tr = document.createElement("tr");
-                    var td1 = document.createElement("td"); td1.className = "stats-domain"; td1.textContent = d;
-                    var td2 = document.createElement("td"); td2.textContent = String(webRes[d] || 0);
-                    var td3 = document.createElement("td"); td3.textContent = String(goldSt[d] || 0);
-                    tr.appendChild(td1); tr.appendChild(td2); tr.appendChild(td3); ctb.appendChild(tr);
-                });
-                ct.appendChild(ctb); container.appendChild(ct);
-
-                if (Object.keys(avgEval).length > 0 || Object.keys(avgJudge).length > 0) {
-                    var hr = document.createElement("hr"); hr.className = "section-divider"; container.appendChild(hr);
-                    var h3e = document.createElement("h3"); h3e.textContent = "Medie Valutazione per Dominio"; container.appendChild(h3e);
-                    var et = document.createElement("table"); et.className = "stats-table";
-                    var eth = document.createElement("thead"); var ethr = document.createElement("tr");
-                    ["Dominio", "Precision", "Recall", "F1", "Cosine Sim.", "Judge Score"].forEach(function (t) { var th = document.createElement("th"); th.textContent = t; ethr.appendChild(th); });
-                    eth.appendChild(ethr); et.appendChild(eth);
-                    var etb = document.createElement("tbody");
-                    domains.forEach(function (d) {
-                        var ev = avgEval[d] || {}, tl = ev.token_level_eval || {}, jd = avgJudge[d] || {};
-                        if (!avgEval[d] && !avgJudge[d]) return;
-                        var tr = document.createElement("tr");
-                        var td1 = document.createElement("td"); td1.className = "stats-domain"; td1.textContent = d; tr.appendChild(td1);
-                        ["precision", "recall", "f1"].forEach(function (k) {
-                            var td = document.createElement("td"); var v = tl[k]; td.textContent = (v !== undefined && v !== null) ? parseFloat(v).toFixed(4) : "—"; tr.appendChild(td);
-                        });
-                        var xe = ev.x_eval || {};
-                        var td5 = document.createElement("td"); td5.textContent = xe.cosine_similarity !== undefined ? parseFloat(xe.cosine_similarity).toFixed(4) : "—"; tr.appendChild(td5);
-                        var td6 = document.createElement("td"); td6.textContent = jd.judge_score !== undefined ? parseFloat(jd.judge_score).toFixed(2) : "—"; tr.appendChild(td6);
-                        etb.appendChild(tr);
-                    });
-                    et.appendChild(etb); container.appendChild(et);
-                }
-            }
-
-            /**
-             * Listener per il caricamento dello schema del database.
-             * Chiama GET /db_schema e passa i dati a renderSchema() per la visualizzazione.
-             */
-            document.getElementById("btn-load-schema").addEventListener("click", function () {
-                showLoading("Caricamento schema...");
-                apiGet("db_schema").then(function (data) { hideLoading(); renderSchema(data); })
-                    .catch(function (err) { hideLoading(); showToast("Errore schema: " + err.message); });
-            });
-
-            /**
-             * Renderizza lo schema del database nella sezione Stats.
-             * Per ogni tabella del DB, genera una tabella HTML con le colonne
-             * e i rispettivi tipi di dato.
-             *
-             * @param {Object} data - Risposta dell'endpoint GET /db_schema.
-             *                        Struttura: { "nome_tabella": { "nome_colonna": "tipo_dato", ... }, ... }
-             */
-            function renderSchema(data) {
-                var container = document.getElementById("schema-content"); while (container.firstChild) container.removeChild(container.firstChild);
-                var tables = Object.keys(data);
-                if (tables.length === 0) { var p = document.createElement("p"); p.className = "muted"; p.textContent = "Nessuna tabella."; container.appendChild(p); return; }
-                tables.forEach(function (tName) {
-                    var g = document.createElement("div"); g.className = "schema-table-group";
-                    var title = document.createElement("div"); title.className = "schema-table-name"; title.textContent = tName; g.appendChild(title);
-                    var t = document.createElement("table"); t.className = "schema-table";
-                    var th = document.createElement("thead"); var thr = document.createElement("tr");
-                    ["Colonna", "Tipo"].forEach(function (text) { var thc = document.createElement("th"); thc.textContent = text; thr.appendChild(thc); });
-                    th.appendChild(thr); t.appendChild(th);
-                    var tb = document.createElement("tbody"); var cols = data[tName];
-                    Object.keys(cols).forEach(function (cName) {
-                        var tr = document.createElement("tr");
-                        var td1 = document.createElement("td"); td1.className = "schema-col-name"; td1.textContent = cName;
-                        var td2 = document.createElement("td"); td2.className = "schema-col-desc"; td2.textContent = cols[cName];
-                        tr.appendChild(td1); tr.appendChild(td2); tb.appendChild(tr);
-                    });
-                    t.appendChild(tb); g.appendChild(t); container.appendChild(g);
-                });
-            }
-
-            /**
-             * Controlla lo stato dei componenti del sistema (backend, database, Ollama)
-             * tramite GET /status e aggiorna gli indicatori visivi (pallino verde/rosso)
-             * nella Home Page.
-             *
-             * @param {string} [prefix="home-status"] - Prefisso degli ID degli elementi DOM
-             *                                          per gli indicatori di stato.
-             */
-            function loadStatus(prefix) {
-                var pfx = prefix || "home-status";
-                var components = ["backend", "database", "ollama"];
-                components.forEach(function (c) {
-                    var dot = document.getElementById(pfx + "-dot-" + c);
-                    var txt = document.getElementById(pfx + "-text-" + c);
-                    if (dot) dot.className = "status-dot";
-                    if (txt) txt.textContent = "Verifica...";
-                });
-                apiGet("status").then(function (data) {
-                    components.forEach(function (c) {
-                        var st = data[c] || "error";
-                        var dot = document.getElementById(pfx + "-dot-" + c);
-                        var txt = document.getElementById(pfx + "-text-" + c);
-                        if (dot) dot.className = "status-dot " + (st === "ok" ? "ok" : "error");
-                        if (txt) txt.textContent = st === "ok" ? "Operativo" : "Non raggiungibile";
-                    });
-                }).catch(function () {
-                    components.forEach(function (c) {
-                        var dot = document.getElementById(pfx + "-dot-" + c);
-                        var txt = document.getElementById(pfx + "-text-" + c);
-                        if (dot) dot.className = "status-dot error";
-                        if (txt) txt.textContent = "Errore connessione";
-                    });
-                });
-            }
-
-            /**
-             * Carica e visualizza le matricole dei componenti del gruppo
-             * nella Home Page come badge colorati.
-             */
-            function loadMatricole() {
-                var matricole = ["2107313", "2104581", "2128730"];
-                var container = document.getElementById("matricole-list");
-                matricole.forEach(function (m) {
-                    var badge = document.createElement("span"); badge.className = "matricola-badge"; badge.textContent = m;
-                    container.appendChild(badge);
-                });
-            }
-
-            /**
-             * Inizializzazione dell'applicazione.
-             * Viene eseguita al caricamento della pagina e chiama:
-             * - loadDomains(): carica i domini supportati nei menu a tendina.
-             * - loadStatus(): controlla lo stato dei componenti del sistema.
-             * - loadMatricole(): mostra le matricole del gruppo.
-             * - history.replaceState(): previene il re-invio del form al refresh della pagina.
-             */
-            loadDomains();
-            loadStatus("home-status");
-            loadMatricole();
-
-            if (window.history.replaceState) { window.history.replaceState(null, null, window.location.href); }
-        })();
+        /* Previeni re-invio del form al refresh della pagina. */
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
     </script>
 </body>
 
