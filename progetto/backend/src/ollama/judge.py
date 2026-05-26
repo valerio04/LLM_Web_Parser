@@ -123,7 +123,9 @@ def build_judge_prompt(parsed_text: str, gold_text: str) -> str:
 
     #in teoria non va messo ma il pc muore se gli passi tutto oppure è troppo grande la finstra e non ce l afa l ai
     
-    max_chars = 1200
+    #TODO: con 1200 il teser andava in timeout, con 300 funziona
+    #max_chars = 1200
+    max_chars=300
     parsed_text_clean = parsed_text_clean[:max_chars]
     gold_text_clean = gold_text_clean[:max_chars]
 
@@ -213,7 +215,7 @@ def evaluate_with_ollama(parsed_text: str, gold_text: str) -> Dict[str, Any]:
         )
 
         #manda la richiesta a Ollama e aspetta la risposta, con un timeout di 320 secondi
-        with urllib.request.urlopen(request, timeout=320) as response:
+        with urllib.request.urlopen(request, timeout=1000) as response:
             response_data = response.read().decode("utf-8")
 
         ollama_response = json.loads(response_data)

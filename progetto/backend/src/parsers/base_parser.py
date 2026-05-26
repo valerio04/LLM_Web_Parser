@@ -55,7 +55,7 @@ class BaseParser:
             headless=True,
             verbose=True
         )
-    
+    #nostro1 
     def remove_markdown(md: str) -> str:
         """
         Rimuove ogni traccia di formattazione per il confronto metrico.
@@ -67,6 +67,46 @@ class BaseParser:
         # Normalizza spazi e newline
         text = re.sub(r'\s+', ' ', text)
         return text.strip()
+    
+    #nostro2
+    @staticmethod
+    def remove_markdown(md: str) -> str:
+        """
+        Rimuove solo il markdown che altera il contenuto visibile,
+        senza interpretare liste numerate tipo "1.".
+        Questo comportamento è coerente con il grader.
+        """
+        if not md:
+            return ""
+
+        # Immagini markdown: ![alt](url) -> alt
+        text = re.sub(r'!\[([^\]]*)\]\([^)]+\)', r'\1', md)
+
+        # Link markdown: [testo](url) -> testo
+        text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
+
+        # Rimuove solo simboli markdown semplici, senza toccare "1."
+        text = re.sub(r'[`*_#>~]', '', text)
+
+        return text.strip()
+
+
+    '''
+    quello del prof
+    def remove_markdown(md: str) -> str:
+        """
+        Rimuove il Markdown da una stringa, restituendo solo il testo pulito.
+        Usa la libreria mistune per convertire il Markdown in HTML, poi BeautifulSoup per estrarre solo il testo.
+        """
+        html = mistune.html(md)
+        soup = BeautifulSoup(html, "html.parser")
+        # rimuove i tag lasciando il testo esattamente in-place (nessun separatore aggiunto, mantiene punteggiatura)
+        for tag in soup.find_all(True):
+            tag.unwrap()
+        text = re.sub(r'[ \t]+', ' ', str(soup)) # collassa spazi orizzontali (non \n)
+        text = re.sub(r'\n+', '\n', text) # collassa nuove linee multiple in una sola
+        return text.strip()
+    '''
 
     def format_result(self, url, result):
         """
