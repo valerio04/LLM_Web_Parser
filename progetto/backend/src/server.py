@@ -5,6 +5,7 @@ from pathlib import Path
 import json
 import os
 import urllib.request
+import urllib.parse
 
 from .evaluation import *
 from .parsers.parser1 import IlPostParser
@@ -244,10 +245,6 @@ async def get_gold_standard(url: str) -> GoldStandardResponse:
     """
 
 
-    if not is_supported_domain(url):
-        print(f"[WARNING] Dominio non riconosciuto: {url}")
-        raise HTTPException(status_code=400, detail="Dominio non supportato")
-
     try:
         entry = repo_get_gold_standard(url)
 
@@ -459,11 +456,30 @@ async def get_full_gs_eval(domain: str) -> FullGsEvalResponse:
                 entry["gold_text"]
             )
 
+            #==================da togliere======
+            '''
+            judge_score = max(1, min(5, round(token_level_eval.get("f1", 0) * 5)))
+
+            judge_result = {
+                "model_name": "fast-fallback",
+                "judge_score": judge_score,
+                "judge_feedback": "Judge score stimato automaticamente da F1 per evitare timeout in full_gs_eval.",
+                "extra_info": {
+                    "source": "f1_fallback"
+                }
+            }
+            '''
+            #==============================
+            
+            
+            #da rimettere mettere
+            #=============================
+            
             judge_result = evaluate_with_ollama(
                 parsed_text=parsed_text,
                 gold_text=entry["gold_text"]
             )
-
+            #============================
 
             try:
                 repo_add_evaluation(
@@ -529,12 +545,7 @@ async def add_web_resource(request: AddWebResourceRequest) -> StatusResponse:
     Input minimo: url, html_text.
     """
 
-    parser = find_parser(request.url)
-
-    if not parser:
-        print(f"[WARNING] Dominio non riconosciuto: {request.url}")
-        raise HTTPException(status_code=400, detail="Dominio non supportato")
-
+    
     try:
         domain = request.domain or get_domain_from_url(request.url)
         title = request.title or ""
@@ -550,10 +561,8 @@ async def add_web_resource(request: AddWebResourceRequest) -> StatusResponse:
 
     except Exception as e:
         print(f"[ERROR] Errore durante add_web_resource: {e}")
-        raise HTTPException(
-            status_code=500,
-            detail="Errore durante l'aggiunta della web resource"
-        )
+        return StatusResponse(status="error")
+
 
 
 @app.delete("/web_resource")
@@ -563,12 +572,7 @@ async def delete_web_resource(request: DeleteByUrlRequest) -> StatusResponse:
     Il gold_standard collegato viene rimosso a cascata tramite FK.
     """
 
-    parser = find_parser(request.url)
-
-    if not parser:
-        print(f"[WARNING] Dominio non riconosciuto: {request.url}")
-        raise HTTPException(status_code=400, detail="Dominio non supportato")
-
+   
     try:
         deleted = repo_delete_web_resource(request.url)
 
@@ -586,10 +590,8 @@ async def delete_web_resource(request: DeleteByUrlRequest) -> StatusResponse:
 
     except Exception as e:
         print(f"[ERROR] Errore durante delete_web_resource: {e}")
-        raise HTTPException(
-            status_code=500,
-            detail="Errore durante la rimozione della web resource"
-        )
+        return StatusResponse(status="error")
+
 
 
 
@@ -601,11 +603,8 @@ async def add_gold_standard(request: AddGoldStandardRequest) -> StatusResponse:
     La web_resource corrispondente deve già esistere.
     """
 
-    parser = find_parser(request.url)
+   
 
-    if not parser:
-        print(f"[WARNING] Dominio non riconosciuto: {request.url}")
-        raise HTTPException(status_code=400, detail="Dominio non supportato")
 
     try:
         web_resource = repo_get_web_resource(request.url)
@@ -624,15 +623,12 @@ async def add_gold_standard(request: AddGoldStandardRequest) -> StatusResponse:
 
         return StatusResponse(status="ok")
 
-    except HTTPException:
-        raise
+    
 
     except Exception as e:
         print(f"[ERROR] Errore durante add_gold_standard: {e}")
-        raise HTTPException(
-            status_code=500,
-            detail="Errore durante l'aggiunta del gold standard"
-        )
+        return StatusResponse(status="error")
+
 
 
 @app.delete("/gold_standard")
@@ -642,33 +638,26 @@ async def delete_gold_standard(request: DeleteByUrlRequest) -> StatusResponse:
     lasciando intatta la web_resource associata.
     """
 
-    parser = find_parser(request.url)
+    
 
-    if not parser:
-        print(f"[WARNING] Dominio non riconosciuto: {request.url}")
-        raise HTTPException(status_code=400, detail="Dominio non supportato")
 
     try:
         deleted = repo_delete_gold_standard(request.url)
 
         if not deleted:
             print(f"[WARNING] URL non presente nel Gold Standard: {request.url}")
-            raise HTTPException(
-                status_code=404,
-                detail="URL non presente nel Gold Standard"
-            )
+            return StatusResponse(status="error")
+
 
         return StatusResponse(status="ok")
 
-    except HTTPException:
-        raise
+    
 
     except Exception as e:
         print(f"[ERROR] Errore durante delete_gold_standard: {e}")
-        raise HTTPException(
-            status_code=500,
-            detail="Errore durante la rimozione del gold standard"
-        )
+        return StatusResponse(status="error")
+    
+           
     
 
 
@@ -768,7 +757,8 @@ def get_domain_from_url(url: str) -> str:
     elif "eur-lex.europa.eu" in url:
         return "eur-lex.europa.eu"
     else:
-        return ""
+        parsed = urllib.parse.urlparse(url)
+        return parsed.netloc or url
 
 
 def is_supported_domain(value: str) -> bool:

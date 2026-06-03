@@ -6,7 +6,7 @@ Implementa metriche di valutazione a livello token (token_level_eval).
 from typing import Dict, List
 from pathlib import Path
 
-from aiohttp import request
+
 from .parsers.parser_wikipedia import WikipediaParser
 from .parsers.parser1 import IlPostParser
 from .parsers.parser2 import StatMuseParser
