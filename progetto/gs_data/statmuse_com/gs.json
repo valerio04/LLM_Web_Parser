@@ -63,9 +63,9 @@
     "gold_file": "statmuse_com/texts/gs_9_gold.txt"
   },
   {
-    "url": "https://www.statmuse.com/pga/ask?q=who+had+the+best+driving+distance+average+in+a+season%2C+minimum+80+events",
+    "url": "https://www.statmuse.com/scores",
     "domain": "www.statmuse.com",
-    "title": "Bubba Watson has the longest average driving distance with 80+ events played in a season, at 319.6 yards in 2006.",
+    "title": "Scores",
     "html_file": "statmuse_com/texts/gs_10_html.txt",
     "gold_file": "statmuse_com/texts/gs_10_gold.txt"
   }

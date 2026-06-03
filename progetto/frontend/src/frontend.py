@@ -175,8 +175,8 @@ def get_all_gs_urls(domains: List[str]) -> Dict[str, List[str]]:
         Dizionario con chiave dominio e valore lista URL.
     """
     result: Dict[str, List[str]] = {}
-    for d in domains:
-        result[d] = get_gs_urls(d)
+    for domain in domains:
+        result[domain] = get_gs_urls(domain)
     return result
 
 
