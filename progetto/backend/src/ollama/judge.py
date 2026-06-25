@@ -55,7 +55,7 @@ def validate_judge_response(parsed_json: dict, raw_response: str, model_name: st
     if not isinstance(parsed_json, dict):
         return {
             "model_name": model_name,
-            "judge_score": 0,
+            "judge_score": 1,
             "judge_feedback": "Errore: la risposta del modello non è un oggetto JSON.",
             "extra_info": {
                 "raw_response": raw_response
@@ -68,7 +68,7 @@ def validate_judge_response(parsed_json: dict, raw_response: str, model_name: st
     if not allowed_keys.issubset(actual_keys):
         return {
             "model_name": model_name,
-            "judge_score": 0,
+            "judge_score": 1,
             "judge_feedback": "Errore: risposta JSON valida ma formato non conforme.",
             "extra_info": {
                 "raw_response": raw_response,
@@ -82,7 +82,7 @@ def validate_judge_response(parsed_json: dict, raw_response: str, model_name: st
     if judge_score == 0:
         return {
             "model_name": model_name,
-            "judge_score": 0,
+            "judge_score": 1,
             "judge_feedback": "Errore: judge_score mancante o fuori dal range 1-5.",
             "extra_info": {
                 "raw_response": raw_response,
@@ -95,7 +95,7 @@ def validate_judge_response(parsed_json: dict, raw_response: str, model_name: st
     if not judge_feedback:
         return {
             "model_name": model_name,
-            "judge_score": 0,
+            "judge_score": 1,
             "judge_feedback": "Errore: judge_feedback mancante o vuoto.",
             "extra_info": {
                 "raw_response": raw_response
@@ -125,7 +125,7 @@ def build_judge_prompt(parsed_text: str, gold_text: str) -> str:
     
     #TODO: con 1200 il teser andava in timeout, con 300 funziona
     #max_chars = 1200
-    max_chars=300
+    max_chars=400
     parsed_text_clean = parsed_text_clean[:max_chars]
     gold_text_clean = gold_text_clean[:max_chars]
 
@@ -244,7 +244,7 @@ def evaluate_with_ollama(parsed_text: str, gold_text: str) -> Dict[str, Any]:
 
         return {
             "model_name": model_name,
-            "judge_score": 0,
+            "judge_score": 1,
             "judge_feedback": "Errore: il modello non ha restituito un JSON valido o Ollama non è raggiungibile.",
             "extra_info": {
                 "error": str(e)

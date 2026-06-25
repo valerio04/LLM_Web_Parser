@@ -63,7 +63,7 @@
     "gold_file": "statmuse_com/texts/gs_9_gold.txt"
   },
   {
-    "url": "https://www.statmuse.com/scores",
+    "url": "https://www.statmuse.com/scores?date=2026-06-02",
     "domain": "www.statmuse.com",
     "title": "Scores",
     "html_file": "statmuse_com/texts/gs_10_html.txt",

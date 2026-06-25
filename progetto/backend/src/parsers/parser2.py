@@ -32,7 +32,9 @@ class StatMuseParser(BaseParser):
             excluded_tags=['nav', 'footer', 'header', 'aside', 'script', 'style', 'noscript', 'svg'],
             cache_mode=CacheMode.BYPASS,
             # Esclude le immagini per evitare che gli 'alt' raddoppino i loghi
-            exclude_external_images=True, 
+            exclude_external_images=True,
+            wait_for="js:() => document.querySelectorAll('div.text-inherit').length > 0",
+            #delay_before_return_seconds=2.0 # Opzionale: un piccolo cuscinetto per il caricamento delle API
         )
     
     def extract_title(self, result) -> str:
@@ -57,18 +59,65 @@ class StatMuseParser(BaseParser):
             
         soup = BeautifulSoup(html_content, 'html.parser')
         
-        # Eliminiamo SOLO gli svg che inquinano il testo con path interni.
-        # Manteniamo i tag 'img' per poterne estrarre l'attributo 'alt' se necessario.
-        for tag in soup.find_all(['svg']):
-            tag.decompose()
+        # --- 1. PULIZIA ESTREMA PREVENTIVA ---
+        # Rimuoviamo menu, footer, script, svg
+        for element in soup(["script", "style", "noscript", "meta", "header", "footer", "nav", "svg"]):
+            element.decompose()
+            
+        # Rimuoviamo i banner dei cookie e div legali
+        for banner in soup.select('[id*="cookie"], [id*="consent"], [class*="cookie"], [class*="consent"], [class*="privacy"]'):
+            banner.decompose()
                 
         parts = []
-        is_standings = "standings" in url.lower()
-        is_finance = "money" in url.lower() or "price" in url.lower()
+        
+        lower_url = url.lower()
+        is_standings = "standings" in lower_url
+        is_finance = "money" in lower_url or "price" in lower_url
+        is_scores = "scores" in lower_url
         
         h1 = soup.find('h1')
         if h1:
             parts.append(h1.get_text(separator=' ', strip=True))
+            
+        # --- 2. GESTIONE SPECIFICA: SCORES IN VERTICALE ---
+        if is_scores:
+            main_content = soup.find('main') or soup.find('body') or soup
+            
+            # Pulizia opzionale dei menu delle date (es. "Tue May 26", "Today", "All", ecc.)
+            for nav_item in main_content.find_all(string=re.compile(r'^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) [A-Z][a-z]{2} \d{1,2}$|^Yesterday$|^Today$|^Tomorrow$')):
+                if nav_item.parent:
+                    nav_item.parent.decompose()
+                    
+            # Estrazione con "\n" per ottenere il layout verticale desiderato
+            testo_punteggi = main_content.get_text(separator='\n', strip=True)
+            
+            # Rimuoviamo l'h1 se è stato duplicato all'inizio
+            if h1:
+                h1_text = h1.get_text(separator=' ', strip=True)
+                if testo_punteggi.startswith(h1_text):
+                    testo_punteggi = testo_punteggi[len(h1_text):].strip()
+            
+            # Cerca tutti i blocchi delle partite (sostituisci con la classe CSS reale)
+            games = main_content.find_all('div', class_=['flex','gap-3', 'py-2','px-3','text-inherit']) 
+
+            for game in games:
+                # Se troviamo il blocco del punteggio, la partita è finita
+                score = game.find('div', class_=['w-max','flex','flex-col','justify-center','text-right','text-sm','text-gray-5'])
+                if score:
+                    # Altrimenti è futura, cerchiamo l'orario nell'attributo 'datetime'
+                    time_tag = game.find(class_=['flex','flex-col','justify-center','items-end','text-nowrap','text-sm',])
+                    if time_tag and time_tag.has_attr('datetime'):
+                        print(f"Partita in programma. Orario UTC: {time_tag['datetime']}")
+                else:
+                    print("Partita conclusa.")
+                        
+            # Normalizziamo eventuali blocchi di righe vuote eccessive (es. 4-5 a capo di fila)
+            testo_punteggi = re.sub(r'\n{3,}', '\n\n', testo_punteggi)
+                    
+            if testo_punteggi:
+                parts.append(testo_punteggi)
+                
+            return '\n\n'.join(parts)
             
         processed_tables = set()
         parsed_tables_text = set()
